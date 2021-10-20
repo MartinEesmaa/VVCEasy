@@ -5,4 +5,6 @@ VVCEasy comes to one-easy of ffmpeg, vvenc, vvdec and YUView.
 
 Installation: Go to releases and download latest version.
 
-VVCEasy is not yet finished. You can test if you want it.
+VVCEasy is not yet finished. I'm trying to work with codes. I'm not good coding programming, just simple coding.
+Sorry to say that. I will give update, once I release news.
+- Martin Eesmaa
