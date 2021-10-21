@@ -18,7 +18,7 @@ Follow the instructions, the commands will give your options.
 - Martin Eesmaa
 
 
-# Without installing (hard)
+# Without VVCEasy, experimental option for professional coders, other developers and everyone (hard)
 
 You need 7Zip (requires ffmpeg and ffplay), ffmpeg, ffplay, vvenc/vvdec(app) and YUView.
 
