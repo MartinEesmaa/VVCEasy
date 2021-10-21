@@ -16,3 +16,49 @@ Before you run of RUNVVCEASY.bat or VVCEASY.exe, you need to change input from f
 Follow the instructions, the commands will give your options.
 
 - Martin Eesmaa
+
+
+# Without installing (hard)
+
+You need 7Zip (requires ffmpeg and ffplay), ffmpeg, ffplay, vvenc/vvdec(app) and YUView.
+
+Here are the links:
+FFMPEG/FFPLAY: https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-full.7z (go to bin folder and extract two files)
+VVENC/VVDEC:
+https://github.com/MartinEesmaa/VVCEasy/blob/main/VVC/vvencapp.exe
+https://github.com/MartinEesmaa/VVCEasy/blob/main/VVC/vvdecapp.exe
+
+YUView:
+https://github.com/IENT/YUView/releases
+
+First of all:
+Transcode any video formats to YUV/Y4M
+
+For YUV transcode (replace f for frame rate):
+`ffmpeg -i input.mp4 -r f inputtranscode.yuv`
+
+For Y4M transcode (replace f for frame rate):
+`ffmpeg -i input.mp4 -r f inputtranscode.y4m`
+
+Verify ffplay before encode with VVENC (replace video size, important otherwise it will not show correctly video, it's like scramble eggs):
+`ffplay -f rawvideo -pixel_format yuv420p -video_size 854x480 -i inputtranscode.yuv` or replace -i inputtranscode.yuv with `-i inputtranscode.y4m` for y4m users.
+
+After verifying correctly
+Encode with VVENC (Simple settings)
+`vvencapp -i out.yuv/y4m -s 854x480 -r 30 -o vvc.266`
+-s means video size, -r means frame per second and -o means output
+
+Encode with VVENC (Best settings, replace video size, framerate and maximize threads of your cores)
+`vvencapp -i out.yuv/y4m -s 854x480 -r 30 --preset slow --threads 16 --tier high -o EXTREME.266`
+
+NOTE: It is acceptable only for encoding to .h266, .266 and .vvc file container.
+
+After VVEnc, decode back from .266 to .YUV.
+`vvdecapp -b vvc.266 -o vvcback.yuv
+
+NOTE: After decoding back from .266 to .YUV, it is reason that it makes double size.
+
+To view back decoded .YUV (from .266 to .YUV), you can drag .YUV into YUView and insert video size and put YUV 4:2:0 10-bit.
+
+If you have any questions or any issues, please go to Issues tab and create your issue.
+- Martin Eesmaa
