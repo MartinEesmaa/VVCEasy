@@ -13,7 +13,7 @@ Source run: RUNVVCEASY.bat
 # Encode/Decode (easy)
 
 Before you run of RUNVVCEASY.bat or VVCEASY.exe, you need to change input from file name to input.mp4 (as example)
-Follow the instructions, the commands will give your options.
+Follow the instructions, the commands will give your options. Since 21 October 2021, VVCEasy is pre-release, but it's construction mode, but you can have a look with .BAT code.
 
 - Martin Eesmaa
 
