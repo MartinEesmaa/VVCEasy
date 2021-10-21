@@ -31,6 +31,11 @@ https://github.com/MartinEesmaa/VVCEasy/blob/main/VVC/vvdecapp.exe
 YUView:
 https://github.com/IENT/YUView/releases
 
+Before we start, you need to make path environments for ffmpeg, ffplay and vvenc/vvdec to make easily.
+In Command Prompt:
+`set PATH=%PATH%;C:\Users\blah\Downloads\VVCEasy\Executables` (example)
+verify `echo %PATH%` in Command Prompt
+
 First of all:
 Transcode any video formats to YUV/Y4M
 
