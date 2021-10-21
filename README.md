@@ -54,7 +54,7 @@ Encode with VVENC (Best settings, replace video size, framerate and maximize thr
 NOTE: It is acceptable only for encoding to .h266, .266 and .vvc file container.
 
 After VVEnc, decode back from .266 to .YUV.
-`vvdecapp -b vvc.266 -o vvcback.yuv
+`vvdecapp -b vvc.266 -o vvcback.yuv`
 
 NOTE: After decoding back from .266 to .YUV, it is reason that it makes double size.
 
