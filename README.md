@@ -17,7 +17,6 @@ Follow the instructions, the commands will give your options. Since 21 October 2
 
 - Martin Eesmaa
 
-
 # Without VVCEasy, experimental option for professional coders, other developers and everyone (hard)
 
 You need 7Zip (requires ffmpeg and ffplay), ffmpeg, ffplay, vvenc/vvdec(app) and YUView.
@@ -29,7 +28,7 @@ https://github.com/MartinEesmaa/VVCEasy/blob/main/VVC/vvencapp.exe
 https://github.com/MartinEesmaa/VVCEasy/blob/main/VVC/vvdecapp.exe
 
 YUView:
-https://github.com/IENT/YUView/releases
+https://github.com/IENT/YUView/actions/runs/1365560321
 
 Before we start, you need to make path environments for ffmpeg, ffplay and vvenc/vvdec to make easily.
 In Command Prompt:
@@ -58,12 +57,10 @@ Encode with VVENC (Best settings, replace video size, framerate and maximize thr
 
 NOTE: It is acceptable only for encoding to .h266, .266 and .vvc file container.
 
-After VVEnc, decode back from .266 to .YUV.
-`vvdecapp -b vvc.266 -o vvcback.yuv`
+After VVEnc, you can play in YUView develop version, unfortunately this should not work on release version of June.
+Drag any your video file of .h266, .266 or .vvc to play. YUView will play your video about only 10 seconds.
 
-NOTE: After decoding back from .266 to .YUV, it is reason that it makes double size.
-
-To view back decoded .YUV (from .266 to .YUV), you can drag .YUV into YUView and insert video size and put YUV 4:2:0 10-bit.
+If you are still not happy VVC, that you think this is too hard to encode and decode, or this cannot be played on VLC Media Player of VVC Video Codec, use AOMEDIA ONE that is recommended for most users for easily play VLC Media Player and others.
 
 If you have any questions or any issues, please go to Issues tab and create your issue.
 - Martin Eesmaa
