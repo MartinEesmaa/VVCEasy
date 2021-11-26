@@ -62,5 +62,19 @@ Drag any your video file of .h266, .266 or .vvc to play. YUView will play your v
 
 If you are still not happy VVC, that you think this is too hard to encode and decode, or this cannot be played on VLC Media Player of VVC Video Codec, use AOMEDIA ONE that is recommended for most users for easily play VLC Media Player and others.
 
+#FAQ (known as Frequently Asked Questions)
+
+Are you real creator of VVCEasy?
+Yes... but I'm not creator of VVC, I didn't build VVC, so it was Fraunhofer built VVC.
+
+Are you trying to work build of VVCEasy?
+Well yeah... it takes longer time to make VVCEasy easier, but VVCEasy is not yet finished until further/update announcement. I don't have employees, so I'm only one.
+
+Is it okay to bring proof screenshots of my errors?
+I allow you to bring error screenshots, you can bring proof. More proofs, more easy to solve it.
+
+My question is not listed on FAQ. Can I ask any question?
+Sure, just go to Issues tab and ask questions or give it issue to me.
+
 If you have any questions or any issues, please go to Issues tab and create your issue.
 - Martin Eesmaa
