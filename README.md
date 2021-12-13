@@ -39,26 +39,29 @@ First of all:
 Transcode any video formats to YUV/Y4M
 
 For YUV transcode (replace f for frame rate):
-`ffmpeg -i input.mp4 -r f inputtranscode.yuv`
+```ffmpeg -i input.mp4 -r f inputtranscode.yuv```
 
 For Y4M transcode (replace f for frame rate):
-`ffmpeg -i input.mp4 -r f inputtranscode.y4m`
+```ffmpeg -i input.mp4 -r f inputtranscode.y4m```
 
 Verify ffplay before encode with VVENC (replace video size, important otherwise it will not show correctly video, it's like scramble eggs):
-`ffplay -f rawvideo -pixel_format yuv420p -video_size 854x480 -i inputtranscode.yuv` or replace -i inputtranscode.yuv with `-i inputtranscode.y4m` for y4m users.
+```ffplay -f rawvideo -pixel_format yuv420p -video_size 854x480 -i inputtranscode.yuv``` or replace -i inputtranscode.yuv with `-i inputtranscode.y4m` for y4m users.
 
 After verifying correctly
-Encode with VVENC (Simple settings)
-`vvencapp -i out.yuv/y4m -s 854x480 -r 30 -o vvc.266`
+Encode with VVENC (Simple settings, example)
+```vvencapp -i out.yuv -s 854x480 -r 30 -o vvc.266```
 -s means video size, -r means frame per second and -o means output
 
-Encode with VVENC (Best settings, replace video size, framerate and maximize threads of your cores)
-`vvencapp -i out.yuv/y4m -s 854x480 -r 30 --preset slow --threads 16 --tier high -o EXTREME.266`
+Encode with VVENC (Best settings, replace video size (-s), framerate (-r) and maximize threads of your cores (--threads), example)
+```vvencapp -i out.yuv -s 854x480 -r 30 --preset slow --threads 16 --tier high -o EXTREME.266```
 
 NOTE: It is acceptable only for encoding to .h266, .266 and .vvc file container.
 
 After VVEnc, you can play in YUView develop version, unfortunately this should not work on release version of June.
 Drag any your video file of .h266, .266 or .vvc to play. YUView will play your video about only 10 seconds.
+
+UPDATE 13th December 2021: VLC Media Player (custom VLC build of o266player, 3.0.11.1 Vetenari) is tested by Martin Eesmaa. It can play only about 600 frames limit.
+![VLC Media Player (VVC test)](https://user-images.githubusercontent.com/88035011/145756567-d156f630-9e7f-4042-99b5-6ffe8a6b4b64.png)
 
 If you are still not happy VVC, that you think this is too hard to encode and decode, or this cannot be played on VLC Media Player of VVC Video Codec, use AOMEDIA ONE that is recommended for most users for easily play VLC Media Player and others.
 
