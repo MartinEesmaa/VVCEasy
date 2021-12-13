@@ -8,7 +8,7 @@ Installation: Go to releases and download latest version.
 VVCEasy is not yet finished. I'm trying to work with codes. I'm not good coding programming, just simple coding.
 Sorry to say that. I will give update, once I release news.
 
-Source run: RUNVVCEASY.bat
+Windows source run: RUNVVCEASY.bat
 
 # Encode/Decode (easy)
 
