@@ -14,12 +14,14 @@ echo 2. Decode (construction)
 echo 3. Help (construction)
 echo 4. Exit
 echo 5. Test benchmark (construction)
+echo 6. Install VLC Media Player (o266player, Windows x64)
 set /p VVCSTART=Number:
 if %VVCSTART% == 1 goto encodestart
 if %VVCSTART% == 2 goto decodestart
 if %VVCSTART% == 3 goto help
 if %VVCSTART% == 4 goto exit
 if %VVCSTART% == 5 goto test
+if %VVCSTART% == 6 goto vlc
 
 :encodestart
 cls
@@ -51,7 +53,9 @@ echo Martin Eesmaa is testing your benchmark for two settings between default an
 echo Are you ready to test? (Y/N)
 set /p readytestbefore=
 if %readytestbefore% == Y goto nowtestingtime
-if $readytestbefore% == N goto start
+if %readytestbefore% == N goto start
+if %readytestbefore% == y goto nowtestingtime
+if %readytestbefore% == n goto start
 
 :nowtestingtime
 cd /d "%~dp0"
@@ -65,3 +69,22 @@ echo Copyright 2021 Martin Eesmaa
 echo ------------END----------------
 pause
 exit
+
+:vlc
+cls
+color 6F
+title VLC Media Player (custom build of o266player)
+echo Hello, would you like to install VLC Media Player (custom build of o266player) on your computer?
+echo Before you install...
+echo The VLC Media Player (custom build of o266player) works only on Windows 11, Windows 10, Windows Server 2022, Windows Server 2019 and Windows Server 2016.
+echo Windows XP and older won't work.
+echo You need must run 64-bit. On 32-bit, it won't work.
+echo Install? Y/N?
+set /p vlcinstall=
+if %vlcinstall% == Y goto vlcinstaller
+if %vlcinstall% == N goto start
+if %vlcinstall% == y goto vlcinstaller
+if %vlcinstall% == n goto start
+
+:vlcinstaller
+wget https://www.dropbox.com/s/hs7yoa9hkxa6ugd/vlc-3.0.11.1-w64.7z
