@@ -78,6 +78,17 @@ UPDATE 13th December 2021: VLC Media Player (custom VLC build of o266player, 3.0
 
 If you are still not happy VVC, that you think this is too hard to encode and decode, or this cannot be played on VLC Media Player of VVC Video Codec, use AOMEDIA ONE that is recommended for most users for easily play VLC Media Player and others.
 
+
+
+# Compatability results (VVENC AND VVDEC)
+
+Windows:
+
+Mac:
+
+Linux:
+
+
 # FAQ (known as Frequently Asked Questions)
 
 Are you real creator of VVCEasy?
