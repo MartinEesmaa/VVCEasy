@@ -83,10 +83,13 @@ If you are still not happy VVC, that you think this is too hard to encode and de
 # Compatability results (VVENC AND VVDEC)
 
 Windows:
+![WindowsVVENCDEC](https://user-images.githubusercontent.com/88035011/145812753-eddf04c5-1a10-4892-9118-7478735b1475.png)
 
 Mac:
 
+
 Linux:
+![UbuntuVVENCDEC](https://user-images.githubusercontent.com/88035011/145812781-9a270e03-0dc0-47e6-95ad-4316757d3435.png)
 
 
 # FAQ (known as Frequently Asked Questions)
