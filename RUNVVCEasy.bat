@@ -7,6 +7,7 @@ pause
 goto start
 
 :start
+color 07
 cls
 echo What do you like to do for encode/decode VVC?
 echo 1. Encode (construction)
