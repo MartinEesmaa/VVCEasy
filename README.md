@@ -32,28 +32,41 @@ https://github.com/IENT/YUView/actions/runs/1365560321
 
 Before we start, you need to make path environments for ffmpeg, ffplay and vvenc/vvdec to make easily.
 In Command Prompt:
-`set PATH=%PATH%;C:\Users\blah\Downloads\VVCEasy\Executables` (example)
+```
+set PATH=%PATH%;C:\Users\blah\Downloads\VVCEasy\Executables
+```
 verify `echo %PATH%` in Command Prompt
 
 First of all:
 Transcode any video formats to YUV/Y4M
 
 For YUV transcode (replace f for frame rate):
-```ffmpeg -i input.mp4 -r f inputtranscode.yuv```
+```
+ffmpeg -i input.mp4 -r f inputtranscode.yuv
+```
 
 For Y4M transcode (replace f for frame rate):
-```ffmpeg -i input.mp4 -r f inputtranscode.y4m```
+```
+ffmpeg -i input.mp4 -r f inputtranscode.y4m
+```
 
 Verify ffplay before encode with VVENC (replace video size, important otherwise it will not show correctly video, it's like scramble eggs):
-```ffplay -f rawvideo -pixel_format yuv420p -video_size 854x480 -i inputtranscode.yuv``` or replace -i inputtranscode.yuv with `-i inputtranscode.y4m` for y4m users.
+```
+ffplay -f rawvideo -pixel_format yuv420p -video_size 854x480 -i inputtranscode.yuv
+``` 
+Or replace -i inputtranscode.yuv with `-i inputtranscode.y4m` for y4m users.
 
 After verifying correctly
 Encode with VVENC (Simple settings, example)
-```vvencapp -i out.yuv -s 854x480 -r 30 -o vvc.266```
+```
+vvencapp -i out.yuv -s 854x480 -r 30 -o vvc.266
+```
 -s means video size, -r means frame per second and -o means output
 
 Encode with VVENC (Best settings, replace video size (-s), framerate (-r) and maximize threads of your cores (--threads), example)
-```vvencapp -i out.yuv -s 854x480 -r 30 --preset slow --threads 16 --tier high -o EXTREME.266```
+```
+vvencapp -i out.yuv -s 854x480 -r 30 --preset slow --threads 16 --tier high -o EXTREME.266
+```
 
 NOTE: It is acceptable only for encoding to .h266, .266 and .vvc file container.
 
