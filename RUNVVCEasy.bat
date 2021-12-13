@@ -74,7 +74,7 @@ exit
 cls
 color 6F
 title VLC Media Player (custom build of o266player)
-echo Hello, would you like to install VLC Media Player (custom build of o266player) on your computer?
+echo Hello, would you like to install VLC Media Player (v3.0.11.1 Vetinari, custom build of o266player) on your computer?
 echo Before you install...
 echo The VLC Media Player (custom build of o266player) works only on Windows 11, Windows 10, Windows Server 2022, Windows Server 2019 and Windows Server 2016.
 echo Windows XP and older won't work.
