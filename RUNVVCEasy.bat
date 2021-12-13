@@ -7,6 +7,7 @@ pause
 goto start
 
 :start
+title Martin Eesmaa / VVCEasy
 color 07
 cls
 echo What do you like to do for encode/decode VVC?
@@ -25,6 +26,7 @@ if %VVCSTART% == 5 goto test
 if %VVCSTART% == 6 goto vlc
 
 :encodestart
+title Encode
 cls
 echo Welcome to VVC encoder.
 echo What do you like to make VVC encode?
@@ -37,6 +39,7 @@ if %goodvvcenc% == 2 goto bestvvcenc1
 if %goodvvcenc% == 3 goto start
 
 :defaultvvcenc1
+title Did you encode to YUV/Y4M?
 echo Okay, did you encode to YUV/Y4M?
 echo 1. Yes (YUV)
 echo 2. Yes (Y4M)
@@ -59,6 +62,7 @@ if %readytestbefore% == y goto nowtestingtime
 if %readytestbefore% == n goto start
 
 :nowtestingtime
+title Testing time...
 cd /d "%~dp0"
 cd 7Zip
 
@@ -72,9 +76,9 @@ pause
 exit
 
 :vlc
-cls
 color 6F
 title VLC Media Player (custom build of o266player)
+cls
 echo Hello, would you like to install VLC Media Player (v3.0.11.1 Vetinari, custom build of o266player) on your computer?
 echo Before you install...
 echo The VLC Media Player (custom build of o266player) works only on Windows 11, Windows 10, Windows Server 2022, Windows Server 2019 and Windows Server 2016.
