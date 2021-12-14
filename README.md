@@ -31,11 +31,15 @@ YUView:
 https://github.com/IENT/YUView/actions/runs/1365560321
 
 Before we start, you need to make path environments for ffmpeg, ffplay and vvenc/vvdec to make easily.
-In Command Prompt:
+In Command Prompt (Windows):
+
 ```
 set PATH=%PATH%;C:\Users\blah\Downloads\VVCEasy\Executables
 ```
-verify `echo %PATH%` in Command Prompt
+Verify using Windows Command Prompt:
+```
+echo %PATH%
+```
 
 First of all:
 Transcode any video formats to YUV/Y4M
@@ -62,6 +66,8 @@ Encode with VVENC (Simple settings, example)
 vvencapp -i out.yuv -s 854x480 -r 30 -o vvc.266
 ```
 -s means video size, -r means frame per second and -o means output
+
+Note to Linux users: Command with `./vvencapp`
 
 Encode with VVENC (Best settings, replace video size (-s), framerate (-r) and maximize threads of your cores (--threads), example)
 ```
