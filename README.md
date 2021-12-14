@@ -73,7 +73,7 @@ NOTE: It is acceptable only for encoding to .h266, .266 and .vvc file container.
 After VVEnc, you can play in YUView develop version, unfortunately this should not work on release version of June.
 Drag any your video file of .h266, .266 or .vvc to play. YUView will play your video about only 10 seconds.
 
-UPDATE 13th December 2021: VLC Media Player (custom VLC build of o266player, 3.0.11.1 Vetenari) is tested by Martin Eesmaa. It can play only about 600 frames limit.
+UPDATE 13th December 2021: VLC Media Player (custom VLC build of o266player, 3.0.11.1 Vetenari, Windows 11) is tested by Martin Eesmaa. It can play only about 600 frames limit.
 ![VLC Media Player (VVC test)](https://user-images.githubusercontent.com/88035011/145756567-d156f630-9e7f-4042-99b5-6ffe8a6b4b64.png)
 
 If you are still not happy VVC, that you think this is too hard to encode and decode, or this cannot be played on VLC Media Player of VVC Video Codec, use AOMEDIA ONE that is recommended for most users for easily play VLC Media Player and others.
