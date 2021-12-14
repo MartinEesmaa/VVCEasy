@@ -67,7 +67,7 @@ vvencapp -i out.yuv -s 854x480 -r 30 -o vvc.266
 ```
 -s means video size, -r means frame per second and -o means output
 
-Note to Linux users: Command with `./vvencapp`
+Note to Apple Mac OS and Linux users: Command with `./vvencapp`
 
 Encode with VVENC (Best settings, replace video size (-s), framerate (-r) and maximize threads of your cores (--threads), example)
 ```
@@ -86,15 +86,15 @@ If you are still not happy VVC, that you think this is too hard to encode and de
 
 
 
-# Compatability results (VVENC AND VVDEC)
+# Compatability results (VVENC AND VVDEC) TEST COMPLETED BY MARTIN EESMAA
 
-Windows:
+Windows (vvencapp):
 ![WindowsVVENCDEC](https://user-images.githubusercontent.com/88035011/145812753-eddf04c5-1a10-4892-9118-7478735b1475.png)
 
-Mac:
+Mac (./vvencapp):
+![MacOSTerminal](https://user-images.githubusercontent.com/88035011/146085638-d3ec9101-f6b5-45ff-ba8b-b2a6059bc7d3.png)
 
-
-Linux:
+Linux (./vvencapp):
 ![UbuntuVVENCDEC](https://user-images.githubusercontent.com/88035011/145812781-9a270e03-0dc0-47e6-95ad-4316757d3435.png)
 
 
