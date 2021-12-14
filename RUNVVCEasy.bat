@@ -1,4 +1,5 @@
 echo off
+cd /d "%~dp0"
 cls
 title Martin Eesmaa / VVCEasy
 echo MARTIN EESMAA / VVCEasy
@@ -16,7 +17,8 @@ echo 2. Decode (construction)
 echo 3. Help (construction)
 echo 4. Exit
 echo 5. Test benchmark (construction)
-echo 6. Install VLC Media Player (o266player, Windows x64)
+echo 6. Install VLC Media Player (o266player, Windows x64) (construction)
+echo 7. Install quickly through Anaconda for ffmpeg (Windows) (construction)
 set /p VVCSTART=Number:
 if %VVCSTART% == 1 goto encodestart
 if %VVCSTART% == 2 goto decodestart
@@ -24,6 +26,7 @@ if %VVCSTART% == 3 goto help
 if %VVCSTART% == 4 goto exit
 if %VVCSTART% == 5 goto test
 if %VVCSTART% == 6 goto vlc
+if %VVCSTART% == 7 goto conda
 
 :encodestart
 title Encode
@@ -93,3 +96,12 @@ if %vlcinstall% == n goto start
 
 :vlcinstaller
 wget https://www.dropbox.com/s/hs7yoa9hkxa6ugd/vlc-3.0.11.1-w64.7z
+mkdir VLC
+cd VLC
+
+:conda
+cls
+title ANACONDA
+echo Sorry, this is not ready yet...
+pause
+goto start
