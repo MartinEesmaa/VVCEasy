@@ -67,7 +67,7 @@ if %readytestbefore% == n goto start
 :nowtestingtime
 title Testing time...
 cd /d "%~dp0"
-cd 7Zip
+cd 7-Zip
 
 :exit
 cls
@@ -97,7 +97,28 @@ if %vlcinstall% == n goto start
 :vlcinstaller
 wget https://www.dropbox.com/s/hs7yoa9hkxa6ugd/vlc-3.0.11.1-w64.7z
 mkdir VLC
+copy 7-Zip VLC
+move vlc-3.0.11.1-w64.7z VLC
 cd VLC
+del /q readme.txt
+del /q license.txt
+del /q History.txt
+7z x vlc-3.0.11.1-w64.7z
+del /q 7z.dll
+del /q 7z.exe
+del /q vlc-3.0.11.1-w64.7z
+color 6E
+cls
+echo SUCCESSFULL! Now, would you like to download test sample VVC file test it out to VLC custom build of o266player?
+echo If Yes, wget will download the example of VVC file and run to VLC a few seconds.
+echo If No, you will be prompted go back to menu.
+echo TIP: Run VLC.exe on your own VVC file for example, if your input frame rate is 30 and you encoded to VVC same frame rate input file.
+echo Example to run correctly frame rate on your VVC: vlc.exe yourownfile.266 --no-drop-late-frames --avformat-fps=30
+set /p %vlccompleted%=
+if %vlccompleted% == Y goto sample266
+if %vlccompleted% == N goto start
+if %vlccompleted% == y goto sample266
+if %vlccompleted% == n goto start
 
 :conda
 cls
