@@ -17,9 +17,9 @@ echo 2. Decode (construction)
 echo 3. Help (construction)
 echo 4. Exit
 echo 5. Test benchmark (construction)
-echo 6. Install VLC Media Player (o266player, Windows x64) (construction)
-echo 7. Install quickly through Anaconda for ffmpeg (Windows) (construction)
-set /p VVCSTART=Number:
+echo 6. Install VLC Media Player (o266player, Windows x64)
+echo 7. Install quickly through Anaconda for ffmpeg (Windows)
+set /p VVCSTART=Number: 
 if %VVCSTART% == 1 goto encodestart
 if %VVCSTART% == 2 goto decodestart
 if %VVCSTART% == 3 goto help
@@ -36,7 +36,7 @@ echo What do you like to make VVC encode?
 echo 1. Default settings
 echo 2. Best settings
 echo 3. Go back to menu
-set /p goodvvcenc=
+set /p goodvvcenc=Number: 
 if %goodvvcenc% == 1 goto defaultvvcenc1
 if %goodvvcenc% == 2 goto bestvvcenc1
 if %goodvvcenc% == 3 goto start
@@ -47,18 +47,17 @@ echo Okay, did you encode to YUV/Y4M?
 echo 1. Yes (YUV)
 echo 2. Yes (Y4M)
 echo 3. No
-set /p encoderyu4m=
+set /p encoderyu4m=Number: 
 if %encoderyu4m% == 1 goto YUVdefaultsetting
 if %encoderyu4m% == 2 goto Y4Mdefaultsetting
 if %encoderyu4m% == 3 goto nextoptionsetting
-
 
 :test
 cls
 title TEST BENCHMARK
 echo Martin Eesmaa is testing your benchmark for two settings between default and best settings.
 echo Are you ready to test? (Y/N)
-set /p readytestbefore=
+set /p readytestbefore=Answer: 
 if %readytestbefore% == Y goto nowtestingtime
 if %readytestbefore% == N goto start
 if %readytestbefore% == y goto nowtestingtime
@@ -72,10 +71,20 @@ cd 7-Zip
 :exit
 cls
 title Have a nice day!
-echo Have a nice day :)
+echo Have a nice day! :)
+:::    _   _                 _                      
+:::    | | | |               | |                     
+:::    | |_| |__   __ _ _ __ | | ___   _  ___  _   _ 
+:::    | __| '_ \ / _` | '_ \| |/ / | | |/ _ \| | | |
+:::    | |_| | | | (_| | | | |   <| |_| | (_) | |_| |
+:::     \__|_| |_|\__,_|_| |_|_|\_\\__, |\___/ \__,_|
+:::                                 __/ |            
+:::                                |___/
+
+for /f "delims=: tokens=*" %%A in ('findstr /b ::: "%~f0"') do @echo(%%A
 echo Copyright 2021 Martin Eesmaa
 echo ------------END----------------
-pause
+timeout 5 /nobreak
 exit
 
 :vlc
@@ -88,7 +97,7 @@ echo The VLC Media Player (custom build of o266player) works only on Windows 11,
 echo Windows XP and older won't work.
 echo You need must run 64-bit. On 32-bit, it won't work.
 echo Install? Y/N?
-set /p vlcinstall=
+set /p vlcinstall=Answer: 
 if %vlcinstall% == Y goto vlcinstaller
 if %vlcinstall% == N goto start
 if %vlcinstall% == y goto vlcinstaller
@@ -107,22 +116,42 @@ del /q History.txt
 del /q 7z.dll
 del /q 7z.exe
 del /q vlc-3.0.11.1-w64.7z
+cd ../
 color 6E
 cls
-echo SUCCESSFULL! Now, would you like to download test sample VVC file test it out to VLC custom build of o266player?
+echo SUCCESSFUL! Now, would you like to download test sample VVC file test it out to VLC custom build of o266player?
 echo If Yes, wget will download the example of VVC file and run to VLC a few seconds.
 echo If No, you will be prompted go back to menu.
 echo TIP: Run VLC.exe on your own VVC file for example, if your input frame rate is 30 and you encoded to VVC same frame rate input file.
 echo Example to run correctly frame rate on your VVC: vlc.exe yourownfile.266 --no-drop-late-frames --avformat-fps=30
-set /p %vlccompleted%=
+set /p vlccompleted=Answer: 
 if %vlccompleted% == Y goto sample266
 if %vlccompleted% == N goto start
 if %vlccompleted% == y goto sample266
 if %vlccompleted% == n goto start
 
+:sample266
+color 07
+wget https://www.dropbox.com/s/zp8b3xg0b5p1pwe/VVCEasy.266
+move VVCEasy.266 VLC
+cd VLC
+vlc.exe VVCEasy.266 --no-drop-late-frames --avformat-fps=24
+echo OK!
+pause
+goto start
+
 :conda
 cls
 title ANACONDA
-echo Sorry, this is not ready yet...
+echo Welcome to Anaconda Quick Install. This will only one task for ffmpeg. Would you like to install? Y/N?
+set /p anacondaman=
+if %anacondaman% == Y goto condainstall
+if %anacondaman% == N goto start
+if %anacondaman% == y goto condainstall
+if %anacondaman% == n goto start
+
+:condainstall
+conda install -c conda-forge ffmpeg
+echo SUCCESS, going to back menu...
 pause
 goto start
