@@ -48,21 +48,23 @@ echo %PATH%
 First of all:
 Transcode any video formats to YUV/Y4M
 
-For YUV transcode (replace f for frame rate):
+For YUV transcode:
 ```
-ffmpeg -i input.mp4 -r f inputtranscode.yuv
+ffmpeg -i input.mp4 -strict 1 inputtranscode.yuv
 ```
 
-For Y4M transcode (replace f for frame rate):
+For Y4M transcode:
 ```
-ffmpeg -i input.mp4 -r f inputtranscode.y4m
+ffmpeg -i input.mp4 -strict 1 inputtranscode.y4m
 ```
 
 Verify ffplay before encode with VVENC (replace video size, important otherwise it will not show correctly video, it's like scramble eggs):
 ```
 ffplay -f rawvideo -pixel_format yuv420p -video_size 854x480 -i inputtranscode.yuv
 ``` 
-Or replace -i inputtranscode.yuv with `-i inputtranscode.y4m` for y4m users.
+Or replace -i inputtranscode.yuv with `-i inputtranscode.y4m` for y4m users. For yuv420p10 on your input video 10 bit, replace `-pixel_format yuv420p10`.
+
+For easy to verify YUV/Y4M, use YUView, open your YUV or Y4M encoded, make sure video size, YUV format and frame rate same like from input video file (eg. MP4, AVI, MKV and others.
 
 After verifying correctly
 Encode with VVENC (Simple settings, example)
