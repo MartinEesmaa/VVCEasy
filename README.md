@@ -1,4 +1,4 @@
-# VVCEasy (Windows/Mac/Linux)
+# VVCEasy (Windows (Full), Mac and Linux (partial)
 VVCEasy is that you don't have to compile or/and coding to encode VVC (known as Versatile Video Codec). Simple. Easy. Encode. Decode
 
 VVCEasy comes to one-easy of ffmpeg, vvenc, vvdec and YUView.
@@ -9,6 +9,10 @@ VVCEasy is not yet finished. I'm trying to work with codes. I'm not good coding 
 Sorry to say that. I will give update, once I release news.
 
 Windows source run: RUNVVCEASY.bat
+
+Note to Mac and Linux of o266player VLC: Sorry Mac and Linux users :(, on macOS 10.15.6, I tried build, but it failed, you can have a look for Stack Overflow: https://bit.ly/3GTtNTJ
+On Linux, it won't support of VLC (o266player build).
+If you want to run VLC (o266player version), you have to run Windows only for virtual machine or your real computer.
 
 # Encode/Decode (easy)
 
