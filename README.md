@@ -14,6 +14,25 @@ Note to Mac and Linux of o266player VLC: Sorry Mac and Linux users :(, on macOS 
 On Linux, it won't support of VLC (o266player build).
 If you want to run VLC (o266player version), you have to run Windows only for virtual machine or your real computer.
 
+# Compatability Windows Operating System (VLC Media Player, o266player build version)
+
+Windows Normal O.S.  | x64 | x86 |
+------------- | ------------- | ------------- 
+Windows 7 SP1  | :white_check_mark:  | ?
+Windows 8  | :white_check_mark:  | ?
+Windows 8.1  | :white_check_mark:  | ?
+Windows 10  | :white_check_mark:  | ? 
+Windows 11  | :white_check_mark:  | ? 
+
+Windows Server O.S.  | x64 | x86 |
+------------- | ------------- | ------------- 
+Windows Server 2012  | :white_check_mark:  | ?
+Windows Server 2016  | :white_check_mark:  | ?
+Windows Server 2019  | :white_check_mark:  | ?
+Windows Server 2022  | :white_check_mark:  | ? 
+
+If any operating system is not listed, like Windows XP, this cannot be run on Windows Vista / Windows Server 2008 or older to play VVC of VLC custom build. I'll make sure update to VLC 3.0.16 possible, including VVC dll.
+
 # Encode/Decode (easy)
 
 Before you run of RUNVVCEASY.bat or VVCEASY.exe, you need to change input from file name to input.mp4 (as example)
@@ -82,10 +101,12 @@ vvencapp -i out.yuv -s 854x480 -r 30 --preset slow --threads 16 --tier high -o E
 
 NOTE: It is acceptable only for encoding to .h266, .266 and .vvc file container.
 
+Note to 10 bit YUV users: If you encoding YUV 10 bit to VVC file, add `-c yuv420_10` before you type ending of -o EXTREME.266
+
 After VVEnc, you can play in YUView develop version, unfortunately this should not work on release version of June.
 Drag any your video file of .h266, .266 or .vvc to play. YUView will play your video about only 10 seconds.
 
-UPDATE 13th December 2021: VLC Media Player (custom VLC build of o266player, 3.0.11.1 Vetenari, Windows 11) is tested by Martin Eesmaa. It can play only about 600 frames limit.
+UPDATE 13th December 2021: VLC Media Player (custom VLC build of o266player, 3.0.11.1 Vetenari, Windows 11) is tested by Martin Eesmaa. It can play only about 600 frames limit / 20+ seconds.
 ![VLC Media Player (VVC test)](https://user-images.githubusercontent.com/88035011/145756567-d156f630-9e7f-4042-99b5-6ffe8a6b4b64.png)
 
 If you are still not happy VVC, that you think this is too hard to encode and decode, or this cannot be played on VLC Media Player of VVC Video Codec, use AOMEDIA ONE that is recommended for most users for easily play VLC Media Player and others.
