@@ -94,7 +94,7 @@ cls
 echo Hello, would you like to install VLC Media Player (v3.0.11.1 Vetinari, custom build of o266player) on your computer?
 echo Before you install...
 echo The VLC Media Player (custom build of o266player) works only on Windows 11, Windows 10, Windows 8.1, Windows 8, Windows 7 SP1, Windows Server 2022, Windows Server 2019, Windows Server 2016 and Windows Server 2012.
-echo Windows XP and earlier versions won't work.
+echo Windows XP and older versions won't work, because it could be terminal error or/and cannot decode format.
 echo You need to run 64-bit / x64. On 32-bit / x86, it won't work.
 echo Install? Y/N?
 set /p vlcinstall=Answer: 
@@ -136,6 +136,7 @@ wget https://www.dropbox.com/s/zp8b3xg0b5p1pwe/VVCEasy.266
 move VVCEasy.266 VLC
 cd VLC
 vlc.exe VVCEasy.266 --no-drop-late-frames --avformat-fps=24
+cd ../
 echo OK! Test completed!
 timeout 5
 goto start
