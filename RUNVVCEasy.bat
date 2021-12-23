@@ -3,7 +3,7 @@ cd /d "%~dp0"
 cls
 title Martin Eesmaa / VVCEasy
 echo MARTIN EESMAA / VVCEasy
-echo Welcome to VVCEasy.
+echo Welcome to VVCEasy. (Alpha version, v.0.0.1)
 pause
 goto start
 
