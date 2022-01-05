@@ -1,6 +1,19 @@
 HISTORY of the 7-Zip
 --------------------
 
+21.07          2021-12-26
+-------------------------
+- 7-Zip now can extract VHDX disk images (Microsoft Hyper-V Virtual Hard Disk v2 format).
+- New switches: -spm and -im!{file_path} to exclude directories from processing 
+    for specified paths that don't contain path separator character at the end of path.
+- In the "Add to Archive" window, now it is allowed to use -m prefix for "Parameters" 
+  field as in command line: -mparam.
+- The sorting order of files in archives was slightly changed to be more consistent
+  for cases where the name of some directory is the same as the prefix part of the name
+  of another directory or file.
+- TAR archives created by 7-Zip now are more consistent with archives created by GNU TAR program.
+
+
 21.06          2021-11-24
 -------------------------
 - The window "Add to Archive" now allows to set a limit on memory usage (RAM) 
@@ -30,7 +43,7 @@ HISTORY of the 7-Zip
   New -shd{dir_path} switch to set the directory that is used to check files 
   referenced by "file.sha256" file for "Test" operation. 
   If -shd{dir_path} is not specified, 7-Zip uses the directory where "file.sha256" is stored.  
-- New -xtd switch to exclude directory items from processing.
+- New -xtd switch to exclude directory metadata records from processing.
 
 
 21.03 beta     2021-07-20
