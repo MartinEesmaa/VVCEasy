@@ -1,5 +1,5 @@
 # VVCEasy (Windows (Full), Mac and Linux (partial)
-VVCEasy is that you don't have to compile or/and coding to encode VVC (known as Versatile Video Codec). Simple. Easy. Encode. Decode
+VVCEasy is that you don't have to compile or/and coding to encode VVC (known as Versatile Video Codec). Simple, Easy, Encode and Decode.
 
 VVCEasy comes to one-easy of ffmpeg, vvenc, vvdec and YUView.
 
@@ -14,24 +14,31 @@ Note to Mac and Linux of o266player VLC: Sorry Mac and Linux users :(, on macOS 
 On Linux, it won't support of VLC (o266player build).
 If you want to run VLC (o266player version), you have to run Windows only for virtual machine or your real computer.
 
-# Compatability Windows Operating System (VLC Media Player, o266player build version)
+# Compatability Windows Operating System (VLC Media Player v3.0.11.1, o266player build version)
 
-Windows Normal O.S.  | x64 | x86 |
-------------- | ------------- | ------------- 
-Windows 7 SP1  | :white_check_mark:  | ?
-Windows 8  | :white_check_mark:  | ?
-Windows 8.1  | :white_check_mark:  | ?
-Windows 10  | :white_check_mark:  | ? 
-Windows 11  | :white_check_mark:  | ? 
+Windows | Compatibility (only x64)
+------- | ------- |
+Windows 2000/ME or older | ❌ (Cannot run custom build)
+Windows XP | ⚠️ (Terminal only, GUI is not working)
+Windows Vista | ⚠️ (GUI Works, but VVC won't work)
+Windows 7 | :white_check_mark: (All checked)
+Windows 8   |   :white_check_mark: (All checked)
+Windows 8.1 |   :white_check_mark: (All checked)
+Windows 10  |   :white_check_mark: (All checked)
+Windows 11  |   :white_check_mark: (All checked)
 
-Windows Server O.S.  | x64 | x86 |
-------------- | ------------- | ------------- 
-Windows Server 2012  | :white_check_mark:  | ?
-Windows Server 2016  | :white_check_mark:  | ?
-Windows Server 2019  | :white_check_mark:  | ?
-Windows Server 2022  | :white_check_mark:  | ? 
+Windows Server | Check
+------- | ------- |
+Windows Server 2003 | ⚠️ (Terminal only, GUI is not working)
+Windows Server 2008 | ⚠️ (GUI Works, but VVC won't work)
+Windows Server 2012 | :white_check_mark: (All checked)
+Windows Server 2016   | :white_check_mark: (All checked)
+Windows Server 2019 | :white_check_mark: (All checked)
+Windows Server 2022  | :white_check_mark: (All checked)
 
-If any operating system is not listed, like Windows XP, this cannot be run on Windows Vista / Windows Server 2008 or older to play VVC of VLC custom build. I'll make sure update to VLC 3.0.16 possible, including VVC dll.
+VLC Custom build of o266player only accepts x64 / 64-bit to work. 32-bit / x86 won't work.
+
+This cannot be run on Windows Vista / Windows Server 2008 or older to play VVC of VLC Custom build. Note: I'm trying to work it out of VLC 3.0.16.
 
 # Encode/Decode (easy)
 
