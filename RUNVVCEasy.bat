@@ -71,7 +71,7 @@ cd 7-Zip
 :exit
 cls
 title Have a nice day!
-echo Have a nice day! :)
+echo Have a nice day! Thanks for using VVCEasy. :)
 :::    _   _                 _                      
 :::    | | | |               | |                     
 :::    | |_| |__   __ _ _ __ | | ___   _  ___  _   _ 
@@ -93,9 +93,9 @@ title VLC Media Player (custom build of o266player)
 cls
 echo Hello, would you like to install VLC Media Player (v3.0.11.1 Vetinari, custom build of o266player) on your computer?
 echo Before you install...
-echo The VLC Media Player (custom build of o266player) works only on Windows 11, Windows 10, Windows 8.1, Windows 8, Windows 7 SP1, Windows Server 2022, Windows Server 2019, Windows Server 2016 and Windows Server 2012.
-echo Windows XP and older versions won't work, because it could be terminal error or/and cannot decode format.
-echo You need to run 64-bit / x64. On 32-bit / x86, it won't work.
+echo The VLC Media Player (custom build of o266player) works only on Windows 7 / Windows Server 2012 or earlier versions.
+echo Windows Vista and older versions won't work, because it could be terminal error or/and cannot decode VVC format.
+echo You need 64-bit / x64 to run VLC custom build. On 32-bit / x86, it won't work.
 echo Install? Y/N?
 set /p vlcinstall=Answer: 
 if %vlcinstall% == Y goto vlcinstaller
