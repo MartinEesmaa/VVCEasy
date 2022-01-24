@@ -100,13 +100,27 @@ vvencapp -i out.yuv -s 854x480 -r 30 -o vvc.266
 ```
 -s means video size, -r means frame per second and -o means output
 
+The default of VVENC: Constant Quality is 32 and speed is medium.
+If you want to get smaller video size and lossy video, add -qp 38. (Not recommended)
+If you want lossless video without losing quality, use CQ 16-19 and preset slower. (Recommended)
+
+Lossy video/Smallest video size:
+```
+vvencapp -qp 38 -i out.yuv -s 854x480 -r 30 -o vvc.266
+```
+
+Lossless video (without losing quality):
+```
+vvencapp -qp 16 -i out.yuv -s 854x480 -r 30 --preset slower -o vvc.266
+```
+
 Note to Apple Mac OS and Linux users: Command with `./vvencapp`
 
 Optional Windows users using Windows Powershell: Command with `.\vvencapp`
 
-Encode with VVENC (Best settings, replace video size (-s), framerate (-r) and maximize threads of your cores (--threads), example)
+Encode with VVENC (Best settings (lossless), replace video size (-s), framerate (-r) and maximize threads of your cores (--threads), example)
 ```
-vvencapp -i out.yuv -s 854x480 -r 30 --preset slow --threads 16 --tier high -o EXTREME.266
+vvencapp -qp 18 -i out.yuv -s 854x480 -r 30 --preset slower --threads 16 --tier high -o EXTREME.266
 ```
 
 NOTE: It is acceptable only for encoding to .h266, .266 and .vvc file container.
@@ -137,7 +151,7 @@ Linux (./vvencapp):
 # FAQ (known as Frequently Asked Questions)
 
 Are you real creator of VVCEasy?
-Yes... but I'm not creator of VVC, I didn't build VVC, so it was Fraunhofer that he built VVC.
+Yes... but I'm not real creator of VVC, I didn't build VVC, so it was Fraunhofer that he built VVC.
 
 Are you trying to work build of VVCEasy?
 Well yeah... it takes longer time to make VVCEasy easier, but VVCEasy is not yet finished until further/update announcement. I don't have employees, so I'm only one.
