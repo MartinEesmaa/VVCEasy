@@ -106,12 +106,12 @@ If you want lossless video without losing quality, use CQ 16-19 and preset slowe
 
 Lossy video/Smallest video size:
 ```
-vvencapp -qp 38 -i out.yuv -s 854x480 -r 30 -o vvc.266
+vvencapp --qp 38 -i out.yuv -s 854x480 -r 30 -o vvc.266
 ```
 
 Lossless video (without losing quality):
 ```
-vvencapp -qp 16 -i out.yuv -s 854x480 -r 30 --preset slower -o vvc.266
+vvencapp --qp 16 -i out.yuv -s 854x480 -r 30 --preset slower -o vvc.266
 ```
 
 Note to Apple Mac OS and Linux users: Command with `./vvencapp`
@@ -120,7 +120,7 @@ Optional Windows users using Windows Powershell: Command with `.\vvencapp`
 
 Encode with VVENC (Best settings (lossless), replace video size (-s), framerate (-r) and maximize threads of your cores (--threads), example)
 ```
-vvencapp -qp 18 -i out.yuv -s 854x480 -r 30 --preset slower --threads 16 --tier high -o EXTREME.266
+vvencapp --qp 18 -i out.yuv -s 854x480 -r 30 --preset slower --threads 16 --tier high -o EXTREME.266
 ```
 
 NOTE: It is acceptable only for encoding to .h266, .266 and .vvc file container.
