@@ -14,6 +14,11 @@ Note to Mac and Linux of o266player VLC: Sorry Mac and Linux users :(, on macOS 
 On Linux, it won't support of VLC (o266player build).
 If you want to run VLC (o266player version), you have to run Windows only for virtual machine or your real computer.
 
+# Donate to me using cryptocurrency
+
+- **BTC:** `3L8vGS5nBwFoFTrQdMdUiRi8FoKZKvjmtG`
+- **MONERO:** `85Ahh93M88gV8ekymtYwb6TS14TZ36jNGTFgceaRH7hj8Rtx1qVB9PobnJLR5siz4nYBnzWy3pkV6KaVroifGMVh7n4br3J`
+
 # Compatability Windows Operating System (VLC Media Player v3.0.11.1, o266player build version)
 
 Windows | Compatibility (only x64)
