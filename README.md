@@ -53,9 +53,10 @@ You need 7Zip (requires ffmpeg and ffplay), ffmpeg, ffplay, vvenc/vvdec(app) and
 
 Here are the links:
 FFMPEG/FFPLAY: https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-full.7z (go to bin folder and extract two files)
-VVENC/VVDEC:
-https://github.com/MartinEesmaa/VVCEasy/blob/main/VVC/vvencapp.exe
-https://github.com/MartinEesmaa/VVCEasy/blob/main/VVC/vvdecapp.exe
+VVENC/VVDEC (Windows, Mac and Linux):
+Windows: https://github.com/MartinEesmaa/VVCEasy/blob/master/WindowsVVC/WindowsVVC.7z
+Mac: https://github.com/MartinEesmaa/VVCEasy/tree/master/MacOSVVC/MacOSVVC.7z
+Linux: https://github.com/MartinEesmaa/VVCEasy/blob/master/LinuxVVC/LinuxVVC.7z
 
 YUView:
 https://github.com/IENT/YUView/actions/runs/1365560321
