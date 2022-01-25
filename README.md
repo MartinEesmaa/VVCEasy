@@ -80,57 +80,59 @@ echo %PATH%
 First of all:
 Transcode any video formats to YUV/Y4M
 
-For YUV transcode:
+For YUV transcode (lossy from web quality, YouTube videos and others):
 ```
 ffmpeg -i input.mp4 -strict 1 inputtranscode.yuv
 ```
 
-For Y4M transcode:
+For Y4M transcode (lossless from uncompressed video files, only 8 bit):
 ```
 ffmpeg -i input.mp4 -strict 1 inputtranscode.y4m
 ```
 
-Verify ffplay before encode with VVENC (replace video size, important otherwise it will not show correctly video, it's like scramble eggs):
+Verify ffplay before encode with VVENC (important replace video size, otherwise it will not show correctly video, it's like scrambled eggs video):
 ```
-ffplay -f rawvideo -pixel_format yuv420p -video_size 854x480 -i inputtranscode.yuv
+ffplay -f rawvideo -pix_fmt yuv420p -s 854x480 -i inputtranscode.yuv
 ``` 
 Or replace -i inputtranscode.yuv with `-i inputtranscode.y4m` for y4m users. For yuv420p10 on your input video 10 bit, replace `-pixel_format yuv420p10`.
 
-For easy to verify YUV/Y4M, use YUView, open your YUV or Y4M encoded, make sure video size, YUV format and frame rate same like from input video file (eg. MP4, AVI, MKV and others.
+For easy to verify YUV/Y4M, use YUView, open your YUV or Y4M encoded, make sure video size, YUV/Y4M format and frame rate same like from input video file (eg. MP4, AVI, MKV and others.
 
-After verifying correctly
+After verifying correctly your YUV/Y4M video
 Encode with VVENC (Simple settings, example)
 ```
 vvencapp -i out.yuv -s 854x480 -r 30 -o vvc.266
 ```
--s means video size, -r means frame per second and -o means output
+-s means video size, -r means frame per second and -o means output. Note: (Simple) as Default settings is YUV420P (8-bit)
 
 The default of VVENC: Constant Quality is 32 and speed is medium.
-If you want to get smaller video size and lossy video, add -qp 38. (Not recommended)
-If you want lossless video without losing quality, use CQ 16-19 and preset slower. (Recommended)
+If you want to get smaller video size and lossy video, add --qp 38. (Not recommended)
+If you want to get lossless video without losing quality, use CQ 16-19 and preset slow (optional slower). (Recommended, only Y4M, Raw and Uncompressed video files)
 
 Lossy video/Smallest video size:
 ```
 vvencapp --qp 38 -i out.yuv -s 854x480 -r 30 -o vvc.266
 ```
 
-Lossless video (without losing quality):
+Lossless video (without losing quality, only Y4M, Raw, Uncompressed video used):
 ```
-vvencapp --qp 16 -i out.yuv -s 854x480 -r 30 --preset slower -o vvc.266
+vvencapp --qp 18 -i out.yuv -s 854x480 -r 30 --preset slow -o vvc.266
 ```
 
 Note to Apple Mac OS and Linux users: Command with `./vvencapp`
 
 Optional Windows users using Windows Powershell: Command with `.\vvencapp`
 
-Encode with VVENC (Best settings (lossless), replace video size (-s), framerate (-r) and maximize threads of your cores (--threads), example)
+Encode with VVENC (Best settings (lossless only of Y4M, Raw and Uncompressed video files), replace video size (-s), framerate (-r) and maximize threads of your cores (--threads), example)
 ```
-vvencapp --qp 18 -i out.yuv -s 854x480 -r 30 --preset slower --threads 16 --tier high -o EXTREME.266
+vvencapp --qp 18 -i out.yuv -s 854x480 -r 30 --preset slow --threads 16 --tier high -o EXTREME.266
 ```
 
 NOTE: It is acceptable only for encoding to .h266, .266 and .vvc file container.
 
-Note to 10 bit YUV users: If you encoding YUV 10 bit to VVC file, add `-c yuv420_10` before you type ending of -o EXTREME.266
+Note to 10 bit YUV users: If you encoding YUV 10 bit to VVC file, add `-c yuv420_10` before you type ending of -o EXTREME.266.
+
+Note to 8 bit Y4M users: It is only from input video (8-bit) to Y4M (8 bit)
 
 After VVEnc, you can play in YUView develop version, unfortunately this should not work on release version of June.
 Drag any your video file of .h266, .266 or .vvc to play. YUView will play your video only about 10 seconds limit.
@@ -138,7 +140,7 @@ Drag any your video file of .h266, .266 or .vvc to play. YUView will play your v
 UPDATE 13th December 2021: VLC Media Player (custom VLC build of o266player, 3.0.11.1 Vetenari, Windows 11) is tested by Martin Eesmaa. It can play only about 600 frames limit / 20+ seconds.
 ![VLC Media Player (VVC test)](https://user-images.githubusercontent.com/88035011/145756567-d156f630-9e7f-4042-99b5-6ffe8a6b4b64.png)
 
-If you are still not happy about VVC (known as Versatile Video Coding), that you think this is too hard to encode and decode, use AOMEDIA ONE (AV1) that is recommended for most users to easily play VLC Media Player and others.
+If you are still not happy about VVC (known as Versatile Video Coding), that you think this is too hard to encode and decode, use AOMEDIA ONE (AV1) that is recommended for most users to easily play VLC Media Player and others. VVC should need played on VLC Media Player in future.
 
 
 # Compatability results (VVENC AND VVDEC) TEST COMPLETED BY MARTIN EESMAA
