@@ -13,7 +13,7 @@ color 07
 cls
 echo What do you like to do for encode/decode VVC?
 echo 1. Encode (partial construction)
-echo 2. Decode (partial construction)
+echo 2. Decode (little construction)
 echo 3. Help (construction)
 echo 4. Exit
 echo 5. Test benchmark (construction)
@@ -37,7 +37,7 @@ echo Before we move to settings quality, is your video lossy or lossless?
 echo 1. Lossy (example YouTube videos, Web videos, lossy compressed videos and other webs)
 echo 2. Lossless (example XIPH Media, Camera uncompressed (MOV/MP4/AVI), Apple ProRes and others uncompressed files)
 echo 3. Go back to menu
-set /p %vvencquestion1%=Number: 
+set /p vvencquestion1=Number: 
 if %vvencquestion1% == 1 goto losslessvvenc1
 if %vvencquestion1% == 2 goto lossyvvenc1
 if %vvencquestion1% == 3 goto start
@@ -53,7 +53,7 @@ echo 2. Lossy settings (Not recommended)
 echo 3. Default settings (Not recommended)
 echo 4. Go back from previous
 echo 5. Go back from menu
-set /p %vvencquestion2%=Number: 
+set /p vvencquestion2=Number: 
 if %vvencquestion2% == 1 goto losslessvvenc2
 if %vvencquestion2% == 2 goto lossyvvenc2
 if %vvencquestion2% == 3 goto defaultvvenc2
@@ -68,22 +68,56 @@ echo If you have Y4M already, move your Y4M file into C:\Program Files\VVCEasy\
 echo If you don't have Y4M, your instruction will go to next...
 echo 1. I have Y4M already (I'm ready)
 echo 2. I don't have Y4M
-set /p %doyouhavey4mvvencquestion3%=Number: 
+set /p doyouhavey4mvvencquestion3=Number: 
 if %doyouhavey4mvvencquestion3% == 1 goto startlosslessvvenc2
 if %doyouhavey4mvvencquestion3% == 2 goto nextmoviefilestypeoflosslessvvenc2
 
 :startlosslessvvenc2
+cls
+title Sorry...
 echo SORRY! CONSTRUCTION MODE! Sorry for long code.
 pause
 goto start
 
-echo 1. Default settings
-echo 2. Best settings
-echo 3. Go back to menu
-set /p goodvvcenc=Number: 
-if %goodvvcenc% == 1 goto defaultvvcenc1
-if %goodvvcenc% == 2 goto bestvvcenc1
-if %goodvvcenc% == 3 goto start
+:decodestart
+explorer "C:\Program Files\VVCEasy\WindowsVVC"
+cls
+title Decode from VVC to YUV/Y4M
+echo Do you wanna transcode back from VVC to YUV or Y4M? Which did you choose settings? Choosing settings will transcode back.
+echo You need copy from your VVC file to C:\Program Files\VVCEasy\WindowsVVC\. Windows Explorer will open automatically.
+echo After copying, you need rename to VVC.vvc. It will transcode from your VVC file to YUV/Y4M.
+echo After transcode, your transcoded file should be: C:\Program Files\VVCEasy\transcodedback
+echo 1. YUV (lossy video VVC)
+echo 2. Y4M (lossless video VVC)
+set /p decodestart1=Number: 
+if %decodestart1% == 1 goto DECODESTARTFROMVVCTOYUV
+if %decodestart1% == 2 goto DECODESTARTFROMVVCTOY4M
+
+:DECODESTARTFROMVVCTOYUV
+cls
+title STARTING TRANSCODING BACK FROM VVC TO YUV...
+mkdir transcodedback
+cd WindowsVVC
+vvdecapp -b VVC.vvc -o VVCTOYUV.yuv
+move VVCTOYUV.yuv ../
+move VVCTOYUV.yuv transcodedback
+explorer "C:\Program Files\VVCEasy\transcodedback"
+echo FINISHED. Going back to menu...
+timeout 3
+goto start
+
+:DECODESTARTFROMVVCTOY4M
+cls
+title STARTING TRANSCODING BACK FROM VVC TO Y4M...
+mkdir transcodedback
+cd WindowsVVC
+vvdecapp -b VVC.vvc --y4m -o VVCTOYUV.y4m
+move VVCTOYUV.y4m ../
+move VVCTOYUV.y4m transcodedback
+explorer "C:\Program Files\VVCEasy\transcodedback"
+echo FINISHED. Going back to menu...
+timeout 3
+goto start
 
 :defaultvvcenc1
 title Did you encode to YUV/Y4M?
