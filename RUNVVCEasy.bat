@@ -12,8 +12,8 @@ title Martin Eesmaa / VVCEasy
 color 07
 cls
 echo What do you like to do for encode/decode VVC?
-echo 1. Encode (construction)
-echo 2. Decode (construction)
+echo 1. Encode (partial construction)
+echo 2. Decode (partial construction)
 echo 3. Help (construction)
 echo 4. Exit
 echo 5. Test benchmark (construction)
@@ -29,10 +29,54 @@ if %VVCSTART% == 6 goto vlc
 if %VVCSTART% == 7 goto conda
 
 :encodestart
-title Encode
+title Encode to VVC
 cls
 echo Welcome to VVC encoder.
-echo What do you like to make VVC encode?
+echo What do you like encode to VVC?
+echo Before we move to settings quality, is your video lossy or lossless?
+echo 1. Lossy (example YouTube videos, Web videos, lossy compressed videos and other webs)
+echo 2. Lossless (example XIPH Media, Camera uncompressed (MOV/MP4/AVI), Apple ProRes and others uncompressed files)
+echo 3. Go back to menu
+set /p %vvencquestion1%=Number: 
+if %vvencquestion1% == 1 goto losslessvvenc1
+if %vvencquestion1% == 2 goto lossyvvenc1
+if %vvencquestion1% == 3 goto start
+
+:losslessvvenc1
+title Lossless (uncompressed)
+cls
+echo Okay, you chose Lossless (uncompressed)
+echo Now for settings quality. Choose settings. 
+echo It is recommended to use Lossless settings. Others are not recommended, will lose your video quality.
+echo 1. Lossless/Best settings (Recommended)
+echo 2. Lossy settings (Not recommended)
+echo 3. Default settings (Not recommended)
+echo 4. Go back from previous
+echo 5. Go back from menu
+set /p %vvencquestion2%=Number: 
+if %vvencquestion2% == 1 goto losslessvvenc2
+if %vvencquestion2% == 2 goto lossyvvenc2
+if %vvencquestion2% == 3 goto defaultvvenc2
+if %vvencquestion2% == 4 goto encodestart
+if %vvencquestion2% == 5 goto start
+
+:losslessvvenc2
+title Lossless settings with Lossless uncompressed (VVC Encoder)
+cls
+echo Do you have Y4M?
+echo If you have Y4M already, move your Y4M file into C:\Program Files\VVCEasy\
+echo If you don't have Y4M, your instruction will go to next...
+echo 1. I have Y4M already (I'm ready)
+echo 2. I don't have Y4M
+set /p %doyouhavey4mvvencquestion3%=Number: 
+if %doyouhavey4mvvencquestion3% == 1 goto startlosslessvvenc2
+if %doyouhavey4mvvencquestion3% == 2 goto nextmoviefilestypeoflosslessvvenc2
+
+:startlosslessvvenc2
+echo SORRY! CONSTRUCTION MODE! Sorry for long code.
+pause
+goto start
+
 echo 1. Default settings
 echo 2. Best settings
 echo 3. Go back to menu
