@@ -21,22 +21,22 @@ If you want to run VLC (o266player version), you have to run Windows only for vi
 
 # Compatability Windows Operating System (VLC Media Player v3.0.11.1, o266player build version)
 
-Windows | Compatibility (only x64)
-------- | ------- |
+Windows | Compatibility (only x64)  | Screenshot
+------- | ------- | --------------- | 
 Windows 2000/ME or older | ❌ (Cannot run custom build)
 Windows XP | ⚠️ (Terminal only, GUI is not working)
 Windows Vista | ⚠️ (GUI Works, but VVC won't work)
-Windows 7 | :white_check_mark: (All checked)
+Windows 7 | :white_check_mark: (All checked) | [Link](https://i.postimg.cc/7hfJ22Qf/Windows-7-o266player-Martin-Eesmaa.png)
 Windows 8   |   :white_check_mark: (All checked)
-Windows 8.1 |   :white_check_mark: (All checked)
+Windows 8.1 |   :white_check_mark: (All checked) | [Link](https://i.postimg.cc/L6QvwkM0/Windows-8-1-o266player-Martin-Eesmaa.png)
 Windows 10  |   :white_check_mark: (All checked)
 Windows 11  |   :white_check_mark: (All checked)
 
-Windows Server | Check
-------- | ------- |
+Windows Server | Check | Screenshot
+------- | ------- | --------- |
 Windows Server 2003 | ⚠️ (Terminal only, GUI is not working)
 Windows Server 2008 | ⚠️ (GUI Works, but VVC won't work)
-Windows Server 2012 | :white_check_mark: (All checked)
+Windows Server 2012 | :white_check_mark: (All checked) | [Link](https://i.postimg.cc/NG7MfbJL/Windows-Server-2012-o266player.png)
 Windows Server 2016   | :white_check_mark: (All checked)
 Windows Server 2019 | :white_check_mark: (All checked)
 Windows Server 2022  | :white_check_mark: (All checked)
@@ -57,7 +57,7 @@ Follow the instructions, the commands will give your options. Since 21 October 2
 You need 7Zip (requires ffmpeg and ffplay), ffmpeg, ffplay, vvenc/vvdec(app) and YUView.
 
 Here are the links:
-FFMPEG/FFPLAY: https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-full.7z (go to bin folder and extract two files)
+FFMPEG/FFPLAY: https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-full.7z (go to bin folder and extract two files of ffmpeg and ffplay)
 VVENC/VVDEC (Windows, Mac and Linux):
 Windows: https://github.com/MartinEesmaa/VVCEasy/blob/master/WindowsVVC/WindowsVVC.7z
 Mac: https://github.com/MartinEesmaa/VVCEasy/tree/master/MacOSVVC/MacOSVVC.7z
@@ -72,7 +72,7 @@ In Command Prompt (Windows):
 ```
 set PATH=%PATH%;C:\Users\blah\Downloads\VVCEasy\Executables
 ```
-Verify using Windows Command Prompt:
+Verify path using Windows Command Prompt:
 ```
 echo %PATH%
 ```
@@ -114,7 +114,7 @@ Lossy video/Smallest video size:
 vvencapp --qp 38 -i out.yuv -s 854x480 -r 30 -o vvc.266
 ```
 
-Lossless video (without losing quality, only Y4M, Raw, Uncompressed video used):
+Lossless video (minimum loss quality, only Y4M, Raw, Uncompressed video used):
 ```
 vvencapp --qp 18 -i out.yuv -s 854x480 -r 30 --preset slow -o vvc.266
 ```
@@ -123,7 +123,7 @@ Note to Apple Mac OS and Linux users: Command with `./vvencapp`
 
 Optional Windows users using Windows Powershell: Command with `.\vvencapp`
 
-Encode with VVENC (Best settings (lossless only of Y4M, Raw and Uncompressed video files), replace video size (-s), framerate (-r) and maximize threads of your cores (--threads), example)
+Encode with VVENC (Best settings (lossless only of Y4M, Raw and Uncompressed video files), replace video size (-s), framerate (-r) and maximize threads of your cores (--threads), example) (Minimum loss quality) If you want true lossless video, use FFV1 latest version 3.4.
 ```
 vvencapp --qp 18 -i out.yuv -s 854x480 -r 30 --preset slow --threads 16 --tier high -o EXTREME.266
 ```
