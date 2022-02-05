@@ -11,10 +11,10 @@ goto start
 title Martin Eesmaa / VVCEasy
 color 07
 cls
-echo What do you like to do for encode/decode VVC?
+echo What would you like to do for encode/decode of VVC?
 echo 1. Encode (partial construction)
 echo 2. Decode (little construction)
-echo 3. Help (construction)
+echo 3. Help
 echo 4. Exit
 echo 5. Test benchmark (construction)
 echo 6. Install VLC Media Player (o266player, Windows x64)
@@ -45,7 +45,7 @@ if %vvencquestion1% == 3 goto start
 :losslessvvenc1
 title Lossless (uncompressed)
 cls
-echo Okay, you chose Lossless (uncompressed)
+echo Okay, you chose Lossless (uncompressed).
 echo Now for settings quality. Choose settings. 
 echo It is recommended to use Lossless settings. Others are not recommended, will lose your video quality.
 echo 1. Lossless/Best settings (Recommended)
@@ -85,7 +85,7 @@ cls
 title Decode from VVC to YUV/Y4M
 echo Do you wanna transcode back from VVC to YUV or Y4M? Which did you choose settings? Choosing settings will transcode back.
 echo You need copy from your VVC file to C:\Program Files\VVCEasy\WindowsVVC\. Windows Explorer will open automatically.
-echo After copying, you need rename to VVC.vvc. It will transcode from your VVC file to YUV/Y4M.
+echo After copying your VVC file into VVCEasy folder, you need rename to VVC.vvc. It will transcode from your VVC file to YUV/Y4M.
 echo After transcode, your transcoded file should be: C:\Program Files\VVCEasy\transcodedback
 echo 1. YUV (lossy video VVC)
 echo 2. Y4M (lossless video VVC)
@@ -118,17 +118,6 @@ explorer "C:\Program Files\VVCEasy\transcodedback"
 echo FINISHED. Going back to menu...
 timeout 3
 goto start
-
-:defaultvvcenc1
-title Did you encode to YUV/Y4M?
-echo Okay, did you encode to YUV/Y4M?
-echo 1. Yes (YUV)
-echo 2. Yes (Y4M)
-echo 3. No
-set /p encoderyu4m=Number: 
-if %encoderyu4m% == 1 goto YUVdefaultsetting
-if %encoderyu4m% == 2 goto Y4Mdefaultsetting
-if %encoderyu4m% == 3 goto nextoptionsetting
 
 :test
 cls
@@ -190,7 +179,7 @@ echo Hello, would you like to install VLC Media Player (v3.0.11.1 Vetinari, cust
 echo Before you install...
 echo The VLC Media Player (custom build of o266player) works only on Windows 7 / Windows Server 2012 or earlier versions.
 echo Windows Vista and older versions won't work, because it could be terminal error or/and cannot decode VVC format.
-echo You need 64-bit / x64 to run VLC custom build. On 32-bit / x86, it won't work.
+echo You need 64-bit / x64 to run VLC custom build. On 32-bit / x86, it won't work to run.
 echo Install? Y/N?
 set /p vlcinstall=Answer: 
 if %vlcinstall% == Y goto vlcinstaller
@@ -230,9 +219,10 @@ color 07
 wget https://www.dropbox.com/s/zp8b3xg0b5p1pwe/VVCEasy.266
 move VVCEasy.266 VLC
 cd VLC
+echo Note, if VLC modified version is not starting, maybe try to run VLC Verified and Modified Version on your computer?
 vlc.exe VVCEasy.266 --no-drop-late-frames --avformat-fps=24
 cd ../
-echo OK! Test completed!
+echo OK! Test completed sucessfully!
 timeout 5
 goto start
 
@@ -240,7 +230,7 @@ goto start
 cls
 title ANACONDA
 echo Welcome to Anaconda Quick Install. This will only one task for ffmpeg. Would you like to install? Y/N?
-set /p anacondaman=
+set /p anacondaman=Answer: 
 if %anacondaman% == Y goto condainstall
 if %anacondaman% == N goto start
 if %anacondaman% == y goto condainstall
@@ -251,3 +241,20 @@ conda install -c conda-forge ffmpeg
 echo SUCCESS, going to back menu...
 pause
 goto start
+
+:help
+cls
+echo Welcome to VVCEasy help instructions!
+echo Here is tutorial how to use VVCEasy.
+pause
+echo Step 1: Run on VVCEasy.bat. When you see the screen of Welcome to VVCEasy. You can press any key continue to main menu.
+echo Step 2: Here are the list of main menu, that you need type any number will go to direction like (goto) command.
+echo Step 3: Follow the command instructions and that's it, easy.
+pause
+echo If you have any problems that you don't understand of VVCEasy. Please contact to Martin Eesmaa by creating issues for questions or/and problems.
+echo Do you wanna start over help instructions? If Yes, then it will go back from beginning. If No, going to back menu. Y/N?
+set /p helper=Answer: 
+if %helper% == Y goto help
+if %helper% == N goto start
+if %helper% == y goto help
+if %helper% == n goto start
