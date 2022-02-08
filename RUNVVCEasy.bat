@@ -75,8 +75,8 @@ if %doyouhavey4mvvencquestion3% == 2 goto nextmoviefilestypeoflosslessvvenc2
 :startlosslessvvenc2
 cls
 title Sorry...
-echo SORRY! CONSTRUCTION MODE! Sorry for long code.
-pause
+echo SORRY! CONSTRUCTION MODE! Sorry for long code. This command will go back to menu...
+timeout 3
 goto start
 
 :decodestart
@@ -207,7 +207,7 @@ echo SUCCESSFUL! Now, would you like to download test sample VVC file test it ou
 echo If Yes, wget will download the example of VVC file and run to VLC a few seconds.
 echo If No, you will be prompted go back to menu.
 echo TIP: Run VLC.exe on your own VVC file for example, if your input frame rate is 30 and you encoded to VVC same frame rate input file.
-echo Example to run correctly frame rate on your VVC: vlc.exe yourownfile.266 --no-drop-late-frames --avformat-fps=30
+echo Example to run correctly frame rate on your VVC of VLC command: vlc.exe yourownfile.266 --no-drop-late-frames --avformat-fps=30
 set /p vlccompleted=Answer: 
 if %vlccompleted% == Y goto sample266
 if %vlccompleted% == N goto start
