@@ -16,9 +16,10 @@ echo 1. Encode (partial construction)
 echo 2. Decode (little construction)
 echo 3. Help
 echo 4. Exit
-echo 5. Test benchmark (construction)
+echo 5. Test path environment
 echo 6. Install VLC Media Player (o266player, Windows x64)
 echo 7. Install quickly through Anaconda for ffmpeg (Windows)
+echo 8. Install VVdec Web Player
 set /p VVCSTART=Number: 
 if %VVCSTART% == 1 goto encodestart
 if %VVCSTART% == 2 goto decodestart
@@ -27,6 +28,7 @@ if %VVCSTART% == 4 goto exit
 if %VVCSTART% == 5 goto test
 if %VVCSTART% == 6 goto vlc
 if %VVCSTART% == 7 goto conda
+if %VVCSTART% == 8 goto installvvdecweb
 
 :encodestart
 title Encode to VVC
@@ -121,8 +123,10 @@ goto start
 
 :test
 cls
-title TEST BENCHMARK
-echo Martin Eesmaa is testing your benchmark for two settings between default and best settings.
+title TEST PATH ENVIRONMENT
+echo Martin Eesmaa is testing your paths, that you installed programs in PATH. Not sure, what is path?
+echo You can go here: https://stackoverflow.com/questions/4910721/python-on-cmd-path
+echo Also you can search "What is PATH in Windows?" in DuckDuckGo or SearX.
 echo Are you ready to test? (Y/N)
 set /p readytestbefore=Answer: 
 if %readytestbefore% == Y goto nowtestingtime
@@ -132,8 +136,32 @@ if %readytestbefore% == n goto start
 
 :nowtestingtime
 title Testing time...
-cd /d "%~dp0"
-cd 7-Zip
+7z
+ffmpeg
+ffplay
+wget
+git
+echo You need exit in Python typing "exit()".
+py
+echo Did that work in your PATH? Y/N?
+set /p testdidworkq=Answer: 
+if %testdidworkq% == Y goto youdidworktest
+if %testdidworkq% == N goto ahhdidnotwork
+if %testdidworkq% == y goto youdidworktest
+if %testdidworkq% == n goto ahhdidnotwork
+
+:youdidworktest
+title Great!
+echo Great, your PATHS working now. Now back to menu...
+timeout 3
+goto start
+
+:ahhdidnotwork
+title Sorry...
+echo Sorry, your path environment did not work. Make sure follow that needs to be add it on paths installation like Python.
+echo Still not working? Maybe you can ask question in Stack Overflow
+pause
+goto start
 
 :exit
 cls
@@ -245,7 +273,7 @@ goto start
 :help
 cls
 echo Welcome to VVCEasy help instructions!
-echo Here is tutorial how to use VVCEasy.
+echo Here is tutorial... How to use VVCEasy?
 pause
 echo Step 1: Run on VVCEasy.bat. When you see the screen of Welcome to VVCEasy. You can press any key continue to main menu.
 echo Step 2: Here are the list of main menu, that you need type any number will go to direction like (goto) command.
@@ -258,3 +286,36 @@ if %helper% == Y goto help
 if %helper% == N goto start
 if %helper% == y goto help
 if %helper% == n goto start
+
+:installvvdecweb
+cls
+title VVdec Web Player.
+echo Welcome to VVDEC Web Player.
+echo By installing, you will have to agree to download VVDec Web Player from Fraunhoferhhi GitHub. 
+echo See the code of VVDEC Web Player: https://github.com/fraunhoferhhi/vvdecWebPlayer
+echo When you agree to install, it will clone of VVDec Web Player repository using git. After git, we will copy from VVDECWEBINSTALL files into vvdecWebPlayer/bin folder.
+echo After all of that, we will run Python to start web server of your localhost port 8000.
+echo Would you like to install of VVDEC Web Player?
+set /p okletsdoit=Answer: 
+if %okletsdoit% == Y goto installnowplayer
+if %okletsdoit% == N goto start
+if %okletsdoit% == y goto installnowplayer
+if %okletsdoit% == n goto start
+
+:installnowplayer
+cls
+title INSTALLING VVDEC WEB PLAYER...
+git clone https://github.com/fraunhoferhhi/vvdecWebPlayer.git
+copy vvdecapp.js ../vvdecWebPlayer/bin
+copy vvdecapp.worker.js ../vvdecWebPlayer/bin
+copy vvdecapp.wasm ../vvdecWebPlayer/bin
+cd vvdecWebPlayer
+wget https://www.dropbox.com/s/zp8b3xg0b5p1pwe/VVCEasy.266
+rename VVCEasy.266 dummy_raw_bitstream.266
+echo Note: If you wanna go back to menu, press CTRL + C and type "Y" to stop server and this will go back to menu.
+py wasm_test-server.py
+cd ../
+echo Thanks for playing VVDEC Web Player. If you wanna run on the server, go to folder of vvdecWebPlayer and run one click wasm_test-server.py.
+echo Press any key to go back menu.
+timeout 10
+goto start
