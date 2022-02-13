@@ -1,5 +1,25 @@
 echo off
-cd /d "%~dp0"
+pushd "%~dp0"
+
+echo.
+echo  :: Checking For Administrator Elevation...
+echo.
+timeout /t 1 /nobreak > NUL
+openfiles > NUL 2>&1
+if %errorlevel%==0 (
+        echo Elevation found! Proceeding...
+) else (
+        echo  :: You are NOT running as Administrator
+        echo.
+        echo     Right-click and select ^'Run as Administrator^' and try again.
+        echo     Press any key to exit...
+        pause > NUL
+        exit
+)
+
+goto welcomenow
+
+:welcomenow
 cls
 title Martin Eesmaa / VVCEasy
 echo MARTIN EESMAA / VVCEasy
