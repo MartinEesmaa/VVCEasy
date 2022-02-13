@@ -56,6 +56,7 @@ Step 1: Clone VVCEasy git and open VVCEasy_compiler.iss
 cd %userprofile%\Downloads
 git clone https://github.com/MartinEesmaa/VVCEasy.git
 VVCEasy_compiler.iss
+```
 
 Step 2: Before you compile, please replace example username by your username of LicenseFile, OutputDir and Source. See the image:
 ![Instructionsofcompilevvceasy](https://user-images.githubusercontent.com/88035011/153736145-a24a1997-1133-4933-8797-de7c62295d1d.png)
