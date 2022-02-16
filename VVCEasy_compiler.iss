@@ -9,7 +9,7 @@
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-AppId={{F9A21B8D-65E5-446A-8E96-E58DC5A3BA99}
+AppId={{CEFE5C0E-F29A-4459-A5FC-53267C743303}}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
@@ -24,9 +24,12 @@ LicenseFile=C:\Users\User\Downloads\VVCEasy\LICENSE
 ;PrivilegesRequired=lowest
 OutputDir=C:\Users\User\Downloads
 OutputBaseFilename=VVCEasy
-Compression=lzma
+Compression=lzma2/ultra64
 SolidCompression=yes
 WizardStyle=modern
+InternalCompressLevel=ultra64
+DiskSpanning=True
+CompressionThreads=1
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
