@@ -40,7 +40,7 @@ echo 5. Test path environment
 echo 6. Install VLC Media Player (o266player, Windows x64)
 echo 7. Install quickly through Anaconda for ffmpeg (Windows)
 echo 8. Install VVdec Web Player
-echo 9. Decompress WindowsVVC.7z (Before you using VVCEasy!!!)
+echo 9. Decompress WindowsVVC.7z (Before you use VVCEasy!!!)
 set /p VVCSTART=Number: 
 if %VVCSTART% == 1 goto encodestart
 if %VVCSTART% == 2 goto decodestart
@@ -58,7 +58,7 @@ cls
 echo Welcome to VVC encoder.
 echo What do you like encode to VVC?
 echo Before we move to settings quality, is your video lossy or lossless?
-echo 1. Lossy (example YouTube videos, Web videos, lossy compressed videos and other webs)
+echo 1. Lossy (example YouTube videos, Web videos, lossy compressed videos, and other webs)
 echo 2. Lossless (example XIPH Media, Camera uncompressed (MOV/MP4/AVI), Apple ProRes and others uncompressed files)
 echo 3. Go back to menu
 set /p vvencquestion1=Number: 
@@ -89,9 +89,9 @@ title Lossless settings with Lossless uncompressed (VVC Encoder)
 cls
 echo Do you have Y4M?
 echo If you have Y4M already, move your Y4M file into C:\Program Files\VVCEasy\
-echo If you don't have Y4M, your instruction will go to next...
-echo 1. I have Y4M already (I'm ready)
-echo 2. I don't have Y4M
+echo If you do not have Y4M, your instruction will go to next...
+echo 1. I have Y4M already (I am ready)
+echo 2. I do not have Y4M
 set /p doyouhavey4mvvencquestion3=Number: 
 if %doyouhavey4mvvencquestion3% == 1 goto startlosslessvvenc2
 if %doyouhavey4mvvencquestion3% == 2 goto nextmoviefilestypeoflosslessvvenc2
@@ -107,10 +107,10 @@ goto start
 explorer "C:\Program Files\VVCEasy\WindowsVVC"
 cls
 title Decode from VVC to YUV/Y4M
-echo Do you wanna transcode back from VVC to YUV or Y4M? Which did you choose settings? Choosing settings will transcode back.
+echo Do you want to transcode back from VVC to YUV or Y4M? Which did you choose settings? Choosing settings will transcode back.
 echo You need copy from your VVC file to C:\Program Files\VVCEasy\WindowsVVC\. Windows Explorer will open automatically.
 echo After copying your VVC file into VVCEasy folder, you need rename to VVC.vvc. It will transcode from your VVC file to YUV/Y4M.
-echo After transcode, your transcoded file should be: C:\Program Files\VVCEasy\transcodedback
+echo After transcoding, your transcoded file should be: C:\Program Files\VVCEasy\transcodedback
 echo 1. YUV (lossy video VVC)
 echo 2. Y4M (lossless video VVC)
 set /p decodestart1=Number: 
@@ -181,14 +181,14 @@ goto start
 :ahhdidnotwork
 title Sorry...
 echo Sorry, your path environment did not work. Make sure follow that needs to be add it on paths installation like Python.
-echo Still not working? Maybe you can ask question in Stack Overflow
+echo Still not working? You can ask question in Stack Overflow
 pause
 goto start
 
 :exit
 cls
-title Have a nice day!
-echo Have a nice day! Thanks for using VVCEasy. :)
+title Have a wonderful day!
+echo Have a wonderful day! Thanks for using VVCEasy. :)
 :::    _   _                 _                      
 :::    | | | |               | |                     
 :::    | |_| |__   __ _ _ __ | | ___   _  ___  _   _ 
@@ -228,8 +228,8 @@ cls
 echo Hello, would you like to install VLC Media Player (v3.0.11.1 Vetinari, custom build of o266player) on your computer?
 echo Before you install...
 echo The VLC Media Player (custom build of o266player) works only on Windows 7 / Windows Server 2012 or earlier versions.
-echo Windows Vista and older versions won't work, because it could be terminal error or/and cannot decode VVC format.
-echo You need 64-bit / x64 to run VLC custom build. On 32-bit / x86, it won't work to run.
+echo Windows Vista and older versions will not work, because it could be terminal error or/and cannot decode VVC format.
+echo You need 64-bit / x64 to run VLC custom build. On 32-bit / x86, it will not work to run.
 echo Install? Y/N?
 set /p vlcinstall=Answer: 
 if %vlcinstall% == Y goto vlcinstaller
@@ -254,7 +254,7 @@ cd ../
 color 6E
 cls
 echo SUCCESSFUL! Now, would you like to download test sample VVC file test it out to VLC custom build of o266player?
-echo If Yes, wget will download the example of VVC file and run to VLC a few seconds.
+echo If yes, wget will download the example of VVC file and run to VLC a few seconds.
 echo If No, you will be prompted go back to menu.
 echo TIP: Run VLC.exe on your own VVC file for example, if your input frame rate is 30 and you encoded to VVC same frame rate input file.
 echo Example to run correctly frame rate on your VVC of VLC command: vlc.exe yourownfile.266 --no-drop-late-frames --avformat-fps=30
@@ -269,10 +269,10 @@ color 07
 wget https://www.dropbox.com/s/zp8b3xg0b5p1pwe/VVCEasy.266
 move VVCEasy.266 VLC
 cd VLC
-echo Note, if VLC modified version is not starting, maybe try to run VLC Verified and Modified Version on your computer?
+echo Note, if VLC modified version is not starting, try to run VLC Verified and Modified Version on your computer?
 vlc.exe VVCEasy.266 --no-drop-late-frames --avformat-fps=24
 cd ../
-echo OK! Test completed sucessfully!
+echo OK! Test completed successfully!
 timeout 5
 goto start
 
@@ -298,11 +298,11 @@ echo Welcome to VVCEasy help instructions!
 echo Here is tutorial... How to use VVCEasy?
 pause
 echo Step 1: Run on VVCEasy.bat. When you see the screen of Welcome to VVCEasy. You can press any key continue to main menu.
-echo Step 2: Here are the list of main menu, that you need type any number will go to direction like (goto) command.
-echo Step 3: Follow the command instructions and that's it, easy.
+echo Step 2: Here are the list of main menus, that you need type any number will go to direction like (goto) command.
+echo Step 3: Follow the command instructions and that is easy.
 pause
-echo If you have any problems that you don't understand of VVCEasy. Please contact to Martin Eesmaa by creating issues for questions or/and problems.
-echo Do you wanna start over help instructions? If Yes, then it will go back from beginning. If No, going to back menu. Y/N?
+echo If you have any problems that you do not understand of VVCEasy. Please contact to Martin Eesmaa by creating issues for questions or/and problems.
+echo Do you want to start over help instructions? If yes, then it will go back from beginning. If No, going to back menu. Y/N?
 set /p helper=Answer: 
 if %helper% == Y goto help
 if %helper% == N goto start
@@ -334,11 +334,11 @@ copy vvdecapp.wasm ../vvdecWebPlayer/bin
 cd vvdecWebPlayer
 wget https://www.dropbox.com/s/zp8b3xg0b5p1pwe/VVCEasy.266
 rename VVCEasy.266 dummy_raw_bitstream.266
-echo Note: If you wanna go back to menu, press CTRL + C on your keyboard in Windows Terminal/CMD and type "Y" to terminate server and this will go back to main menu options.
+echo Note: If you want to go back to menu, press CTRL + C on your keyboard in Windows Terminal/CMD and type "Y" to terminate server and this will go back to main menu options.
 echo The python file is porting 8000 on your localhost computer.
 py wasm_test-server.py
 cd ../
-echo Thanks for trying out of VVDEC Web Player. If you wanna run on your VVDEC Web Player Server, go to folder of vvdecWebPlayer and run one click wasm_test-server.py.
+echo Thanks for trying out of VVDEC Web Player. If you want to run on your VVDEC Web Player Server, go to folder of vvdecWebPlayer and run one click wasm_test-server.py.
 echo Press any key to go back menu.
 timeout 10
 goto start
@@ -356,9 +356,9 @@ certutil -hashfile vvencinterfacetest.exe SHA512
 certutil -hashfile vvenclibtest.exe SHA512
 rename SHA512SUMS SHA512SUMS.txt
 SHA512SUMS.txt
-echo Now please make sure double check that needs to be same hash. If it's matches hash same as .exe of SHA512SUMS.txt and CertUtil. That means good.
+echo Now please make sure double check that needs to be same hash. If it is matches hash same as .exe of SHA512SUMS.txt and CertUtil. That means good.
 echo If the hashes are not matched correctly, please contact Martin Eesmaa for problem.
 pause
-echo Thank you for decompress WindowsVVC.7z... Now back to menu.
+echo Thank you for decompressing WindowsVVC.7z... Now back to menu.
 timeout 3
 goto start
