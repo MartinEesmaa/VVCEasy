@@ -332,10 +332,11 @@ copy vvdecapp.wasm ../vvdecWebPlayer/bin
 cd vvdecWebPlayer
 wget https://www.dropbox.com/s/zp8b3xg0b5p1pwe/VVCEasy.266
 rename VVCEasy.266 dummy_raw_bitstream.266
-echo Note: If you wanna go back to menu, press CTRL + C and type "Y" to stop server and this will go back to menu.
+echo Note: If you wanna go back to menu, press CTRL + C on your keyboard in Windows Terminal/CMD and type "Y" to terminate server and this will go back to main menu options.
+echo The python file is porting 8000 on your localhost computer.
 py wasm_test-server.py
 cd ../
-echo Thanks for playing VVDEC Web Player. If you wanna run on the server, go to folder of vvdecWebPlayer and run one click wasm_test-server.py.
+echo Thanks for trying out of VVDEC Web Player. If you wanna run on your VVDEC Web Player Server, go to folder of vvdecWebPlayer and run one click wasm_test-server.py.
 echo Press any key to go back menu.
 timeout 10
 goto start
