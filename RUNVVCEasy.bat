@@ -40,6 +40,7 @@ echo 5. Test path environment
 echo 6. Install VLC Media Player (o266player, Windows x64)
 echo 7. Install quickly through Anaconda for ffmpeg (Windows)
 echo 8. Install VVdec Web Player
+echo 9. Decompress WindowsVVC.7z (Before you using VVCEasy!!!)
 set /p VVCSTART=Number: 
 if %VVCSTART% == 1 goto encodestart
 if %VVCSTART% == 2 goto decodestart
@@ -49,6 +50,7 @@ if %VVCSTART% == 5 goto test
 if %VVCSTART% == 6 goto vlc
 if %VVCSTART% == 7 goto conda
 if %VVCSTART% == 8 goto installvvdecweb
+if %VVCSTART% == 9 goto decompresswin7z
 
 :encodestart
 title Encode to VVC
@@ -339,4 +341,24 @@ cd ../
 echo Thanks for trying out of VVDEC Web Player. If you wanna run on your VVDEC Web Player Server, go to folder of vvdecWebPlayer and run one click wasm_test-server.py.
 echo Press any key to go back menu.
 timeout 10
+goto start
+
+:decompresswin7z
+cls
+title WindowsVVC.7z (decompressing)
+echo Decompressing........
+cd WindowsVVC
+7z x WindowsVVC.7z
+certutil -hashfile vvencapp.exe SHA512
+certutil -hashfile vvdecapp.exe SHA512
+certutil -hashfile vvencFFapp.exe SHA512
+certutil -hashfile vvencinterfacetest.exe SHA512
+certutil -hashfile vvenclibtest.exe SHA512
+rename SHA512SUMS SHA512SUMS.txt
+SHA512SUMS.txt
+echo Now please make sure double check that needs to be same hash. If it's matches hash same as .exe of SHA512SUMS.txt and CertUtil. That means good.
+echo If the hashes are not matched correctly, please contact Martin Eesmaa for problem.
+pause
+echo Thank you for decompress WindowsVVC.7z... Now back to menu.
+timeout 3
 goto start
