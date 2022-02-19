@@ -27,9 +27,9 @@ Windows | Compatibility (only x64)  | Screenshot
 Windows 2000/ME or older | ❌ (Cannot run custom build)
 Windows XP | ⚠️ (Terminal only, GUI is not working) | [Link](https://i.stack.imgur.com/5HAZk.png)
 Windows Vista | ⚠️ (GUI Works, but VVC won't work)
-Windows 7 | :white_check_mark: (All checked) | [Link](https://i.postimg.cc/7hfJ22Qf/Windows-7-o266player-Martin-Eesmaa.png)
+Windows 7 | :white_check_mark: (All checked) | [Link](https://i.imgur.com/4cANwDQ.png)
 Windows 8   |   :white_check_mark: (All checked)
-Windows 8.1 |   :white_check_mark: (All checked) | [Link](https://i.postimg.cc/L6QvwkM0/Windows-8-1-o266player-Martin-Eesmaa.png)
+Windows 8.1 |   :white_check_mark: (All checked) | [Link](https://i.imgur.com/1Fe6xGW.png)
 Windows 10  |   :white_check_mark: (All checked)
 Windows 11  |   :white_check_mark: (All checked)
 
@@ -37,7 +37,7 @@ Windows Server | Check | Screenshot
 ------- | ------- | --------- |
 Windows Server 2003 | ⚠️ (Terminal only, GUI is not working)
 Windows Server 2008 | ⚠️ (GUI Works, but VVC won't work)
-Windows Server 2012 | :white_check_mark: (All checked) | [Link](https://i.postimg.cc/NG7MfbJL/Windows-Server-2012-o266player.png)
+Windows Server 2012 | :white_check_mark: (All checked) | [Link](https://i.imgur.com/Vcgag8B.png)
 Windows Server 2016   | :white_check_mark: (All checked)
 Windows Server 2019 | :white_check_mark: (All checked)
 Windows Server 2022  | :white_check_mark: (All checked)
