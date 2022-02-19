@@ -1,12 +1,12 @@
 # VVCEasy (Windows (Full), Mac and Linux (partial)
 VVCEasy is that you don't have to compile or/and coding to encode VVC (known as Versatile Video Codec). Simple, Easy, Encode and Decode.
 
-VVCEasy comes to one-easy of ffmpeg, vvenc, vvdec and YUView.
+VVCEasy comes to one-easy command of ffmpeg, VVC Tools, python, VLC o266player, VVDEC Web Player and YUView.
 
 Installation: Go to releases and download latest version.
 
-VVCEasy is not yet finished. I'm trying to work with codes. I'm not good coding programming, just simple coding.
-Sorry to say that. I will give update once I release news.
+VVCEasy is not finished yet. I'm trying to work out with my codes. I'm not good for code programming, just simple coding.
+Sorry to say this. I will give update announcement once I release news.
 
 Windows source run: RUNVVCEASY.bat
 
@@ -91,7 +91,7 @@ In Command Prompt (Windows):
 ```
 set PATH=%PATH%;C:\Users\blah\Downloads\VVCEasy\Executables
 ```
-Verify path using Windows Command Prompt:
+Verify path using Windows Command Prompt/Windows Terminal (CMD):
 ```
 echo %PATH%
 ```
@@ -133,23 +133,23 @@ Lossy video/Smallest video size:
 vvencapp --qp 38 -i out.yuv -s 854x480 -r 30 -o vvc.266
 ```
 
-Lossless video (minimum loss quality, only Y4M, Raw, Uncompressed video used):
+Lossless video (minimum loss quality, only Y4M, Raw, Uncompressed video used) (or compress smaller than preset slow, use --preset slower):
 ```
 vvencapp --qp 18 -i out.yuv -s 854x480 -r 30 --preset slow -o vvc.266
 ```
 
 Note to Apple Mac OS and Linux users: Command with `./vvencapp`
 
-Optional Windows users using Windows PowerShell: Command with `.\vvencapp`
+Optional Windows Users using Windows PowerShell: Command with `.\vvencapp`
 
-Encode with VVENC (Best settings (lossless only of Y4M, Raw and Uncompressed video files), replace video size (-s), framerate (-r) and maximize threads of your cores (--threads), example) (Minimum loss quality) If you want true lossless video, use FFV1 latest version 3.4.
+Encode with VVENC (Best settings (lossless only of Y4M, Raw and Uncompressed video files), replace video size (-s), framerate (-r) and maximize threads of your cores (--threads), example) (Minimum loss quality) If you want true lossless video, use FFV1 latest version 3.4. (Necessary make smaller file slower than preset slow, use --preset slower)
 ```
 vvencapp --qp 18 -i out.yuv -s 854x480 -r 30 --preset slow --threads 16 --tier high -o EXTREME.266
 ```
 
 NOTE: It is acceptable only for encoding to .h266, .266 and .vvc file container.
 
-Note to 10-bit YUV users: If you encode YUV 10 bit to VVC file, add `-c yuv420_10` before you type ending of -o EXTREME.266.
+Note to 10-bit YUV users: If you encode YUV 10 bit to VVC file, add `-c yuv420_10` before you type ending word of -o EXTREME.266.
 
 Note to 8-bit Y4M users: It is only from input video (8-bit) to Y4M (8 bit)
 
@@ -190,6 +190,7 @@ Sure, just go to Issues tab, ask questions or/and give your issue to me.
 
 Do you know what you have skills in your programming?
 I know about Batch file and HTML programmer. Some hard programming languages might be difficult to me :/.
+Update of 19th February 2022: Maybe I should make C# Console program, that will be easy of Windows, Mac and Linux multi support.
 
-If you have any questions or any issues, please go to Issues tab and create your issue.
+If you have any questions or/and any issues, please go to Issues tab and create your issue.
 - Martin Eesmaa
