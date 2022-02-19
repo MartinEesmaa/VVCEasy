@@ -35,7 +35,7 @@ Windows 11  |   :white_check_mark: (All checked) | [Link](https://i.imgur.com/Me
 
 Windows Server | Check | Screenshot
 ------- | ------- | --------- |
-Windows Server 2003 | ⚠️ (Terminal only, GUI is not working)
+Windows Server 2003 | ⚠️ (Terminal only, GUI is not working) | [Link](https://i.imgur.com/G7F2bif.png)
 Windows Server 2008 | ⚠️ (GUI Works, but VVC won't work)
 Windows Server 2012 | :white_check_mark: (All checked) | [Link](https://i.imgur.com/Vcgag8B.png)
 Windows Server 2016   | :white_check_mark: (All checked)
