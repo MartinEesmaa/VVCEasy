@@ -31,7 +31,7 @@ Windows 7 | :white_check_mark: (All checked) | [Link](https://i.imgur.com/4cANwD
 Windows 8   |   :white_check_mark: (All checked)
 Windows 8.1 |   :white_check_mark: (All checked) | [Link](https://i.imgur.com/1Fe6xGW.png)
 Windows 10  |   :white_check_mark: (All checked)
-Windows 11  |   :white_check_mark: (All checked)
+Windows 11  |   :white_check_mark: (All checked) | [Link](https://i.imgur.com/Me2L998.png)
 
 Windows Server | Check | Screenshot
 ------- | ------- | --------- |
