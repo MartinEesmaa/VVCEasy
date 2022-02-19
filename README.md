@@ -24,7 +24,7 @@ If you want to run VLC (o266player version), you must run Windows only for virtu
 
 Windows | Compatibility (only x64)  | Screenshot
 ------- | ------- | --------------- | 
-Windows 2000/ME or older | ❌ (Cannot run custom build) [Link](https://i.imgur.com/hHnh5Cx.png)
+Windows 2000/ME or older | ❌ (Cannot run custom build) | [Link](https://i.imgur.com/hHnh5Cx.png)
 Windows XP | ⚠️ (Terminal only, GUI is not working) | [Link](https://i.stack.imgur.com/5HAZk.png)
 Windows Vista | ⚠️ (GUI Works, but VVC won't work)
 Windows 7 | :white_check_mark: (All checked) | [Link](https://i.imgur.com/4cANwDQ.png)
