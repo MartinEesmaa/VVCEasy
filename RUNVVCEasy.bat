@@ -32,8 +32,8 @@ title Martin Eesmaa / VVCEasy
 color 07
 cls
 echo What would you like to do for encode/decode of VVC?
-echo 1. Encode (partial construction)
-echo 2. Decode (little construction)
+echo 1. Encode
+echo 2. Decode
 echo 3. Help
 echo 4. Exit
 echo 5. Test path environment
@@ -62,27 +62,9 @@ echo 1. Lossy (example YouTube videos, Web videos, lossy compressed videos, and 
 echo 2. Lossless (example XIPH Media, Camera uncompressed (MOV/MP4/AVI), Apple ProRes and others uncompressed files)
 echo 3. Go back to menu
 set /p vvencquestion1=Number: 
-if %vvencquestion1% == 1 goto losslessvvenc1
-if %vvencquestion1% == 2 goto lossyvvenc1
+if %vvencquestion1% == 1 goto losslessvvenc2
+if %vvencquestion1% == 2 goto lossyvvenc2
 if %vvencquestion1% == 3 goto start
-
-:losslessvvenc1
-title Lossless (uncompressed)
-cls
-echo Okay, you chose Lossless (uncompressed).
-echo Now for settings quality. Choose settings. 
-echo It is recommended to use Lossless settings. Others are not recommended, will lose your video quality.
-echo 1. Lossless/Best settings (Recommended)
-echo 2. Lossy settings (Not recommended)
-echo 3. Default settings (Not recommended)
-echo 4. Go back from previous
-echo 5. Go back from menu
-set /p vvencquestion2=Number: 
-if %vvencquestion2% == 1 goto losslessvvenc2
-if %vvencquestion2% == 2 goto lossyvvenc2
-if %vvencquestion2% == 3 goto defaultvvenc2
-if %vvencquestion2% == 4 goto encodestart
-if %vvencquestion2% == 5 goto start
 
 :losslessvvenc2
 title Lossless settings with Lossless uncompressed (VVC Encoder)
@@ -106,6 +88,33 @@ echo Before we start encode from your Y4M file to VVC file, I'm afraid I cannot 
 echo You have to manually encode to VVC, the batchfile won't work.
 echo Here is code: vvencapp --qp 18 -i yourinput.y4m -s 854x480 -r 30 --preset slow --threads 16 --tier high -o yourfinalvvc.266
 echo YOU HAVE TO REPLACE VIDEO SIZE AND FRAME RATE. -s is video size and -r is frame rate.
+echo INPUT VIDEO BIT DEPTH IS 8-BIT ONLY FOR UNCOMPRESSED MOVIE FILES.
+pause
+pause
+goto start
+
+:lossyvvenc2
+title Lossy settings with Lossy compressed (VVC Encoder)
+cls
+echo Do you have YUV?
+echo If you have YUV already, move your YUV file into C:\Program Files\VVCEasy\
+echo If you do not have YUV, your instruction will go to next...
+echo 1. I have YUV already (I am ready) 
+echo 2. No, I am not ready yet (go back to previous)
+echo If you don't have Y4M already... you need transcode file from your lossy video file to YUV.
+echo Example: ffmpeg -i yourfile.mp4 -strict 1 yourfinal.yuv
+set /p doyouhaveyuvvvencquestion4=Number: 
+if %doyouhaveyuvvvencquestion4% == 1 goto startlossyvvenc2
+if %doyouhaveyuvvvencquestion4% == 2 goto encodestart
+
+:startlossyvvenc2
+cls
+title VVC ENCODER (YUV LOSSY)
+echo Before we start encode from your YUV file to VVC file, I'm afraid I cannot do automatically for you.
+echo You have to manually encode to VVC, the batchfile won't work.
+echo Here is code: vvencapp --qp 38 -i yourinput.yuv -s 854x480 -r 30 -o youroutputlossy.266
+echo YOU HAVE TO REPLACE VIDEO SIZE AND FRAME RATE. -s is video size and -r is frame rate.
+echo You can also add for "--tier high" or/and 10-bit video "-c yuv420_10", if necessary.
 pause
 pause
 goto start
@@ -118,6 +127,8 @@ echo Do you want to transcode back from VVC to YUV or Y4M? Which did you choose 
 echo You need copy from your VVC file to C:\Program Files\VVCEasy\WindowsVVC\. Windows Explorer will open automatically.
 echo After copying your VVC file into VVCEasy folder, you need rename to VVC.vvc. It will transcode from your VVC file to YUV/Y4M.
 echo After transcoding, your transcoded file should be: C:\Program Files\VVCEasy\transcodedback
+echo Note, if you are using portable, like you git cloned VVCEasy or downloaded source files, go to your Downloads folder and select VVCEasy.
+echo Portable won't work, you need move from your Downloads folder/VVCEasy into Program Files\VVCEasy.
 echo 1. YUV (lossy video VVC)
 echo 2. Y4M (lossless video VVC)
 set /p decodestart1=Number: 
@@ -154,8 +165,8 @@ goto start
 cls
 title TEST PATH ENVIRONMENT
 echo Martin Eesmaa is testing your paths, that you installed programs in PATH. Not sure, what is path?
-echo You can go here: https://stackoverflow.com/questions/4910721/python-on-cmd-path
-echo Also you can search "What is PATH in Windows?" in DuckDuckGo or SearX.
+echo You can go here for link: https://stackoverflow.com/questions/4910721/python-on-cmd-path
+echo You can also search "What is PATH in Windows?" in DuckDuckGo or SearX.
 echo Are you ready to test? (Y/N)
 set /p readytestbefore=Answer: 
 if %readytestbefore% == Y goto nowtestingtime
@@ -195,7 +206,7 @@ goto start
 :exit
 cls
 title Have a wonderful day!
-echo Have a wonderful day! Thanks for using VVCEasy. :)
+echo Have a wonderful day! Thank you for using VVCEasy. :)
 :::    _   _                 _                      
 :::    | | | |               | |                     
 :::    | |_| |__   __ _ _ __ | | ___   _  ___  _   _ 
