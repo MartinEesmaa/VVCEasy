@@ -48,7 +48,7 @@ This cannot be run on Windows Vista / Windows Server 2008 or older and Windows 8
 
 Note: I'm trying to work it out of VLC 3.0.16.
 
-Reminder: Some operating systems are working to load VVC video format in Virtual Machine softwares, but real machines will work every operating system of Windows Vista/2008 and earlier.
+Reminder: Some operating systems are working to load VVC video format in Virtual Machine softwares, but real machines will work every operating system, example Windows Server 2016 has already been tested by Tencent Cloud.
 
 # Compile of VVCEasy (optional) (Only Windows for compile.)
 
