@@ -46,7 +46,7 @@ VLC Custom build of o266player only accepts to run 64-bit / x64 on your computer
 
 This cannot be run on Windows Vista / Windows Server 2008 or older and Windows 8.0 to play VVC video file of VLC Custom build. Note: I'm trying to work it out of VLC 3.0.16.
 
-# Compile of VVCEasy
+# Compile of VVCEasy (optional) (Only Windows for compile.)
 
 First, before you compile to VVCEasy, you need Inno Setup to compile VVCEasy.
 Inno Setup link: https://jrsoftware.org/isdl.php
