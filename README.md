@@ -26,9 +26,9 @@ Windows | Compatibility (only x64)  | Screenshot
 ------- | ------- | --------------- | 
 Windows 2000/ME or older | ❌ (Cannot run custom build) | [Link](https://i.imgur.com/hHnh5Cx.png)
 Windows XP | ⚠️ (Terminal only, GUI is not working) | [Link](https://i.stack.imgur.com/5HAZk.png)
-Windows Vista | ⚠️ (GUI Works, but VVC won't work)
-Windows 7 | :white_check_mark: (All checked) | [Link](https://i.imgur.com/4cANwDQ.png)
-Windows 8   |   :white_check_mark: (All checked)
+Windows Vista | ⚠️ (GUI Works, but VVC won't show video)
+Windows 7 | ⚠️ (GUI Works, but VVC won't show video) | [Link](https://i.imgur.com/4cANwDQ.png)
+Windows 8   |   :white_check_mark: (All checked) | [Link](https://i.imgur.com/cl8qASz.png)
 Windows 8.1 |   :white_check_mark: (All checked) | [Link](https://i.imgur.com/1Fe6xGW.png)
 Windows 10  |   :white_check_mark: (All checked)
 Windows 11  |   :white_check_mark: (All checked) | [Link](https://i.imgur.com/Me2L998.png)
@@ -36,15 +36,15 @@ Windows 11  |   :white_check_mark: (All checked) | [Link](https://i.imgur.com/Me
 Windows Server | Check | Screenshot
 ------- | ------- | --------- |
 Windows Server 2003 | ⚠️ (Terminal only, GUI is not working) | [Link](https://i.imgur.com/G7F2bif.png)
-Windows Server 2008 | ⚠️ (GUI Works, but VVC won't work)
+Windows Server 2008 | ⚠️ (GUI Works, but VVC won't show video) [Link](https://i.imgur.com/GXFgIt8.png)
 Windows Server 2012 | :white_check_mark: (All checked) | [Link](https://i.imgur.com/Vcgag8B.png)
 Windows Server 2016   | :white_check_mark: (All checked)
 Windows Server 2019 | :white_check_mark: (All checked)
 Windows Server 2022  | :white_check_mark: (All checked)
 
-VLC Custom build of o266player only accepts x64 / 64-bit to work. 32-bit / x86 won't work.
+VLC Custom build of o266player only accepts to run 64-bit / x64 on your computer. 32-bit / x86 won't work.
 
-This cannot be run on Windows Vista / Windows Server 2008 or older to play VVC of VLC Custom build. Note: I'm trying to work it out of VLC 3.0.16.
+This cannot be run on Windows 8.0 / Windows Server 2008 or older to play VVC of VLC Custom build. Note: I'm trying to work it out of VLC 3.0.16.
 
 # Compile of VVCEasy
 
