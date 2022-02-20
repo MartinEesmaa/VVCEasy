@@ -128,7 +128,7 @@ echo You need copy from your VVC file to C:\Program Files\VVCEasy\WindowsVVC\. W
 echo After copying your VVC file into VVCEasy folder, you need rename to VVC.vvc. It will transcode from your VVC file to YUV/Y4M.
 echo After transcoding, your transcoded file should be: C:\Program Files\VVCEasy\transcodedback
 echo Note, if you are using portable, like you git cloned VVCEasy or downloaded source files, go to your Downloads folder and select VVCEasy.
-echo Portable won't work, you need move from your Downloads folder/VVCEasy into Program Files\VVCEasy.
+echo Portable won't work probably, you need copy from your Downloads folder\VVCEasy into Program Files\VVCEasy.
 echo 1. YUV (lossy video VVC)
 echo 2. Y4M (lossless video VVC)
 set /p decodestart1=Number: 
@@ -181,7 +181,7 @@ ffmpeg
 ffplay
 wget
 git
-echo You need exit in Python typing "exit()".
+echo You need exit in Python for typing "exit()".
 py
 echo Did that work in your PATH? Y/N?
 set /p testdidworkq=Answer: 
@@ -248,6 +248,8 @@ echo Before you install...
 echo The VLC Media Player (custom build of o266player) works only on Windows 7 / Windows Server 2012 or earlier versions.
 echo Windows Vista and older versions will not work, including Windows 8.0 won't work too, because it could be terminal error or/and cannot decode VVC format.
 echo You need 64-bit / x64 to run VLC custom build. On 32-bit / x86, it will not work to run.
+echo Note: Some operating system work VLC custom build on Virtualbox and VMware. Real machines can all almost run Windows versions, like Windows Server 2016.
+echo Reminder: I'm not kinda sure about this, I hope should you're running on real machine, that means it needs to be working to load VVC video format.
 echo Install? Y/N?
 set /p vlcinstall=Answer: 
 if %vlcinstall% == Y goto vlcinstaller
@@ -313,7 +315,7 @@ goto start
 :help
 cls
 echo Welcome to VVCEasy help instructions!
-echo Here is tutorial... How to use VVCEasy?
+echo Here is tutorial about... How to use VVCEasy?
 pause
 echo Step 1: Run on VVCEasy.bat. When you see the screen of Welcome to VVCEasy. You can press any key continue to main menu.
 echo Step 2: Here are the list of main menus, that you need type any number will go to direction like (goto) command.
