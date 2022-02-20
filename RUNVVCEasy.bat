@@ -40,7 +40,7 @@ echo 5. Test path environment
 echo 6. Install VLC Media Player (o266player, Windows x64)
 echo 7. Install quickly through Anaconda for ffmpeg (Windows)
 echo 8. Install VVdec Web Player
-echo 9. Decompress WindowsVVC.7z (Before you use VVCEasy!!!)
+echo 9. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)
 set /p VVCSTART=Number: 
 if %VVCSTART% == 1 goto encodestart
 if %VVCSTART% == 2 goto decodestart
@@ -90,17 +90,24 @@ cls
 echo Do you have Y4M?
 echo If you have Y4M already, move your Y4M file into C:\Program Files\VVCEasy\
 echo If you do not have Y4M, your instruction will go to next...
-echo 1. I have Y4M already (I am ready)
-echo 2. I do not have Y4M
+echo 1. I have Y4M already (I am ready) 
+echo 2. No, I am not ready yet (go back to previous)
+echo If you don't have Y4M already... you need transcode file from your uncompressed file to Y4M.
+echo Example: ffmpeg -i yourfile.mov -strict 1 yourfinal.y4m
+echo Only 8-bit uncompressed movies input to Y4M.
 set /p doyouhavey4mvvencquestion3=Number: 
 if %doyouhavey4mvvencquestion3% == 1 goto startlosslessvvenc2
-if %doyouhavey4mvvencquestion3% == 2 goto nextmoviefilestypeoflosslessvvenc2
+if %doyouhavey4mvvencquestion3% == 2 goto encodestart
 
 :startlosslessvvenc2
 cls
-title Sorry...
-echo SORRY! CONSTRUCTION MODE! Sorry for long code. This command will go back to menu...
-timeout 3
+title VVC ENCODER (Y4M LOSSLESS)
+echo Before we start encode from your Y4M file to VVC file, I'm afraid I cannot do automatically for you.
+echo You have to manually encode to VVC, the batchfile won't work.
+echo Here is code: vvencapp --qp 18 -i yourinput.y4m -s 854x480 -r 30 --preset slow --threads 16 --tier high -o yourfinalvvc.266
+echo YOU HAVE TO REPLACE VIDEO SIZE AND FRAME RATE. -s is video size and -r is frame rate.
+pause
+pause
 goto start
 
 :decodestart
@@ -181,7 +188,7 @@ goto start
 :ahhdidnotwork
 title Sorry...
 echo Sorry, your path environment did not work. Make sure follow that needs to be add it on paths installation like Python.
-echo Still not working? You can ask question in Stack Overflow
+echo Still not working? You can ask question in Stack Overflow.
 pause
 goto start
 
