@@ -44,7 +44,11 @@ Windows Server 2022  | :white_check_mark: (All checked)
 
 VLC Custom build of o266player only accepts to run 64-bit / x64 on your computer. 32-bit / x86 won't work.
 
-This cannot be run on Windows Vista / Windows Server 2008 or older and Windows 8.0 to play VVC video file of VLC Custom build. Note: I'm trying to work it out of VLC 3.0.16.
+This cannot be run on Windows Vista / Windows Server 2008 or older and Windows 8.0 to play VVC video file of VLC Custom build. 
+
+Note: I'm trying to work it out of VLC 3.0.16.
+
+Reminder: Some operating systems are working to load VVC video format in Virtual Machine softwares, but real machines will work every operating system of Windows Vista/2008 and earlier.
 
 # Compile of VVCEasy (optional) (Only Windows for compile.)
 
