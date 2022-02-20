@@ -33,7 +33,7 @@ Windows 8.1 |   :white_check_mark: (All checked) | [Link](https://i.imgur.com/1F
 Windows 10  |   :white_check_mark: (All checked)
 Windows 11  |   :white_check_mark: (All checked) | [Link](https://i.imgur.com/Me2L998.png) | 13/12/2021 15:58:55 (AEDT)
 
-Windows Server | Check | Screenshot | Date report (DD/MM/YYYY, 24hr)
+Windows Server | Compatibility (only x64) | Screenshot | Date report (DD/MM/YYYY, 24hr)
 ------- | ------- | --------- | --------- |
 Windows Server 2003 | ⚠️ (Terminal only, GUI is not working) | [Link](https://i.imgur.com/G7F2bif.png) | 19/02/2022 21:38:20 (AEDT)
 Windows Server 2008 | ⚠️ (GUI Works, but VVC won't show video) | [Link](https://i.imgur.com/GXFgIt8.png) | 20/02/2022 14:02:28 (AEDT)
