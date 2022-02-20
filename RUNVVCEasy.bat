@@ -228,7 +228,7 @@ cls
 echo Hello, would you like to install VLC Media Player (v3.0.11.1 Vetinari, custom build of o266player) on your computer?
 echo Before you install...
 echo The VLC Media Player (custom build of o266player) works only on Windows 7 / Windows Server 2012 or earlier versions.
-echo Windows Vista and older versions will not work, because it could be terminal error or/and cannot decode VVC format.
+echo Windows Vista and older versions will not work, including Windows 8.0 won't work too, because it could be terminal error or/and cannot decode VVC format.
 echo You need 64-bit / x64 to run VLC custom build. On 32-bit / x86, it will not work to run.
 echo Install? Y/N?
 set /p vlcinstall=Answer: 
