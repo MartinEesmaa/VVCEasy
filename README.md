@@ -1,3 +1,12 @@
+![VVCEasy](VVCEasy.png)
+![GitHub all releases](https://img.shields.io/github/downloads/MartinEesmaa/VVCEasy/total)
+![GitHub](https://img.shields.io/github/license/MartinEesmaa/VVCEasy)
+[![Build](https://github.com/MartinEesmaa/VVCEasy/actions/workflows/dotnet.yml/badge.svg)](
+https://github.com/MartinEesmaa/VVCEasy/actions/workflows/dotnet.yml)
+![GitHub repo size](https://img.shields.io/github/repo-size/MartinEesmaa/VVCEasy)
+![GitHub release (release name instead of tag name)](https://img.shields.io/github/v/release/MartinEesmaa/VVCEasy?include_prereleases)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/MartinEesmaa/VVCEasy)
+
 # VVCEasy (Windows (Full), Mac and Linux (partial)
 VVCEasy is that you don't have to compile or/and coding to encode VVC (known as Versatile Video Codec). Simple, Easy, Encode and Decode.
 
