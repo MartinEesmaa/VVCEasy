@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Threading;
 
 namespace VVCEasy
@@ -10,12 +10,13 @@ namespace VVCEasy
             bool exit = false;
             Console.Title = "Martin Eesmaa / VVCEasy";
             Console.WriteLine("MARTIN EESMAA / VVCEasy");
-            Console.WriteLine("Welcome to VVCEasy. (Alpha version, v.0.0.1)");
+            Console.WriteLine("Welcome to VVCEasy. (.NET Console Alpha Version, v.0.0.1)");
             Console.ReadLine();
             do
             {
                 Console.Clear();
-                Console.WriteLine("VVCEasy (Alpha version, v.0.0.1)");
+                Console.WriteLine("VVCEasy (.NET Console Alpha Version, v.0.0.1)");
+                Console.WriteLine("Note: C# is not ready yet, malfunction mode");
                 Console.WriteLine("");
                 Console.Title = "Martin Eesmaa / VVCEasy";
                 Console.WriteLine("What would you like to do for encode/decode of VVC?\n1. Encode\n2. Decode\n3. Help\n4. Exit\n5. Test path environment\n6. Install VLC Media Player (o266player, Windows x64)\n7. Install quickly through Anaconda for ffmpeg (Windows)\n8. Install VVdec Web Player\n9. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)");
@@ -27,7 +28,6 @@ namespace VVCEasy
                     EncodeStart:
                     Console.Clear();
                     Console.Title = "Encode to VVC";
-                    Console.Clear();
                     Console.WriteLine("Welcome to VVC encoder.\nWhat do you like encode to VVC?\nBefore we move to settings quality, is your video lossy or lossless?\n1. Lossy (example YouTube videos, Web videos, lossy compressed videos, and other webs)\n2. Lossless (example XIPH Media, Camera uncompressed (MOV/MP4/AVI), Apple ProRes and others uncompressed files)\n3. Go back to menu");
                     
                     string input2 = Console.ReadLine();
