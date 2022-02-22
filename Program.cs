@@ -25,18 +25,18 @@ namespace VVCEasy
 
                 if (input == "1")
                 {
-                    EncodeStart:
+                EncodeStart:
                     Console.Clear();
                     Console.Title = "Encode to VVC";
                     Console.WriteLine("Welcome to VVC encoder.\nWhat do you like encode to VVC?\nBefore we move to settings quality, is your video lossy or lossless?\n1. Lossy (example YouTube videos, Web videos, lossy compressed videos, and other webs)\n2. Lossless (example XIPH Media, Camera uncompressed (MOV/MP4/AVI), Apple ProRes and others uncompressed files)\n3. Go back to menu");
-                    
+
                     string input2 = Console.ReadLine();
                     if (input2 == "1")
                     {
                         Console.Clear();
                         Console.Title = "Lossy settings with Lossy compressed (VVC Encoder)";
                         Console.WriteLine("Do you have YUV?\nIf you have YUV already, move your YUV file into C:/Program Files/VVCEasy/\nIf you do not have YUV, your instruction will go to next...\n1. I have YUV already (I am ready)\n2. No, I am not ready yet (go back to previous)\nIf you don't have Y4M already... you need transcode file from your lossy video file to YUV.\nExample: ffmpeg -i yourfile.mp4 -strict 1 yourfinal.yuv\n");
-                        
+
                         string input3 = Console.ReadLine();
 
                         if (input3 == "1")
@@ -58,7 +58,7 @@ namespace VVCEasy
                     Console.Title = "Decode from VVC to YUV/Y4M";
                     Console.WriteLine("Do you want to transcode back from VVC to YUV or Y4M? Which did you choose settings?\nChoosing settings will transcode back.\nYou need copy from your VVC file to C:/Program Files/VVCEasy/WindowsVVC/.\nWindows Explorer will open automatically.\nAfter copying your VVC file into VVCEasy folder, you need rename to VVC.vvc.\nIt will transcode from your VVC file to YUV/Y4M.\nAfter transcoding, your transcoded file should be: C:/Program Files/VVCEasy/transcodedback\nNote, if you are using portable, like you git cloned VVCEasy or downloaded source files, go to your Downloads folder and select VVCEasy.\nPortable won't work, you need move from your Downloads folder/VVCEasy into Program Files/VVCEasy.\n1. YUV (lossy video VVC)\n2. Y4M (lossless video VVC)");
 
-                    string decodestart1 =  Console.ReadLine();
+                    string decodestart1 = Console.ReadLine();
 
                     if (decodestart1 == "1")
                     {
@@ -75,6 +75,23 @@ namespace VVCEasy
                         Console.Beep();
                         Console.WriteLine("Sorry, this is currently maintenance of C#");
                         Console.ReadLine();
+                    }
+                }
+                else if (input == "3")
+                {
+                    helpingvvc:
+                    Console.Clear();
+                    Console.WriteLine("Welcome to VVCEasy help instructions!\nHere is tutorial about... How to use VVCEasy?");
+                    Console.ReadLine();
+                    Console.WriteLine("Step 1: Run on VVCEasy.bat. When you see the screen of Welcome to VVCEasy. You can press any key continue to main menu.\nStep 2: Here are the list of main menus, that you need type any number will go to direction like (goto) command.\nStep 3: Follow the command instructions and that is easy.");
+                    Console.ReadLine();
+                    Console.WriteLine("If you have any problems that you do not understand of VVCEasy. Please contact to Martin Eesmaa by creating issues for questions or/and problems.\nDo you want to start over help instructions? If yes, then it will go back from beginning. If No, going to back menu. Y/N?");
+
+                    string helper = Console.ReadLine();
+
+                    if (helper == "Y" + "y")
+                    {
+                        goto helpingvvc;
                     }
                 }
             }
