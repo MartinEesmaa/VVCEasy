@@ -59,9 +59,9 @@ Note: I'm trying to work it out of VLC 3.0.16.
 
 Reminder: Some operating systems are working to load VVC video format in Virtual Machine softwares, but real machines will work every operating system, example Windows Server 2016 has already been tested by Tencent Cloud.
 
-# Compile of VVCEasy (optional) (Only Windows for compile.)
+# Compile of VVCEasy Batchfile version (optional) (Only Windows for compile.)
 
-First, before you compile to VVCEasy, you need Inno Setup to compile VVCEasy.
+First, before you compile to VVCEasy Batchfile version, you need Inno Setup to compile VVCEasy.
 Inno Setup link: https://jrsoftware.org/isdl.php
 
 Step 1: Clone VVCEasy git and open VVCEasy_compiler.iss
@@ -74,8 +74,28 @@ VVCEasy_compiler.iss
 Step 2: Before you compile, please replace example username by your username of LicenseFile, OutputDir and Source. See the image:
 ![Instructionsofcompilevvceasy](https://user-images.githubusercontent.com/88035011/153736145-a24a1997-1133-4933-8797-de7c62295d1d.png)
 
-Step 3: Once you replaced of your username, press F9 to compile on your keyboard. After compiling, VVCEasy.exe will be on your Downloads folder.
+Step 3: Once you replaced of your username, press F9 to compile on your keyboard. After compiling, VVCEasy.exe (Installer) will be on your Downloads folder.
 ![VVCEasyclickblueplaybutton](https://user-images.githubusercontent.com/88035011/153736303-b0949f5a-5ac5-4123-92c5-305211a8aadc.png)
+
+# Compile of VVCEasy .NET Console version (optional)
+
+First, before you compile to VVCEasy .NET Console version, you need .NET SDK x64.
+Link: https://dotnet.microsoft.com/en-us/download
+
+Step 1: Clone git and cd VVCEasy
+```
+git clone https://github.com/MartinEesmaa/VVCEasy.git && cd VVCEasy
+```
+
+Step 2: Before you build, make sure to restore project, build and test it.
+```
+dotnet restore && dotnet build --no-restore && dotnet test --no-build --verbosity normal
+```
+
+Step 3: Once building is done, the build folder directory is bin/Debug
+```
+cd bin/debug
+```
 
 # Encode/Decode (easy)
 
