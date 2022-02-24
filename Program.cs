@@ -25,7 +25,7 @@ namespace VVCEasy
 
                 if (input == "1")
                 {
-                EncodeStart:
+                encodestart:
                     Console.Clear();
                     Console.Title = "Encode to VVC";
                     Console.WriteLine("Welcome to VVC encoder.\nWhat do you like encode to VVC?\nBefore we move to settings quality, is your video lossy or lossless?\n1. Lossy (example YouTube videos, Web videos, lossy compressed videos, and other webs)\n2. Lossless (example XIPH Media, Camera uncompressed (MOV/MP4/AVI), Apple ProRes and others uncompressed files)\n3. Go back to menu");
@@ -48,7 +48,7 @@ namespace VVCEasy
                         }
                         else if (input3 == "2")
                         {
-                            goto EncodeStart;
+                            goto encodestart;
                         }
                     }
                 }
@@ -105,23 +105,69 @@ namespace VVCEasy
                 }
                 else if (input == "5")
                 {
+                testpathenvironment:
+                    Console.Clear();
+                    Console.Title = "TEST PATH ENVIRONMENT";
+                    Console.WriteLine("Martin Eesmaa is testing your paths, that you installed programs in PATH. Not sure, what is path?\nYou can go here for link: https://stackoverflow.com/questions/4910721/python-on-cmd-path\nYou can also search What is PATH in Windows? in DuckDuckGo or SearX.\nAre you ready to test? (Y/N)");
 
+                    string readytestbefore = Console.ReadLine();
+
+                    if (readytestbefore == "Y" + "y")
+                    {
+                        Console.Title = "Testing time...";
+                        Console.WriteLine("Sorry, it's malfunction mode in C#...");
+                        Console.ReadLine();
+                    }
                 }
                 else if (input == "6")
                 {
+                    Console.Clear();
+                    Console.Title = "VLC Media PLayer (custom build of o266player)";
+                    Console.WriteLine("Hello, would you like to install VLC Media Player (v3.0.11.1 Vetinari, custom build of o266player) on your computer?\nBefore you install...\nThe VLC Media Player (custom build of o266player) works only on Windows 7 / Windows Server 2012 or earlier versions.\nWindows Vista and older versions will not work, including Windows 8.0 won't work too, because it could be terminal error or/and cannot decode VVC format.\nYou need 64-bit / x64 to run VLC custom build. On 32-bit / x86, it will not work to run.\nNote: Some operating system work VLC custom build on Virtualbox and VMware. Real machines can all almost run Windows versions, like Windows Server 2016.\nReminder: I'm not kinda sure about this, I hope should you're running on real machine, that means it needs to be working to load VVC video format.\nInstall? Y/N?");
 
+                    string vlcinstall = Console.ReadLine();
+
+                    if (vlcinstall == "Y" + "y")
+                    {
+
+                    }
                 }
                 else if (input == "7")
                 {
+                    Console.Clear();
+                    Console.Title = "ANACONDA";
+                    Console.WriteLine("Welcome to Anaconda Quick Install. This will only one task for ffmpeg. Would you like to install? Y/N?");
 
+                    string anacondaman = Console.ReadLine();
+
+                    if (anacondaman == "Y" + "y")
+                    {
+                        Console.WriteLine("SUCCESS, going to back menu...");
+                        Console.ReadLine();
+                    }
                 }
                 else if (input == "8")
                 {
+                    Console.Clear();
+                    Console.Title = "VVdec Web Player.";
+                    Console.WriteLine("By installing, you will have to agree to download VVDec Web Player from Fraunhoferhhi GitHub.\nSee the code of VVDEC Web Player: https://github.com/fraunhoferhhi/vvdecWebPlayer\nWhen you agree to install, it will clone of VVDec Web Player repository using git. After git, we will copy from VVDECWEBINSTALL files into vvdecWebPlayer/bin folder.\nAfter all of that, we will run Python to start web server of your localhost port 8000.\nWould you like to install of VVDEC Web Player?");
 
+                    string okletsdoit = Console.ReadLine();
+
+                    if (okletsdoit == "Y" + "y")
+                    {
+                        Console.Clear();
+                        Console.Title = "INSTALLING VVDEC WEB PLAYER...";
+                        Console.WriteLine("Sorry, the command is not ready yet...");
+                        Console.ReadLine();
+                    }
                 }
                 else if (input == "9")
                 {
-
+                    Console.Clear();
+                    Console.Title = "WindowsVVC.7z (decompressing)";
+                    Console.WriteLine("Decompressing...\nSorry, the command is not ready yet...");
+                    Console.ReadLine();
                 }
             }
             while (exit == false);
