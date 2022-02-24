@@ -10,12 +10,12 @@ namespace VVCEasy
             bool exit = false;
             Console.Title = "Martin Eesmaa / VVCEasy";
             Console.WriteLine("MARTIN EESMAA / VVCEasy");
-            Console.WriteLine("Welcome to VVCEasy. (.NET Console Alpha Version, v.0.0.1)");
+            Console.WriteLine("Welcome to VVCEasy. (.NET Console Beta Version, v.0.5.0)");
             Console.ReadLine();
             do
             {
                 Console.Clear();
-                Console.WriteLine("VVCEasy (.NET Console Alpha Version, v.0.0.1)");
+                Console.WriteLine("VVCEasy (.NET Console Beta Version, v.0.5.0)");
                 Console.WriteLine("Note: C# is not ready yet, malfunction mode");
                 Console.WriteLine("");
                 Console.Title = "Martin Eesmaa / VVCEasy";
@@ -99,7 +99,7 @@ namespace VVCEasy
                     Console.Clear();
                     Console.Title = "Have a wonderful day!";
                     Console.WriteLine("Have a wonderful day! Thank you for using VVCEasy. :)");
-                    Console.WriteLine("    _   _                 _                      \n    | | | |               | |                     \n    | |_| |__   __ _ _ __ | | ___   _  ___  _   _ \n    | __| '_ / / _` | '_ /| |/ / | | |/ _ /| | | |\n    | |_| | | | (_| | | | |   <| |_| | (_) | |_| |\n     /__|_| |_|/__,_|_| |_|_|/_\\__, |/___/ /__,_|\n                                 __/ |            \n                                |___/\n\n\n    __      ____      _______ ______                \n    / /    / // /    / / ____|  ____|               \n      / // /    / // /| |    |  __| / _` / __| | | |\n       /  /      /  / | |____| |___| (_| /__ / |_| |\n        //        //   /_____|______/__,_|___//__, |\n                                               __/ |\n                                              |___/ \n\n\n     __  __            _   _         ______                                \n    |  //  |          | | (_)       |  ____|                               \n    | /  / | __ _ _ __| |_ _ _ __   | |__   ___  ___ _ __ ___   __ _  __ _ \n    | |//| |/ _` | '__| __| | '_ /  |  __| / _ // __| '_ ` _ / / _` |/ _` |\n    | |  | | (_| | |  | |_| | | | | | |___|  __//__ / | | | | | (_| | (_| |\n    |_|  |_|/__,_|_|   /__|_|_| |_| |______/___||___/_| |_| |_|/__,_|/__,_|");
+                    Console.WriteLine("    _   _                 _                      \n    | | | |               | |                     \n    | |_| |__   __ _ _ __ | | ___   _  ___  _   _ \n    | __| '_ / / _` | '_ /| |/ / | | |/ _ /| | | |\n    | |_| | | | (_| | | | |   <| |_| | (_) | |_| |\n     /__|_| |_|/__,_|_| |_|_|/_\\__, |/___/ /__,_|\n                                 __/ |            \n                                |___/\n\n\n    __      ____      _______ ______                \n    / /    / // /    / / ____|  ____|               \n      / // /    / // /| |    |  __| / _` / __| | | |\n       /  /      /  / | |____| |___| (_| /__ / |_| |\n        //        //   /_____|______/__,_|___//__, |\n                                               __/ |\n                                              |___/ \n\n\n     __  __            _   _         ______                                \n    |  //  |          | | (_)       |  ____|                               \n    | /  / | __ _ _ __| |_ _ _ __   | |__   ___  ___ _ __ ___   __ _  __ _ \n    | |//| |/ _` | '__| __| | '_ /  |  __| / _ // __| '_ ` _ / / _` |/ _` |\n    | |  | | (_| | |  | |_| | | | | | |___|  __//__ / | | | | | (_| | (_| |\n    |_|  |_|/__,_|_|   /__|_|_| |_| |______/___||___/_| |_| |_|/__,_|/__,_|\nCopyright 2022 Martin Eesmaa\n\nExiting program...");
                     Thread.Sleep(3000);
                     exit = true;
                 }
