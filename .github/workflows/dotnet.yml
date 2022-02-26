@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: windows-latest
+    runs-on: self-hosted
 
     steps:
     - uses: actions/checkout@v2
@@ -19,7 +19,7 @@ jobs:
         dotnet-version: 6.0.x
     - name: Restore dependencies
       run: dotnet restore
-    - name: Build VVCEasy
+    - name: Build VVCEasy (.NET Console Version)
       run: dotnet build --no-restore
-    - name: Test VVCEasy
+    - name: Test VVCEasy (.NET Console Version)
       run: dotnet test --no-build --verbosity normal
