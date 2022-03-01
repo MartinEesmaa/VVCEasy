@@ -1,5 +1,6 @@
 echo off
 pushd "%~dp0"
+cls
 
 echo.
 echo  :: Checking For Administrator Elevation...
@@ -32,6 +33,7 @@ title Martin Eesmaa / VVCEasy
 color 07
 cls
 echo VVCEasy (Batchfile Beta Version, v.0.5.0)
+echo.
 echo What would you like to do for encode/decode of VVC?
 echo 1. Encode
 echo 2. Decode
@@ -183,7 +185,7 @@ ffplay
 wget
 git
 echo You need exit in Python for typing "exit()".
-py
+python
 echo Did that work in your PATH? Y/N?
 set /p testdidworkq=Answer: 
 if %testdidworkq% == Y goto youdidworktest
@@ -357,7 +359,7 @@ wget https://www.dropbox.com/s/zp8b3xg0b5p1pwe/VVCEasy.266
 rename VVCEasy.266 dummy_raw_bitstream.266
 echo Note: If you want to go back to menu, press CTRL + C on your keyboard in Windows Terminal/CMD and type "Y" to terminate server and this will go back to main menu options.
 echo The python file is porting 8000 on your localhost computer.
-py wasm_test-server.py
+python wasm_test-server.py
 cd ../
 echo Thanks for trying out of VVDEC Web Player. If you want to run on your VVDEC Web Player Server, go to folder of vvdecWebPlayer and run one click wasm_test-server.py.
 echo Press any key to go back menu.
