@@ -39,7 +39,7 @@ echo 1. Encode
 echo 2. Decode
 echo 3. Help
 echo 4. Exit
-echo 5. Test path environment
+echo 5. Install/Test path environment
 echo 6. Install VLC Media Player (o266player, Windows x64)
 echo 7. Install quickly through Anaconda for ffmpeg (Windows)
 echo 8. Install VVdec Web Player
@@ -166,16 +166,18 @@ goto start
 
 :test
 cls
-title TEST PATH ENVIRONMENT
+title INSTALL/TEST PATH ENVIRONMENT
 echo Martin Eesmaa is testing your paths, that you installed programs in PATH. Not sure, what is path?
 echo You can go here for link: https://stackoverflow.com/questions/4910721/python-on-cmd-path
 echo You can also search "What is PATH in Windows?" in DuckDuckGo or SearX.
-echo Are you ready to test? (Y/N)
+echo Are you ready to test? (Y/N) or type "I" to install path environment.
 set /p readytestbefore=Answer: 
 if %readytestbefore% == Y goto nowtestingtime
 if %readytestbefore% == N goto start
 if %readytestbefore% == y goto nowtestingtime
 if %readytestbefore% == n goto start
+if %installtestbefore% == I goto installpath
+if %installtestbefore% == i goto installpath
 
 :nowtestingtime
 title Testing time...
@@ -205,6 +207,25 @@ echo Sorry, your path environment did not work. Make sure follow that needs to b
 echo Still not working? You can ask question in Stack Overflow.
 pause
 goto start
+
+:installpath
+echo Installer path environment will be only for 7-Zip.
+echo Others programs should need manual, but Python, FFmpeg, wget and git must be installed manually and add automatically path environments.
+echo Do you want patch 7-Zip on your path environment, so you can type "7z" next time.
+echo Install 7-Zip on your path environments? Y/N? No means go back to test menu.
+if %installpath1% == Y goto installingpath
+if %installpath1% == N goto test
+if %installpath1% == y goto installingpath
+if %installpath1% == n goto test
+
+:installingpath
+title INSTALLING 7-ZIP on your path environments...
+echo INSTALLING 7-ZIP on your path environments...
+set PATH=%PATH%;C:\Program Files\7-Zip
+echo DONE!
+echo Returning to test menu...
+timeout 3 /nobreak
+goto test
 
 :exit
 cls
