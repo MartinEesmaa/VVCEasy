@@ -213,6 +213,7 @@ echo Installer path environment will be only for 7-Zip.
 echo Others programs should need manual, but Python, FFmpeg, wget and git must be installed manually and add automatically path environments.
 echo Do you want patch 7-Zip on your path environment, so you can type "7z" next time.
 echo Install 7-Zip on your path environments? Y/N? No means go back to test menu.
+set /p installpath1=Answer: 
 if %installpath1% == Y goto installingpath
 if %installpath1% == N goto test
 if %installpath1% == y goto installingpath
