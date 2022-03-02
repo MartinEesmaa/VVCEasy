@@ -19,7 +19,7 @@ namespace VVCEasy
                 Console.WriteLine("Note: C# is not ready yet, malfunction mode");
                 Console.WriteLine("");
                 Console.Title = "Martin Eesmaa / VVCEasy";
-                Console.WriteLine("What would you like to do for encode/decode of VVC?\n1. Encode\n2. Decode\n3. Help\n4. Exit\n5. Test path environment\n6. Install VLC Media Player (o266player, Windows x64)\n7. Install quickly through Anaconda for ffmpeg (Windows)\n8. Install VVdec Web Player\n9. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)");
+                Console.WriteLine("What would you like to do for encode/decode of VVC?\n1. Encode\n2. Decode\n3. Help\n4. Exit\n5. Install/Test path environment\n6. Install VLC Media Player (o266player, Windows x64)\n7. Install quickly through Anaconda for ffmpeg (Windows)\n8. Install VVdec Web Player\n9. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)");
 
                 string input = Console.ReadLine();
 
@@ -79,7 +79,7 @@ namespace VVCEasy
                 }
                 else if (input == "3")
                 {
-                    helpingvvc:
+                helpingvvc:
                     Console.Clear();
                     Console.WriteLine("Welcome to VVCEasy help instructions!\nHere is tutorial about... How to use VVCEasy?");
                     Console.ReadLine();
@@ -107,8 +107,8 @@ namespace VVCEasy
                 {
                 testpathenvironment:
                     Console.Clear();
-                    Console.Title = "TEST PATH ENVIRONMENT";
-                    Console.WriteLine("Martin Eesmaa is testing your paths, that you installed programs in PATH. Not sure, what is path?\nYou can go here for link: https://stackoverflow.com/questions/4910721/python-on-cmd-path\nYou can also search What is PATH in Windows? in DuckDuckGo or SearX.\nAre you ready to test? (Y/N)");
+                    Console.Title = "INSTALL/TEST PATH ENVIRONMENT";
+                    Console.WriteLine("Martin Eesmaa is testing your paths, that you installed programs in PATH. Not sure, what is path?\nYou can go here for link: https://stackoverflow.com/questions/4910721/python-on-cmd-path\nYou can also search What is PATH in Windows? in DuckDuckGo or SearX.\nAre you ready to test? (Y/N) or type I to install path environment.");
 
                     string readytestbefore = Console.ReadLine();
 
@@ -117,6 +117,19 @@ namespace VVCEasy
                         Console.Title = "Testing time...";
                         Console.WriteLine("Sorry, it's malfunction mode in C#...");
                         Console.ReadLine();
+                    }
+                    else if (readytestbefore == "I" + "i")
+                    {
+                        Console.WriteLine("Installer path environment will be only for 7-Zip.\nOthers programs should need manual, but Python, FFmpeg, wget and git must be installed manually and add automatically path environments.\nDo you want patch 7-Zip on your path environment, so you can type 7z next time.\nInstall 7-Zip on your path environments? Y/N? No means go back to test menu.\n\nAnswer: ");
+
+                        string installpath1 = Console.ReadLine();
+
+                        if (installpath1 == "Y" + "y")
+                        {
+                            Console.Title = "INSTALLING 7-ZIP on your path environments...";
+                            Console.WriteLine("Sorry, it's malfunction mode in C#...");
+                            Console.ReadLine();
+                        }
                     }
                 }
                 else if (input == "6")
