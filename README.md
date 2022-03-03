@@ -38,7 +38,7 @@ bc1qhf4zu5uythr7vyt2dru73qp0k2rzrx355fsx47yjxc2ueunz8frqxmwap3
 ```
 85Ahh93M88gV8ekymtYwb6TS14TZ36jNGTFgceaRH7hj8Rtx1qVB9PobnJLR5siz4nYBnzWy3pkV6KaVroifGMVh7n4br3J
 ```
-- **BAT:** For Brave users, you can also contribute by support to me, I'm verified Brave user on Brave Rewards.
+- **BAT (BASIC ATTENTION TOKEN):** For Brave users only, you can also contribute by support to me, I'm verified Brave user on Brave Rewards.
 
 # Compatibility Windows Operating System (VLC Media Player v3.0.11.1, o266player build version)
 
