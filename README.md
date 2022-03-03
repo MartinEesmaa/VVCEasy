@@ -17,16 +17,27 @@ Installation: Go to releases and download latest version.
 VVCEasy is not finished yet. I'm trying to work out with my codes. I'm not good for code programming, just simple coding.
 Sorry to say this. I will give update announcement once I release news.
 
-Windows source run: RUNVVCEASY.bat
+Windows source run (Batchfile): RUNVVCEASY.bat
 
-Note to Mac and Linux of o266player VLC: Sorry Mac and Linux users :(, on macOS 10.15.6, I tried build, but it failed, you can have a look for Stack Overflow: https://bit.ly/3GTtNTJ
+Windows/Mac/Linux source run (Csharp): Bin/Release or Debug/netX.x/VVCEasy.exe (after build of C#), this requires VVCEasy.dll to run console application.
+
+Note to Mac and Linux of o266player VLC: Sorry Mac and Linux users :(, here is a why MacOS and Linux cannot run VLC o266player.
+
+On macOS 10.15.6, I tried build, but it failed, you can have a look for Stack Overflow: [Link](https://stackoverflow.com/questions/70387126/error-1-and-2-trying-to-compile-vlc-o266player-missing-git-and-txt).
+
 On Linux, it won't support of VLC (o266player build).
 If you want to run VLC (o266player version), you must run Windows only for virtual machine or your real computer.
 
 # Donate to me using cryptocurrency
 
-- **BTC:** `bc1qhf4zu5uythr7vyt2dru73qp0k2rzrx355fsx47yjxc2ueunz8frqxmwap3`
-- **MONERO:** `85Ahh93M88gV8ekymtYwb6TS14TZ36jNGTFgceaRH7hj8Rtx1qVB9PobnJLR5siz4nYBnzWy3pkV6KaVroifGMVh7n4br3J`
+- **BTC (BITCOIN):** 
+```
+bc1qhf4zu5uythr7vyt2dru73qp0k2rzrx355fsx47yjxc2ueunz8frqxmwap3
+```
+- **XMR (MONERO):** 
+```
+85Ahh93M88gV8ekymtYwb6TS14TZ36jNGTFgceaRH7hj8Rtx1qVB9PobnJLR5siz4nYBnzWy3pkV6KaVroifGMVh7n4br3J
+```
 - **BAT:** For Brave users, you can also contribute by support to me, I'm verified Brave user on Brave Rewards.
 
 # Compatibility Windows Operating System (VLC Media Player v3.0.11.1, o266player build version)
