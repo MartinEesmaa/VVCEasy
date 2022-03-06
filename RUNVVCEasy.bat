@@ -44,6 +44,7 @@ echo 6. Install VLC Media Player (o266player, Windows x64)
 echo 7. Install quickly through Anaconda for ffmpeg (Windows)
 echo 8. Install VVdec Web Player
 echo 9. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)
+echo 10. Install vvDecPlayer from BitMovin
 set /p VVCSTART=Number: 
 if %VVCSTART% == 1 goto encodestart
 if %VVCSTART% == 2 goto decodestart
@@ -54,6 +55,7 @@ if %VVCSTART% == 6 goto vlc
 if %VVCSTART% == 7 goto conda
 if %VVCSTART% == 8 goto installvvdecweb
 if %VVCSTART% == 9 goto decompresswin7z
+if %VVCSTART% == 10 goto installbitmovin
 
 :encodestart
 title Encode to VVC
@@ -406,4 +408,33 @@ echo If the hashes are not matched correctly, please contact Martin Eesmaa for p
 pause
 echo Thank you for decompressing WindowsVVC.7z... Now back to menu.
 timeout 3
+goto start
+
+:installbitmovin
+cls
+title Install vvDecPlayer from BitMovin
+echo Would you like to install?
+echo Y/N?
+set /p installbitmovind=Answer: 
+if %installbitmovind% == Y goto installbitmovin1
+if %installbitmovind% == N goto start
+if %installbitmovindt% == y goto installbitmovin1
+if %installbitmovindt% == n goto start
+
+:installbitmovin1
+title Installing vvDecPlayer from BitMovin...
+echo Installing vvDecPlayer from BitMovin...
+mkdir vvDecPlayer
+cd vvDecPlayer
+echo Downloading vvDecPlayer (Windows) from Bitmovin, compiled by Martin Eesmaa
+wget https://www.dropbox.com/s/vf5gc3otbasg23c/vvDecPlayerWIN.7z
+echo Downloading vvdec.dll from ChristianFeldmann/vvdec on GitHub
+wget https://github.com/ChristianFeldmann/vvdec/releases/download/v1.2.0-1/vvdec.dll
+7z x vvDecPlayerWIN.7z
+del /q vvDecPlayerWIN.7z
+vvDecPlayer
+echo Successfully running on vvDecPlayer, now if you have any problems, please go to Bitmovin/vvDecPlayer issues of https://github.com/bitmovin/vvDecPlayer/issues
+echo Or contact Bitmovin at https://www.bitmovin.com.
+echo Press any key to go back menu...
+pause
 goto start
