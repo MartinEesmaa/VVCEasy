@@ -16,8 +16,7 @@ namespace VVCEasy
             {
                 Console.Clear();
                 Console.WriteLine("VVCEasy (.NET Console Beta Version, v.0.5.0)");
-                Console.WriteLine("Note: C# is not ready yet, malfunction mode");
-                Console.WriteLine("");
+                Console.WriteLine("Note: C# is not ready yet, malfunction mode\n");
                 Console.Title = "Martin Eesmaa / VVCEasy";
                 Console.WriteLine("What would you like to do for encode/decode of VVC?\n1. Encode\n2. Decode\n3. Help\n4. Exit\n5. Install/Test path environment\n6. Install VLC Media Player (o266player, Windows x64)\n7. Install quickly through Anaconda for ffmpeg (Windows)\n8. Install VVdec Web Player\n9. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)\n10. Install vvDecPlayer from BitMovin");
 
