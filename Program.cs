@@ -19,7 +19,7 @@ namespace VVCEasy
                 Console.WriteLine("Note: C# is not ready yet, malfunction mode");
                 Console.WriteLine("");
                 Console.Title = "Martin Eesmaa / VVCEasy";
-                Console.WriteLine("What would you like to do for encode/decode of VVC?\n1. Encode\n2. Decode\n3. Help\n4. Exit\n5. Install/Test path environment\n6. Install VLC Media Player (o266player, Windows x64)\n7. Install quickly through Anaconda for ffmpeg (Windows)\n8. Install VVdec Web Player\n9. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)");
+                Console.WriteLine("What would you like to do for encode/decode of VVC?\n1. Encode\n2. Decode\n3. Help\n4. Exit\n5. Install/Test path environment\n6. Install VLC Media Player (o266player, Windows x64)\n7. Install quickly through Anaconda for ffmpeg (Windows)\n8. Install VVdec Web Player\n9. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)\n10. Install vvDecPlayer from BitMovin");
 
                 string input = Console.ReadLine();
 
@@ -105,7 +105,6 @@ namespace VVCEasy
                 }
                 else if (input == "5")
                 {
-                testpathenvironment:
                     Console.Clear();
                     Console.Title = "INSTALL/TEST PATH ENVIRONMENT";
                     Console.WriteLine("Martin Eesmaa is testing your paths, that you installed programs in PATH. Not sure, what is path?\nYou can go here for link: https://stackoverflow.com/questions/4910721/python-on-cmd-path\nYou can also search What is PATH in Windows? in DuckDuckGo or SearX.\nAre you ready to test? (Y/N) or type I to install path environment.");
@@ -181,6 +180,48 @@ namespace VVCEasy
                     Console.Title = "WindowsVVC.7z (decompressing)";
                     Console.WriteLine("Decompressing...\nSorry, the command is not ready yet...");
                     Console.ReadLine();
+                }
+                else if (input == "10")
+                {
+                    Console.Clear();
+                    Console.Title = "Install vvDecPlayer from BitMovin";
+                    Console.WriteLine("Would you like to install?\nY/N?\n");
+
+                    string installbitmovin = Console.ReadLine();
+
+                    if (installbitmovin == "Y" + "y")
+                    {
+                        bitmovingotoinstall:
+                        Console.Title = "Installing vvDecPlayer from BitMovin...";
+                        Console.WriteLine("Installing vvDecPlayer from BitMovin on your computer...\nWhich operating system are you using?\nWindows, Mac or Linux?\nType W for Windows\nType M for Mac\nType L for Linux");
+                        
+                        string installbitmovin1 = Console.ReadLine();
+
+                        if (installbitmovin1 == "W" + "w")
+                        {
+                            Console.WriteLine("Installing vvDecPlayer from BitMovin for Windows...\nSorry, the C# console is not ready yet...");
+                            Console.ReadLine();
+                        }
+                        else if (installbitmovin1 == "M" + "m")
+                        {
+                            Console.WriteLine("Installing vvDecPlayer from BitMovin for Mac OS...\nSorry, the C# console is not ready yet...");
+                            Console.ReadLine();
+                        }
+                        else if (installbitmovin1 == "L" + "l")
+                        {
+                            Console.WriteLine("Installing vvDecPlayer from BitMovin for Linux...\nSorry, the C# console is not ready yet...");
+                            Console.ReadLine();
+                        }
+                        else if (installbitmovin1 == "Back" + "BACK")
+                        {
+                            
+                        }
+                        else
+                        {
+                            Console.WriteLine("You typed wrong input command, follow the commands instructions... type Back to go back menu...");
+                            goto bitmovingotoinstall;
+                        }
+                    }
                 }
             }
             while (exit == false);
