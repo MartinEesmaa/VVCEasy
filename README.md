@@ -29,6 +29,8 @@ On macOS 10.15.6, I tried build, but it failed, you can have a look for Stack Ov
 On Linux, it won't support of VLC (o266player build).
 If you want to run VLC (o266player version), you must run Windows only for virtual machine or your real computer.
 
+Matrix chat: https://matrix.to/#/#vvceasy:matrix.org
+
 # Donate to me using cryptocurrency
 
 - **BTC (BITCOIN):** 
