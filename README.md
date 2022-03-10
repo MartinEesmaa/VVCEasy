@@ -92,7 +92,7 @@ Step 3: Once you replaced of your username, press F9 to compile on your keyboard
 
 # Compile of VVCEasy .NET Console version (optional)
 
-First, before you compile to VVCEasy .NET Console version, you need .NET SDK x64.
+First, before you compile to VVCEasy .NET Console version, you need .NET SDK x64 from Microsoft.
 Link: https://dotnet.microsoft.com/en-us/download
 
 Step 1: Clone git and cd VVCEasy
@@ -100,9 +100,9 @@ Step 1: Clone git and cd VVCEasy
 git clone https://github.com/MartinEesmaa/VVCEasy.git && cd VVCEasy
 ```
 
-Step 2: Before you build, make sure to restore project, build and test it.
+Step 2: Before you build, make sure to build and test it. Don't worry, when you build with .NET, it will restore project and build.
 ```
-dotnet restore && dotnet build --no-restore && dotnet test --no-build --verbosity normal
+dotnet build && dotnet test --no-build --verbosity normal
 ```
 
 Step 3: Once building is done, the build folder directory is bin/Debug
