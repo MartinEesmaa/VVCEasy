@@ -6,6 +6,7 @@ https://github.com/MartinEesmaa/VVCEasy/actions/workflows/dotnet.yml)
 ![GitHub repo size](https://img.shields.io/github/repo-size/MartinEesmaa/VVCEasy)
 ![GitHub release (release name instead of tag name)](https://img.shields.io/github/v/release/MartinEesmaa/VVCEasy?include_prereleases)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/MartinEesmaa/VVCEasy)
+![Matrix](https://img.shields.io/matrix/vvceasy:matrix.org?label=VVCEasy%20Matrix)
 
 # VVCEasy (Windows (Full), Mac and Linux (partial)
 VVCEasy is that you don't have to compile or/and coding to encode VVC (known as Versatile Video Codec). Simple, Easy, Encode and Decode.
@@ -239,4 +240,6 @@ I know about Batch file and HTML programmer. Some hard programming languages mig
 Update of 19th February 2022: Maybe I should make C# Console program, that will be easy of Windows, Mac and Linux multi support.
 
 If you have any questions or/and any issues, please go to Issues tab and create your issue.
+
+Or, you can chat us: https://matrix.to/#/#vvceasy:matrix.org
 - Martin Eesmaa
