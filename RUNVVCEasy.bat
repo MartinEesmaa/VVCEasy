@@ -413,28 +413,65 @@ goto start
 
 :installbitmovin
 cls
-title Install vvDecPlayer from BitMovin
-echo Would you like to install?
-echo Y/N?
+title Install BitVVDecPlayer from BitMovin
+echo Would you like to install on your operating system?
+echo Windows for W, Mac OS for M and Linux for L, Main Menu for N/n.
 set /p installbitmovind=Answer: 
-if %installbitmovind% == Y goto installbitmovin1
+if %installbitmovind% == W goto installbitmovin1windows
+if %installbitmovind% == w goto installbitmovin1windows
+if %installbitmovind% == M goto installbitmovin1macos
+if %installbitmovind% == m goto installbitmovin1macos
+if %installbitmovind% == L goto installbitmovin1linux
+if %installbitmovind% == l goto installbitmovin1linux
 if %installbitmovind% == N goto start
-if %installbitmovindt% == y goto installbitmovin1
 if %installbitmovindt% == n goto start
 
-:installbitmovin1
-title Installing vvDecPlayer from BitMovin...
-echo Installing vvDecPlayer from BitMovin...
-mkdir vvDecPlayer
-cd vvDecPlayer
-echo Downloading vvDecPlayer (Windows) from Bitmovin, compiled by Martin Eesmaa
-wget https://www.dropbox.com/s/vf5gc3otbasg23c/vvDecPlayerWIN.7z
-echo Downloading vvdec.dll from ChristianFeldmann/vvdec on GitHub
-wget https://github.com/ChristianFeldmann/vvdec/releases/download/v1.2.0-1/vvdec.dll
-7z x vvDecPlayerWIN.7z
-del /q vvDecPlayerWIN.7z
+:installbitmovin1windows
+title Installing BitVVDecPlayer from BitMovin...
+echo Installing BitVVDecPlayer from BitMovin...
+mkdir BitVVDecPlayerWIN
+cd BitVVDecPlayerWIN
+echo Downloading BitVVDecPlayer (Windows) from Bitmovin, compiled by Martin Eesmaa
+wget https://www.dropbox.com/s/75ouoeadcr2cl53/BitVVDecPlayerWIN.7z
+7z x BitVVDecPlayerWIN.7z
+del /q BitVVDecPlayerWIN.7z
 vvDecPlayer
+echo Successfully running on BitVVDecPlayer, now if you have any problems, please go to Bitmovin/vvDecPlayer issues of https://github.com/bitmovin/vvDecPlayer/issues
+echo If you receive error, that MSVCP140.DLL is missing, you might need download Microsoft Visual C++ Redistributable of 2015-2017-2019-2022: https://docs.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist
+echo Or contact Bitmovin at https://www.bitmovin.com.
+echo Press any key to go back menu...
+pause
+goto start
+
+:installbitmovin1macos
+title Installing BitVVDecPlayer from BitMovin...
+echo Installing BitVVDecPlayer from BitMovin...
+mkdir BitVVDecPlayerMAC
+cd BitVVDecPlayerMAC
+echo Downloading BitVVDecPlayer (macOS) from Bitmovin, compiled by Martin Eesmaa
+wget https://www.dropbox.com/s/ilsoica7c8dh4hq/BitVVDecPlayerMAC.7z
+7z x BitVVDecPlayerMAC.7z
+del /q BitVVDecPlayerMAC.7z
+./vvDecPlayer
 echo Successfully running on vvDecPlayer, now if you have any problems, please go to Bitmovin/vvDecPlayer issues of https://github.com/bitmovin/vvDecPlayer/issues
+echo If vvDecPlayer won't work probably, it might be issue that you haven't installed Qt on your Mac OS. Please install using code: "brew install qt" on Homebrew.
+echo Or contact Bitmovin at https://www.bitmovin.com.
+echo Press any key to go back menu...
+pause
+goto start
+
+:installbitmovin1linux
+title Installing BitVVDecPlayer from BitMovin...
+echo Installing BitVVDecPlayer from BitMovin...
+mkdir BitVVDecPlayerLINUX
+cd BitVVDecPlayerLINUX
+echo Downloading BitVVDecPlayer (Linux) from Bitmovin, compiled by Martin Eesmaa
+wget https://www.dropbox.com/s/bihm3pyh21lcvte/BitVVDecPlayerLINUX.7z?dl=0
+7z x BitVVDecPlayerLINUX.7z
+del /q BitVVDecPlayerLINUX.7z
+./vvDecPlayer
+echo Successfully running on vvDecPlayer, now if you have any problems, please go to Bitmovin/vvDecPlayer issues of https://github.com/bitmovin/vvDecPlayer/issues
+echo If vvDecPlayer won't work probably, it might be issue that you haven't installed Qt on your Linux. Please install using code: "sudo apt install qt5-default" on Linux terminal.
 echo Or contact Bitmovin at https://www.bitmovin.com.
 echo Press any key to go back menu...
 pause
