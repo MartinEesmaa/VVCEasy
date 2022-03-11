@@ -88,7 +88,7 @@ namespace VVCEasy
 
                     string helper = Console.ReadLine();
 
-                    if (helper == "Y" + "y")
+                    if (helper == "Y")
                     {
                         goto helpingvvc;
                     }
@@ -110,19 +110,19 @@ namespace VVCEasy
 
                     string readytestbefore = Console.ReadLine();
 
-                    if (readytestbefore == "Y" + "y")
+                    if (readytestbefore == "Y")
                     {
                         Console.Title = "Testing time...";
                         Console.WriteLine("Sorry, it's malfunction mode in C#...");
                         Console.ReadLine();
                     }
-                    else if (readytestbefore == "I" + "i")
+                    else if (readytestbefore == "I")
                     {
                         Console.WriteLine("Installer path environment will be only for 7-Zip.\nOthers programs should need manual, but Python, FFmpeg, wget and git must be installed manually and add automatically path environments.\nDo you want patch 7-Zip on your path environment, so you can type 7z next time.\nInstall 7-Zip on your path environments? Y/N? No means go back to test menu.\n\nAnswer: ");
 
                         string installpath1 = Console.ReadLine();
 
-                        if (installpath1 == "Y" + "y")
+                        if (installpath1 == "Y")
                         {
                             Console.Title = "INSTALLING 7-ZIP on your path environments...";
                             Console.WriteLine("Sorry, it's malfunction mode in C#...");
@@ -138,7 +138,7 @@ namespace VVCEasy
 
                     string vlcinstall = Console.ReadLine();
 
-                    if (vlcinstall == "Y" + "y")
+                    if (vlcinstall == "Y")
                     {
 
                     }
@@ -151,7 +151,7 @@ namespace VVCEasy
 
                     string anacondaman = Console.ReadLine();
 
-                    if (anacondaman == "Y" + "y")
+                    if (anacondaman == "Y")
                     {
                         Console.WriteLine("SUCCESS, going to back menu...");
                         Console.ReadLine();
@@ -165,7 +165,7 @@ namespace VVCEasy
 
                     string okletsdoit = Console.ReadLine();
 
-                    if (okletsdoit == "Y" + "y")
+                    if (okletsdoit == "Y")
                     {
                         Console.Clear();
                         Console.Title = "INSTALLING VVDEC WEB PLAYER...";
@@ -188,7 +188,7 @@ namespace VVCEasy
 
                     string installbitmovin = Console.ReadLine();
 
-                    if (installbitmovin == "Y" + "y")
+                    if (installbitmovin == "Y")
                     {
                         bitmovingotoinstall:
                         Console.Title = "Installing vvDecPlayer from BitMovin...";
@@ -196,22 +196,22 @@ namespace VVCEasy
                         
                         string installbitmovin1 = Console.ReadLine();
 
-                        if (installbitmovin1 == "W" + "w")
+                        if (installbitmovin1 == "W")
                         {
                             Console.WriteLine("Installing vvDecPlayer from BitMovin for Windows...\nSorry, the C# console is not ready yet...");
                             Console.ReadLine();
                         }
-                        else if (installbitmovin1 == "M" + "m")
+                        else if (installbitmovin1 == "M")
                         {
                             Console.WriteLine("Installing vvDecPlayer from BitMovin for Mac OS...\nSorry, the C# console is not ready yet...");
                             Console.ReadLine();
                         }
-                        else if (installbitmovin1 == "L" + "l")
+                        else if (installbitmovin1 == "L")
                         {
                             Console.WriteLine("Installing vvDecPlayer from BitMovin for Linux...\nSorry, the C# console is not ready yet...");
                             Console.ReadLine();
                         }
-                        else if (installbitmovin1 == "Back" + "BACK")
+                        else if (installbitmovin1 == "Back")
                         {
                             
                         }
