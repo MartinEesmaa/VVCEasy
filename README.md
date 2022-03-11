@@ -31,7 +31,19 @@ If you want to run VLC (o266player version), you must run Windows only for virtu
 
 Matrix chat: https://matrix.to/#/#vvceasy:matrix.org
 
-# Donate to me using cryptocurrency
+# All lists
+
+- [Donate to Martin Eesmaa using cryptocurrency](#donate-to-me-using-cryptocurrency)
+- [Compatibility of O266Player](#compatibility-windows-operating-system-vlc-media-player-v30111-o266player-build-version)
+- [VVCEasy Batchfile Compile](#compile-of-vvceasy-batchfile-version-optional-only-windows-for-compile)
+- [VVCEasy .NET Compile](#compile-of-vvceasy-net-console-version-optional)
+- [Encode/Decode easy](#encodedecode-easy)
+- [Hard option](#without-vvceasy-experimental-option-for-professional-coders-other-developers-and-everyone-hard)
+- [VVEnc & VVDec compatibility test](#compatibility-results-vvenc-and-vvdec-test-completed-by-martin-eesmaa)
+- [FAQ](#compatibility-results-vvenc-and-vvdec-test-completed-by-martin-eesmaa)
+- [Credits & Licenses](#credits--licenses)
+
+# Donate to Martin Eesmaa using cryptocurrency
 
 - **BTC (BITCOIN):** 
 ```
@@ -245,3 +257,42 @@ If you have any questions or/and any issues, please go to Issues tab and create 
 
 Or, you can chat us: https://matrix.to/#/#vvceasy:matrix.org
 - Martin Eesmaa
+
+
+# Credits & Licenses
+
+[VVCEasy](https://github.com/MartinEesmaa/VVCEasy) - VVCEasy is easy VVC, that no need compile. 
+
+License: MIT
+© 2021-2022 [Martin Eesmaa](https://github.com/MartinEesmaa) (All rights reserved)
+
+----------------
+
+[Versatile Video Encoder](https://github.com/fraunhoferhhi/vvenc) - Fraunhofer Versatile Video Encoder (VVenC)
+
+[Versatile Video Decoder](https://github.com/fraunhoferhhi/vvdec) - Fraunhofer Versatile Video Encoder (VVdeC)
+
+[Versatile Video Decoder Web Player](https://github.com/fraunhoferhhi/vvdecWebPlayer) - A minimal proof-of-concept VVC player for the web using WebAssembly
+
+License: BSD (three repositories)
+© 2019-2022 Fraunhofer-Gesellschaft zur Förderung der angewandten Forschung e.V. (All rights reserved)
+Github: [Fraunhoferhhi](https://github.com/fraunhoferhhi)
+
+--------------------
+
+[O266Player](https://github.com/TencentCloud/o266player) - VLC Media Player (o266player, Vetinari v3.0.11.1, modified version)
+
+[VLC Original Version](https://code.videolan.org/videolan/vlc) - VLC Media Player
+
+License: GPL Version 2 (both repositories)
+
+© 2020-2021 [Tencent Cloud](https://github.com/TencentCloud) (All rights reserved), © 2000-2022 [VLC Media Player](https://code.videolan.org/) Developers (All rights reserved)
+
+--------------------
+
+[BitMovin Versatile Video Decoder Player](https://github.com/bitmovin/vvDecPlayer) - BitMovin VVDecPlayer
+
+License: MIT
+© 2021 [Christian Feldmann](https://github.com/ChristianFeldmann) (All rights reserved)
+
+---------------------
