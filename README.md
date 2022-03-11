@@ -33,7 +33,7 @@ Matrix chat: https://matrix.to/#/#vvceasy:matrix.org
 
 # All lists
 
-- [Donate to Martin Eesmaa using cryptocurrency](#donate-to-me-using-cryptocurrency)
+- [Donate to Martin Eesmaa using cryptocurrency](#donate-to-martin-eesmaa-using-cryptocurrency)
 - [Compatibility of O266Player](#compatibility-windows-operating-system-vlc-media-player-v30111-o266player-build-version)
 - [VVCEasy Batchfile Compile](#compile-of-vvceasy-batchfile-version-optional-only-windows-for-compile)
 - [VVCEasy .NET Compile](#compile-of-vvceasy-net-console-version-optional)
