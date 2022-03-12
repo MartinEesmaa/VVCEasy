@@ -42,7 +42,7 @@ echo 4. Exit
 echo 5. Install/Test path environment
 echo 6. Install VLC Media Player (o266player, Windows x64)
 echo 7. Install quickly through Anaconda for ffmpeg (Windows)
-echo 8. Install VVdec Web Player
+echo 8. Install/Update VVdec Web Player
 echo 9. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)
 echo 10. Install vvDecPlayer from BitMovin
 set /p VVCSTART=Number: 
@@ -364,12 +364,15 @@ echo By installing, you will have to agree to download VVDec Web Player from Fra
 echo See the code of VVDEC Web Player: https://github.com/fraunhoferhhi/vvdecWebPlayer
 echo When you agree to install, it will clone of VVDec Web Player repository using git. After git, we will copy from VVDECWEBINSTALL files into vvdecWebPlayer/bin folder.
 echo After all of that, we will run Python to start web server of your localhost port 8000.
+echo If you already have installed of VVDec Web Player, you can type "U" to update files of VVDec Web Player.
 echo Would you like to install of VVDEC Web Player?
 set /p okletsdoit=Answer: 
 if %okletsdoit% == Y goto installnowplayer
 if %okletsdoit% == N goto start
 if %okletsdoit% == y goto installnowplayer
 if %okletsdoit% == n goto start
+if %okletsdoit% == U goto updatevvdecwebplayer
+if %okletsdoit% == u goto updatevvdecwebplayer
 
 :installnowplayer
 cls
@@ -389,6 +392,18 @@ cd ../
 echo Thanks for trying out of VVDEC Web Player. If you want to run on your VVDEC Web Player Server, go to folder of vvdecWebPlayer and run one click wasm_test-server.py.
 echo Press any key to go back menu.
 timeout 10
+goto start
+
+:updatevvdecwebplayer
+cls
+title UPDATING VVDEC WEB PLAYER...
+echo UPDATING VVDEC WEB PLAYER...
+cd vvdecWebPlayer
+git pull
+cd ../
+echo Your up to date is now latest.
+echo Returning to main menu...
+timeout 3
 goto start
 
 :decompresswin7z
