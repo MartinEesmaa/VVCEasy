@@ -134,7 +134,7 @@ Follow the instructions, the commands will give your options. Since 21 October 2
 
 # Without VVCEasy, experimental option for professional coders, other developers, and everyone (hard)
 
-You need 7Zip (requires ffmpeg and ffplay), ffmpeg, ffplay, vvenc/vvdec(app) and YUView.
+You need 7-Zip (requires ffmpeg and ffplay), ffmpeg, ffplay, vvenc/vvdec(app) and YUView.
 
 Here are the links:
 FFMPEG/FFPLAY: https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-full.7z (go to bin folder and extract two files of ffmpeg and ffplay)
@@ -144,7 +144,7 @@ Mac: https://github.com/MartinEesmaa/VVCEasy/tree/master/MacOSVVC/MacOSVVC.7z
 Linux: https://github.com/MartinEesmaa/VVCEasy/blob/master/LinuxVVC/LinuxVVC.7z
 
 YUView:
-https://github.com/IENT/YUView/actions/runs/1365560321
+https://github.com/IENT/YUView/releases
 
 Before we start, you need to make path environments for ffmpeg, ffplay and vvenc/vvdec to make easily.
 In Command Prompt (Windows):
@@ -154,7 +154,7 @@ set PATH=%PATH%;C:\Users\blah\Downloads\VVCEasy\Executables
 ```
 Verify path using Windows Command Prompt/Windows Terminal (CMD):
 ```
-echo %PATH%
+path
 ```
 
 First:
@@ -214,7 +214,7 @@ Note to 10-bit YUV users: If you encode YUV 10 bit to VVC file, add `-c yuv420_1
 
 Note to 8-bit Y4M users: It is only from input video (8-bit) to Y4M (8 bit)
 
-After VVEnc, you can play in YUView develop version, unfortunately this should not work on release version of June.
+After VVEnc, you can play in YUView of latest version.
 Drag any your video file of .h266, .266 or .vvc to play. YUView will play your video only about 10 seconds’ limit.
 
 UPDATE 13th December 2021: VLC Media Player (custom VLC build of o266player, 3.0.11.1 Vetenari, Windows 11) is tested by Martin Eesmaa. It can play only about 600 frames limit / 20+ seconds.
