@@ -178,8 +178,8 @@ if %readytestbefore% == Y goto nowtestingtime
 if %readytestbefore% == N goto start
 if %readytestbefore% == y goto nowtestingtime
 if %readytestbefore% == n goto start
-if %installtestbefore% == I goto installpath
-if %installtestbefore% == i goto installpath
+if %readytestbefore% == I goto installpath
+if %readytestbefore% == i goto installpath
 
 :nowtestingtime
 title Testing time...
