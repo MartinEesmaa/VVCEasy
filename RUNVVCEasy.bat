@@ -454,9 +454,7 @@ vvDecPlayer
 echo Successfully running on BitVVDecPlayer, now if you have any problems, please go to Bitmovin/vvDecPlayer issues of https://github.com/bitmovin/vvDecPlayer/issues
 echo If you receive error, that MSVCP140.DLL is missing, you might need download Microsoft Visual C++ Redistributable of 2015-2017-2019-2022: https://docs.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist
 echo Or contact Bitmovin at https://www.bitmovin.com.
-echo Press any key to go back menu...
-pause
-goto start
+goto downloadbitmovinvvcsample
 
 :installbitmovin1macos
 title Installing BitVVDecPlayer from BitMovin...
@@ -471,9 +469,7 @@ del /q BitVVDecPlayerMAC.7z
 echo Successfully running on vvDecPlayer, now if you have any problems, please go to Bitmovin/vvDecPlayer issues of https://github.com/bitmovin/vvDecPlayer/issues
 echo If vvDecPlayer won't work probably, it might be issue that you haven't installed Qt on your Mac OS. Please install using code: "brew install qt" on Homebrew.
 echo Or contact Bitmovin at https://www.bitmovin.com.
-echo Press any key to go back menu...
-pause
-goto start
+goto downloadbitmovinvvcsample
 
 :installbitmovin1linux
 title Installing BitVVDecPlayer from BitMovin...
@@ -488,6 +484,32 @@ del /q BitVVDecPlayerLINUX.7z
 echo Successfully running on vvDecPlayer, now if you have any problems, please go to Bitmovin/vvDecPlayer issues of https://github.com/bitmovin/vvDecPlayer/issues
 echo If vvDecPlayer won't work probably, it might be issue that you haven't installed Qt on your Linux. Please install using code: "sudo apt install qt5-default" on Linux terminal.
 echo Or contact Bitmovin at https://www.bitmovin.com.
-echo Press any key to go back menu...
+goto downloadbitmovinvvcsample
+
+:downloadbitmovinvvcsample
+echo Would you like to download VVC sample video files from Bitmovin? Y/N?
+set /p vvcsampleyeah=Answer: 
+if %vvcsampleyeah% == Y goto downloadvvcnowbit
+if %vvcsampleyeah% == y goto downloadvvcnowbit
+if %vvcsampleyeah% == N goto start
+if %vvcsampleyeah% == n goto start
+
+:downloadvvcnowbit
+title Downloading VVC sample files from Bitmovin
+echo Downloading VVC sample files from Bitmovin
+wget https://www.dropbox.com/s/qncefmnhw8hzr2k/vvcBlogPostDemo.7z
+echo Downloading Coffee Run and Sprite Fright...
+wget https://www.dropbox.com/s/ogxw1pz9pr9bphi/CoffeeRun.json
+wget https://www.dropbox.com/s/6kpnoin4bwzb1ob/SpriteFright.json
+echo Extracting from archived file...
+7z x vvcBlogPostDemo.7z
+echo Please edit of location downloaded folder of vvcBlogPostDemo...
+CoffeeRun.json
+SpriteFright.json
+echo Press any key, when you finished configured of your location folder...
+pause
+echo Okay, it seems you configured completed. Please run on vvDecPlayer on your operating system.
+echo Go to File --> Open JSON manifest...
+echo Select JSON file to run VVC movie and enjoy it.
 pause
 goto start
