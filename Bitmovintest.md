@@ -4,8 +4,9 @@ Windows 7+: ![okd933](https://user-images.githubusercontent.com/88035011/1580540
 
 macOS 10.15+:
 
-Linux:
+Linux: ![LinuxBITVVCTest](https://user-images.githubusercontent.com/88035011/158130385-0f475e1f-9630-4623-acc4-6b0c842b6a35.gif)
 
 Tests will be come soon later.
 
 - Martin Eesmaa
+
