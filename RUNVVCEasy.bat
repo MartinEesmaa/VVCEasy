@@ -486,7 +486,7 @@ echo You might get this message error, that you can't run vvDecPlayer without Qt
 echo ./vvDecPlayer: /lib/x86_64-linux-gnu/libm.so.6: version `GLIBC_2.29' not found (required by ./vvDecPlayer)
 echo ./vvDecPlayer: /usr/lib/x86_64-linux-gnu/libstdc++.so.6: version `GLIBCXX_3.4.26' not found (required by ./vvDecPlayer)
 echo ./vvDecPlayer: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5: version `Qt_5.12' not found (required by ./vvDecPlayer)
-echo If vvDecPlayer won't work probably, it might be issue that you haven't installed Qt on your Linux. Please install using code: "sudo apt install qt5-default" on Linux terminal.
+echo If vvDecPlayer won't work probably, it might be issue that you haven't installed Qt on your Linux. Please install using code: "sudo apt install qt5-default build-essential" on Linux terminal.
 echo Or contact Bitmovin at https://www.bitmovin.com.
 goto downloadbitmovinvvcsample
 
