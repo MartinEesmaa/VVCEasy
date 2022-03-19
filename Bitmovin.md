@@ -21,7 +21,7 @@ Last segment will be ending from video, 2 sec -> 3 sec. (segment-2.vvc)
 
 Total is three seconds and three segments. Still not understand? Example of my segments, including log:
 
-[Log file](https://github.com/MartinEesmaa/VVCEasy/files/8308674/BBBVVCTHREESEC.txt)
+[Log file](https://pastebin.com/qrCyfDEU)
 
 [VVC Segments](https://github.com/MartinEesmaa/VVCEasy/files/8308682/BBBVVCTHREESEC.zip)
 
