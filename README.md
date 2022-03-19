@@ -35,6 +35,7 @@ Matrix chat: https://matrix.to/#/#vvceasy:matrix.org
 
 - [Donate to Martin Eesmaa using cryptocurrency](#donate-to-martin-eesmaa-using-cryptocurrency)
 - [Compatibility of O266Player](#compatibility-windows-operating-system-vlc-media-player-v30111-o266player-build-version)
+- [Bitmovin VVDec Player](#bitmovin-vvdec-player)
 - [VVCEasy Batchfile Compile](#compile-of-vvceasy-batchfile-version-optional-only-windows-for-compile)
 - [VVCEasy .NET Compile](#compile-of-vvceasy-net-console-version-optional)
 - [Encode/Decode easy](#encodedecode-easy)
@@ -86,6 +87,12 @@ Note: I'm trying to work it out of VLC 3.0.16.
 Reminder: Some operating systems are working to load VVC video format in Virtual Machine softwares, but real machines will work every operating system, example Windows Server 2016 has already been tested by Tencent Cloud.
 
 If your operating system is working to decode VVC video format like you're running on Windows 10, please fork this repository, edit README and make pull request of my original repository from your forked repository. Screenshot must be required winver and VLC Media Player (custom build of o266player)
+
+# Bitmovin VVDec Player
+
+For more information about Bitmovin VVDec Player.
+
+See [Bitmovin.md](https://github.com/MartinEesmaa/VVCEasy/blob/master/Bitmovin.md).
 
 # Compile of VVCEasy Batchfile version (optional) (Only Windows for compile.)
 
