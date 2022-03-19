@@ -13,11 +13,11 @@ Example of code (1 second/24 frames). After first segment (1 sec), it will go up
 vvencapp --qp 34 -i out.yuv -s 854x480 -r 24 --preset slow --threads 16 --tier high --segment mid -f 24 -fs 24 -o EXTREME-1.266
 ```
 
-First segment will be beginning from video, 0 sec -> 1 sec. (segment-0.vvc)
+First segment (first) will be beginning from video, 0 sec -> 1 sec. (segment-0.vvc)
 
-Middle segment will be during from video, 1 sec -> 2 sec. (segment-1.vvc)
+Middle segment (mid) will be during from video, 1 sec -> 2 sec. (segment-1.vvc)
 
-Last segment will be ending from video, 2 sec -> 3 sec. (segment-2.vvc)
+Last segment (last) will be ending from video, 2 sec -> 3 sec. (segment-2.vvc)
 
 Total is three seconds and three segments. Still not understand? Example of my segments, including log:
 
