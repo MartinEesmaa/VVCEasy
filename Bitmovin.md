@@ -45,7 +45,7 @@ JSON:
 # System requirements
 
 ### Windows
-Operating System: Windows 7 / Windows Server 2008 and earlier versions
+Operating System: Windows 7 / Windows Server 2012 and earlier versions
 
 System type: x64
 
