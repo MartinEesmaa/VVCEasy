@@ -42,6 +42,44 @@ JSON:
 }
 ```
 
+# System requirements
+
+### Windows
+Operating System: Windows 7 / Windows Server 2008 and earlier versions
+
+System type: x64
+
+Requirements to run program: Microsoft Visual C++ Redistributable 2015-2017-2019-2022 and vvdec.dll
+
+Internet required to download segments for Bitmovin streams
+
+Offline availability for segments
+
+---
+
+### Mac OS
+Operating System: macOS 10.15 and earlier versions.
+
+System type: x64
+
+Requirements to run program: Qt framework (version 5) and libvvdec.dylib
+
+Internet required to download segments for Bitmovin streams
+
+Offline availability for segments
+
+---
+
+### Linux
+Operating System: Linux (Ubuntu 18.04 and earlier versions)
+
+System type: x64
+
+Requirements to run program: Qt framework (version 5), glib (build-essential) and libvvdecLib.so
+
+Internet required to download segments for Bitmovin streams
+
+Offline availability for segments
 
 # Bitmovin VVDec Player (Test compatability)
 
