@@ -18,7 +18,7 @@ namespace VVCEasy
                 Console.WriteLine("VVCEasy (.NET Console Beta Version, v.0.5.0)");
                 Console.WriteLine("Note: C# is not ready yet, malfunction mode\n");
                 Console.Title = "Martin Eesmaa / VVCEasy";
-                Console.WriteLine("What would you like to do for encode/decode of VVC?\n1. Encode\n2. Decode\n3. Help\n4. Exit\n5. Install/Test path environment\n6. Install VLC Media Player (o266player, Windows x64)\n7. Install quickly through Anaconda for ffmpeg (Windows)\n8. Install VVdec Web Player\n9. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)\n10. Install vvDecPlayer from BitMovin");
+                Console.WriteLine("What would you like to do for encode/decode of VVC?\n1. Encode\n2. Decode\n3. Help\n4. Exit\n5. Install/Test path environment\n6. Install VLC Media Player (o266player, Windows x64)\n7. Install quickly through Anaconda for ffmpeg (Windows)\n8. Install VVdec Web Player\n9. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)\n10. Install vvDecPlayer from BitMovin\n11. Install VLC VTM Plugins (Windows x64, VLC 3.0.16, plugins by Inter Digital Inc)");
 
                 string input = Console.ReadLine();
 
@@ -220,6 +220,21 @@ namespace VVCEasy
                             Console.WriteLine("You typed wrong input command, follow the commands instructions... type Back to go back menu...");
                             goto bitmovingotoinstall;
                         }
+                    }
+                }
+                else if (input == "11")
+                {
+                    Console.Clear();
+                    Console.Title = "VLC VTM Plugins Install (Windows)";
+                    Console.WriteLine("Welcome to VLC Media Player of VTM Plugins Installation.\nSystem type only = x64\nLinux will be coming soon...\nCurrent version = 3.0.16\nWould you like to install VTM plugins to your VLC Media Player? Y/N?");
+
+                    string vtmvlcinstallnow1 = Console.ReadLine();
+
+                    if (vtmvlcinstallnow1 == "Y")
+                    {
+                        Console.Title = "Installing of VLC VTM Plugins by Inter Digital Inc. (Compiled by Martin Eesmaa)";
+                        Console.WriteLine("Installing of VLC VTM Plugins by Inter Digital Inc... (Compiled by Martin Eesmaa)\nSorry C# is malfunction mode...");
+                        Console.ReadLine();
                     }
                 }
             }

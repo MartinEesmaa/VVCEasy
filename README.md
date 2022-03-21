@@ -300,6 +300,15 @@ License: GPL Version 2 (both repositories)
 [BitMovin Versatile Video Decoder Player](https://github.com/bitmovin/vvDecPlayer) - BitMovin VVDecPlayer
 
 License: MIT
-© 2021 [Christian Feldmann](https://github.com/ChristianFeldmann) (All rights reserved)
+
+© 2021-2022 [Christian Feldmann](https://github.com/ChristianFeldmann) (All rights reserved)
+
+---------------------
+
+[VLC VTM Decoder Plugin](https://github.com/InterDigitalInc/VTMDecoder_VLCPlugin) - VVC decoder plugin for VLC based on a multithreaded VTM
+
+License: LGPL-2.1
+
+© 2021-2022 [Inter Digital Inc](https://github.com/InterDigitalInc)
 
 ---------------------
