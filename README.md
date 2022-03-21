@@ -281,9 +281,11 @@ License: MIT
 
 [Versatile Video Decoder Web Player](https://github.com/fraunhoferhhi/vvdecWebPlayer) - A minimal proof-of-concept VVC player for the web using WebAssembly
 
-License: BSD (three repositories)
-© 2019-2022 Fraunhofer-Gesellschaft zur Förderung der angewandten Forschung e.V. (All rights reserved)
-Github: [Fraunhoferhhi](https://github.com/fraunhoferhhi)
+License: Clear BSD (two repositories of vvenc & vvdec) + BSD (vvdecWebPlayer)
+
+© 2018-2022, Fraunhofer-Gesellschaft zur Förderung der angewandten Forschung e.V. & The VVC Authors. (All rights reserved)
+
+GitHub: [Fraunhoferhhi](https://github.com/fraunhoferhhi)
 
 --------------------
 
@@ -309,6 +311,6 @@ License: MIT
 
 License: LGPL-2.1
 
-© 2021-2022 [Inter Digital Inc](https://github.com/InterDigitalInc)
+© 2021-2022 [Inter Digital Inc](https://github.com/InterDigitalInc) (All rights reserved)
 
 ---------------------

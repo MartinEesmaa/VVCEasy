@@ -28,7 +28,6 @@ Compression=lzma2/ultra64
 SolidCompression=yes
 WizardStyle=modern
 InternalCompressLevel=ultra64
-DiskSpanning=True
 CompressionThreads=1
 
 [Languages]

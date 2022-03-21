@@ -527,8 +527,8 @@ cls
 title VLC VTM Plugins Install (Windows)
 echo Welcome to VLC Media Player of VTM Plugins Installation.
 echo System type only = x64
-echo Linux will be coming soon...
-echo Current version = 3.0.16
+echo Linux will be coming soon... only TsDemuxPluginVLC had issue, see: https://github.com/InterDigitalInc/VTMDecoder_VLCPlugin/issues/5
+echo Current version = 3.0.16, latest version 3.0.17-3 (it will work same latest version)
 echo Would you like to install VTM plugins to your VLC Media Player? Y/N?
 set /p vlcvtmyesorno=Answer: 
 if %vlcvtmyesorno% == Y goto installvlcvtmpluginnow
@@ -539,7 +539,7 @@ if %vlcvtmyesorno% == n goto start
 :installvlcvtmpluginnow
 title Installing of VLC VTM Plugins by Inter Digital Inc. (Compiled by Martin Eesmaa)
 echo Installing VLC VTM Plugins by Inter Digital Inc... (Compiled by Martin Eesmaa)
-cd INSTALLVLCPLUGIN/3.0.16
+cd INSTALLVLCPLUGIN/VLC
 copy libvtmdec.dll "%programfiles%\VideoLAN\VLC\plugins\codec"
 copy libvvcdecoder_plugin.dll "%programfiles%\VideoLAN\VLC\plugins\codec"
 copy libvvctsdemux_plugin.dll "%programfiles%\VideoLAN\VLC\plugins\demux"
@@ -547,8 +547,9 @@ cd ../
 echo Three dll files patched to your VLC Media Player.
 echo Restarting and starting VLC Media Player...
 taskkill /im vlc.exe
-echo Please load your vvc video file to VLC Media Player.
+echo Please load your VVC (codec) video file to VLC Media Player.
 echo For more information and options: Please go to https://github.com/InterDigitalInc/VTMDecoder_VLCPlugin
+echo Once, you're finished, you don't have to repatch again. You can continue normally VLC Media Player next time after VVCEasy.
 "%programfiles%\VideoLAN\VLC\vlc.exe"
 pause
 goto start
