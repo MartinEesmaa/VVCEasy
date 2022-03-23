@@ -179,9 +179,12 @@ ffmpeg -i input.mp4 -strict 1 inputtranscode.y4m
 
 Verify ffplay before encoding with VVENC (important replace video size, otherwise it will not correctly show video, it's like scrambled eggs video):
 ```
-ffplay -f rawvideo -pix_fmt yuv420p -s 854x480 -i inputtranscode.yuv
+ffplay -i inputtranscode.yuv -s 854x480
 ``` 
-Or replace -i inputtranscode.yuv with `-i inputtranscode.y4m` for y4m users. For yuv420p10 on your input video 10 bit, replace `-pixel_format yuv420p10`.
+
+Default ffplay for yuv and y4m is yuv420p without `pix_fmt` command.
+
+For y4m videos, replace -i inputtranscode.yuv with `-i inputtranscode.y4m`. For yuv420p10 on your input video 10 bit, add `-pix_fmt yuv420p10`.
 
 For easy to verify YUV/Y4M, use YUView, open your YUV or Y4M encoded, make sure video size, YUV/Y4M format and frame rate same like from input video file (e.g. MP4, AVI, MKV and others.
 
@@ -271,6 +274,7 @@ Or, you can chat us: https://matrix.to/#/#vvceasy:matrix.org
 [VVCEasy](https://github.com/MartinEesmaa/VVCEasy) - VVCEasy is easy VVC, that no need compile. 
 
 License: MIT
+
 © 2021-2022 [Martin Eesmaa](https://github.com/MartinEesmaa) (All rights reserved)
 
 ----------------
