@@ -8,7 +8,7 @@ https://github.com/MartinEesmaa/VVCEasy/actions/workflows/dotnet.yml)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/MartinEesmaa/VVCEasy)
 ![Matrix](https://img.shields.io/matrix/vvceasy:matrix.org?label=VVCEasy%20Matrix)
 
-# VVCEasy (Windows (Full), Mac and Linux (partial)
+# VVCEasy (Windows (Full), Mac and Linux (partial) (by Martin Eesmaa)
 VVCEasy is that you don't have to compile or/and coding to encode VVC (known as Versatile Video Codec). Simple, Easy, Encode and Decode.
 
 VVCEasy comes to one-easy command of ffmpeg, VVC Tools, python, VLC o266player, VVDEC Web Player, Bitmovin VVDec Player and YUView.
@@ -167,14 +167,18 @@ path
 First:
 Transcode any video formats to YUV/Y4M
 
+**We recommend that you use from video to yuv/y4m for pixel format YUV420P, because YUV420P is smaller size than YUV420P10.**
+
+**VVENC supports pixel formats only YUV420 and YUV420_10, otherwise it will corrupt after vvc encoding.**
+
 For YUV transcode (lossy from web quality, YouTube videos and others):
 ```
-ffmpeg -i input.mp4 -strict 1 inputtranscode.yuv
+ffmpeg -i input.mp4 -pix_fmt yuv420p -strict 1 inputtranscode.yuv
 ```
 
 For Y4M transcode (lossless from uncompressed video files, only 8 bit):
 ```
-ffmpeg -i input.mp4 -strict 1 inputtranscode.y4m
+ffmpeg -i input.mp4 -pix_fmt yuv420p -strict 1 inputtranscode.y4m
 ```
 
 Verify ffplay before encoding with VVENC (important replace video size, otherwise it will not correctly show video, it's like scrambled eggs video):
@@ -182,7 +186,7 @@ Verify ffplay before encoding with VVENC (important replace video size, otherwis
 ffplay -i inputtranscode.yuv -s 854x480
 ``` 
 
-Default ffplay for yuv and y4m is yuv420p without `pix_fmt` command.
+Default ffplay for yuv and y4m is yuv420p without `-pix_fmt` command.
 
 For y4m videos, replace -i inputtranscode.yuv with `-i inputtranscode.y4m`. For yuv420p10 on your input video 10 bit, add `-pix_fmt yuv420p10`.
 
@@ -203,6 +207,8 @@ Lossy video/Smallest video size:
 ```
 vvencapp --qp 38 -i out.yuv -s 854x480 -r 30 -o vvc.266
 ```
+
+**NOTE: If you want have true lossless on your video, please visit http://ffv1.org/**
 
 Lossless video (minimum loss quality, only Y4M, Raw, Uncompressed video used) (or compress smaller than preset slow, use --preset slower):
 ```
