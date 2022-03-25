@@ -381,10 +381,12 @@ cls
 title INSTALLING VVDEC WEB PLAYER...
 git clone https://github.com/fraunhoferhhi/vvdecWebPlayer.git
 cd VVDECWEBINSTALL
-copy vvdecapp.js ../vvdecWebPlayer/bin
-copy vvdecapp.worker.js ../vvdecWebPlayer/bin
-copy vvdecapp.wasm ../vvdecWebPlayer/bin
-cd ../vvdecWebPlayer
+copy * .. /y
+cd ../
+move vvdecapp.js vvdecWebPlayer/bin
+move vvdecapp.worker.js vvdecWebPlayer/bin
+move vvdecapp.wasm vvdecWebPlayer/bin
+cd vvdecWebPlayer
 wget https://www.dropbox.com/s/zp8b3xg0b5p1pwe/VVCEasy.266
 rename VVCEasy.266 dummy_raw_bitstream.266
 echo Note: If you want to go back to menu, press CTRL + C on your keyboard in Windows Terminal/CMD and type "Y" to terminate server and this will go back to main menu options.
