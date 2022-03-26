@@ -9,7 +9,7 @@ namespace VVCEasy
         {
             bool exit = false;
             Console.Title = "Martin Eesmaa / VVCEasy";
-            Console.WriteLine("MARTIN EESMAA / VVCEasy");
+            Console.WriteLine("Martin Eesmaa / VVCEasy");
             Console.WriteLine("Welcome to VVCEasy. (.NET Console Beta Version, v.0.5.0)");
             Console.ReadLine();
             do
@@ -18,7 +18,7 @@ namespace VVCEasy
                 Console.WriteLine("VVCEasy (.NET Console Beta Version, v.0.5.0)");
                 Console.WriteLine("Note: C# is not ready yet, malfunction mode\n");
                 Console.Title = "Martin Eesmaa / VVCEasy";
-                Console.WriteLine("What would you like to do for encode/decode of VVC?\n1. Encode\n2. Decode\n3. Help\n4. Exit\n5. Install/Test path environment\n6. Install VLC Media Player (o266player, Windows x64)\n7. Install quickly through Anaconda for ffmpeg (Windows)\n8. Install VVdec Web Player\n9. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)\n10. Install vvDecPlayer from BitMovin\n11. Install VLC VTM Plugins (Windows x64, VLC 3.0.16, plugins by Inter Digital Inc)");
+                Console.WriteLine("What would you like to do for encode/decode of VVC?\n1. Encode\n2. Decode\n3. Help\n4. Exit\n5. Install/Test path environment\n6. Install VLC Media Player (o266player, Windows x64)\n7. Install quickly through Anaconda for ffmpeg (Windows)\n8. Install VVdec Web Player\n9. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)\n10. Install vvDecPlayer from BitMovin\n11. Install VLC VTM Plugins (Windows x64 of VLC, plugins by Inter Digital Inc)");
 
                 string input = Console.ReadLine();
 
@@ -98,15 +98,15 @@ namespace VVCEasy
                     Console.Clear();
                     Console.Title = "Have a wonderful day!";
                     Console.WriteLine("Have a wonderful day! Thank you for using VVCEasy. :)");
-                    Console.WriteLine("    _   _                 _                      \n    | | | |               | |                     \n    | |_| |__   __ _ _ __ | | ___   _  ___  _   _ \n    | __| '_ / / _` | '_ /| |/ / | | |/ _ /| | | |\n    | |_| | | | (_| | | | |   <| |_| | (_) | |_| |\n     /__|_| |_|/__,_|_| |_|_|/_\\__, |/___/ /__,_|\n                                 __/ |            \n                                |___/\n\n\n    __      ____      _______ ______                \n    / /    / // /    / / ____|  ____|               \n      / // /    / // /| |    |  __| / _` / __| | | |\n       /  /      /  / | |____| |___| (_| /__ / |_| |\n        //        //   /_____|______/__,_|___//__, |\n                                               __/ |\n                                              |___/ \n\n\n     __  __            _   _         ______                                \n    |  //  |          | | (_)       |  ____|                               \n    | /  / | __ _ _ __| |_ _ _ __   | |__   ___  ___ _ __ ___   __ _  __ _ \n    | |//| |/ _` | '__| __| | '_ /  |  __| / _ // __| '_ ` _ / / _` |/ _` |\n    | |  | | (_| | |  | |_| | | | | | |___|  __//__ / | | | | | (_| | (_| |\n    |_|  |_|/__,_|_|   /__|_|_| |_| |______/___||___/_| |_| |_|/__,_|/__,_|\nCopyright 2022 Martin Eesmaa\n\nExiting program...");
-                    Thread.Sleep(3000);
+                    Console.WriteLine("    _   _                 _                      \n    | | | |               | |                     \n    | |_| |__   __ _ _ __ | | ___   _  ___  _   _ \n    | __| '_ / / _` | '_ /| |/ / | | |/ _ /| | | |\n    | |_| | | | (_| | | | |   <| |_| | (_) | |_| |\n     /__|_| |_|/__,_|_| |_|_|/_\\__, |/___/ /__,_|\n                                 __/ |            \n                                |___/\n\n\n    __      ____      _______ ______                \n    / /    / // /    / / ____|  ____|               \n      / // /    / // /| |    |  __| / _` / __| | | |\n       /  /      /  / | |____| |___| (_| /__ / |_| |\n        //        //   /_____|______/__,_|___//__, |\n                                               __/ |\n                                              |___/ \n\n\n     __  __            _   _         ______                                \n    |  //  |          | | (_)       |  ____|                               \n    | /  / | __ _ _ __| |_ _ _ __   | |__   ___  ___ _ __ ___   __ _  __ _ \n    | |//| |/ _` | '__| __| | '_ /  |  __| / _ // __| '_ ` _ / / _` |/ _` |\n    | |  | | (_| | |  | |_| | | | | | |___|  __//__ / | | | | | (_| | (_| |\n    |_|  |_|/__,_|_|   /__|_|_| |_| |______/___||___/_| |_| |_|/__,_|/__,_|\nCopyright 2021-2022 Martin Eesmaa\n\nExiting program...");
+                    Thread.Sleep(5000);
                     exit = true;
                 }
                 else if (input == "5")
                 {
                     Console.Clear();
                     Console.Title = "INSTALL/TEST PATH ENVIRONMENT";
-                    Console.WriteLine("Martin Eesmaa is testing your paths, that you installed programs in PATH. Not sure, what is path?\nYou can go here for link: https://stackoverflow.com/questions/4910721/python-on-cmd-path\nYou can also search What is PATH in Windows? in DuckDuckGo or SearX.\nAre you ready to test? (Y/N) or type I to install path environment.");
+                    Console.WriteLine("Martin Eesmaa is testing your paths, that you installed programs in PATH. Not sure, what is path?\nYou can go here for link: https://stackoverflow.com/questions/4910721/python-on-cmd-path\nAlso you can also search What is PATH in Windows? in DuckDuckGo or SearX.\nAre you ready to test? (Y/N) or type I to install path environment.");
 
                     string readytestbefore = Console.ReadLine();
 
@@ -134,13 +134,15 @@ namespace VVCEasy
                 {
                     Console.Clear();
                     Console.Title = "VLC Media PLayer (custom build of o266player)";
-                    Console.WriteLine("Hello, would you like to install VLC Media Player (v3.0.11.1 Vetinari, custom build of o266player) on your computer?\nBefore you install...\nThe VLC Media Player (custom build of o266player) works only on Windows 7 / Windows Server 2012 or earlier versions.\nWindows Vista and older versions will not work, including Windows 8.0 won't work too, because it could be terminal error or/and cannot decode VVC format.\nYou need 64-bit / x64 to run VLC custom build. On 32-bit / x86, it will not work to run.\nNote: Some operating system work VLC custom build on Virtualbox and VMware. Real machines can all almost run Windows versions, like Windows Server 2016.\nReminder: I'm not kinda sure about this, I hope should you're running on real machine, that means it needs to be working to load VVC video format.\nInstall? Y/N?");
+                    Console.WriteLine("Hello, would you like to install VLC Media Player (v3.0.11.1 Vetinari, custom build of o266player) on your computer?\nBefore you install for VLC Media Player (custom build of o266player)...\nThe VLC Media Player (custom build of o266player) works only on Windows 7 / Windows Server 2012 or earlier versions.\nWindows Vista and older versions will not work, including Windows 8.0 won't work too, because it could be terminal error or/and cannot decode VVC format.\nYou need 64-bit / x64 to run VLC custom build. On 32-bit / x86, it will not work to run.\nNote: Some operating system work VLC custom build on Virtualbox and VMware. Real machines can all almost run Windows versions, like Windows Server 2016.\nReminder: I'm not kinda sure about this, I hope should you're running on real machine, that means it needs to be working to load VVC video format.\nInstall? Y/N?");
 
                     string vlcinstall = Console.ReadLine();
 
                     if (vlcinstall == "Y")
                     {
-
+                        Console.Title = "Downloading VLC Media Player (custom build of o266player)";
+                        Console.WriteLine("Sorry, the command is not ready yet...");
+                        Console.ReadLine();
                     }
                 }
                 else if (input == "7")
@@ -226,13 +228,13 @@ namespace VVCEasy
                 {
                     Console.Clear();
                     Console.Title = "VLC VTM Plugins Install (Windows)";
-                    Console.WriteLine("Welcome to VLC Media Player of VTM Plugins Installation.\nSystem type only = x64\nLinux will be coming soon...\nCurrent version = 3.0.16\nWould you like to install VTM plugins to your VLC Media Player? Y/N?");
+                    Console.WriteLine("Welcome to VLC Media Player of VTM Plugins Installation.\nYou need to run Windows version of Windows Vista / Windows Server 2008 to play VVC files.\nWindows XP can't load VTM plugins, but other plugins work.\nSystem type only = x64\nLinux will be coming soon...\nCurrent version = 3.0.16\nWould you like to install VTM plugins to your VLC Media Player? Y/N?");
 
                     string vtmvlcinstallnow1 = Console.ReadLine();
 
                     if (vtmvlcinstallnow1 == "Y")
                     {
-                        Console.Title = "Installing of VLC VTM Plugins by Inter Digital Inc. (Compiled by Martin Eesmaa)";
+                        Console.Title = "Installing of VLC VTM Plugins by Inter Digital Inc... (Compiled by Martin Eesmaa)";
                         Console.WriteLine("Installing of VLC VTM Plugins by Inter Digital Inc... (Compiled by Martin Eesmaa)\nSorry C# is malfunction mode...");
                         Console.ReadLine();
                     }
