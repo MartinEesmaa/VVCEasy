@@ -1,3 +1,3 @@
-brew upgrade ffmpeg
 brew update
+brew upgrade ffmpeg
 git pull
