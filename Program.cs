@@ -1,6 +1,6 @@
 using System;
 using System.Threading;
-using System.NET;
+using System.Net;
 
 namespace VVCEasy
 {
@@ -142,10 +142,10 @@ namespace VVCEasy
                     if (vlcinstall == "Y")
                     {
                         Console.Title = "Downloading VLC Media Player (custom build of o266player)";
-                        
+
                         using (WebClient web1 = new())
                         web1.DownloadFile("", "");
-                        
+
                         Console.WriteLine("Sorry, the command is not ready yet...");
                         Console.ReadLine();
                     }
@@ -176,11 +176,10 @@ namespace VVCEasy
                     {
                         Console.Clear();
                         Console.Title = "INSTALLING VVDEC WEB PLAYER...";
-                        Console.WriteLine("Installing VVDec Web Player...");
-                        
+
                         using (WebClient web1 = new())
                         web1.DownloadFile("", "");
-                        
+
                         Console.WriteLine("Sorry, the command is not ready yet...");
                         Console.ReadLine();
                     }
@@ -202,45 +201,42 @@ namespace VVCEasy
 
                     if (installbitmovin == "Y")
                     {
-                        bitmovingotoinstall:
+                    bitmovingotoinstall:
                         Console.Title = "Installing vvDecPlayer from BitMovin...";
                         Console.WriteLine("Installing vvDecPlayer from BitMovin on your computer...\nWhich operating system are you using?\nWindows, Mac or Linux?\nType W for Windows\nType M for Mac\nType L for Linux");
-                        
+
                         string installbitmovin1 = Console.ReadLine();
 
                         if (installbitmovin1 == "W")
                         {
-                            Console.WriteLine("Installing vvDecPlayer from BitMovin for Windows...");
-                            
+                            Console.WriteLine("Installing vvDecPlayer from BitMovin for Windows...\nSorry, the C# console is not ready yet...");
+
                             using (WebClient web1 = new())
                             web1.DownloadFile("", "");
-                            
-                            Console.WriteLine("Sorry, the C# console is not ready yet...");
+
                             Console.ReadLine();
                         }
                         else if (installbitmovin1 == "M")
                         {
-                            Console.WriteLine("Installing vvDecPlayer from BitMovin for Mac OS...");
-                            
+                            Console.WriteLine("Installing vvDecPlayer from BitMovin for Mac OS...\nSorry, the C# console is not ready yet...");
+
                             using (WebClient web1 = new())
                             web1.DownloadFile("", "");
-                            
-                            Console.WriteLine("Sorry, the C# console is not ready yet...");
+
                             Console.ReadLine();
                         }
                         else if (installbitmovin1 == "L")
                         {
-                            Console.WriteLine("Installing vvDecPlayer from BitMovin for Linux...");
-                            
+                            Console.WriteLine("Installing vvDecPlayer from BitMovin for Linux...\nSorry, the C# console is not ready yet...");
+
                             using (WebClient web1 = new())
                             web1.DownloadFile("", "");
-                            
-                            Console.WriteLine("Sorry, the C# console is not ready yet...");
+
                             Console.ReadLine();
                         }
                         else if (installbitmovin1 == "Back")
                         {
-                            
+
                         }
                         else
                         {
@@ -260,12 +256,11 @@ namespace VVCEasy
                     if (vtmvlcinstallnow1 == "Y")
                     {
                         Console.Title = "Installing of VLC VTM Plugins by Inter Digital Inc... (Compiled by Martin Eesmaa)";
-                        Console.WriteLine("Installing of VLC VTM Plugins by Inter Digital Inc... (Compiled by Martin Eesmaa)");
-                        
+                        Console.WriteLine("Installing of VLC VTM Plugins by Inter Digital Inc... (Compiled by Martin Eesmaa)\nSorry C# is malfunction mode...");
+
                         using (WebClient web1 = new())
                         web1.DownloadFile("", "");
-                        
-                        Console.WriteLine("Sorry C# is malfunction mode...");
+
                         Console.ReadLine();
                     }
                 }
