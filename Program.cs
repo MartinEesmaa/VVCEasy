@@ -1,5 +1,6 @@
 using System;
 using System.Threading;
+using System.NET;
 
 namespace VVCEasy
 {
@@ -141,6 +142,10 @@ namespace VVCEasy
                     if (vlcinstall == "Y")
                     {
                         Console.Title = "Downloading VLC Media Player (custom build of o266player)";
+                        
+                        using (WebClient web1 = new())
+                        web1.DownloadFile("", "");
+                        
                         Console.WriteLine("Sorry, the command is not ready yet...");
                         Console.ReadLine();
                     }
@@ -171,6 +176,11 @@ namespace VVCEasy
                     {
                         Console.Clear();
                         Console.Title = "INSTALLING VVDEC WEB PLAYER...";
+                        Console.WriteLine("Installing VVDec Web Player...");
+                        
+                        using (WebClient web1 = new())
+                        web1.DownloadFile("", "");
+                        
                         Console.WriteLine("Sorry, the command is not ready yet...");
                         Console.ReadLine();
                     }
@@ -200,17 +210,32 @@ namespace VVCEasy
 
                         if (installbitmovin1 == "W")
                         {
-                            Console.WriteLine("Installing vvDecPlayer from BitMovin for Windows...\nSorry, the C# console is not ready yet...");
+                            Console.WriteLine("Installing vvDecPlayer from BitMovin for Windows...");
+                            
+                            using (WebClient web1 = new())
+                            web1.DownloadFile("", "");
+                            
+                            Console.WriteLine("Sorry, the C# console is not ready yet...");
                             Console.ReadLine();
                         }
                         else if (installbitmovin1 == "M")
                         {
-                            Console.WriteLine("Installing vvDecPlayer from BitMovin for Mac OS...\nSorry, the C# console is not ready yet...");
+                            Console.WriteLine("Installing vvDecPlayer from BitMovin for Mac OS...");
+                            
+                            using (WebClient web1 = new())
+                            web1.DownloadFile("", "");
+                            
+                            Console.WriteLine("Sorry, the C# console is not ready yet...");
                             Console.ReadLine();
                         }
                         else if (installbitmovin1 == "L")
                         {
-                            Console.WriteLine("Installing vvDecPlayer from BitMovin for Linux...\nSorry, the C# console is not ready yet...");
+                            Console.WriteLine("Installing vvDecPlayer from BitMovin for Linux...");
+                            
+                            using (WebClient web1 = new())
+                            web1.DownloadFile("", "");
+                            
+                            Console.WriteLine("Sorry, the C# console is not ready yet...");
                             Console.ReadLine();
                         }
                         else if (installbitmovin1 == "Back")
@@ -235,7 +260,12 @@ namespace VVCEasy
                     if (vtmvlcinstallnow1 == "Y")
                     {
                         Console.Title = "Installing of VLC VTM Plugins by Inter Digital Inc... (Compiled by Martin Eesmaa)";
-                        Console.WriteLine("Installing of VLC VTM Plugins by Inter Digital Inc... (Compiled by Martin Eesmaa)\nSorry C# is malfunction mode...");
+                        Console.WriteLine("Installing of VLC VTM Plugins by Inter Digital Inc... (Compiled by Martin Eesmaa)");
+                        
+                        using (WebClient web1 = new())
+                        web1.DownloadFile("", "");
+                        
+                        Console.WriteLine("Sorry C# is malfunction mode...");
                         Console.ReadLine();
                     }
                 }
