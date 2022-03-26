@@ -23,7 +23,7 @@ goto welcomenow
 :welcomenow
 cls
 title Martin Eesmaa / VVCEasy
-echo MARTIN EESMAA / VVCEasy
+echo Martin Eesmaa / VVCEasy
 echo Welcome to VVCEasy. (Batchfile Beta Version, v.0.5.0)
 pause
 goto start
@@ -45,7 +45,7 @@ echo 7. Install quickly through Anaconda for ffmpeg (Windows)
 echo 8. Install/Update VVdec Web Player
 echo 9. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)
 echo 10. Install vvDecPlayer from BitMovin
-echo 11. Install VLC VTM Plugins (Windows x64, VLC 3.0.16, plugins by Inter Digital Inc)
+echo 11. Install VLC VTM Plugins (Windows x64 of VLC, plugins by Inter Digital Inc)
 set /p VVCSTART=Number: 
 if %VVCSTART% == 1 goto encodestart
 if %VVCSTART% == 2 goto decodestart
@@ -96,7 +96,6 @@ echo You have to manually encode to VVC, the batchfile won't work.
 echo Here is code: vvencapp --qp 18 -i yourinput.y4m -s 854x480 -r 30 --preset slow --threads 16 --tier high -o yourfinalvvc.266
 echo YOU HAVE TO REPLACE VIDEO SIZE AND FRAME RATE. -s is video size and -r is frame rate.
 echo INPUT VIDEO BIT DEPTH IS 8-BIT ONLY FOR UNCOMPRESSED MOVIE FILES.
-pause
 pause
 goto start
 
@@ -173,7 +172,7 @@ cls
 title INSTALL/TEST PATH ENVIRONMENT
 echo Martin Eesmaa is testing your paths, that you installed programs in PATH. Not sure, what is path?
 echo You can go here for link: https://stackoverflow.com/questions/4910721/python-on-cmd-path
-echo You can also search "What is PATH in Windows?" in DuckDuckGo or SearX.
+echo Also you can also search "What is PATH in Windows?" in DuckDuckGo or SearX.
 echo Are you ready to test? (Y/N) or type "I" to install path environment.
 set /p readytestbefore=Answer: 
 if %readytestbefore% == Y goto nowtestingtime
@@ -263,7 +262,9 @@ echo Have a wonderful day! Thank you for using VVCEasy. :)
                                                                         
                                                                         
 for /f "delims=: tokens=*" %%A in ('findstr /b ::: "%~f0"') do @echo(%%A
-echo Copyright 2021 Martin Eesmaa
+echo.
+echo Copyright 2021-2022 Martin Eesmaa
+echo.
 echo ------------END----------------
 timeout 5 /nobreak
 exit
@@ -273,7 +274,7 @@ color 6F
 title VLC Media Player (custom build of o266player)
 cls
 echo Hello, would you like to install VLC Media Player (v3.0.11.1 Vetinari, custom build of o266player) on your computer?
-echo Before you install...
+echo Before you install for VLC Media Player (custom build of o266player)
 echo The VLC Media Player (custom build of o266player) works only on Windows 7 / Windows Server 2012 or earlier versions.
 echo Windows Vista and older versions will not work, including Windows 8.0 won't work too, because it could be terminal error or/and cannot decode VVC format.
 echo You need 64-bit / x64 to run VLC custom build. On 32-bit / x86, it will not work to run.
@@ -287,21 +288,18 @@ if %vlcinstall% == y goto vlcinstaller
 if %vlcinstall% == n goto start
 
 :vlcinstaller
+title Downloading VLC Media Player (custom build of o266player)
 wget https://www.dropbox.com/s/hs7yoa9hkxa6ugd/vlc-3.0.11.1-w64.7z
 mkdir VLC
 copy 7-Zip VLC
 move vlc-3.0.11.1-w64.7z VLC
 cd VLC
-del /q readme.txt
-del /q license.txt
-del /q History.txt
 7z x vlc-3.0.11.1-w64.7z
-del /q 7z.dll
-del /q 7z.exe
-del /q vlc-3.0.11.1-w64.7z
+del /q "7z.exe" "7z.dll" "readme.txt" "license.txt" "History.txt" "vlc-3.0.11.1-w64.7z" 
 cd ../
 color 6E
 cls
+title Successful of VLC Media Player (o266player) installation.
 echo SUCCESSFUL! Now, would you like to download test sample VVC file test it out to VLC custom build of o266player?
 echo If yes, wget will download the example of VVC file and run to VLC a few seconds.
 echo If No, you will be prompted go back to menu.
@@ -315,12 +313,14 @@ if %vlccompleted% == n goto start
 
 :sample266
 color 07
-wget https://www.dropbox.com/s/zp8b3xg0b5p1pwe/VVCEasy.266
+title Moving from VVCEasy.266 to VLC folder...
 move VVCEasy.266 VLC
 cd VLC
-echo Note, if VLC modified version is not starting, try to run VLC Verified and Modified Version on your computer?
+title Running on VLC Media Player (o266player)...
+echo Note, if VLC modified version is not starting, try to run VLC Verified and Modified Version on your computer or wait a few minutes...
 vlc.exe VVCEasy.266 --no-drop-late-frames --avformat-fps=24
 cd ../
+title Successfully runned on VLC Media Player (o266player)...
 echo OK! Test completed successfully!
 timeout 5
 goto start
@@ -380,12 +380,7 @@ if %okletsdoit% == u goto updatevvdecwebplayer
 cls
 title INSTALLING VVDEC WEB PLAYER...
 git clone https://github.com/fraunhoferhhi/vvdecWebPlayer.git
-cd VVDECWEBINSTALL
-copy * .. /y
-cd ../
-move vvdecapp.js vvdecWebPlayer/bin
-move vvdecapp.worker.js vvdecWebPlayer/bin
-move vvdecapp.wasm vvdecWebPlayer/bin
+copy VVDECWEBINSTALL "vvdecWebPlayer/bin" /y
 cd vvdecWebPlayer
 wget https://www.dropbox.com/s/zp8b3xg0b5p1pwe/VVCEasy.266
 rename VVCEasy.266 dummy_raw_bitstream.266
@@ -504,8 +499,9 @@ if %vvcsampleyeah% == n goto start
 
 :downloadvvcnowbit
 title Downloading VVC sample files from Bitmovin
-echo Downloading VVC sample files from Bitmovin
+echo Downloading VVC sample files from Bitmovin...
 wget https://www.dropbox.com/s/qncefmnhw8hzr2k/vvcBlogPostDemo.7z
+title Downloading Coffee Run JSON and Sprite Fright JSON...
 echo Downloading Coffee Run and Sprite Fright...
 wget https://www.dropbox.com/s/ogxw1pz9pr9bphi/CoffeeRun.json
 wget https://www.dropbox.com/s/6kpnoin4bwzb1ob/SpriteFright.json
@@ -513,12 +509,13 @@ echo Extracting from archived file...
 7z x vvcBlogPostDemo.7z
 echo Deleting archived file...
 del /q vvcBlogPostDemo.7z
+title Installation of BitVVDecPlayer
 echo Please edit of location downloaded folder of vvcBlogPostDemo...
 CoffeeRun.json && SpriteFright.json
 echo Press any key, when you finished configured of your location folder...
 pause
 echo Okay, it seems you configured completed. Please run on vvDecPlayer on your operating system.
-echo Go to File, then Open JSON manifest...
+echo Go to File, then Open JSON manifest in BitVVDecPlayer...
 echo Select JSON file to run VVC movie and enjoy it.
 echo Still not working? Please chat us on https://matrix.to/#/#vvceasy:matrix.org
 pause
@@ -528,6 +525,8 @@ goto start
 cls
 title VLC VTM Plugins Install (Windows)
 echo Welcome to VLC Media Player of VTM Plugins Installation.
+echo You need to run Windows version of Windows Vista / Windows Server 2008 to play VVC files.
+echo Windows XP can't load VTM plugins, but other plugins work.
 echo System type only = x64
 echo Linux will be coming soon... only TsDemuxPluginVLC had issue, see: https://github.com/InterDigitalInc/VTMDecoder_VLCPlugin/issues/5
 echo Current version = 3.0.16, latest version 3.0.17-3 (it will work same latest version)
@@ -539,11 +538,10 @@ if %vlcvtmyesorno% == N goto start
 if %vlcvtmyesorno% == n goto start
 
 :installvlcvtmpluginnow
-title Installing of VLC VTM Plugins by Inter Digital Inc. (Compiled by Martin Eesmaa)
+title Installing of VLC VTM Plugins by Inter Digital Inc... (Compiled by Martin Eesmaa)
 echo Installing VLC VTM Plugins by Inter Digital Inc... (Compiled by Martin Eesmaa)
 cd INSTALLVLCPLUGIN/VLC
-copy libvtmdec.dll "%programfiles%\VideoLAN\VLC\plugins\codec"
-copy libvvcdecoder_plugin.dll "%programfiles%\VideoLAN\VLC\plugins\codec"
+copy "libvtmdec.dll" "libvvcdecoder_plugin.dll" "%programfiles%\VideoLAN\VLC\plugins\codec"
 copy libvvctsdemux_plugin.dll "%programfiles%\VideoLAN\VLC\plugins\demux"
 cd ../
 echo Three dll files patched to your VLC Media Player.
