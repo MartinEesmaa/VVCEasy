@@ -36,8 +36,9 @@ Matrix chat: https://matrix.to/#/#vvceasy:matrix.org
 - [Donate to Martin Eesmaa using cryptocurrency](#donate-to-martin-eesmaa-using-cryptocurrency)
 - [Compatibility of O266Player](#compatibility-windows-operating-system-vlc-media-player-v30111-o266player-build-version)
 - [Bitmovin VVDec Player](#bitmovin-vvdec-player)
-- [VVCEasy Batchfile Compile](#compile-of-vvceasy-batchfile-version-optional-only-windows-for-compile)
-- [VVCEasy .NET Compile](#compile-of-vvceasy-net-console-version-optional)
+- [Compile for VVCEasy](#compile-for-vvceasy)
+  - [VVCEasy Batchfile Compile](#vvceasy-batchfile-version-if-necessary-only-windows-for-compile)
+  - [VVcEasy .NET Compile](#vvceasy-net-console-version-if-necessary)
 - [Encode/Decode easy](#encodedecode-easy)
 - [Hard option](#without-vvceasy-experimental-option-for-professional-coders-other-developers-and-everyone-hard)
 - [VVEnc & VVDec compatibility test](#compatibility-results-vvenc-and-vvdec-test-completed-by-martin-eesmaa)
@@ -60,7 +61,7 @@ bc1qhf4zu5uythr7vyt2dru73qp0k2rzrx355fsx47yjxc2ueunz8frqxmwap3
 
 Windows | Compatibility (only x64)  | Screenshot | Date report (DD/MM/YYYY, 24hr)
 ------- | ------- | --------------- | ------------- |
-Windows 2000/ME or older | ❌ (Cannot run custom build) | [Link](https://i.imgur.com/hHnh5Cx.png) | 19/02/2022 18:35:34 (AEDT)
+Windows 2000/ME or older | :x: (Cannot run custom build) | [Link](https://i.imgur.com/hHnh5Cx.png) | 19/02/2022 18:35:34 (AEDT)
 Windows XP | ⚠️ (Terminal only, GUI is not working) | [Link](https://i.imgur.com/v3jMW3d.png) | 11/12/2021 15:18:29 (AEDT)
 Windows Vista | ⚠️ (GUI Works, but VVC won't show video)
 Windows 7 | :white_check_mark: (All checked) | [Link](https://i.imgur.com/4cANwDQ.png) | 17/12/2021 21:32:38 (AEDT)
@@ -75,8 +76,8 @@ Windows Server 2003 | ⚠️ (Terminal only, GUI is not working) | [Link](https:
 Windows Server 2008 | ⚠️ (GUI Works, but VVC won't show video) | [Link](https://i.imgur.com/GXFgIt8.png) | 20/02/2022 14:02:28 (AEDT)
 Windows Server 2012 | :white_check_mark: (All checked) | [Link](https://i.imgur.com/Vcgag8B.png) | 17/12/2021 20:57:16 (AEDT)
 Windows Server 2016   | :white_check_mark: (Already checked by Tencent Cloud)
-Windows Server 2019 | ? (Not checked)
-Windows Server 2022  | ? (Not checked)
+Windows Server 2019 | :black_square_button: (Needs to be tested)
+Windows Server 2022  | :black_square_button: (Needs to be tested)
 
 VLC Custom build of o266player only accepts to run 64-bit / x64 on your computer. 32-bit / x86 won't work.
 
@@ -94,9 +95,11 @@ For more information about Bitmovin VVDec Player.
 
 See [Bitmovin.md](https://github.com/MartinEesmaa/VVCEasy/blob/master/Bitmovin.md).
 
-# Compile of VVCEasy Batchfile version (optional) (Only Windows for compile.)
+# Compile for VVCEasy
 
-First, before you compile to VVCEasy Batchfile version, you need Inno Setup to compile VVCEasy.
+### VVCEasy Batchfile Version (if necessary) (Only Windows for compile.)
+
+First, before you compile to VVCEasy Batchfile Version, you need Inno Setup to compile VVCEasy.
 Inno Setup link: https://jrsoftware.org/isdl.php
 
 Step 1: Clone VVCEasy git and open VVCEasy_compiler.iss
@@ -112,9 +115,11 @@ Step 2: Before you compile, please replace example username by your username of 
 Step 3: Once you replaced of your username, press F9 to compile on your keyboard. After compiling, VVCEasy.exe (Installer) will be on your Downloads folder.
 ![VVCEasyclickblueplaybutton](https://user-images.githubusercontent.com/88035011/153736303-b0949f5a-5ac5-4123-92c5-305211a8aadc.png)
 
-# Compile of VVCEasy .NET Console version (optional)
+---
 
-First, before you compile to VVCEasy .NET Console version, you need .NET SDK x64 from Microsoft.
+### VVCEasy .NET Console Version (if necessary)
+
+First, before you compile to VVCEasy .NET Console Version, you need .NET SDK x64 from Microsoft.
 Link: https://dotnet.microsoft.com/en-us/download
 
 Step 1: Clone git and cd VVCEasy
@@ -130,6 +135,11 @@ dotnet build && dotnet test --no-build --verbosity normal
 Step 3: Once building is done, the build folder directory is bin/Debug
 ```
 cd bin/debug
+```
+
+*Tip: You can run VVCEasy without building.*
+```
+dotnet run
 ```
 
 # Encode/Decode (easy)
@@ -305,7 +315,9 @@ GitHub: [Fraunhoferhhi](https://github.com/fraunhoferhhi)
 
 License: GPL Version 2 (both repositories)
 
-© 2020-2021 [Tencent Cloud](https://github.com/TencentCloud) (All rights reserved), © 2000-2022 [VLC Media Player](https://code.videolan.org/) Developers (All rights reserved)
+© 2020-2021 [Tencent Cloud](https://github.com/TencentCloud) (All rights reserved)
+
+© 2000-2022 [VLC Media Player](https://code.videolan.org/) Developers (All rights reserved)
 
 --------------------
 
