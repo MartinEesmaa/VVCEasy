@@ -89,6 +89,22 @@ Reminder: Some operating systems are working to load VVC video format in Virtual
 
 If your operating system is working to decode VVC video format like you're running on Windows 10, please fork this repository, edit README and make pull request of my original repository from your forked repository. Screenshot must be required winver and VLC Media Player (custom build of o266player)
 
+***UPDATE of 27/03/2022 15:00 AEDT:***
+
+I have a great news. VLC latest version worked out well of Inter Digital VTM plugins. On o266player, there was some problems on my computer for one reason...
+
+One reason that my Windows 11 operating system won't view video of VVC file on o266player version. On VTM plugins of VLC, now it shows me VVC video good.
+
+Here is a my comparision of o266player version and VTM VVC plugins:
+
+Top left and right is o266player.
+
+Bottom left and right is VLC VTM plugins by Inter Digital Inc.
+
+![windows8testbetweno266playerandvtmplugins](https://user-images.githubusercontent.com/88035011/160266040-863aa216-4694-4b2f-9957-4aa5b5a07ec3.png)
+
+
+
 # Bitmovin VVDec Player
 
 For more information about Bitmovin VVDec Player.
