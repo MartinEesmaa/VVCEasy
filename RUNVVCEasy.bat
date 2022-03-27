@@ -537,7 +537,8 @@ if %vlcvtmyesorno% == n goto start
 title Installing of VLC VTM Plugins by Inter Digital Inc... (Compiled by Martin Eesmaa)
 echo Installing VLC VTM Plugins by Inter Digital Inc... (Compiled by Martin Eesmaa)
 cd INSTALLVLCPLUGIN/VLC
-copy "libvtmdec.dll" "libvvcdecoder_plugin.dll" "%programfiles%\VideoLAN\VLC\plugins\codec"
+copy libvtmdec.dll "%programfiles%\VideoLAN\VLC\plugins\codec" 
+copy libvvcdecoder_plugin.dll "%programfiles%\VideoLAN\VLC\plugins\codec"
 copy libvvctsdemux_plugin.dll "%programfiles%\VideoLAN\VLC\plugins\demux"
 cd ../
 echo Three dll files patched to your VLC Media Player.
