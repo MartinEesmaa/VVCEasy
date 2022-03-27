@@ -498,13 +498,9 @@ if %vvcsampleyeah% == N goto start
 if %vvcsampleyeah% == n goto start
 
 :downloadvvcnowbit
-title Downloading VVC sample files from Bitmovin
-echo Downloading VVC sample files from Bitmovin...
-wget https://www.dropbox.com/s/qncefmnhw8hzr2k/vvcBlogPostDemo.7z
-title Downloading Coffee Run JSON and Sprite Fright JSON...
-echo Downloading Coffee Run and Sprite Fright...
-wget https://www.dropbox.com/s/ogxw1pz9pr9bphi/CoffeeRun.json
-wget https://www.dropbox.com/s/6kpnoin4bwzb1ob/SpriteFright.json
+title Downloading VVC sample files and Coffee Run JSON & Sprite Fright JSON... from Bitmovin
+echo Downloading VVC sample files and Coffee Run JSON & Sprite Fright JSON from Bitmovin...
+wget "https://www.dropbox.com/s/qncefmnhw8hzr2k/vvcBlogPostDemo.7z" "https://www.dropbox.com/s/ogxw1pz9pr9bphi/CoffeeRun.json" "https://www.dropbox.com/s/6kpnoin4bwzb1ob/SpriteFright.json"
 echo Extracting from archived file...
 7z x vvcBlogPostDemo.7z
 echo Deleting archived file...
@@ -517,7 +513,7 @@ pause
 echo Okay, it seems you configured completed. Please run on vvDecPlayer on your operating system.
 echo Go to File, then Open JSON manifest in BitVVDecPlayer...
 echo Select JSON file to run VVC movie and enjoy it.
-echo Still not working? Please chat us on https://matrix.to/#/#vvceasy:matrix.org
+echo Still not working? Please chat us on https://matrix.to/#/#vvceasy:matrix.org to solve your problem or add new issue on GitHub.
 pause
 goto start
 
