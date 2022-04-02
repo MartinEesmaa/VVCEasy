@@ -42,6 +42,37 @@ JSON:
 }
 ```
 
+
+# Bitmovin VVDec Player Downloads (including build instructions):
+
+[Windows Pre-Builded](https://www.dropbox.com/s/75ouoeadcr2cl53/BitVVDecPlayerWIN.7z)
+
+[Mac OS Pre-Builded](https://www.dropbox.com/s/ilsoica7c8dh4hq/BitVVDecPlayerMAC.7z)
+
+[Linux Pre-Builded](https://www.dropbox.com/s/bihm3pyh21lcvte/BitVVDecPlayerLINUX.7z)
+
+Wanna build VVDec (.dll (Windows)/.dylib (Mac OS)/.so (Linux)) yourself?
+
+Here is an code:
+
+```
+git clone https://github.com/fraunhoferhhi/vvdec.git
+cd vvdec
+mkdir build && cd build
+cmake -DBUILD_SHARED_LIBS=1 ..
+cmake --build . --config Release
+```
+
+The build files might be vvdec/bin/release-shared
+
+Windows: vvdec.dll
+
+Mac OS: libvvdec.dylib
+
+Linux: libvvdecLib.so
+
+***Note to Linux: If the file (.so) can't load into your Bitmovin VVDec Player. You have to rename libvvdec.so into libvvdecLib.so***
+
 # System requirements
 
 ### Windows
