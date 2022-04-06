@@ -25,7 +25,7 @@ title VVENC AND VVDEC (Build for Windows) (Script by Martin Eesmaa)
 cls
 echo Do you want build of vvenc and vvdec yourself on your computer?
 echo Before you agree to build for Windows, you need Cmake and Visual Studio on your computer.
-echo Requires build to Windows VVC by Cmake 3.13.0+ (needs to be pathed environment) and Visual Studio 2017 and later (requires Desktop C++).
+echo Requires build to Windows VVC by Cmake 3.13.0+ (need pathed environment) and Visual Studio 2017 and later (requires Desktop C++ and only one individual component ML.NET Model Builder).
 echo Requires download VVEnc and VVDec for (Git for Windows).
 echo Yes means build. No means it will exit.
 echo Y/N?
