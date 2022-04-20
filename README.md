@@ -11,7 +11,7 @@ https://github.com/MartinEesmaa/VVCEasy/actions/workflows/dotnet.yml)
 # VVCEasy (Windows (Full), Mac and Linux (partial) (by Martin Eesmaa)
 VVCEasy is that you don't have to compile or/and coding to encode VVC (known as Versatile Video Codec). Simple, Easy, Encode and Decode.
 
-VVCEasy comes to one-easy command of ffmpeg, VVC Tools, python, VLC o266player, VVDEC Web Player, Bitmovin VVDec Player and YUView.
+VVCEasy comes to one-easy command of ffmpeg, VVC Tools, python, VLC o266player, VVDEC Web Player, Bitmovin VVDec Player, YUView and more.
 
 Installation: Go to releases and download latest version.
 
@@ -37,8 +37,8 @@ Matrix chat: https://matrix.to/#/#vvceasy:matrix.org
 - [Compatibility of O266Player](#compatibility-windows-operating-system-vlc-media-player-v30111-o266player-build-version)
 - [Bitmovin VVDec Player](#bitmovin-vvdec-player)
 - [Compile for VVCEasy](#compile-for-vvceasy)
-  - [VVCEasy Batchfile Compile](#vvceasy-batchfile-version-if-necessary-only-windows-for-compile)
-  - [VVcEasy .NET Compile](#vvceasy-net-console-version-if-necessary)
+  - [VVCEasy Batchfile Compile](#vvceasy-batchfile-version-optinal-windows-only)
+  - [VVCEasy .NET Compile](#vvceasy-net-console-version-optional)
 - [Encode/Decode easy](#encodedecode-easy)
 - [Hard option](#without-vvceasy-experimental-option-for-professional-coders-other-developers-and-everyone-hard)
 - [VVEnc & VVDec compatibility test](#compatibility-results-vvenc-and-vvdec-test-completed-by-martin-eesmaa)
@@ -123,7 +123,7 @@ See [Bitmovin.md](https://github.com/MartinEesmaa/VVCEasy/blob/master/Bitmovin.m
 
 # Compile for VVCEasy
 
-### VVCEasy Batchfile Version (if necessary) (Only Windows for compile.)
+### VVCEasy Batchfile Version (optinal) (Windows only)
 
 First, before you compile to VVCEasy Batchfile Version, you need Inno Setup to compile VVCEasy.
 Inno Setup link: https://jrsoftware.org/isdl.php
@@ -143,7 +143,7 @@ Step 3: Once you replaced of your username, press F9 to compile on your keyboard
 
 ---
 
-### VVCEasy .NET Console Version (if necessary)
+### VVCEasy .NET Console Version (optional)
 
 First, before you compile to VVCEasy .NET Console Version, you need .NET SDK x64 from Microsoft.
 Link: https://dotnet.microsoft.com/en-us/download
@@ -170,7 +170,7 @@ dotnet run
 
 # Encode/Decode (easy)
 
-Before you run of RUNVVCEASY.bat or VVCEASY.exe, you need to change input from file name into input.mp4 (as example)
+Before you run RUNVVCEASY.bat or VVCEASY.exe, you need to change input from your video file name into input.mp4 (as example)
 Follow the instructions, the commands will give your options. Since 21 October 2021, VVCEasy is pre-release, but it's construction mode, but you can have a look with .BAT code.
 
 - Martin Eesmaa
@@ -244,16 +244,16 @@ Lossy video/Smallest video size:
 vvencapp --qp 38 -i out.yuv -s 854x480 -r 30 -o vvc.266
 ```
 
-**NOTE: If you want have true lossless on your video, please visit http://ffv1.org/**
+**NOTE: If you want have true lossless on your video, please visit [FFV1](http://ffv1.org) or H.264 Lossless/H.265 Lossless/Libaom lossless video codec**
 
 Lossless video (minimum loss quality, only Y4M, Raw, Uncompressed video used) (or compress smaller than preset slow, use --preset slower):
 ```
 vvencapp --qp 18 -i out.yuv -s 854x480 -r 30 --preset slow -o vvc.266
 ```
 
-Note to Apple Mac OS and Linux users: Command with `./vvencapp`
+For Apple Mac OS and Linux terminal users: Command with `./vvencapp`
 
-Optional Windows Users using Windows PowerShell: Command with `.\vvencapp`
+For Windows Users using Windows PowerShell: Command with `.\vvencapp`
 
 Encode with VVENC (Best settings (lossless only of Y4M, Raw and Uncompressed video files), replace video size (-s), framerate (-r) and maximize threads of your cores (--threads), example) (Minimum loss quality) If you want true lossless video, use FFV1 latest version 3.4. (Necessary make smaller file slower than preset slow, use --preset slower)
 ```
@@ -272,7 +272,7 @@ Drag any your video file of .h266, .266 or .vvc to play. YUView will play your v
 UPDATE 13th December 2021: VLC Media Player (custom VLC build of o266player, 3.0.11.1 Vetenari, Windows 11) is tested by Martin Eesmaa. It can play only about 600 frames limit / 20+ seconds.
 ![VLC Media Player (VVC test)](https://user-images.githubusercontent.com/88035011/145756567-d156f630-9e7f-4042-99b5-6ffe8a6b4b64.png)
 
-If you are still not happy about VVC (known as Versatile Video Coding), that you think this is too hard to encode and decode, use AOMEDIA ONE (AV1) that is recommended for most users to easily play VLC Media Player and others. VVC should need played on VLC Media Player in future.
+If you are still not happy about VVC (known as Versatile Video Coding), that you think is too hard to encode and decode, use AOMEDIA ONE (AV1) that is recommended for most users to easily play VLC Media Player and others. VVC should need played on VLC Media Player in future.
 
 
 # Compatibility results (VVENC AND VVDEC) TEST COMPLETED BY MARTIN EESMAA
@@ -290,12 +290,12 @@ Linux (./vvencapp):
 # FAQ (known as Frequently Asked Questions)
 
 Are you real creator of VVCEasy?
-Yes... but I'm not real creator of VVC, I didn't build VVC, so it was Fraunhofer that he built VVC.
+Yes... but I'm not real creator of VVC, I didn't built VVC, it was Fraunhofer that he built VVC.
 
 Are you trying to work build of VVCEasy?
-Well yes... it takes longer time to make VVCEasy easier, but VVCEasy is not yet finished until further/update announcement. I don't have employees, so I'm only one.
+Well yes... it takes longer time to make VVCEasy easier, but VVCEasy is not yet finished until further/update announcement. I don't have a employees, so I'm only the one.
 
-Is it okay to bring proof screenshots of my errors?
+Is it okay to bring my proof screenshots of errors?
 I allow you to bring error screenshots, you can bring proof. More proofs, easier to solve it.
 
 My question is not listed on FAQ. Can I ask any question?
