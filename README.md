@@ -170,7 +170,7 @@ dotnet run
 
 # Encode/Decode (easy)
 
-Before you run RUNVVCEASY.bat or VVCEASY.exe, you need to change input from your video file name into input.mp4 (as example)
+Before you run VVCEasy.bat or VVCEasy.exe, you need to change input from your video file name into input.mp4 (as example)
 Follow the instructions, the commands will give your options. Since 21 October 2021, VVCEasy is pre-release, but it's construction mode, but you can have a look with .BAT code.
 
 - Martin Eesmaa
