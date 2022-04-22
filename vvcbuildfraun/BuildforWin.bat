@@ -46,16 +46,14 @@ cd vvenc
 mkdir build && cd build
 cmake ..
 cmake --build . --config Release
-cd ..
-cd bin/release-static
+cd ..\bin\release-static
 explorer .
 cd ../../../
 cd vvdec
 mkdir build && cd build
 cmake ..
 cmake --build . --config Release
-cd ..
-cd bin/release-static
+cd ..\bin\release-static
 explorer .
 cd ../../../../
 goto successnow
@@ -69,7 +67,7 @@ echo Do you want delete source of VVENC and VVDEC files? Y/N?
 echo.
 echo WARNING!!!: YOU HAVE TO COPY EXECUTABLE FILES BEFORE YOU DELETE SOURCE FILES
 echo BUG: The syntax of the command is incorrect for unknown error. 
-echo To see .EXE files, go to Windows/vvenc/bin/release-static
+echo To see .EXE files, go to Windows/vvenc/bin/release-static in Windows Explorer.
 set /p installmain1234= Answer: 
 if %installmain1234% == Y goto deletesourcefiles
 if %installmain1234% == y goto deletesourcefiles
@@ -86,6 +84,7 @@ goto otherwisenow
 :otherwisenow
 title Thank you for enjoying my script... (Martin Eesmaa)
 echo Thank you for enjoying my script... (Martin Eesmaa)
+echo Make sure go to Martin Eesmaa's GitHub: https://github.com/MartinEesmaa
 echo Exiting...
 timeout 3
 exit
