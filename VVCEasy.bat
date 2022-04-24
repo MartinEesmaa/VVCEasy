@@ -2,21 +2,39 @@ echo off
 pushd "%~dp0"
 cls
 
-echo.
-echo  :: Checking For Administrator Elevation...
-echo.
-timeout /t 1 /nobreak > NUL
-openfiles > NUL 2>&1
-if %errorlevel%==0 (
-        echo Elevation found! Proceeding...
-) else (
-        echo  :: You are NOT running as Administrator
-        echo.
-        echo     Right-click and select ^'Run as Administrator^' and try again.
-        echo     Press any key to exit...
-        pause > NUL
-        exit
-)
+REM === check and get the UAC for administrator privilege ===
+REM === code from https://sites.google.com/site/eneerge/scripts/batchgotadmin
+:: BatchGotAdmin
+:-------------------------------------
+REM  --> Check for permissions
+>nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
+
+REM --> If error flag set, we do not have admin.
+if '%errorlevel%' NEQ '0' (
+	if '%1' EQU '1' (
+		echo Cannot elevate administrator privilege
+		echo Please try again with "Run as Administrator"
+		echo Installation failed.
+		pause
+		exit /B
+	) else (
+		echo Requesting administrative privileges...
+		goto UACPrompt
+	)
+) else ( goto gotAdmin )
+
+:UACPrompt
+    echo Set UAC = CreateObject^("Shell.Application"^) > "%temp%\getadmin.vbs"
+    echo UAC.ShellExecute "%~s0", "1", "", "runas", 1 >> "%temp%\getadmin.vbs"
+
+    "%temp%\getadmin.vbs"
+    exit /B
+	
+:gotAdmin
+    if exist "%temp%\getadmin.vbs" ( del "%temp%\getadmin.vbs" )
+    pushd "%CD%"
+    CD /D "%~dp0"
+:--------------------------------------
 
 goto welcomenow
 
