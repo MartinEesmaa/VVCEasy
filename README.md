@@ -16,9 +16,9 @@ VVCEasy comes to one-easy command of ffmpeg, VVC Tools, python, VLC o266player, 
 Installation: Go to releases and download latest version.
 
 VVCEasy is not finished yet. I'm trying to work out with my codes. I'm not good for code programming, just simple coding.
-Sorry to say this. I will give update announcement once I release news.
+Sorry to say this. I will give you my update announcement once I release news.
 
-Windows source run (Batchfile): RUNVVCEASY.bat
+Windows source run (Batchfile): VVCEasy.bat
 
 Windows/Mac/Linux source run (Csharp): Bin/Release or Debug/netX.x/VVCEasy.exe (after build of C#), this requires VVCEasy.dll to run console application.
 
@@ -26,10 +26,14 @@ Note to Mac and Linux of o266player VLC: Sorry Mac and Linux users :(, here is a
 
 On macOS 10.15.6, I tried build, but it failed, you can have a look for Stack Overflow: [Link](https://stackoverflow.com/questions/70387126/error-1-and-2-trying-to-compile-vlc-o266player-missing-git-and-txt).
 
-On Linux, it won't support of VLC (o266player build).
-If you want to run VLC (o266player version), you must run Windows only for virtual machine or your real computer.
+On Linux, it doesn't support of VLC (o266player build).
+If you want to run VLC (o266player version), you need to run Windows only for a virtual machine or your a real computer.
 
 Matrix chat: https://matrix.to/#/#vvceasy:matrix.org
+
+Revolt: https://app.revolt.chat/server/01G1QSBZ4AMGDBWPVJ63EDZCD7/channel/01G1QSBZ4ABH7REMG6T47R8KS4
+
+Discord: Coming soon...
 
 # All lists
 
