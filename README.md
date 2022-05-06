@@ -41,7 +41,7 @@ Discord: Coming soon...
 - [Compatibility of O266Player](#compatibility-windows-operating-system-vlc-media-player-v30111-o266player-build-version)
 - [Bitmovin VVDec Player](#bitmovin-vvdec-player)
 - [Compile for VVCEasy](#compile-for-vvceasy)
-  - [VVCEasy Batchfile Compile](#vvceasy-batchfile-version-optinal-windows-only)
+  - [VVCEasy Batchfile Compile](#vvceasy-batchfile-version-optional-windows-only)
   - [VVCEasy .NET Compile](#vvceasy-net-console-version-optional)
 - [Encode/Decode easy](#encodedecode-easy)
 - [Hard option](#without-vvceasy-experimental-option-for-professional-coders-other-developers-and-everyone-hard)
@@ -127,7 +127,7 @@ See [Bitmovin.md](https://github.com/MartinEesmaa/VVCEasy/blob/master/Bitmovin.m
 
 # Compile for VVCEasy
 
-### VVCEasy Batchfile Version (optinal) (Windows only)
+### VVCEasy Batchfile Version (optional) (Windows only)
 
 First, before you compile to VVCEasy Batchfile Version, you need Inno Setup to compile VVCEasy.
 Inno Setup link: https://jrsoftware.org/isdl.php
@@ -174,8 +174,8 @@ dotnet run
 
 # Encode/Decode (easy)
 
-Before you run VVCEasy.bat or VVCEasy.exe, you need to change input from your video file name into input.mp4 (as example)
-Follow the instructions, the commands will give your options. Since 21 October 2021, VVCEasy is pre-release, but it's construction mode, but you can have a look with .BAT code.
+Before you run VVCEasy.bat or VVCEasy.exe, you need to change from your input video file name into input.mp4 (as example)
+Follow the instructions, the commands will give your options. Since 21 October 2021, VVCEasy is pre-release, but it's construction mode, but you can have a look with .BAT source code.
 
 - Martin Eesmaa
 
@@ -209,7 +209,7 @@ Transcode any video formats to YUV/Y4M
 
 **We recommend that you use from video to yuv/y4m for pixel format YUV420P, because YUV420P is smaller size than YUV420P10.**
 
-**VVENC supports pixel formats only YUV420 and YUV420_10, otherwise it will corrupt after vvc encoding.**
+**VVENC only supports pixel formats of YUV420 (8-bit) and YUV420_10 (10-bit), otherwise it will corrupt after vvc encoding.**
 
 For YUV transcode (lossy from web quality, YouTube videos and others):
 ```
@@ -221,12 +221,12 @@ For Y4M transcode (lossless from uncompressed video files, only 8 bit):
 ffmpeg -i input.mp4 -pix_fmt yuv420p -strict 1 inputtranscode.y4m
 ```
 
-Verify ffplay before encoding with VVENC (important replace video size, otherwise it will not correctly show video, it's like scrambled eggs video):
+Verify uncompressed video using ffplay before encode to VVENC (important replace video size, otherwise it will not correctly show video, it's like scrambled eggs video):
 ```
 ffplay -i inputtranscode.yuv -s 854x480
 ``` 
 
-Default ffplay for yuv and y4m is yuv420p without `-pix_fmt` command.
+Default pixel format of ffplay for yuv and y4m is yuv420p without `-pix_fmt` command.
 
 For y4m videos, replace -i inputtranscode.yuv with `-i inputtranscode.y4m`. For yuv420p10 on your input video 10 bit, add `-pix_fmt yuv420p10`.
 
@@ -241,7 +241,7 @@ vvencapp -i out.yuv -s 854x480 -r 30 -o vvc.266
 
 The default of VVENC: Constant Quality is 32 and speed is medium.
 If you want to get smaller video size and lossy video, add --qp 38. (Not recommended)
-If you want to get lossless video without losing quality, use CQ 16-19 and preset slow (optional slower). (Recommended, only Y4M, Raw and Uncompressed video files)
+If you want to get lossless video without losing quality (minimum loss quality), use CQ 16-19 and preset slow (optional slower). (Recommended, only Y4M, Raw and Uncompressed video files)
 
 Lossy video/Smallest video size:
 ```
@@ -249,6 +249,8 @@ vvencapp --qp 38 -i out.yuv -s 854x480 -r 30 -o vvc.266
 ```
 
 **NOTE: If you want have true lossless on your video, please visit [FFV1](http://ffv1.org) or H.264 Lossless/H.265 Lossless/Libaom lossless video codec**
+
+**NOTE 2: VVENC does not support lossless.**
 
 Lossless video (minimum loss quality, only Y4M, Raw, Uncompressed video used) (or compress smaller than preset slow, use --preset slower):
 ```
@@ -279,7 +281,7 @@ UPDATE 13th December 2021: VLC Media Player (custom VLC build of o266player, 3.0
 If you are still not happy about VVC (known as Versatile Video Coding), that you think is too hard to encode and decode, use AOMEDIA ONE (AV1) that is recommended for most users to easily play VLC Media Player and others. VVC should need played on VLC Media Player in future.
 
 
-# Compatibility results (VVENC AND VVDEC) TEST COMPLETED BY MARTIN EESMAA
+# Compatibility results (VVENC AND VVDEC) TESTED BY MARTIN EESMAA
 
 Windows (vvencapp):
 ![WindowsVVENCDEC](https://user-images.githubusercontent.com/88035011/145812753-eddf04c5-1a10-4892-9118-7478735b1475.png)
