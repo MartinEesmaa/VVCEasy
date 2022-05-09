@@ -1,6 +1,4 @@
-# VLC Media Player (Inter Digital VLC VTM Decoder Plugin)
-
-### Installation (Windows only)
+# VLC Media Player (Inter Digital VLC VTM Decoder Plugin installation of Windows)
 This can work only for VLC 3.0.9.2 and later version (eg. 3.0.17.4). VLC 4.0.0-dev won't work.
 
 To install Inter Digital VLC VTM Decoder Plugin, you need VLC Media Player latest version installed on your computer and supported 64-bit.
@@ -15,8 +13,7 @@ C:\Program Files\VideoLAN\VLC\plugins\demux
 
 Step 3: Enjoy and play your h266 file into your VLC Media Player :).
 
-
-### Alternative using command line:
+### Alternative using command line
 
 Open Windows Terminal/Windows Command Prompt, make sure you do cd of C:/Users/(put your username)/Downloads/VVCEasy/VLC
 
@@ -35,4 +32,4 @@ For more information about VLC 4.0.0-dev see: https://www.theverge.com/2021/2/12
 
 I tried build two DLL files on VLC 4.0.0 SDK, but the compiler failed, so you have to use VLC 3.0.9.2 and latest of VLC 3 version branch.
 
-- Martin Eesmaa
+-   Martin Eesmaa
