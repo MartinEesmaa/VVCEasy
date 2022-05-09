@@ -1,3 +1,4 @@
+#!/bin/bash
 echo Martin Eesmaa / VVC Compiler (vvenc and vvdec)
 echo We will check packages called: build-essential and cmake
 echo It will check, if the build-essential and cmake packages are installed or not.

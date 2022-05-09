@@ -1,3 +1,4 @@
+#!/bin/bash
 echo Martin Eesmaa / VVC Compiler (vvenc and vvdec)
 echo Please make sure your Xcode is installed on your Applications.
 echo.
