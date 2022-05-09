@@ -178,7 +178,7 @@ dotnet run
 Before you run VVCEasy.bat or VVCEasy.exe, you need to change from your input video file name into input.mp4 (as example)
 Follow the instructions, the commands will give your options. Since 21 October 2021, VVCEasy is pre-release, but it's construction mode, but you can have a look with .BAT source code.
 
-- Martin Eesmaa
+-   Martin Eesmaa
 
 # Without VVCEasy, experimental option for professional coders, other developers, and everyone (hard)
 
@@ -281,7 +281,6 @@ UPDATE 13th December 2021: VLC Media Player (custom VLC build of o266player, 3.0
 
 If you are still not happy about VVC (known as Versatile Video Coding), that you think is too hard to encode and decode, use AOMEDIA ONE (AV1) that is recommended for most users to easily play VLC Media Player and others. VVC should need played on VLC Media Player in future.
 
-
 # Compatibility results (VVENC AND VVDEC) TESTED BY MARTIN EESMAA
 
 Windows (vvencapp):
@@ -292,7 +291,6 @@ Mac (./vvencapp):
 
 Linux (./vvencapp):
 ![UbuntuVVENCDEC](https://user-images.githubusercontent.com/88035011/145812781-9a270e03-0dc0-47e6-95ad-4316757d3435.png)
-
 
 # FAQ (known as Frequently Asked Questions)
 
@@ -315,8 +313,7 @@ Update of 19th February 2022: Maybe I should make C# Console program, that will 
 If you have any questions or/and any issues, please go to Issues tab and create your issue.
 
 Or, you can chat us: https://matrix.to/#/#vvceasy:matrix.org
-- Martin Eesmaa
-
+-   Martin Eesmaa
 
 # Credits & Licenses
 
@@ -326,7 +323,7 @@ License: MIT
 
 © 2021-2022 [Martin Eesmaa](https://github.com/MartinEesmaa) (All rights reserved)
 
-----------------
+---
 
 [Versatile Video Encoder](https://github.com/fraunhoferhhi/vvenc) - Fraunhofer Versatile Video Encoder (VVenC)
 
@@ -340,7 +337,7 @@ License: Clear BSD (two repositories of vvenc & vvdec) + BSD (vvdecWebPlayer)
 
 GitHub: [Fraunhoferhhi](https://github.com/fraunhoferhhi)
 
---------------------
+---
 
 [O266Player](https://github.com/TencentCloud/o266player) - VLC Media Player (o266player, Vetinari v3.0.11.1, modified version)
 
@@ -352,7 +349,7 @@ License: GPL Version 2 (both repositories)
 
 © 2000-2022 [VLC Media Player](https://code.videolan.org/) Developers (All rights reserved)
 
---------------------
+---
 
 [BitMovin Versatile Video Decoder Player](https://github.com/bitmovin/vvDecPlayer) - BitMovin VVDecPlayer
 
@@ -360,7 +357,7 @@ License: MIT
 
 © 2021-2022 [Christian Feldmann](https://github.com/ChristianFeldmann) (All rights reserved)
 
----------------------
+---
 
 [VLC VTM Decoder Plugin](https://github.com/InterDigitalInc/VTMDecoder_VLCPlugin) - VVC decoder plugin for VLC based on a multithreaded VTM
 
@@ -368,4 +365,4 @@ License: LGPL-2.1
 
 © 2021-2022 [Inter Digital Inc](https://github.com/InterDigitalInc) (All rights reserved)
 
----------------------
+---
