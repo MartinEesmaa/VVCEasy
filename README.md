@@ -6,6 +6,7 @@ https://github.com/MartinEesmaa/VVCEasy/actions/workflows/dotnet.yml)
 ![GitHub repo size](https://img.shields.io/github/repo-size/MartinEesmaa/VVCEasy)
 ![GitHub release (release name instead of tag name)](https://img.shields.io/github/v/release/MartinEesmaa/VVCEasy?include_prereleases)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/MartinEesmaa/VVCEasy)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/2c56e202bf3a466c84ccacef36df197e)](https://www.codacy.com/gh/MartinEesmaa/VVCEasy/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=MartinEesmaa/VVCEasy&amp;utm_campaign=Badge_Grade)
 ![Matrix](https://img.shields.io/matrix/vvceasy:matrix.org?label=VVCEasy%20Matrix)
 
 # VVCEasy (Windows (Full), Mac and Linux (partial) (by Martin Eesmaa)
@@ -16,7 +17,7 @@ VVCEasy comes to one-easy command of ffmpeg, VVC Tools, python, VLC o266player, 
 Installation: Go to releases and download latest version.
 
 VVCEasy is not finished yet. I'm trying to work out with my codes. I'm not good for code programming, just simple coding.
-Sorry to say this. I will give you my update announcement once I release news.
+Sorry to say this. I will give you of my update announcement once I release the news.
 
 Windows source run (Batchfile): VVCEasy.bat
 
@@ -45,7 +46,7 @@ Discord: Coming soon...
   - [VVCEasy .NET Compile](#vvceasy-net-console-version-optional)
 - [Encode/Decode easy](#encodedecode-easy)
 - [Hard option](#without-vvceasy-experimental-option-for-professional-coders-other-developers-and-everyone-hard)
-- [VVEnc & VVDec compatibility test](#compatibility-results-vvenc-and-vvdec-test-completed-by-martin-eesmaa)
+- [VVEnc & VVDec compatibility test](#compatibility-results-vvenc-and-vvdec-tested-by-martin-eesmaa)
 - [FAQ](#compatibility-results-vvenc-and-vvdec-test-completed-by-martin-eesmaa)
 - [Credits & Licenses](#credits--licenses)
 
@@ -111,9 +112,9 @@ Bottom left and right is VLC VTM plugins by Inter Digital Inc.
 
 Bug of Inter Digital VTM VLC Plugin:
 
-When you try play your MPEG-2, MPEG-TS or TS file, it will crash with your InterDigital VLC VTM Plugin installed on your VLC Media Player.
+When you try to play your MPEG-TS or TS file, it will crash with your InterDigital VLC VTM Plugin installed on your VLC Media Player.
 
-Without InterDigital VLC VTM Plugin, playing MPEG-2, MPEG-TS or TS file will play fine in your all original plugins (except VLC VTM Plugin) on your VLC Media Player.
+Without InterDigital VLC VTM Plugin, playing MPEG-TS or TS file will play fine in your all original plugins (except VLC VTM Plugin) on your VLC Media Player.
 
 About o266player: Since o266player repository have no new commits than one year. 
 
