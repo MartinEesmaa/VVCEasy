@@ -39,15 +39,25 @@ Discord: Coming soon...
 # All lists
 
 - [Donate to Martin Eesmaa using cryptocurrency](#donate-to-martin-eesmaa-using-cryptocurrency)
+
 - [Compatibility of O266Player](#compatibility-windows-operating-system-vlc-media-player-v30111-o266player-build-version)
+
 - [Bitmovin VVDec Player](#bitmovin-vvdec-player)
+
 - [Compile for VVCEasy](#compile-for-vvceasy)
+
   - [VVCEasy Batchfile Compile](#vvceasy-batchfile-version-optional-windows-only)
+
   - [VVCEasy .NET Compile](#vvceasy-net-console-version-optional)
+
 - [Encode/Decode easy](#encodedecode-easy)
+
 - [Hard option](#without-vvceasy-experimental-option-for-professional-coders-other-developers-and-everyone-hard)
+
 - [VVEnc & VVDec compatibility test](#compatibility-results-vvenc-and-vvdec-tested-by-martin-eesmaa)
-- [FAQ](#compatibility-results-vvenc-and-vvdec-test-completed-by-martin-eesmaa)
+
+- [FAQ](#faq-known-as-frequently-asked-questions)
+
 - [Credits & Licenses](#credits--licenses)
 
 # Donate to Martin Eesmaa using cryptocurrency
