@@ -30,4 +30,4 @@ Reminder: Some operating systems are working to load VVC video format in Virtual
 
 If your operating system is working to decode VVC video format like you're running on Windows 10, please fork this repository, edit README and make pull request of my original repository from your forked repository. Screenshot must be required winver and VLC Media Player (custom build of o266player)
 
--  Martin Eesmaa
+-   Martin Eesmaa
