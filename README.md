@@ -40,7 +40,9 @@ Discord: Coming soon...
 
 - [Donate to Martin Eesmaa using cryptocurrency](#donate-to-martin-eesmaa-using-cryptocurrency)
 
-- [Compatibility of O266Player](#compatibility-windows-operating-system-vlc-media-player-v30111-o266player-build-version)
+- [VLC InterDigital VTM VVC Plugin](#vlc-interdigital-vtm-vvc-plugin)
+
+- [VLC o266player](#vlc-o266player-windows-only-mac-os-will-be-later)
 
 - [Bitmovin VVDec Player](#bitmovin-vvdec-player)
 
@@ -72,39 +74,7 @@ bc1qhf4zu5uythr7vyt2dru73qp0k2rzrx355fsx47yjxc2ueunz8frqxmwap3
 ```
 - **BAT (BASIC ATTENTION TOKEN):** For Brave users only, you can also contribute by support to me, I'm verified Brave user on Brave Rewards.
 
-# Compatibility Windows Operating System (VLC Media Player v3.0.11.1, o266player build version)
-
-Windows | Compatibility (only x64)  | Screenshot | Date report (DD/MM/YYYY, 24hr)
-------- | ------- | --------------- | ------------- |
-Windows 2000/ME or older | :x: (Cannot run custom build) | [Link](https://i.imgur.com/hHnh5Cx.png) | 19/02/2022 18:35:34 (AEDT)
-Windows XP | ⚠️ (Terminal only, GUI is not working) | [Link](https://i.imgur.com/v3jMW3d.png) | 11/12/2021 15:18:29 (AEDT)
-Windows Vista | ⚠️ (GUI Works, but VVC won't show video)
-Windows 7 | :white_check_mark: (All checked) | [Link](https://i.imgur.com/4cANwDQ.png) | 17/12/2021 21:32:38 (AEDT)
-Windows 8.0   |   ⚠️ (GUI Works, but VVC won't show video) | [Link](https://i.imgur.com/cl8qASz.png) | 20/02/2022 15:27:40 (AEDT)
-Windows 8.1 |   :white_check_mark: (All checked) | [Link](https://i.imgur.com/1Fe6xGW.png) | 17/12/2021 18:23:35 (AEDT)
-Windows 10  |   ⚠️ (GUI Works, but VVC won't show video)
-Windows 11  |   :white_check_mark: (All checked) | [Link](https://i.imgur.com/Me2L998.png) | 13/12/2021 15:58:55 (AEDT)
-
-Windows Server | Compatibility (only x64) | Screenshot | Date report (DD/MM/YYYY, 24hr)
-------- | ------- | --------- | --------- |
-Windows Server 2003 | ⚠️ (Terminal only, GUI is not working) | [Link](https://i.imgur.com/G7F2bif.png) | 19/02/2022 21:38:20 (AEDT)
-Windows Server 2008 | ⚠️ (GUI Works, but VVC won't show video) | [Link](https://i.imgur.com/GXFgIt8.png) | 20/02/2022 14:02:28 (AEDT)
-Windows Server 2012 | :white_check_mark: (All checked) | [Link](https://i.imgur.com/Vcgag8B.png) | 17/12/2021 20:57:16 (AEDT)
-Windows Server 2016   | :white_check_mark: (Already checked by Tencent Cloud)
-Windows Server 2019 | :black_square_button: (Needs to be tested)
-Windows Server 2022  | :black_square_button: (Needs to be tested)
-
-VLC Custom build of o266player only accepts to run 64-bit / x64 on your computer. 32-bit / x86 won't work.
-
-This cannot be run on Windows Vista / Windows Server 2008 or older and Windows 8.0 to play VVC video file of VLC Custom build. 
-
-Note: I'm trying to work it out of VLC 3.0.16.
-
-Reminder: Some operating systems are working to load VVC video format in Virtual Machine softwares, but real machines will work every operating system, example Windows Server 2016 has already been tested by Tencent Cloud.
-
-If your operating system is working to decode VVC video format like you're running on Windows 10, please fork this repository, edit README and make pull request of my original repository from your forked repository. Screenshot must be required winver and VLC Media Player (custom build of o266player)
-
-***UPDATE of 27/03/2022 15:00 AEDT:***
+# VLC InterDigital VTM VVC Plugin
 
 I have a great news. VLC latest version worked out well of Inter Digital VTM plugins. On o266player, there was some problems on my computer for one reason...
 
@@ -112,7 +82,7 @@ One reason that my Windows 11 operating system won't view video of VVC file on o
 
 Here is a my comparision of o266player version and VTM VVC plugins:
 
-Top left and right is o266player.
+Top left and right is o266player by Tencent Cloud.
 
 Bottom left and right is VLC VTM plugins by Inter Digital Inc.
 
@@ -129,6 +99,12 @@ Without InterDigital VLC VTM Plugin, playing MPEG-TS or TS file will play fine i
 About o266player: Since o266player repository have no new commits than one year. 
 
 We will remove o266player list, if no new commits than one year.
+
+# VLC o266player (Windows only, Mac OS will be later)
+
+For more information about o266player.
+
+See [o266player.md](https://github.com/MartinEesmaa/VVCEasy/blob/master/o266player.md).
 
 # Bitmovin VVDec Player
 
