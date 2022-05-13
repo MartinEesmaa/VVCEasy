@@ -34,7 +34,7 @@ Matrix chat: https://matrix.to/#/#vvceasy:matrix.org
 
 Revolt: https://app.revolt.chat/server/01G1QSBZ4AMGDBWPVJ63EDZCD7/channel/01G1QSBZ4ABH7REMG6T47R8KS4
 
-Discord: Coming soon...
+Discord: https://discord.gg/t54cADTbWW
 
 # All lists
 
