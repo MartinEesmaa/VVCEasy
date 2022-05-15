@@ -10,7 +10,7 @@ https://github.com/MartinEesmaa/VVCEasy/actions/workflows/dotnet.yml)
 ![Matrix](https://img.shields.io/matrix/vvceasy:matrix.org?label=VVCEasy%20Matrix)
 ![Discord](https://img.shields.io/discord/974611343237869619?label=VVCEasy%20Discord%20Chat)
 
-# VVCEasy (Windows (Full), Mac and Linux (partial) (by Martin Eesmaa)
+# VVCEasy (Windows and Linux (Full) and Mac OS (partial) (by Martin Eesmaa)
 VVCEasy is that you don't have to compile or/and coding to encode VVC (known as Versatile Video Codec). Simple, Easy, Encode and Decode.
 
 VVCEasy comes to one-easy command of ffmpeg, VVC Tools, python, VLC o266player, VVDEC Web Player, Bitmovin VVDec Player, YUView and more.
@@ -112,6 +112,16 @@ See [o266player.md](https://github.com/MartinEesmaa/VVCEasy/blob/master/o266play
 For more information about Bitmovin VVDec Player.
 
 See [Bitmovin.md](https://github.com/MartinEesmaa/VVCEasy/blob/master/Bitmovin.md).
+
+# FFmpeg VVDEC support
+
+FFmpeg VVC Decoder supports of Windows, Mac and Linux.
+
+OpenVVC (FFmpeg) supports of Mac and Linux.
+
+Limitation: Mac OS cannot built of ffplay only in libvvdec and OpenVVC.
+
+See [FFMPEGVVC.md](https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md)
 
 # Compile for VVCEasy
 
