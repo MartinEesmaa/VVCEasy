@@ -47,6 +47,8 @@ Discord: https://discord.gg/t54cADTbWW
 
 - [Bitmovin VVDec Player](#bitmovin-vvdec-player)
 
+- [FFmpeg VVC Decoder support](#ffmpeg-vvdec-support)
+
 - [Compile for VVCEasy](#compile-for-vvceasy)
 
   - [VVCEasy Batchfile Compile](#vvceasy-batchfile-version-optional-windows-only)
