@@ -13,7 +13,7 @@ https://github.com/MartinEesmaa/VVCEasy/actions/workflows/dotnet.yml)
 # VVCEasy (Windows and Linux (Full) and Mac OS (partial) (by Martin Eesmaa)
 VVCEasy is that you don't have to compile or/and coding to encode VVC (known as Versatile Video Codec). Simple, Easy, Encode and Decode.
 
-VVCEasy comes to one-easy command of ffmpeg, VVC Tools, python, VLC o266player, VVDEC Web Player, Bitmovin VVDec Player, YUView and more.
+VVCEasy comes to one-easy command of ffmpeg, VVC Tools, python, VLC o266player, VVDEC Web Player, Bitmovin VVDec Player, YUView, libvvdec and more.
 
 Installation: Go to releases and download latest version.
 
@@ -23,13 +23,6 @@ Sorry to say this. I will give you of my update announcement once I release the 
 Windows source run (Batchfile): VVCEasy.bat
 
 Windows/Mac/Linux source run (Csharp): Bin/Release or Debug/netX.x/VVCEasy.exe (after build of C#), this requires VVCEasy.dll to run console application.
-
-Note to Mac and Linux of o266player VLC: Sorry Mac and Linux users :(, here is a why MacOS and Linux cannot run VLC o266player.
-
-On macOS 10.15.6, I tried build, but it failed, you can have a look for Stack Overflow: [Link](https://stackoverflow.com/questions/70387126/error-1-and-2-trying-to-compile-vlc-o266player-missing-git-and-txt).
-
-On Linux, it doesn't support of VLC (o266player build).
-If you want to run VLC (o266player version), you need to run Windows only for a virtual machine or your a real computer.
 
 Matrix chat: https://matrix.to/#/#vvceasy:matrix.org
 
@@ -228,7 +221,7 @@ ffplay -i inputtranscode.yuv -s 854x480
 
 Default pixel format of ffplay for yuv and y4m is yuv420p without `-pix_fmt` command.
 
-For y4m videos, replace -i inputtranscode.yuv with `-i inputtranscode.y4m`. For yuv420p10 on your input video 10 bit, add `-pix_fmt yuv420p10`.
+For y4m videos, replace `-i inputtranscode.yuv` with `-i inputtranscode.y4m`. For yuv420p10 on your input video 10 bit, add `-pix_fmt yuv420p10`.
 
 For easy to verify YUV/Y4M, use YUView, open your YUV or Y4M encoded, make sure video size, YUV/Y4M format and frame rate same like from input video file (e.g. MP4, AVI, MKV and others.
 
@@ -238,6 +231,18 @@ Encode with VVENC (Simple settings, example)
 vvencapp -i out.yuv -s 854x480 -r 30 -o vvc.266
 ```
 -s means video size, -r means frame per second and -o means output. Note: (Simple) as Default settings is YUV420P (8-bit)
+
+**WARNING: If you encode from yuv/y4m of your frame rate is 11.988, 14.985, 23.976, 29.970 or 59.940 FPS, replace this command -r by --fps.**
+
+11.988 fps = `--fps 12000/1001`
+
+14.985 fps = `--fps 15000/1001`
+
+23.976 fps = `--fps 24000/1001`
+
+29.970 fps = `--fps 30000/1001`
+
+59.940 fps = `--fps 60000/1001`
 
 The default of VVENC: Constant Quality is 32 and speed is medium.
 If you want to get smaller video size and lossy video, add --qp 38. (Not recommended)
