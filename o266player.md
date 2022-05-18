@@ -1,5 +1,14 @@
 # Compatibility Windows Operating System (VLC Media Player v3.0.11.1, o266player build version)
 
+Limitations:
+
+Note to Mac and Linux of o266player VLC: Sorry Mac and Linux users :(, here is a why MacOS and Linux cannot run VLC o266player.
+
+On macOS 10.15.6, I tried build, but it failed, you can have a look for Stack Overflow: [Link](https://stackoverflow.com/questions/70387126/error-1-and-2-trying-to-compile-vlc-o266player-missing-git-and-txt).
+
+On Linux, it doesn't support of VLC (o266player build).
+If you want to run VLC (o266player version), you need to run Windows only for a virtual machine or your a real computer.
+
 Windows | Compatibility (only x64)  | Screenshot | Date report (DD/MM/YYYY, 24hr)
 ------- | ------- | --------------- | ------------- |
 Windows 2000/ME or older | :x: (Cannot run custom build) | [Link](https://i.imgur.com/hHnh5Cx.png) | 19/02/2022 18:35:34 (AEDT)
