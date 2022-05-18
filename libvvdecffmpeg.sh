@@ -10,9 +10,9 @@ cd ../
 echo Downloading FFmpeg with VVC support
 git clone https://github.com/lehmann-c/FFmpeg.git
 cd FFmpeg
-./configure --enable-libvvdec --enable-pic --enable-openssl --enable-libxml2
-make -j
-echo Three packages are finished. One more thing to do is type code to finish it:
+echo One more thing to do is type of three codes to finish for:
 echo export LD_LIBRARY_PATH=~/Downloads/vvdec/install/lib
+echo export PKG_CONFIG_PATH=~/Downloads/vvdec/install/lib/pkgconfig
+echo ./configure --enable-libvvdec --enable-pic --enable-openssl --enable-libxml2 && make -j
 echo Once you typed code, you're ready to preview VVC, view VVC information or convert from VVC using ffmpeg, ffplay and ffprobe.
 echo - Martin Eesmaa
