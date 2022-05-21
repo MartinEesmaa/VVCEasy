@@ -13,7 +13,13 @@ C:\Program Files\VideoLAN\VLC\plugins\demux
 
 Step 3: Enjoy and play your h266 file into your VLC Media Player :).
 
-### Alternative using command line
+### For Linux users
+
+These two files are successfully, but one file is not success of building TsDemuxPluginVLC. I don't understand, where to patch ES format?
+
+Two files includes: libvtmdec.so and libvvcdecoder_plugin.so
+
+### Alternative using command line of Windows
 
 Open Windows Terminal/Windows Command Prompt, make sure you do cd of C:/Users/(put your username)/Downloads/VVCEasy/VLC
 
