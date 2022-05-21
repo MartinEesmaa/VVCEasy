@@ -63,6 +63,7 @@ echo 7. Install/Update VVdec Web Player
 echo 8. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)
 echo 9. Install vvDecPlayer from BitMovin
 echo 10. Install VLC VTM Plugins (Windows x64 of VLC, plugins by Inter Digital Inc)
+echo 11. Install FFmpeg VVDec support
 set /p VVCSTART=Number: 
 if %VVCSTART% == 1 goto encodestart
 if %VVCSTART% == 2 goto decodestart
@@ -74,6 +75,7 @@ if %VVCSTART% == 7 goto installvvdecweb
 if %VVCSTART% == 8 goto decompresswin7z
 if %VVCSTART% == 9 goto installbitmovin
 if %VVCSTART% == 10 goto vlcvtmplugininstall
+if %VVCSTART% == 11 goto vvdecffmpeg
 
 :encodestart
 title Encode to VVC
@@ -508,5 +510,30 @@ echo Please load your VVC (codec) video file to VLC Media Player.
 echo For more information and options: Please go to https://github.com/InterDigitalInc/VTMDecoder_VLCPlugin
 echo Once, you're finished, you don't have to repatch again. You can continue normally VLC Media Player next time after VVCEasy.
 "%programfiles%\VideoLAN\VLC\vlc.exe"
+pause
+goto start
+
+:ffmpegvvdec
+cls
+title FFmpeg VVDec support
+echo Hello, would you like to download FFmpeg VVDec support? Y/N?
+set /p vvcnow0
+if %vvcnow0% == Y goto installvvdecffmpegnow
+if %vvcnow0% == N goto start
+if %vvcnow0% == y goto installvvdecffmpegnow
+if %vvcnow0% == n goto start
+
+:installvvdecffmpegnow
+echo Your favourite operating system is available on FFmpeg VVDec support. Please copy the link to a web browser.
+echo.
+echo Windows: https://mega.nz/file/e1MEUAwR#c7u7vDvwzp6JiSaRDwhCyOaH4cGnx1xQDPyKgbAd-qM
+echo.
+echo Mac OS: https://mega.nz/file/K09gRbYJ#SewWjY4LqVdvlivXJhqQMjrsXO6ec8a1jmapj5nO2Gs
+echo.
+echo Linux (Only Ubuntu 20.04 built): https://mega.nz/file/T8l0GTqa#oWsDDrFYjzf3LhS9zRkuqqBz6H4yJmNQUNiu_erVQLo
+echo.
+echo See information on FFMPEGVVC.md or online GitHub: https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md
+echo.
+echo Press enter to go back menu.
 pause
 goto start
