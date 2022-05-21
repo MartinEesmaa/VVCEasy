@@ -19,6 +19,8 @@ These two files are successfully, but one file is not success of building TsDemu
 
 Two files includes: libvtmdec.so and libvvcdecoder_plugin.so
 
+Log file: https://pastebin.com/E4tNsJ43
+
 ### Alternative using command line of Windows
 
 Open Windows Terminal/Windows Command Prompt, make sure you do cd of C:/Users/(put your username)/Downloads/VVCEasy/VLC
