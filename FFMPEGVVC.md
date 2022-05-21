@@ -26,13 +26,63 @@ Good news, you can play .mp4 file after .h266 and audio format were merged into 
 
 About [xHE-AAC](https://www.iis.fraunhofer.de/en/ff/amm/broadcast-streaming/xheaac.html), there is no decode support of FFmpeg, the reason is a license fee, but except [Exhale](https://gitlab.com/ecodis/exhale) (encoder) is free to use and open source. However, you can also merge encoded xHE-AAC audio into mp4 too.
 
-To make playable VVC with audio, you need VVC video encoded, audio file and [GPAC Nightly build](https://gpac.wp.imt.fr/downloads/gpac-nightly-builds/). Code for mp4box/gpac:
+To make playable mp4 with audio and video together, you need VVC video encoded, audio file and [GPAC Nightly build](https://gpac.wp.imt.fr/downloads/gpac-nightly-builds/). Code for mp4box/gpac:
 ```
 mp4box -no-probe -add video.266 -add audio.opus -new convertedvvc.mp4
 ```
 
 For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
-More coming soon...
+# FFmpeg Downloads (VVC decoder plugin compiled by Martin Eesmaa)
+
+[Windows](https://mega.nz/file/e1MEUAwR#c7u7vDvwzp6JiSaRDwhCyOaH4cGnx1xQDPyKgbAd-qM)
+
+[Mac OS](https://mega.nz/file/K09gRbYJ#SewWjY4LqVdvlivXJhqQMjrsXO6ec8a1jmapj5nO2Gs)
+
+[Linux](https://mega.nz/file/T8l0GTqa#oWsDDrFYjzf3LhS9zRkuqqBz6H4yJmNQUNiu_erVQLo) (Only Ubuntu 20.04 build)
+
+# Linux downloaders (Important note)
+
+Unfortunately, this is Ubuntu 20.04 LTS built only.
+
+Before you use FFmpeg, make sure you install all these requirements:
+
+```
+sudo apt install libxml2 libx264-dev libx265-dev libnuma-dev libxml2 libopus-dev
+```
+
+If you are using other linux without Ubuntu 20.04 LTS, you have to build using:
+
+```
+sudo apt install build-essential cmake libx264-dev libx265-dev libnuma-dev libxml2 libopus-dev nasm && \
+git clone https://github.com/fraunhoferhhi/vvdec.git && cd vvdec \
+make release && make install install-prefix=/usr/local && \
+cd .. && git clone https://github.com/lehmann-c/FFmpeg.git && cd FFmpeg && \
+./configure --enable-gpl \
+  --enable-version3 \ 
+  --enable-libvvdec \ 
+  --enable-pic \ 
+  --enable-libxml2 \ 
+  --enable-libx264 \
+  --enable-libx265 \
+  --enable-libopus &&
+make -j
+```
+
+If compiled is success and finished, you can install FFmpeg, using the code:
+
+```
+make install
+```
+
+# Special thanks
+
+VVC programmers of FFmpeg:
+
+Original author: [@FFmpeg](https://github.com/FFmpeg) Repository: https://github.com/FFmpeg/FFmpeg
+
+[@lehmann-c](https://github.com/lehmann-c) (Christian Lehmann) Repository: https://github.com/lehmann-c/FFmpeg
+
+[@tbiat](https://github.com/tbiat) Repository: https://github.com/tbiat/FFmpeg
 
 -   Martin Eesmaa
