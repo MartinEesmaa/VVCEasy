@@ -113,17 +113,13 @@ See [Bitmovin.md](https://github.com/MartinEesmaa/VVCEasy/blob/master/Bitmovin.m
 
 FFmpeg VVC Decoder supports of Windows, Mac and Linux.
 
-OpenVVC (FFmpeg) supports of Mac and Linux.
-
-Limitation: Mac OS cannot built of ffplay only in libvvdec and OpenVVC.
-
 See [FFMPEGVVC.md](https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md).
 
 # MPV OpenVVC support (Android only)
 
 MPV OpenVVC Decoder supports only of Android.
 
-Only VVC file can play, but merged .mp4 is black screen, so you need external sound from h266, if necessary.
+Only VVC file can play, but merged .mp4 is black screen, so you need external sound from vvc video codec, if necessary.
 
 See [MPV.md](https://github.com/MartinEesmaa/VVCEasy/blob/master/MPV.md).
 
@@ -407,3 +403,9 @@ License: LGPL-2.1
 © 2021-2022 OpenVVC developers (All rights reserved)
 
 ---
+
+[GPAC/MP4BOX](https://github.com/gpac/gpac) - Modular Multimedia framework for packaging, streaming and playing your favorite content.
+
+License: LGPL-2.1
+
+© 2003-2022 [Jean Le Feuvre](https://github.com/jeanlf) & [GPAC developers/contributors](https://github.com/gpac/gpac/graphs/contributors)
