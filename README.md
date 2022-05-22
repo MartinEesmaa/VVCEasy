@@ -6,7 +6,6 @@ https://github.com/MartinEesmaa/VVCEasy/actions/workflows/dotnet.yml)
 ![GitHub repo size](https://img.shields.io/github/repo-size/MartinEesmaa/VVCEasy)
 ![GitHub release (release name instead of tag name)](https://img.shields.io/github/v/release/MartinEesmaa/VVCEasy?include_prereleases)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/MartinEesmaa/VVCEasy)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/2c56e202bf3a466c84ccacef36df197e)](https://www.codacy.com/gh/MartinEesmaa/VVCEasy/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=MartinEesmaa/VVCEasy&amp;utm_campaign=Badge_Grade)
 ![Matrix](https://img.shields.io/matrix/vvceasy:matrix.org?label=VVCEasy%20Matrix)
 ![Discord](https://img.shields.io/discord/974611343237869619?label=VVCEasy%20Discord%20Chat)
 
