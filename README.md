@@ -10,7 +10,7 @@ https://github.com/MartinEesmaa/VVCEasy/actions/workflows/dotnet.yml)
 ![Matrix](https://img.shields.io/matrix/vvceasy:matrix.org?label=VVCEasy%20Matrix)
 ![Discord](https://img.shields.io/discord/974611343237869619?label=VVCEasy%20Discord%20Chat)
 
-# VVCEasy (Windows and Linux (Full) and Mac OS (partial) (by Martin Eesmaa)
+# VVCEasy (Windows & Linux (Full), Mac OS & Android (partial) (by Martin Eesmaa)
 VVCEasy is that you don't have to compile or/and coding to encode VVC (known as Versatile Video Codec). Simple, Easy, Encode and Decode.
 
 VVCEasy comes to one-easy command of ffmpeg, VVC Tools, python, VLC o266player, VVDEC Web Player, Bitmovin VVDec Player, YUView, libvvdec and more.
@@ -116,7 +116,15 @@ OpenVVC (FFmpeg) supports of Mac and Linux.
 
 Limitation: Mac OS cannot built of ffplay only in libvvdec and OpenVVC.
 
-See [FFMPEGVVC.md](https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md)
+See [FFMPEGVVC.md](https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md).
+
+# MPV OpenVVC support (Android only)
+
+MPV OpenVVC Decoder supports only of Android.
+
+Only VVC file can play, but merged .mp4 is black screen, so you need external sound from h266, if necessary.
+
+See [MPV.md](https://github.com/MartinEesmaa/VVCEasy/blob/master/MPV.md).
 
 # Compile for VVCEasy
 
@@ -370,3 +378,21 @@ License: LGPL-2.1
 © 2021-2022 [Inter Digital Inc](https://github.com/InterDigitalInc) (All rights reserved)
 
 ---
+
+[FFmpeg](https://github.com/FFmpeg/FFmpeg) - Mirror of https://git.ffmpeg.org/ffmpeg.git
+
+VVC developers & forkers: [lehmann-c](https://github.com/lehmann-c) and [tbiat](https://github.com/tbiat)
+
+License: LGPL-2.1+ & GPL-2.0+
+
+© 2000-2022 [FFmpeg developers](https://github.com/FFmpeg) (All rights reserved)
+
+---
+
+[mpv-android](https://github.com/mpv-android/mpv-android) - #mpv-android @ libera.chat
+
+VVC developer & forker: [tbiat](https://github.com/tbiat)
+
+License: MIT
+
+© 2016-2022 Ilya Zhuravlev, sfan5 & mpv developers (All rights reserved)
