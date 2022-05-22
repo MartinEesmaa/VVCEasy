@@ -9,12 +9,12 @@ https://github.com/MartinEesmaa/VVCEasy/actions/workflows/dotnet.yml)
 ![Matrix](https://img.shields.io/matrix/vvceasy:matrix.org?label=VVCEasy%20Matrix)
 ![Discord](https://img.shields.io/discord/974611343237869619?label=VVCEasy%20Discord%20Chat)
 
-# VVCEasy (Windows & Linux (Full), Mac OS & Android (partial) (by Martin Eesmaa)
+# VVCEasy (Windows, Mac OS, Linux & Android) (by Martin Eesmaa)
 VVCEasy is that you don't have to compile or/and coding to encode VVC (known as Versatile Video Codec). Simple, Easy, Encode and Decode.
 
 VVCEasy comes to one-easy command of ffmpeg, VVC Tools, python, VLC o266player, VVDEC Web Player, Bitmovin VVDec Player, YUView, libvvdec and more.
 
-Installation: Go to releases and download latest version.
+Installation: Go to the releases and download latest version.
 
 VVCEasy is not finished yet. I'm trying to work out with my codes. I'm not good for code programming, just simple coding.
 Sorry to say this. I will give you of my update announcement once I release the news.
@@ -69,7 +69,7 @@ bc1qhf4zu5uythr7vyt2dru73qp0k2rzrx355fsx47yjxc2ueunz8frqxmwap3
 ```
 85Ahh93M88gV8ekymtYwb6TS14TZ36jNGTFgceaRH7hj8Rtx1qVB9PobnJLR5siz4nYBnzWy3pkV6KaVroifGMVh7n4br3J
 ```
-- **BAT (BASIC ATTENTION TOKEN):** For Brave users only, you can also contribute by support to me, I'm verified Brave user on Brave Rewards.
+- **BAT (BASIC ATTENTION TOKEN):** For Brave Browser users only, you can also contribute by supporting me, I'm verified Brave user on Brave Rewards.
 
 # VLC InterDigital VTM VVC Plugin
 
@@ -258,7 +258,7 @@ Lossy video/Smallest video size:
 vvencapp --qp 38 -i out.yuv -s 854x480 -r 30 -o vvc.266
 ```
 
-**NOTE: If you want have true lossless on your video, please visit [FFV1](http://ffv1.org) or H.264 Lossless/H.265 Lossless/Libaom lossless video codec**
+**NOTE: If you want have true lossless on your video, please visit [FFV1](http://ffv1.org) or H.264 Lossless video codec**
 
 **NOTE 2: VVENC does not support lossless.**
 
