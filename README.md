@@ -42,6 +42,8 @@ Discord: https://discord.gg/t54cADTbWW
 
 - [FFmpeg VVC Decoder support](#ffmpeg-vvdec-support)
 
+- [MPV OpenVVC support (Android only)](#mpv-openvvc-support-android-only)
+
 - [Compile for VVCEasy](#compile-for-vvceasy)
 
   - [VVCEasy Batchfile Compile](#vvceasy-batchfile-version-optional-windows-only)
@@ -224,7 +226,7 @@ ffmpeg -i input.mp4 -pix_fmt yuv420p -strict 1 inputtranscode.y4m
 
 Verify uncompressed video using ffplay before encode to VVENC (important replace video size, otherwise it will not correctly show video, it's like scrambled eggs video):
 ```
-ffplay -i inputtranscode.yuv -s 854x480
+ffplay -i inputtranscode.yuv -video_size 1280x720
 ``` 
 
 Default pixel format of ffplay for yuv and y4m is yuv420p without `-pix_fmt` command.
@@ -396,3 +398,13 @@ VVC developer & forker: [tbiat](https://github.com/tbiat)
 License: MIT
 
 © 2016-2022 Ilya Zhuravlev, sfan5 & mpv developers (All rights reserved)
+
+---
+
+[OpenVVC](https://github.com/OpenVVC/OpenVVC) - VVC Decoder
+
+License: LGPL-2.1
+
+© 2021-2022 OpenVVC developers (All rights reserved)
+
+---
