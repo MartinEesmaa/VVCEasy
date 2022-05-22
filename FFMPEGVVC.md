@@ -1,12 +1,12 @@
 # FFmpeg VVC decoder installation (Windows, Mac OS and Linux)
 
-Windows (Preview of vvc video in ffplay):
+Windows, Mac and Linux (Preview of vvc video in ffplay):
 
 ![ffmpegplaypreview](https://user-images.githubusercontent.com/88035011/169019033-bcb7fcc7-a196-4436-a396-61db3071280c.png)
+![macos_vvceasy_ff](https://user-images.githubusercontent.com/88035011/169693891-52271091-eb92-4198-82eb-2ad38296a917.png)
+![linux_vvceasy_ff](https://user-images.githubusercontent.com/88035011/169693886-3f8e97da-ad57-46ab-b3eb-45e5ff4e687d.png)
 
 # Limitations of FFmpeg VVC decoder
-
-Mac OS doesn't include FFplay only for reason, only Mac OS users have to convert from vvc video to any encoder video codecs available.
 
 For Windows, Mac OS and Linux for preview without converting, you can do sample this, including audio support:
 
@@ -31,13 +31,15 @@ To make playable mp4 with audio and video together, you need VVC video encoded, 
 mp4box -no-probe -add video.266 -add audio.opus -new convertedvvc.mp4
 ```
 
+Containers are also acceptable video containers of .mkv, .mp4, .mov and more.
+
 For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 # FFmpeg Downloads (VVC decoder plugin compiled by Martin Eesmaa)
 
 [Windows](https://mega.nz/file/e1MEUAwR#c7u7vDvwzp6JiSaRDwhCyOaH4cGnx1xQDPyKgbAd-qM)
 
-[Mac OS](https://mega.nz/file/K09gRbYJ#SewWjY4LqVdvlivXJhqQMjrsXO6ec8a1jmapj5nO2Gs)
+[Mac OS](https://mega.nz/file/mxNTQTLb#1ifvaXap_a_cHLCIWZ-K5B0oKXvdHjgUc3Nb-YHFIio)
 
 [Linux](https://mega.nz/file/T8l0GTqa#oWsDDrFYjzf3LhS9zRkuqqBz6H4yJmNQUNiu_erVQLo) (Only Ubuntu 20.04 build)
 
