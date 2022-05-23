@@ -11,15 +11,15 @@ Screenshot preview, see top-left information of toggle stats:
 
 # Download MPV Android Player (OpenVVC plugin)
 
-[Android SDK 30 .APK Debug (Recommended)](https://mega.nz/file/v4shBToK#P8bBW70b5QG3SY4rqnz7DZaFq7vrXACmS9tHTWFHgqg)
+[Android .APK Debug Stable(Recommended)](https://mega.nz/file/H8kRUDBT#zWax2e1xxebrIZMmYPrmiWcbZBHnVAzAVZlY3EmuPnU)
+
+[Android SDK 30 .APK Debug](https://mega.nz/file/v4shBToK#P8bBW70b5QG3SY4rqnz7DZaFq7vrXACmS9tHTWFHgqg)
 
 [Android SDK 30 .APK Release unsigned](https://mega.nz/file/L1d0RCRA#JyGcjFRsVQNjo_y0j11_Kdx9oXapOt3fg87-RzppURg)
 
 [Android SDK 29 .APK Debug](https://mega.nz/file/K4FQFATS#7E6FmEOn9h3UIQLg0ZVb66_zItlHBT8DzT2qx5Zr23Q)
 
 [Android SDK 29 .APK Release unsigned](https://mega.nz/file/Ch1AgJDD#f__m02qj0F8xkYTVY8o_BOUfZQkhtNkX1Y3fhKG8PKM)
-
-[Android .APK Debug Stable](https://mega.nz/file/H8kRUDBT#zWax2e1xxebrIZMmYPrmiWcbZBHnVAzAVZlY3EmuPnU)
 
 # Limitations & Tips
 
