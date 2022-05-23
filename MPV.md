@@ -8,6 +8,7 @@ Screenshot preview, see top-left information of toggle stats:
 
 ![vvceasy_mpv](https://user-images.githubusercontent.com/88035011/169686173-b7717e01-9cc3-4f25-8f24-ddaa1f882667.jpg)
 
+
 # Download MPV Android Player (OpenVVC plugin)
 
 [Android SDK 30 .APK Debug (Recommended)](https://mega.nz/file/v4shBToK#P8bBW70b5QG3SY4rqnz7DZaFq7vrXACmS9tHTWFHgqg)
@@ -17,6 +18,8 @@ Screenshot preview, see top-left information of toggle stats:
 [Android SDK 29 .APK Debug](https://mega.nz/file/K4FQFATS#7E6FmEOn9h3UIQLg0ZVb66_zItlHBT8DzT2qx5Zr23Q)
 
 [Android SDK 29 .APK Release unsigned](https://mega.nz/file/Ch1AgJDD#f__m02qj0F8xkYTVY8o_BOUfZQkhtNkX1Y3fhKG8PKM)
+
+[Android .APK Debug Stable](https://mega.nz/file/H8kRUDBT#zWax2e1xxebrIZMmYPrmiWcbZBHnVAzAVZlY3EmuPnU)
 
 # Limitations & Tips
 
@@ -40,6 +43,7 @@ f806f216b7eb407dcbfd3c05bbb2fc9c2b771fb482f0a111ddeefb110ac71e8e  MPV-VVCEasy-de
 06bc7a8c3b2a97e96c89b9dca5d9b0f034afa6cdf1aec8ed80081890a6392985  MPV-VVCEasy-release-unsigned.apk
 ead8e9bdf617cc61bd1ed13f246bd3b247afc4f529dd50bba445975d7f3b7266  MPV-VVCEasy-API29debug.apk
 f184ee6eed67c944a79ae76a9efefd48adb6666313dc2e6f7fddfad2aee0ac77  MPV-VVCEasy-API29release-unsigned.apk
+f8c13279b23e334b985b69080e9cf755e593ac9f1fb0d2b98e0fa5ccf3ff4610  MPV-VVCEasy-stable.apk
 ```
 
 -   Martin Eesmaa
