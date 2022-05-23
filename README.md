@@ -388,7 +388,7 @@ License: LGPL-2.1+ & GPL-2.0+
 
 [mpv-android](https://github.com/mpv-android/mpv-android) - #mpv-android @ libera.chat
 
-VVC developer & forker: [tbiat](https://github.com/tbiat)
+VVC developer & forker: [tbiat](https://github.com/tbiat) & [Martin Eesmaa](https://github.com/MartinEesmaa/mpv-android-vvc)
 
 License: MIT
 
