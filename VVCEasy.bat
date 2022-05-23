@@ -64,6 +64,7 @@ echo 8. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)
 echo 9. Install vvDecPlayer from BitMovin
 echo 10. Install VLC VTM Plugins (Windows x64 of VLC, plugins by Inter Digital Inc)
 echo 11. Install FFmpeg VVDec support
+echo 12. Install MPV Android (OpenVVC plugin)
 set /p VVCSTART=Number: 
 if %VVCSTART% == 1 goto encodestart
 if %VVCSTART% == 2 goto decodestart
@@ -76,6 +77,7 @@ if %VVCSTART% == 8 goto decompresswin7z
 if %VVCSTART% == 9 goto installbitmovin
 if %VVCSTART% == 10 goto vlcvtmplugininstall
 if %VVCSTART% == 11 goto vvdecffmpeg
+if %VVCSTART% == 12 goto mpvandroidvvc
 
 :encodestart
 title Encode to VVC
@@ -533,6 +535,16 @@ echo.
 echo Linux (Only Ubuntu 20.04 built): https://mega.nz/file/T8l0GTqa#oWsDDrFYjzf3LhS9zRkuqqBz6H4yJmNQUNiu_erVQLo
 echo.
 echo See information on FFMPEGVVC.md or online GitHub: https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md
+echo.
+echo Press enter to go back menu.
+pause
+goto start
+
+:mpvandroidvvc
+echo Please see the document. The command will open the document for you.
+MPV.md
+echo.
+echo See information MPV.md or online Github: https://github.com/MartinEesmaa/VVCEasy/blob/master/MPV.md
 echo.
 echo Press enter to go back menu.
 pause
