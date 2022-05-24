@@ -42,7 +42,7 @@ goto welcomenow
 cls
 title Martin Eesmaa / VVCEasy
 echo Martin Eesmaa / VVCEasy
-echo Welcome to VVCEasy. (Batchfile Beta Version, v.0.5.0)
+echo Welcome to VVCEasy. (Batchfile Beta Version, v.0.9.0)
 pause
 goto start
 
@@ -50,7 +50,7 @@ goto start
 title Martin Eesmaa / VVCEasy
 color 07
 cls
-echo VVCEasy (Batchfile Beta Version, v.0.5.0)
+echo VVCEasy (Batchfile Beta Version, v.0.9.0)
 echo.
 echo What would you like to do for encode/decode of VVC?
 echo 1. Encode
@@ -58,24 +58,26 @@ echo 2. Decode
 echo 3. Help
 echo 4. Exit
 echo 5. Install/Test path environment
-echo 6. Install VLC Media Player (o266player, Windows x64)
-echo 7. Install quickly through Anaconda for ffmpeg (Windows)
-echo 8. Install/Update VVdec Web Player
-echo 9. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)
-echo 10. Install vvDecPlayer from BitMovin
-echo 11. Install VLC VTM Plugins (Windows x64 of VLC, plugins by Inter Digital Inc)
+echo 6. Install quickly through Anaconda (Python distribution) for ffmpeg (Windows)
+echo 7. Install/Update VVdec Web Player
+echo 8. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)
+echo 9. Install vvDecPlayer from BitMovin
+echo 10. Install VLC VTM Plugins (Windows/Linux x64 of VLC, plugins by Inter Digital Inc)
+echo 11. Install FFmpeg VVDec support
+echo 12. Install MPV Android (OpenVVC plugin)
 set /p VVCSTART=Number: 
 if %VVCSTART% == 1 goto encodestart
 if %VVCSTART% == 2 goto decodestart
 if %VVCSTART% == 3 goto help
 if %VVCSTART% == 4 goto exit
 if %VVCSTART% == 5 goto test
-if %VVCSTART% == 6 goto vlc
-if %VVCSTART% == 7 goto conda
-if %VVCSTART% == 8 goto installvvdecweb
-if %VVCSTART% == 9 goto decompresswin7z
-if %VVCSTART% == 10 goto installbitmovin
-if %VVCSTART% == 11 goto vlcvtmplugininstall
+if %VVCSTART% == 6 goto conda
+if %VVCSTART% == 7 goto installvvdecweb
+if %VVCSTART% == 8 goto decompresswin7z
+if %VVCSTART% == 9 goto installbitmovin
+if %VVCSTART% == 10 goto vlcvtmplugininstall
+if %VVCSTART% == 11 goto vvdecffmpeg
+if %VVCSTART% == 12 goto mpvandroidvvc
 
 :encodestart
 title Encode to VVC
@@ -281,72 +283,16 @@ echo Have a wonderful day! Thank you for using VVCEasy. :)
                                                                         
 for /f "delims=: tokens=*" %%A in ('findstr /b ::: "%~f0"') do @echo(%%A
 echo.
-echo Copyright 2021-2022 Martin Eesmaa
+echo Copyright (C) 2021-2022 Martin Eesmaa
 echo.
-echo ------------END----------------
+echo ------------ END OF THE PROGRAM ----------------
 timeout 5 /nobreak
 exit
 
-:vlc
-color 6F
-title VLC Media Player (custom build of o266player)
-cls
-echo Hello, would you like to install VLC Media Player (v3.0.11.1 Vetinari, custom build of o266player) on your computer?
-echo Before you install for VLC Media Player (custom build of o266player)
-echo The VLC Media Player (custom build of o266player) works only on Windows 7 / Windows Server 2012 or earlier versions.
-echo Windows Vista and older versions will not work, including Windows 8.0 won't work too, because it could be terminal error or/and cannot decode VVC format.
-echo You need 64-bit / x64 to run VLC custom build. On 32-bit / x86, it will not work to run.
-echo Note: Some operating system work VLC custom build on Virtualbox and VMware. Real machines can all almost run Windows versions, like Windows Server 2016.
-echo Reminder: I'm not kinda sure about this, I hope should you're running on real machine, that means it needs to be working to load VVC video format.
-echo Install? Y/N?
-set /p vlcinstall=Answer: 
-if %vlcinstall% == Y goto vlcinstaller
-if %vlcinstall% == N goto start
-if %vlcinstall% == y goto vlcinstaller
-if %vlcinstall% == n goto start
-
-:vlcinstaller
-title Downloading VLC Media Player (custom build of o266player)
-wget https://www.dropbox.com/s/hs7yoa9hkxa6ugd/vlc-3.0.11.1-w64.7z
-mkdir VLC
-copy 7-Zip VLC
-move vlc-3.0.11.1-w64.7z VLC
-cd VLC
-7z x vlc-3.0.11.1-w64.7z
-del /q "7z.exe" "7z.dll" "readme.txt" "license.txt" "History.txt" "vlc-3.0.11.1-w64.7z" 
-cd ../
-color 6E
-cls
-title Successful of VLC Media Player (o266player) installation.
-echo SUCCESSFUL! Now, would you like to download test sample VVC file test it out to VLC custom build of o266player?
-echo If yes, wget will download the example of VVC file and run to VLC a few seconds.
-echo If No, you will be prompted go back to menu.
-echo TIP: Run VLC.exe on your own VVC file for example, if your input frame rate is 30 and you encoded to VVC same frame rate input file.
-echo Example to run correctly frame rate on your VVC of VLC command: vlc.exe yourownfile.266 --no-drop-late-frames --avformat-fps=30
-set /p vlccompleted=Answer: 
-if %vlccompleted% == Y goto sample266
-if %vlccompleted% == N goto start
-if %vlccompleted% == y goto sample266
-if %vlccompleted% == n goto start
-
-:sample266
-color 07
-title Moving from VVCEasy.266 to VLC folder...
-move VVCEasy.266 VLC
-cd VLC
-title Running on VLC Media Player (o266player)...
-echo Note, if VLC modified version is not starting, try to run VLC Verified and Modified Version on your computer or wait a few minutes...
-vlc.exe VVCEasy.266 --no-drop-late-frames --avformat-fps=24
-cd ../
-title Successfully runned on VLC Media Player (o266player)...
-echo OK! Test completed successfully!
-timeout 5
-goto start
-
 :conda
 cls
-title ANACONDA
-echo Welcome to Anaconda Quick Install. This will only one task for ffmpeg. Would you like to install? Y/N?
+title ANACONDA (PYTHON DISTRIBUTION)
+echo Welcome to Anaconda (Python Distribution) Quick Install. This will do only one task to download ffmpeg. Would you like to install? Y/N?
 set /p anacondaman=Answer: 
 if %anacondaman% == Y goto condainstall
 if %anacondaman% == N goto start
@@ -437,7 +383,7 @@ certutil -hashfile vvenclibtest.exe SHA512
 rename SHA512SUMS SHA512SUMS.txt
 SHA512SUMS.txt
 echo Now please make sure double check that needs to be same hash. If it is matches hash same as .exe of SHA512SUMS.txt and CertUtil. That means good.
-echo If the hashes are not matched correctly, please contact Martin Eesmaa for problem.
+echo If the hashes are not matched correctly, please contact and create issue to Martin Eesmaa/VVCEasy on GitHub for your own problem.
 pause
 echo Thank you for decompressing WindowsVVC.7z... Now back to menu.
 timeout 3
@@ -537,13 +483,13 @@ goto start
 
 :vlcvtmplugininstall
 cls
-title VLC VTM Plugins Install (Windows)
+title VLC VTM Plugins Install (Windows & Linux)
 echo Welcome to VLC Media Player of VTM Plugins Installation.
 echo You need to run Windows version of Windows Vista / Windows Server 2008 to play VVC files.
 echo Windows XP can't load VTM plugins, but other plugins work.
 echo System type only = x64
-echo Linux will be coming soon... only TsDemuxPluginVLC had issue, see: https://github.com/InterDigitalInc/VTMDecoder_VLCPlugin/issues/5
-echo Current version = 3.0.16, latest version 3.0.17-3 (it will work same latest version)
+echo Linux is now available, see Linux installation at: https://github.com/MartinEesmaa/VVCEasy/tree/master/INSTALLVLCPLUGIN#for-linux-users
+echo Current version = 3.0.16, latest version 3.0.17-4 (it will work same latest version)
 echo Would you like to install VTM plugins to your VLC Media Player? Y/N?
 set /p vlcvtmyesorno=Answer: 
 if %vlcvtmyesorno% == Y goto installvlcvtmpluginnow
@@ -559,12 +505,47 @@ copy libvtmdec.dll "%programfiles%\VideoLAN\VLC\plugins\codec"
 copy libvvcdecoder_plugin.dll "%programfiles%\VideoLAN\VLC\plugins\codec"
 copy libvvctsdemux_plugin.dll "%programfiles%\VideoLAN\VLC\plugins\demux"
 cd ../
-echo Three dll files patched to your VLC Media Player.
-echo Restarting and starting VLC Media Player...
 taskkill /im vlc.exe
+echo Three dll files are patched to your VLC Media Player.
+echo Restarting and starting VLC Media Player...
 echo Please load your VVC (codec) video file to VLC Media Player.
-echo For more information and options: Please go to https://github.com/InterDigitalInc/VTMDecoder_VLCPlugin
-echo Once, you're finished, you don't have to repatch again. You can continue normally VLC Media Player next time after VVCEasy.
+echo For more information and options, please go at https://github.com/InterDigitalInc/VTMDecoder_VLCPlugin
+echo Once, you're finished, you don't have to patch again. You can continue normally VLC Media Player next time after VVCEasy.
 "%programfiles%\VideoLAN\VLC\vlc.exe"
+pause
+goto start
+
+:ffmpegvvdec
+cls
+title FFmpeg VVDec support
+echo Hello, would you like to download FFmpeg VVDec support? Y/N?
+set /p vvcnow0
+if %vvcnow0% == Y goto installvvdecffmpegnow
+if %vvcnow0% == N goto start
+if %vvcnow0% == y goto installvvdecffmpegnow
+if %vvcnow0% == n goto start
+
+:installvvdecffmpegnow
+echo Your favourite operating system is available on FFmpeg VVDec support. Please copy the link to a web browser.
+echo.
+echo Windows: https://mega.nz/file/e1MEUAwR#c7u7vDvwzp6JiSaRDwhCyOaH4cGnx1xQDPyKgbAd-qM
+echo.
+echo Mac OS: https://mega.nz/file/K09gRbYJ#SewWjY4LqVdvlivXJhqQMjrsXO6ec8a1jmapj5nO2Gs
+echo.
+echo Linux (Only Ubuntu 20.04 built): https://mega.nz/file/T8l0GTqa#oWsDDrFYjzf3LhS9zRkuqqBz6H4yJmNQUNiu_erVQLo
+echo.
+echo See information on FFMPEGVVC.md or online GitHub: https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md
+echo.
+echo Press enter to go back menu.
+pause
+goto start
+
+:mpvandroidvvc
+echo Please see the document. The command will open the document for you.
+MPV.md
+echo.
+echo See information MPV.md or online Github: https://github.com/MartinEesmaa/VVCEasy/blob/master/MPV.md
+echo.
+echo Press enter to go back menu.
 pause
 goto start

@@ -11,15 +11,15 @@ namespace VVCEasy
             bool exit = false;
             Console.Title = "Martin Eesmaa / VVCEasy";
             Console.WriteLine("Martin Eesmaa / VVCEasy");
-            Console.WriteLine("Welcome to VVCEasy. (.NET Console Beta Version, v.0.5.0)");
+            Console.WriteLine("Welcome to VVCEasy. (.NET Console Beta Version, v.0.9.0)");
             Console.ReadLine();
             do
             {
                 Console.Clear();
-                Console.WriteLine("VVCEasy (.NET Console Beta Version, v.0.5.0)");
+                Console.WriteLine("VVCEasy (.NET Console Beta Version, v.0.9.0)");
                 Console.WriteLine("Note: C# is not ready yet, malfunction mode\n");
                 Console.Title = "Martin Eesmaa / VVCEasy";
-                Console.WriteLine("What would you like to do for encode/decode of VVC?\n1. Encode\n2. Decode\n3. Help\n4. Exit\n5. Install/Test path environment\n6. Install VLC Media Player (o266player, Windows x64)\n7. Install quickly through Anaconda for ffmpeg (Windows)\n8. Install VVdec Web Player\n9. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)\n10. Install vvDecPlayer from BitMovin\n11. Install VLC VTM Plugins (Windows x64 of VLC, plugins by Inter Digital Inc)");
+                Console.WriteLine("What would you like to do for encode/decode of VVC?\n1. Encode\n2. Decode\n3. Help\n4. Exit\n5. Install/Test path environment\n6. Install FFmpeg VVDec support\n7. Install quickly through Anaconda for ffmpeg (Windows)\n8. Install VVdec Web Player\n9. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)\n10. Install vvDecPlayer from BitMovin\n11. Install VLC VTM Plugins (Windows/Linux x64 of VLC, plugins by Inter Digital Inc)\n12. Install MPV Android (OpenVVC plugin)");
 
                 string input = Console.ReadLine();
 
@@ -134,19 +134,14 @@ namespace VVCEasy
                 else if (input == "6")
                 {
                     Console.Clear();
-                    Console.Title = "VLC Media PLayer (custom build of o266player)";
-                    Console.WriteLine("Hello, would you like to install VLC Media Player (v3.0.11.1 Vetinari, custom build of o266player) on your computer?\nBefore you install for VLC Media Player (custom build of o266player)...\nThe VLC Media Player (custom build of o266player) works only on Windows 7 / Windows Server 2012 or earlier versions.\nWindows Vista and older versions will not work, including Windows 8.0 won't work too, because it could be terminal error or/and cannot decode VVC format.\nYou need 64-bit / x64 to run VLC custom build. On 32-bit / x86, it will not work to run.\nNote: Some operating system work VLC custom build on Virtualbox and VMware. Real machines can all almost run Windows versions, like Windows Server 2016.\nReminder: I'm not kinda sure about this, I hope should you're running on real machine, that means it needs to be working to load VVC video format.\nInstall? Y/N?");
+                    Console.Title = "FFmpeg VVDec support";
+                    Console.WriteLine("Hello, would you like to download FFmpeg VVDec support? Y/N?");
 
                     string vlcinstall = Console.ReadLine();
 
                     if (vlcinstall == "Y")
                     {
-                        Console.Title = "Downloading VLC Media Player (custom build of o266player)";
-
-                        using (WebClient web1 = new())
-                        web1.DownloadFile("", "");
-
-                        Console.WriteLine("Sorry, the command is not ready yet...");
+                        Console.WriteLine("Your favourite operating system is available on FFmpeg VVDec support. Please copy the link to a web browser.\nWindows: https://mega.nz/file/e1MEUAwR#c7u7vDvwzp6JiSaRDwhCyOaH4cGnx1xQDPyKgbAd-qM\nMac OS: https://mega.nz/file/K09gRbYJ#SewWjY4LqVdvlivXJhqQMjrsXO6ec8a1jmapj5nO2Gs\nLinux (Only Ubuntu 20.04 built): https://mega.nz/file/T8l0GTqa#oWsDDrFYjzf3LhS9zRkuqqBz6H4yJmNQUNiu_erVQLo\n\nSee information on FFMPEGVVC.md or online GitHub: https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md\nPress enter to go back menu.\n");
                         Console.ReadLine();
                     }
                 }
@@ -248,8 +243,8 @@ namespace VVCEasy
                 else if (input == "11")
                 {
                     Console.Clear();
-                    Console.Title = "VLC VTM Plugins Install (Windows)";
-                    Console.WriteLine("Welcome to VLC Media Player of VTM Plugins Installation.\nYou need to run Windows version of Windows Vista / Windows Server 2008 to play VVC files.\nWindows XP can't load VTM plugins, but other plugins work.\nSystem type only = x64\nLinux will be coming soon...\nCurrent version = 3.0.16\nWould you like to install VTM plugins to your VLC Media Player? Y/N?");
+                    Console.Title = "VLC VTM Plugins Install (Windows & Linux)";
+                    Console.WriteLine("Welcome to VLC Media Player of VTM Plugins Installation.\nYou need to run Windows version of Windows Vista / Windows Server 2008 to play VVC files.\nWindows XP can't load VTM plugins, but other plugins work.\nSystem type only = x64\nLinux is now available, see Linux installation at: https://github.com/MartinEesmaa/VVCEasy/tree/master/INSTALLVLCPLUGIN#for-linux-users\nCurrent version = 3.0.17.4\nWould you like to install VTM plugins to your VLC Media Player? Y/N?");
 
                     string vtmvlcinstallnow1 = Console.ReadLine();
 
@@ -263,6 +258,13 @@ namespace VVCEasy
 
                         Console.ReadLine();
                     }
+                }
+                else if (input == "12")
+                {
+                    Console.Clear();
+                    Console.Title = "Android MPV PLayer (OpenVVC support)";
+                    Console.WriteLine("See information MPV.md or online Github: https://github.com/MartinEesmaa/VVCEasy/blob/master/MPV.md\nPress enter to go back menu.\n");
+                    Console.ReadLine();
                 }
             }
             while (exit == false);

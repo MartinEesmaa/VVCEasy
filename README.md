@@ -7,13 +7,14 @@ https://github.com/MartinEesmaa/VVCEasy/actions/workflows/dotnet.yml)
 ![GitHub release (release name instead of tag name)](https://img.shields.io/github/v/release/MartinEesmaa/VVCEasy?include_prereleases)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/MartinEesmaa/VVCEasy)
 ![Matrix](https://img.shields.io/matrix/vvceasy:matrix.org?label=VVCEasy%20Matrix)
+![Discord](https://img.shields.io/discord/974611343237869619?label=VVCEasy%20Discord%20Chat)
 
-# VVCEasy (Windows (Full), Mac and Linux (partial) (by Martin Eesmaa)
+# VVCEasy (Windows, Mac OS, Linux & Android) (by Martin Eesmaa)
 VVCEasy is that you don't have to compile or/and coding to encode VVC (known as Versatile Video Codec). Simple, Easy, Encode and Decode.
 
-VVCEasy comes to one-easy command of ffmpeg, VVC Tools, python, VLC o266player, VVDEC Web Player, Bitmovin VVDec Player, YUView and more.
+VVCEasy comes to one-easy command of ffmpeg, VVC Tools, python, VLC o266player, VVDEC Web Player, Bitmovin VVDec Player, YUView, libvvdec and more.
 
-Installation: Go to releases and download latest version.
+Installation: Go to the releases and download latest version.
 
 VVCEasy is not finished yet. I'm trying to work out with my codes. I'm not good for code programming, just simple coding.
 Sorry to say this. I will give you of my update announcement once I release the news.
@@ -22,26 +23,25 @@ Windows source run (Batchfile): VVCEasy.bat
 
 Windows/Mac/Linux source run (Csharp): Bin/Release or Debug/netX.x/VVCEasy.exe (after build of C#), this requires VVCEasy.dll to run console application.
 
-Note to Mac and Linux of o266player VLC: Sorry Mac and Linux users :(, here is a why MacOS and Linux cannot run VLC o266player.
-
-On macOS 10.15.6, I tried build, but it failed, you can have a look for Stack Overflow: [Link](https://stackoverflow.com/questions/70387126/error-1-and-2-trying-to-compile-vlc-o266player-missing-git-and-txt).
-
-On Linux, it doesn't support of VLC (o266player build).
-If you want to run VLC (o266player version), you need to run Windows only for a virtual machine or your a real computer.
-
 Matrix chat: https://matrix.to/#/#vvceasy:matrix.org
 
 Revolt: https://app.revolt.chat/server/01G1QSBZ4AMGDBWPVJ63EDZCD7/channel/01G1QSBZ4ABH7REMG6T47R8KS4
 
-Discord: Coming soon...
+Discord: https://discord.gg/t54cADTbWW
 
 # All lists
 
 - [Donate to Martin Eesmaa using cryptocurrency](#donate-to-martin-eesmaa-using-cryptocurrency)
 
-- [Compatibility of O266Player](#compatibility-windows-operating-system-vlc-media-player-v30111-o266player-build-version)
+- [VLC InterDigital VTM VVC Plugin](#vlc-interdigital-vtm-vvc-plugin)
+
+- [VLC o266player](#vlc-o266player-windows-only-mac-os-will-be-later)
 
 - [Bitmovin VVDec Player](#bitmovin-vvdec-player)
+
+- [FFmpeg VVC Decoder support](#ffmpeg-vvdec-support)
+
+- [MPV OpenVVC support (Android only)](#mpv-openvvc-support-android-only)
 
 - [Compile for VVCEasy](#compile-for-vvceasy)
 
@@ -69,41 +69,9 @@ bc1qhf4zu5uythr7vyt2dru73qp0k2rzrx355fsx47yjxc2ueunz8frqxmwap3
 ```
 85Ahh93M88gV8ekymtYwb6TS14TZ36jNGTFgceaRH7hj8Rtx1qVB9PobnJLR5siz4nYBnzWy3pkV6KaVroifGMVh7n4br3J
 ```
-- **BAT (BASIC ATTENTION TOKEN):** For Brave users only, you can also contribute by support to me, I'm verified Brave user on Brave Rewards.
+- **BAT (BASIC ATTENTION TOKEN):** For Brave Browser users only, you can also contribute by supporting me, I'm verified Brave user on Brave Rewards.
 
-# Compatibility Windows Operating System (VLC Media Player v3.0.11.1, o266player build version)
-
-Windows | Compatibility (only x64)  | Screenshot | Date report (DD/MM/YYYY, 24hr)
-------- | ------- | --------------- | ------------- |
-Windows 2000/ME or older | :x: (Cannot run custom build) | [Link](https://i.imgur.com/hHnh5Cx.png) | 19/02/2022 18:35:34 (AEDT)
-Windows XP | ⚠️ (Terminal only, GUI is not working) | [Link](https://i.imgur.com/v3jMW3d.png) | 11/12/2021 15:18:29 (AEDT)
-Windows Vista | ⚠️ (GUI Works, but VVC won't show video)
-Windows 7 | :white_check_mark: (All checked) | [Link](https://i.imgur.com/4cANwDQ.png) | 17/12/2021 21:32:38 (AEDT)
-Windows 8.0   |   ⚠️ (GUI Works, but VVC won't show video) | [Link](https://i.imgur.com/cl8qASz.png) | 20/02/2022 15:27:40 (AEDT)
-Windows 8.1 |   :white_check_mark: (All checked) | [Link](https://i.imgur.com/1Fe6xGW.png) | 17/12/2021 18:23:35 (AEDT)
-Windows 10  |   ⚠️ (GUI Works, but VVC won't show video)
-Windows 11  |   :white_check_mark: (All checked) | [Link](https://i.imgur.com/Me2L998.png) | 13/12/2021 15:58:55 (AEDT)
-
-Windows Server | Compatibility (only x64) | Screenshot | Date report (DD/MM/YYYY, 24hr)
-------- | ------- | --------- | --------- |
-Windows Server 2003 | ⚠️ (Terminal only, GUI is not working) | [Link](https://i.imgur.com/G7F2bif.png) | 19/02/2022 21:38:20 (AEDT)
-Windows Server 2008 | ⚠️ (GUI Works, but VVC won't show video) | [Link](https://i.imgur.com/GXFgIt8.png) | 20/02/2022 14:02:28 (AEDT)
-Windows Server 2012 | :white_check_mark: (All checked) | [Link](https://i.imgur.com/Vcgag8B.png) | 17/12/2021 20:57:16 (AEDT)
-Windows Server 2016   | :white_check_mark: (Already checked by Tencent Cloud)
-Windows Server 2019 | :black_square_button: (Needs to be tested)
-Windows Server 2022  | :black_square_button: (Needs to be tested)
-
-VLC Custom build of o266player only accepts to run 64-bit / x64 on your computer. 32-bit / x86 won't work.
-
-This cannot be run on Windows Vista / Windows Server 2008 or older and Windows 8.0 to play VVC video file of VLC Custom build. 
-
-Note: I'm trying to work it out of VLC 3.0.16.
-
-Reminder: Some operating systems are working to load VVC video format in Virtual Machine softwares, but real machines will work every operating system, example Windows Server 2016 has already been tested by Tencent Cloud.
-
-If your operating system is working to decode VVC video format like you're running on Windows 10, please fork this repository, edit README and make pull request of my original repository from your forked repository. Screenshot must be required winver and VLC Media Player (custom build of o266player)
-
-***UPDATE of 27/03/2022 15:00 AEDT:***
+# VLC InterDigital VTM VVC Plugin
 
 I have a great news. VLC latest version worked out well of Inter Digital VTM plugins. On o266player, there was some problems on my computer for one reason...
 
@@ -111,7 +79,7 @@ One reason that my Windows 11 operating system won't view video of VVC file on o
 
 Here is a my comparision of o266player version and VTM VVC plugins:
 
-Top left and right is o266player.
+Top left and right is o266player by Tencent Cloud.
 
 Bottom left and right is VLC VTM plugins by Inter Digital Inc.
 
@@ -129,11 +97,31 @@ About o266player: Since o266player repository have no new commits than one year.
 
 We will remove o266player list, if no new commits than one year.
 
+# VLC o266player (Windows only, Mac OS will be later)
+
+For more information about o266player.
+
+See [o266player.md](https://github.com/MartinEesmaa/VVCEasy/blob/master/o266player.md).
+
 # Bitmovin VVDec Player
 
 For more information about Bitmovin VVDec Player.
 
 See [Bitmovin.md](https://github.com/MartinEesmaa/VVCEasy/blob/master/Bitmovin.md).
+
+# FFmpeg VVDEC support
+
+FFmpeg VVC Decoder supports of Windows, Mac and Linux.
+
+See [FFMPEGVVC.md](https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md).
+
+# MPV OpenVVC support (Android only)
+
+MPV OpenVVC Decoder supports only of Android.
+
+Only VVC file can play, but merged .mp4 is black screen, so you need external sound from vvc video codec, if necessary.
+
+See [MPV.md](https://github.com/MartinEesmaa/VVCEasy/blob/master/MPV.md).
 
 # Compile for VVCEasy
 
@@ -233,12 +221,12 @@ ffmpeg -i input.mp4 -pix_fmt yuv420p -strict 1 inputtranscode.y4m
 
 Verify uncompressed video using ffplay before encode to VVENC (important replace video size, otherwise it will not correctly show video, it's like scrambled eggs video):
 ```
-ffplay -i inputtranscode.yuv -s 854x480
+ffplay -i inputtranscode.yuv -video_size 1280x720
 ``` 
 
 Default pixel format of ffplay for yuv and y4m is yuv420p without `-pix_fmt` command.
 
-For y4m videos, replace -i inputtranscode.yuv with `-i inputtranscode.y4m`. For yuv420p10 on your input video 10 bit, add `-pix_fmt yuv420p10`.
+For y4m videos, replace `-i inputtranscode.yuv` with `-i inputtranscode.y4m`. For yuv420p10 on your input video 10 bit, add `-pix_fmt yuv420p10`.
 
 For easy to verify YUV/Y4M, use YUView, open your YUV or Y4M encoded, make sure video size, YUV/Y4M format and frame rate same like from input video file (e.g. MP4, AVI, MKV and others.
 
@@ -249,6 +237,18 @@ vvencapp -i out.yuv -s 854x480 -r 30 -o vvc.266
 ```
 -s means video size, -r means frame per second and -o means output. Note: (Simple) as Default settings is YUV420P (8-bit)
 
+**WARNING: If you encode from yuv/y4m of your frame rate is 11.988, 14.985, 23.976, 29.970 or 59.940 FPS, replace this command -r by --fps.**
+
+11.988 fps = `--fps 12000/1001`
+
+14.985 fps = `--fps 15000/1001`
+
+23.976 fps = `--fps 24000/1001`
+
+29.970 fps = `--fps 30000/1001`
+
+59.940 fps = `--fps 60000/1001`
+
 The default of VVENC: Constant Quality is 32 and speed is medium.
 If you want to get smaller video size and lossy video, add --qp 38. (Not recommended)
 If you want to get lossless video without losing quality (minimum loss quality), use CQ 16-19 and preset slow (optional slower). (Recommended, only Y4M, Raw and Uncompressed video files)
@@ -258,7 +258,7 @@ Lossy video/Smallest video size:
 vvencapp --qp 38 -i out.yuv -s 854x480 -r 30 -o vvc.266
 ```
 
-**NOTE: If you want have true lossless on your video, please visit [FFV1](http://ffv1.org) or H.264 Lossless/H.265 Lossless/Libaom lossless video codec**
+**NOTE: If you want have true lossless on your video, please visit [FFV1](http://ffv1.org) or H.264 Lossless video codec**
 
 **NOTE 2: VVENC does not support lossless.**
 
@@ -375,3 +375,37 @@ License: LGPL-2.1
 © 2021-2022 [Inter Digital Inc](https://github.com/InterDigitalInc) (All rights reserved)
 
 ---
+
+[FFmpeg](https://github.com/FFmpeg/FFmpeg) - Mirror of https://git.ffmpeg.org/ffmpeg.git
+
+VVC developers & forkers: [lehmann-c](https://github.com/lehmann-c) and [tbiat](https://github.com/tbiat)
+
+License: LGPL-2.1+ & GPL-2.0+
+
+© 2000-2022 [FFmpeg developers](https://github.com/FFmpeg) (All rights reserved)
+
+---
+
+[mpv-android](https://github.com/mpv-android/mpv-android) - #mpv-android @ libera.chat
+
+VVC developer & forker: [tbiat](https://github.com/tbiat) & [Martin Eesmaa](https://github.com/MartinEesmaa/mpv-android-vvc)
+
+License: MIT
+
+© 2016-2022 Ilya Zhuravlev, sfan5 & mpv developers (All rights reserved)
+
+---
+
+[OpenVVC](https://github.com/OpenVVC/OpenVVC) - VVC Decoder
+
+License: LGPL-2.1
+
+© 2021-2022 OpenVVC developers (All rights reserved)
+
+---
+
+[GPAC/MP4BOX](https://github.com/gpac/gpac) - Modular Multimedia framework for packaging, streaming and playing your favorite content.
+
+License: LGPL-2.1
+
+© 2003-2022 [Jean Le Feuvre](https://github.com/jeanlf) & [GPAC developers/contributors](https://github.com/gpac/gpac/graphs/contributors)
