@@ -42,7 +42,7 @@ goto welcomenow
 cls
 title Martin Eesmaa / VVCEasy
 echo Martin Eesmaa / VVCEasy
-echo Welcome to VVCEasy. (Batchfile Beta Version, v.0.5.0)
+echo Welcome to VVCEasy. (Batchfile Beta Version, v.0.9.0)
 pause
 goto start
 
@@ -50,7 +50,7 @@ goto start
 title Martin Eesmaa / VVCEasy
 color 07
 cls
-echo VVCEasy (Batchfile Beta Version, v.0.5.0)
+echo VVCEasy (Batchfile Beta Version, v.0.9.0)
 echo.
 echo What would you like to do for encode/decode of VVC?
 echo 1. Encode
