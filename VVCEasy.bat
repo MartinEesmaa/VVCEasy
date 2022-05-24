@@ -62,7 +62,7 @@ echo 6. Install quickly through Anaconda (Python distribution) for ffmpeg (Windo
 echo 7. Install/Update VVdec Web Player
 echo 8. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)
 echo 9. Install vvDecPlayer from BitMovin
-echo 10. Install VLC VTM Plugins (Windows x64 of VLC, plugins by Inter Digital Inc)
+echo 10. Install VLC VTM Plugins (Windows/Linux x64 of VLC, plugins by Inter Digital Inc)
 echo 11. Install FFmpeg VVDec support
 echo 12. Install MPV Android (OpenVVC plugin)
 set /p VVCSTART=Number: 
@@ -483,13 +483,13 @@ goto start
 
 :vlcvtmplugininstall
 cls
-title VLC VTM Plugins Install (Windows)
+title VLC VTM Plugins Install (Windows & Linux)
 echo Welcome to VLC Media Player of VTM Plugins Installation.
 echo You need to run Windows version of Windows Vista / Windows Server 2008 to play VVC files.
 echo Windows XP can't load VTM plugins, but other plugins work.
 echo System type only = x64
-echo Linux will be coming soon... only TsDemuxPluginVLC had issue, see: https://github.com/InterDigitalInc/VTMDecoder_VLCPlugin/issues/5
-echo Current version = 3.0.16, latest version 3.0.17-3 (it will work same latest version)
+echo Linux is now available, see Linux installation at: https://github.com/MartinEesmaa/VVCEasy/tree/master/INSTALLVLCPLUGIN#for-linux-users
+echo Current version = 3.0.16, latest version 3.0.17-4 (it will work same latest version)
 echo Would you like to install VTM plugins to your VLC Media Player? Y/N?
 set /p vlcvtmyesorno=Answer: 
 if %vlcvtmyesorno% == Y goto installvlcvtmpluginnow
@@ -505,12 +505,12 @@ copy libvtmdec.dll "%programfiles%\VideoLAN\VLC\plugins\codec"
 copy libvvcdecoder_plugin.dll "%programfiles%\VideoLAN\VLC\plugins\codec"
 copy libvvctsdemux_plugin.dll "%programfiles%\VideoLAN\VLC\plugins\demux"
 cd ../
-echo Three dll files patched to your VLC Media Player.
-echo Restarting and starting VLC Media Player...
 taskkill /im vlc.exe
+echo Three dll files are patched to your VLC Media Player.
+echo Restarting and starting VLC Media Player...
 echo Please load your VVC (codec) video file to VLC Media Player.
-echo For more information and options: Please go to https://github.com/InterDigitalInc/VTMDecoder_VLCPlugin
-echo Once, you're finished, you don't have to repatch again. You can continue normally VLC Media Player next time after VVCEasy.
+echo For more information and options, please go at https://github.com/InterDigitalInc/VTMDecoder_VLCPlugin
+echo Once, you're finished, you don't have to patch again. You can continue normally VLC Media Player next time after VVCEasy.
 "%programfiles%\VideoLAN\VLC\vlc.exe"
 pause
 goto start
