@@ -11,12 +11,12 @@ namespace VVCEasy
             bool exit = false;
             Console.Title = "Martin Eesmaa / VVCEasy";
             Console.WriteLine("Martin Eesmaa / VVCEasy");
-            Console.WriteLine("Welcome to VVCEasy. (.NET Console Beta Version, v.0.5.0)");
+            Console.WriteLine("Welcome to VVCEasy. (.NET Console Beta Version, v.0.9.0)");
             Console.ReadLine();
             do
             {
                 Console.Clear();
-                Console.WriteLine("VVCEasy (.NET Console Beta Version, v.0.5.0)");
+                Console.WriteLine("VVCEasy (.NET Console Beta Version, v.0.9.0)");
                 Console.WriteLine("Note: C# is not ready yet, malfunction mode\n");
                 Console.Title = "Martin Eesmaa / VVCEasy";
                 Console.WriteLine("What would you like to do for encode/decode of VVC?\n1. Encode\n2. Decode\n3. Help\n4. Exit\n5. Install/Test path environment\n6. Install FFmpeg VVDec support\n7. Install quickly through Anaconda for ffmpeg (Windows)\n8. Install VVdec Web Player\n9. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)\n10. Install vvDecPlayer from BitMovin\n11. Install VLC VTM Plugins (Windows/Linux x64 of VLC, plugins by Inter Digital Inc)\n12. Install MPV Android (OpenVVC plugin)");
