@@ -37,7 +37,7 @@ Make sure to allow apps from unknown sources. [Link: Wikihow](https://www.wikiho
 
 If Google warns you, that Android MPV (OpenVVC plugin) app is malicious by Play Protect, press "Install anyway".
 
-You can also play external sound audio file from h266 file.
+You can also play external sound audio file from VVC video codec file.
 
 # SHA256 SUMS
 ```
