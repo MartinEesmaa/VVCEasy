@@ -12,4 +12,6 @@ Gitlab: [MartinEesmaa](https://gitlab.com/MartinEesmaa)
 
 LinkedIn: https://www.linkedin.com/in/martin-eesmaa-4b355587/
 
+Wikipedia: [MartinHero13](https://en.wikipedia.org/wiki/User:MartinHero13)
+
 - Martin Eesmaa
