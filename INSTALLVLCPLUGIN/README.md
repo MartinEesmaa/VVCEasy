@@ -1,4 +1,4 @@
-# VLC Media Player (Inter Digital VLC VTM Decoder Plugin installation of Windows)
+# VLC Media Player (Inter Digital VLC VTM Decoder Plugin installation of Windows and Linux)
 This can work only for VLC 3.0.9.2 and later version (eg. 3.0.17.4). VLC 4.0.0-dev won't work.
 
 To install Inter Digital VLC VTM Decoder Plugin, you need VLC Media Player latest version installed on your computer and supported 64-bit.
@@ -15,11 +15,16 @@ Step 3: Enjoy and play your h266 file into your VLC Media Player :).
 
 ### For Linux users
 
-These two files are successfully, but one file is not success of building TsDemuxPluginVLC. I don't understand, where to patch ES format?
+Open terminal, type `sudo su` to gain root access, copy code:
+```
+cp libvvcdecoder_plugin.so /lib/x86_64-linux-gnu/vlc/plugins/codec
+cp libvtmdec.so /lib/x86_64-linux-gnu/vlc/plugins/codec
+cp libvctsdemux_plugin.so /lib/x86_64-linux-gnu/vlc/plugins/demux
+```
 
-Two files includes: libvtmdec.so and libvvcdecoder_plugin.so
+Preview:
 
-Log file: https://pastebin.com/E4tNsJ43
+![preview](vvceasylinuxvlc.png)
 
 ### Alternative using command line of Windows
 
