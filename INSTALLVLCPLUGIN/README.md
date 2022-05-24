@@ -27,7 +27,7 @@ VLC from Snap Store:
 cp libvvcdecoder_plugin.so /snap/vlc/2344/usr/lib/vlc/plugins/codec
 cp libvtmdec.so /snap/vlc/2344/usr/lib/vlc/plugins/codec
 cp libvctsdemux_plugin.so /snap/vlc/2344/usr/lib/vlc/plugins/demux
-
+```
 Preview:
 
 ![preview](vvceasylinuxvlc.png)
