@@ -101,19 +101,19 @@ We will remove o266player list, if no new commits than one year.
 
 For more information about o266player.
 
-See [o266player.md](https://github.com/MartinEesmaa/VVCEasy/blob/master/o266player.md).
+See [o266player.md](o266player.md).
 
 # Bitmovin VVDec Player
 
 For more information about Bitmovin VVDec Player.
 
-See [Bitmovin.md](https://github.com/MartinEesmaa/VVCEasy/blob/master/Bitmovin.md).
+See [Bitmovin.md](Bitmovin.md).
 
 # FFmpeg VVDEC support
 
 FFmpeg VVC Decoder supports of Windows, Mac and Linux.
 
-See [FFMPEGVVC.md](https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md).
+See [FFMPEGVVC.md](FFMPEGVVC.md).
 
 # MPV OpenVVC support (Android only)
 
@@ -121,7 +121,7 @@ MPV OpenVVC Decoder supports only of Android.
 
 Only VVC file can play, but merged .mp4 is black screen, so you need external sound from vvc video codec, if necessary.
 
-See [MPV.md](https://github.com/MartinEesmaa/VVCEasy/blob/master/MPV.md).
+See [MPV.md](MPV.md).
 
 # Compile for VVCEasy
 
