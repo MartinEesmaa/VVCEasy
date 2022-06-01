@@ -11,13 +11,13 @@ Screenshot preview, see top-left information of toggle stats:
 
 # Download MPV Android Player (OpenVVC plugin)
 
-[Android SDK 29 .APK Debug (Recommended)](https://mega.nz/file/K4FQFATS#7E6FmEOn9h3UIQLg0ZVb66_zItlHBT8DzT2qx5Zr23Q)
+[Android SDK 29 .APK Debug (Recommended)](https://mega.nz/file/GsFzADRA#nyjyXwicrT5-thlHaxkkZoS-pY9It4atMwsdJn7RYDI)
 
-[Android SDK 29 .APK Release unsigned](https://mega.nz/file/Ch1AgJDD#f__m02qj0F8xkYTVY8o_BOUfZQkhtNkX1Y3fhKG8PKM)
+[Android SDK 29 .APK Release unsigned](https://mega.nz/file/qhEASBzD#OcSvHiQutEB1PrDwiSBNEUtC92tDLzW2qTS4rR6tTdU)
 
-[Android SDK 30 .APK Debug](https://mega.nz/file/v4shBToK#P8bBW70b5QG3SY4rqnz7DZaFq7vrXACmS9tHTWFHgqg)
+[Android SDK 30 .APK Debug](https://mega.nz/file/apE3DbQR#fk_zAfwGY8xTnZAy1jUZ_f63JYOybL3hBW_yMx_E2Kw)
 
-[Android SDK 30 .APK Release unsigned](https://mega.nz/file/L1d0RCRA#JyGcjFRsVQNjo_y0j11_Kdx9oXapOt3fg87-RzppURg)
+[Android SDK 30 .APK Release unsigned](https://mega.nz/file/u8cHQKqK#UdEon6vTs5PvxrKONzeIJYyOIj9d-fiv1HRqMl98ppY)
 
 [Android .APK Debug Stable](https://mega.nz/file/H8kRUDBT#zWax2e1xxebrIZMmYPrmiWcbZBHnVAzAVZlY3EmuPnU)
 
@@ -25,7 +25,7 @@ Screenshot preview, see top-left information of toggle stats:
 
 This app might crash, slow or freeze on your Android phone for playing VVC high resolutions or/and old devices.
 
-MPV Android OpenVVC App requires your system type of ARM64 (aarch64) and x86_64 to run on Android.
+MPV Android OpenVVC App requires your system type of ARM64 (aarch64), x86 (i686), ARMv7 (armeabi-v7a) and x86_64 to run on Android.
 
 Android MPV Player doesn't work seek duration of VVC decoded file.
 
@@ -41,10 +41,10 @@ You can also play external sound audio file from VVC video codec file.
 
 # SHA256 SUMS
 ```
-ead8e9bdf617cc61bd1ed13f246bd3b247afc4f529dd50bba445975d7f3b7266  MPV-VVCEasy-API29debug.apk
-f184ee6eed67c944a79ae76a9efefd48adb6666313dc2e6f7fddfad2aee0ac77  MPV-VVCEasy-API29release-unsigned.apk
-f806f216b7eb407dcbfd3c05bbb2fc9c2b771fb482f0a111ddeefb110ac71e8e  MPV-VVCEasy-debug.apk
-06bc7a8c3b2a97e96c89b9dca5d9b0f034afa6cdf1aec8ed80081890a6392985  MPV-VVCEasy-release-unsigned.apk
+60cac016967d555f790f8daeccd54c17960de49d1929ffbdeaba3e17f8fda77a  MPV-VVCEasy-API29debug.apk
+0a9fd2046f7a6eebcc7935257282e2c189d51a16f7c2aade7aa3d9177865fa87  MPV-VVCEasy-API29release-unsigned.apk
+e7176a432b39c261ca4250f21750535cf52576e550f3e2e899929f907e7bcd50  MPV-VVCEasy-debug.apk
+9dda2ea33956ce0880519c4d7ef77491802e93542c21603076b95a3dd1abf90d  MPV-VVCEasy-release-unsigned.apk
 f8c13279b23e334b985b69080e9cf755e593ac9f1fb0d2b98e0fa5ccf3ff4610  MPV-VVCEasy-stable.apk
 ```
 
