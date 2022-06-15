@@ -133,7 +133,7 @@ Inno Setup link: https://jrsoftware.org/isdl.php
 Step 1: Clone VVCEasy git and open VVCEasy_compiler.iss
 ```
 cd %userprofile%\Downloads
-git clone https://github.com/MartinEesmaa/VVCEasy.git
+git clone https://github.com/MartinEesmaa/VVCEasy && cd VVCEasy
 VVCEasy_compiler.iss
 ```
 
@@ -152,7 +152,7 @@ Link: https://dotnet.microsoft.com/en-us/download
 
 Step 1: Clone git and cd VVCEasy
 ```
-git clone https://github.com/MartinEesmaa/VVCEasy.git && cd VVCEasy
+git clone https://github.com/MartinEesmaa/VVCEasy && cd VVCEasy
 ```
 
 Step 2: Before you build, make sure to build and test it. Don't worry, when you build with .NET, it will restore project and build.
@@ -216,17 +216,23 @@ ffmpeg -i input.mp4 -pix_fmt yuv420p -strict 1 inputtranscode.yuv
 
 For Y4M transcode (lossless from uncompressed video files, only 8 bit):
 ```
-ffmpeg -i input.mp4 -pix_fmt yuv420p -strict 1 inputtranscode.y4m
+ffmpeg -i input.mp4 -pix_fmt yuv420p -c:v wrapped_avframe -strict 1 inputtranscode.y4m
 ```
 
 Verify uncompressed video using ffplay before encode to VVENC (important replace video size, otherwise it will not correctly show video, it's like scrambled eggs video):
 ```
-ffplay -i inputtranscode.yuv -video_size 1280x720
+ffplay inputtranscode.yuv -video_size 1280x720
 ``` 
 
 Default pixel format of ffplay for yuv and y4m is yuv420p without `-pix_fmt` command.
 
-For y4m videos, replace `-i inputtranscode.yuv` with `-i inputtranscode.y4m`. For yuv420p10 on your input video 10 bit, add `-pix_fmt yuv420p10`.
+For y4m, replace `-i inputtranscode.yuv` with `-i inputtranscode.y4m`. In `-c:v wrapped_avframe` for y4m only, so you can verify to play Y4M (wrapped_avframe) for VLC, FFplay or MPV player. For yuv420p10 on your input video 10 bit, add `-pix_fmt yuv420p10`.
+
+Playing ffplay for y4m video with wrapped_avframe, you don't need to put anything commands, just simple play this:
+
+```
+ffplay transcoded.y4m
+```
 
 For easy to verify YUV/Y4M, use YUView, open your YUV or Y4M encoded, make sure video size, YUV/Y4M format and frame rate same like from input video file (e.g. MP4, AVI, MKV and others.
 
@@ -235,7 +241,13 @@ Encode with VVENC (Simple settings, example)
 ```
 vvencapp -i out.yuv -s 854x480 -r 30 -o vvc.266
 ```
--s means video size, -r means frame per second and -o means output. Note: (Simple) as Default settings is YUV420P (8-bit)
+`-s` means video size, `-r` means frame per second and `-o` means output. Note: (Simple) as Default settings is YUV420P (8-bit)
+
+TIP: You could do alternative without taking much disk space for uncompressed video:
+
+```
+ffmpeg -i example.mp4 -pix_fmt yuv420p -f rawvideo - | vvencapp -i - -s 1920x1080 -r 25 --preset medium --qp 35 -o converted.266
+```
 
 **WARNING: If you encode from yuv/y4m of your frame rate is 11.988, 14.985, 23.976, 29.970 or 59.940 FPS, replace this command -r by --fps.**
 
@@ -249,20 +261,22 @@ vvencapp -i out.yuv -s 854x480 -r 30 -o vvc.266
 
 59.940 fps = `--fps 60000/1001`
 
-The default of VVENC: Constant Quality is 32 and speed is medium.
-If you want to get smaller video size and lossy video, add --qp 38. (Not recommended)
-If you want to get lossless video without losing quality (minimum loss quality), use CQ 16-19 and preset slow (optional slower). (Recommended, only Y4M, Raw and Uncompressed video files)
+The default of VVENC: Quantization Parameter is 32 and preset is medium.
+
+If you want to get smaller video size and lossy video, add `--qp 38`. (for web video or anything)
+
+If you want to get lossless video without losing quality (visually lossless, minimum loss quality), use QP 16-19 and preset slow (optional slower). (Recommended for movies, camera footages or anything)
 
 Lossy video/Smallest video size:
 ```
 vvencapp --qp 38 -i out.yuv -s 854x480 -r 30 -o vvc.266
 ```
 
-**NOTE: If you want have true lossless on your video, please visit [FFV1](http://ffv1.org) or H.264 Lossless video codec**
+**NOTE 1: If you want have true lossless on your video, please visit [FFV1](http://ffv1.org) or H.264 Lossless video codec**
 
-**NOTE 2: VVENC does not support lossless.**
+**NOTE 1.1: VVENC does not support lossless.**
 
-Lossless video (minimum loss quality, only Y4M, Raw, Uncompressed video used) (or compress smaller than preset slow, use --preset slower):
+Lossless video (visually lossless) (or compress smaller than preset slow, use --preset slower):
 ```
 vvencapp --qp 18 -i out.yuv -s 854x480 -r 30 --preset slow -o vvc.266
 ```
@@ -271,7 +285,7 @@ For Apple Mac OS and Linux terminal users: Command with `./vvencapp`
 
 For Windows Users using Windows PowerShell: Command with `.\vvencapp`
 
-Encode with VVENC (Best settings (lossless only of Y4M, Raw and Uncompressed video files), replace video size (-s), framerate (-r) and maximize threads of your cores (--threads), example) (Minimum loss quality) If you want true lossless video, use FFV1 latest version 3.4. (Necessary make smaller file slower than preset slow, use --preset slower)
+Encode with VVENC (Best settings (visually lossless), replace video size (`-s`), framerate (`-r`) and maximize threads of your cores (`--threads`), example) (Minimum loss quality) If you want true lossless video, use FFV1 latest version 3.4. (Necessary make smaller file (slower) than preset slow, use `--preset slower`)
 ```
 vvencapp --qp 18 -i out.yuv -s 854x480 -r 30 --preset slow --threads 16 --tier high -o EXTREME.266
 ```
