@@ -9,7 +9,7 @@ cd OpenVVC
 ./configure && make && sudo make install
 cd ../
 echo Downloading FFmpeg with OpenVVC support...
-git clone https://github.com/OpenVVC/FFmpeg.git
+git clone https://github.com/tbiat/FFmpeg
 cd FFmpeg
 echo Configuring and making of FFmpeg with OpenVVC support...
 echo One more thing to do is type code to finish it:
