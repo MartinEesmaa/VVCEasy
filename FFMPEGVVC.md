@@ -50,7 +50,7 @@ Unfortunately, this is Ubuntu 20.04 LTS built only.
 Before you use FFmpeg, make sure you install all these requirements:
 
 ```
-sudo apt install libxml2 libx264-dev libx265-dev libnuma-dev libxml2 libopus-dev
+sudo apt install libxml2 libx264-dev libx265-dev libnuma-dev libxml2 libopus-dev libsdl2-dev
 ```
 
 If you are using other linux without Ubuntu 20.04 LTS, you have to build using:
@@ -59,7 +59,7 @@ If you are using other linux without Ubuntu 20.04 LTS, you have to build using:
 sudo apt install build-essential cmake libx264-dev libx265-dev libnuma-dev libxml2 libopus-dev nasm && \
 git clone https://github.com/fraunhoferhhi/vvdec.git && cd vvdec \
 make release && make install install-prefix=/usr/local && \
-cd .. && git clone https://github.com/lehmann-c/FFmpeg.git && cd FFmpeg && \
+cd .. && git clone https://github.com/tbiat/FFmpeg.git && cd FFmpeg && \
 ./configure --enable-gpl \
   --enable-version3 \ 
   --enable-libvvdec \ 
@@ -67,6 +67,7 @@ cd .. && git clone https://github.com/lehmann-c/FFmpeg.git && cd FFmpeg && \
   --enable-libxml2 \ 
   --enable-libx264 \
   --enable-libx265 \
+  --enable-sdl2 \
   --enable-libopus &&
 make -j
 ```
