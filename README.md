@@ -97,7 +97,7 @@ About o266player: Since o266player repository have no new commits than one year.
 
 We will remove o266player list, if no new commits than one year.
 
-# VLC o266player (Windows only, Mac OS will be later)
+# VLC o266player (Windows only, Mac OS will be later) (closed-source decoder)
 
 For more information about o266player.
 
@@ -299,9 +299,6 @@ Note to 8-bit Y4M users: It is only from input video (8-bit) to Y4M (8 bit)
 After VVEnc, you can play in YUView of latest version.
 Drag any your video file of .h266, .266 or .vvc to play. YUView will play your video only about 10 seconds’ limit.
 
-UPDATE 13th December 2021: VLC Media Player (custom VLC build of o266player, 3.0.11.1 Vetenari, Windows 11) is tested by Martin Eesmaa. It can play only about 600 frames limit / 20+ seconds.
-![VLC Media Player (VVC test)](https://user-images.githubusercontent.com/88035011/145756567-d156f630-9e7f-4042-99b5-6ffe8a6b4b64.png)
-
 If you are still not happy about VVC (known as Versatile Video Coding), that you think is too hard to encode and decode, use AOMEDIA ONE (AV1) that is recommended for most users to easily play VLC Media Player and others. VVC should need played on VLC Media Player in future.
 
 # Compatibility results (VVENC AND VVDEC) TESTED BY MARTIN EESMAA
@@ -326,7 +323,7 @@ Well yes... it takes longer time to make VVCEasy easier, but VVCEasy is not yet 
 Is it okay to bring my proof screenshots of errors?
 I allow you to bring error screenshots, you can bring proof. More proofs, easier to solve it.
 
-My question is not listed on FAQ. Can I ask any question?
+My question is not listed on FAQ. Can I ask any question to you?
 Sure, just go to Issues tab, ask questions or/and give your issue to me.
 
 Do you know what you have skills in your programming?
