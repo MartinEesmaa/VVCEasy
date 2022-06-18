@@ -43,6 +43,77 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 [Linux](https://mega.nz/file/T8l0GTqa#oWsDDrFYjzf3LhS9zRkuqqBz6H4yJmNQUNiu_erVQLo) (Only Ubuntu 20.04 build)
 
+# Mac OS downloaders (Important note)
+
+Please note, that is not a malware of my compiled build, see the three screenshots to make run ffmpeg tools customised version
+
+You need to allow the app on your Mac OS for chmod write access & Security & Privacy:
+
+Step 1: Click cancel button, do not move to bin.
+
+![Kuvatõmmis 2022-06-18 103427](https://user-images.githubusercontent.com/88035011/174431074-10a867d3-787a-47aa-9910-53fcef89e30e.png)
+
+Step 2: Go to Security & Privacy on Mac OS Settings app, then check App Store & identified developers or anywhere is on. Click "Allow anyway" to unblock an application.
+
+![Kuvatõmmis 2022-06-18 103518](https://user-images.githubusercontent.com/88035011/174431083-1d1d9b2b-5b45-425e-86d1-015e44588b4e.png)
+
+Step 3: Click "Open" button, this does not hurt your computer.
+
+![Kuvatõmmis 2022-06-18 103557](https://user-images.githubusercontent.com/88035011/174431086-9eb0df35-2fde-4ca7-99d4-2efa45a0a946.png)
+
+You may receive this error, if the vvc shared library was not found:
+```
+dyld: Library not loaded: @rpath/libvvdec.dylib
+  Referenced from: /Users/martineesmaa/Downloads/dddd3/./ffplay_g
+  Reason: image not found
+```
+
+The libvv(enc/dec).dylib needs to be patched of FFmpeg VVC version before run. You need patch two files to make work FFmpeg VVC version, you don't need to build if necessary:
+
+```
+sudo cp libvvenc.dylib /usr/local/lib/libvvenc.dylib
+sudo cp libvvenc.dylib /usr/local/lib/libvvenc.dylib
+```
+
+Or outdated library was not found of some computers, so you can download x264 specified version of Homebrew or download new latest link of FFmpeg VVC version:
+```
+dyld: Library not loaded: /usr/local/opt/x264/lib/libx264.163.dylib
+  Referenced from: /Users/runner/work/libvvdec_fixmywin/libvvdec_fixmywin/./ffmpeg_vvceasy_mac
+  Reason: image not found
+```
+
+### Build Mac OS build
+
+Requirements:
+
+Xcode
+
+Cmake
+
+NASM
+
+Homebrew
+
+Code to build FFmpeg VVC version:
+
+```
+brew install x264 x265 libvpx libxml2 libopusenc
+git clone https://github.com/fraunhoferhhi/vvenc
+git clone https://github.com/fraunhoferhhi/vvdec
+cd vvenc && mkdir build && cd build
+cmake -DBUILD_SHARED_LIBS=1 -DCMAKE_INSTALL_PREFIX=/usr/local ..
+cmake --build . --config Release --target install
+cd ../../
+cd vvdec && mkdir build && cd build
+cmake -DBUILD_SHARED_LIBS=1 -DCMAKE_INSTALL_PREFIX=/usr/local ..
+cmake --build . --config Release --target install
+cd ../../
+git clone --depth=1 https://github.com/tbiat/FFmpeg
+cd FFmpeg
+./configure --enable-gpl --enable-version3 --enable-libvvenc --enable-libvvdec --enable-pic --enable-libxml2 --enable-libx264 --enable-libx265 --enable-libvpx --enable-libopus --enable-sdl2
+make
+```
+
 # Linux downloaders (Important note)
 
 Unfortunately, this is Ubuntu 20.04 LTS built only.
@@ -50,16 +121,16 @@ Unfortunately, this is Ubuntu 20.04 LTS built only.
 Before you use FFmpeg, make sure you install all these requirements:
 
 ```
-sudo apt install libxml2 libx264-dev libx265-dev libnuma-dev libxml2 libopus-dev
+sudo apt install libxml2 libx264-dev libx265-dev libnuma-dev libxml2 libopus-dev libsdl2-dev
 ```
 
-If you are using other linux without Ubuntu 20.04 LTS, you have to build using:
+If you are using other linux without Ubuntu 20.04 LTS, you have to build using this:
 
 ```
-sudo apt install build-essential cmake libx264-dev libx265-dev libnuma-dev libxml2 libopus-dev nasm && \
-git clone https://github.com/fraunhoferhhi/vvdec.git && cd vvdec \
+sudo apt install build-essential cmake libx264-dev libx265-dev libnuma-dev libxml2 libopus-dev nasm libsdl2-dev && \
+git clone https://github.com/fraunhoferhhi/vvdec.git && cd vvdec && \
 make release && make install install-prefix=/usr/local && \
-cd .. && git clone https://github.com/lehmann-c/FFmpeg.git && cd FFmpeg && \
+cd .. && git clone https://github.com/tbiat/FFmpeg.git && cd FFmpeg && \
 ./configure --enable-gpl \
   --enable-version3 \ 
   --enable-libvvdec \ 
@@ -67,7 +138,8 @@ cd .. && git clone https://github.com/lehmann-c/FFmpeg.git && cd FFmpeg && \
   --enable-libxml2 \ 
   --enable-libx264 \
   --enable-libx265 \
-  --enable-libopus &&
+  --enable-sdl2 \
+  --enable-libopus && \
 make -j
 ```
 

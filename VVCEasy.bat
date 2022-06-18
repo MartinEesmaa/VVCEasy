@@ -42,7 +42,7 @@ goto welcomenow
 cls
 title Martin Eesmaa / VVCEasy
 echo Martin Eesmaa / VVCEasy
-echo Welcome to VVCEasy. (Batchfile Beta Version, v.0.9.0)
+echo Welcome to VVCEasy. (Batchfile Beta Version, v.0.9.2)
 pause
 goto start
 
@@ -50,7 +50,7 @@ goto start
 title Martin Eesmaa / VVCEasy
 color 07
 cls
-echo VVCEasy (Batchfile Beta Version, v.0.9.0)
+echo VVCEasy (Batchfile Beta Version, v.0.9.2)
 echo.
 echo What would you like to do for encode/decode of VVC?
 echo 1. Encode
@@ -62,7 +62,7 @@ echo 6. Install quickly through Anaconda (Python distribution) for ffmpeg (Windo
 echo 7. Install/Update VVdec Web Player
 echo 8. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)
 echo 9. Install vvDecPlayer from BitMovin
-echo 10. Install VLC VTM Plugins (Windows/Linux x64 of VLC, plugins by Inter Digital Inc)
+echo 10. Install/Update VLC VTM Plugins (Windows/Linux x64 of VLC plugins by Inter Digital Inc)
 echo 11. Install FFmpeg VVDec support
 echo 12. Install MPV Android (OpenVVC plugin)
 set /p VVCSTART=Number: 
@@ -416,7 +416,8 @@ del /q BitVVDecPlayerWIN.7z
 vvDecPlayer
 echo Successfully running on BitVVDecPlayer, now if you have any problems, please go to Bitmovin/vvDecPlayer issues of https://github.com/bitmovin/vvDecPlayer/issues
 echo If you receive error, that MSVCP140.DLL is missing, you might need download Microsoft Visual C++ Redistributable of 2015-2017-2019-2022: https://docs.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist
-echo Or contact Bitmovin at https://www.bitmovin.com.
+echo To build vvDecPlayer, please go to https://github.com/bitmovin/vvDecPlayer
+echo Or contact Bitmovin at https://www.bitmovin.com or create issue on VVCEasy.
 goto downloadbitmovinvvcsample
 
 :installbitmovin1macos
@@ -431,7 +432,9 @@ del /q BitVVDecPlayerMAC.7z
 ./vvDecPlayer
 echo Successfully running on vvDecPlayer, now if you have any problems, please go to Bitmovin/vvDecPlayer issues of https://github.com/bitmovin/vvDecPlayer/issues
 echo If vvDecPlayer won't work probably, it might be issue that you haven't installed Qt on your Mac OS. Please install using code: "brew install qt" on Homebrew.
-echo Or contact Bitmovin at https://www.bitmovin.com.
+echo To build vvDecPlayer, please go to https://github.com/bitmovin/vvDecPlayer
+echo Or contact Bitmovin at https://www.bitmovin.com or create issue on VVCEasy.
+echo For more information, see Bitmovin.md.
 goto downloadbitmovinvvcsample
 
 :installbitmovin1linux
@@ -445,12 +448,11 @@ wget https://www.dropbox.com/s/bihm3pyh21lcvte/BitVVDecPlayerLINUX.7z?dl=0
 del /q BitVVDecPlayerLINUX.7z
 ./vvDecPlayer
 echo Successfully running on vvDecPlayer, now if you have any problems, please go to Bitmovin/vvDecPlayer issues of https://github.com/bitmovin/vvDecPlayer/issues
-echo You might get this message error, that you can't run vvDecPlayer without Qt framework:
-echo ./vvDecPlayer: /lib/x86_64-linux-gnu/libm.so.6: version `GLIBC_2.29' not found (required by ./vvDecPlayer)
-echo ./vvDecPlayer: /usr/lib/x86_64-linux-gnu/libstdc++.so.6: version `GLIBCXX_3.4.26' not found (required by ./vvDecPlayer)
-echo ./vvDecPlayer: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5: version `Qt_5.12' not found (required by ./vvDecPlayer)
+echo Note, this is only Ubuntu 20.04 LTS build.
+echo If you're running other Linux without Ubuntu 20.04, you might need to read Bitmovin.md instructions and build vvDecPlayer yourself.
+echo To build vvDecPlayer, please go to https://github.com/bitmovin/vvDecPlayer
 echo If vvDecPlayer won't work probably, it might be issue that you haven't installed Qt on your Linux. Please install using code: "sudo apt install qt5-default build-essential" on Linux terminal.
-echo Or contact Bitmovin at https://www.bitmovin.com.
+echo Or contact Bitmovin at https://www.bitmovin.com or create issue on VVCEasy.
 goto downloadbitmovinvvcsample
 
 :downloadbitmovinvvcsample
@@ -501,9 +503,9 @@ if %vlcvtmyesorno% == n goto start
 title Installing of VLC VTM Plugins by Inter Digital Inc... (Compiled by Martin Eesmaa)
 echo Installing VLC VTM Plugins by Inter Digital Inc... (Compiled by Martin Eesmaa)
 cd INSTALLVLCPLUGIN
-copy libvtmdec.dll "%programfiles%\VideoLAN\VLC\plugins\codec" 
-copy libvvcdecoder_plugin.dll "%programfiles%\VideoLAN\VLC\plugins\codec"
-copy libvvctsdemux_plugin.dll "%programfiles%\VideoLAN\VLC\plugins\demux"
+copy libvtmdec.dll "%programfiles%\VideoLAN\VLC\plugins\codec" /y
+copy libvvcdecoder_plugin.dll "%programfiles%\VideoLAN\VLC\plugins\codec" /y
+copy libvvctsdemux_plugin.dll "%programfiles%\VideoLAN\VLC\plugins\demux" /y
 cd ../
 taskkill /im vlc.exe
 echo Three dll files are patched to your VLC Media Player.
@@ -546,6 +548,6 @@ MPV.md
 echo.
 echo See information MPV.md or online Github: https://github.com/MartinEesmaa/VVCEasy/blob/master/MPV.md
 echo.
-echo Press enter to go back menu.
+echo Press enter to go back main menu.
 pause
 goto start
