@@ -7,14 +7,12 @@ echo Starting to build vvenc...
 cd vvenc
 mkdir build && cd build
 cmake -DCMAKE_INSTALL_PREFIX=/usr/local .. -G "MinGW Makefiles"
-cmake --build . --config Release -j
-cmake --build . --target install
+cmake --build . --config Release --target install
 cd ../../
 cd vvdec
 mkdir build && cd build
 cmake -DCMAKE_INSTALL_PREFIX=/usr/local .. -G "MinGW Makefiles"
-cmake --build . --config Release -j
-cmake --build . --target install
+cmake --build . --config Release --target install
 cd ../../
 cd FFmpeg
 ./configure --enable-gpl --enable-version3 --enable-libvvenc --enable-libvvdec --enable-pic \
