@@ -39,9 +39,9 @@ Discord: https://discord.gg/t54cADTbWW
 
 - [Bitmovin VVDec Player](#bitmovin-vvdec-player)
 
-- [FFmpeg VVC Decoder support](#ffmpeg-vvdec-support)
+- [FFmpeg VVC Encoder & Decoder support](#ffmpeg-vvenc--vvdec-support)
 
-- [MPV OpenVVC support (Android only)](#mpv-openvvc-support-android-only)
+- [MPV libvvdec support (Android only)](#mpv-libvvdec-support-android-only)
 
 - [Compile for VVCEasy](#compile-for-vvceasy)
 
@@ -59,7 +59,7 @@ Discord: https://discord.gg/t54cADTbWW
 
 - [Credits & Licenses](#credits--licenses)
 
-# Donate to Martin Eesmaa using cryptocurrency
+# Donate to Martin Eesmaa for an cryptocurrencies
 
 - **BTC (BITCOIN):** 
 ```
@@ -109,17 +109,17 @@ For more information about Bitmovin VVDec Player.
 
 See [Bitmovin.md](Bitmovin.md).
 
-# FFmpeg VVDEC support
+# FFmpeg VVENC & VVDEC support
 
-FFmpeg VVC Decoder supports of Windows, Mac and Linux.
+FFmpeg VVC Encoder & Decoder supports of Windows, Mac and Linux.
 
 See [FFMPEGVVC.md](FFMPEGVVC.md).
 
-# MPV OpenVVC support (Android only)
+# MPV libvvdec support (Android only)
 
-MPV OpenVVC Decoder supports only of Android.
+MPV libvvdec Decoder supports only of Android.
 
-Only VVC file can play, but merged .mp4 is black screen, so you need external sound from vvc video codec, if necessary.
+The VVC and MP4 muxed with VVC codec can be played on MPV libvvdec version. Only MP4 muxed with VVC supports seek.
 
 See [MPV.md](MPV.md).
 
@@ -389,7 +389,7 @@ License: LGPL-2.1
 
 [FFmpeg](https://github.com/FFmpeg/FFmpeg) - Mirror of https://git.ffmpeg.org/ffmpeg.git
 
-VVC developers & forkers: [lehmann-c](https://github.com/lehmann-c) and [tbiat](https://github.com/tbiat)
+VVC developers & forkers: [lehmann-c](https://github.com/lehmann-c), [tbiat](https://github.com/tbiat) and [Isabelle Santin](https://github.com/IsaMorphic)
 
 License: LGPL-2.1+ & GPL-2.0+
 
