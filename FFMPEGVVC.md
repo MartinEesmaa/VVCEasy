@@ -1,4 +1,4 @@
-# FFmpeg VVC decoder installation (Windows, Mac OS and Linux)
+# FFmpeg VVC Encoder & Decoder installation (Windows, Mac OS and Linux)
 
 Windows, Mac and Linux (Preview of vvc video in ffplay):
 
@@ -6,27 +6,51 @@ Windows, Mac and Linux (Preview of vvc video in ffplay):
 ![macos_vvceasy_ff](https://user-images.githubusercontent.com/88035011/169693891-52271091-eb92-4198-82eb-2ad38296a917.png)
 ![linux_vvceasy_ff](https://user-images.githubusercontent.com/88035011/169693886-3f8e97da-ad57-46ab-b3eb-45e5ff4e687d.png)
 
-# Limitations of FFmpeg VVC decoder
+# Play video file
 
-For Windows, Mac OS and Linux for preview without converting, you can do sample this, including audio support:
-
-```
-ffmpeg_g -i example.266 -i example.opus -vcodec libx264 -acodec libopus -af adelay=1000 -f matroska - | ffplay_g -
-```
-
-Or you can play vvc with audio support:
+You can play VVC video codec with .h266, .vvc, .266 and anything or .mp4 muxed with VVC codec:
 
 ```
-ffplay_g -i convertedvvc.mp4
+ffplay_g versatile.266
 ```
+
+# Limitations of FFmpeg VVC encoder
+
+Before encode to VVC video codec, see the limitations below.
+
+libvvenc (FFmpeg vvc version) works for:
+
+- Pixel format ✅ (changeable of 8/10bit) 
+- Video size (auto detects, but it doesn't detect for SAR and DAR anamorphic is glitch and corrupts the video ) ⚠️ (Better way to use vvencapp without FFmpeg)
+- Frame rate ✅ (auto detects) 
+- MP4 Muxing :x: (does not support, you need MP4BOX after encode.)
+- Audio with encode VVC ⚠️ (does not support, because it can corrupt the file) To avoid corrupt file, you need to disable audio using `-an` or you could do output container for .266, .vvc and .h266 too.
+- Bitrates ✅
+- Passes ⚠️ (only one pass)
+- Presets ⚠️ (only medium preset)
+- QP/CRF ⚠️ (only you can set -global_quality command only, global_quality equals qp)
+
+Built in libvvenc for FFmpeg command:
+
+```
+ffmpeg -i example.mp4 -c:v libvvenc -global_quality 37 -pix_fmt yuv420p10 example.266
+```
+
+Additional command: You can convert to vvc video without taking a much space for vvencapp, example:
+
+```
+ffmpeg -i example.mp4 -f rawvideo -pix_fmt yuv420p - | vvencapp -i - -s 1920x1080 -r 25 --preset medium --qp 32 -o example1.266
+```
+
+Replace video size for `-s` and frame rate for `-r`.
 
 ### Update 21th May 2022 of FFmpeg vvdec support
 
 Good news, you can play .mp4 file after .h266 and audio format were merged into mp4 playable of VVC.
 
-About [xHE-AAC](https://www.iis.fraunhofer.de/en/ff/amm/broadcast-streaming/xheaac.html), there is no decode support of FFmpeg, the reason is a license fee, but except [Exhale](https://gitlab.com/ecodis/exhale) (encoder) is free to use and open source. However, you can also merge encoded xHE-AAC audio into mp4 too.
+About [xHE-AAC](https://www.iis.fraunhofer.de/en/ff/amm/broadcast-streaming/xheaac.html), there is no decode support of FFmpeg. The reason is a license fee, but except [Exhale](https://gitlab.com/ecodis/exhale) (encoder) is free to use and open source. However, you can also merge your encoded xHE-AAC audio into mp4 too.
 
-To make playable mp4 with audio and video together, you need VVC video encoded, audio file and [GPAC Nightly build](https://gpac.wp.imt.fr/downloads/gpac-nightly-builds/). Code for mp4box/gpac:
+To make playable mp4 with audio and video together, you need VVC video encoded, audio file and [GPAC Nightly build](https://gpac.wp.imt.fr/downloads/gpac-nightly-builds/). Code for mp4box/gpac to merge VVC video encoded and audio file:
 ```
 mp4box -no-probe -add video.266 -add audio.opus -new convertedvvc.mp4
 ```
@@ -35,13 +59,13 @@ Containers are also acceptable video containers of .mkv, .mp4, .mov and more.
 
 For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
-# FFmpeg Downloads (VVC decoder plugin compiled by Martin Eesmaa)
+# FFmpeg Downloads (VVC encoder & decoder plugin compiled by Martin Eesmaa)
 
-[Windows](https://mega.nz/file/e1MEUAwR#c7u7vDvwzp6JiSaRDwhCyOaH4cGnx1xQDPyKgbAd-qM)
+[Windows](https://mega.nz/file/7xdRQSRT#S72TX8q8bkOdyeLSPWFUqcWCcztSSyi4qVrxpSwma5M)
 
-[Mac OS](https://mega.nz/file/mxNTQTLb#1ifvaXap_a_cHLCIWZ-K5B0oKXvdHjgUc3Nb-YHFIio)
+[Mac OS](https://mega.nz/file/K8MW0IAR#NgTpDwR5nXk3QvpKlsTDdatYS32igd_-36acbe4eyCo)
 
-[Linux](https://mega.nz/file/T8l0GTqa#oWsDDrFYjzf3LhS9zRkuqqBz6H4yJmNQUNiu_erVQLo) (Only Ubuntu 20.04 build)
+[Linux](https://mega.nz/file/jhkk0bqQ#0y-m_ieBbhTWgOI2Eenzd-zugxo2PLedqnobGmux51M) (Only Ubuntu 20.04 build)
 
 # Mac OS downloaders (Important note)
 
@@ -82,7 +106,7 @@ dyld: Library not loaded: /usr/local/opt/x264/lib/libx264.163.dylib
   Reason: image not found
 ```
 
-### Build Mac OS build
+### Build Mac OS for FFmpeg VVC build
 
 Requirements:
 
@@ -116,7 +140,7 @@ make
 
 # Linux downloaders (Important note)
 
-Unfortunately, this is Ubuntu 20.04 LTS built only.
+Unfortunately, this is Ubuntu 20.04 LTS build only.
 
 Before you use FFmpeg, make sure you install all these requirements:
 
@@ -130,9 +154,13 @@ If you are using other linux without Ubuntu 20.04 LTS, you have to build using t
 sudo apt install build-essential cmake libx264-dev libx265-dev libnuma-dev libxml2 libopus-dev nasm libsdl2-dev && \
 git clone https://github.com/fraunhoferhhi/vvdec.git && cd vvdec && \
 make release && make install install-prefix=/usr/local && \
+cd .. && \
+git clone https://github.com/fraunhoferhhi/vvenc.git && cd vvdec && \
+make release && make install install-prefix=/usr/local && \
 cd .. && git clone https://github.com/tbiat/FFmpeg.git && cd FFmpeg && \
 ./configure --enable-gpl \
-  --enable-version3 \ 
+  --enable-version3 \
+  --enable-libvvenc \
   --enable-libvvdec \ 
   --enable-pic \ 
   --enable-libxml2 \ 
@@ -143,10 +171,17 @@ cd .. && git clone https://github.com/tbiat/FFmpeg.git && cd FFmpeg && \
 make -j
 ```
 
-If compiled is success and finished, you can install FFmpeg, using the code:
+If compiling is success and finished, you can install FFmpeg, using the code:
 
 ```
 make install
+```
+
+For Linux downloaders to run FFmpeg, please copy these two files:
+
+```
+sudo cp libvvenc.so /usr/lib/libvvenc.so
+sudo cp libvvdec.so /usr/lib/libvvdec.so
 ```
 
 # Special thanks
@@ -158,5 +193,7 @@ Original author: [@FFmpeg](https://github.com/FFmpeg) Repository: https://github
 [@lehmann-c](https://github.com/lehmann-c) (Christian Lehmann) Repository: https://github.com/lehmann-c/FFmpeg
 
 [@tbiat](https://github.com/tbiat) Repository: https://github.com/tbiat/FFmpeg
+
+VVC encoder programmer to FFMpeg: [@IsaMorphic] Repository: https://github.com/IsaMorphic/FFmpeg-VVC
 
 -   Martin Eesmaa
