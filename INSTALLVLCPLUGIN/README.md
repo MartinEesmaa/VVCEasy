@@ -1,3 +1,5 @@
+![vlc-media-player-2-569258-4168599479](https://user-images.githubusercontent.com/88035011/175112324-06a64145-ff1a-43f0-adac-a1aeb9ce770a.png)
+
 # VLC Media Player (Inter Digital VLC VTM Decoder Plugin installation of Windows and Linux)
 This can work only for VLC 3.0.9.2 and later version (eg. 3.0.17.4). VLC 4.0.0-dev won't work.
 
