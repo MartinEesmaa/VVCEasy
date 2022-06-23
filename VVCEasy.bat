@@ -42,7 +42,8 @@ goto welcomenow
 cls
 title Martin Eesmaa / VVCEasy
 echo Martin Eesmaa / VVCEasy
-echo Welcome to VVCEasy. (Batchfile Beta Version, v.0.9.2)
+echo Welcome to VVCEasy. ((Batchfile Release Version, v.1.0.0, 23 June 2022)
+echo Version codename: Martin Eesmaa's birthday at age 17.
 pause
 goto start
 
@@ -50,7 +51,8 @@ goto start
 title Martin Eesmaa / VVCEasy
 color 07
 cls
-echo VVCEasy (Batchfile Beta Version, v.0.9.2)
+echo VVCEasy (Batchfile Release Version, v.1.0.0, 23 June 2022)
+echo Version codename: Martin Eesmaa's birthday at age 17.
 echo.
 echo What would you like to do for encode/decode of VVC?
 echo 1. Encode
@@ -64,7 +66,8 @@ echo 8. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)
 echo 9. Install vvDecPlayer from BitMovin
 echo 10. Install/Update VLC VTM Plugins (Windows/Linux x64 of VLC plugins by Inter Digital Inc)
 echo 11. Install FFmpeg VVDec support
-echo 12. Install MPV Android (OpenVVC plugin)
+echo 12. Install MPV Android (libvvdec plugin)
+echo 13. Tests of VVC videos
 set /p VVCSTART=Number: 
 if %VVCSTART% == 1 goto encodestart
 if %VVCSTART% == 2 goto decodestart
@@ -78,6 +81,7 @@ if %VVCSTART% == 9 goto installbitmovin
 if %VVCSTART% == 10 goto vlcvtmplugininstall
 if %VVCSTART% == 11 goto vvdecffmpeg
 if %VVCSTART% == 12 goto mpvandroidvvc
+if %VVCSTART% == 13 goto testsofvideo
 
 :encodestart
 title Encode to VVC
@@ -549,5 +553,15 @@ echo.
 echo See information MPV.md or online Github: https://github.com/MartinEesmaa/VVCEasy/blob/master/MPV.md
 echo.
 echo Press enter to go back main menu.
+pause
+goto start
+
+:testsofvideo
+echo Please see the paragraph in README.md.
+echo https://github.com/MartinEesmaa/VVCEasy/#tests-of-vvc-videos
+echo.
+echo See information on FFMPEGVVC.md or online GitHub: https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md
+echo.
+echo Press enter to go back menu.
 pause
 goto start
