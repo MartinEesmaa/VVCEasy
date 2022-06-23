@@ -6,8 +6,7 @@ MPV Android Player (libvvdec support) can play your VVC decoded video file and m
 
 Screenshot preview, see top-left information of toggle stats:
 
-![martineesmaanewlibvvdecmpv](https://user-images.githubusercontent.com/88035011/174853076-83647f51-2082-4a13-8680-e5eed8e1c8c3.jpg)
-
+![seeklogoflibvvdecmartineesmaa](https://user-images.githubusercontent.com/88035011/175221755-7dfbb1a8-6c27-4e34-bff0-a212ca347fa5.jpg)
 
 # Download MPV Android Player (libvvdec plugin)
 
