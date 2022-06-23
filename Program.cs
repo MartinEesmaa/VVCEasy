@@ -12,13 +12,13 @@ namespace VVCEasy
             Console.Title = "Martin Eesmaa / VVCEasy";
             Console.WriteLine("Martin Eesmaa / VVCEasy");
             Console.WriteLine("Welcome to VVCEasy. (.NET Console Release Version, v.1.0.0)");
-            Console.Writeline("Version codename: Martin Eesmaa's birthday at age 17.");
+            Console.WriteLine("Version codename: Martin Eesmaa's birthday at age 17.");
             Console.ReadLine();
             do
             {
                 Console.Clear();
                 Console.WriteLine("VVCEasy (.NET Console Release Version, v.1.0.0)");
-                Console.Writeline("Version codename: Martin Eesmaa's birthday at age 17.");
+                Console.WriteLine("Version codename: Martin Eesmaa's birthday at age 17.");
                 Console.WriteLine("Note: C# is not ready yet, malfunction mode\n");
                 Console.Title = "Martin Eesmaa / VVCEasy";
                 Console.WriteLine("What would you like to do for encode/decode of VVC?\n1. Encode\n2. Decode\n3. Help\n4. Exit\n5. Install/Test path environment\n6. Install FFmpeg VVDec support\n7. Install quickly through Anaconda for ffmpeg (Windows)\n8. Install VVdec Web Player\n9. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)\n10. Install vvDecPlayer from BitMovin\n11. Install/Update VLC VTM Plugins (Windows/Linux x64 of VLC plugins by Inter Digital Inc)\n12. Install MPV Android (OpenVVC plugin)\n13. Tests of VVC videos");
@@ -175,7 +175,7 @@ namespace VVCEasy
                         Console.Title = "INSTALLING VVDEC WEB PLAYER...";
 
                         using (WebClient web1 = new())
-                        web1.DownloadFile("", "");
+                            web1.DownloadFile("", "");
 
                         Console.WriteLine("Sorry, the command is not ready yet...");
                         Console.ReadLine();
@@ -209,7 +209,7 @@ namespace VVCEasy
                             Console.WriteLine("Installing vvDecPlayer from BitMovin for Windows...\nSorry, the C# console is not ready yet...");
 
                             using (WebClient web1 = new())
-                            web1.DownloadFile("", "");
+                                web1.DownloadFile("", "");
 
                             Console.ReadLine();
                         }
@@ -218,7 +218,7 @@ namespace VVCEasy
                             Console.WriteLine("Installing vvDecPlayer from BitMovin for Mac OS...\nSorry, the C# console is not ready yet...");
 
                             using (WebClient web1 = new())
-                            web1.DownloadFile("", "");
+                                web1.DownloadFile("", "");
 
                             Console.ReadLine();
                         }
@@ -227,7 +227,7 @@ namespace VVCEasy
                             Console.WriteLine("Installing vvDecPlayer from BitMovin for Linux...\nSorry, the C# console is not ready yet...");
 
                             using (WebClient web1 = new())
-                            web1.DownloadFile("", "");
+                                web1.DownloadFile("", "");
 
                             Console.ReadLine();
                         }
@@ -256,7 +256,7 @@ namespace VVCEasy
                         Console.WriteLine("Installing of VLC VTM Plugins by Inter Digital Inc... (Compiled by Martin Eesmaa)\nSorry C# is malfunction mode...");
 
                         using (WebClient web1 = new())
-                        web1.DownloadFile("", "");
+                            web1.DownloadFile("", "");
 
                         Console.ReadLine();
                     }
@@ -274,6 +274,7 @@ namespace VVCEasy
                     Console.Title = "Tests of VVC videos";
                     Console.WriteLine("Please see the paragraph in README.md.\nhttps://github.com/MartinEesmaa/VVCEasy/#tests-of-vvc-videos\n\nSee information on FFMPEGVVC.md or online GitHub: https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md\n\nPress enter to go back menu.");
                     Console.ReadLine();
+                }
             }
             while (exit == false);
         }
