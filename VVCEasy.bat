@@ -42,7 +42,7 @@ goto welcomenow
 cls
 title Martin Eesmaa / VVCEasy
 echo Martin Eesmaa / VVCEasy
-echo Welcome to VVCEasy. ((Batchfile Release Version, v.1.0.0, 23 June 2022)
+echo Welcome to VVCEasy. (Batchfile Release Version, v.1.0.0, 23 June 2022)
 echo Version codename: Martin Eesmaa's birthday at age 17.
 pause
 goto start
