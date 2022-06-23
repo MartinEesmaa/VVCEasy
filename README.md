@@ -16,9 +16,6 @@ VVCEasy comes to one-easy command of ffmpeg, VVC Tools, python, VLC o266player, 
 
 Installation: Go to the releases and download latest version.
 
-VVCEasy is not finished yet. I'm trying to work out with my codes. I'm not good for code programming, just simple coding.
-Sorry to say this. I will give you of my update announcement once I release the news.
-
 Windows source run (Batchfile): VVCEasy.bat
 
 Windows/Mac/Linux source run (Csharp): Bin/Release or Debug/netX.x/VVCEasy.exe (after build of C#), this requires VVCEasy.dll to run console application.
@@ -32,6 +29,8 @@ Discord: https://discord.gg/t54cADTbWW
 # All lists
 
 - [Donate to Martin Eesmaa using cryptocurrency](#donate-to-martin-eesmaa-using-cryptocurrency)
+
+- [Tests of VVC videos](#tests-of-vvc-videos)
 
 - [VLC InterDigital VTM VVC Plugin](#vlc-interdigital-vtm-vvc-plugin)
 
@@ -71,6 +70,12 @@ bc1qhf4zu5uythr7vyt2dru73qp0k2rzrx355fsx47yjxc2ueunz8frqxmwap3
 ```
 - **BAT (BASIC ATTENTION TOKEN):** For Brave Browser users only, you can also contribute by supporting me, I'm verified Brave user on Brave Rewards.
 
+# Tests of VVC videos
+
+You can test Martin Eesmaa's encoded movies of VVC video codec and follow README.txt instructions.
+
+[Tears of Steel VVC](https://mega.nz/folder/64swUYxI#WE5njn2aX6-6fxypNC3gtA)
+
 # VLC InterDigital VTM VVC Plugin
 
 I have a great news. VLC latest version worked out well of Inter Digital VTM plugins. On o266player, there was some problems on my computer for one reason...
@@ -92,10 +97,6 @@ Bug of Inter Digital VTM VLC Plugin:
 When you try to play your MPEG-TS or TS file, it will crash with your InterDigital VLC VTM Plugin installed on your VLC Media Player.
 
 Without InterDigital VLC VTM Plugin, playing MPEG-TS or TS file will play fine in your all original plugins (except VLC VTM Plugin) on your VLC Media Player.
-
-About o266player: Since o266player repository have no new commits than one year. 
-
-We will remove o266player list, if no new commits than one year.
 
 # VLC o266player (Windows only, Mac OS will be later) (closed-source decoder)
 
