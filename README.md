@@ -16,9 +16,6 @@ VVCEasy comes to one-easy command of ffmpeg, VVC Tools, python, VLC o266player, 
 
 Installation: Go to the releases and download latest version.
 
-VVCEasy is not finished yet. I'm trying to work out with my codes. I'm not good for code programming, just simple coding.
-Sorry to say this. I will give you of my update announcement once I release the news.
-
 Windows source run (Batchfile): VVCEasy.bat
 
 Windows/Mac/Linux source run (Csharp): Bin/Release or Debug/netX.x/VVCEasy.exe (after build of C#), this requires VVCEasy.dll to run console application.
@@ -33,15 +30,17 @@ Discord: https://discord.gg/t54cADTbWW
 
 - [Donate to Martin Eesmaa using cryptocurrency](#donate-to-martin-eesmaa-using-cryptocurrency)
 
+- [Tests of VVC videos](#tests-of-vvc-videos)
+
 - [VLC InterDigital VTM VVC Plugin](#vlc-interdigital-vtm-vvc-plugin)
 
 - [VLC o266player](#vlc-o266player-windows-only-mac-os-will-be-later)
 
 - [Bitmovin VVDec Player](#bitmovin-vvdec-player)
 
-- [FFmpeg VVC Decoder support](#ffmpeg-vvdec-support)
+- [FFmpeg VVC Encoder & Decoder support](#ffmpeg-vvenc--vvdec-support)
 
-- [MPV OpenVVC support (Android only)](#mpv-openvvc-support-android-only)
+- [MPV libvvdec support (Android only)](#mpv-libvvdec-support-android-only)
 
 - [Compile for VVCEasy](#compile-for-vvceasy)
 
@@ -59,7 +58,7 @@ Discord: https://discord.gg/t54cADTbWW
 
 - [Credits & Licenses](#credits--licenses)
 
-# Donate to Martin Eesmaa using cryptocurrency
+# Donate to Martin Eesmaa for an cryptocurrencies
 
 - **BTC (BITCOIN):** 
 ```
@@ -70,6 +69,12 @@ bc1qhf4zu5uythr7vyt2dru73qp0k2rzrx355fsx47yjxc2ueunz8frqxmwap3
 85Ahh93M88gV8ekymtYwb6TS14TZ36jNGTFgceaRH7hj8Rtx1qVB9PobnJLR5siz4nYBnzWy3pkV6KaVroifGMVh7n4br3J
 ```
 - **BAT (BASIC ATTENTION TOKEN):** For Brave Browser users only, you can also contribute by supporting me, I'm verified Brave user on Brave Rewards.
+
+# Tests of VVC videos
+
+You can test Martin Eesmaa's encoded movies of VVC video codec and follow README.txt instructions.
+
+[Tears of Steel VVC](https://mega.nz/folder/64swUYxI#WE5njn2aX6-6fxypNC3gtA)
 
 # VLC InterDigital VTM VVC Plugin
 
@@ -93,10 +98,6 @@ When you try to play your MPEG-TS or TS file, it will crash with your InterDigit
 
 Without InterDigital VLC VTM Plugin, playing MPEG-TS or TS file will play fine in your all original plugins (except VLC VTM Plugin) on your VLC Media Player.
 
-About o266player: Since o266player repository have no new commits than one year. 
-
-We will remove o266player list, if no new commits than one year.
-
 # VLC o266player (Windows only, Mac OS will be later) (closed-source decoder)
 
 For more information about o266player.
@@ -109,17 +110,17 @@ For more information about Bitmovin VVDec Player.
 
 See [Bitmovin.md](Bitmovin.md).
 
-# FFmpeg VVDEC support
+# FFmpeg VVENC & VVDEC support
 
-FFmpeg VVC Decoder supports of Windows, Mac and Linux.
+FFmpeg VVC Encoder & Decoder supports of Windows, Mac and Linux.
 
 See [FFMPEGVVC.md](FFMPEGVVC.md).
 
-# MPV OpenVVC support (Android only)
+# MPV libvvdec support (Android only)
 
-MPV OpenVVC Decoder supports only of Android.
+MPV libvvdec Decoder supports only of Android.
 
-Only VVC file can play, but merged .mp4 is black screen, so you need external sound from vvc video codec, if necessary.
+The VVC and MP4 muxed with VVC codec can be played on MPV libvvdec version. Only MP4 muxed with VVC supports seek.
 
 See [MPV.md](MPV.md).
 
@@ -389,7 +390,7 @@ License: LGPL-2.1
 
 [FFmpeg](https://github.com/FFmpeg/FFmpeg) - Mirror of https://git.ffmpeg.org/ffmpeg.git
 
-VVC developers & forkers: [lehmann-c](https://github.com/lehmann-c) and [tbiat](https://github.com/tbiat)
+VVC developers & forkers: [lehmann-c](https://github.com/lehmann-c), [tbiat](https://github.com/tbiat) and [Isabelle Santin](https://github.com/IsaMorphic)
 
 License: LGPL-2.1+ & GPL-2.0+
 

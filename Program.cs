@@ -11,15 +11,17 @@ namespace VVCEasy
             bool exit = false;
             Console.Title = "Martin Eesmaa / VVCEasy";
             Console.WriteLine("Martin Eesmaa / VVCEasy");
-            Console.WriteLine("Welcome to VVCEasy. (.NET Console Beta Version, v.0.9.2)");
+            Console.WriteLine("Welcome to VVCEasy. (.NET Console Release Version, v.1.0.0)");
+            Console.Writeline("Version codename: Martin Eesmaa's birthday at age 17.");
             Console.ReadLine();
             do
             {
                 Console.Clear();
-                Console.WriteLine("VVCEasy (.NET Console Beta Version, v.0.9.2)");
+                Console.WriteLine("VVCEasy (.NET Console Release Version, v.1.0.0)");
+                Console.Writeline("Version codename: Martin Eesmaa's birthday at age 17.");
                 Console.WriteLine("Note: C# is not ready yet, malfunction mode\n");
                 Console.Title = "Martin Eesmaa / VVCEasy";
-                Console.WriteLine("What would you like to do for encode/decode of VVC?\n1. Encode\n2. Decode\n3. Help\n4. Exit\n5. Install/Test path environment\n6. Install FFmpeg VVDec support\n7. Install quickly through Anaconda for ffmpeg (Windows)\n8. Install VVdec Web Player\n9. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)\n10. Install vvDecPlayer from BitMovin\n11. Install/Update VLC VTM Plugins (Windows/Linux x64 of VLC plugins by Inter Digital Inc)\n12. Install MPV Android (OpenVVC plugin)");
+                Console.WriteLine("What would you like to do for encode/decode of VVC?\n1. Encode\n2. Decode\n3. Help\n4. Exit\n5. Install/Test path environment\n6. Install FFmpeg VVDec support\n7. Install quickly through Anaconda for ffmpeg (Windows)\n8. Install VVdec Web Player\n9. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)\n10. Install vvDecPlayer from BitMovin\n11. Install/Update VLC VTM Plugins (Windows/Linux x64 of VLC plugins by Inter Digital Inc)\n12. Install MPV Android (OpenVVC plugin)\n13. Tests of VVC videos");
 
                 string input = Console.ReadLine();
 
@@ -266,6 +268,12 @@ namespace VVCEasy
                     Console.WriteLine("See information MPV.md or online Github: https://github.com/MartinEesmaa/VVCEasy/blob/master/MPV.md\nPress enter to go back menu.\n");
                     Console.ReadLine();
                 }
+                else if (input == "13")
+                {
+                    Console.Clear();
+                    Console.Title = "Tests of VVC videos";
+                    Console.WriteLine("Please see the paragraph in README.md.\nhttps://github.com/MartinEesmaa/VVCEasy/#tests-of-vvc-videos\n\nSee information on FFMPEGVVC.md or online GitHub: https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md\n\nPress enter to go back menu.");
+                    Console.ReadLine();
             }
             while (exit == false);
         }
