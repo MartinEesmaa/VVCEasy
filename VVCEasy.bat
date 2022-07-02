@@ -42,8 +42,8 @@ goto welcomenow
 cls
 title Martin Eesmaa / VVCEasy
 echo Martin Eesmaa / VVCEasy
-echo Welcome to VVCEasy. (Batchfile Release Version, v.1.0.0, 23 June 2022)
-echo Version codename: Martin Eesmaa's birthday at age 17.
+echo Welcome to VVCEasy. (Batchfile Release Version, v.1.0.1, 2 July 2022)
+echo Version codename: Summer time for fun.
 pause
 goto start
 
@@ -51,8 +51,8 @@ goto start
 title Martin Eesmaa / VVCEasy
 color 07
 cls
-echo VVCEasy (Batchfile Release Version, v.1.0.0, 23 June 2022)
-echo Version codename: Martin Eesmaa's birthday at age 17.
+echo VVCEasy (Batchfile Release Version, v.1.0.1, 2 July 2022)
+echo echo Version codename: Summer time for fun.
 echo.
 echo What would you like to do for encode/decode of VVC?
 echo 1. Encode
@@ -66,7 +66,7 @@ echo 8. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)
 echo 9. Install vvDecPlayer from BitMovin
 echo 10. Install/Update VLC VTM Plugins (Windows/Linux x64 of VLC plugins by Inter Digital Inc)
 echo 11. Install FFmpeg VVDec support
-echo 12. Install MPV Android (libvvdec plugin)
+echo 12. Install MPV Windows/Android (libvvdec plugin)
 echo 13. Tests of VVC videos
 set /p VVCSTART=Number: 
 if %VVCSTART% == 1 goto encodestart

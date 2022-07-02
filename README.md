@@ -40,7 +40,7 @@ Discord: https://discord.gg/t54cADTbWW
 
 - [FFmpeg VVC Encoder & Decoder support](#ffmpeg-vvenc--vvdec-support)
 
-- [MPV libvvdec support (Android only)](#mpv-libvvdec-support-android-only)
+- [MPV libvvdec support (Windows x64/Android only)](#mpv-libvvdec-support-windows-x64android-only)
 
 - [Compile for VVCEasy](#compile-for-vvceasy)
 
@@ -116,9 +116,9 @@ FFmpeg VVC Encoder & Decoder supports of Windows, Mac and Linux.
 
 See [FFMPEGVVC.md](FFMPEGVVC.md).
 
-# MPV libvvdec support (Android only)
+# MPV libvvdec support (Windows x64/Android only)
 
-MPV libvvdec Decoder supports only of Android.
+MPV libvvdec Decoder supports only of Windows x64 & Android.
 
 The VVC and MP4 muxed with VVC codec can be played on MPV libvvdec version. Only MP4 muxed with VVC supports seek.
 

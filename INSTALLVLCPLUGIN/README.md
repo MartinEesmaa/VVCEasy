@@ -82,7 +82,10 @@ Compiled file could be found in lib folder in libvtmdec.
 ```
 mkdir build && cd build
 cmake -DBUILD_SHARED_LIBS=1 ..
+make -j
 ```
+
+Before build Decoder Plugin, you need to find libvlccore in Linux.
 
 dvbpsi build requires of TS Demux Plugin:
 
