@@ -11,17 +11,17 @@ namespace VVCEasy
             bool exit = false;
             Console.Title = "Martin Eesmaa / VVCEasy";
             Console.WriteLine("Martin Eesmaa / VVCEasy");
-            Console.WriteLine("Welcome to VVCEasy. (.NET Console Release Version, v.1.0.0)");
-            Console.WriteLine("Version codename: Martin Eesmaa's birthday at age 17.");
+            Console.WriteLine("Welcome to VVCEasy. (.NET Console Release Version, v.1.0.1)");
+            Console.WriteLine("Version codename: Summer time for fun.");
             Console.ReadLine();
             do
             {
                 Console.Clear();
-                Console.WriteLine("VVCEasy (.NET Console Release Version, v.1.0.0)");
-                Console.WriteLine("Version codename: Martin Eesmaa's birthday at age 17.");
+                Console.WriteLine("VVCEasy (.NET Console Release Version, v.1.0.1)");
+                Console.WriteLine("Version codename: Summer time for fun.");
                 Console.WriteLine("Note: C# is not ready yet, malfunction mode\n");
                 Console.Title = "Martin Eesmaa / VVCEasy";
-                Console.WriteLine("What would you like to do for encode/decode of VVC?\n1. Encode\n2. Decode\n3. Help\n4. Exit\n5. Install/Test path environment\n6. Install FFmpeg VVDec support\n7. Install quickly through Anaconda for ffmpeg (Windows)\n8. Install VVdec Web Player\n9. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)\n10. Install vvDecPlayer from BitMovin\n11. Install/Update VLC VTM Plugins (Windows/Linux x64 of VLC plugins by Inter Digital Inc)\n12. Install MPV Android (OpenVVC plugin)\n13. Tests of VVC videos");
+                Console.WriteLine("What would you like to do for encode/decode of VVC?\n1. Encode\n2. Decode\n3. Help\n4. Exit\n5. Install/Test path environment\n6. Install FFmpeg VVDec support\n7. Install quickly through Anaconda for ffmpeg (Windows)\n8. Install VVdec Web Player\n9. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)\n10. Install vvDecPlayer from BitMovin\n11. Install/Update VLC VTM Plugins (Windows/Linux x64 of VLC plugins by Inter Digital Inc)\n12. Install MPV Windows/Android (libvvdec plugin)\n13. Tests of VVC videos");
 
                 string input = Console.ReadLine();
 
