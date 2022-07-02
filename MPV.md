@@ -11,7 +11,7 @@ Screenshot preview, see top-left information of toggle stats on Windows/Android 
 ![mpvplayerforwindowslibvvdec](https://user-images.githubusercontent.com/88035011/176990209-4c6bcc0d-ef14-4e4c-8738-edfbb9a6e1c1.png)
 
 
-# Download MPV Windows/ Android Player (libvvdec plugin)
+# Download MPV Windows/Android Player (libvvdec plugin)
 
 [Windows 7 and later x64](https://mega.nz/file/exUDjD6S#0rSrMDIZdJcsb51QBNoJkobvWG_ZBXQWyaV714Y3yKU)
 
