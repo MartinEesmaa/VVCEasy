@@ -70,6 +70,11 @@ bc1qhf4zu5uythr7vyt2dru73qp0k2rzrx355fsx47yjxc2ueunz8frqxmwap3
 ```
 - **BAT (BASIC ATTENTION TOKEN):** For Brave Browser users only, you can also contribute by supporting me, I'm verified Brave user on Brave Rewards.
 
+- **Estonian bank account (Luminor Eesti IBAN):** You can donate to me. You have to pay a little network send fees before donate.
+```
+EE511700017003558571
+```
+
 # Tests of VVC videos
 
 You can test Martin Eesmaa's encoded movies of VVC video codec and follow README.txt instructions.
