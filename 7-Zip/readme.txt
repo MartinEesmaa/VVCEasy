@@ -1,16 +1,16 @@
-7-Zip 21.07
+7-Zip 22.00
 -----------
 
 7-Zip is a file archiver for Windows.
 
-7-Zip Copyright (C) 1999-2021 Igor Pavlov.
+7-Zip Copyright (C) 1999-2022 Igor Pavlov.
 
 The main features of 7-Zip: 
 
   - High compression ratio in the new 7z format
   - Supported formats:
      - Packing / unpacking: 7z, XZ, BZIP2, GZIP, TAR, ZIP and WIM.
-     - Unpacking only: AR, ARJ, Base64, CAB, CHM, CPIO, CramFS, DMG, EXT, FAT, GPT, HFS,
+     - Unpacking only: APFS, AR, ARJ, Base64, CAB, CHM, CPIO, CramFS, DMG, EXT, FAT, GPT, HFS,
                        IHEX, ISO, LZH, LZMA, MBR, MSI, NSIS, NTFS, QCOW2, RAR, 
                        RPM, SquashFS, UDF, UEFI, VDI, VHD, VHDX, VMDK, XAR and Z.
   - Fast compression and decompression
