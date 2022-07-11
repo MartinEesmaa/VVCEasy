@@ -28,7 +28,7 @@ Discord: https://discord.gg/t54cADTbWW
 
 # All lists
 
-- [Donate to Martin Eesmaa using cryptocurrency](#donate-to-martin-eesmaa-using-cryptocurrency)
+- [Donate to Martin Eesmaa using cryptocurrency](#donate-to-martin-eesmaa-for-an-cryptocurrencies)
 
 - [Tests of VVC videos](#tests-of-vvc-videos)
 
