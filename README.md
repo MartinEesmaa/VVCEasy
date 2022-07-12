@@ -22,7 +22,7 @@ Windows/Mac/Linux source run (Csharp): Bin/Release or Debug/netX.x/VVCEasy.exe (
 
 Matrix chat: https://matrix.to/#/#vvceasy:matrix.org
 
-Revolt: https://app.revolt.chat/server/01G1QSBZ4AMGDBWPVJ63EDZCD7/channel/01G1QSBZ4ABH7REMG6T47R8KS4
+Revolt: https://app.revolt.chat/invite/0Y10qHzP
 
 Discord: https://discord.gg/t54cADTbWW
 
