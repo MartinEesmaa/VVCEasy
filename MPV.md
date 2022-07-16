@@ -10,10 +10,19 @@ Screenshot preview, see top-left information of toggle stats on Windows/Android 
 
 ![mpvplayerforwindowslibvvdec](https://user-images.githubusercontent.com/88035011/176990209-4c6bcc0d-ef14-4e4c-8738-edfbb9a6e1c1.png)
 
+### Important Windows users for old builds
+
+If you're using the old build, please download a new build of MPV VVCEasy version.
+
+This is a fix of Intel CPU users and updated version of libvvdec.
+
+Some are now static and some are shared, because enabling static build is saying ld not found (eg. -lpython3.10) on MinGW MSYS2.
+
+Special thanks to @ZenKiyoshi for Intel build bug. See the issue: #16
 
 # Download MPV Windows/Android Player (libvvdec plugin)
 
-[Windows 7 and later x64](https://mega.nz/file/exUDjD6S#0rSrMDIZdJcsb51QBNoJkobvWG_ZBXQWyaV714Y3yKU)
+[Windows 7 and later x64](https://mega.nz/file/KhdkyDzJ#mIcX6zWk-ZcDyux43ul_U9MnOvxaLzZM1ns4kUqhOHc)
 
 [Android API 29 .APK Debug (Recommended)](https://mega.nz/file/Txk2zYqL#kzmdpuXITsxxJItgRkukW2CjUkDqqy9qT3zWWtTBRD4)
 
