@@ -59,9 +59,19 @@ Containers are also acceptable video containers of .mkv, .mp4, .mov and more.
 
 For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
+### Important Windows users for old builds
+
+If you're using the old build, please download a new build of FFmpeg VVCEasy version.
+
+Now it's static build of Windows FFmpeg VVCEasy version.
+
+This is a fix of Intel CPU users and updated versions.
+
+Special thanks to @ZenKiyoshi for Intel build bug. See the issue: #16
+
 # FFmpeg Downloads (VVC encoder & decoder plugin compiled by Martin Eesmaa)
 
-[Windows](https://mega.nz/file/7xdRQSRT#S72TX8q8bkOdyeLSPWFUqcWCcztSSyi4qVrxpSwma5M)
+[Windows](https://mega.nz/file/T4UARC5A#qQXNnxCrZD3igP4cXJpzz2oVfSO7phSZw-WgHssj5lg)
 
 [Mac OS](https://mega.nz/file/K8MW0IAR#NgTpDwR5nXk3QvpKlsTDdatYS32igd_-36acbe4eyCo)
 
