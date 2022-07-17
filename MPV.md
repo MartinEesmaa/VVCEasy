@@ -22,7 +22,7 @@ Special thanks to @ZenKiyoshi for Intel build bug. See the issue: #16
 
 # Download MPV Windows/Android Player (libvvdec plugin)
 
-[Windows 7 and later x64](https://mega.nz/file/KhdkyDzJ#mIcX6zWk-ZcDyux43ul_U9MnOvxaLzZM1ns4kUqhOHc)
+[Windows 7 and later x64](https://mega.nz/file/KhlSzbBQ#uhyFwOPKFrssHweqXozS7B8iZxWtf0oX2o_jrY__rhQ)
 
 [Android API 29 .APK Debug (Recommended)](https://mega.nz/file/Txk2zYqL#kzmdpuXITsxxJItgRkukW2CjUkDqqy9qT3zWWtTBRD4)
 
