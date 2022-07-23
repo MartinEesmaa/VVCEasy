@@ -2,7 +2,13 @@
 HISTORY of the 7-Zip
 --------------------
 
-22.00          2022-06-16
+22.01          2022-07-15
+-------------------------
+- UDF support was improved to UDF version 2.60.
+- HFS and APFS support was improved.
+
+
+22.00          2022-06-15
 -------------------------
 - 7-Zip now can extract APFS (Apple File System) images that can be used in DMG files.
 - 7-Zip now can create TAR archives in POSIX (pax) tar format with the switches
