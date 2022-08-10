@@ -1,8 +1,8 @@
 echo Starting process of FFmpeg build with libvvenc and libvvdec...
 mkdir buildffmpegwin && cd buildffmpegwin
-git clone --depth=1 https://github.com/tbiat/FFmpeg
+git clone --depth=10 https://github.com/tbiat/FFmpeg
 git clone --depth=1 https://github.com/fraunhoferhhi/vvenc
-git clone --depth=10 https://github.com/fraunhoferhhi/vvdec
+git clone --depth=1 https://github.com/fraunhoferhhi/vvdec
 echo Starting to build vvenc...
 cd vvenc
 mkdir build && cd build
