@@ -1,8 +1,8 @@
 ![mpv-icon128](https://user-images.githubusercontent.com/88035011/169686347-e7f06fa5-01ea-4b13-9ec6-c87570873db7.png)
 
-# MPV Windows/Android Player (libvvdec support)
+# MPV Windows/Android Player (libvvdec + xHE-AAC support)
 
-MPV Windows/Android Player (libvvdec support) can play your VVC decoded video file and muxed MP4 container with VVC video codec + audio.
+MPV Windows/Android Player (libvvdec + xHE-AAC support) can play your VVC decoded video file and muxed MP4 container with VVC video codec + audio.
 
 Screenshot preview, see top-left information of toggle stats on Windows/Android device:
 
@@ -20,9 +20,11 @@ Some are now static and some are shared, because enabling static build is saying
 
 Special thanks to @ZenKiyoshi for Intel build bug. See the issue: #16
 
+Another special thanks to @ZenKiyoshi for xHE-AAC support. Requested completed: #17
+
 # Download MPV Windows/Android Player (libvvdec plugin)
 
-[Windows 7 and later x64](https://mega.nz/file/KhlSzbBQ#uhyFwOPKFrssHweqXozS7B8iZxWtf0oX2o_jrY__rhQ)
+[Windows 7 and later x64](https://mega.nz/file/Hg8BmQ6T#wyBXlYWPRLnCZ8lKpPlninm3FVg8VY78N1Ip-H7zp84)
 
 [Android API 29 .APK Debug (Recommended)](https://mega.nz/file/Txk2zYqL#kzmdpuXITsxxJItgRkukW2CjUkDqqy9qT3zWWtTBRD4)
 
@@ -56,7 +58,7 @@ e44d5ce683130fe7918f6fd28597a773a1dcfe7d0aea3378034c6bdec2488680  MPV-VVCEasy-AP
 2bc8436b7e5fd582eafb1537c6dbc0690c69a1c3e88aa7af55a2a5075c950eb6  MPV-VVCEasy-API29release-unsigned.apk
 2189669f44a85ae5585b3d47c6435be94e9b572ad224554c9dbf106fd2c431c2  MPV-VVCEasy-debug.apk
 27bed76d371dae7fd9091929c4a25b082f887fa1fe1b5c91f81ab5eb80c7f88d  MPV-VVCEasy-release-unsigned.apk
-06adabf1ed41b96599e211ae264128a7f734a6c72b3b72ca3fd2de3e8992a305  MPV-VVCEasy-Windows-x64.7z
+cc6fa2bfa39c255ddb72ad55340cf1d63032c8c5bae67398b773eae52a7bc63c  MPV-VVCEasy-Windows-x64.7z
 ```
 
 -   Martin Eesmaa
