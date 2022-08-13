@@ -6,7 +6,7 @@ MPV Windows/Android Player (libvvdec + xHE-AAC support) can play your VVC decode
 
 Screenshot preview, see top-left information of toggle stats on Windows/Android device:
 
-![seeklogoflibvvdecmartineesmaa](https://user-images.githubusercontent.com/88035011/175221755-7dfbb1a8-6c27-4e34-bff0-a212ca347fa5.jpg)
+![mpvandroidwithxheaacplusvvc](https://user-images.githubusercontent.com/88035011/184468869-7286272c-66e3-4b3e-b1cc-015a6e24103d.jpg)
 
 ![mpvplayerforwindowslibvvdec](https://user-images.githubusercontent.com/88035011/176990209-4c6bcc0d-ef14-4e4c-8738-edfbb9a6e1c1.png)
 
@@ -22,17 +22,17 @@ Special thanks to @ZenKiyoshi for Intel build bug. See the issue: #16
 
 Another special thanks to @ZenKiyoshi for xHE-AAC support. Requested completed: #17
 
-# Download MPV Windows/Android Player (libvvdec plugin)
+# Download MPV Windows/Android Player (libvvdec + xHE-AAC plugin)
 
 [Windows 7 and later x64](https://mega.nz/file/Hg8BmQ6T#wyBXlYWPRLnCZ8lKpPlninm3FVg8VY78N1Ip-H7zp84)
 
-[Android API 29 .APK Debug (Recommended)](https://mega.nz/file/Txk2zYqL#kzmdpuXITsxxJItgRkukW2CjUkDqqy9qT3zWWtTBRD4)
+[Android API 29 .APK Debug (Recommended)](https://mega.nz/file/ywlyhTgY#CF3nPL4q6ughGKmh3fw84VrLiEKNcW-4ck_oBo4GDUA)
 
-[Android API 29 .APK Release unsigned](https://mega.nz/file/K01RBKLb#k28EB0nKbPvi1HO8lZWFSs6h6d_vfoeigWtpI5toe84)
+[Android API 29 .APK Release unsigned](https://mega.nz/file/fwMTGKCZ#K0DKjMwUs0uTNyVX9Cwn5pfy21-9EmBVxMFfk8TZY64)
 
-[Android Default 30 .APK Debug](https://mega.nz/file/y192xBCK#oCW2ieIOXQNiWnYNTq2nNDdQU7y743FrQ0e8ajtPelQ)
+[Android Default 30 .APK Debug](https://mega.nz/file/zgFGXYxS#w0vC8RPRheF_LIxWUGYvoPOzVj7XmFLzTYjV0Ft6OSc)
 
-[Android Default 30 .APK Release unsigned](https://mega.nz/file/jg8iQZaS#2rjGnG91SJPmlW2g_dsDGU927G7Qc4hldPl0KSL6lgk)
+[Android Default 30 .APK Release unsigned](https://mega.nz/file/ftVwHTRZ#h5mdcyk3JURuz1vsr7sAwtN8MKXqBOjXNGk48jN0PNs)
 
 # Limitations & Tips
 
@@ -40,9 +40,11 @@ This app might crash, slow or freeze on your Android phone for playing VVC high 
 
 MPV Android libvvdec app requires your system type of ARM64 (aarch64), x86 (i686), ARMv7 (armeabi-v7a) and x86_64 to run on Android or Windows requires to run x64.
 
-Windows/Android MPV Player doesn't work seek duration of VVC decoded file only, but only mp4 video container muxed with VVC video codec is seek only supported, including audio too.
+Windows/Android MPV Player doesn't work seek duration of VVC decoded file only, but only mp4 video container muxed with VVC video codec is only seek supported, including audio & subtitle too.
 
 Some Android users for 10-bit pixel format or/and tier high might not show video in mp4 container with VVC video codec only.
+
+Some Windows users might cannot run mpv-vvceasy of some builds with old CPU only.
 
 ### Tips
 
@@ -54,10 +56,10 @@ On Windows, you can copy mpv-2.dll, mpv-vvceasy and mpv-vvceasy of DLL to mpv.ne
 
 # SHA256 SUMS
 ```
-e44d5ce683130fe7918f6fd28597a773a1dcfe7d0aea3378034c6bdec2488680  MPV-VVCEasy-API29debug.apk
-2bc8436b7e5fd582eafb1537c6dbc0690c69a1c3e88aa7af55a2a5075c950eb6  MPV-VVCEasy-API29release-unsigned.apk
-2189669f44a85ae5585b3d47c6435be94e9b572ad224554c9dbf106fd2c431c2  MPV-VVCEasy-debug.apk
-27bed76d371dae7fd9091929c4a25b082f887fa1fe1b5c91f81ab5eb80c7f88d  MPV-VVCEasy-release-unsigned.apk
+f36efd2e0de74a527df939dd3a24d604cd4190a019586cab8e0197f131733c84  MPV-VVCEasy-API29debug.apk
+26ad71af3c45d030897e45f9c06117cb42926dadc1482a5130042f355d8f9004  MPV-VVCEasy-API29release-unsigned.apk
+b977474f162f168b462b8fb33fbaccec2ef0200246f339208913348cb5683101  MPV-VVCEasy-debug.apk
+f0117f9b8f6d21ed1e2b1d29ce53c22e15e7e62ea593a9816f4fc1a544a733ba  MPV-VVCEasy-release-unsigned.apk
 cc6fa2bfa39c255ddb72ad55340cf1d63032c8c5bae67398b773eae52a7bc63c  MPV-VVCEasy-Windows-x64.7z
 ```
 
