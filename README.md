@@ -217,15 +217,15 @@ Transcode any video formats to YUV/Y4M
 
 For YUV transcode (lossy from web quality, YouTube videos and others):
 ```
-ffmpeg -i input.mp4 -pix_fmt yuv420p -strict 1 inputtranscode.yuv
+ffmpeg -i input.mp4 -pix_fmt yuv420p inputtranscode.yuv
 ```
 
 For Y4M transcode (lossless from uncompressed video files, only 8 bit):
 ```
-ffmpeg -i input.mp4 -pix_fmt yuv420p -c:v wrapped_avframe -strict 1 inputtranscode.y4m
+ffmpeg -i input.mp4 -pix_fmt yuv420p inputtranscode.y4m
 ```
 
-Verify uncompressed video using ffplay before encode to VVENC (important replace video size, otherwise it will not correctly show video, it's like scrambled eggs video):
+Verify uncompressed video using ffplay before encode to VVENC (important add video size after the input file, else it will not correctly show video like scrambled eggs video):
 ```
 ffplay inputtranscode.yuv -video_size 1280x720
 ``` 
@@ -321,7 +321,7 @@ Linux (./vvencapp):
 # FAQ (known as Frequently Asked Questions)
 
 Are you real creator of VVCEasy?
-Yes... but I'm not real creator of VVC, I didn't built VVC, it was Fraunhofer that he built VVC.
+Yes... but I'm not real creator of VVC, I didn't built VVC, it was Fraunhofer HHI that he built VVC.
 
 Are you trying to work build of VVCEasy?
 Well yes... it takes longer time to make VVCEasy easier, but VVCEasy is not yet finished until further/update announcement. I don't have a employees, so I'm only the one.
@@ -330,7 +330,7 @@ Is it okay to bring my proof screenshots of errors?
 I allow you to bring error screenshots, you can bring proof. More proofs, easier to solve it.
 
 My question is not listed on FAQ. Can I ask any question to you?
-Sure, just go to Issues tab, ask questions or/and give your issue to me.
+Sure, just go to Issues tab, ask questions or/and give your issue to me, I'd be happy to help :).
 
 Do you know what you have skills in your programming?
 I know about Batch file and HTML programmer. Some hard programming languages might be difficult to me :/.
