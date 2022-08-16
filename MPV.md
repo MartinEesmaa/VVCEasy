@@ -63,4 +63,39 @@ f0117f9b8f6d21ed1e2b1d29ce53c22e15e7e62ea593a9816f4fc1a544a733ba  MPV-VVCEasy-re
 cc6fa2bfa39c255ddb72ad55340cf1d63032c8c5bae67398b773eae52a7bc63c  MPV-VVCEasy-Windows-x64.7z
 ```
 
+# Build MPV Android with VVC and xHE-AAC:
+
+If you want to build MPV Android, you need to update & upgrade first, then install packages:
+```
+sudo apt update && sudo apt upgrade -y
+sudo apt install build-essential cmake nasm libsimde-dev python3 git
+```
+
+Next download Temurin from Adoptium and follow the install instructions:
+
+https://adoptium.net/installation/linux
+
+After you installed Temurin from Adoptium, you can verify that is installed on your system:
+```
+java --version
+```
+
+After installing the packages on Linux, clone mpv-android-vvc repository:
+```
+cd ~
+git clone https://github.com/MartinEesmaa/mpv-android-vvc
+cd mpv-android-vvc/buildscripts
+```
+
+Give shell scripts permission in buildscripts folder:
+```
+chmod +x scripts/*.sh
+```
+
+**TIP: You can edit script of vvdec.sh on your own choise.**
+
+Continue follow instructions to build your own MPV build:
+
+https://github.com/mpv-android/mpv-android/blob/master/buildscripts/README.md
+
 -   Martin Eesmaa
