@@ -92,11 +92,13 @@ Give shell scripts permission in buildscripts folder:
 chmod +x scripts/*.sh
 ```
 
-Before you build, you need to search `#ifdef __ANDROID__` and delete the lines:
+Before you build, you need to search `#ifdef __ANDROID__` and delete the lines by end `#endif`:
 
 ```
 nano deps/fdkaac/libSBRdec/src/lpp_tran.cpp
 ```
+
+Save the file in nano editor, when you finished removing `#ifdef __ANDROID` lines.
 
 **TIP: You can edit script of vvdec.sh on your own choise.**
 
