@@ -92,6 +92,12 @@ Give shell scripts permission in buildscripts folder:
 chmod +x scripts/*.sh
 ```
 
+Before you build, you need to search `#ifdef __ANDROID__` and delete the lines:
+
+```
+nano deps/fdkaac/libSBRdec/src/lpp_tran.cpp
+```
+
 **TIP: You can edit script of vvdec.sh on your own choise.**
 
 Continue follow instructions to build your own MPV build:
