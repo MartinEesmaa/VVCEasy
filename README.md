@@ -38,9 +38,9 @@ Discord: https://discord.gg/t54cADTbWW
 
 - [Bitmovin VVDec Player](#bitmovin-vvdec-player)
 
-- [FFmpeg VVC Encoder & Decoder support](#ffmpeg-vvenc--vvdec-support)
+- [FFmpeg VVC Decoder & xHE-AAC support](#ffmpeg-vvdec--xhe-aac-support)
 
-- [MPV libvvdec support (Windows x64/Android only)](#mpv-libvvdec-support-windows-x64android-only)
+- [MPV libvvdec + xHE-AAC support (Windows x64/Android only)](#mpv-libvvdec--xhe-aac-support-windows-x64android-only)
 
 - [Compile for VVCEasy](#compile-for-vvceasy)
 
@@ -115,17 +115,17 @@ For more information about Bitmovin VVDec Player.
 
 See [Bitmovin.md](Bitmovin.md).
 
-# FFmpeg VVENC & VVDEC support
+# FFmpeg VVDEC & xHE-AAC support
 
-FFmpeg VVC Encoder & Decoder supports of Windows, Mac and Linux.
+FFmpeg VVC Decoder & xHE-AAC supports of Windows, Mac and Linux.
 
 See [FFMPEGVVC.md](FFMPEGVVC.md).
 
-# MPV libvvdec support (Windows x64/Android only)
+# MPV libvvdec + xHE-AAC support (Windows x64/Android only)
 
-MPV libvvdec Decoder supports only of Windows x64 & Android.
+MPV libvvdec & xHE-AAC supports only of Windows x64 & Android.
 
-The VVC and MP4 muxed with VVC codec can be played on MPV libvvdec version. Only MP4 muxed with VVC supports seek.
+The VVC and MP4 muxed with VVC codec can be played on MPV libvvdec + xHE-AAC version. Only MP4 muxed with VVC supports seek.
 
 See [MPV.md](MPV.md).
 
