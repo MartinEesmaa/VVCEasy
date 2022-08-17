@@ -1,4 +1,4 @@
-# FFmpeg VVC Encoder & Decoder installation (Windows, Mac OS and Linux)
+# FFmpeg VVC xHE-AAC & Decoder installation (Windows, Mac OS and Linux)
 
 Windows, Mac and Linux (Preview of vvc video in ffplay):
 
@@ -14,7 +14,7 @@ You can play VVC video codec with .h266, .vvc, .266 and anything or .mp4 muxed w
 ffplay_g versatile.266
 ```
 
-# Limitations of FFmpeg VVC encoder
+# Limitations of FFmpeg VVC encoder (deprecated)
 
 Before encode to VVC video codec, see the limitations below.
 
@@ -48,11 +48,11 @@ Replace video size for `-s` and frame rate for `-r`.
 
 Good news, you can play .mp4 file after .h266 and audio format were merged into mp4 playable of VVC.
 
-About [xHE-AAC](https://www.iis.fraunhofer.de/en/ff/amm/broadcast-streaming/xheaac.html), there is no decode support of FFmpeg. The reason is a license fee, but except [Exhale](https://gitlab.com/ecodis/exhale) (encoder) is free to use and open source. However, you can also merge your encoded xHE-AAC audio into mp4 too.
+About [xHE-AAC](https://www.iis.fraunhofer.de/en/ff/amm/broadcast-streaming/xheaac.html), now it's available decode support xHE-AAC of FFmpeg. [Exhale](https://gitlab.com/ecodis/exhale) (encoder) is free to use and open source, but if you want Fraunhofer IIS xHE-AAC, you can download [EZ CD Audio Converter](https://www.poikosoft.com/music-converter) for Windows only. You can also merge your encoded xHE-AAC audio into mp4 too.
 
 To make playable mp4 with audio and video together, you need VVC video encoded, audio file and [GPAC Nightly build](https://gpac.wp.imt.fr/downloads/gpac-nightly-builds/). Code for mp4box/gpac to merge VVC video encoded and audio file:
 ```
-mp4box -no-probe -add video.266 -add audio.opus -new convertedvvc.mp4
+mp4box -no-probe -add video.266 -add audio.m4a -new convertedvvc.mp4
 ```
 
 Containers are also acceptable video containers of .mkv, .mp4, .mov and more.
@@ -69,9 +69,9 @@ This is a fix of Intel CPU users and updated versions.
 
 Special thanks to @ZenKiyoshi for Intel build bug. See the issue: #16
 
-# FFmpeg Downloads (VVC encoder & decoder plugin compiled by Martin Eesmaa)
+# FFmpeg Downloads (xHE-AAC & VVC decoder plugin compiled by Martin Eesmaa)
 
-[Windows](https://mega.nz/file/T4UARC5A#qQXNnxCrZD3igP4cXJpzz2oVfSO7phSZw-WgHssj5lg)
+[Windows](https://mega.nz/file/6w8SkZRb#-x5xV1sOY7n2q_eD_qapNAQMuzXg2J2z1uPXIHYwaCY)
 
 [Mac OS](https://mega.nz/file/K8MW0IAR#NgTpDwR5nXk3QvpKlsTDdatYS32igd_-36acbe4eyCo)
 
