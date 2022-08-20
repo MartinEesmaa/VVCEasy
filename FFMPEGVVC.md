@@ -161,30 +161,30 @@ sudo apt install libxml2 libx264-dev libx265-dev libnuma-dev libxml2 libopus-dev
 If you are using other linux without Ubuntu 20.04 LTS, you have to build using this:
 
 ```
-sudo apt install build-essential cmake libx264-dev libx265-dev libnuma-dev libxml2 libopus-dev nasm libsdl2-dev && \
-git clone https://github.com/fraunhoferhhi/vvdec.git && cd vvdec && \
-make release && make install install-prefix=/usr/local && \
+sudo apt install build-essential cmake libxml2-dev nasm libsdl2-dev && \
+git clone --depth=1 https://github.com/fraunhoferhhi/vvdec && \
+git clone --depth=1 https://github.com/fraunhoferhhi/vvenc && \
+git clone --depth=1 https://github.com/mstorsjo/fdk-aac && \
+git clone --depth=1 https://github.com/MartinEesmaa/FFmpeg-FixVVC && \
+cd vvenc && sudo make install install-prefix=/usr/local && \
 cd .. && \
-git clone https://github.com/fraunhoferhhi/vvenc.git && cd vvdec && \
-make release && make install install-prefix=/usr/local && \
-cd .. && git clone https://github.com/tbiat/FFmpeg.git && cd FFmpeg && \
-./configure --enable-gpl \
-  --enable-version3 \
-  --enable-libvvenc \
-  --enable-libvvdec \ 
-  --enable-pic \ 
-  --enable-libxml2 \ 
-  --enable-libx264 \
-  --enable-libx265 \
-  --enable-sdl2 \
-  --enable-libopus && \
+cd vvdec && sudo make install install-prefix=/usr/local && \
+cd .. && \
+cd fdk-aac && autoreconf -if && ./configure --prefix=/usr/local --enable-static --disable-shared && sudo make install && \
+cd .. && cd FFmpeg-FixVVC && \
+./configure --enable-libfdk-aac --enable-libvvenc --enable-libvvdec --enable-pic --enable-libxml2 --enable-sdl2 && \
 make -j
 ```
 
 If compiling is success and finished, you can install FFmpeg, using the code:
 
 ```
-make install
+mv ffmpeg ffmpeg_vvceasy
+mv ffplay ffplay_vvceasy
+mv ffprobe ffprobe_vvceasy
+sudo cp ffmpeg_vvceasy /usr/local/bin
+sudo cp ffplay_vvceasy /usr/local/bin
+sudo cp ffprobe_vvceasy /usr/local/bin
 ```
 
 For Linux downloaders to run FFmpeg, please copy these two files:
