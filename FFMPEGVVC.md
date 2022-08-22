@@ -161,22 +161,30 @@ sudo apt install libxml2 libx264-dev libx265-dev libnuma-dev libxml2 libopus-dev
 If you are using other linux without Ubuntu 20.04 LTS, you have to build using this:
 
 ```
-sudo apt install build-essential cmake libxml2-dev nasm libsdl2-dev && \
-git clone --depth=1 https://github.com/fraunhoferhhi/vvdec && \
+sudo apt install build-essential cmake nasm && \
 git clone --depth=1 https://github.com/fraunhoferhhi/vvenc && \
+git clone --depth=1 https://github.com/fraunhoferhhi/vvdec && \
 git clone --depth=1 https://github.com/mstorsjo/fdk-aac && \
+git clone --depth=1 https://github.com/libsdl-org/SDL && \
+git clone --depth=1 https://github.com/gnome/libxml2 && \
 git clone --depth=1 https://github.com/MartinEesmaa/FFmpeg-FixVVC && \
-cd vvenc && sudo make install install-prefix=/usr/local && \
+cd vvenc && sudo make install-release install-prefix=/usr/local && \
 cd .. && \
-cd vvdec && sudo make install install-prefix=/usr/local && \
+cd vvdec && sudo make install-release install-prefix=/usr/local && \
 cd .. && \
-cd fdk-aac && autoreconf -if && ./configure --prefix=/usr/local --enable-static --disable-shared && sudo make install && \
+cd fdk-aac && autoreconf -if && ./configure --prefix=/usr/local --enable-static --disable-shared && sudo make install -j $nproc && \
+cd .. && \
+cd libxml2 && autoreconf -if && ./configure --prefix=/usr/local --enable-static --disable-shared && sudo make install -j $nproc && \
+cd .. && \
+cd SDL && ./configure --prefix=/usr/local --enable-static --disable-shared && sudo make install -j $nproc && \
 cd .. && cd FFmpeg-FixVVC && \
-./configure --enable-libfdk-aac --enable-libvvenc --enable-libvvdec --enable-pic --enable-libxml2 --enable-sdl2 && \
+./configure --enable-static --pkg-config-flags="--static" --extra-libs="-lpthread -lm -lz" --extra-ldexeflags="-static" \
+--enable-libfdk-aac --enable-libvvenc --enable-libvvdec --enable-pic \
+--enable-libxml2 --enable-sdl2 && \
 make -j
 ```
 
-If compiling is success and finished, you can install FFmpeg, using the code:
+If compiling is success and finished, you can install FFmpeg VVC, using the code:
 
 ```
 mv ffmpeg ffmpeg_vvceasy
