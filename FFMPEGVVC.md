@@ -75,7 +75,7 @@ Special thanks to @ZenKiyoshi for Intel build bug. See the issue: #16
 
 [Mac OS](https://mega.nz/file/K8MW0IAR#NgTpDwR5nXk3QvpKlsTDdatYS32igd_-36acbe4eyCo)
 
-[Linux](https://mega.nz/file/jhkk0bqQ#0y-m_ieBbhTWgOI2Eenzd-zugxo2PLedqnobGmux51M) (Only Ubuntu 20.04 build)
+[Linux](https://mega.nz/file/PwVmTKYB#WsTte8csnpKRPRSwTCfE7WtTvndO1cM_3UKKb1T7p0s) (Only Ubuntu 22.04 build)
 
 # Mac OS downloaders (Important note)
 
@@ -150,13 +150,7 @@ make
 
 # Linux downloaders (Important note)
 
-Unfortunately, this is Ubuntu 20.04 LTS build only.
-
-Before you use FFmpeg, make sure you install all these requirements:
-
-```
-sudo apt install libxml2 libx264-dev libx265-dev libnuma-dev libxml2 libopus-dev libsdl2-dev
-```
+Unfortunately, this is Ubuntu 22.04 LTS build only.
 
 If you are using other linux without Ubuntu 20.04 LTS, you have to build using this:
 
@@ -193,13 +187,6 @@ mv ffprobe ffprobe_vvceasy
 sudo cp ffmpeg_vvceasy /usr/local/bin
 sudo cp ffplay_vvceasy /usr/local/bin
 sudo cp ffprobe_vvceasy /usr/local/bin
-```
-
-For Linux downloaders to run FFmpeg, please copy these two files:
-
-```
-sudo cp libvvenc.so /usr/lib/libvvenc.so
-sudo cp libvvdec.so /usr/lib/libvvdec.so
 ```
 
 # Special thanks
