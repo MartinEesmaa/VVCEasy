@@ -152,7 +152,7 @@ make
 
 Unfortunately, this is Ubuntu 22.04 LTS build only.
 
-If you are using other linux without Ubuntu 20.04 LTS, you have to build using this:
+If you are using other linux without Ubuntu 22.04 LTS, you have to build using this:
 
 ```
 sudo apt install build-essential cmake nasm && \
