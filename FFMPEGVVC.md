@@ -122,7 +122,7 @@ Requirements:
 
 Xcode
 
-Cmake
+CMake
 
 NASM
 
@@ -131,21 +131,21 @@ Homebrew
 Code to build FFmpeg VVC version:
 
 ```
-brew install x264 x265 libvpx libxml2 libopusenc
+brew install libxml2 ffmpeg fdk-aac
 git clone https://github.com/fraunhoferhhi/vvenc
 git clone https://github.com/fraunhoferhhi/vvdec
 cd vvenc && mkdir build && cd build
-cmake -DBUILD_SHARED_LIBS=1 -DCMAKE_INSTALL_PREFIX=/usr/local ..
-cmake --build . --config Release --target install
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local ..
+cmake --build . --target install -j $nproc
 cd ../../
 cd vvdec && mkdir build && cd build
-cmake -DBUILD_SHARED_LIBS=1 -DCMAKE_INSTALL_PREFIX=/usr/local ..
-cmake --build . --config Release --target install
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local ..
+cmake --build . --target install -j $nproc
 cd ../../
-git clone --depth=1 https://github.com/tbiat/FFmpeg
-cd FFmpeg
-./configure --enable-gpl --enable-version3 --enable-libvvenc --enable-libvvdec --enable-pic --enable-libxml2 --enable-libx264 --enable-libx265 --enable-libvpx --enable-libopus --enable-sdl2
-make
+git clone --depth=1 https://github.com/MartinEesmaa/FFmpeg-FixVVC
+cd FFmpeg-FixVVC
+./configure --enable-libfdk-aac --enable-libvvenc --enable-libvvdec --enable-static --enable-pic --enable-libxml2 --pkg-config-flags="--static" --enable-sdl2
+make -j
 ```
 
 # Linux downloaders (Important note)
@@ -172,7 +172,7 @@ cd libxml2 && autoreconf -if && ./configure --prefix=/usr/local --enable-static 
 cd .. && \
 cd SDL && ./configure --prefix=/usr/local --enable-static --disable-shared && sudo make install -j $nproc && \
 cd .. && cd FFmpeg-FixVVC && \
-./configure --enable-static --pkg-config-flags="--static" --extra-libs="-lpthread -lm -lz" --extra-ldexeflags="-static" \
+./configure --enable-static --pkg-config-flags="--static" --extra-ldexeflags="-static" \
 --enable-libfdk-aac --enable-libvvenc --enable-libvvdec --enable-pic \
 --enable-libxml2 --enable-sdl2 && \
 make -j
