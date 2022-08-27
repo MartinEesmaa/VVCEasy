@@ -73,13 +73,13 @@ Special thanks to @ZenKiyoshi for Intel build bug. See the issue: #16
 
 [Windows](https://mega.nz/file/6w8SkZRb#-x5xV1sOY7n2q_eD_qapNAQMuzXg2J2z1uPXIHYwaCY)
 
-[Mac OS](https://mega.nz/file/K8MW0IAR#NgTpDwR5nXk3QvpKlsTDdatYS32igd_-36acbe4eyCo)
+[Mac OS](https://mega.nz/file/3xtTAIiQ#MPsPcz-QlSquqahmEx8ANpqleiVm2Y3L1o3R6vy7qY8)
 
 [Linux](https://mega.nz/file/PwVmTKYB#WsTte8csnpKRPRSwTCfE7WtTvndO1cM_3UKKb1T7p0s) (Only Ubuntu 22.04 build)
 
 # Mac OS downloaders (Important note)
 
-Please note, that is not a malware of my compiled build, see the three screenshots to make run ffmpeg tools customised version
+Please note, this is not a malware of my compiled build, see the three screenshots to make run ffmpeg tools customised version
 
 You need to allow the app on your Mac OS for chmod write access & Security & Privacy:
 
@@ -94,27 +94,6 @@ Step 2: Go to Security & Privacy on Mac OS Settings app, then check App Store & 
 Step 3: Click "Open" button, this does not hurt your computer.
 
 ![Kuvatõmmis 2022-06-18 103557](https://user-images.githubusercontent.com/88035011/174431086-9eb0df35-2fde-4ca7-99d4-2efa45a0a946.png)
-
-You may receive this error, if the vvc shared library was not found:
-```
-dyld: Library not loaded: @rpath/libvvdec.dylib
-  Referenced from: /Users/martineesmaa/Downloads/dddd3/./ffplay_g
-  Reason: image not found
-```
-
-The libvv(enc/dec).dylib needs to be patched of FFmpeg VVC version before run. You need patch two files to make work FFmpeg VVC version, you don't need to build if necessary:
-
-```
-sudo cp libvvenc.dylib /usr/local/lib/libvvenc.dylib
-sudo cp libvvenc.dylib /usr/local/lib/libvvenc.dylib
-```
-
-Or outdated library was not found of some computers, so you can download x264 specified version of Homebrew or download new latest link of FFmpeg VVC version:
-```
-dyld: Library not loaded: /usr/local/opt/x264/lib/libx264.163.dylib
-  Referenced from: /Users/runner/work/libvvdec_fixmywin/libvvdec_fixmywin/./ffmpeg_vvceasy_mac
-  Reason: image not found
-```
 
 ### Build Mac OS for FFmpeg VVC build
 
@@ -131,16 +110,16 @@ Homebrew
 Code to build FFmpeg VVC version:
 
 ```
-brew install libxml2 ffmpeg fdk-aac
+brew install libxml2 ffmpeg fdk-aac nasm
 git clone https://github.com/fraunhoferhhi/vvenc
 git clone https://github.com/fraunhoferhhi/vvdec
 cd vvenc && mkdir build && cd build
 cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local ..
-cmake --build . --target install -j $nproc
+sudo cmake --build . --target install -j $nproc
 cd ../../
 cd vvdec && mkdir build && cd build
 cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local ..
-cmake --build . --target install -j $nproc
+sudo cmake --build . --target install -j $nproc
 cd ../../
 git clone --depth=1 https://github.com/MartinEesmaa/FFmpeg-FixVVC
 cd FFmpeg-FixVVC
@@ -155,7 +134,7 @@ Unfortunately, this is Ubuntu 22.04 LTS build only.
 If you are using other linux without Ubuntu 22.04 LTS, you have to build using this:
 
 ```
-sudo apt install build-essential cmake nasm && \
+sudo apt install build-essential cmake nasm db-autoreconf && \
 git clone --depth=1 https://github.com/fraunhoferhhi/vvenc && \
 git clone --depth=1 https://github.com/fraunhoferhhi/vvdec && \
 git clone --depth=1 https://github.com/mstorsjo/fdk-aac && \
@@ -200,5 +179,7 @@ Original author: [@FFmpeg](https://github.com/FFmpeg) Repository: https://github
 [@tbiat](https://github.com/tbiat) Repository: https://github.com/tbiat/FFmpeg
 
 VVC encoder programmer to FFMpeg: [@IsaMorphic] Repository: https://github.com/IsaMorphic/FFmpeg-VVC
+
+[@MartinEesmaa](https://github.com/MartinEesmaa) Repository: https://github.com/MartinEesmaa/FFmpeg-FixVVC
 
 -   Martin Eesmaa
