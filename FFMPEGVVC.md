@@ -1,4 +1,4 @@
-# FFmpeg VVC xHE-AAC & Decoder installation (Windows, Mac OS and Linux)
+# FFmpeg VVC En/decoder && xHE-AAC installation (Windows, Mac OS and Linux)
 
 Windows, Mac and Linux (Preview of vvc video in ffplay):
 
@@ -11,10 +11,16 @@ Windows, Mac and Linux (Preview of vvc video in ffplay):
 You can play VVC video codec with .h266, .vvc, .266 and anything or .mp4 muxed with VVC codec:
 
 ```
-ffplay_g versatile.266
+ffplay_vvceasy versatile.266
 ```
 
-# Limitations of FFmpeg VVC encoder (deprecated)
+Or if you have xHE-AAC audio codec:
+
+```
+ffplay_vvceasy -codec:a libfdk_aac -i versatile.m4a
+```
+
+# Limitations of FFmpeg VVC encoder
 
 Before encode to VVC video codec, see the limitations below.
 
@@ -29,6 +35,7 @@ libvvenc (FFmpeg vvc version) works for:
 - Passes ⚠️ (only one pass)
 - Presets ⚠️ (only medium preset)
 - QP/CRF ⚠️ (only you can set -global_quality command only, global_quality equals qp)
+- HDR ⚠️ (default SDR, but cannot encode HDR)
 
 Built in libvvenc for FFmpeg command:
 
@@ -40,6 +47,12 @@ Additional command: You can convert to vvc video without taking a much space for
 
 ```
 ffmpeg -i example.mp4 -f rawvideo -pix_fmt yuv420p - | vvencapp -i - -s 1920x1080 -r 25 --preset medium --qp 32 -o example1.266
+```
+
+Converting xHE-AAC to AAC audio:
+
+```
+ffmpeg -c:a libfdk_aac -i mymusic.m4a -c:a aac -b:a 128k mymusic.aac
 ```
 
 Replace video size for `-s` and frame rate for `-r`.
@@ -69,9 +82,9 @@ This is a fix of Intel CPU users and updated versions.
 
 Special thanks to @ZenKiyoshi for Intel build bug. See the issue: #16
 
-# FFmpeg Downloads (xHE-AAC & VVC decoder plugin compiled by Martin Eesmaa)
+# FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
 
-[Windows](https://mega.nz/file/6w8SkZRb#-x5xV1sOY7n2q_eD_qapNAQMuzXg2J2z1uPXIHYwaCY)
+[Windows](https://mega.nz/file/H1sQRQQS#6JdCOkvMcdnxhOpfjQ-lpiaXncEfbjlLRP-BF-zC06k)
 
 [Mac OS](https://mega.nz/file/3xtTAIiQ#MPsPcz-QlSquqahmEx8ANpqleiVm2Y3L1o3R6vy7qY8)
 
