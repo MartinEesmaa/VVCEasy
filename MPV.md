@@ -12,6 +12,8 @@ Screenshot preview, see top-left information of toggle stats on Windows/Android 
 
 ### Important Windows users for old builds
 
+Since 1st September 2022, now it is complete static of Windows build MPV VVCEasy.
+
 If you're using the old build, please download a new build of MPV VVCEasy version.
 
 This is a fix of Intel CPU users and updated version of libvvdec.
@@ -24,7 +26,7 @@ Another special thanks to @ZenKiyoshi for xHE-AAC support. Requested completed: 
 
 # Download MPV Windows/Android Player (libvvdec + xHE-AAC plugin)
 
-[Windows 7 and later x64](https://mega.nz/file/Hg8BmQ6T#wyBXlYWPRLnCZ8lKpPlninm3FVg8VY78N1Ip-H7zp84)
+[Windows 7 and later x64](https://mega.nz/file/ax1CDS5Y#a4pFaa4AK92pPs9lpNf51z5sI8z3ve74luvLi2Lah0w)
 
 [Android API 29 .APK Debug (Recommended)](https://mega.nz/file/ywlyhTgY#CF3nPL4q6ughGKmh3fw84VrLiEKNcW-4ck_oBo4GDUA)
 
@@ -60,7 +62,7 @@ f36efd2e0de74a527df939dd3a24d604cd4190a019586cab8e0197f131733c84  MPV-VVCEasy-AP
 26ad71af3c45d030897e45f9c06117cb42926dadc1482a5130042f355d8f9004  MPV-VVCEasy-API29release-unsigned.apk
 b977474f162f168b462b8fb33fbaccec2ef0200246f339208913348cb5683101  MPV-VVCEasy-debug.apk
 f0117f9b8f6d21ed1e2b1d29ce53c22e15e7e62ea593a9816f4fc1a544a733ba  MPV-VVCEasy-release-unsigned.apk
-cc6fa2bfa39c255ddb72ad55340cf1d63032c8c5bae67398b773eae52a7bc63c  MPV-VVCEasy-Windows-x64.7z
+ff3abded30768a2831cdd80ec5f2a108595365b4796fcc453924ba3e4e3bd025  MPV-VVCEasy-Windows-x64.7z
 ```
 
 # Build MPV Android with VVC and xHE-AAC:
