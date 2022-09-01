@@ -38,15 +38,13 @@ Another special thanks to @ZenKiyoshi for xHE-AAC support. Requested completed: 
 
 # Limitations & Tips
 
-This app might crash, slow or freeze on your Android phone for playing VVC high resolutions or/and old devices.
-
 MPV Android libvvdec app requires your system type of ARM64 (aarch64), x86 (i686), ARMv7 (armeabi-v7a) and x86_64 to run on Android or Windows requires to run x64.
 
 Windows/Android MPV Player doesn't work seek duration of VVC decoded file only, but only mp4 video container muxed with VVC video codec is only seek supported, including audio & subtitle too.
 
-Some Android users for 10-bit pixel format or/and tier high might not show video in mp4 container with VVC video codec only.
+Some Android users for 10-bit pixel format or/and tier high might not show video in mp4 container with VVC video codec only. 
 
-Some Windows users might cannot run mpv-vvceasy of some builds with old CPU only.
+Solution: Please download latest mp4box nightly version and remux from .266 to .mp4 file again.
 
 ### Tips
 
