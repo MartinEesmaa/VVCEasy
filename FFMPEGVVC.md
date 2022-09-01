@@ -84,7 +84,7 @@ Special thanks to @ZenKiyoshi for Intel build bug. See the issue: #16
 
 # FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
 
-[Windows](https://mega.nz/file/H1sQRQQS#6JdCOkvMcdnxhOpfjQ-lpiaXncEfbjlLRP-BF-zC06k)
+[Windows](https://mega.nz/file/GgMCHRiJ#2EyPKlfyp68p9XZxHzEWcyVP1qWnoEmqNHzPOrg3VZM)
 
 [Mac OS](https://mega.nz/file/3xtTAIiQ#MPsPcz-QlSquqahmEx8ANpqleiVm2Y3L1o3R6vy7qY8)
 
