@@ -34,11 +34,11 @@ Discord: https://discord.gg/t54cADTbWW
 
 - [VLC InterDigital VTM VVC Plugin](#vlc-interdigital-vtm-vvc-plugin)
 
-- [VLC o266player](#vlc-o266player-windows-only-mac-os-will-be-later)
+- [VLC o266player](#vlc-o266player-windows-only-mac-os-will-be-later-closed-source-decoder)
 
 - [Bitmovin VVDec Player](#bitmovin-vvdec-player)
 
-- [FFmpeg VVC Decoder & xHE-AAC support](#ffmpeg-vvdec--xhe-aac-support)
+- [FFmpeg VVC En/Decoder & xHE-AAC support](#ffmpeg-vvencdec--xhe-aac-support)
 
 - [MPV libvvdec + xHE-AAC support (Windows x64/Android only)](#mpv-libvvdec--xhe-aac-support-windows-x64android-only)
 
@@ -115,9 +115,9 @@ For more information about Bitmovin VVDec Player.
 
 See [Bitmovin.md](Bitmovin.md).
 
-# FFmpeg VVDEC & xHE-AAC support
+# FFmpeg VVENC/DEC & xHE-AAC support
 
-FFmpeg VVC Decoder & xHE-AAC supports of Windows, Mac and Linux.
+FFmpeg VVC En/Decoder & xHE-AAC supports of Windows, Mac and Linux.
 
 See [FFMPEGVVC.md](FFMPEGVVC.md).
 
@@ -395,7 +395,7 @@ License: LGPL-2.1
 
 [FFmpeg](https://github.com/FFmpeg/FFmpeg) - Mirror of https://git.ffmpeg.org/ffmpeg.git
 
-VVC developers & forkers: [lehmann-c](https://github.com/lehmann-c), [tbiat](https://github.com/tbiat) and [Isabelle Santin](https://github.com/IsaMorphic)
+VVC developers & forkers: [Christian Lehmann](https://github.com/lehmann-c), [tbiat](https://github.com/tbiat), [Isabelle Santin](https://github.com/IsaMorphic) & [Martin Eesmaa](https://github.com/MartinEesmaa)
 
 License: LGPL-2.1+ & GPL-2.0+
 
