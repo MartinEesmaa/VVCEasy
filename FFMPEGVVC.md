@@ -65,7 +65,7 @@ About [xHE-AAC](https://www.iis.fraunhofer.de/en/ff/amm/broadcast-streaming/xhea
 
 To make playable mp4 with audio and video together, you need VVC video encoded, audio file and [GPAC Nightly build](https://gpac.wp.imt.fr/downloads/gpac-nightly-builds/). Code for mp4box/gpac to merge VVC video encoded and audio file:
 ```
-mp4box -no-probe -add video.266 -add audio.m4a -new convertedvvc.mp4
+mp4box -add video.266 -add audio.m4a -new convertedvvc.mp4
 ```
 
 Containers are also acceptable video containers of .mkv, .mp4, .mov and more.
@@ -84,7 +84,7 @@ Special thanks to @ZenKiyoshi for Intel build bug. See the issue: #16
 
 # FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
 
-[Windows](https://mega.nz/file/GgMCHRiJ#2EyPKlfyp68p9XZxHzEWcyVP1qWnoEmqNHzPOrg3VZM)
+[Windows](https://mega.nz/file/34cF1SZB#aMmohv-goQMP6CRvNRrb5Q7wnI0hE_c6D8VV-owWLiA)
 
 [Mac OS](https://mega.nz/file/3xtTAIiQ#MPsPcz-QlSquqahmEx8ANpqleiVm2Y3L1o3R6vy7qY8)
 
@@ -191,8 +191,12 @@ Original author: [@FFmpeg](https://github.com/FFmpeg) Repository: https://github
 
 [@tbiat](https://github.com/tbiat) Repository: https://github.com/tbiat/FFmpeg
 
-VVC encoder programmer to FFMpeg: [@IsaMorphic] Repository: https://github.com/IsaMorphic/FFmpeg-VVC
+VVC encoder programmer to FFmpeg: [@IsaMorphic](https://github.com/IsaMorphic) (Isabelle Santin) Repository: https://github.com/IsaMorphic/FFmpeg-VVC
 
-[@MartinEesmaa](https://github.com/MartinEesmaa) Repository: https://github.com/MartinEesmaa/FFmpeg-FixVVC
+[@MartinEesmaa](https://github.com/MartinEesmaa) (Martin Eesmaa) Repository: https://github.com/MartinEesmaa/FFmpeg-FixVVC
+
+AC4 decoder programmer to FFmpeg: [@richardpl](https://github.com/richardpl) (Paul B Mahol) Repository: https://github.com/richardpl/FFmpeg/tree/ac4
+
+AC4 support in mp4 container: [@AUGxhub](https://github.com/AUGxhub) Repository: https://github.com/AUGxhub/FFmpeg/tree/patch-1
 
 -   Martin Eesmaa
