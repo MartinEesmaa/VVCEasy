@@ -28,13 +28,13 @@ Another special thanks to @ZenKiyoshi for xHE-AAC support. Requested completed: 
 
 [Windows 7 and later x64](https://mega.nz/file/ax1CDS5Y#a4pFaa4AK92pPs9lpNf51z5sI8z3ve74luvLi2Lah0w)
 
-[Android API 29 .APK Debug (Recommended)](https://mega.nz/file/ywlyhTgY#CF3nPL4q6ughGKmh3fw84VrLiEKNcW-4ck_oBo4GDUA)
+[Android API 29 .APK Debug (Recommended)](https://mega.nz/file/m5cXXCxZ#5E1Q7GcSLjjIvRoXrSAGPLppSWbvTRKBqfY3xmKrx5s)
 
-[Android API 29 .APK Release unsigned](https://mega.nz/file/fwMTGKCZ#K0DKjMwUs0uTNyVX9Cwn5pfy21-9EmBVxMFfk8TZY64)
+[Android API 29 .APK Release unsigned](https://mega.nz/file/e89XWRpJ#nZS-Pj1LG0BR4n65qq0Y2qYDrd61ShHIEkX9khQMCIc)
 
-[Android Default 30 .APK Debug](https://mega.nz/file/zgFGXYxS#w0vC8RPRheF_LIxWUGYvoPOzVj7XmFLzTYjV0Ft6OSc)
+[Android Default 30 .APK Debug](https://mega.nz/file/KpdjSSwS#PB6nE1ihwP4mVXDxhWWXf-xUZlDD0WocKiFUhLuOsGI)
 
-[Android Default 30 .APK Release unsigned](https://mega.nz/file/ftVwHTRZ#h5mdcyk3JURuz1vsr7sAwtN8MKXqBOjXNGk48jN0PNs)
+[Android Default 30 .APK Release unsigned](https://mega.nz/file/n1VQzYqQ#ybY0b-uyGF3QRSPLegd5iZLcqaEEXmPS-2GbUnBrevM)
 
 # Limitations & Tips
 
@@ -56,10 +56,10 @@ On Windows, you can copy mpv-2.dll, mpv-vvceasy and mpv-vvceasy of DLL to mpv.ne
 
 # SHA256 SUMS
 ```
-f36efd2e0de74a527df939dd3a24d604cd4190a019586cab8e0197f131733c84  MPV-VVCEasy-API29debug.apk
-26ad71af3c45d030897e45f9c06117cb42926dadc1482a5130042f355d8f9004  MPV-VVCEasy-API29release-unsigned.apk
-b977474f162f168b462b8fb33fbaccec2ef0200246f339208913348cb5683101  MPV-VVCEasy-debug.apk
-f0117f9b8f6d21ed1e2b1d29ce53c22e15e7e62ea593a9816f4fc1a544a733ba  MPV-VVCEasy-release-unsigned.apk
+5a140d730028518d26bf3b322a1a9e3297531ca9f8674e02dd79f1d199553036  MPV-VVCEasy-API29debug.apk
+21c7447aa0041e45a6d9a3ba18c8878597b7365206c80d049e21b115afde35ef  MPV-VVCEasy-API29release-unsigned.apk
+b85a3196e9eacaf95a3675751d0de705dcd0eb4ad50c1e187469058c207dc29d  MPV-VVCEasy-debug.apk
+d9fab828db946879fe8a6780830921e9c8c75992535241d32a6be394b3cdee80  MPV-VVCEasy-release-unsigned.apk
 ff3abded30768a2831cdd80ec5f2a108595365b4796fcc453924ba3e4e3bd025  MPV-VVCEasy-Windows-x64.7z
 ```
 
