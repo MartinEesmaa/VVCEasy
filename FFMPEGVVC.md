@@ -1,4 +1,4 @@
-# FFmpeg VVC En/decoder && xHE-AAC installation (Windows, Mac OS and Linux)
+# FFmpeg VVC En/decoder & xHE-AAC installation (Windows, Mac OS and Linux)
 
 Windows, Mac and Linux (Preview of vvc video in ffplay):
 
