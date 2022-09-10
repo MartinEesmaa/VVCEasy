@@ -27,7 +27,7 @@ echo Do you want build of vvenc and vvdec yourself on your computer?
 echo Before you agree to build for Windows, you need Cmake and Visual Studio on your computer.
 echo Requires build to Windows VVC by Cmake 3.13.0+ (need pathed environment) and Visual Studio 2017 and later (requires Desktop C++ and only one individual component ML.NET Model Builder).
 echo Requires download VVEnc and VVDec for (Git for Windows).
-echo Yes means build. No means it will exit.
+echo Yes means build. No means will exit the program.
 echo Y/N?
 set /p main1234= Answer: 
 if %main1234% == Y goto installmain123
@@ -40,13 +40,13 @@ title Building time...
 echo Building time...
 mkdir Windows && cd Windows
 echo Download VVENC and VVDEC from Fraunhoferhhi GitHub...
-git clone https://github.com/fraunhoferhhi/vvenc.git
-git clone https://github.com/fraunhoferhhi/vvdec.git
+git clone --depth=1 https://github.com/fraunhoferhhi/vvenc
+git clone --depth=1 https://github.com/fraunhoferhhi/vvdec
 cd vvenc
 mkdir build && cd build
 cmake ..
 cmake --build . --config Release
-cd ..\bin\release-static
+cd ../bin/release-static
 explorer .
 cd ../../../
 cd vvdec
