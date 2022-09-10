@@ -7,14 +7,14 @@ echo If it's not installed, we will install automatically for you.
 echo.
 sudo apt update && sudo apt upgrade -y
 sudo apt install build-essential cmake -y
-cd /Home/Downloads/
-git clone https://github.com/fraunhoferhhi/vvenc.git
-git clone https://github.com/fraunhoferhhi/vvdec.git
+cd ~/Downloads
+git clone --depth=1 https://github.com/fraunhoferhhi/vvenc
+git clone --depth=1 https://github.com/fraunhoferhhi/vvdec
 cd vvenc
 make release
 cd ../
 cd vvdec
 make release
 cd ../
-echo Please see the build files following starting with vvenc/bin/release-shared
+echo Please see the build files following starting with vvenc/bin/release-static
 pause
