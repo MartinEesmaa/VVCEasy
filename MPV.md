@@ -26,9 +26,9 @@ Another special thanks to @ZenKiyoshi for xHE-AAC support. Requested completed: 
 
 # Download MPV Windows/Android Player (libvvdec + xHE-AAC plugin)
 
-[Windows 7 and later x64](https://mega.nz/file/WtcjRRTC#RIrTuCCSJJbL1iUNnRBrXZwEL3xRn_mulksoeI35V_c)
+[Windows 7 and later x64](https://mega.nz/file/r9kVEbpB#uZ1vET3fXlEutfwErYRp5b9O4BVz6yrEr6f5vkTfrHs)
 
-[Windows MPV.NET VVCEasy version x64](https://mega.nz/file/alEXGJII#2zgN2rZAS2sJnteRc6GaNCPpJVkStNkcMu5PIr6efrU)
+[Windows MPV.NET VVCEasy version x64](https://mega.nz/file/ex1Q2KJY#8RB76uVnnmjNhX120ACiXwx2GHIvna78yLnsH7ladJM)
 
 [Android API 29 .APK Debug (Recommended)](https://mega.nz/file/m5cXXCxZ#5E1Q7GcSLjjIvRoXrSAGPLppSWbvTRKBqfY3xmKrx5s)
 
@@ -62,8 +62,8 @@ On Windows, you can copy mpv-2.dll, mpv-vvceasy and mpv-vvceasy of DLL to mpv.ne
 21c7447aa0041e45a6d9a3ba18c8878597b7365206c80d049e21b115afde35ef  MPV-VVCEasy-API29release-unsigned.apk
 b85a3196e9eacaf95a3675751d0de705dcd0eb4ad50c1e187469058c207dc29d  MPV-VVCEasy-debug.apk
 d9fab828db946879fe8a6780830921e9c8c75992535241d32a6be394b3cdee80  MPV-VVCEasy-release-unsigned.apk
-dcaa98b08c589da715ef043daed70b5d5b2116049b08828b6599c99404996995  MPV-VVCEasy-Windows-x64.7z
-f8cd7a7e24806984aac91c0f1bc944697ebe1d2cb4ba58d0a1ae0dae9806ad91  MPV.NET-VVCEasy-Windows-x64.7z
+6bb9072d77bb59276630e7fdd479f0e3ada4eec7610e231a1fadd08ea201da61  MPV-VVCEasy-Windows-x64.7z
+042d8030c7b530dbbd5b93c1bca10acd6b0cb216d90a38e5a59b82bf07d49067  MPV.NET-VVCEasy-Windows-x64.7z
 ```
 
 # Build MPV Android with VVC and xHE-AAC:
