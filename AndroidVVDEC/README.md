@@ -8,9 +8,9 @@ See the screenshot of vvdecapp in Termux app:
 
 All system types of arm64, armeabi, x86 and x86_64 are built on vvdecapp, it is use of Termux app.
 
-arm64 - API 21 (phones only)
+arm64 - API 21 (64-bit phones only)
 
-armeabi - API 19 (some phones)
+armeabi - API 19 (32-bit phones)
 
 x86 & x86_64 - API 21 (tablets only)
 
