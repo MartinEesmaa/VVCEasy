@@ -257,6 +257,8 @@ ffmpeg -i example.mp4 -pix_fmt yuv420p -f yuv4mpegpipe - | vvencapp --y4m -i - -
 
 **PRO TIP: VVENC can detect your fps and video size for y4m file format, so you don't need insert video size and frame per second of vvenc.**
 
+**WARNING of vvenc pipe: VVENC does not support two-pass mode only when using pipe call/read from FFmpeg to vvenc.**
+
 Or, you could do legacy of YUV pipe video:
 
 ```
