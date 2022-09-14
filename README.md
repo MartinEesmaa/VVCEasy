@@ -249,7 +249,15 @@ vvencapp -i out.yuv -s 854x480 -r 30 -o vvc.266
 ```
 `-s` means video size, `-r` means frame per second and `-o` means output. Note: (Simple) as Default settings is YUV420P (8-bit)
 
-TIP: You could do alternative without taking much disk space for uncompressed video:
+TIP: You could do alternative without taking much disk space for uncompressed video (Y4M, Recommended):
+
+```
+ffmpeg -i example.mp4 -pix_fmt yuv420p -f yuv4mpegpipe - | vvencapp -i - --preset medium --qp 35 -o converted.266
+```
+
+**PRO TIP: VVENC can detect your fps and video size for y4m file format, so you don't need insert video size and frame per second of vvenc.**
+
+Or, you could do legacy of YUV pipe video:
 
 ```
 ffmpeg -i example.mp4 -pix_fmt yuv420p -f rawvideo - | vvencapp -i - -s 1920x1080 -r 25 --preset medium --qp 35 -o converted.266
