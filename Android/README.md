@@ -42,7 +42,7 @@ For 8-bit uvg266 application, remove `-strict -1`, change from `yuv420p10` to `y
 
 When you want make device sleep during uvg266 encoding, tap Acquire wakelock on Termux notification.
 
-If uvg266 froze itself without printing info, means finished CTRL + C.
+If uvg266 froze itself than an couple minutes without printing info, means finished CTRL + C.
 
 VVDEC might not decode with some uvg266 options (example uvg266 presets unplayable with vvdec: ultrafast, superfast, veryfast, veryslow, placebo).
 
