@@ -26,6 +26,8 @@ Revolt: https://app.revolt.chat/invite/0Y10qHzP
 
 Discord: https://discord.gg/t54cADTbWW
 
+Reddit community: https://reddit.com/r/VVCEasy
+
 # All lists
 
 - [Donate to Martin Eesmaa using cryptocurrency](#donate-to-martin-eesmaa-for-an-cryptocurrencies)
