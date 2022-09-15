@@ -154,8 +154,8 @@ git clone --depth=1 https://github.com/mstorsjo/fdk-aac && \
 git clone --depth=1 https://github.com/libsdl-org/SDL && \
 git clone --depth=1 https://github.com/gnome/libxml2 && \
 git clone --depth=1 https://github.com/MartinEesmaa/FFmpeg-FixVVC && \
-wget https://gist.githubusercontent.com/MartinEesmaa/6c4c8158139e04d432f49ac005ba7528/raw/04b05601cb51eec7e5041f8a45b71caa552669c2/libvvenc.pc.in
-cp libvvenc.pc.in vvenc/pkgconfig/
+wget https://gist.githubusercontent.com/MartinEesmaa/6c4c8158139e04d432f49ac005ba7528/raw/04b05601cb51eec7e5041f8a45b71caa552669c2/libvvenc.pc.in && \
+cp libvvenc.pc.in vvenc/pkgconfig/ && \
 cd vvenc && sudo make install-release install-prefix=/usr/local disable-lto=1 && \
 cd .. && \
 cd vvdec && sudo make install-release install-prefix=/usr/local disable-lto=1 && \
