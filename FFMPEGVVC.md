@@ -147,16 +147,16 @@ Unfortunately, this is Ubuntu 22.04 LTS build only.
 If you are using other linux without Ubuntu 22.04 LTS, you have to build using this:
 
 ```
-sudo apt install build-essential cmake nasm db-autoreconf && \
+sudo apt install build-essential cmake nasm db-autoreconf pkg-config python3-setuptools && \
 git clone --depth=1 https://github.com/fraunhoferhhi/vvenc && \
 git clone --depth=1 https://github.com/fraunhoferhhi/vvdec && \
 git clone --depth=1 https://github.com/mstorsjo/fdk-aac && \
 git clone --depth=1 https://github.com/libsdl-org/SDL && \
 git clone --depth=1 https://github.com/gnome/libxml2 && \
 git clone --depth=1 https://github.com/MartinEesmaa/FFmpeg-FixVVC && \
-cd vvenc && sudo make install-release install-prefix=/usr/local && \
+cd vvenc && sudo make install-release install-prefix=/usr/local disable-lto=1 && \
 cd .. && \
-cd vvdec && sudo make install-release install-prefix=/usr/local && \
+cd vvdec && sudo make install-release install-prefix=/usr/local disable-lto=1 && \
 cd .. && \
 cd fdk-aac && autoreconf -if && ./configure --prefix=/usr/local --enable-static --disable-shared && sudo make install -j $nproc && \
 cd .. && \
