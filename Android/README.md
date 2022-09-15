@@ -35,10 +35,10 @@ AndroidUVG266-8bit.7z - 8-bit input/encoder only.
 
 If you want pipe from FFmpeg to uvg266, you can do command:
 ```
-ffmpeg -i example.mp4 -f yuv4mpegpipe -pix_fmt yuv420p10 -strict -1 - | uvg266 -i - --input-file-format y4m -o converted.266
+ffmpeg -i example.mp4 -f yuv4mpegpipe -pix_fmt yuv420p10 -strict -1 - | uvg266 -i - --input-file-format y4m --input-bitdepth 10 -o converted.266
 ```
 
-For 8-bit uvg266 application, remove `-strict -1` and change from `yuv420p10` to `yuv420p`.
+For 8-bit uvg266 application, remove `-strict -1`, change from `yuv420p10` to `yuv420p` and remove `--input-bitdepth-10`.
 
 When you want make device sleep during uvg266 encoding, tap Acquire wakelock on Termux notification.
 
