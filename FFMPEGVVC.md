@@ -147,7 +147,8 @@ Unfortunately, this is Ubuntu 22.04 LTS build only.
 If you are using other linux without Ubuntu 22.04 LTS, you have to build using this:
 
 ```
-sudo apt install build-essential cmake nasm autoconf pkg-config python3-setuptools libtool && \
+sudo apt update && sudo apt upgrade -y && \
+sudo apt install build-essential cmake nasm autoconf pkg-config python3-setuptools libtool git wget && \
 git clone --depth=1 https://github.com/fraunhoferhhi/vvenc && \
 git clone --depth=1 https://github.com/fraunhoferhhi/vvdec && \
 git clone --depth=1 https://github.com/mstorsjo/fdk-aac && \
