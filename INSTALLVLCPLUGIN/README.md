@@ -19,16 +19,14 @@ Step 3: Enjoy and play your h266 file into your VLC Media Player :).
 
 Open terminal and copy code:
 ```
-sudo cp libvvcdecoder_plugin.so /lib/x86_64-linux-gnu/vlc/plugins/codec
-sudo cp libvtmdec.so /lib/x86_64-linux-gnu/vlc/plugins/codec
+sudo cp libvvcdecoder_plugin.so libvtmdec.so /lib/x86_64-linux-gnu/vlc/plugins/codec
 sudo cp libvctsdemux_plugin.so /lib/x86_64-linux-gnu/vlc/plugins/demux
 ```
 
 VLC from Snap Store:
 ```
-cp libvvcdecoder_plugin.so /snap/vlc/2344/usr/lib/vlc/plugins/codec
-cp libvtmdec.so /snap/vlc/2344/usr/lib/vlc/plugins/codec
-cp libvctsdemux_plugin.so /snap/vlc/2344/usr/lib/vlc/plugins/demux
+sudo cp libvvcdecoder_plugin.so libvtmdec.so /snap/vlc/2344/usr/lib/vlc/plugins/codec
+sudo cp libvctsdemux_plugin.so /snap/vlc/2344/usr/lib/vlc/plugins/demux
 ```
 Preview:
 
