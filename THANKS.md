@@ -8,8 +8,10 @@ See the lists:
 
 -  ありがとう, ネクストスケープ (delsoladmin)! [NEXTSPACE Streaming Tech Blog](https://media-streaming.nextscape.net/blog/1153/)
 
--  Thank you, Doom9 Forum Community! [VVCEasy search posts of Doom9](https://forum.doom9.org/search.php?searchid=9495780)
+-  Thank you, Doom9 Forum Community! Search "VVCEasy" on Doom9 Forum.
                                                              
 -  Danke, LigH (@LigH-de)! [My issue mention of xHE-AAC](https://forum.doom9.org/showthread.php?p=1970068&highlight=Martin+Eesmaa#post1970068)
+
+-  Thanks, Artem! [VVCEasy thread](https://forum.doom9.org/showthread.php?p=1974413#post1974413)
 
 -  Martin Eesmaa (@MartinEesmaa)
