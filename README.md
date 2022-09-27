@@ -38,7 +38,7 @@ Sourceforge: https://sourceforge.net/projects/vvceasy
 
 - [VLC InterDigital VTM VVC Plugin](#vlc-interdigital-vtm-vvc-plugin)
 
-- [VLC o266player](#vlc-o266player-windows-only-mac-os-will-be-later-closed-source-decoder)
+- [VLC o266player](#vlc-o266player-windows-only-macos-will-be-later-closed-source-decoder)
 
 - [Bitmovin VVDec Player](#bitmovin-vvdec-player)
 
