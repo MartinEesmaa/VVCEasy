@@ -9,14 +9,14 @@ https://github.com/MartinEesmaa/VVCEasy/actions/workflows/dotnet.yml)
 ![Matrix](https://img.shields.io/matrix/vvceasy:matrix.org?label=VVCEasy%20Matrix)
 ![Discord](https://img.shields.io/discord/974611343237869619?label=VVCEasy%20Discord%20Chat)
 
-# VVCEasy (Windows, Mac OS, Linux & Android) (by Martin Eesmaa)
+# VVCEasy (Windows, macOS, Linux & Android) (by Martin Eesmaa)
 VVCEasy is that you don't have to compile or/and coding to encode VVC (known as Versatile Video Codec). Simple, Easy, Encode and Decode.
 
-VVCEasy comes to one-easy command of ffmpeg, VVC Tools, python, VLC o266player, VVDEC Web Player, Bitmovin VVDec Player, YUView, libvvdec and more.
+VVCEasy comes to one-easy command of FFmpeg, VVC Tools, python, VLC o266player, VVDEC Web Player, Bitmovin VVDec Player, YUView, libvvdec and more.
 
 Installation: Go to the releases and download latest version.
 
-Windows source run (Batchfile): VVCEasy.bat
+Windows source run (Batch-file): VVCEasy.bat
 
 Windows/Mac/Linux source run (Csharp): Bin/Release or Debug/netX.x/VVCEasy.exe (after build of C#), this requires VVCEasy.dll to run console application.
 
@@ -26,7 +26,7 @@ Revolt: https://app.revolt.chat/invite/0Y10qHzP
 
 Discord: https://discord.gg/t54cADTbWW
 
-Reddit community: https://reddit.com/r/VVCEasy
+Reddit's community: https://reddit.com/r/VVCEasy
 
 Sourceforge: https://sourceforge.net/projects/vvceasy
 
@@ -62,7 +62,7 @@ Sourceforge: https://sourceforge.net/projects/vvceasy
 
 - [Credits & Licenses](#credits--licenses)
 
-# Donate to Martin Eesmaa for an cryptocurrencies
+# Donate to Martin Eesmaa for a cryptocurrencies
 
 - **BTC (BITCOIN):** 
 ```
@@ -72,7 +72,7 @@ bc1qhf4zu5uythr7vyt2dru73qp0k2rzrx355fsx47yjxc2ueunz8frqxmwap3
 ```
 85Ahh93M88gV8ekymtYwb6TS14TZ36jNGTFgceaRH7hj8Rtx1qVB9PobnJLR5siz4nYBnzWy3pkV6KaVroifGMVh7n4br3J
 ```
-- **BAT (BASIC ATTENTION TOKEN):** For Brave Browser users only, you can also contribute by supporting me, I'm verified Brave user on Brave Rewards.
+- **BAT (BASIC ATTENTION TOKEN):** For Brave Browser users only, you can also contribute by supporting me, I'm a verified Brave user on Brave Rewards.
 
 - **Estonian bank account (Luminor Eesti IBAN):** You can donate to me. You have to pay a little network send fees before donate.
 ```
@@ -87,11 +87,11 @@ You can test Martin Eesmaa's encoded movies of VVC video codec and follow README
 
 # VLC InterDigital VTM VVC Plugin
 
-I have a great news. VLC latest version worked out well of Inter Digital VTM plugins. On o266player, there was some problems on my computer for one reason...
+I have great news. VLC latest version worked out well of Inter Digital VTM plugins. On o266player, there were some problems on my computer for one reason...
 
 One reason that my Windows 11 operating system won't view video of VVC file on o266player version. On VTM plugins of VLC, now it shows me VVC video good.
 
-Here is a my comparision of o266player version and VTM VVC plugins:
+Here is a comparison of o266player version and VTM VVC plugins:
 
 Top left and right is o266player by Tencent Cloud.
 
@@ -107,7 +107,7 @@ When you try to play your MPEG-TS or TS file, it will crash with your InterDigit
 
 Without InterDigital VLC VTM Plugin, playing MPEG-TS or TS file will play fine in your all original plugins (except VLC VTM Plugin) on your VLC Media Player.
 
-# VLC o266player (Windows only, Mac OS will be later) (closed-source decoder)
+# VLC o266player (Windows only, macOS will be later) (closed-source decoder)
 
 For more information about o266player.
 
@@ -129,7 +129,7 @@ See [FFMPEGVVC.md](FFMPEGVVC.md).
 
 MPV libvvdec & xHE-AAC supports only of Windows x64 & Android.
 
-The VVC and MP4 muxed with VVC codec can be played on MPV libvvdec + xHE-AAC version. Only MP4 muxed with VVC supports seek.
+The VVC and MP4 muxed with VVC codec can be played on MPV libvvdec + xHE-AAC version. Only MP4 mixed with VVC supports seek.
 
 See [MPV.md](MPV.md).
 
@@ -150,7 +150,7 @@ VVCEasy_compiler.iss
 Step 2: Before you compile, please replace example username by your username of LicenseFile, OutputDir and Source. See the image:
 ![Instructionsofcompilevvceasy](https://user-images.githubusercontent.com/88035011/153736145-a24a1997-1133-4933-8797-de7c62295d1d.png)
 
-Step 3: Once you replaced of your username, press F9 to compile on your keyboard. After compiling, VVCEasy.exe (Installer) will be on your Downloads folder.
+Step 3: Once you're replaced of your username, press F9 to compile on your keyboard. After compiling, VVCEasy.exe (Installer) will be on your Downloads folder.
 ![VVCEasyclickblueplaybutton](https://user-images.githubusercontent.com/88035011/153736303-b0949f5a-5ac5-4123-92c5-305211a8aadc.png)
 
 ---
@@ -182,8 +182,8 @@ dotnet run
 
 # Encode/Decode (easy)
 
-Before you run VVCEasy.bat or VVCEasy.exe, you need to change from your input video file name into input.mp4 (as example)
-Follow the instructions, the commands will give your options. Since 21 October 2021, VVCEasy is pre-release, but it's construction mode, but you can have a look with .BAT source code.
+Before you run VVCEasy.bat or VVCEasy.exe, you need to change from your input video file name into input.mp4 (for example)
+Follow the instructions, the commands will give you options. Since 21 October 2021, VVCEasy is pre-release, but it's construction mode, but you can have a look with .BAT source code.
 
 -   Martin Eesmaa
 
@@ -229,37 +229,37 @@ For Y4M transcode (lossless from uncompressed video files, only 8 bit):
 ffmpeg -i input.mp4 -pix_fmt yuv420p inputtranscode.y4m
 ```
 
-Verify uncompressed video using ffplay before encode to VVENC (important add video size after the input file, else it will not correctly show video like scrambled eggs video):
+Verify uncompressed video using FFplay before encode to VVENC (important add video size after the input file, else it will not correctly show video like scrambled eggs video):
 ```
 ffplay inputtranscode.yuv -video_size 1280x720
 ``` 
 
 Default pixel format of ffplay for yuv and y4m is yuv420p without `-pix_fmt` command.
 
-For y4m, replace `-i inputtranscode.yuv` with `-i inputtranscode.y4m`. In `-c:v wrapped_avframe` for y4m only, so you can verify to play Y4M (wrapped_avframe) for VLC, FFplay or MPV player. For yuv420p10 on your input video 10 bit, add `-pix_fmt yuv420p10`.
+For y4m, replace `-i inputtranscode.yuv` with `-i inputtranscode.y4m`. In `-c:v wrapped_avframe` for y4m only, so you can verify to play Y4M (wrapped_avframe) for VLC, FFplay or MPV player. For yuv420p10 on your input video 10 bits, add `-pix_fmt yuv420p10`.
 
-Playing ffplay for y4m video with wrapped_avframe, you don't need to put anything commands, just simple play this:
+Playing FFplay for y4m video with wrapped_avframe, you don't need to put anything commands, just simple play this:
 
 ```
 ffplay transcoded.y4m
 ```
 
-For easy to verify YUV/Y4M, use YUView, open your YUV or Y4M encoded, make sure video size, YUV/Y4M format and frame rate same like from input video file (e.g. MP4, AVI, MKV and others.
+For easy to verify YUV/Y4M, use YUView, open your YUV or Y4M encoded, make sure video size, YUV/Y4M format and frame rate same like from input video file (e.g. MP4, AVI, MKV and others).
 
-After verifying correctly your YUV/Y4M video
+After verifying correctly of your YUV/Y4M video
 Encode with VVENC (Simple settings, example)
 ```
 vvencapp -i out.yuv -s 854x480 -r 30 -o vvc.266
 ```
 `-s` means video size, `-r` means frame per second and `-o` means output. Note: (Simple) as Default settings is YUV420P (8-bit)
 
-TIP: You could do alternative without taking much disk space for uncompressed video (Y4M, Recommended):
+TIP: You could do the alternative without taking much disk space for uncompressed video (Y4M, recommended):
 
 ```
 ffmpeg -i example.mp4 -pix_fmt yuv420p -f yuv4mpegpipe - | vvencapp --y4m -i - --preset medium --qp 35 -o converted.266
 ```
 
-**PRO TIP: VVENC can detect your fps and video size for y4m file format, so you don't need insert video size and frame per second of vvenc.**
+**PRO TIP: VVENC can detect your fps and video size for y4m file format, so you don't need to insert video size and frame per second of vvenc.**
 
 **WARNING of vvenc pipe: VVENC does not support two-pass mode only when using pipe call/read from FFmpeg to vvenc.**
 
@@ -285,14 +285,14 @@ The default of VVENC: Quantization Parameter is 32 and preset is medium.
 
 If you want to get smaller video size and lossy video, add `--qp 38`. (for web video or anything)
 
-If you want to get lossless video without losing quality (visually lossless, minimum loss quality), use QP 16-19 and preset slow (optional slower). (Recommended for movies, camera footages or anything)
+If you want to get lossless video without losing quality (visually lossless, minimum loss quality), use QP 16-19 and preset slow (optional slower). (Recommended for movies, camera footage or anything)
 
 Lossy video/Smallest video size:
 ```
 vvencapp --qp 38 -i out.yuv -s 854x480 -r 30 -o vvc.266
 ```
 
-**NOTE 1: If you want have true lossless on your video, please visit [FFV1](http://ffv1.org) or H.264 Lossless video codec**
+**NOTE 1: If you want to have true lossless on your video, please visit [FFV1](http://ffv1.org) or H.264 Lossless video codec**
 
 **NOTE 1.1: VVENC does not support lossless.**
 
@@ -301,23 +301,23 @@ Lossless video (visually lossless) (or compress smaller than preset slow, use --
 vvencapp --qp 18 -i out.yuv -s 854x480 -r 30 --preset slow -o vvc.266
 ```
 
-For Apple Mac OS and Linux terminal users: Command with `./vvencapp`
+For Apple macOS and Linux terminal users: Command with `./vvencapp`
 
 For Windows Users using Windows PowerShell: Command with `.\vvencapp`
 
-Encode with VVENC (Best settings (visually lossless), replace video size (`-s`), framerate (`-r`) and maximize threads of your cores (`--threads`), example) (Minimum loss quality) If you want true lossless video, use FFV1 latest version 3.4. (Necessary make smaller file (slower) than preset slow, use `--preset slower`)
+Encode with VVENC (Best settings (visually lossless), replace video size (`-s`), frame rate (`-r`) and maximize threads of your cores (`--threads`), example) (Minimum loss quality) If you want true lossless video, use FFV1 latest version 3.4. (Necessary make smaller file (slower) than preset slow, use `--preset slower`)
 ```
 vvencapp --qp 18 -i out.yuv -s 854x480 -r 30 --preset slow --threads 16 --tier high -o EXTREME.266
 ```
 
 NOTE: It is acceptable only for encoding to .h266, .266 and .vvc file container.
 
-Note to 10-bit YUV users: If you encode YUV 10 bit to VVC file, add `-c yuv420_10` before you type ending word of -o EXTREME.266.
+Note to 10-bit YUV users: If you encode YUV 10 bit to VVC file, add `-c yuv420_10` before you type the ending word of -o EXTREME.266.
 
 Note to 8-bit Y4M users: It is only from input video (8-bit) to Y4M (8 bit)
 
 After VVEnc, you can play in YUView of latest version.
-Drag any your video file of .h266, .266 or .vvc to play. YUView will play your video only about 10 seconds’ limit.
+Drag your video file of .h266, .266 or .vvc to play. YUView will play your video only about 10 seconds’ limit.
 
 If you are still not happy about VVC (known as Versatile Video Coding), that you think is too hard to encode and decode, use AOMEDIA ONE (AV1) that is recommended for most users to easily play VLC Media Player and others. VVC should need played on VLC Media Player in future.
 
@@ -338,7 +338,7 @@ Are you real creator of VVCEasy?
 Yes... but I'm not real creator of VVC, I didn't built VVC, it was Fraunhofer HHI that he built VVC.
 
 Are you trying to work build of VVCEasy?
-Well yes... it takes longer time to make VVCEasy easier, but VVCEasy is not yet finished until further/update announcement. I don't have a employees, so I'm only the one.
+Well yes... it takes longer time to make VVCEasy easier, but VVCEasy is not yet finished until further/update announcement. I don't have employees, so I'm only the one.
 
 Is it okay to bring my proof screenshots of errors?
 I allow you to bring error screenshots, you can bring proof. More proofs, easier to solve it.
@@ -347,7 +347,7 @@ My question is not listed on FAQ. Can I ask any question to you?
 Sure, just go to Issues tab, ask questions or/and give your issue to me, I'd be happy to help :).
 
 Do you know what you have skills in your programming?
-I know about Batch file and HTML programmer. Some hard programming languages might be difficult to me :/.
+I know about batch file and HTML programmer. Some hard programming languages might be difficult for me :/.
 Update of 19th February 2022: Maybe I should make C# Console program, that will be easy of Windows, Mac and Linux multi support.
 
 If you have any questions or/and any issues, please go to Issues tab and create your issue.
@@ -357,7 +357,7 @@ Or, you can chat us: https://matrix.to/#/#vvceasy:matrix.org
 
 # Credits & Licenses
 
-[VVCEasy](https://github.com/MartinEesmaa/VVCEasy) - VVCEasy is easy VVC, that no need compile. 
+[VVCEasy](https://github.com/MartinEesmaa/VVCEasy) - VVCEasy is easy VVC, that no need to compile. 
 
 License: MIT
 
