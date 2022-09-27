@@ -36,11 +36,11 @@ CFLAGS="-O2 -D_FORTIFY_SOURCE=0" LDFLAGS="-flto -s" ./configure --enable-static 
 cd ..
 
 echo Starting to build dav1d:
-mkdir dav1d/build && cd dav1d/build && meson -Denable_docs=false -Ddefault_library=static -Dprefix=$MSYSTEM_PREFIX && ninja install
+mkdir dav1d/build && cd dav1d/build && meson -Denable_docs=false -Ddefault_library=static -Dprefix=$MSYSTEM_PREFIX .. && ninja install
 cd ../../
 
 echo Starting to build vmaf to apply calculate VVC video references from original video:
-mkdir vmaf/libvmaf/build && cd vmaf/libvmaf/build && -Denable_docs=false -Ddefault_library=static -Dprefix=$MSYSTEM_PREFIX && ninja install
+mkdir vmaf/libvmaf/build && cd vmaf/libvmaf/build && meson -Denable_docs=false -Ddefault_library=static -Dprefix=$MSYSTEM_PREFIX .. && ninja install
 cd ../../../
 
 echo Starting to build vvenc & vvdec...
