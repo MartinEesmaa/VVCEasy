@@ -11,10 +11,10 @@ cd ~/Downloads
 git clone --depth=1 https://github.com/fraunhoferhhi/vvenc
 git clone --depth=1 https://github.com/fraunhoferhhi/vvdec
 cd vvenc
-make release
+mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXE_LINKER_FLAGS="-static" .. && make
 cd ../
 cd vvdec
-make release
+mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXE_LINKER_FLAGS="-static" .. && make
 cd ../
 echo Please see the build files following starting with vvenc/bin/release-static
 pause
