@@ -172,7 +172,7 @@ cd SDL && ./configure --prefix=/usr/local --enable-static --disable-shared && su
 cd .. && \
 mkdir dav1d/build && cd dav1d/build && meson -Denable_docs=false -Ddefault_library=static -Dprefix=/usr/local .. && sudo ninja install && \
 cd ../../ && \
-mkdir vmaf/libvmaf/build && cd vmaf/libvmaf/build && meson -Denable_docs=false -Ddefault_library=static -Dprefix=/usr/local .. && sudo ninja install && \
+mkdir vmaf/libvmaf/build && cd vmaf/libvmaf/build && CFLAGS="-msse2 -mfpmath=sse -mstackrealign" meson -Denable_docs=false -Ddefault_library=static -Denable_float=true -Dbuilt_in_models=true -Dprefix=/usr/local .. && sudo ninja install && \
 cd ../../../ && cd FFmpeg-FixVVC && \
 ./configure --enable-static --pkg-config-flags="--static" --extra-ldexeflags="-static" \
 --enable-libfdk-aac --enable-libvvenc --enable-libvvdec --enable-pic \
