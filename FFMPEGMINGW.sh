@@ -2,7 +2,7 @@ echo Updating & upgrading MSYS2 packages... (if system core update requires rebo
 pacman -Syu
 pacman -Su
 echo Installing MSYS2 packages...
-pacman -S python nasm $MINGW_PACKAGE_PREFIX-{toolchain,cmake,autotools,meson,ninja}
+pacman -S python nasm vim $MINGW_PACKAGE_PREFIX-{toolchain,cmake,autotools,meson,ninja}
 echo Starting process of FFmpeg build with libvvenc and libvvdec...
 mkdir buildffmpegwin && cd buildffmpegwin
 git clone --depth=1 https://github.com/MartinEesmaa/FFmpeg-FixVVC
