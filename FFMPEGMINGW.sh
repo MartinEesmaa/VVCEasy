@@ -40,7 +40,7 @@ mkdir dav1d/build && cd dav1d/build && meson -Denable_docs=false -Ddefault_libra
 cd ../../
 
 echo Starting to build vmaf to apply calculate VVC video references from original video:
-mkdir vmaf/libvmaf/build && cd vmaf/libvmaf/build && meson -Denable_docs=false -Ddefault_library=static -Dprefix=$MSYSTEM_PREFIX .. && ninja install
+mkdir vmaf/libvmaf/build && cd vmaf/libvmaf/build && CFLAGS="-msse2 -mfpmath=sse -mstackrealign" meson -Denable_docs=false -Ddefault_library=static -Denable_float=true -Dbuilt_in_models=true -Dprefix=$MSYSTEM_PREFIX .. && ninja install
 cd ../../../
 
 echo Starting to build vvenc & vvdec...
