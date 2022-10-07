@@ -46,7 +46,7 @@ ffmpeg -i example.mp4 -c:v libvvenc -global_quality 37 -pix_fmt yuv420p10 exampl
 Additional command: You can convert to vvc video without taking a much space for vvencapp, example:
 
 ```
-ffmpeg -i example.mp4 -f rawvideo -pix_fmt yuv420p - | vvencapp -i - -s 1920x1080 -r 25 --preset medium --qp 32 -o example1.266
+ffmpeg -i example.mp4 -pix_fmt yuv420p -f yuv4mpegpipe - | vvencapp --y4m -i - --preset medium --qp 35 -o converted.266
 ```
 
 Converting xHE-AAC to AAC audio:
