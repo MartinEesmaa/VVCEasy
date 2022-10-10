@@ -72,16 +72,6 @@ Containers are also acceptable video containers of .mkv, .mp4, .mov and more.
 
 For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
-### Important Windows users for old builds
-
-If you're using the old build, please download a new build of FFmpeg VVCEasy version.
-
-Now it's static build of Windows FFmpeg VVCEasy version.
-
-This is a fix of Intel CPU users and updated versions.
-
-Special thanks to @ZenKiyoshi for Intel build bug. See the issue: #16
-
 # FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
 
 [Windows](https://mega.nz/file/7h0CUbYK#apIAitn2pTuPxH2FEoG93wDotB-8vYA7sX0gXU2Yrt0)
@@ -89,6 +79,21 @@ Special thanks to @ZenKiyoshi for Intel build bug. See the issue: #16
 [Mac OS](https://mega.nz/file/3xtTAIiQ#MPsPcz-QlSquqahmEx8ANpqleiVm2Y3L1o3R6vy7qY8)
 
 [Linux](https://mega.nz/file/PwVmTKYB#WsTte8csnpKRPRSwTCfE7WtTvndO1cM_3UKKb1T7p0s) (Only Ubuntu 22.04 build)
+
+### Note about downloads
+
+I use always Windows to compile FFmpeg, so I forgot compile every time for Mac OS and Linux. Also, please check changelog before you download the new version.
+
+### Changelog
+```
+10/10/2022: Revert from flt to s16 for two decoders of libvorbis & libspeex.
+10/10/2022: Removed libvmaf (reason: not working), added libvorbis + libspeex improve decode quality. 
+30/09/2022: Improved vmaf (float, built models to FFmpeg) & updated sdl2. Update: Fixed libvmaf models
+24/09/2022: Improved libvmaf up to date of FFmpeg code + update dav1d & vvenc.
+07/09/2022: Added Dolby AC4 decoder + updated vvenc/vvdec.
+01/09/2022: Added libopus with latest version for improve decode quality, libdav1d and libvmaf (optional if they want calculate score by vvc video and original video).
+29/08/2022: Brought back vvenc.
+```
 
 # Mac OS downloaders (Important note)
 
