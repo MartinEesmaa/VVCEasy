@@ -26,9 +26,9 @@ Another special thanks to @ZenKiyoshi for xHE-AAC support. Requested completed: 
 
 # Download MPV Windows/Android Player (libvvdec + xHE-AAC plugin)
 
-[Windows 7 and later x64](https://mega.nz/file/vkkgBYZJ#v9JoiRU198tn4JEVSXBnoR5eYsH43m50RIzefqRlJ2g)
+[Windows 7 and later x64](https://mega.nz/file/Sh0hQCRb#lBzt_sbgwrZhRolkSrXxY4eQHdEoIZ5Lhq3FtogjHE8)
 
-[Windows MPV.NET VVCEasy version x64](https://mega.nz/file/b0VgkTgb#bVUTfvsTpabtvl2eseJ6AHZRZMTDzRvmiC4MSszfx-Q)
+[Windows MPV.NET VVCEasy version x64](https://mega.nz/file/ShMS2CLD#a-UbbvShLJaQy3pZRjRr28vdEV5XtaJYmlFS5T4jPqk)
 
 [Android API 29 .APK Debug (Recommended)](https://mega.nz/file/m5cXXCxZ#5E1Q7GcSLjjIvRoXrSAGPLppSWbvTRKBqfY3xmKrx5s)
 
@@ -54,7 +54,7 @@ Make sure to allow apps from unknown sources. Link: [Wikihow](https://www.wikiho
 
 If Google warns you, that Android MPV (libvvdec plugin) app is malicious by Play Protect, press "Install anyway" on your phone.
 
-On Windows, you can copy mpv-2.dll, mpv-vvceasy and mpv-vvceasy of DLL to mpv.net of https://github.com/stax76/mpv.net
+On Windows, there is available MPV.NET custom build on this downloads from https://github.com/stax76/mpv.net
 
 # SHA256 SUMS
 ```
@@ -62,8 +62,8 @@ On Windows, you can copy mpv-2.dll, mpv-vvceasy and mpv-vvceasy of DLL to mpv.ne
 21c7447aa0041e45a6d9a3ba18c8878597b7365206c80d049e21b115afde35ef  MPV-VVCEasy-API29release-unsigned.apk
 b85a3196e9eacaf95a3675751d0de705dcd0eb4ad50c1e187469058c207dc29d  MPV-VVCEasy-debug.apk
 d9fab828db946879fe8a6780830921e9c8c75992535241d32a6be394b3cdee80  MPV-VVCEasy-release-unsigned.apk
-598f0ff0a28843e2f0ac1a656332918f134e8d7caba3d983d463c74788e2562d  MPV-VVCEasy-Windows-x64.7z
-a4e8fc1e42b436a8bc951622a0167943e8917baaea54b8cee491419b7e2548b6  MPV.NET-VVCEasy-Windows-x64.7z
+e08f626d75d25ae40f8fcf68ee11af3b515e952101f834427bf7cee67b8dd776  MPV-VVCEasy-Windows-x64.7z
+ccfda5659bf596497157f7a33d98cde21011cf15abf0bf97d2a3fa6caaf4e2dc  MPV.NET-VVCEasy-Windows-x64.7z
 ```
 
 # Build MPV Android with VVC and xHE-AAC:
