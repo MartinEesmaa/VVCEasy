@@ -74,7 +74,7 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 # FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
 
-[Windows](https://mega.nz/file/7h0CUbYK#apIAitn2pTuPxH2FEoG93wDotB-8vYA7sX0gXU2Yrt0)
+[Windows](https://mega.nz/file/n4d0HLpD#Stu2nWNf4wj-5CPgXFfcM8rfJdMpXm_kSixxweeUJf8)
 
 [Mac OS](https://mega.nz/file/3xtTAIiQ#MPsPcz-QlSquqahmEx8ANpqleiVm2Y3L1o3R6vy7qY8)
 
@@ -86,6 +86,7 @@ I use always Windows to compile FFmpeg, so I forgot compile every time for Mac O
 
 ### Changelog
 ```
+11/10/2022: Removed libvorbis + updated SDL2 latest.
 10/10/2022: Revert from flt to s16 for two decoders of libvorbis & libspeex.
 10/10/2022: Removed libvmaf (reason: not working), added libvorbis + libspeex improve decode quality. 
 30/09/2022: Improved vmaf (float, built models to FFmpeg) & updated sdl2. Update: Fixed libvmaf models
