@@ -10,25 +10,11 @@ Screenshot preview, see top-left information of toggle stats on Windows/Android 
 
 ![mpvplayerforwindowslibvvdec](https://user-images.githubusercontent.com/88035011/176990209-4c6bcc0d-ef14-4e4c-8738-edfbb9a6e1c1.png)
 
-### Important Windows users for old builds
-
-Since 1st September 2022, now it is complete static of Windows build MPV VVCEasy.
-
-If you're using the old build, please download a new build of MPV VVCEasy version.
-
-This is a fix of Intel CPU users and updated version of libvvdec.
-
-Some are now static and some are shared, because enabling static build is saying ld not found (eg. -lpython3.10) on MinGW MSYS2.
-
-Special thanks to @ZenKiyoshi for Intel build bug. See the issue: #16
-
-Another special thanks to @ZenKiyoshi for xHE-AAC support. Requested completed: #17
-
 # Download MPV Windows/Android Player (libvvdec + xHE-AAC plugin)
 
-[Windows 7 and later x64](https://mega.nz/file/Sh0hQCRb#lBzt_sbgwrZhRolkSrXxY4eQHdEoIZ5Lhq3FtogjHE8)
+[Windows 7 and later x64](https://mega.nz/file/rlEX1LaD#lYZcFfKPVFSwvsBj7OZi7iD9e6dzNMn3dHM55JyyW-g)
 
-[Windows MPV.NET VVCEasy version x64](https://mega.nz/file/ShMS2CLD#a-UbbvShLJaQy3pZRjRr28vdEV5XtaJYmlFS5T4jPqk)
+[Windows MPV.NET VVCEasy version x64](https://mega.nz/file/bst0WAxC#ub4RHc3uFgeMEsR9Su_bKIQ6jx5oNZgUXOZS0bysjqo)
 
 [Android API 29 .APK Debug (Recommended)](https://mega.nz/file/m5cXXCxZ#5E1Q7GcSLjjIvRoXrSAGPLppSWbvTRKBqfY3xmKrx5s)
 
@@ -37,6 +23,20 @@ Another special thanks to @ZenKiyoshi for xHE-AAC support. Requested completed: 
 [Android Default 30 .APK Debug](https://mega.nz/file/KpdjSSwS#PB6nE1ihwP4mVXDxhWWXf-xUZlDD0WocKiFUhLuOsGI)
 
 [Android Default 30 .APK Release unsigned](https://mega.nz/file/n1VQzYqQ#ybY0b-uyGF3QRSPLegd5iZLcqaEEXmPS-2GbUnBrevM)
+
+### Changelog
+
+Please check changelog before you download the new version.
+
+```
+11/10/2022 - Removed libvorbis + updated SDL2 & mpv.net latest.
+10/10/2022 - libplacebo removed (does not work Dolby Vision with my custom build) + update mpv, added zimg, & two improved decoders of libspeex & libvorbis.
+11/09/2022 - Complete static adding LDFLAGS="-static" to fix new Intel CPU processor users for mpv.net.
+11/09/2022 - Added libplacebo + ffnvcodec.
+11/09/2022 - Added optional features: SDL2 gamepad, dvdnav & libbluray.
+10/09/2022 - Initial release of MPV.NET.
+01/09/2022 - New complete static of Windows MPV VVCEasy build.
+```
 
 # Limitations & Tips
 
@@ -54,7 +54,7 @@ Make sure to allow apps from unknown sources. Link: [Wikihow](https://www.wikiho
 
 If Google warns you, that Android MPV (libvvdec plugin) app is malicious by Play Protect, press "Install anyway" on your phone.
 
-On Windows, there is available MPV.NET custom build on this downloads from https://github.com/stax76/mpv.net
+On Windows, there is available MPV.NET custom build on this downloads. Source code: https://github.com/stax76/mpv.net
 
 # SHA256 SUMS
 ```
@@ -62,8 +62,8 @@ On Windows, there is available MPV.NET custom build on this downloads from https
 21c7447aa0041e45a6d9a3ba18c8878597b7365206c80d049e21b115afde35ef  MPV-VVCEasy-API29release-unsigned.apk
 b85a3196e9eacaf95a3675751d0de705dcd0eb4ad50c1e187469058c207dc29d  MPV-VVCEasy-debug.apk
 d9fab828db946879fe8a6780830921e9c8c75992535241d32a6be394b3cdee80  MPV-VVCEasy-release-unsigned.apk
-e08f626d75d25ae40f8fcf68ee11af3b515e952101f834427bf7cee67b8dd776  MPV-VVCEasy-Windows-x64.7z
-ccfda5659bf596497157f7a33d98cde21011cf15abf0bf97d2a3fa6caaf4e2dc  MPV.NET-VVCEasy-Windows-x64.7z
+9a859f95fff559811af4b2a164d7976717ff951c6fb67b86dbf280f3fd66b5be  MPV-VVCEasy-Windows-x64.7z
+c50882552f59abc1cafc9c16f8e2d5cfa9f8e81db560ba99d077d644f794b17b  MPV.NET-VVCEasy-Windows-x64.7z
 ```
 
 # Build MPV Android with VVC and xHE-AAC:
