@@ -2,7 +2,7 @@ echo Updating & upgrading MSYS2 packages... (if system core update requires rebo
 pacman -Syu
 pacman -Su
 echo Installing MSYS2 packages...
-pacman -S python nasm vim $MINGW_PACKAGE_PREFIX-{toolchain,cmake,autotools,meson,ninja}
+pacman -S python nasm $MINGW_PACKAGE_PREFIX-{toolchain,cmake,autotools,meson,ninja}
 echo Starting process of FFmpeg build with libvvenc and libvvdec...
 mkdir buildffmpegwin && cd buildffmpegwin
 git clone --depth=1 https://github.com/MartinEesmaa/FFmpeg-FixVVC
@@ -13,7 +13,6 @@ git clone --depth=1 https://github.com/libsdl-org/SDL
 git clone --depth=1 https://github.com/gnome/libxml2
 git clone --depth=1 https://github.com/xiph/opus
 git clone --depth=1 https://code.videolan.org/videolan/dav1d
-git clone --depth=1 https://github.com/Netflix/vmaf
 
 echo Starting to build fdk-aac:
 cd fdk-aac
@@ -38,10 +37,6 @@ cd ..
 echo Starting to build dav1d:
 mkdir dav1d/build && cd dav1d/build && meson -Denable_docs=false -Ddefault_library=static -Dprefix=$MSYSTEM_PREFIX .. && ninja install
 cd ../../
-
-echo Starting to build vmaf to apply calculate VVC video references from original video:
-mkdir vmaf/libvmaf/build && cd vmaf/libvmaf/build && CFLAGS="-msse2 -mfpmath=sse -mstackrealign" meson -Denable_docs=false -Ddefault_library=static -Denable_float=true -Dbuilt_in_models=true -Dprefix=$MSYSTEM_PREFIX .. && ninja install
-cd ../../../
 
 echo Starting to build vvenc & vvdec...
 cd vvenc
