@@ -78,7 +78,7 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 [Mac OS](https://mega.nz/file/3xtTAIiQ#MPsPcz-QlSquqahmEx8ANpqleiVm2Y3L1o3R6vy7qY8)
 
-[Linux](https://mega.nz/file/PwVmTKYB#WsTte8csnpKRPRSwTCfE7WtTvndO1cM_3UKKb1T7p0s) (Only Ubuntu 22.04 build)
+[Linux](https://mega.nz/file/750BlAqC#szh_j2LeVT7F3J6nMiOgGHa8i3QPnYq1INamPtVcCcI) (Only FFplay static won't work)
 
 ### Note about downloads
 
@@ -86,6 +86,7 @@ I use always Windows to compile FFmpeg, so I forgot compile every time for Mac O
 
 ### Changelog
 ```
+20/10/2022: Add Linux static binaries of FFmpeg, but only FFplay does not work only.
 11/10/2022: Removed libvorbis + updated SDL2 latest.
 10/10/2022: Revert from flt to s16 for two decoders of libvorbis & libspeex.
 10/10/2022: Removed libvmaf (reason: not working), added libvorbis + libspeex improve decode quality. 
@@ -162,7 +163,6 @@ git clone --depth=1 https://github.com/libsdl-org/SDL && \
 git clone --depth=1 https://github.com/gnome/libxml2 && \
 git clone --depth=1 https://github.com/xiph/opus && \
 git clone --depth=1 https://code.videolan.org/videolan/dav1d && \
-git clone --depth=1 https://github.com/Netflix/vmaf && \
 git clone --depth=1 https://github.com/MartinEesmaa/FFmpeg-FixVVC && \
 cd vvenc && sudo make install-release install-prefix=/usr/local disable-lto=1 && \
 cd .. && \
@@ -178,11 +178,10 @@ cd SDL && ./configure --prefix=/usr/local --enable-static --disable-shared && su
 cd .. && \
 mkdir dav1d/build && cd dav1d/build && meson -Denable_docs=false -Ddefault_library=static -Dprefix=/usr/local .. && sudo ninja install && \
 cd ../../ && \
-mkdir vmaf/libvmaf/build && cd vmaf/libvmaf/build && CFLAGS="-msse2 -mfpmath=sse -mstackrealign" meson -Denable_docs=false -Ddefault_library=static -Denable_float=true -Dbuilt_in_models=true -Dprefix=/usr/local .. && sudo ninja install && \
-cd ../../../ && cd FFmpeg-FixVVC && \
+cd FFmpeg-FixVVC && \
 ./configure --enable-static --pkg-config-flags="--static" --extra-ldexeflags="-static" \
 --enable-libfdk-aac --enable-libvvenc --enable-libvvdec --enable-pic \
---enable-libxml2 --enable-libopus --enable-libdav1d --enable-libvmaf --enable-sdl2 --ld=g++ && \
+--enable-libxml2 --enable-libopus --enable-libdav1d --enable-sdl2 && \
 make -j
 ```
 
