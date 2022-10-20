@@ -371,7 +371,7 @@ License: MIT
 
 [Versatile Video Decoder Web Player](https://github.com/fraunhoferhhi/vvdecWebPlayer) - A minimal proof-of-concept VVC player for the web using WebAssembly
 
-License: Clear BSD (two repositories of vvenc & vvdec) + BSD (vvdecWebPlayer)
+License: Clear BSD (all of three repositories)
 
 © 2018-2022, Fraunhofer-Gesellschaft zur Förderung der angewandten Forschung e.V. & The VVC Authors. (All rights reserved)
 
