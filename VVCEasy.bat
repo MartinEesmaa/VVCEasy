@@ -525,7 +525,7 @@ goto start
 cls
 title FFmpeg VVDec support
 echo Hello, would you like to download FFmpeg VVDec support? Y/N?
-set /p vvcnow0
+set /p vvcnow0=Answer: 
 if %vvcnow0% == Y goto installvvdecffmpegnow
 if %vvcnow0% == N goto start
 if %vvcnow0% == y goto installvvdecffmpegnow
