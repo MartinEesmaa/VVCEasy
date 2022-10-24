@@ -79,7 +79,7 @@ if %VVCSTART% == 7 goto installvvdecweb
 if %VVCSTART% == 8 goto decompresswin7z
 if %VVCSTART% == 9 goto installbitmovin
 if %VVCSTART% == 10 goto vlcvtmplugininstall
-if %VVCSTART% == 11 goto vvdecffmpeg
+if %VVCSTART% == 11 goto ffmpegvvdec
 if %VVCSTART% == 12 goto mpvandroidvvc
 if %VVCSTART% == 13 goto testsofvideo
 
@@ -534,11 +534,7 @@ if %vvcnow0% == n goto start
 :installvvdecffmpegnow
 echo Your favourite operating system is available on FFmpeg VVDec support. Please copy the link to a web browser.
 echo.
-echo Windows: https://mega.nz/file/e1MEUAwR#c7u7vDvwzp6JiSaRDwhCyOaH4cGnx1xQDPyKgbAd-qM
-echo.
-echo Mac OS: https://mega.nz/file/K09gRbYJ#SewWjY4LqVdvlivXJhqQMjrsXO6ec8a1jmapj5nO2Gs
-echo.
-echo Linux (Only Ubuntu 20.04 built): https://mega.nz/file/T8l0GTqa#oWsDDrFYjzf3LhS9zRkuqqBz6H4yJmNQUNiu_erVQLo
+echo Download link: https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md#ffmpeg-downloads-xhe-aac--vvc-endecoder-plugin-compiled-by-martin-eesmaa
 echo.
 echo See information on FFMPEGVVC.md or online GitHub: https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md
 echo.
