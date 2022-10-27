@@ -1,4 +1,8 @@
 echo off
+set welcometitle=Martin Eesmaa / VVCEasy
+set version=v.1.0.1
+set versionname=Summer time for fun.
+set vvceasydate=2 July 2022
 pushd "%~dp0"
 cls
 
@@ -40,19 +44,19 @@ goto welcomenow
 
 :welcomenow
 cls
-title Martin Eesmaa / VVCEasy
-echo Martin Eesmaa / VVCEasy
-echo Welcome to VVCEasy. (Batchfile Release Version, v.1.0.1, 2 July 2022)
-echo Version codename: Summer time for fun.
+title %welcometitle%
+echo %welcometitle%
+echo Welcome to VVCEasy. (Batchfile Release Version, %version%, %vvceasydate%)
+echo Version codename: %versionname%
 pause
 goto start
 
 :start
-title Martin Eesmaa / VVCEasy
+title %welcometitle%
 color 07
 cls
-echo VVCEasy (Batchfile Release Version, v.1.0.1, 2 July 2022)
-echo echo Version codename: Summer time for fun.
+echo VVCEasy (Batchfile Release Version, %version%, %vvceasydate%)
+echo Version codename: %versionname%
 echo.
 echo What would you like to do for encode/decode of VVC?
 echo 1. Encode
