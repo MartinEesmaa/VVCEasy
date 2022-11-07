@@ -12,7 +12,7 @@ https://github.com/MartinEesmaa/VVCEasy/actions/workflows/dotnet.yml)
 # VVCEasy (Windows, macOS, Linux & Android) (by Martin Eesmaa)
 VVCEasy is that you don't have to compile or/and coding to encode VVC (known as Versatile Video Codec). Simple, Easy, Encode and Decode.
 
-VVCEasy comes to one-easy command of FFmpeg, VVC Tools, python, VLC o266player, VVDEC Web Player, Bitmovin VVDec Player, YUView, libvvdec and more.
+VVCEasy comes to one-easy command of FFmpeg, VVC Tools, VLC o266player, VVDEC Web Player, Bitmovin VVDec Player, libvvdec and more.
 
 Installation: Go to the releases and download latest version.
 
@@ -29,6 +29,8 @@ Discord: https://discord.gg/t54cADTbWW
 Reddit's community: https://reddit.com/r/VVCEasy
 
 Sourceforge: https://sourceforge.net/projects/vvceasy
+
+*Note: Please note for my first language is Estonian and not native with English language. Some my english words might be errors with incomprehensible.*
 
 # All lists
 
@@ -143,7 +145,7 @@ Inno Setup link: https://jrsoftware.org/isdl.php
 Step 1: Clone VVCEasy git and open VVCEasy_compiler.iss
 ```
 cd %userprofile%\Downloads
-git clone https://github.com/MartinEesmaa/VVCEasy && cd VVCEasy
+git clone --depth=1 https://github.com/MartinEesmaa/VVCEasy && cd VVCEasy
 VVCEasy_compiler.iss
 ```
 
@@ -162,17 +164,17 @@ Link: https://dotnet.microsoft.com/en-us/download
 
 Step 1: Clone git and cd VVCEasy
 ```
-git clone https://github.com/MartinEesmaa/VVCEasy && cd VVCEasy
+git clone --depth=1 https://github.com/MartinEesmaa/VVCEasy && cd VVCEasy
 ```
 
-Step 2: Before you build, make sure to build and test it. Don't worry, when you build with .NET, it will restore project and build.
+Step 2: Before you build, make sure to build it. Don't worry, when you build with .NET, it will restore project and build.
 ```
-dotnet build && dotnet test --no-build --verbosity normal
+dotnet build -c Release
 ```
 
-Step 3: Once building is done, the build folder directory is bin/Debug
+Step 3: Once building is done, the build folder directory is bin/Release
 ```
-cd bin/debug
+cd bin/Release
 ```
 
 *Tip: You can run VVCEasy without building.*
@@ -189,7 +191,7 @@ Follow the instructions, the commands will give you options. Since 21 October 20
 
 # Without VVCEasy, experimental option for professional coders, other developers, and everyone (hard)
 
-You need 7-Zip (requires ffmpeg and ffplay), ffmpeg, ffplay, vvenc/vvdec(app) and YUView.
+You need 7-Zip (requires ffmpeg and ffplay), ffmpeg, ffplay, vvenc/vvdec(app).
 
 Here are the links:
 FFMPEG/FFPLAY: https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-full.7z (go to bin folder and extract two files of ffmpeg and ffplay)
@@ -197,9 +199,6 @@ VVENC/VVDEC (Windows, Mac and Linux):
 Windows: https://github.com/MartinEesmaa/VVCEasy/blob/master/WindowsVVC/WindowsVVC.7z
 Mac: https://github.com/MartinEesmaa/VVCEasy/tree/master/MacOSVVC/MacOSVVC.7z
 Linux: https://github.com/MartinEesmaa/VVCEasy/blob/master/LinuxVVC/LinuxVVC.7z
-
-YUView:
-https://github.com/IENT/YUView/releases
 
 Before we start, you need to make path environments for ffmpeg, ffplay and vvenc/vvdec to make easily.
 In Command Prompt (Windows):
@@ -292,11 +291,16 @@ Lossy video/Smallest video size:
 vvencapp --qp 38 -i out.yuv -s 854x480 -r 30 -o vvc.266
 ```
 
-**NOTE 1: If you want to have true lossless on your video, please visit [FFV1](http://ffv1.org) or H.264 Lossless video codec**
+**NOTE 1: If you want to have true lossless on your video, please use H.264 Lossless video codec or VVC with vvencffapp command of CostMode Lossless**
 
-**NOTE 1.1: VVENC does not support lossless.**
+**NOTE 1.1: In vvencffapp application, you can add command `--CostMode lossless`. Y4M accepts chroma subsampling 420 only, but YUV accepts 400, 420, 422 and 444.**
 
-Lossless video (visually lossless) (or compress smaller than preset slow, use --preset slower):
+True lossless video of 8-bit and 10-bit 4:2:0:
+```
+vvencffapp -i test.y4m --CostMode lossless -qpa 1 -b test.266
+```
+
+Visually lossless video (or compress smaller than preset slow, use --preset slower):
 ```
 vvencapp --qp 18 -i out.yuv -s 854x480 -r 30 --preset slow -o vvc.266
 ```
@@ -305,7 +309,7 @@ For Apple macOS and Linux terminal users: Command with `./vvencapp`
 
 For Windows Users using Windows PowerShell: Command with `.\vvencapp`
 
-Encode with VVENC (Best settings (visually lossless), replace video size (`-s`), frame rate (`-r`) and maximize threads of your cores (`--threads`), example) (Minimum loss quality) If you want true lossless video, use FFV1 latest version 3.4. (Necessary make smaller file (slower) than preset slow, use `--preset slower`)
+Encode with VVENC (Best settings (visually lossless), replace video size (`-s`), frame rate (`-r`) and maximize threads of your cores (`--threads`), example) (Minimum loss quality) If you want true lossless video, use H.264 Lossless video codec or VVC with vvencffapp command of CostMode Lossless. (Necessary make smaller file (slower) than preset slow, use `--preset slower`)
 ```
 vvencapp --qp 18 -i out.yuv -s 854x480 -r 30 --preset slow --threads 16 --tier high -o EXTREME.266
 ```
@@ -316,8 +320,8 @@ Note to 10-bit YUV users: If you encode YUV 10 bit to VVC file, add `-c yuv420_1
 
 Note to 8-bit Y4M users: It is only from input video (8-bit) to Y4M (8 bit)
 
-After VVEnc, you can play in YUView of latest version.
-Drag your video file of .h266, .266 or .vvc to play. YUView will play your video only about 10 seconds’ limit.
+After VVEnc, you can play on my custom VVCEasy build of [FFmpeg](https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md), [VLC](https://github.com/MartinEesmaa/VVCEasy/tree/master/INSTALLVLCPLUGIN) or [MPV](https://github.com/MartinEesmaa/VVCEasy/blob/master/MPV.md).
+Drag your video file of .h266, .266 or .vvc to play.
 
 If you are still not happy about VVC (known as Versatile Video Coding), that you think is too hard to encode and decode, use AOMEDIA ONE (AV1) that is recommended for most users to easily play VLC Media Player and others. VVC should need played on VLC Media Player in future.
 
@@ -334,19 +338,26 @@ Linux (./vvencapp):
 
 # FAQ (known as Frequently Asked Questions)
 
+Before you ask any question, please see the questions below.
+
 Are you real creator of VVCEasy?
+
 Yes... but I'm not real creator of VVC, I didn't built VVC, it was Fraunhofer HHI that he built VVC.
 
 Are you trying to work build of VVCEasy?
-Well yes... it takes longer time to make VVCEasy easier, but VVCEasy is not yet finished until further/update announcement. I don't have employees, so I'm only the one.
+
+Well yes... it takes longer time to make VVCEasy easier, but VVCEasy is not yet finished until further/update announcement. I don't have employees, so I'm the only one worker.
 
 Is it okay to bring my proof screenshots of errors?
-I allow you to bring error screenshots, you can bring proof. More proofs, easier to solve it.
+
+Yes, you can bring error screenshots for your proof. More proofs, easy to solve it.
 
 My question is not listed on FAQ. Can I ask any question to you?
-Sure, just go to Issues tab, ask questions or/and give your issue to me, I'd be happy to help :).
+
+Sure, just go to Issues tab, ask questions or/and give your issue to me, I'd be happy to solve :).
 
 Do you know what you have skills in your programming?
+
 I know about batch file and HTML programmer. Some hard programming languages might be difficult for me :/.
 Update of 19th February 2022: Maybe I should make C# Console program, that will be easy of Windows, Mac and Linux multi support.
 
