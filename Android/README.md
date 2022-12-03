@@ -12,16 +12,26 @@ arm64 - API 21 (64-bit phones only)
 
 armeabi - API 19 (32-bit phones)
 
-x86 & x86_64 - API 21 (tablets only)
+x86 - API 21 (32-bit tablets only)
+
+x86_64 - API 21 (64-bit tablets only)
 
 TIP: You can install my built applications:
 
 ```
-chmod +x vvdecapp uvg266
-cp vvdecapp uvg266 $PREFIX/bin
+chmod +x vvdecapp uvg266 vvencapp
+cp vvencapp vvdecapp uvg266 $PREFIX/bin
 ```
 
-### uvg266 encoder
+### vvencapp encoder (Fraunhofer HHI)
+
+Screenshot (tested my phone):
+
+![vvencapptermux](vvencapptermux.png)
+
+Please note, that supports 64-bit programs only.
+
+### uvg266 encoder (Scalable video encoder)
 
 Screenshot:
 

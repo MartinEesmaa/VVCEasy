@@ -318,9 +318,9 @@ NOTE: It is acceptable only for encoding to .h266, .266 and .vvc file container.
 
 Note to 10-bit YUV users: If you encode YUV 10 bit to VVC file, add `-c yuv420_10` before you type the ending word of -o EXTREME.266.
 
-Note to 8-bit Y4M users: It is only from input video (8-bit) to Y4M (8 bit)
+Note to 8-bit Y4M users: It's only from input video (8-bit) to Y4M (8 bit)
 
-After VVEnc, you can play on my custom VVCEasy build of [FFmpeg](https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md), [VLC](https://github.com/MartinEesmaa/VVCEasy/tree/master/INSTALLVLCPLUGIN) or [MPV](https://github.com/MartinEesmaa/VVCEasy/blob/master/MPV.md).
+After encoding VVC, you can play using my custom VVCEasy build of [FFmpeg](https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md), [VLC](https://github.com/MartinEesmaa/VVCEasy/tree/master/INSTALLVLCPLUGIN) or [MPV](https://github.com/MartinEesmaa/VVCEasy/blob/master/MPV.md).
 Drag your video file of .h266, .266 or .vvc to play.
 
 If you are still not happy about VVC (known as Versatile Video Coding), that you think is too hard to encode and decode, use AOMEDIA ONE (AV1) that is recommended for most users to easily play VLC Media Player and others. VVC should need played on VLC Media Player in future.

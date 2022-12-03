@@ -85,7 +85,7 @@ java --version
 
 After installing the packages on Linux, clone mpv-android-vvc repository:
 ```
-cd ~
+cd
 git clone https://github.com/MartinEesmaa/mpv-android-vvc
 cd mpv-android-vvc/buildscripts
 ```
