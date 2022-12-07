@@ -1,4 +1,4 @@
-echo Updating & upgrading MSYS2 packages... if system core update requires reboot this application, please run this script again after being updated.
+echo Updating and upgrading MSYS2 packages... if system core update requires reboot this application, please run this script again after being updated.
 pacman -Syu
 echo Installing MSYS2 packages...
 pacman -S python nasm $MINGW_PACKAGE_PREFIX-{toolchain,cmake,autotools,meson,ninja}
