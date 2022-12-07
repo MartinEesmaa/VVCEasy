@@ -86,6 +86,7 @@ I use always Windows to compile FFmpeg, so I forgot compile every time for Mac O
 
 ### Changelog
 ```
+07/12/2022: Update vvenc, vvdec and others. Fixed Windows N version. (#22)
 20/10/2022: Add Linux static binaries of FFmpeg, but only FFplay does not work only.
 11/10/2022: Removed libvorbis + updated SDL2 latest.
 10/10/2022: Revert from flt to s16 for two decoders of libvorbis & libspeex.
