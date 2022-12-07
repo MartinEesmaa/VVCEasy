@@ -1,4 +1,5 @@
 #!/bin/bash
+echo Building FFmpeg VVCEasy Linux version...
 sudo apt update && sudo apt upgrade -y && \
 sudo apt install build-essential cmake nasm autoconf pkg-config \
 python3-setuptools ninja-build python3-pip libtool git wget -y && \
