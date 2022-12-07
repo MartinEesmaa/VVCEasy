@@ -1,6 +1,5 @@
-echo Updating & upgrading MSYS2 packages... (if system core update requires reboot this application, please run this script again after being updated)
+echo Updating & upgrading MSYS2 packages... if system core update requires reboot this application, please run this script again after being updated.
 pacman -Syu
-pacman -Su
 echo Installing MSYS2 packages...
 pacman -S python nasm $MINGW_PACKAGE_PREFIX-{toolchain,cmake,autotools,meson,ninja}
 echo Starting process of FFmpeg build with libvvenc and libvvdec...
@@ -26,12 +25,12 @@ cd ..
 
 echo Starting to build sdl2:
 cd SDL
-./configure --enable-static --disable-shared --prefix=$MSYSTEM_PREFIX && make install -j $nproc
-cd ..
+mkdir build && cd build && cmake -DCMAKE_EXE_LINKER_FLAGS="-static" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$MSYSTEM_PREFIX .. -G "MinGW Makefiles" && cmake --build . --target install -j $nproc
+cd ../../
 
 echo Starting to build libopus to improve decode quality on FFmpeg:
 cd opus
-CFLAGS="-O2 -D_FORTIFY_SOURCE=0" LDFLAGS="-flto -s" ./configure --enable-static --disable-shared --prefix=$MSYSTEM_PREFIX && make install -j $nproc
+autoreconf -if && CFLAGS="-O2 -D_FORTIFY_SOURCE=0" LDFLAGS="-flto -s" ./configure --enable-static --disable-shared --disable-tests --disable-extras --prefix=$MSYSTEM_PREFIX && make install -j $nproc
 cd ..
 
 echo Starting to build dav1d:
@@ -53,7 +52,7 @@ cd ../../
 echo Starting configuring and making FFmpeg VVCEasy build...
 cd FFmpeg-FixVVC
 ./configure --enable-libfdk-aac --enable-static --enable-libvvenc --enable-libvvdec --enable-pic \
---enable-zlib --enable-libxml2 --extra-ldexeflags=-static \
+--enable-zlib --enable-libxml2 --enable-libdav1d --enable-libopus --extra-ldexeflags=-static \
 --pkg-config-flags=-static --disable-w32threads --enable-sdl2 && \
 make -j
 echo FFmpeg VVC version tools are now compiled, please see buildffmpegwin/FFmpeg folder.

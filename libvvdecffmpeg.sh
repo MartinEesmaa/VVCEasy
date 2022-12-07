@@ -21,8 +21,8 @@ cd libxml2 && autoreconf -if && ./configure --prefix=/usr/local --enable-static 
 cd .. && \
 cd opus && autoreconf -if && ./configure --prefix=/usr/local --enable-static --disable-shared && sudo make install -j $nproc && \
 cd .. && \
-cd SDL && ./configure --prefix=/usr/local --enable-static --disable-shared && sudo make install -j $nproc && \
-cd .. && \
+cd SDL && mkdir build && cd build && cmake -DCMAKE_EXE_LINKER_FLAGS="-static" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local .. && sudo make install -j $nproc && \
+cd ../../ && \
 mkdir dav1d/build && cd dav1d/build && meson -Denable_docs=false -Ddefault_library=static -Dprefix=/usr/local .. && sudo ninja install && \
 cd ../../ && \
 cd FFmpeg-FixVVC && \
