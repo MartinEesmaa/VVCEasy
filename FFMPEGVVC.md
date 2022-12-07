@@ -74,7 +74,7 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 # FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
 
-[Windows](https://mega.nz/file/n4d0HLpD#Stu2nWNf4wj-5CPgXFfcM8rfJdMpXm_kSixxweeUJf8)
+[Windows](https://mega.nz/file/r88U1BhK#DWI39qXzQCOrgdeAsEk7Wml5-vPD_yK_tRiwHDcFdl0)
 
 [Mac OS](https://mega.nz/file/3xtTAIiQ#MPsPcz-QlSquqahmEx8ANpqleiVm2Y3L1o3R6vy7qY8)
 
