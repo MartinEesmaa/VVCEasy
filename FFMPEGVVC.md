@@ -74,7 +74,7 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 # FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
 
-[Windows](https://mega.nz/file/r88U1BhK#DWI39qXzQCOrgdeAsEk7Wml5-vPD_yK_tRiwHDcFdl0)
+[Windows](https://mega.nz/file/b9N0GLgD#Gt__YtDuNQdHj_0zxcMK_WfBBOyfGgPihV0ujO5w3GI)
 
 [Mac OS](https://mega.nz/file/3xtTAIiQ#MPsPcz-QlSquqahmEx8ANpqleiVm2Y3L1o3R6vy7qY8)
 
@@ -86,6 +86,7 @@ I use always Windows to compile FFmpeg, so I forgot compile every time for Mac O
 
 ### Changelog
 ```
+23/12/2022: Update all libraries, fix MP4-ALS mono audio & added libcodec2 to FFmpeg.
 07/12/2022: Update vvenc, vvdec and others. Fixed Windows N version. (#22)
 20/10/2022: Add Linux static binaries of FFmpeg, but only FFplay does not work only.
 11/10/2022: Removed libvorbis + updated SDL2 latest.
