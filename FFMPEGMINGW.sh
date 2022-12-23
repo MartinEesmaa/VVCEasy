@@ -27,8 +27,8 @@ cd ..
 
 echo Starting to build sdl2:
 cd SDL
-./configure --enable-static --disable-shared --prefix=$MSYSTEM_PREFIX && make install -j $nproc
-cd ..
+mkdir build && cd build && cmake -DCMAKE_EXE_LINKER_FLAGS="-static" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$MSYSTEM_PREFIX .. -G "MinGW Makefiles" && cmake --build . --target install -j $nproc
+cd ../../
 
 echo Starting to build libopus to improve decode quality on FFmpeg:
 cd opus
