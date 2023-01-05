@@ -13,7 +13,6 @@ git clone --depth=1 https://github.com/xiph/opus && \
 git clone --depth=1 https://code.videolan.org/videolan/dav1d && \
 git clone --depth=1 https://github.com/MartinEesmaa/FFmpeg-FixVVC && \
 git clone --depth=1 https://github.com/xiph/speex && \
-git clone --depth=1 https://github.com/drowe67/codec2 && \
 cd vvenc && sudo make install-release install-prefix=/usr/local disable-lto=1 && \
 cd .. && \
 cd vvdec && sudo make install-release install-prefix=/usr/local disable-lto=1 && \
@@ -26,11 +25,6 @@ cd opus && autoreconf -if && CFLAGS="-O2 -D_FORTIFY_SOURCE=0" LDFLAGS="-flto -s"
 cd .. && \
 cd speex && autoreconf -if && ./configure --prefix=/usr/local --enable-static --disable-shared && sudo make install -j $nproc && \
 cd .. && \
-cd codec2
-grep -ERl "\b(lsp|lpc)_to_(lpc|lsp)" --include="*.[ch]" | \
-                xargs -r sed -ri "s;((lsp|lpc)_to_(lpc|lsp));c2_\1;g" 
-mkdir build && cd build && cmake -DCMAKE_EXE_LINKER_FLAGS="-static" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local -D{UNITTEST,INSTALL_EXAMPLES}=off .. && sudo make install -j $nproc && \
-cd ../../ && \
 cd SDL && mkdir build && cd build && cmake -DCMAKE_EXE_LINKER_FLAGS="-static" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local .. && sudo make install -j $nproc && \
 cd ../../ && \
 mkdir dav1d/build && cd dav1d/build && meson -Denable_docs=false -Ddefault_library=static -Dprefix=/usr/local .. && sudo ninja install && \
@@ -38,7 +32,7 @@ cd ../../ && \
 cd FFmpeg-FixVVC && \
 ./configure --enable-static --pkg-config-flags="--static" --extra-ldexeflags="-static" \
 --enable-libfdk-aac --enable-libvvenc --enable-libvvdec --enable-pic \
---enable-libxml2 --enable-libopus --enable-libdav1d --enable-sdl2 && \
+--enable-libxml2 --enable-libopus --enable-libdav1d --enable-libspeex --enable-sdl2 && \
 make -j
 echo You're ready to preview VVC, view VVC information or convert from VVC using ffmpeg, ffplay and ffprobe.
 echo - Martin Eesmaa
