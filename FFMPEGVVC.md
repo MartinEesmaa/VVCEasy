@@ -78,7 +78,7 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 [Mac OS](https://mega.nz/file/3xtTAIiQ#MPsPcz-QlSquqahmEx8ANpqleiVm2Y3L1o3R6vy7qY8)
 
-[Linux](https://mega.nz/file/750BlAqC#szh_j2LeVT7F3J6nMiOgGHa8i3QPnYq1INamPtVcCcI) (Only FFplay static won't work)
+[Linux](https://mega.nz/file/mg9AVJoR#seSt2k6cuB6eGrKN6GMSi9QB_p__KKQ5fF6neEUsYUk) (Only FFplay static won't work)
 
 ### Note about downloads
 
@@ -86,6 +86,7 @@ I always use Windows to compile FFmpeg, so I forgot compile every time for Mac O
 
 ### Changelog
 ```
+05/01/2023: Update Linux FFmpeg static builds (still does not work for FFplay static only, others working fine)
 30/12/2022: Improved vvenc codes of FFmpeg VVCEasy, thanks Thomas Siedel from Spin Digital! TIP: Type "ffmpeg_vvceasy -h encoder=libvvenc" for FFmpeg vvenc available. See the new vvenc patch: https://patchwork.ffmpeg.org/project/ffmpeg/list/?series=7922
 23/12/2022: Update all libraries, fix MP4-ALS mono audio & added libcodec2 to FFmpeg.
 07/12/2022: Update vvenc, vvdec and others. Fixed Windows N version. (#22)
