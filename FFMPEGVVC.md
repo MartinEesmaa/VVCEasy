@@ -32,9 +32,9 @@ libvvenc (FFmpeg vvc version) works for:
 - MP4 Muxing :x: (does not support, you need MP4BOX after encode.)
 - Audio with encode VVC ⚠️ (does not support, because it can corrupt the file) To avoid corrupt file, you need to disable audio using `-an` or you could do output container for .266, .vvc and .h266 too.
 - Bitrates ✅
-- Passes ✅
+- Passes ⚠️ (you may need get passes using vvenc params on FFmpeg VVCEasy or use vvencapp)
 - Presets ✅
-- QP/CRF ✅
+- QP ✅
 - HDR ✅
 
 Built in libvvenc for FFmpeg command:
