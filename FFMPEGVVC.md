@@ -26,22 +26,24 @@ Before encode to VVC video codec, see the limitations below.
 
 libvvenc (FFmpeg vvc version) works for:
 
-- Pixel format ✅ (changeable of 8/10bit) 
-- Video size (auto detects, but it doesn't detect for SAR and DAR anamorphic is glitch and corrupts the video ) ⚠️ (Better way to use vvencapp without FFmpeg)
+- Pixel format ⚠️ (only pixel format 10 bit)
+- Video size (auto detects, but it doesn't detect for SAR and DAR anamorphic is glitch and corrupts the video) ⚠️ (Better way to use vvencapp without FFmpeg)
 - Frame rate ✅ (auto detects) 
 - MP4 Muxing :x: (does not support, you need MP4BOX after encode.)
 - Audio with encode VVC ⚠️ (does not support, because it can corrupt the file) To avoid corrupt file, you need to disable audio using `-an` or you could do output container for .266, .vvc and .h266 too.
 - Bitrates ✅
-- Passes ⚠️ (only one pass)
-- Presets ⚠️ (only medium preset)
-- QP/CRF ⚠️ (only you can set -global_quality command only, global_quality equals qp)
-- HDR ⚠️ (default SDR, but cannot encode HDR)
+- Passes ✅
+- Presets ✅
+- QP/CRF ✅
+- HDR ✅
 
 Built in libvvenc for FFmpeg command:
 
 ```
-ffmpeg -i example.mp4 -c:v libvvenc -global_quality 37 -pix_fmt yuv420p10 example.266
+ffmpeg -i example.mp4 -c:v libvvenc -qp 37 -preset slow example.266
 ```
+
+For more options for libvvenc in FFmpeg VVCEasy version, type `ffmpeg_vvceasy -h encoder=libvvenc` for available commands.
 
 Additional command: You can convert to vvc video without taking a much space for vvencapp, example:
 
@@ -74,18 +76,19 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 # FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
 
-[Windows](https://mega.nz/file/KtEkGSBb#45hhunMr-ds-GdAQ-r3YR_rX5SxeJw2qt5QMfPjhw_4)
+[Windows](https://mega.nz/file/q51RQZ6I#E5iKKUZ5Sa3FLpoJw0BK-shtTiyUCIPs9q1D6Ab2T64)
 
 [Mac OS](https://mega.nz/file/3xtTAIiQ#MPsPcz-QlSquqahmEx8ANpqleiVm2Y3L1o3R6vy7qY8)
 
-[Linux](https://mega.nz/file/mg9AVJoR#seSt2k6cuB6eGrKN6GMSi9QB_p__KKQ5fF6neEUsYUk) (Only FFplay static won't work)
+[Linux](https://mega.nz/file/XxkwjLpC#Q8iqsjAI3wx3Uf_P9c22hkL2TaEonN3r4_m6FQfgfRY) (Only FFplay static won't work)
 
 ### Note about downloads
 
-I always use Windows to compile FFmpeg, so I forgot compile every time for Mac OS and Linux. Also, please check changelog before you download the new version.
+I use always Windows to compile FFmpeg, so I forgot compile every time for Mac OS and Linux. Also, please check changelog before you download the new version.
 
 ### Changelog
 ```
+10/01/2023: Updated vvenc latest and others.
 05/01/2023: Update Linux FFmpeg static builds (still does not work for FFplay static only, others working fine)
 30/12/2022: Improved vvenc codes of FFmpeg VVCEasy, thanks Thomas Siedel from Spin Digital! TIP: Type "ffmpeg_vvceasy -h encoder=libvvenc" for FFmpeg vvenc available. See the new vvenc patch: https://patchwork.ffmpeg.org/project/ffmpeg/list/?series=7922
 23/12/2022: Update all libraries, fix MP4-ALS mono audio & added libcodec2 to FFmpeg.
