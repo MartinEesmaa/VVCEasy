@@ -16,19 +16,16 @@ Screenshot preview, see top-left information of toggle stats on Windows/Android 
 
 [Windows MPV.NET VVCEasy version x64](https://mega.nz/file/bst0WAxC#ub4RHc3uFgeMEsR9Su_bKIQ6jx5oNZgUXOZS0bysjqo)
 
-[Android API 29 .APK Debug (Recommended)](https://mega.nz/file/m5cXXCxZ#5E1Q7GcSLjjIvRoXrSAGPLppSWbvTRKBqfY3xmKrx5s)
+[Android API 29 .APK Debug (Recommended)](https://mega.nz/file/aoE0QRBC#kpWQm1Rj1qMm59_ihtzfjuH59vZPhav5JDs4qvdqRZk)
 
-[Android API 29 .APK Release unsigned](https://mega.nz/file/e89XWRpJ#nZS-Pj1LG0BR4n65qq0Y2qYDrd61ShHIEkX9khQMCIc)
-
-[Android Default 30 .APK Debug](https://mega.nz/file/KpdjSSwS#PB6nE1ihwP4mVXDxhWWXf-xUZlDD0WocKiFUhLuOsGI)
-
-[Android Default 30 .APK Release unsigned](https://mega.nz/file/n1VQzYqQ#ybY0b-uyGF3QRSPLegd5iZLcqaEEXmPS-2GbUnBrevM)
+[Android API 29 .APK Release unsigned](https://mega.nz/file/7w0GVJaR#YrI4_-51C5QRTruTvBPY-FUM6Lm2a19WUJhz8G8bDfg)
 
 ### Changelog
 
 Please check changelog before you download the new version.
 
 ```
+11/01/2023 - Updated vvdec, added Vulkan with shaderc on MPV Android VVCEasy build.
 11/10/2022 - Removed libvorbis + updated SDL2 & mpv.net latest.
 10/10/2022 - libplacebo removed (does not work Dolby Vision with my custom build) + update mpv, added zimg, & two improved decoders of libspeex & libvorbis.
 11/09/2022 - Complete static adding LDFLAGS="-static" to fix new Intel CPU processor users for mpv.net.
@@ -58,10 +55,8 @@ On Windows, there is available MPV.NET custom build on this downloads. Source co
 
 # SHA256 SUMS
 ```
-5a140d730028518d26bf3b322a1a9e3297531ca9f8674e02dd79f1d199553036  MPV-VVCEasy-API29debug.apk
-21c7447aa0041e45a6d9a3ba18c8878597b7365206c80d049e21b115afde35ef  MPV-VVCEasy-API29release-unsigned.apk
-b85a3196e9eacaf95a3675751d0de705dcd0eb4ad50c1e187469058c207dc29d  MPV-VVCEasy-debug.apk
-d9fab828db946879fe8a6780830921e9c8c75992535241d32a6be394b3cdee80  MPV-VVCEasy-release-unsigned.apk
+88b42323255dc5c28412de39c0d8914daf47f9955f725b252741e237d280aa8c  MPV-VVCEasy-API29debug.apk
+5ee8e7075641304f7e214077f0abc77253fd05301c3f59ba8e600a07b7dbf6d6  MPV-VVCEasy-API29release-unsigned.apk
 9a859f95fff559811af4b2a164d7976717ff951c6fb67b86dbf280f3fd66b5be  MPV-VVCEasy-Windows-x64.7z
 c50882552f59abc1cafc9c16f8e2d5cfa9f8e81db560ba99d077d644f794b17b  MPV.NET-VVCEasy-Windows-x64.7z
 ```
