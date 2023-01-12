@@ -49,7 +49,7 @@ cd codec2
 sed -i 's|if(WIN32)|if(FALSE)|g' CMakeLists.txt
 grep -ERl "\b(lsp|lpc)_to_(lpc|lsp)" --include="*.[ch]" | \
                 xargs -r sed -ri "s;((lsp|lpc)_to_(lpc|lsp));c2_\1;g"
-mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$MSYSTEM_PREFIX -D{UNITTEST,INSTALL_EXAMPLES}=off .. -G "MinGW Makefiles"
+mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$MSYSTEM_PREFIX -D{UNITTEST,INSTALL_EXAMPLES}=off -DBUILD_SHARED_LIBS=OFF -DCMAKE_EXE_LINKER_FLAGS="-static" .. -G "MinGW Makefiles"
 cmake --build . -j $nproc --target install
 cd ../../
 
