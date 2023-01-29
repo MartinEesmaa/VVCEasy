@@ -12,9 +12,9 @@ Screenshot preview, see top-left information of toggle stats on Windows/Android 
 
 # Download MPV Windows/Android Player (libvvdec + xHE-AAC plugin)
 
-[Windows 7 and later x64](https://mega.nz/file/rlEX1LaD#lYZcFfKPVFSwvsBj7OZi7iD9e6dzNMn3dHM55JyyW-g)
+[Windows 7 and later x64](https://mega.nz/file/OokShIzD#CU2dE3krSUiwCufB4O2EmTNL_INRlK6Aa76PZnNqXuU)
 
-[Windows MPV.NET VVCEasy version x64](https://mega.nz/file/bst0WAxC#ub4RHc3uFgeMEsR9Su_bKIQ6jx5oNZgUXOZS0bysjqo)
+[Windows MPV.NET VVCEasy version x64](https://mega.nz/file/780DwIaB#pcsT5Zcmto2q9hlIF4I2nF_MKQZit0dyd89B-56LSo0)
 
 [Android API 29 .APK Debug (Recommended)](https://mega.nz/file/aoE0QRBC#kpWQm1Rj1qMm59_ihtzfjuH59vZPhav5JDs4qvdqRZk)
 
@@ -25,6 +25,7 @@ Screenshot preview, see top-left information of toggle stats on Windows/Android 
 Please check changelog before you download the new version.
 
 ```
+29/01/2023 - Updated vvdec code, mpv.net and others on Windows MPV VVCEasy build.
 11/01/2023 - Updated vvdec, added Vulkan with shaderc on MPV Android VVCEasy build.
 11/10/2022 - Removed libvorbis + updated SDL2 & mpv.net latest.
 10/10/2022 - libplacebo removed (does not work Dolby Vision with my custom build) + update mpv, added zimg, & two improved decoders of libspeex & libvorbis.
@@ -57,8 +58,8 @@ On Windows, there is available MPV.NET custom build on this downloads. Source co
 ```
 88b42323255dc5c28412de39c0d8914daf47f9955f725b252741e237d280aa8c  MPV-VVCEasy-API29debug.apk
 5ee8e7075641304f7e214077f0abc77253fd05301c3f59ba8e600a07b7dbf6d6  MPV-VVCEasy-API29release-unsigned.apk
-9a859f95fff559811af4b2a164d7976717ff951c6fb67b86dbf280f3fd66b5be  MPV-VVCEasy-Windows-x64.7z
-c50882552f59abc1cafc9c16f8e2d5cfa9f8e81db560ba99d077d644f794b17b  MPV.NET-VVCEasy-Windows-x64.7z
+db5563b205755852717bb34330973a5572f1b0ae5e727bb9cb8a2c0ad2a36a13  MPV-VVCEasy-Windows-x64.7z
+815c8fbdea6a8494b5900d8ddcb9b76ddb4b9c0ba10adf8e7c113c68115b682e  MPV.NET-VVCEasy-Windows-x64.7z
 ```
 
 # Build MPV Android with VVC and xHE-AAC:
