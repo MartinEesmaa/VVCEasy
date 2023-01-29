@@ -76,7 +76,7 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 # FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
 
-[Windows](https://mega.nz/file/q51RQZ6I#E5iKKUZ5Sa3FLpoJw0BK-shtTiyUCIPs9q1D6Ab2T64)
+[Windows](https://mega.nz/file/qktxwSCL#DNyd7slyyCwpiyXSjjkHHkGoxKoD7KSKw6yNdKDvcPg)
 
 [Mac OS](https://mega.nz/file/3xtTAIiQ#MPsPcz-QlSquqahmEx8ANpqleiVm2Y3L1o3R6vy7qY8)
 
@@ -88,6 +88,7 @@ I use always Windows to compile FFmpeg, so I forgot compile every time for Mac O
 
 ### Changelog
 ```
+29/01/2023: Updated vvenc, vvdec and other libraries on Windows FFmpeg VVCEasy build.
 10/01/2023: Updated vvenc latest and others.
 05/01/2023: Update Linux FFmpeg static builds (still does not work for FFplay static only, others working fine)
 30/12/2022: Improved vvenc codes of FFmpeg VVCEasy, thanks Thomas Siedel from Spin Digital! TIP: Type "ffmpeg_vvceasy -h encoder=libvvenc" for FFmpeg vvenc available. See the new vvenc patch: https://patchwork.ffmpeg.org/project/ffmpeg/list/?series=7922
