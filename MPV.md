@@ -20,11 +20,16 @@ Screenshot preview, see top-left information of toggle stats on Windows/Android 
 
 [Android API 29 .APK Release unsigned](https://mega.nz/file/SwVEmDDa#dDIKgbmzPCEfqc5uY8peW3PB-YPTbNHXgukLrjtPmWw)
 
+[Android API 29 .APK Debug with gpu-next](https://mega.nz/file/61FlFR5L#51PTo1F2t2Gv117WNsmIThckscJSjMnfU4nmD81j-1I)
+
+[Android API 29 .APK Release with gpu-next](https://mega.nz/file/6wUwzAIK#4PoP_UrXVz0NjcEsnOaS5Zh-NLKfrUmGaCtrybO6m7s)
+
 ### Changelog
 
 Please check changelog before you download the new version.
 
 ```
+15/02/2023 - Added Android MPV VVCEasy build with gpu-next support.
 14/02/2023 - Update Android MPV VVCEasy build latest, but vulkan support is removed for some reason.
 29/01/2023 - Updated vvdec code, mpv.net and others on Windows MPV VVCEasy build.
 11/01/2023 - Updated vvdec, added Vulkan with shaderc on MPV Android VVCEasy build.
@@ -59,6 +64,8 @@ On Windows, there is available MPV.NET custom build on this downloads. Source co
 ```
 b22fdcdb40af54cc7e14420fd1c0a21881a09fec571c3d2a92ff6acbf86f3c25  MPV-VVCEasy-API29debug.apk
 5a70234038a0d2f64b2a5fe9af5ab142ab9a9ebb4731dc3e7166b1a22b4f84c8  MPV-VVCEasy-API29release-unsigned.apk
+2bd5060a36f4653e83b59413204376ee02fca2bfbc84b57faa1ebbd376a124a3  MPV-VVCEasy-API29debug-gpunext.apk
+89b5787de2966158e689bafb979e32f88c1d44d7a26368e303e91789470d90c2  MPV-VVCEasy-API29release-unsigned-gpunext.apk
 db5563b205755852717bb34330973a5572f1b0ae5e727bb9cb8a2c0ad2a36a13  MPV-VVCEasy-Windows-x64.7z
 815c8fbdea6a8494b5900d8ddcb9b76ddb4b9c0ba10adf8e7c113c68115b682e  MPV.NET-VVCEasy-Windows-x64.7z
 ```
