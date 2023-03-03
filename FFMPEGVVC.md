@@ -82,6 +82,8 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 [Linux](https://mega.nz/file/XxkwjLpC#Q8iqsjAI3wx3Uf_P9c22hkL2TaEonN3r4_m6FQfgfRY) (Only FFplay static won't work)
 
+[FFmpeg-FixVVC archived old source code](https://mega.nz/file/G81QyT5S#jcbE1sYPEy1OMIDPCF8BPeAK-3KAGF50u23MVJzmBgw) (old)
+
 ### Note about downloads
 
 I use always Windows to compile FFmpeg, so I forgot compile every time for Mac OS and Linux. Also, please check changelog before you download the new version.
