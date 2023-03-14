@@ -48,6 +48,8 @@ Sourceforge: https://sourceforge.net/projects/vvceasy
 
 - [MPV libvvdec + xHE-AAC support (Windows x64/Android only)](#mpv-libvvdec--xhe-aac-support-windows-x64android-only)
 
+- [LAVFilters VVC version x64](#lavfilters-vvc-version-x64)
+
 - [Compile for VVCEasy](#compile-for-vvceasy)
 
   - [VVCEasy Batchfile Compile](#vvceasy-batchfile-version-optional-windows-only)
@@ -134,6 +136,12 @@ MPV libvvdec & xHE-AAC supports only of Windows x64 & Android.
 The VVC and MP4 muxed with VVC codec can be played on MPV libvvdec + xHE-AAC version. Only MP4 mixed with VVC supports seek.
 
 See [MPV.md](MPV.md).
+
+# LAVFilters VVC version x64
+
+For more information about LAVFilters Windows VVC version.
+
+See [LAVFilter folder](LAVFilter/README.md)
 
 # Compile for VVCEasy
 
