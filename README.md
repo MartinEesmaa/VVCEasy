@@ -40,15 +40,13 @@ Sourceforge: https://sourceforge.net/projects/vvceasy
 
 - [VLC InterDigital VTM VVC Plugin](#vlc-interdigital-vtm-vvc-plugin)
 
-- [VLC o266player](#vlc-o266player-windows-only-macos-will-be-later-closed-source-decoder)
-
-- [Bitmovin VVDec Player](#bitmovin-vvdec-player)
-
 - [FFmpeg VVC En/Decoder & xHE-AAC support](#ffmpeg-vvencdec--xhe-aac-support)
 
 - [MPV libvvdec + xHE-AAC support (Windows x64/Android only)](#mpv-libvvdec--xhe-aac-support-windows-x64android-only)
 
 - [LAVFilters VVC version x64](#lavfilters-vvc-version-x64)
+
+- [Deprecated builds](#deprecated-builds)
 
 - [Compile for VVCEasy](#compile-for-vvceasy)
 
@@ -111,18 +109,6 @@ When you try to play your MPEG-TS or TS file, it will crash with your InterDigit
 
 Without InterDigital VLC VTM Plugin, playing MPEG-TS or TS file will play fine in your all original plugins (except VLC VTM Plugin) on your VLC Media Player.
 
-# VLC o266player (Windows only, macOS will be later) (closed-source decoder)
-
-For more information about o266player.
-
-See [o266player.md](o266player.md).
-
-# Bitmovin VVDec Player
-
-For more information about Bitmovin VVDec Player.
-
-See [Bitmovin.md](Bitmovin.md).
-
 # FFmpeg VVENC/DEC & xHE-AAC support
 
 FFmpeg VVC En/Decoder & xHE-AAC supports of Windows, Mac and Linux.
@@ -142,6 +128,14 @@ See [MPV.md](MPV.md).
 For more information about LAVFilters Windows VVC version.
 
 See [LAVFilter folder](LAVFilter/README.md)
+
+# Deprecated builds
+
+Those deprecated builds were no new commits/codes after one year.
+
+For Bitmovin VVDec Player, see [Bitmovin.md](Bitmovin.md).
+
+For VLC o266player build, see [o266player.md](o266player.md).
 
 # Compile for VVCEasy
 
