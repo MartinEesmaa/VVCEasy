@@ -16,9 +16,9 @@ Screenshot preview, see top-left information of toggle stats on Windows/Android 
 
 [Windows MPV.NET VVCEasy version x64](https://mega.nz/file/780DwIaB#pcsT5Zcmto2q9hlIF4I2nF_MKQZit0dyd89B-56LSo0)
 
-[Android API 29 .APK Debug (Recommended)](https://mega.nz/file/TwM0XaRS#snxueWJKLgpBMzaI2cIz8PT1qHyYS4j6P3sLsbrVi9Q)
+[Android API 29 .APK Debug (Recommended)](https://mega.nz/file/DpcimBBD#kFGFlf816K6olbWhgjHK_S3aSXCKPpLSLj4o1rC3TIk)
 
-[Android API 29 .APK Release unsigned](https://mega.nz/file/n9c0gI4Q#of1ubp6Ktby33h2ZXrWVTl-M3UNzszfdC_XPxxd1ni4)
+[Android API 29 .APK Release unsigned](https://mega.nz/file/qgk2yYBZ#uHe01B1HGbLf6Rplvbm7_l2CGDeRGrhTL5JByRvVsB8)
 
 [Android API 29 .APK Debug with gpu-next](https://mega.nz/file/249iyJIJ#8f6FOZ8K6wtOmpIVmOt-tFK1eM5i7PXuI7s3B_Esr1Q)
 
@@ -29,6 +29,7 @@ Screenshot preview, see top-left information of toggle stats on Windows/Android 
 Please check changelog before you download the new version.
 
 ```
+29/03/2023 - Update MPV Android package and icons. Tip: You can have two builds between official and VVCEasy build.
 19/02/2023 - Add Android TV support of APK builds & update Android MPV VVCEasy builds.
 15/02/2023 - Added Android MPV VVCEasy build with gpu-next support.
 14/02/2023 - Update Android MPV VVCEasy build latest, but vulkan support is removed for some reason.
@@ -63,8 +64,8 @@ On Windows, there is available MPV.NET custom build on this downloads. Source co
 
 # SHA256 SUMS
 ```
-e04e521ceccc358fab8fac526195785de3494fc5a2adc983a95794630d941dab  MPV-VVCEasy-API29debug.apk
-9dcfdc17ce89727fdb4de8a4acd986bf81fb8438b4bd223659819f6d22da7cbe  MPV-VVCEasy-API29release-unsigned.apk
+b9318771d287368e657751c8958b4a8f7c67f0dcfd565001c8496eff8e1c3a42  MPV-VVCEasy-API29debug.apk
+1685b5126d3bf68347e412d6c04cc82d88f38eeadf0ebc334f3a9b582a7ceb0a  MPV-VVCEasy-API29release-unsigned.apk
 f562ad25beb9156c675eecac74cdab66480a4ac9c1cabe69e5605c8045516fbc  MPV-VVCEasy-API29debug-gpunext.apk
 c94cb197f249f317bff59d5ba20ae0d02192a6af046b62724343c6aa05aa95cc  MPV-VVCEasy-API29release-unsigned-gpunext.apk
 db5563b205755852717bb34330973a5572f1b0ae5e727bb9cb8a2c0ad2a36a13  MPV-VVCEasy-Windows-x64.7z
