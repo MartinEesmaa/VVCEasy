@@ -1,7 +1,7 @@
 echo Updating and upgrading MSYS2 packages... if system core update requires reboot this application, please run this script again after being updated.
 pacman -Syu
 echo Installing MSYS2 packages...
-pacman -Syu python nasm vim $MINGW_PACKAGE_PREFIX-{toolchain,cmake,autotools,meson,ninja}
+pacman -S python nasm vim $MINGW_PACKAGE_PREFIX-{toolchain,cmake,autotools,meson,ninja}
 echo Starting process of FFmpeg build with libvvenc and libvvdec...
 if [ ! -d buildffmpegwin ]; then
 mkdir buildffmpegwin && cd buildffmpegwin
