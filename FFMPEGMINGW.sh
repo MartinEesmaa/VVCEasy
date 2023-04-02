@@ -1,19 +1,82 @@
 echo Updating and upgrading MSYS2 packages... if system core update requires reboot this application, please run this script again after being updated.
 pacman -Syu
 echo Installing MSYS2 packages...
-pacman -S python nasm $MINGW_PACKAGE_PREFIX-{toolchain,cmake,autotools,meson,ninja}
+pacman -Syu python nasm vim $MINGW_PACKAGE_PREFIX-{toolchain,cmake,autotools,meson,ninja}
 echo Starting process of FFmpeg build with libvvenc and libvvdec...
+if [ ! -d buildffmpegwin ]; then
 mkdir buildffmpegwin && cd buildffmpegwin
-git clone --depth=1 https://github.com/MartinEesmaa/FFmpeg-FixVVC
+else
+cd buildffmpegwin
+fi
+
+if [ ! -d FFmpeg-FixVVC ]; then
+git clone --depth=1 https://github.com/MartinEesmaa/FFmpeg-VVC
+else
+git -C FFmpeg-VVC pull
+fi
+
+if [ ! -d vvenc ]; then
 git clone --depth=1 https://github.com/fraunhoferhhi/vvenc
+else
+git -C vvenc pull
+fi
+
+if [ ! -d vvdec ]; then
 git clone --depth=1 https://github.com/fraunhoferhhi/vvdec
+else
+git -C vvdec pull
+fi
+
+if [ ! -d fdk-aac ]; then
 git clone --depth=1 https://github.com/mstorsjo/fdk-aac
+else
+git -C fdk-aac pull
+fi
+
+if [ ! -d SDL ]; then
 git clone --depth=1 https://github.com/libsdl-org/SDL
+else
+git -C SDL pull
+fi
+
+if [ ! -d libxml2 ]; then
 git clone --depth=1 https://github.com/gnome/libxml2
+else
+git -C libxml2 pull
+fi
+
+if [ ! -d opus ]; then
 git clone --depth=1 https://github.com/xiph/opus
+else
+git -C opus pull
+fi
+
+if [ ! -d libjxl ]; then
+git clone --depth=1 https://github.com/libjxl/libjxl
+sed -i 's/-lm/-lm -lstdc++/g' libjxl/lib/jxl/libjxl.pc.in libjxl/lib/threads/libjxl_threads.pc.in
+git -C libjxl submodule update --init --recursive --depth 1 --recommend-shallow
+else
+git -C libjxl pull
+git -C libjxl submodule update --init --recursive --depth 1 --recommend-shallow
+fi
+
+if [ ! -d dav1d ]; then
 git clone --depth=1 https://code.videolan.org/videolan/dav1d
-git clone --depth=1 https://github.com/xiph/speex
+else
+git -C dav1d pull
+fi
+
+if [ ! -d codec2 ]; then
 git clone --depth=1 https://github.com/drowe67/codec2
+else
+git -C codec2 pull
+fi
+
+if [ ! -d vmaf ]; then
+git clone --depth=1 https://github.com/netflix/vmaf
+else
+git -C vmaf pull
+fi
 
 echo Starting to build fdk-aac:
 cd fdk-aac
@@ -35,13 +98,12 @@ cd opus
 autoreconf -if && CFLAGS="-O2 -D_FORTIFY_SOURCE=0" LDFLAGS="-flto -s" ./configure --enable-static --disable-shared --disable-tests --disable-extras --prefix=$MSYSTEM_PREFIX && make install -j $nproc
 cd ..
 
-echo Starting to build speex:
-cd speex
-autoreconf -if && ./configure --enable-static --disable-shared --prefix=$MSYSTEM_PREFIX && make install -j $nproc
-cd ..
+echo Starting to build libjxl:
+mkdir libjxl/build && cd libjxl/build && cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DBUILD_SHARED_LIBS=OFF -DJPEGXL_ENABLE_BENCHMARK=OFF -DJPEGXL_ENABLE_PLUGINS=ON -DJPEGXL_ENABLE_MANPAGES=OFF -DJPEGXL_FORCE_SYSTEM_BROTLI=ON -DJPEGXL_FORCE_SYSTEM_GTEST=ON -DCMAKE_INSTALL_PREFIX=$MSYSTEM_PREFIX .. && ninja install -j $nproc
+cd ../../
 
 echo Starting to build dav1d:
-mkdir dav1d/build && cd dav1d/build && meson -Denable_docs=false -Ddefault_library=static -Dprefix=$MSYSTEM_PREFIX .. && ninja install
+mkdir dav1d/build && cd dav1d/build && meson -Denable_docs=false -Ddefault_library=static -Dprefix=$MSYSTEM_PREFIX .. && ninja install -j $nproc
 cd ../../
 
 echo Starting to build codec2:
@@ -53,12 +115,17 @@ mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREF
 cmake --build . -j $nproc --target install
 cd ../../
 
-echo Starting to build vvenc & vvdec...
+echo Starting to build vmaf to apply calculate VVC video references from original video:
+mkdir vmaf/libvmaf/build && cd vmaf/libvmaf/build && CFLAGS="-msse2 -mfpmath=sse -mstackrealign" meson -Denable_docs=false -Ddefault_library=static -Denable_float=true -Dbuilt_in_models=true -Dprefix=$MSYSTEM_PREFIX .. && ninja install -j $nproc
+cd ../../../
+
+echo Starting to build vvenc...
 cd vvenc
 mkdir build && cd build
 cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$MSYSTEM_PREFIX -DVVENC_ENABLE_LINK_TIME_OPT=OFF .. -G "MinGW Makefiles"
 cmake --build . --target install -j $nproc
 cd ../../
+echo Starting to build vvdec...
 cd vvdec
 mkdir build && cd build
 cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$MSYSTEM_PREFIX -DVVDEC_ENABLE_LINK_TIME_OPT=OFF .. -G "MinGW Makefiles"
@@ -66,9 +133,9 @@ cmake --build . --target install -j $nproc
 cd ../../
 
 echo Starting configuring and making FFmpeg VVCEasy build...
-cd FFmpeg-FixVVC
+cd FFmpeg-VVC
 ./configure --enable-libfdk-aac --enable-static --enable-libvvenc --enable-libvvdec --enable-pic \
---enable-zlib --enable-libxml2 --enable-libdav1d --enable-libopus --enable-libcodec2 --enable-libspeex --extra-ldexeflags=-static \
+--enable-zlib --enable-libxml2 --enable-libdav1d --enable-libopus --enable-libcodec2 --enable-libjxl --extra-ldexeflags=-static \
 --pkg-config-flags=-static --disable-w32threads --enable-sdl2 && \
 make -j
 echo FFmpeg VVC version tools are now compiled, please see buildffmpegwin/FFmpeg folder.
