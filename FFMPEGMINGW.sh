@@ -118,6 +118,7 @@ cd ../../
 echo Starting to build vmaf to apply calculate VVC video references from original video:
 mkdir vmaf/libvmaf/build && cd vmaf/libvmaf/build && CFLAGS="-msse2 -mfpmath=sse -mstackrealign" meson -Denable_docs=false -Ddefault_library=static -Denable_float=true -Dbuilt_in_models=true -Dprefix=$MSYSTEM_PREFIX .. && ninja install -j $nproc
 cd ../../../
+sed -i 's/-lm/-lm -lstdc++/g' $MSYSTEM_PREFIX/lib/pkgconfig/libvmaf.pc
 
 echo Starting to build vvenc...
 cd vvenc
@@ -135,7 +136,7 @@ cd ../../
 echo Starting configuring and making FFmpeg VVCEasy build...
 cd FFmpeg-VVC
 ./configure --enable-libfdk-aac --enable-static --enable-libvvenc --enable-libvvdec --enable-pic \
---enable-zlib --enable-libxml2 --enable-libdav1d --enable-libopus --enable-libcodec2 --enable-libjxl --extra-ldexeflags=-static \
+--enable-zlib --enable-libxml2 --enable-libdav1d --enable-libopus --enable-libcodec2 --enable-libjxl --enable-libvmaf --extra-ldexeflags=-static \
 --pkg-config-flags=-static --disable-w32threads --enable-sdl2 && \
 make -j
 echo FFmpeg VVC version tools are now compiled, please see buildffmpegwin/FFmpeg folder.
