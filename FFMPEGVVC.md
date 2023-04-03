@@ -76,7 +76,7 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 # FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
 
-[Windows](https://mega.nz/file/ultFDKDR#Q70Y1JyP4qxlWBvTVp-JqKmU-NWvt1V5p210GOGwDNc)
+[Windows](https://mega.nz/file/LlNlBDjT#CtD4RTj9Kgrx-089s-kyW07jaLekbNadbKcYVNzLy-E)
 
 [Mac OS](https://mega.nz/file/3xtTAIiQ#MPsPcz-QlSquqahmEx8ANpqleiVm2Y3L1o3R6vy7qY8)
 
@@ -90,6 +90,7 @@ I use always Windows to compile FFmpeg, so I forgot compile every time for Mac O
 
 ### Changelog
 ```
+03/04/2023: New FFmpeg master latest VVCEasy builds with updated vvenc, vvdec and added libvmaf & libjxl. Removed AC4 for compilation/decoder errors for new AC4 audio files.
 03/02/2023: Updated vvenc library on Windows FFmpeg VVCEasy build.
 02/02/2023: Updated vvenc library and others on Windows FFmpeg VVCEasy build.
 29/01/2023: Updated vvenc, vvdec and other libraries on Windows FFmpeg VVCEasy build.
@@ -161,41 +162,7 @@ make -j
 
 # Linux builders (Important for FFplay)
 
-You can build using this:
-
-```
-sudo apt update && sudo apt upgrade -y && \
-sudo apt install build-essential cmake nasm autoconf pkg-config \
-python3-setuptools ninja-build python3-pip libtool git wget -y && \
-sudo pip3 install meson && \
-git clone --depth=1 https://github.com/fraunhoferhhi/vvenc && \
-git clone --depth=1 https://github.com/fraunhoferhhi/vvdec && \
-git clone --depth=1 https://github.com/mstorsjo/fdk-aac && \
-git clone --depth=1 https://github.com/libsdl-org/SDL && \
-git clone --depth=1 https://github.com/gnome/libxml2 && \
-git clone --depth=1 https://github.com/xiph/opus && \
-git clone --depth=1 https://code.videolan.org/videolan/dav1d && \
-git clone --depth=1 https://github.com/MartinEesmaa/FFmpeg-FixVVC && \
-cd vvenc && sudo make install-release install-prefix=/usr/local disable-lto=1 && \
-cd .. && \
-cd vvdec && sudo make install-release install-prefix=/usr/local disable-lto=1 && \
-cd .. && \
-cd fdk-aac && autoreconf -if && ./configure --prefix=/usr/local --enable-static --disable-shared && sudo make install -j $nproc && \
-cd .. && \
-cd libxml2 && autoreconf -if && ./configure --prefix=/usr/local --enable-static --disable-shared && sudo make install -j $nproc && \
-cd .. && \
-cd opus && autoreconf -if && ./configure --prefix=/usr/local --enable-static --disable-shared && sudo make install -j $nproc && \
-cd .. && \
-cd SDL && ./configure --prefix=/usr/local --enable-static --disable-shared && sudo make install -j $nproc && \
-cd .. && \
-mkdir dav1d/build && cd dav1d/build && meson -Denable_docs=false -Ddefault_library=static -Dprefix=/usr/local .. && sudo ninja install && \
-cd ../../ && \
-cd FFmpeg-FixVVC && \
-./configure --enable-static --pkg-config-flags="--static" --extra-ldexeflags="-static" \
---enable-libfdk-aac --enable-libvvenc --enable-libvvdec --enable-pic \
---enable-libxml2 --enable-libopus --enable-libdav1d --enable-sdl2 && \
-make -j
-```
+You can build using [Linux script](libvvdecffmpeg.sh).
 
 If you want actually play VVC file with FFplay on your local distro, you need to remove command `--extra-ldexeflags="-static"`, otherwise it might give result segmentation fault for FFplay static only.
 
@@ -216,11 +183,13 @@ Original author: [@FFmpeg](https://github.com/FFmpeg) Repository: https://github
 
 [@lehmann-c](https://github.com/lehmann-c) (Christian Lehmann) Repository: https://github.com/lehmann-c/FFmpeg
 
-[@tbiat](https://github.com/tbiat) Repository: https://github.com/tbiat/FFmpeg
+[@tbiat](https://github.com/tbiat) (Thibaud Biatek) Repository: https://github.com/tbiat/FFmpeg
 
 VVC encoder programmer to FFmpeg: [@IsaMorphic](https://github.com/IsaMorphic) (Isabelle Santin) Repository: https://github.com/IsaMorphic/FFmpeg-VVC
 
-[@MartinEesmaa](https://github.com/MartinEesmaa) (Martin Eesmaa) Repository: https://github.com/MartinEesmaa/FFmpeg-FixVVC
+[@MartinEesmaa](https://github.com/MartinEesmaa) (Martin Eesmaa) Repository: https://github.com/MartinEesmaa/FFmpeg-VVC
+
+[@NuoMi](https://github.com/nuomi2021) of some codes and [Thomas Siedel](https://patchwork.ffmpeg.org/project/ffmpeg/list/?series=8577) of new external VVC encoder & decoder.
 
 AC4 decoder programmer to FFmpeg: [@richardpl](https://github.com/richardpl) (Paul B Mahol) Repository: https://github.com/richardpl/FFmpeg/tree/ac4
 

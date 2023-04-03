@@ -12,9 +12,9 @@ Screenshot preview, see top-left information of toggle stats on Windows/Android 
 
 # Download MPV Windows/Android Player (libvvdec + xHE-AAC plugin)
 
-[Windows 7 and later x64](https://mega.nz/file/OokShIzD#CU2dE3krSUiwCufB4O2EmTNL_INRlK6Aa76PZnNqXuU)
+[Windows 7 and later x64](https://mega.nz/file/Lx0UEZwD#K4NM9w-RQgmQpXl7rsGFugQIb1DM59v7WzxSnUDFdao)
 
-[Windows MPV.NET VVCEasy version x64](https://mega.nz/file/780DwIaB#pcsT5Zcmto2q9hlIF4I2nF_MKQZit0dyd89B-56LSo0)
+[Windows MPV.NET VVCEasy version x64](https://mega.nz/file/21VF0RYA#IjcpER0VyAu_urc1mmQTHAFnKRX1k_YRS5WtxYrp1y0)
 
 [Android API 29 .APK Debug (Recommended)](https://mega.nz/file/DpcimBBD#kFGFlf816K6olbWhgjHK_S3aSXCKPpLSLj4o1rC3TIk)
 
@@ -29,6 +29,7 @@ Screenshot preview, see top-left information of toggle stats on Windows/Android 
 Please check changelog before you download the new version.
 
 ```
+03/04/2023 - New MPV and MPV.NET latest VVCEasy build with new FFmpeg VVCEasy libraries for updated vvenc, vvdec and added libjxl, shaderc, libplacebo and vulkan to make gpu-next available.
 29/03/2023 - Update MPV Android package and icons. Tip: You can have two builds between official and VVCEasy build.
 19/02/2023 - Add Android TV support of APK builds & update Android MPV VVCEasy builds.
 15/02/2023 - Added Android MPV VVCEasy build with gpu-next support.
@@ -68,8 +69,8 @@ b9318771d287368e657751c8958b4a8f7c67f0dcfd565001c8496eff8e1c3a42  MPV-VVCEasy-AP
 1685b5126d3bf68347e412d6c04cc82d88f38eeadf0ebc334f3a9b582a7ceb0a  MPV-VVCEasy-API29release-unsigned.apk
 f562ad25beb9156c675eecac74cdab66480a4ac9c1cabe69e5605c8045516fbc  MPV-VVCEasy-API29debug-gpunext.apk
 c94cb197f249f317bff59d5ba20ae0d02192a6af046b62724343c6aa05aa95cc  MPV-VVCEasy-API29release-unsigned-gpunext.apk
-db5563b205755852717bb34330973a5572f1b0ae5e727bb9cb8a2c0ad2a36a13  MPV-VVCEasy-Windows-x64.7z
-815c8fbdea6a8494b5900d8ddcb9b76ddb4b9c0ba10adf8e7c113c68115b682e  MPV.NET-VVCEasy-Windows-x64.7z
+35bb3422e977edb65405bd26e4de9b64705e08455fd8e3561a9610628f0bafab  MPV-VVCEasy-Windows-x64.7z
+bcdd83d7d6e393e990808cdc19b7580e5d98c537c42eb67e9774f86b22f5e533  MPV.NET-VVCEasy-Windows-x64.7z
 ```
 
 # Build MPV Android with VVC and xHE-AAC:
