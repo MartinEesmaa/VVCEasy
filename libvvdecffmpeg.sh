@@ -1,4 +1,5 @@
 #!/bin/bash
+PREFIX=/usr/local
 echo Building FFmpeg VVCEasy Linux version...
 sudo apt update && sudo apt upgrade -y && \
 sudo apt install build-essential cmake nasm autoconf pkg-config \
@@ -78,19 +79,19 @@ cd libxml2 && autoreconf -if && ./configure --prefix=$PREFIX --enable-static --d
 cd .. && \
 cd opus && autoreconf -if && CFLAGS="-O2 -D_FORTIFY_SOURCE=0" LDFLAGS="-flto -s" ./configure --prefix=$PREFIX --enable-static --disable-shared && sudo make install -j $nproc && \
 cd .. && \
-mkdir libjxl/build && cd libjxl/build && cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DBUILD_SHARED_LIBS=OFF -DJPEGXL_ENABLE_BENCHMARK=OFF -DJPEGXL_ENABLE_PLUGINS=ON -DJPEGXL_ENABLE_MANPAGES=OFF -DJPEGXL_FORCE_SYSTEM_BROTLI=ON -DJPEGXL_FORCE_SYSTEM_GTEST=ON -DCMAKE_INSTALL_PREFIX=$PREFIX .. -G Ninja && sudo ninja install -j $nproc && \
+mkdir libjxl/build && cd libjxl/build && cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DBUILD_SHARED_LIBS=OFF -DJPEGXL_ENABLE_BENCHMARK=OFF -DJPEGXL_ENABLE_PLUGINS=ON -DJPEGXL_ENABLE_MANPAGES=OFF -DJPEGXL_FORCE_SYSTEM_BROTLI=ON -DJPEGXL_FORCE_SYSTEM_GTEST=ON -DCMAKE_INSTALL_PREFIX=$PREFIX .. -G Ninja && sudo ninja install && \
 cd ../../ && \
-mkdir vmaf/libvmaf/build && cd vmaf/libvmaf/build && CFLAGS="-msse2 -mfpmath=sse -mstackrealign" meson -Denable_docs=false -Ddefault_library=static -Denable_float=true -Dbuilt_in_models=true -Dprefix=$PREFIX .. && sudo ninja install -j $nproc && \
+mkdir vmaf/libvmaf/build && cd vmaf/libvmaf/build && CFLAGS="-msse2 -mfpmath=sse -mstackrealign" meson -Denable_docs=false -Ddefault_library=static -Denable_float=true -Dbuilt_in_models=true -Dprefix=$PREFIX .. && sudo ninja install && \
 cd ../../../ && \
-sudo sed -i 's/-lm/-lm -lstdc++/g' $PREFIX/lib/pkgconfig/libvmaf.pc && \
+sudo sed -i 's/-lm/-lm -lstdc++/g' $PREFIX/lib/x86_64-linux-gnu/pkgconfig/libvmaf.pc && \
 cd SDL && mkdir build && cd build && cmake -DCMAKE_EXE_LINKER_FLAGS="-static" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$PREFIX .. && sudo make install -j $nproc && \
 cd ../../ && \
-mkdir dav1d/build && cd dav1d/build && meson -Denable_docs=false -Ddefault_library=static -Dprefix=$PREFIX .. && sudo ninja install -j $nproc && \
+mkdir dav1d/build && cd dav1d/build && meson -Denable_docs=false -Ddefault_library=static -Dprefix=$PREFIX .. && sudo ninja install && \
 cd ../../ && \
 cd FFmpeg-VVC && \
 ./configure --enable-static --pkg-config-flags="--static" --extra-ldexeflags="-static" \
 --enable-libfdk-aac --enable-libvvenc --enable-libvvdec --enable-pic \
 --enable-libxml2 --enable-libopus --enable-libdav1d --enable-libjxl --enable-libvmaf --enable-sdl2 && \
 make -j
-echo You're ready to preview VVC, view VVC information or convert from VVC using ffmpeg, ffplay and ffprobe.
+echo You are ready to preview VVC, view VVC information or convert from VVC using ffmpeg, ffplay and ffprobe.
 echo - Martin Eesmaa
