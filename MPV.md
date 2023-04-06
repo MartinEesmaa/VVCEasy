@@ -16,9 +16,9 @@ Screenshot preview, see top-left information of toggle stats on Windows/Android 
 
 [Windows MPV.NET VVCEasy version x64](https://mega.nz/file/21VF0RYA#IjcpER0VyAu_urc1mmQTHAFnKRX1k_YRS5WtxYrp1y0)
 
-[Android API 29 .APK Debug (Recommended)](https://mega.nz/file/f9EFELab#7mAClMyhd-95IUd849J8lVOxTT8ynaEaNCyTjuO9pKk)
+[Android API 29 .APK Debug (Recommended)](https://mega.nz/file/2oF1xYzZ#HgCzqy2EdW6HP-XKmDsccUVzII3lMBW7FvM8531YYLY)
 
-[Android API 29 .APK Release unsigned](https://mega.nz/file/eodkmZ6J#kuIE1jji1alowiqvoDvH8ZTh-jP1QxxADe6kIZ0Uj8U)
+[Android API 29 .APK Release unsigned](https://mega.nz/file/joUWnKhT#dSoXQEX1wCjZbTjqfJ_weYwH2sJLk2CklQgSD9-TA1E)
 
 [Android API 29 .APK Debug with gpu-next](https://mega.nz/file/3p0zyCCI#BRmCY58lwikvck0gbcyFX3IvcGu_7wxZn-mWezaD1uk)
 
@@ -29,6 +29,7 @@ Screenshot preview, see top-left information of toggle stats on Windows/Android 
 Please check changelog before you download the new version.
 
 ```
+06/04/2023 - Enabled Bluray and DVD libraries in MPV Android VVCEasy build.
 04/04/2023 - New Android MPV VVCEasy build with new FFmpeg VVCEasy libraries for updated vvenc and vvdec. For gpu-next build, still experimental.
 03/04/2023 - New MPV and MPV.NET latest VVCEasy build with new FFmpeg VVCEasy libraries for updated vvenc, vvdec and added libjxl, shaderc, libplacebo and vulkan to make gpu-next available.
 29/03/2023 - Update MPV Android package and icons. Tip: You can have two builds between official and VVCEasy build.
@@ -66,8 +67,8 @@ On Windows, there is available MPV.NET custom build on this downloads. Source co
 
 # SHA256 SUMS
 ```
-87af341d40f6010287f8afd80251c050bc5fe99c663033a97c32d52fb570650f  MPV-VVCEasy-API29debug.apk
-9f6b12d045085560a5f3c957ac66e40c4d4d6f04d65ed2144618e86d3269663b  MPV-VVCEasy-API29release-unsigned.apk
+60bf08583d30e11b81330a26a5fd81e8f43e6677c5de1cb0ff7e2f26bdb0298c  MPV-VVCEasy-API29debug.apk
+3d3bc2de3389c1bd0b889e5abf92813b64118a3b72b53f0261635eb0a4ec5bca  MPV-VVCEasy-API29release-unsigned.apk
 6cca9e73a23a376f704f60e716d1ecc206c290e908b42aab341353f304dacc58  MPV-VVCEasy-API29debug-gpunext.apk
 55a4182bf4a0bec8b0236e7de3c2f169a4df33735b842b083951647dbf5bfe64  MPV-VVCEasy-API29release-unsigned-gpunext.apk
 35bb3422e977edb65405bd26e4de9b64705e08455fd8e3561a9610628f0bafab  MPV-VVCEasy-Windows-x64.7z
