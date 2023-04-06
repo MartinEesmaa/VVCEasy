@@ -29,7 +29,7 @@ Screenshot preview, see top-left information of toggle stats on Windows/Android 
 Please check changelog before you download the new version.
 
 ```
-06/04/2023 - Enabled Bluray and DVD libraries in MPV Android VVCEasy build.
+06/04/2023 - Enabled yt-dlp, Bluray and DVD libraries in MPV Android VVCEasy build.
 04/04/2023 - New Android MPV VVCEasy build with new FFmpeg VVCEasy libraries for updated vvenc and vvdec. For gpu-next build, still experimental.
 03/04/2023 - New MPV and MPV.NET latest VVCEasy build with new FFmpeg VVCEasy libraries for updated vvenc, vvdec and added libjxl, shaderc, libplacebo and vulkan to make gpu-next available.
 29/03/2023 - Update MPV Android package and icons. Tip: You can have two builds between official and VVCEasy build.
