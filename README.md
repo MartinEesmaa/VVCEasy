@@ -374,7 +374,7 @@ Or, you can chat us: https://matrix.to/#/#vvceasy:matrix.org
 
 License: MIT
 
-© 2021-2022 [Martin Eesmaa](https://github.com/MartinEesmaa) (All rights reserved)
+© 2021-2023 [Martin Eesmaa](https://github.com/MartinEesmaa) (All rights reserved)
 
 ---
 
@@ -384,23 +384,23 @@ License: MIT
 
 [Versatile Video Decoder Web Player](https://github.com/fraunhoferhhi/vvdecWebPlayer) - A minimal proof-of-concept VVC player for the web using WebAssembly
 
-License: Clear BSD (all of three repositories)
+License: BSD 3-Clause Clear License (all of three repositories)
 
-© 2018-2022, Fraunhofer-Gesellschaft zur Förderung der angewandten Forschung e.V. & The VVC Authors. (All rights reserved)
+© 2018-2023, Fraunhofer-Gesellschaft zur Förderung der angewandten Forschung e.V. & The VVC Authors. (All rights reserved)
 
 GitHub: [Fraunhoferhhi](https://github.com/fraunhoferhhi)
 
 ---
 
-[O266Player](https://github.com/TencentCloud/o266player) - VLC Media Player (o266player, Vetinari v3.0.11.1, modified version)
+[VLC VTM Decoder Plugin](https://github.com/InterDigitalInc/VTMDecoder_VLCPlugin) - VVC decoder plugin for VLC based on a multithreaded VTM
 
 [VLC Original Version](https://code.videolan.org/videolan/vlc) - VLC Media Player
 
-License: GPL Version 2 (both repositories)
+License: GPL Version 2 (VLC Original version) & LGPL-2.1 (VLC VTM Decoder Plugin)
 
-© 2020-2021 [Tencent Cloud](https://github.com/TencentCloud) (All rights reserved)
+© 2000-2023 [VLC Media Player](https://code.videolan.org/) Developers (All rights reserved)
 
-© 2000-2022 [VLC Media Player](https://code.videolan.org/) Developers (All rights reserved)
+© 2021-2023 [Inter Digital Inc](https://github.com/InterDigitalInc) (All rights reserved)
 
 ---
 
@@ -412,21 +412,13 @@ License: MIT
 
 ---
 
-[VLC VTM Decoder Plugin](https://github.com/InterDigitalInc/VTMDecoder_VLCPlugin) - VVC decoder plugin for VLC based on a multithreaded VTM
-
-License: LGPL-2.1
-
-© 2021-2022 [Inter Digital Inc](https://github.com/InterDigitalInc) (All rights reserved)
-
----
-
 [FFmpeg](https://github.com/FFmpeg/FFmpeg) - Mirror of https://git.ffmpeg.org/ffmpeg.git
 
 VVC developers & forkers: [Christian Lehmann](https://github.com/lehmann-c), [tbiat](https://github.com/tbiat), [Isabelle Santin](https://github.com/IsaMorphic) & [Martin Eesmaa](https://github.com/MartinEesmaa)
 
 License: LGPL-2.1+ & GPL-2.0+
 
-© 2000-2022 [FFmpeg developers](https://github.com/FFmpeg) (All rights reserved)
+© 2000-2023 [FFmpeg developers](https://github.com/FFmpeg) (All rights reserved)
 
 ---
 
@@ -436,15 +428,7 @@ VVC developer & forker: [tbiat](https://github.com/tbiat) & [Martin Eesmaa](http
 
 License: MIT
 
-© 2016-2022 Ilya Zhuravlev, sfan5 & mpv developers (All rights reserved)
-
----
-
-[OpenVVC](https://github.com/OpenVVC/OpenVVC) - VVC Decoder
-
-License: LGPL-2.1
-
-© 2021-2022 OpenVVC developers (All rights reserved)
+© 2016-2023 Ilya Zhuravlev, sfan5 & mpv developers (All rights reserved)
 
 ---
 
