@@ -436,4 +436,4 @@ License: MIT
 
 License: LGPL-2.1
 
-© 2003-2022 [Jean Le Feuvre](https://github.com/jeanlf) & [GPAC developers/contributors](https://github.com/gpac/gpac/graphs/contributors)
+© 2003-2023 [Jean Le Feuvre](https://github.com/jeanlf) & [GPAC developers/contributors](https://github.com/gpac/gpac/graphs/contributors)
