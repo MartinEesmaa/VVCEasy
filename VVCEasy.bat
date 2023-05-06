@@ -15,16 +15,16 @@ REM  --> Check for permissions
 
 REM --> If error flag set, we do not have admin.
 if '%errorlevel%' NEQ '0' (
-	if '%1' EQU '1' (
-		echo Cannot elevate administrator privilege
-		echo Please try again with "Run as Administrator"
-		echo Installation failed.
-		pause
-		exit /B
-	) else (
-		echo Requesting administrative privileges...
-		goto UACPrompt
-	)
+    if '%1' EQU '1' (
+        echo Cannot elevate administrator privilege
+        echo Please try again with "Run as Administrator"
+        echo Installation failed.
+        pause
+        exit /B
+    ) else (
+        echo Requesting administrative privileges...
+        goto UACPrompt
+    )
 ) else ( goto gotAdmin )
 
 :UACPrompt
@@ -33,7 +33,7 @@ if '%errorlevel%' NEQ '0' (
 
     "%temp%\getadmin.vbs"
     exit /B
-	
+    
 :gotAdmin
     if exist "%temp%\getadmin.vbs" ( del "%temp%\getadmin.vbs" )
     pushd "%CD%"
@@ -46,7 +46,7 @@ goto welcomenow
 cls
 title %welcometitle%
 echo %welcometitle%
-echo Welcome to VVCEasy. (Batchfile Release Version, %version%, %vvceasydate%)
+echo Welcome to VVCEasy. (Batch file Release Version, %version%, %vvceasydate%)
 echo Version codename: %versionname%
 pause
 goto start
@@ -58,18 +58,18 @@ cls
 echo VVCEasy (Batchfile Release Version, %version%, %vvceasydate%)
 echo Version codename: %versionname%
 echo.
-echo What would you like to do for encode/decode of VVC?
+echo What would you like to do to encode/decode of VVC?
 echo 1. Encode
 echo 2. Decode
 echo 3. Help
 echo 4. Exit
-echo 5. Install/Test path environment
-echo 6. Install quickly through Anaconda (Python distribution) for ffmpeg (Windows)
+echo 5. Install/Test path environment.
+echo 6. Install quickly through Anaconda (Python distribution) for FFmpeg (Windows)
 echo 7. Install/Update VVdec Web Player
 echo 8. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)
 echo 9. Install vvDecPlayer from BitMovin
 echo 10. Install/Update VLC VTM Plugins (Windows/Linux x64 of VLC plugins by Inter Digital Inc)
-echo 11. Install FFmpeg VVDec support
+echo 11. Install FFmpeg VVDec support.
 echo 12. Install MPV Windows/Android (libvvdec plugin)
 echo 13. Tests of VVC videos
 set /p VVCSTART=Number: 
@@ -91,11 +91,11 @@ if %VVCSTART% == 13 goto testsofvideo
 title Encode to VVC
 cls
 echo Welcome to VVC encoder.
-echo What do you like encode to VVC?
+echo What do you like to encode to VVC?
 echo Before we move to settings quality, is your video lossy or lossless?
 echo 1. Lossy (example YouTube videos, Web videos, lossy compressed videos, and other webs)
 echo 2. Lossless (example XIPH Media, Camera uncompressed (MOV/MP4/AVI), Apple ProRes and others uncompressed files)
-echo 3. Go back to menu
+echo 3. Go back to the menu.
 set /p vvencquestion1=Number: 
 if %vvencquestion1% == 1 goto losslessvvenc2
 if %vvencquestion1% == 2 goto lossyvvenc2
@@ -119,8 +119,8 @@ if %doyouhavey4mvvencquestion3% == 2 goto encodestart
 :startlosslessvvenc2
 cls
 title VVC ENCODER (Y4M LOSSLESS)
-echo Before we start encode from your Y4M file to VVC file, I'm afraid I cannot do automatically for you.
-echo You have to manually encode to VVC, the batchfile won't work.
+echo Before we start encoding from your Y4M file to VVC file, I'm afraid I cannot do automatically for you.
+echo You must manually encode to VVC, the batchfile won't work.
 echo Here is code: vvencapp --qp 18 -i yourinput.y4m -s 854x480 -r 30 --preset slow --threads 16 --tier high -o yourfinalvvc.266
 echo YOU HAVE TO REPLACE VIDEO SIZE AND FRAME RATE. -s is video size and -r is frame rate.
 echo INPUT VIDEO BIT DEPTH IS 8-BIT ONLY FOR UNCOMPRESSED MOVIE FILES.
@@ -144,8 +144,8 @@ if %doyouhaveyuvvvencquestion4% == 2 goto encodestart
 :startlossyvvenc2
 cls
 title VVC ENCODER (YUV LOSSY)
-echo Before we start encode from your YUV file to VVC file, I'm afraid I cannot do automatically for you.
-echo You have to manually encode to VVC, the batchfile won't work.
+echo Before we start encoding from your YUV file to VVC file, I'm afraid I cannot do automatically for you.
+echo You must manually encode to VVC, the batchfile won't work.
 echo Here is code: vvencapp --qp 38 -i yourinput.yuv -s 854x480 -r 30 -o youroutputlossy.266
 echo YOU HAVE TO REPLACE VIDEO SIZE AND FRAME RATE. -s is video size and -r is frame rate.
 echo You can also add for "--tier high" or/and 10-bit video "-c yuv420_10", if necessary.
@@ -161,7 +161,7 @@ echo Do you want to transcode back from VVC to YUV or Y4M? Which did you choose 
 echo You need copy from your VVC file to C:\Program Files\VVCEasy\WindowsVVC\. Windows Explorer will open automatically.
 echo After copying your VVC file into VVCEasy folder, you need rename to VVC.vvc. It will transcode from your VVC file to YUV/Y4M.
 echo After transcoding, your transcoded file should be: C:\Program Files\VVCEasy\transcodedback
-echo Note, if you are using portable, like you git cloned VVCEasy or downloaded source files, go to your Downloads folder and select VVCEasy.
+echo Note, if you are using portable, like your git cloned VVCEasy or downloaded source files, go to your Downloads folder and select VVCEasy.
 echo Portable won't work probably, you need copy from your Downloads folder\VVCEasy into Program Files\VVCEasy.
 echo 1. YUV (lossy video VVC)
 echo 2. Y4M (lossless video VVC)
@@ -178,7 +178,7 @@ vvdecapp -b VVC.vvc -o VVCTOYUV.yuv
 move VVCTOYUV.yuv ../
 move VVCTOYUV.yuv transcodedback
 explorer "C:\Program Files\VVCEasy\transcodedback"
-echo FINISHED. Going back to menu...
+echo FINISHED. Going back to the menu...
 timeout 3
 goto start
 
@@ -191,7 +191,7 @@ vvdecapp -b VVC.vvc --y4m -o VVCTOYUV.y4m
 move VVCTOYUV.y4m ../
 move VVCTOYUV.y4m transcodedback
 explorer "C:\Program Files\VVCEasy\transcodedback"
-echo FINISHED. Going back to menu...
+echo FINISHED. Going back to the menu...
 timeout 3
 goto start
 
@@ -228,22 +228,22 @@ if %testdidworkq% == n goto ahhdidnotwork
 
 :youdidworktest
 title Great!
-echo Great, your PATHS working now. Now back to menu...
+echo Great, your PATHS working now. Now back to the menu...
 timeout 3
 goto start
 
 :ahhdidnotwork
 title Sorry...
 echo Sorry, your path environment did not work. Make sure follow that needs to be add it on paths installation like Python.
-echo Still not working? You can ask question in Stack Overflow.
+echo Still not working? You can ask questions in Stack Overflow.
 pause
 goto start
 
 :installpath
 echo Installer path environment will be only for 7-Zip.
-echo Others programs should need manual, but Python, FFmpeg, wget and git must be installed manually and add automatically path environments.
+echo Other programs should need manual, but Python, FFmpeg, wget and git must be installed manually and add automatically path environments.
 echo Do you want patch 7-Zip on your path environment, so you can type "7z" next time.
-echo Install 7-Zip on your path environments? Y/N? No means go back to test menu.
+echo Would you like to install 7-Zip on your path environments? Y/N? No means go back to test menu.
 set /p installpath1=Answer: 
 if %installpath1% == Y goto installingpath
 if %installpath1% == N goto test
@@ -300,7 +300,7 @@ exit
 :conda
 cls
 title ANACONDA (PYTHON DISTRIBUTION)
-echo Welcome to Anaconda (Python Distribution) Quick Install. This will do only one task to download ffmpeg. Would you like to install? Y/N?
+echo Welcome to Anaconda (Python Distribution) Quick Install. This will do only one task to download FFmpeg. Would you like to install? Y/N?
 set /p anacondaman=Answer: 
 if %anacondaman% == Y goto condainstall
 if %anacondaman% == N goto start
@@ -309,7 +309,7 @@ if %anacondaman% == n goto start
 
 :condainstall
 conda install -c conda-forge ffmpeg
-echo SUCCESS, going to back menu...
+echo SUCCESS, going to back the menu...
 pause
 goto start
 
@@ -319,11 +319,11 @@ echo Welcome to VVCEasy help instructions!
 echo Here is tutorial about... How to use VVCEasy?
 pause
 echo Step 1: Run on VVCEasy.bat. When you see the screen of Welcome to VVCEasy. You can press any key continue to main menu.
-echo Step 2: Here are the list of main menus, that you need type any number will go to direction like (goto) command.
+echo Step 2: Here is the list of main menus, that you need type any number will go to direction like (goto) command.
 echo Step 3: Follow the command instructions and that is easy.
 pause
-echo If you have any problems that you do not understand of VVCEasy. Please contact to Martin Eesmaa by creating issues for questions or/and problems.
-echo Do you want to start over help instructions? If yes, then it will go back from beginning. If No, going to back menu. Y/N?
+echo If you have any problems that you do not understand VVCEasy. Please contact Martin Eesmaa by creating issues for questions or/and problems.
+echo Do you want to start over help instructions? If yes, then it will go back from the beginning. If No, going to back menu. Y/N?
 set /p helper=Answer: 
 if %helper% == Y goto help
 if %helper% == N goto start
@@ -336,10 +336,10 @@ title VVdec Web Player.
 echo Welcome to VVDEC Web Player.
 echo By installing, you will have to agree to download VVDec Web Player from Fraunhoferhhi GitHub. 
 echo See the code of VVDEC Web Player: https://github.com/fraunhoferhhi/vvdecWebPlayer
-echo When you agree to install, it will clone of VVDec Web Player repository using git. After git, we will copy from VVDECWEBINSTALL files into vvdecWebPlayer/bin folder.
+echo When you agree to install, it will clone VVDec Web Player repository using git. After git, we will copy from VVDECWEBINSTALL files into vvdecWebPlayer/bin folder.
 echo After all of that, we will run Python to start web server of your localhost port 8000.
 echo If you already have installed of VVDec Web Player, you can type "U" to update files of VVDec Web Player.
-echo Would you like to install of VVDEC Web Player?
+echo Would you like to install VVDEC Web Player?
 set /p okletsdoit=Answer: 
 if %okletsdoit% == Y goto installnowplayer
 if %okletsdoit% == N goto start
@@ -357,10 +357,10 @@ cd vvdecWebPlayer
 wget https://www.dropbox.com/s/zp8b3xg0b5p1pwe/VVCEasy.266
 rename VVCEasy.266 dummy_raw_bitstream.266
 echo Note: If you want to go back to menu, press CTRL + C on your keyboard in Windows Terminal/CMD and type "Y" to terminate server and this will go back to main menu options.
-echo The python file is porting 8000 on your localhost computer.
+echo The python file is porting 8000 on your local host computer.
 python wasm_test-server.py
 cd ../
-echo Thanks for trying out of VVDEC Web Player. If you want to run on your VVDEC Web Player Server, go to folder of vvdecWebPlayer and run one click wasm_test-server.py.
+echo Thanks for trying out VVDEC Web Player. If you want to run on your VVDEC Web Player Server, go to folder of vvdecWebPlayer and run one click wasm_test-server.py.
 echo Press any key to go back menu.
 timeout 10
 goto start
@@ -390,10 +390,10 @@ certutil -hashfile vvencinterfacetest.exe SHA512
 certutil -hashfile vvenclibtest.exe SHA512
 rename SHA512SUMS SHA512SUMS.txt
 SHA512SUMS.txt
-echo Now please make sure double check that needs to be same hash. If it is matches hash same as .exe of SHA512SUMS.txt and CertUtil. That means good.
+echo Now please make sure double check that needs to be same hash. If it matches hash same as .exe of SHA512SUMS.txt and CertUtil. That means good.
 echo If the hashes are not matched correctly, please contact and create issue to Martin Eesmaa/VVCEasy on GitHub for your own problem.
 pause
-echo Thank you for decompressing WindowsVVC.7z... Now back to menu.
+echo Thank you for decompressing WindowsVVC.7z... Now back to the menu.
 timeout 3
 goto start
 
@@ -480,11 +480,11 @@ echo Extracting from archived file...
 echo Deleting archived file...
 del /q vvcBlogPostDemo.7z
 title Installation of BitVVDecPlayer
-echo Please edit of location downloaded folder of vvcBlogPostDemo...
+echo Please edit the location downloaded folder of vvcBlogPostDemo...
 CoffeeRun.json && SpriteFright.json
 echo Press any key, when you finished configured of your location folder...
 pause
-echo Okay, it seems you configured completed. Please run on vvDecPlayer on your operating system.
+echo Okay, it seems you configured completely. Please run on vvDecPlayer on your operating system.
 echo Go to File, then Open JSON manifest in BitVVDecPlayer...
 echo Select JSON file to run VVC movie and enjoy it.
 echo Still not working? Please chat us on https://matrix.to/#/#vvceasy:matrix.org to solve your problem or add new issue on GitHub.
@@ -520,7 +520,7 @@ echo Three dll files are patched to your VLC Media Player.
 echo Restarting and starting VLC Media Player...
 echo Please load your VVC (codec) video file to VLC Media Player.
 echo For more information and options, please go at https://github.com/InterDigitalInc/VTMDecoder_VLCPlugin
-echo Once, you're finished, you don't have to patch again. You can continue normally VLC Media Player next time after VVCEasy.
+echo Once you're finished, you don't have to patch again. You can continue normally VLC Media Player next time after VVCEasy.
 "%programfiles%\VideoLAN\VLC\vlc.exe"
 pause
 goto start
@@ -536,7 +536,7 @@ if %vvcnow0% == y goto installvvdecffmpegnow
 if %vvcnow0% == n goto start
 
 :installvvdecffmpegnow
-echo Your favourite operating system is available on FFmpeg VVDec support. Please copy the link to a web browser.
+echo Your favorite operating system is available on FFmpeg VVDec support. Please copy the link to a web browser.
 echo.
 echo Download link: https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md#ffmpeg-downloads-xhe-aac--vvc-endecoder-plugin-compiled-by-martin-eesmaa
 echo.
@@ -550,9 +550,9 @@ goto start
 echo Please see the document. The command will open the document for you.
 MPV.md
 echo.
-echo See information MPV.md or online Github: https://github.com/MartinEesmaa/VVCEasy/blob/master/MPV.md
+echo See information MPV.md or online GitHub: https://github.com/MartinEesmaa/VVCEasy/blob/master/MPV.md
 echo.
-echo Press enter to go back main menu.
+echo Press enter to go back to the main menu.
 pause
 goto start
 
@@ -565,3 +565,4 @@ echo.
 echo Press enter to go back menu.
 pause
 goto start
+

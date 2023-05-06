@@ -1,6 +1,6 @@
 # FFmpeg VVC En/decoder & xHE-AAC installation (Windows, Mac OS and Linux)
 
-Windows, Mac and Linux (Preview of vvc video in ffplay):
+Windows, Mac and Linux (Preview of VVC video in FFplay):
 
 ![ffmpegplaypreview](https://user-images.githubusercontent.com/88035011/169019033-bcb7fcc7-a196-4436-a396-61db3071280c.png)
 ![macos_vvceasy_ff](https://user-images.githubusercontent.com/88035011/169693891-52271091-eb92-4198-82eb-2ad38296a917.png)
@@ -8,7 +8,7 @@ Windows, Mac and Linux (Preview of vvc video in ffplay):
 
 # Play video file
 
-You can play VVC video codec with .h266, .vvc, .266 and anything or .mp4 muxed with VVC codec:
+You can play VVC video codec with .h266, .vvc, .266 and anything or .mp4 mixed with VVC codec:
 
 ```
 ffplay_vvceasy versatile.266
@@ -29,8 +29,8 @@ libvvenc (FFmpeg vvc version) works for:
 - Pixel format ⚠️ (only pixel format 10 bit)
 - Video size (auto detects, but it doesn't detect for SAR and DAR anamorphic is glitch and corrupts the video) ⚠️ (Better way to use vvencapp without FFmpeg)
 - Frame rate ✅ (auto detects) 
-- MP4 Muxing :x: (does not support, you need MP4BOX after encode.)
-- Audio with encode VVC ⚠️ (does not support, because it can corrupt the file) To avoid corrupt file, you need to disable audio using `-an` or you could do output container for .266, .vvc and .h266 too.
+- MP4/TS/MKV Mux ✅
+- Audio with encode VVC ✅
 - Bitrates ✅
 - Passes ⚠️ (you may need get passes using vvenc params on FFmpeg VVCEasy or use vvencapp)
 - Presets ✅
@@ -45,7 +45,7 @@ ffmpeg -i example.mp4 -c:v libvvenc -qp 37 -preset slow example.266
 
 For more options for libvvenc in FFmpeg VVCEasy version, type `ffmpeg_vvceasy -h encoder=libvvenc` for available commands.
 
-Additional command: You can convert to vvc video without taking a much space for vvencapp, example:
+Additional command: You can convert to VVC video without taking a much space for vvencapp, example:
 
 ```
 ffmpeg -i example.mp4 -pix_fmt yuv420p -f yuv4mpegpipe - | vvencapp --y4m -i - --preset medium --qp 35 -o converted.266
@@ -86,7 +86,7 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 ### Note about downloads
 
-I use always Windows to compile FFmpeg, so I forgot compile every time for Mac OS and Linux. Also, please check changelog before you download the new version.
+I use always Windows to compile FFmpeg, so I forgot to compile every time for Mac OS and Linux. Also, please check changelog before you download the new version.
 
 ### Changelog
 ```
@@ -114,7 +114,7 @@ I use always Windows to compile FFmpeg, so I forgot compile every time for Mac O
 
 # Mac OS downloaders (Important note)
 
-Please note, this is not a malware of my compiled build, see the three screenshots to make run ffmpeg tools customised version
+Please note, this is not a malware of my compiled build, see the three screenshots to make run FFmpeg tools customized version
 
 You need to allow the app on your Mac OS for chmod write access & Security & Privacy:
 

@@ -44,7 +44,7 @@ namespace VVCEasy
                         {
                             Console.Clear();
                             Console.Title = "VVC ENCODER (YUV LOSSY)";
-                            Console.WriteLine("Before we start encode from your YUV file to VVC file, I'm afraid I cannot do automatically for you.\nYou have to manually encode to VVC, the batchfile won't work.\nHere is code: vvencapp --qp 38 -i yourinput.yuv -s 854x480 -r 30 -o youroutputlossy.266\nYOU HAVE TO REPLACE VIDEO SIZE AND FRAME RATE. -s is video size and -r is frame rate.\nYou can also add for --tier high or/and 10-bit video -c yuv420_10, if necessary.");
+                            Console.WriteLine("Before we start encode from your YUV file to VVC file, I'm afraid I cannot do automatically for you.\nYou have to manually encode to VVC, the batch file won't work.\nHere is code: vvencapp --qp 38 -i yourinput.yuv -s 854x480 -r 30 -o youroutputlossy.266\nYOU HAVE TO REPLACE VIDEO SIZE AND FRAME RATE. -s is video size and -r is frame rate.\nYou can also add for --tier high or/and 10-bit video -c yuv420_10, if necessary.");
                             Console.ReadLine();
                         }
                         else if (input3 == "2")
@@ -120,7 +120,7 @@ namespace VVCEasy
                     }
                     else if (readytestbefore == "I")
                     {
-                        Console.WriteLine("Installer path environment will be only for 7-Zip.\nOthers programs should need manual, but Python, FFmpeg, wget and git must be installed manually and add automatically path environments.\nDo you want patch 7-Zip on your path environment, so you can type 7z next time.\nInstall 7-Zip on your path environments? Y/N? No means go back to test menu.\n\nAnswer: ");
+                        Console.WriteLine("Installer path environment will be only for 7-Zip.\nOther programs should need manual, but Python, FFmpeg, wget and git must be installed manually and add automatically path environments.\nDo you want patch 7-Zip on your path environment, so you can type 7z next time.\n Would you like to install 7-Zip on your path environments? Y/N? No means go back to test menu.\n\nAnswer: ");
 
                         string installpath1 = Console.ReadLine();
 
@@ -142,7 +142,7 @@ namespace VVCEasy
 
                     if (vlcinstall == "Y")
                     {
-                        Console.WriteLine("Your favourite operating system is available on FFmpeg VVDec support. Please copy the link to a web browser.\nWindows: https://mega.nz/file/e1MEUAwR#c7u7vDvwzp6JiSaRDwhCyOaH4cGnx1xQDPyKgbAd-qM\nMac OS: https://mega.nz/file/K09gRbYJ#SewWjY4LqVdvlivXJhqQMjrsXO6ec8a1jmapj5nO2Gs\nLinux (Only Ubuntu 20.04 built): https://mega.nz/file/T8l0GTqa#oWsDDrFYjzf3LhS9zRkuqqBz6H4yJmNQUNiu_erVQLo\n\nSee information on FFMPEGVVC.md or online GitHub: https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md\nPress enter to go back menu.\n");
+                        Console.WriteLine("Your favorite operating system is available on FFmpeg VVDec support. Please copy the link to a web browser.\nWindows: https://mega.nz/file/e1MEUAwR#c7u7vDvwzp6JiSaRDwhCyOaH4cGnx1xQDPyKgbAd-qM\nMac OS: https://mega.nz/file/K09gRbYJ#SewWjY4LqVdvlivXJhqQMjrsXO6ec8a1jmapj5nO2Gs\nLinux (Only Ubuntu 20.04 built): https://mega.nz/file/T8l0GTqa#oWsDDrFYjzf3LhS9zRkuqqBz6H4yJmNQUNiu_erVQLo\n\nSee information on FFMPEGVVC.md or online GitHub: https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md\nPress enter to go back menu.\n");
                         Console.ReadLine();
                     }
                 }
@@ -263,7 +263,7 @@ namespace VVCEasy
                 else if (input == "12")
                 {
                     Console.Clear();
-                    Console.Title = "Android MPV PLayer (OpenVVC support)";
+                    Console.Title = "Android MPV Player (OpenVVC support)";
                     Console.WriteLine("See information MPV.md or online Github: https://github.com/MartinEesmaa/VVCEasy/blob/master/MPV.md\nPress enter to go back menu.\n");
                     Console.ReadLine();
                 }

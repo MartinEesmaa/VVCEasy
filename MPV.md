@@ -2,7 +2,7 @@
 
 # MPV Windows/Android Player (libvvdec + xHE-AAC support)
 
-MPV Windows/Android Player (libvvdec + xHE-AAC support) can play your VVC decoded video file and muxed MP4 container with VVC video codec + audio.
+MPV Windows/Android Player (libvvdec + xHE-AAC support) can play your VVC decoded video file and mixed MP4 container with VVC video codec + audio.
 
 Screenshot preview, see top-left information of toggle stats on Windows/Android device:
 
@@ -26,7 +26,7 @@ Screenshot preview, see top-left information of toggle stats on Windows/Android 
 
 ### Changelog
 
-Please check changelog before you download the new version.
+Please check the changelog before you download the new version.
 
 ```
 04/04/2023 - New Android MPV VVCEasy build with new FFmpeg VVCEasy libraries for updated vvenc and vvdec. For gpu-next build, still experimental.
@@ -50,19 +50,19 @@ Please check changelog before you download the new version.
 
 MPV Android libvvdec app requires your system type of ARM64 (aarch64), x86 (i686), ARMv7 (armeabi-v7a) and x86_64 to run on Android or Windows requires to run x64.
 
-Windows/Android MPV Player doesn't work seek duration of VVC decoded file only, but only mp4 video container muxed with VVC video codec is only seek supported, including audio & subtitle too.
+Windows/Android MPV Player doesn't work seek duration of VVC decoded file only, but only mp4 video container mixed with VVC video codec is only seek supported, including audio & subtitle too.
 
 Some Android users for 10-bit pixel format or/and tier high might not show video in mp4 container with VVC video codec only. 
 
-Solution: Please download latest mp4box nightly version and remux from .266 to .mp4 file again.
+Solution: Please download latest mp4box nightly version and re-mux from .266 to .mp4 file again.
 
 ### Tips
 
 Make sure to allow apps from unknown sources. Link: [Wikihow](https://www.wikihow.com/Allow-Apps-from-Unknown-Sources-on-Android)
 
-If Google warns you, that Android MPV (libvvdec plugin) app is malicious by Play Protect, press "Install anyway" on your phone.
+If Google warns you that Android MPV (libvvdec plugin) app is malicious by Play Protect, press "Install anyway" on your phone.
 
-On Windows, there is available MPV.NET custom build on this downloads. Source code: https://github.com/stax76/mpv.net
+On Windows, there is available MPV.NET custom build on this download. Source code: https://github.com/stax76/mpv.net
 
 # SHA256 SUMS
 ```
@@ -111,7 +111,7 @@ nano deps/fdkaac/libSBRdec/src/lpp_tran.cpp
 
 Save the file in nano editor, when you finished removing `#ifdef __ANDROID` lines.
 
-**TIP: You can edit script of vvdec.sh on your own choise.**
+**TIP: You can edit script of vvdec.sh on your own choice.**
 
 Continue follow instructions to build your own MPV build:
 

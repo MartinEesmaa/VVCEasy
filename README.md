@@ -30,7 +30,7 @@ Reddit's community: https://reddit.com/r/VVCEasy
 
 Sourceforge: https://sourceforge.net/projects/vvceasy
 
-*Note: Please note for my first language is Estonian and not native with English language. Some my english words might be errors with incomprehensible.*
+*Note: Please note for my first language is Estonian and not native with English language. Some my English words might be errors with incomprehensible.*
 
 # All lists
 
@@ -119,7 +119,7 @@ See [FFMPEGVVC.md](FFMPEGVVC.md).
 
 MPV libvvdec & xHE-AAC supports only of Windows x64 & Android.
 
-The VVC and MP4 muxed with VVC codec can be played on MPV libvvdec + xHE-AAC version. Only MP4 mixed with VVC supports seek.
+The VVC and MP4 mux with VVC codec can be played on MPV libvvdec + xHE-AAC version. Only MP4 mixed with VVC supports seek.
 
 See [MPV.md](MPV.md).
 
@@ -245,7 +245,7 @@ Playing FFplay for y4m video with wrapped_avframe, you don't need to put anythin
 ffplay transcoded.y4m
 ```
 
-For easy to verify YUV/Y4M, use YUView, open your YUV or Y4M encoded, make sure video size, YUV/Y4M format and frame rate same like from input video file (e.g. MP4, AVI, MKV and others).
+For easy to verify YUV/Y4M, use YUView, open your YUV or Y4M encoded, make sure video size, YUV/Y4M format and frame rate same like from input video file (e.g., MP4, AVI, MKV and others).
 
 After verifying correctly of your YUV/Y4M video
 Encode with VVENC (Simple settings, example)
@@ -264,7 +264,7 @@ ffmpeg -i example.mp4 -pix_fmt yuv420p -f yuv4mpegpipe - | vvencapp --y4m -i - -
 
 **WARNING of vvenc pipe: VVENC does not support two-pass mode only when using pipe call/read from FFmpeg to vvenc.**
 
-Or, you could do legacy of YUV pipe video:
+Or you could do legacy of YUV pipe video:
 
 ```
 ffmpeg -i example.mp4 -pix_fmt yuv420p -f rawvideo - | vvencapp -i - -s 1920x1080 -r 25 --preset medium --qp 35 -o converted.266
@@ -284,7 +284,7 @@ ffmpeg -i example.mp4 -pix_fmt yuv420p -f rawvideo - | vvencapp -i - -s 1920x108
 
 The default of VVENC: Quantization Parameter is 32 and preset is medium.
 
-If you want to get smaller video size and lossy video, add `--qp 38`. (for web video or anything)
+If you want to get smaller video size and lossy video, add `--qp 38`. (For web video or anything)
 
 If you want to get lossless video without losing quality (visually lossless, minimum loss quality), use QP 16-19 and preset slow (optional slower). (Recommended for movies, camera footage or anything)
 
@@ -342,17 +342,17 @@ Linux (./vvencapp):
 
 Before you ask any question, please see the questions below.
 
-Are you real creator of VVCEasy?
+Are you the real creator of VVCEasy?
 
-Yes... but I'm not real creator of VVC, I didn't built VVC, it was Fraunhofer HHI that he built VVC.
+Yes... but I'm not a real creator of VVC, I didn't built VVC, it was Fraunhofer HHI that he built VVC.
 
 Are you trying to work build of VVCEasy?
 
-Well yes... it takes longer time to make VVCEasy easier, but VVCEasy is not yet finished until further/update announcement. I don't have employees, so I'm the only one worker.
+Well, yes... it takes longer time to make VVCEasy easier, but VVCEasy is not yet finished until further/update announcement. I don't have employees, so I'm the only one worker.
 
 Is it okay to bring my proof screenshots of errors?
 
-Yes, you can bring error screenshots for your proof. More proofs, easy to solve it.
+Yes, you can bring error screenshots for your proof. More proof, easy to solve it.
 
 My question is not listed on FAQ. Can I ask any question to you?
 
@@ -360,12 +360,12 @@ Sure, just go to Issues tab, ask questions or/and give your issue to me, I'd be 
 
 Do you know what you have skills in your programming?
 
-I know about batch file and HTML programmer. Some hard programming languages might be difficult for me :/.
-Update of 19th February 2022: Maybe I should make C# Console program, that will be easy of Windows, Mac and Linux multi support.
+I know about batch file and HTML programming. Some hard programming languages might be difficult for me :/.
+Update of 19th February 2022: Maybe I should make C# Console program, that will be easy for Windows, Mac and Linux multi support.
 
 If you have any questions or/and any issues, please go to Issues tab and create your issue.
 
-Or, you can chat us: https://matrix.to/#/#vvceasy:matrix.org
+Or you can chat us: https://matrix.to/#/#vvceasy:matrix.org
 -   Martin Eesmaa
 
 # Credits & Licenses
@@ -437,3 +437,4 @@ License: MIT
 License: LGPL-2.1
 
 © 2003-2023 [Jean Le Feuvre](https://github.com/jeanlf) & [GPAC developers/contributors](https://github.com/gpac/gpac/graphs/contributors)
+

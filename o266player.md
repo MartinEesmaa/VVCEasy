@@ -6,8 +6,8 @@ Note to Mac and Linux of o266player VLC: Sorry Mac and Linux users :(, here is a
 
 On macOS 10.15.6, I tried build, but it failed, you can have a look for Stack Overflow: [Link](https://stackoverflow.com/questions/70387126/error-1-and-2-trying-to-compile-vlc-o266player-missing-git-and-txt).
 
-On Linux, it doesn't support of VLC (o266player build).
-If you want to run VLC (o266player version), you need to run Windows only for a virtual machine or your a real computer.
+On Linux, it doesn't support VLC (o266player build).
+If you want to run VLC (o266player version), you need to run Windows only for a virtual machine or a real computer.
 
 Windows | Compatibility (only x64)  | Screenshot | Date report (DD/MM/YYYY, 24hr)
 ------- | ------- | --------------- | ------------- |
@@ -33,11 +33,11 @@ VLC Custom build of o266player only accepts to run 64-bit / x64 on your computer
 
 This cannot be run on Windows Vista / Windows Server 2008 or older and Windows 8.0 to play VVC video file of VLC Custom build.
 
-***IMPORTANT: o266player closed source decoder commits built to .DLL/.dylib are expired since 1st February 2022 to disable showing VVC video. MP4 Muxed with VVC is unplayable showing.***
+***IMPORTANT: o266player closed source decoder commits built to .DLL/.dylib are expired since 1st February 2022 to disable showing VVC video. MP4 Mixed with VVC is unplayable showing.***
 
 Note: I'm trying to work it out of VLC 3.0.16.
 
-Reminder: Some operating systems are working to load VVC video format in Virtual Machine softwares, but real machines will work every operating system, example Windows Server 2016 has already been tested by Tencent Cloud.
+Reminder: Some operating systems are working to load VVC video format in Virtual Machine software, but real machines will work every operating system, for example Windows Server 2016 has already been tested by Tencent Cloud.
 
 If your operating system is working to decode VVC video format like you're running on Windows 10, please fork this repository, edit README and make pull request of my original repository from your forked repository. Screenshot must be required winver and VLC Media Player (custom build of o266player)
 

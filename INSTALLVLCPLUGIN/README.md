@@ -1,7 +1,7 @@
 ![vlc-media-player-2-569258-4168599479](https://user-images.githubusercontent.com/88035011/175112324-06a64145-ff1a-43f0-adac-a1aeb9ce770a.png)
 
 # VLC Media Player (Inter Digital VLC VTM Decoder Plugin installation of Windows and Linux)
-This can work only for VLC 3.0.9.2 and later version (eg. 3.0.17.4). VLC 4.0.0-dev won't work.
+This can work only for VLC 3.0.9.2 and later version (e.g., 3.0.17.4). VLC 4.0.0-dev won't work.
 
 To install Inter Digital VLC VTM Decoder Plugin, you need VLC Media Player latest version installed on your computer and supported 64-bit.
 
@@ -62,7 +62,7 @@ Build Decoder Plugin, see screenshot of CMAKE GUI:
 
 ![decoderplugin](https://user-images.githubusercontent.com/88035011/175105846-646ab744-ef1f-45b3-a084-a2f7ad3464a2.png)
 
-Build TS Demux Plugin, see screenshot of CMAKE GUI:
+Build TS Demuxer Plugin, see screenshot of CMAKE GUI:
 
 ![tsdemuxplugin](https://user-images.githubusercontent.com/88035011/175105943-1f9e41ad-2f20-451c-9123-f163252c7106.png)
 
@@ -85,7 +85,7 @@ make -j
 
 Before build Decoder Plugin, you need to find libvlccore in Linux.
 
-dvbpsi build requires of TS Demux Plugin:
+dvbpsi build requires of TS Demuxer Plugin:
 
 ```
 ./bootstrap
@@ -96,10 +96,9 @@ sudo make install
 
 Build Decoder Plugin, see screenshot of CMAKE GUI:
 
-
 ![decoderpluginlinux](https://user-images.githubusercontent.com/88035011/175110060-ee1cf4e3-de96-478b-9bb6-6e7d0e11a2bd.png)
 
-Build TS Demux Plugin, see screenshot of CMAKE GUI:
+Build TS Demuxer Plugin, see screenshot of CMAKE GUI:
 
 ![tsdemuxpluginlinux](https://user-images.githubusercontent.com/88035011/175110701-d9a87f9f-ab25-40b9-b070-9e53a712b372.png)
 
@@ -122,6 +121,6 @@ The VVC video file cannot loaded by newest version of VLC 4.0.0-dev, because it 
 
 For more information about VLC 4.0.0-dev see: https://www.theverge.com/2021/2/12/22279750/vlc-4-0-new-user-interface-videolan-media-player-video-music-movie-database-web-player
 
-I tried build two DLL files on VLC 4.0.0 SDK, but the compiler failed, so you have to use VLC 3.0.9.2 and latest of VLC 3 version branch.
+I tried to build two DLL files on VLC 4.0.0 SDK, but the compiler failed, so you must use VLC 3.0.9.2 and latest of VLC 3 version branch.
 
 -   Martin Eesmaa

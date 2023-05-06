@@ -2,9 +2,9 @@
 
 # Bitmovin VVDec Player (instructions of encode segments)
 
-If you want put your vvc file into Bitmovin VvDec Player, we need add `--segment`, `-f` as frames and `-fs` as frameskip into vvencapp.
+If you want to put your VVC file into Bitmovin VvDec Player, we need add `--segment`, `-f` as frames and `-fs` as frame skip into vvencapp.
 
-Otherwise, if you put vvc file (which is all together of one file) without segments, your application might freeze your computer and application too.
+Otherwise, if you put VVC file (which is all together of one file) without segments, your application might freeze your computer and application too.
 
 To make probably decoded well for segments, here is an example of this:
 
@@ -19,7 +19,7 @@ Middle segment (mid) will be during from video, 1 sec -> 2 sec. (segment-1.vvc)
 
 Last segment (last) will be ending from video, 2 sec -> 3 sec. (segment-2.vvc)
 
-Total is three seconds and three segments. Still not understand? Example of my segments, including log:
+Total is three seconds and three segments. Example of my segments, including log:
 
 [Log file](https://pastebin.com/qrCyfDEU)
 
@@ -42,7 +42,6 @@ JSON:
 }
 ```
 
-
 # Bitmovin VVDec Player Downloads (including build instructions):
 
 [Windows Pre-Builded](https://www.dropbox.com/s/75ouoeadcr2cl53/BitVVDecPlayerWIN.7z)
@@ -51,9 +50,9 @@ JSON:
 
 [Linux Pre-Builded](https://www.dropbox.com/s/bihm3pyh21lcvte/BitVVDecPlayerLINUX.7z)
 
-Wanna build VVDec (.dll (Windows)/.dylib (Mac OS)/.so (Linux)) yourself?
+Want to build VVDec (.dll (Windows)/.dylib (Mac OS)/.so (Linux)) yourself?
 
-Here is an code:
+Here is a code:
 
 ```
 git clone https://github.com/fraunhoferhhi/vvdec.git
@@ -95,7 +94,7 @@ System type: x64
 
 Requirements to run program: Qt framework (version 5) and libvvdec.dylib
 
-Internet required to download segments for Bitmovin streams
+Internet required to download segments for Bitmovin streams.
 
 Offline availability for segments
 
@@ -108,11 +107,11 @@ System type: x64
 
 Requirements to run program: Qt framework (version 5), glib (build-essential) and libvvdecLib.so
 
-Internet required to download segments for Bitmovin streams
+Internet required to download segments for Bitmovin streams.
 
 Offline availability for segments
 
-# Bitmovin VVDec Player (Test compatability)
+# Bitmovin VVDec Player (Test compatibility)
 
 ### Windows 7+: 
 
@@ -126,6 +125,6 @@ Offline availability for segments
 
 ![LinuxBITVVCTest](https://user-images.githubusercontent.com/88035011/158130385-0f475e1f-9630-4623-acc4-6b0c842b6a35.gif)
 -------------------------
-Tests will be come soon later.
+Tests will be coming sooner.
 
 - Martin Eesmaa
