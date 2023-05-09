@@ -18,4 +18,6 @@ Imgur: [MartinHero13](https://imgur.com/user/MartinHero13)
 
 Doom9 Forum: [MartinEesmaa](https://forum.doom9.org/member.php?u=248978)
 
+Hydrogenaudio account (registered members to view my profile or search my username of Hydrogenaudio to see posts/replies in web search engine): [MartinEesmaa](https://hydrogenaud.io/index.php?action=profile;u=160252)
+
 - Martin Eesmaa
