@@ -29,7 +29,8 @@ libvvenc (FFmpeg vvc version) works for:
 - Pixel format ⚠️ (only pixel format 10 bit)
 - Video size (auto detects, but it doesn't detect for SAR and DAR anamorphic is glitch and corrupts the video) ⚠️ (Better way to use vvencapp without FFmpeg)
 - Frame rate ✅ (auto detects) 
-- MP4/TS/MKV Mux ✅
+- MP4/TS Mux ✅
+- Matroska mux ⚠️ (Only matroska mux has an experimental, causing problem of the video sync delay with audio and others for FFmpeg libvvdec. It is unofficial support)
 - Audio with encode VVC ✅
 - Bitrates ✅
 - Passes ⚠️ (you may need get passes using vvenc params on FFmpeg VVCEasy or use vvencapp)
