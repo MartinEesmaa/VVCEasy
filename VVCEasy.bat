@@ -72,20 +72,24 @@ echo 10. Install/Update VLC VTM Plugins (Windows/Linux x64 of VLC plugins by Int
 echo 11. Install FFmpeg VVDec support.
 echo 12. Install MPV Windows/Android (libvvdec plugin)
 echo 13. Tests of VVC videos
-set /p VVCSTART=Number: 
-if %VVCSTART% == 1 goto encodestart
-if %VVCSTART% == 2 goto decodestart
-if %VVCSTART% == 3 goto help
-if %VVCSTART% == 4 goto exit
-if %VVCSTART% == 5 goto test
-if %VVCSTART% == 6 goto conda
-if %VVCSTART% == 7 goto installvvdecweb
-if %VVCSTART% == 8 goto decompresswin7z
-if %VVCSTART% == 9 goto installbitmovin
-if %VVCSTART% == 10 goto vlcvtmplugininstall
-if %VVCSTART% == 11 goto ffmpegvvdec
-if %VVCSTART% == 12 goto mpvandroidvvc
-if %VVCSTART% == 13 goto testsofvideo
+set /p VVCSTART=Number:
+
+if "%VVCSTART%" == "1" goto encodestart
+if "%VVCSTART%" == "2" goto decodestart
+if "%VVCSTART%" == "3" goto help
+if "%VVCSTART%" == "4" goto exit
+if "%VVCSTART%" == "5" goto test
+if "%VVCSTART%" == "6" goto conda
+if "%VVCSTART%" == "7" goto installvvdecweb
+if "%VVCSTART%" == "8" goto decompresswin7z
+if "%VVCSTART%" == "9" goto installbitmovin
+if "%VVCSTART%" == "10" goto vlcvtmplugininstall
+if "%VVCSTART%" == "11" goto ffmpegvvdec
+if "%VVCSTART%" == "12" goto mpvandroidvvc
+if "%VVCSTART%" == "13" goto testsofvideo
+echo Invalid input. Please enter a number between 1 and 13.
+pause
+goto start
 
 :encodestart
 title Encode to VVC
@@ -97,9 +101,9 @@ echo 1. Lossy (example YouTube videos, Web videos, lossy compressed videos, and 
 echo 2. Lossless (example XIPH Media, Camera uncompressed (MOV/MP4/AVI), Apple ProRes and others uncompressed files)
 echo 3. Go back to the menu.
 set /p vvencquestion1=Number: 
-if %vvencquestion1% == 1 goto losslessvvenc2
-if %vvencquestion1% == 2 goto lossyvvenc2
-if %vvencquestion1% == 3 goto start
+if "%vvencquestion1%" == 1 goto losslessvvenc2
+if "%vvencquestion1%" == 2 goto lossyvvenc2
+if "%vvencquestion1%" == 3 goto start
 
 :losslessvvenc2
 title Lossless settings with Lossless uncompressed (VVC Encoder)
@@ -113,8 +117,8 @@ echo If you don't have Y4M already... you need transcode file from your uncompre
 echo Example: ffmpeg -i yourfile.mov -strict 1 yourfinal.y4m
 echo Only 8-bit uncompressed movies input to Y4M.
 set /p doyouhavey4mvvencquestion3=Number: 
-if %doyouhavey4mvvencquestion3% == 1 goto startlosslessvvenc2
-if %doyouhavey4mvvencquestion3% == 2 goto encodestart
+if "%doyouhavey4mvvencquestion3%" == 1 goto startlosslessvvenc2
+if "%doyouhavey4mvvencquestion3%" == 2 goto encodestart
 
 :startlosslessvvenc2
 cls
@@ -138,8 +142,8 @@ echo 2. No, I am not ready yet (go back to previous)
 echo If you don't have Y4M already... you need transcode file from your lossy video file to YUV.
 echo Example: ffmpeg -i yourfile.mp4 -strict 1 yourfinal.yuv
 set /p doyouhaveyuvvvencquestion4=Number: 
-if %doyouhaveyuvvvencquestion4% == 1 goto startlossyvvenc2
-if %doyouhaveyuvvvencquestion4% == 2 goto encodestart
+if "%doyouhaveyuvvvencquestion4%" == 1 goto startlossyvvenc2
+if "%doyouhaveyuvvvencquestion4%" == 2 goto encodestart
 
 :startlossyvvenc2
 cls
@@ -149,7 +153,6 @@ echo You must manually encode to VVC, the batchfile won't work.
 echo Here is code: vvencapp --qp 38 -i yourinput.yuv -s 854x480 -r 30 -o youroutputlossy.266
 echo YOU HAVE TO REPLACE VIDEO SIZE AND FRAME RATE. -s is video size and -r is frame rate.
 echo You can also add for "--tier high" or/and 10-bit video "-c yuv420_10", if necessary.
-pause
 pause
 goto start
 
@@ -166,8 +169,8 @@ echo Portable won't work probably, you need copy from your Downloads folder\VVCE
 echo 1. YUV (lossy video VVC)
 echo 2. Y4M (lossless video VVC)
 set /p decodestart1=Number: 
-if %decodestart1% == 1 goto DECODESTARTFROMVVCTOYUV
-if %decodestart1% == 2 goto DECODESTARTFROMVVCTOY4M
+if "%decodestart1%" == 1 goto DECODESTARTFROMVVCTOYUV
+if "%decodestart1%" == 2 goto DECODESTARTFROMVVCTOY4M
 
 :DECODESTARTFROMVVCTOYUV
 cls
@@ -203,12 +206,12 @@ echo You can go here for link: https://stackoverflow.com/questions/4910721/pytho
 echo Also you can also search "What is PATH in Windows?" in DuckDuckGo or SearX.
 echo Are you ready to test? (Y/N) or type "I" to install path environment.
 set /p readytestbefore=Answer: 
-if %readytestbefore% == Y goto nowtestingtime
-if %readytestbefore% == N goto start
-if %readytestbefore% == y goto nowtestingtime
-if %readytestbefore% == n goto start
-if %readytestbefore% == I goto installpath
-if %readytestbefore% == i goto installpath
+if "%readytestbefore%" == Y goto nowtestingtime
+if "%readytestbefore%" == N goto start
+if "%readytestbefore%" == y goto nowtestingtime
+if "%readytestbefore%" == n goto start
+if "%readytestbefore%" == I goto installpath
+if "%readytestbefore%" == i goto installpath
 
 :nowtestingtime
 title Testing time...
@@ -221,10 +224,10 @@ echo You need exit in Python for typing "exit()".
 python
 echo Did that work in your PATH? Y/N?
 set /p testdidworkq=Answer: 
-if %testdidworkq% == Y goto youdidworktest
-if %testdidworkq% == N goto ahhdidnotwork
-if %testdidworkq% == y goto youdidworktest
-if %testdidworkq% == n goto ahhdidnotwork
+if "%testdidworkq%" == Y goto youdidworktest
+if "%testdidworkq%" == N goto ahhdidnotwork
+if "%testdidworkq%" == y goto youdidworktest
+if "%testdidworkq%" == n goto ahhdidnotwork
 
 :youdidworktest
 title Great!
@@ -245,10 +248,10 @@ echo Other programs should need manual, but Python, FFmpeg, wget and git must be
 echo Do you want patch 7-Zip on your path environment, so you can type "7z" next time.
 echo Would you like to install 7-Zip on your path environments? Y/N? No means go back to test menu.
 set /p installpath1=Answer: 
-if %installpath1% == Y goto installingpath
-if %installpath1% == N goto test
-if %installpath1% == y goto installingpath
-if %installpath1% == n goto test
+if "%installpath1%" == Y goto installingpath
+if "%installpath1%" == N goto test
+if "%installpath1%" == y goto installingpath
+if "%installpath1%" == n goto test
 
 :installingpath
 title INSTALLING 7-ZIP on your path environments...
@@ -302,10 +305,10 @@ cls
 title ANACONDA (PYTHON DISTRIBUTION)
 echo Welcome to Anaconda (Python Distribution) Quick Install. This will do only one task to download FFmpeg. Would you like to install? Y/N?
 set /p anacondaman=Answer: 
-if %anacondaman% == Y goto condainstall
-if %anacondaman% == N goto start
-if %anacondaman% == y goto condainstall
-if %anacondaman% == n goto start
+if "%anacondaman%" == Y goto condainstall
+if "%anacondaman%" == N goto start
+if "%anacondaman%" == y goto condainstall
+if "%anacondaman%" == n goto start
 
 :condainstall
 conda install -c conda-forge ffmpeg
@@ -325,10 +328,10 @@ pause
 echo If you have any problems that you do not understand VVCEasy. Please contact Martin Eesmaa by creating issues for questions or/and problems.
 echo Do you want to start over help instructions? If yes, then it will go back from the beginning. If No, going to back menu. Y/N?
 set /p helper=Answer: 
-if %helper% == Y goto help
-if %helper% == N goto start
-if %helper% == y goto help
-if %helper% == n goto start
+if "%helper%" == Y goto help
+if "%helper%" == N goto start
+if "%helper%" == y goto help
+if "%helper%" == n goto start
 
 :installvvdecweb
 cls
@@ -341,12 +344,12 @@ echo After all of that, we will run Python to start web server of your localhost
 echo If you already have installed of VVDec Web Player, you can type "U" to update files of VVDec Web Player.
 echo Would you like to install VVDEC Web Player?
 set /p okletsdoit=Answer: 
-if %okletsdoit% == Y goto installnowplayer
-if %okletsdoit% == N goto start
-if %okletsdoit% == y goto installnowplayer
-if %okletsdoit% == n goto start
-if %okletsdoit% == U goto updatevvdecwebplayer
-if %okletsdoit% == u goto updatevvdecwebplayer
+if "%okletsdoit%" == Y goto installnowplayer
+if "%okletsdoit%" == N goto start
+if "%okletsdoit%" == y goto installnowplayer
+if "%okletsdoit%" == n goto start
+if "%okletsdoit%" == U goto updatevvdecwebplayer
+if "%okletsdoit%" == u goto updatevvdecwebplayer
 
 :installnowplayer
 cls
@@ -403,14 +406,14 @@ title Install BitVVDecPlayer from BitMovin
 echo Would you like to install on your operating system?
 echo Windows for W, Mac OS for M and Linux for L, Main Menu for N/n.
 set /p installbitmovind=Answer: 
-if %installbitmovind% == W goto installbitmovin1windows
-if %installbitmovind% == w goto installbitmovin1windows
-if %installbitmovind% == M goto installbitmovin1macos
-if %installbitmovind% == m goto installbitmovin1macos
-if %installbitmovind% == L goto installbitmovin1linux
-if %installbitmovind% == l goto installbitmovin1linux
-if %installbitmovind% == N goto start
-if %installbitmovindt% == n goto start
+if "%installbitmovind%" == W goto installbitmovin1windows
+if "%installbitmovind%" == w goto installbitmovin1windows
+if "%installbitmovind%" == M goto installbitmovin1macos
+if "%installbitmovind%" == m goto installbitmovin1macos
+if "%installbitmovind%" == L goto installbitmovin1linux
+if "%installbitmovind%" == l goto installbitmovin1linux
+if "%installbitmovind%" == N goto start
+if "%installbitmovind%" == n goto start
 
 :installbitmovin1windows
 title Installing BitVVDecPlayer from BitMovin...
@@ -466,10 +469,10 @@ goto downloadbitmovinvvcsample
 :downloadbitmovinvvcsample
 echo Would you like to download VVC sample video files from Bitmovin? Y/N?
 set /p vvcsampleyeah=Answer: 
-if %vvcsampleyeah% == Y goto downloadvvcnowbit
-if %vvcsampleyeah% == y goto downloadvvcnowbit
-if %vvcsampleyeah% == N goto start
-if %vvcsampleyeah% == n goto start
+if "%vvcsampleyeah%" == Y goto downloadvvcnowbit
+if "%vvcsampleyeah%" == y goto downloadvvcnowbit
+if "%vvcsampleyeah%" == N goto start
+if "%vvcsampleyeah%" == n goto start
 
 :downloadvvcnowbit
 title Downloading VVC sample files and Coffee Run JSON & Sprite Fright JSON... from Bitmovin
@@ -502,10 +505,10 @@ echo Linux is now available, see Linux installation at: https://github.com/Marti
 echo Current version = 3.0.16, latest version 3.0.17-4 (it will work same latest version)
 echo Would you like to install VTM plugins to your VLC Media Player? Y/N?
 set /p vlcvtmyesorno=Answer: 
-if %vlcvtmyesorno% == Y goto installvlcvtmpluginnow
-if %vlcvtmyesorno% == y goto installvlcvtmpluginnow
-if %vlcvtmyesorno% == N goto start
-if %vlcvtmyesorno% == n goto start
+if "%vlcvtmyesorno%" == Y goto installvlcvtmpluginnow
+if "%vlcvtmyesorno%" == y goto installvlcvtmpluginnow
+if "%vlcvtmyesorno%" == N goto start
+if "%vlcvtmyesorno%" == n goto start
 
 :installvlcvtmpluginnow
 title Installing of VLC VTM Plugins by Inter Digital Inc... (Compiled by Martin Eesmaa)
@@ -530,10 +533,10 @@ cls
 title FFmpeg VVDec support
 echo Hello, would you like to download FFmpeg VVDec support? Y/N?
 set /p vvcnow0=Answer: 
-if %vvcnow0% == Y goto installvvdecffmpegnow
-if %vvcnow0% == N goto start
-if %vvcnow0% == y goto installvvdecffmpegnow
-if %vvcnow0% == n goto start
+if "%vvcnow0%" == Y goto installvvdecffmpegnow
+if "%vvcnow0%" == N goto start
+if "%vvcnow0%" == y goto installvvdecffmpegnow
+if "%vvcnow0%" == n goto start
 
 :installvvdecffmpegnow
 echo Your favorite operating system is available on FFmpeg VVDec support. Please copy the link to a web browser.
