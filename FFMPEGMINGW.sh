@@ -1,7 +1,7 @@
 echo Updating and upgrading MSYS2 packages... if system core update requires reboot this application, please run this script again after being updated.
 pacman -Syu
 echo Installing MSYS2 packages...
-pacman -S python nasm vim $MINGW_PACKAGE_PREFIX-{toolchain,cmake,autotools,meson,ninja}
+pacman -S python git nasm vim $MINGW_PACKAGE_PREFIX-{toolchain,cmake,autotools,meson,ninja}
 echo Starting process of FFmpeg build with libvvenc and libvvdec...
 if [ ! -d buildffmpegwin ]; then
 mkdir buildffmpegwin && cd buildffmpegwin
@@ -99,11 +99,11 @@ autoreconf -if && CFLAGS="-O2 -D_FORTIFY_SOURCE=0" LDFLAGS="-flto -s" ./configur
 cd ..
 
 echo Starting to build libjxl:
-mkdir libjxl/build && cd libjxl/build && cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DBUILD_SHARED_LIBS=OFF -DJPEGXL_ENABLE_BENCHMARK=OFF -DJPEGXL_ENABLE_PLUGINS=ON -DJPEGXL_ENABLE_MANPAGES=OFF -DJPEGXL_FORCE_SYSTEM_BROTLI=ON -DJPEGXL_FORCE_SYSTEM_GTEST=ON -DCMAKE_INSTALL_PREFIX=$MSYSTEM_PREFIX .. && ninja install -j $nproc
+mkdir libjxl/build && cd libjxl/build && cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DBUILD_SHARED_LIBS=OFF -DJPEGXL_ENABLE_BENCHMARK=OFF -DJPEGXL_ENABLE_PLUGINS=ON -DJPEGXL_ENABLE_MANPAGES=OFF -DJPEGXL_FORCE_SYSTEM_BROTLI=ON -DJPEGXL_FORCE_SYSTEM_GTEST=ON -DCMAKE_INSTALL_PREFIX=$MSYSTEM_PREFIX .. && ninja install
 cd ../../
 
 echo Starting to build dav1d:
-mkdir dav1d/build && cd dav1d/build && meson -Denable_docs=false -Ddefault_library=static -Dprefix=$MSYSTEM_PREFIX .. && ninja install -j $nproc
+mkdir dav1d/build && cd dav1d/build && meson -Denable_docs=false -Ddefault_library=static -Dprefix=$MSYSTEM_PREFIX .. && ninja install
 cd ../../
 
 echo Starting to build codec2:
@@ -116,7 +116,7 @@ cmake --build . -j $nproc --target install
 cd ../../
 
 echo Starting to build vmaf to apply calculate VVC video references from original video:
-mkdir vmaf/libvmaf/build && cd vmaf/libvmaf/build && CFLAGS="-msse2 -mfpmath=sse -mstackrealign" meson -Denable_docs=false -Ddefault_library=static -Denable_float=true -Dbuilt_in_models=true -Dprefix=$MSYSTEM_PREFIX .. && ninja install -j $nproc
+mkdir vmaf/libvmaf/build && cd vmaf/libvmaf/build && CFLAGS="-msse2 -mfpmath=sse -mstackrealign" meson -Denable_docs=false -Ddefault_library=static -Denable_float=true -Dbuilt_in_models=true -Dprefix=$MSYSTEM_PREFIX .. && ninja install
 cd ../../../
 sed -i 's/-lm/-lm -lstdc++/g' $MSYSTEM_PREFIX/lib/pkgconfig/libvmaf.pc
 
