@@ -12,9 +12,11 @@ Screenshot preview, see top-left information of toggle stats on Windows/Android 
 
 # Download MPV Windows/Android Player (libvvdec + xHE-AAC plugin)
 
-[Windows 7 and later x64](https://mega.nz/file/Lx0UEZwD#K4NM9w-RQgmQpXl7rsGFugQIb1DM59v7WzxSnUDFdao)
+[Windows 7 and later x64](https://mega.nz/file/78NjGDbS#Tu5RoJHJmaHGyZaeL5rc7pfh3X2lbIIZ70zKqRtKNKc)
 
-[Windows MPV.NET VVCEasy version x64](https://mega.nz/file/21VF0RYA#IjcpER0VyAu_urc1mmQTHAFnKRX1k_YRS5WtxYrp1y0)
+[Windows MPV.NET VVCEasy version x64](https://mega.nz/file/a5thiAzS#RIJRVXKezVTRVcukauxpxHMQGtoGpyOthiw2zTNi1bE)
+
+[Windows MPVLIB VVCEasy version x64](https://mega.nz/file/n8dAwBSZ#abnQSBIL4uzahXM8ZdomUHbh40S93-tp3okrlZ7gT6o)
 
 [Android API 29 .APK Debug (Recommended)](https://mega.nz/file/f9EFELab#7mAClMyhd-95IUd849J8lVOxTT8ynaEaNCyTjuO9pKk)
 
@@ -29,6 +31,7 @@ Screenshot preview, see top-left information of toggle stats on Windows/Android 
 Please check the changelog before you download the new version.
 
 ```
+17/06/2023 - Cross compiled of Windows using Arch Linux for improved libraries and updated FFmpeg, MPV & MPV.NET VVCEasy build. New libmpv build.
 04/04/2023 - New Android MPV VVCEasy build with new FFmpeg VVCEasy libraries for updated vvenc and vvdec. For gpu-next build, still experimental.
 03/04/2023 - New MPV and MPV.NET latest VVCEasy build with new FFmpeg VVCEasy libraries for updated vvenc, vvdec and added libjxl, shaderc, libplacebo and vulkan to make gpu-next available.
 29/03/2023 - Update MPV Android package and icons. Tip: You can have two builds between official and VVCEasy build.
