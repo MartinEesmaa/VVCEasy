@@ -52,7 +52,7 @@ DVBPSI_DIR = DVBPSI source files
 
 ### Windows
 
-You need the CMAKE GUI, Visual Studio 2017 or newer, VLC SDK, [libvtmdec](https://vcgit.hhi.fraunhofer.de/delagrangep/VVCSoftware_VTM/-/tree/VTM-16.0-MT) precompiled shared dll in lib folder + sources, dvbpsi source and VLC source files of the desktop version. You need to modify vlc_threads.h, before compile.
+You need the CMAKE GUI, Visual Studio 2017 or newer, VLC SDK, [libvtmdec](https://vcgit.hhi.fraunhofer.de/delagrangep/VVCSoftware_VTM/-/tree/VTM-18.2-MT) precompiled shared dll in lib folder + sources, dvbpsi source and VLC source files of the desktop version. You need to modify vlc_threads.h, before compile.
 
 vlc_threads.h can be found in VLC folder/sdk/include/vlc/plugins. Search `val = poll(fds, nfds, timeout);` and comment the only one file, that's it.
 

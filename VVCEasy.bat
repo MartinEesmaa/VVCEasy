@@ -1,8 +1,8 @@
 echo off
 set welcometitle=Martin Eesmaa / VVCEasy
-set version=v.1.0.1
-set versionname=Summer time for fun.
-set vvceasydate=2 July 2022
+set version=v2.0.0
+set versionname=Party of Martin Eesmaa's birthday at age 18.
+set vvceasydate=22 June 2023
 pushd "%~dp0"
 cls
 
