@@ -81,7 +81,7 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 [Mac OS](https://mega.nz/file/3xtTAIiQ#MPsPcz-QlSquqahmEx8ANpqleiVm2Y3L1o3R6vy7qY8)
 
-[Linux](https://mega.nz/file/XxkwjLpC#Q8iqsjAI3wx3Uf_P9c22hkL2TaEonN3r4_m6FQfgfRY) (Only FFplay static won't work)
+[Linux](https://mega.nz/file/X4k00QDJ#8nvnklEhOsxNl4Vw0ALoZRnViRfFlGh2QqqxDE7dtpA) (Only FFplay static won't work)
 
 [FFmpeg-FixVVC archived old source code](https://mega.nz/file/G81QyT5S#jcbE1sYPEy1OMIDPCF8BPeAK-3KAGF50u23MVJzmBgw) (old)
 
@@ -91,6 +91,7 @@ I use always Windows to compile FFmpeg, so I forgot to compile every time for Ma
 
 ### Changelog
 ```
+22/06/2023: Updated Linux FFmpeg by FFmpeg commits and other libraries. (still does not work for FFplay static only, others working fine)
 21/06/2023: Updated vvenc and FFmpeg commits.
 17/06/2023: Updated of vvenc, vvdec, dav1d, FFmpeg commits and others.
 01/05/2023: Added missing libvmaf feature in FFmpeg VVCEasy only.
