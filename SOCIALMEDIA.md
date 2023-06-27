@@ -4,6 +4,8 @@ YouTube: https://www.youtube.com/channel/UC8uLpZMsXjU3G3etHj4rr1Q
 
 Reddit: [u/MartinEesmaa](https://reddit.com/u/MartinEesmaa)
 
+Lemmy.world: [u/MartinEesmaa](https://lemmy.world/u/MartinEesmaa)
+
 Pastebin: https://pastebin.com/u/MartinEesmaa
 
 Github: [MartinEesmaa](https://github.com/MartinEesmaa)
