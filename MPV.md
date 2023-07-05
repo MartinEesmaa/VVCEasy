@@ -31,6 +31,7 @@ Screenshot preview, see top-left information of toggle stats on Windows/Android 
 Please check the changelog before you download the new version.
 
 ```
+05/07/2023 - Updated MPV/MPV.NET VVCEasy build.
 18/06/2023 - Improved codes and new commits of Android MPV VVCEasy custom build standalone.
 17/06/2023 - Cross compiled of Windows using Arch Linux for improved libraries and updated FFmpeg, MPV & MPV.NET VVCEasy build. New libmpv build.
 04/04/2023 - New Android MPV VVCEasy build with new FFmpeg VVCEasy libraries for updated vvenc and vvdec. For gpu-next build, still experimental.
@@ -74,8 +75,9 @@ e1c96ffc079d5433dca22322dacbd14bf1ad2cca3056c67976b03f34cf46f01a  MPV-VVCEasy-AP
 95a469ac4b11b3d9323e02c2757d7cbb0e4507d8a97d54e4134f31a47c1341e2  MPV-VVCEasy-API29release-unsigned.apk
 6cca9e73a23a376f704f60e716d1ecc206c290e908b42aab341353f304dacc58  MPV-VVCEasy-API29debug-gpunext.apk
 55a4182bf4a0bec8b0236e7de3c2f169a4df33735b842b083951647dbf5bfe64  MPV-VVCEasy-API29release-unsigned-gpunext.apk
-35bb3422e977edb65405bd26e4de9b64705e08455fd8e3561a9610628f0bafab  MPV-VVCEasy-Windows-x64.7z
-bcdd83d7d6e393e990808cdc19b7580e5d98c537c42eb67e9774f86b22f5e533  MPV.NET-VVCEasy-Windows-x64.7z
+f2c28b1b3b4d4d6ed7a0adbb8a6dad7e48f58f91c7434515d97117f8af278c01  MPV-VVCEasy-Windows-x64.7z
+c3c793d47a28d5f4c32bb55c42de407d115fe19c7db0df5a7bb2602c7d3c298f  MPV.NET-VVCEasy-Windows-x64.7z
+f8f1d4409d37fff2d5a14667d16a071422454bbceefccec9a522b66d41b537d9  MPVLIB-VVCEasy-Windows-x64.7z
 ```
 
 # Build MPV Android with VVC and xHE-AAC:
