@@ -77,7 +77,7 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 # FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
 
-[Windows](https://mega.nz/file/Ws9V0IAB#e7ukWvMy1YqOXyQCSfO4r6Dzfrcv1qaDYk1sHrmtOOY)
+[Windows](https://mega.nz/file/WtcRiSTI#SuSl9A7fdKf7L6tBAMuNlannmoL6wi_lqhiAHJ8ToJE)
 
 [Mac OS](https://mega.nz/file/3xtTAIiQ#MPsPcz-QlSquqahmEx8ANpqleiVm2Y3L1o3R6vy7qY8)
 
@@ -91,6 +91,7 @@ I use always Windows to compile FFmpeg, so I forgot to compile every time for Ma
 
 ### Changelog
 ```
+30/07/2023: Updated external features, including vvenc & vvdec. Added XPSNR filter support.
 22/06/2023: Updated Linux FFmpeg by FFmpeg commits and other libraries. (still does not work for FFplay static only, others working fine)
 21/06/2023: Updated vvenc and FFmpeg commits.
 17/06/2023: Updated of vvenc, vvdec, dav1d, FFmpeg commits and others.
