@@ -1,14 +1,16 @@
 ![mpv-icon128](https://user-images.githubusercontent.com/88035011/169686347-e7f06fa5-01ea-4b13-9ec6-c87570873db7.png)
 
-# MPV Windows/Android Player (libvvdec + xHE-AAC support)
+# MPV Windows/Linux/Android Player (libvvdec + xHE-AAC support)
 
-MPV Windows/Android Player (libvvdec + xHE-AAC support) can play your VVC decoded video file and mixed MP4 container with VVC video codec + audio.
+MPV Windows/Linux/Android Player (libvvdec + xHE-AAC support) can play your VVC decoded video file and mixed MP4 container with VVC video codec + audio.
 
-Screenshot preview, see top-left information of toggle stats on Windows/Android device:
+Screenshot preview, see top-left information of toggle stats on Windows/Linux/Android device:
 
 ![mpvandroidwithxheaacplusvvc](https://user-images.githubusercontent.com/88035011/184468869-7286272c-66e3-4b3e-b1cc-015a6e24103d.jpg)
 
 ![mpvplayerforwindowslibvvdec](https://user-images.githubusercontent.com/88035011/176990209-4c6bcc0d-ef14-4e4c-8738-edfbb9a6e1c1.png)
+
+![mpvlinuxvvceasy](mpvlinuxvvceasy.png)
 
 # Download MPV Windows/Android Player (libvvdec + xHE-AAC plugin)
 
@@ -17,6 +19,8 @@ Screenshot preview, see top-left information of toggle stats on Windows/Android 
 [Windows MPV.NET VVCEasy version x64](https://mega.nz/file/a5thiAzS#RIJRVXKezVTRVcukauxpxHMQGtoGpyOthiw2zTNi1bE)
 
 [Windows MPVLIB VVCEasy version x64](https://mega.nz/file/n8dAwBSZ#abnQSBIL4uzahXM8ZdomUHbh40S93-tp3okrlZ7gT6o)
+
+[Linux MPV VVCEasy version x64](https://mega.nz/file/egdQ1QaD#9eKdaa3bbyu7wtv1cSZtt8RgSBm-n89ttuWKoL4LbQA)
 
 [Android API 29 .APK Debug (Recommended)](https://mega.nz/file/L9VyXQIY#HfPbk_txbfFyXoGWWY0lOEr4N1diwlnyF0-EnZ_MZA0)
 
@@ -31,6 +35,7 @@ Screenshot preview, see top-left information of toggle stats on Windows/Android 
 Please check the changelog before you download the new version.
 
 ```
+03/08/2023 - Initial release of MPV Linux version AppImage.
 05/07/2023 - Updated MPV/MPV.NET VVCEasy build.
 18/06/2023 - Improved codes and new commits of Android MPV VVCEasy custom build standalone.
 17/06/2023 - Cross compiled of Windows using Arch Linux for improved libraries and updated FFmpeg, MPV & MPV.NET VVCEasy build. New libmpv build.
@@ -55,11 +60,15 @@ Please check the changelog before you download the new version.
 
 MPV Android libvvdec app requires your system type of ARM64 (aarch64), x86 (i686), ARMv7 (armeabi-v7a) and x86_64 to run on Android or Windows requires to run x64.
 
-Windows/Android MPV Player doesn't work seek duration of VVC decoded file only, but only mp4 video container mixed with VVC video codec is only seek supported, including audio & subtitle too.
+Windows/Linux/Android MPV Player doesn't work seek duration of VVC decoded file only, but only mp4 video container mixed with VVC video codec is only seek supported, including audio & subtitle too.
 
-Some Android users for 10-bit pixel format or/and tier high might not show video in mp4 container with VVC video codec only. 
+Some Android users for 10-bit pixel format or/and tier high might not show video in mp4 container with VVC video codec only.
 
 Solution: Please download latest mp4box nightly version and re-mux from .266 to .mp4 file again.
+
+AppImage needs required fuse installed on your Linux distribution.
+
+Some Linux distributions may not work for AppImage, which may result segmentation fault. Builed & tested on Ubuntu 22.04.2.
 
 ### Tips
 
@@ -78,6 +87,7 @@ e1c96ffc079d5433dca22322dacbd14bf1ad2cca3056c67976b03f34cf46f01a  MPV-VVCEasy-AP
 f2c28b1b3b4d4d6ed7a0adbb8a6dad7e48f58f91c7434515d97117f8af278c01  MPV-VVCEasy-Windows-x64.7z
 c3c793d47a28d5f4c32bb55c42de407d115fe19c7db0df5a7bb2602c7d3c298f  MPV.NET-VVCEasy-Windows-x64.7z
 f8f1d4409d37fff2d5a14667d16a071422454bbceefccec9a522b66d41b537d9  MPVLIB-VVCEasy-Windows-x64.7z
+a781b922a1efcc3f50ef3c1f2cd107ca894e28af5ad6575bdd83f9108c8dbacd  MPV-VVCEasy-Linux-x64
 ```
 
 # Build MPV Android with VVC and xHE-AAC:
