@@ -10,6 +10,8 @@ Original source code: https://github.com/Nevcairiel/LAVFilters
 
 Changelog:
 ```
+04/08/2023: Updated vvdec and others.
+04/04/2023: Removed matroska demuxer of FFmpeg configuration to fix some computers having problem to play any Matroska container. Fixes #26.
 21/03/2023: Full VVC support and libfdk_aac is default after native AAC and AAC Fixed decoder disabled to fix USAC/xHE-AAC playable.
 ```
 
