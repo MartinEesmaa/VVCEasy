@@ -68,7 +68,7 @@ Solution: Please download latest mp4box nightly version and re-mux from .266 to 
 
 AppImage needs required fuse installed on your Linux distribution.
 
-Some Linux distributions may not work for AppImage, which may result segmentation fault. Builed & tested on Ubuntu 22.04.2.
+Some Linux distributions may not work for AppImage, which may result segmentation fault. Builded & tested on Ubuntu 22.04.2.
 
 ### Tips
 
