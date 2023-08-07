@@ -77,7 +77,7 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 # FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
 
-[Windows](https://mega.nz/file/WtcRiSTI#SuSl9A7fdKf7L6tBAMuNlannmoL6wi_lqhiAHJ8ToJE)
+[Windows](https://mega.nz/file/D4tVgbiA#8kUMHd89EFW42MozONzRWcaATqp_t4jDg26zkztGKx0)
 
 [Mac OS](https://mega.nz/file/3xtTAIiQ#MPsPcz-QlSquqahmEx8ANpqleiVm2Y3L1o3R6vy7qY8)
 
@@ -91,6 +91,7 @@ I use always Windows to compile FFmpeg, so I forgot to compile every time for Ma
 
 ### Changelog
 ```
+07/08/2023: Added Ittiam Systems MPEG-H 3D Audio encoder and others were updated.
 30/07/2023: Updated external features, including vvenc & vvdec. Added XPSNR filter support.
 22/06/2023: Updated Linux FFmpeg by FFmpeg commits and other libraries. (still does not work for FFplay static only, others working fine)
 21/06/2023: Updated vvenc and FFmpeg commits.
