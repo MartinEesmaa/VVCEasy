@@ -20,7 +20,7 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 
 [Windows MPVLIB VVCEasy version x64](https://mega.nz/file/3tEnHYiR#V0mtvcgpHB0oUzfrYvHgzT52ycTxe9SIIwp8WmnAS6A)
 
-[Linux MPV VVCEasy version x64](https://mega.nz/file/egdQ1QaD#9eKdaa3bbyu7wtv1cSZtt8RgSBm-n89ttuWKoL4LbQA)
+[Linux MPV VVCEasy version x64](https://mega.nz/file/n1k0lJxQ#dHXrjDL2gfVPGlovsvkyw2ngn7zAX97rlOsouvCpGnU)
 
 [Android API 29 .APK Debug (Recommended)](https://mega.nz/file/L9VyXQIY#HfPbk_txbfFyXoGWWY0lOEr4N1diwlnyF0-EnZ_MZA0)
 
@@ -35,6 +35,7 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 Please check the changelog before you download the new version.
 
 ```
+11/08/2023 - Update Linux MPV VVCEasy build and vvdec.
 11/08/2023 - Updated Windows MPV/MPV.NET/MPV LIB VVCEasy build, vvdec, Mediainfo and others.
 03/08/2023 - Initial release of MPV Linux version AppImage.
 05/07/2023 - Updated MPV/MPV.NET VVCEasy build.
@@ -85,10 +86,10 @@ e1c96ffc079d5433dca22322dacbd14bf1ad2cca3056c67976b03f34cf46f01a  MPV-VVCEasy-AP
 95a469ac4b11b3d9323e02c2757d7cbb0e4507d8a97d54e4134f31a47c1341e2  MPV-VVCEasy-API29release-unsigned.apk
 6cca9e73a23a376f704f60e716d1ecc206c290e908b42aab341353f304dacc58  MPV-VVCEasy-API29debug-gpunext.apk
 55a4182bf4a0bec8b0236e7de3c2f169a4df33735b842b083951647dbf5bfe64  MPV-VVCEasy-API29release-unsigned-gpunext.apk
-f2c28b1b3b4d4d6ed7a0adbb8a6dad7e48f58f91c7434515d97117f8af278c01  MPV-VVCEasy-Windows-x64.7z
-c3c793d47a28d5f4c32bb55c42de407d115fe19c7db0df5a7bb2602c7d3c298f  MPV.NET-VVCEasy-Windows-x64.7z
-f8f1d4409d37fff2d5a14667d16a071422454bbceefccec9a522b66d41b537d9  MPVLIB-VVCEasy-Windows-x64.7z
-a781b922a1efcc3f50ef3c1f2cd107ca894e28af5ad6575bdd83f9108c8dbacd  MPV-VVCEasy-Linux-x64
+d618a1cf6f1319d4934920d5a931e3fdbbc830ccbdb9b1d70cf81a6dbdebde3e  MPV-VVCEasy-Windows-x64.7z
+c2f96753c64ca7e14bc966e34615df65abd7ed85d34e4a59f85875528dadf57e  MPV.NET-VVCEasy-Windows-x64.7z
+b85d9806519db33204e0fe41ecc8fe3ff26a2e2a83dcca98a5f88d664d748c52  MPVLIB-VVCEasy-Windows-x64.7z
+db8b20679ac6d4449accd916b25cb51d14c52eaa001ef63ba2065f97fe293696  MPV-VVCEasy-Linux-x64.7z
 ```
 
 # Build MPV Android with VVC and xHE-AAC:
