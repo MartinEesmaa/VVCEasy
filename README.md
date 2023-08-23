@@ -408,6 +408,14 @@ License: GPL Version 2 (VLC Original version) & LGPL-2.1 (VLC VTM Decoder Plugin
 
 ---
 
+[uvg266](https://github.com/ultravideo/uvg266) - An open-source VVC encoder based on Kvazaar
+
+License: BSD 3-Clause License
+
+© 2021-2022, Tampere University, ITU/ISO/IEC, project contributors (All rights reserved)
+
+---
+
 [BitMovin Versatile Video Decoder Player](https://github.com/bitmovin/vvDecPlayer) - BitMovin VVDecPlayer
 
 License: MIT
@@ -422,7 +430,27 @@ VVC developers & forkers: [Christian Lehmann](https://github.com/lehmann-c), [tb
 
 License: LGPL-2.1+ & GPL-2.0+
 
+For my custom build configuration license is LGPL-2.1.
+
 © 2000-2023 [FFmpeg developers](https://github.com/FFmpeg) (All rights reserved)
+
+---
+
+[fdk-aac](https://github.com/mstorsjo/fdk-aac) - A standalone library of the Fraunhofer FDK AAC code from Android.
+
+License: None
+
+© 2012-2022 [Martin Storsjö](https://github.com/mstorsjo) (All rights reserved)
+
+---
+
+[mpv](https://github.com/mpv-player/mpv) - 🎥 Command line video player
+
+License: LGPL-2.1+ & GPL-2.0+
+
+For my custom build license: GPL-3.0+ with nonfree (fdk-aac) for FFmpeg
+
+© 2013-2023 [Vincent Lang, MPlayer, mplayer2 & MPV developers](https://github.com/mpv-player) (All rights reserved)
 
 ---
 
@@ -440,5 +468,42 @@ License: MIT
 
 License: LGPL-2.1
 
-© 2003-2023 [Jean Le Feuvre](https://github.com/jeanlf) & [GPAC developers/contributors](https://github.com/gpac/gpac/graphs/contributors)
+© 2003-2023 [Jean Le Feuvre](https://github.com/jeanlf) & [GPAC developers/contributors](https://github.com/gpac/gpac/graphs/contributors) (All rights reserved)
 
+---
+
+[LAVFilters](https://github.com/Nevcairiel/LAVFilters) - LAV Filters - Open-Source DirectShow Media Splitter and Decoders
+
+License: None
+
+© 2010-2023 [Hendrik Leppkes](https://github.com/Nevcairiel) (All rights reserved)
+
+---
+
+[MPC-HC](https://github.com/clsid2/mpc-hc/) - Media Player Classic (forked by clsid2)
+
+License: GPL-3.0
+
+© 2007-2018 [MPC-HC Community Forum & contributors](https://github.com/mpc-hc) (Original) (All rights reserved)
+
+© 2018-2023 [clsid2](https://github.com/clsid2) (forked) (All rights reserved)
+
+---
+
+[7-Zip](https://sourceforge.net/projects/sevenzip/files/7-Zip/) - 7-Zip is a file archiver with a high compression ratio.
+
+Official website: https://7-zip.org
+
+License: LGPL-2.1-or-later with unRAR restriction & LZMA SDK in the public domain
+
+© 1999-2023 Igor Pavlov (All rights reserved)
+
+---
+
+[wget](https://git.savannah.gnu.org/cgit/wget.git) - GNU Wget is a free software package for retrieving files using HTTP, HTTPS, FTP and FTPS, the most widely used Internet protocols.
+
+License: GPL-3.0-or-later
+
+Original written by Hrvoje Nikšić
+
+© 2015 Free Software Foundation, Inc. (All rights reserved)
