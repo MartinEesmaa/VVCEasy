@@ -28,11 +28,13 @@ Discord: https://discord.gg/t54cADTbWW
 
 Reddit's community: https://reddit.com/r/VVCEasy
 
-Lemmy's community of VVC (lemmy.world): https://lemmy.world/c/vvc
+Lemmy's community of VVC (lemmy.world & lemmy.ml): https://lemmy.world/c/vvc
 
-Lemmy's community of VVCEasy (lemmy.world): https://lemmy.world/c/vvceasy
+https://lemmy.ml/c/vvc
 
-Sourceforge: https://sourceforge.net/projects/vvceasy
+Lemmy's community of VVCEasy (lemmy.world & lemmy.ml): https://lemmy.world/c/vvceasy
+
+https://lemmy.ml/c/vvceasy
 
 *Note: Please note for my first language is Estonian and not native with English language. Some my English words might be errors with incomprehensible.*
 
