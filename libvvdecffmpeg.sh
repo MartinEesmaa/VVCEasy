@@ -31,7 +31,7 @@ git -C fdk-aac pull
 fi
 
 if [ ! -d SDL ]; then
-git clone --depth=1 https://github.com/libsdl-org/SDL
+git clone --depth=1 https://github.com/libsdl-org/SDL -b SDL2
 else
 git -C SDL pull
 fi
