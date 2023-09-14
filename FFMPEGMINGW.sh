@@ -34,7 +34,7 @@ git -C fdk-aac pull
 fi
 
 if [ ! -d SDL ]; then
-git clone --depth=1 https://github.com/libsdl-org/SDL
+git clone --depth=1 https://github.com/libsdl-org/SDL -b SDL2
 else
 git -C SDL pull
 fi
@@ -95,7 +95,7 @@ cd ../../
 
 echo Starting to build libopus to improve decode quality on FFmpeg:
 cd opus
-autoreconf -if && CFLAGS="-O2 -D_FORTIFY_SOURCE=0" LDFLAGS="-flto -s" ./configure --enable-static --disable-shared --disable-tests --disable-extras --prefix=$MSYSTEM_PREFIX && make install -j $nproc
+autoreconf -if && CFLAGS="-O2 -D_FORTIFY_SOURCE=0" LDFLAGS="-flto -s" ./configure --enable-static --disable-shared --prefix=$MSYSTEM_PREFIX && make install -j $nproc
 cd ..
 
 echo Starting to build libjxl:
