@@ -20,7 +20,7 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 
 [Windows MPVLIB VVCEasy version x64](https://mega.nz/file/3tEnHYiR#V0mtvcgpHB0oUzfrYvHgzT52ycTxe9SIIwp8WmnAS6A)
 
-[Linux MPV VVCEasy version x64](https://mega.nz/file/n1k0lJxQ#dHXrjDL2gfVPGlovsvkyw2ngn7zAX97rlOsouvCpGnU)
+[Linux MPV VVCEasy version x64](https://mega.nz/file/qgcjFJhJ#m5O4SHVlPAoZZXVH75mPa39nxJvF-OS6IuCcoXlwD-s)
 
 [Android API 29 .APK Debug (Recommended)](https://mega.nz/file/7wtDiAzZ#fM9JKYKmweuavwhuMGhTlvgvx1ZXTQHF0FlFY1wzSeI)
 
@@ -35,6 +35,7 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 Please check the changelog before you download the new version.
 
 ```
+16/09/2023 - Update MPV Linux VVCEasy build with libraries.
 14/08/2023 - Update Android MPV VVCEasy build with vvdec updated.
 11/08/2023 - Update Linux MPV VVCEasy build and vvdec.
 11/08/2023 - Updated Windows MPV/MPV.NET/MPV LIB VVCEasy build, vvdec, Mediainfo and others.
@@ -90,7 +91,7 @@ On Windows, there is available MPV.NET custom build on this download. Source cod
 d618a1cf6f1319d4934920d5a931e3fdbbc830ccbdb9b1d70cf81a6dbdebde3e  MPV-VVCEasy-Windows-x64.7z
 c2f96753c64ca7e14bc966e34615df65abd7ed85d34e4a59f85875528dadf57e  MPV.NET-VVCEasy-Windows-x64.7z
 b85d9806519db33204e0fe41ecc8fe3ff26a2e2a83dcca98a5f88d664d748c52  MPVLIB-VVCEasy-Windows-x64.7z
-db8b20679ac6d4449accd916b25cb51d14c52eaa001ef63ba2065f97fe293696  MPV-VVCEasy-Linux-x64.7z
+e051b12c2a5fd4e4bf29ec809a03dbfc3cff20b4a16d5853f97dd66851f44dab  MPV-VVCEasy-Linux-x64.7z
 ```
 
 # Build MPV Android with VVC and xHE-AAC:
