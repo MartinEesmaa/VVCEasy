@@ -1,7 +1,7 @@
 echo Updating and upgrading MSYS2 packages... if system core update requires reboot this application, please run this script again after being updated.
 pacman -Syu
 echo Installing MSYS2 packages...
-pacman -S python git nasm vim $MINGW_PACKAGE_PREFIX-{toolchain,cmake,autotools,meson,ninja}
+pacman -S python git nasm vim wget $MINGW_PACKAGE_PREFIX-{toolchain,cmake,autotools,meson,ninja}
 echo Starting process of FFmpeg build with libvvenc and libvvdec...
 if [ ! -d buildffmpegwin ]; then
 mkdir buildffmpegwin && cd buildffmpegwin
@@ -60,6 +60,23 @@ git -C libjxl pull
 git -C libjxl submodule update --init --recursive --depth 1 --recommend-shallow
 fi
 
+if [ ! -d zimg ]; then
+git clone --depth=1 https://github.com/sekrit-twc/zimg
+git -C zimg submodule update --init --recursive --depth 1
+wget https://raw.githubusercontent.com/m-ab-s/mabs-patches/master/zimg/0001-libm_wrapper-define-__CRT__NO_INLINE-before-math.h.patch
+git -C zimg apply 0001-libm_wrapper-define-__CRT__NO_INLINE-before-math.h.patch
+rm 0001-libm_wrapper-define-__CRT__NO_INLINE-before-math.h.patch
+else
+git -C zimg pull
+git -C zimg submodule update --init --recursive --depth 1
+fi
+
+if [ ! -d soxr ]; then
+git clone --depth=1 https://github.com/chirlu/soxr
+else
+git -C soxr pull
+fi
+
 if [ ! -d dav1d ]; then
 git clone --depth=1 https://code.videolan.org/videolan/dav1d
 else
@@ -106,6 +123,15 @@ echo Starting to build dav1d:
 mkdir dav1d/build && cd dav1d/build && meson -Denable_docs=false -Ddefault_library=static -Dprefix=$MSYSTEM_PREFIX .. && ninja install
 cd ../../
 
+echo Starting to build zimg:
+cd zimg && autoreconf -if && ./configure --disable-shared --prefix=$MSYSTEM_PREFIX && make install -j $nproc
+cd ..
+
+echo Starting to build soxr:
+mkdir soxr/build && cd soxr/build && cmake -D{WITH_LSR_BINDINGS,BUILD_TESTS,WITH_OPENMP}=off -DCMAKE_INSTALL_PREFIX=$MSYSTEM_PREFIX -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -Wno-dev .. -G "MinGW Makefiles"
+cmake --build . -j $nproc --target install
+cd ../../
+
 echo Starting to build codec2:
 cd codec2
 sed -i 's|if(WIN32)|if(FALSE)|g' CMakeLists.txt
@@ -136,7 +162,7 @@ cd ../../
 echo Starting configuring and making FFmpeg VVCEasy build...
 cd FFmpeg-VVC
 ./configure --enable-libfdk-aac --enable-static --enable-libvvenc --enable-libvvdec --enable-pic \
---enable-zlib --enable-libxml2 --enable-libdav1d --enable-libopus --enable-libcodec2 --enable-libjxl --enable-libvmaf --extra-ldexeflags=-static \
---pkg-config-flags=-static --disable-w32threads --enable-sdl2 && \
+--enable-zlib --enable-libxml2 --enable-libdav1d --enable-libopus --enable-libcodec2 --enable-libjxl --enable-libzimg \
+--enable-libvmaf --enable-libsoxr --extra-ldexeflags=-static --pkg-config-flags=-static --disable-w32threads --enable-sdl2 && \
 make -j
 echo FFmpeg VVC version tools are now compiled, please see buildffmpegwin/FFmpeg folder.

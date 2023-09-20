@@ -57,6 +57,21 @@ git -C libjxl pull
 git -C libjxl submodule update --init --recursive --depth 1 --recommend-shallow
 fi
 
+if [ ! -d zimg ]; then
+git clone --depth=1 https://github.com/sekrit-twc/zimg
+git -C zimg submodule update --init --recursive --depth 1
+wget https://raw.githubusercontent.com/m-ab-s/mabs-patches/master/zimg/0001-libm_wrapper-define-__CRT__NO_INLINE-before-math.h.patch
+else
+git -C zimg pull
+git -C zimg submodule update --init --recursive --depth 1
+fi
+
+if [ ! -d soxr ]; then
+git clone --depth=1 https://github.com/chirlu/soxr
+else
+git -C soxr pull
+fi
+
 if [ ! -d dav1d ]; then
 git clone --depth=1 https://code.videolan.org/videolan/dav1d
 else
@@ -86,12 +101,17 @@ cd ../../../ && \
 sudo sed -i 's/-lm/-lm -lstdc++/g' $PREFIX/lib/x86_64-linux-gnu/pkgconfig/libvmaf.pc && \
 cd SDL && mkdir build && cd build && cmake -DCMAKE_EXE_LINKER_FLAGS="-static" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$PREFIX .. && sudo make install -j $nproc && \
 cd ../../ && \
+cd zimg && autoreconf -if && ./configure --disable-shared --prefix=$PREFIX && make install -j $nproc && \
+cd .. && \
+mkdir soxr/build && cd soxr/build && cmake -D{WITH_LSR_BINDINGS,BUILD_TESTS,WITH_OPENMP}=off -DCMAKE_INSTALL_PREFIX=$PREFIX -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -Wno-dev .. -G "MinGW Makefiles" && \
+cmake --build . -j $nproc --target install && \
+cd ../../ && \
 mkdir dav1d/build && cd dav1d/build && meson -Denable_docs=false -Ddefault_library=static -Dprefix=$PREFIX .. && sudo ninja install && \
 cd ../../ && \
 cd FFmpeg-VVC && \
 ./configure --enable-static --pkg-config-flags="--static" --extra-ldexeflags="-static" \
 --enable-libfdk-aac --enable-libvvenc --enable-libvvdec --enable-pic \
---enable-libxml2 --enable-libopus --enable-libdav1d --enable-libjxl --enable-libvmaf --enable-sdl2 && \
+--enable-libxml2 --enable-libopus --enable-libdav1d --enable-libjxl --enable-libzimg --enable-libvmaf --enable-libsoxr --enable-sdl2 && \
 make -j
 echo You are ready to preview VVC, view VVC information or convert from VVC using ffmpeg, ffplay and ffprobe.
 echo - Martin Eesmaa
