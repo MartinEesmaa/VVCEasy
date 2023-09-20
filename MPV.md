@@ -35,6 +35,7 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 Please check the changelog before you download the new version.
 
 ```
+20/09/2023 - Update vvenc & libraries on FFmpeg.
 16/09/2023 - Update MPV Linux VVCEasy build with libraries.
 14/08/2023 - Update Android MPV VVCEasy build with vvdec updated.
 11/08/2023 - Update Linux MPV VVCEasy build and vvdec.
