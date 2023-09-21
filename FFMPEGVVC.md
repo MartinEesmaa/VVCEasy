@@ -81,7 +81,7 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 # FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
 
-[Windows](https://mega.nz/file/CtFAWDYL#bIZLaKSNcz4l4hkIM0vvH36l0-tvGRHexnecnrTPWhc)
+[Windows](https://mega.nz/file/XxE1TTjZ#v8_vZXuV6FoLpNg7VlkA2DzstUWQvjv11lXSX_rK9Zw)
 
 [Mac OS](https://mega.nz/file/3xtTAIiQ#MPsPcz-QlSquqahmEx8ANpqleiVm2Y3L1o3R6vy7qY8)
 
@@ -95,6 +95,7 @@ I use always Windows to compile FFmpeg, so I forgot to compile every time for Ma
 
 ### Changelog
 ```
+21/09/2023: Added zimg and soxr features build configuration on Windows FFmpeg.
 20/09/2023: Update vvenc & libraries on FFmpeg.
 16/09/2023: Update libraries.
 11/08/2023: Update vvdec.
