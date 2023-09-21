@@ -101,10 +101,10 @@ cd ../../../ && \
 sudo sed -i 's/-lm/-lm -lstdc++/g' $PREFIX/lib/x86_64-linux-gnu/pkgconfig/libvmaf.pc && \
 cd SDL && mkdir build && cd build && cmake -DCMAKE_EXE_LINKER_FLAGS="-static" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$PREFIX .. && sudo make install -j $nproc && \
 cd ../../ && \
-cd zimg && autoreconf -if && ./configure --disable-shared --prefix=$PREFIX && make install -j $nproc && \
+cd zimg && autoreconf -if && ./configure --disable-shared --prefix=$PREFIX && sudo make install -j $nproc && \
 cd .. && \
-mkdir soxr/build && cd soxr/build && cmake -D{WITH_LSR_BINDINGS,BUILD_TESTS,WITH_OPENMP}=off -DCMAKE_INSTALL_PREFIX=$PREFIX -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -Wno-dev .. -G "MinGW Makefiles" && \
-cmake --build . -j $nproc --target install && \
+mkdir soxr/build && cd soxr/build && cmake -D{WITH_LSR_BINDINGS,BUILD_TESTS,WITH_OPENMP}=off -DCMAKE_INSTALL_PREFIX=$PREFIX -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -Wno-dev .. && \
+sudo cmake --build . -j $nproc --target install && \
 cd ../../ && \
 mkdir dav1d/build && cd dav1d/build && meson -Denable_docs=false -Ddefault_library=static -Dprefix=$PREFIX .. && sudo ninja install && \
 cd ../../ && \
