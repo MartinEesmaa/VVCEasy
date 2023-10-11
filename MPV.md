@@ -14,11 +14,11 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 
 # Download MPV Windows/Android Player (libvvdec + xHE-AAC plugin)
 
-[Windows 7 and later x64](https://mega.nz/file/S5FTSRRQ#LtRFSd9oO_sdoG7m8wYib9OQMlEH91R8pb83Z4ARRZg)
+[Windows 7 and later x64](https://mega.nz/file/m0EQxJbQ#jlqQEh6l2VO-AYUGKwXkJZIuIkkqrB9WRUBv7lv_e2A)
 
-[Windows MPV.NET VVCEasy version x64](https://mega.nz/file/zlcgnJRZ#zAe1-dYNLVXQ59pD0nY1GiXZORpq3ovOqNDk9GY_iyQ)
+[Windows MPV.NET VVCEasy version x64](https://mega.nz/file/CssSiTyI#BjMR8nIWopKLAfRxMqEkKNO0HMW8lu4iwqqGP_jSOqw)
 
-[Windows MPVLIB VVCEasy version x64](https://mega.nz/file/3tEnHYiR#V0mtvcgpHB0oUzfrYvHgzT52ycTxe9SIIwp8WmnAS6A)
+[Windows MPVLIB VVCEasy version x64](https://mega.nz/file/n0FnDJjC#Lx5AIf9wXKM5E2CPwHnGykxgOISfWkQZvJPT6zCCB4U)
 
 [Linux MPV VVCEasy version x64](https://mega.nz/file/qgcjFJhJ#m5O4SHVlPAoZZXVH75mPa39nxJvF-OS6IuCcoXlwD-s)
 
@@ -35,6 +35,7 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 Please check the changelog before you download the new version.
 
 ```
+11/10/2023 - Updated Windows MPV/MPV.NET/MPV LIB VVCEasy build, vvdec, Mediainfo and others.
 20/09/2023 - Update vvenc & libraries on FFmpeg.
 16/09/2023 - Update MPV Linux VVCEasy build with libraries.
 14/08/2023 - Update Android MPV VVCEasy build with vvdec updated.
