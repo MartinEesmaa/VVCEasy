@@ -22,6 +22,8 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 
 [Linux MPV VVCEasy version x64](https://mega.nz/file/qgcjFJhJ#m5O4SHVlPAoZZXVH75mPa39nxJvF-OS6IuCcoXlwD-s)
 
+[Arch Linux MPV VVCEasy version x64](https://mega.nz/file/X8Vw0YoC#nMhxZs4itXSgAVLY2hLyWfp2mny8zX5OoDmA2XIipB4)
+
 [Android API 29 .APK Debug (Recommended)](https://mega.nz/file/7wtDiAzZ#fM9JKYKmweuavwhuMGhTlvgvx1ZXTQHF0FlFY1wzSeI)
 
 [Android API 29 .APK Release unsigned](https://mega.nz/file/yk9xFZwT#aH-mPq0aBqTb4xdIhXYL2hNZnp8WBquUB_FZpav6osM)
@@ -35,6 +37,7 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 Please check the changelog before you download the new version.
 
 ```
+23/10/2023 - Added Arch Linux support to avoid segmentation fault reason, just another new AppImage.
 11/10/2023 - Updated Windows MPV/MPV.NET/MPV LIB VVCEasy build, vvdec, Mediainfo and others.
 20/09/2023 - Update vvenc & libraries on FFmpeg.
 16/09/2023 - Update MPV Linux VVCEasy build with libraries.
@@ -76,6 +79,8 @@ AppImage needs required fuse installed on your Linux distribution.
 
 Some Linux distributions may not work for AppImage, which may result segmentation fault. Builded & tested on Ubuntu 22.04.2.
 
+If you're using Arch Linux, please download the Arch Linux AppImage version.
+
 ### Tips
 
 Make sure to allow apps from unknown sources. Link: [Wikihow](https://www.wikihow.com/Allow-Apps-from-Unknown-Sources-on-Android)
@@ -94,6 +99,7 @@ d618a1cf6f1319d4934920d5a931e3fdbbc830ccbdb9b1d70cf81a6dbdebde3e  MPV-VVCEasy-Wi
 c2f96753c64ca7e14bc966e34615df65abd7ed85d34e4a59f85875528dadf57e  MPV.NET-VVCEasy-Windows-x64.7z
 b85d9806519db33204e0fe41ecc8fe3ff26a2e2a83dcca98a5f88d664d748c52  MPVLIB-VVCEasy-Windows-x64.7z
 e051b12c2a5fd4e4bf29ec809a03dbfc3cff20b4a16d5853f97dd66851f44dab  MPV-VVCEasy-Linux-x64.7z
+fad7baf9cbc908793f1f5553d8994f41df66e3b9398146efdac72115fc1c7c58  MPV-VVCEasy-ArchLinux-x64.7z
 ```
 
 # Build MPV Android with VVC and xHE-AAC:
