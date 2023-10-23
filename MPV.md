@@ -22,7 +22,7 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 
 [Linux MPV VVCEasy version x64](https://mega.nz/file/qgcjFJhJ#m5O4SHVlPAoZZXVH75mPa39nxJvF-OS6IuCcoXlwD-s)
 
-[Arch Linux MPV VVCEasy version x64](https://mega.nz/file/vo8Hma6Q#6n3D1b8Udy0ngT46ydhCKV50LoyORWLGD6jTA_0Bmaw)
+[Arch Linux MPV VVCEasy version x64](https://mega.nz/file/SwchXCqJ#Ht0ym-ru9WqaGvQIjz9nAFDrD7LrdG9nHVBEhZer5YE)
 
 [Android API 29 .APK Debug (Recommended)](https://mega.nz/file/7wtDiAzZ#fM9JKYKmweuavwhuMGhTlvgvx1ZXTQHF0FlFY1wzSeI)
 
@@ -37,6 +37,7 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 Please check the changelog before you download the new version.
 
 ```
+23/10/2023 - Removed libmujs for error shared libraries loading reason on Arch Linux.
 23/10/2023 - Added X11 support to Arch Linux AppImage of MPV VVCEasy build.
 23/10/2023 - Added Arch Linux support to avoid segmentation fault reason, just another new AppImage.
 11/10/2023 - Updated Windows MPV/MPV.NET/MPV LIB VVCEasy build, vvdec, Mediainfo and others.
@@ -100,7 +101,7 @@ d618a1cf6f1319d4934920d5a931e3fdbbc830ccbdb9b1d70cf81a6dbdebde3e  MPV-VVCEasy-Wi
 c2f96753c64ca7e14bc966e34615df65abd7ed85d34e4a59f85875528dadf57e  MPV.NET-VVCEasy-Windows-x64.7z
 b85d9806519db33204e0fe41ecc8fe3ff26a2e2a83dcca98a5f88d664d748c52  MPVLIB-VVCEasy-Windows-x64.7z
 e051b12c2a5fd4e4bf29ec809a03dbfc3cff20b4a16d5853f97dd66851f44dab  MPV-VVCEasy-Linux-x64.7z
-6fea07142f547ce77f96e206a9acf9abc809d9223fc4e6afb3ca2c9b5843e7bd  MPV-VVCEasy-ArchLinux-x64.7z
+824015159b5a26afa6e1110c35eb71af4aaf48f36305c44d6c377943e153c7ea  MPV-VVCEasy-ArchLinux-x64.7z
 ```
 
 # Build MPV Android with VVC and xHE-AAC:
