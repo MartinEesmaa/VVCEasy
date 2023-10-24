@@ -24,9 +24,9 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 
 [Arch Linux MPV VVCEasy version x64](https://mega.nz/file/SwchXCqJ#Ht0ym-ru9WqaGvQIjz9nAFDrD7LrdG9nHVBEhZer5YE)
 
-[Android API 29 .APK Debug (Recommended)](https://mega.nz/file/7wtDiAzZ#fM9JKYKmweuavwhuMGhTlvgvx1ZXTQHF0FlFY1wzSeI)
+[Android API 29 .APK Debug (Recommended)](https://mega.nz/file/ustAHAyD#3T3VyJAPz7L5gzDNDJ-_r9Tg_uORLMu0oAjHeSsKqnE)
 
-[Android API 29 .APK Release unsigned](https://mega.nz/file/yk9xFZwT#aH-mPq0aBqTb4xdIhXYL2hNZnp8WBquUB_FZpav6osM)
+[Android API 29 .APK Release unsigned](https://mega.nz/file/qx8yUBrR#XiFb24NNc8Uu8ZF2slztkPMhvulun7696yiHVk61bzI)
 
 [Android API 29 .APK Debug with gpu-next](https://mega.nz/file/3p0zyCCI#BRmCY58lwikvck0gbcyFX3IvcGu_7wxZn-mWezaD1uk)
 
@@ -37,6 +37,7 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 Please check the changelog before you download the new version.
 
 ```
+24/10/2023 - Updated Android MPV VVCEasy build with vvdec and others.
 23/10/2023 - Removed libmujs for error shared libraries loading reason on Arch Linux.
 23/10/2023 - Added X11 support to Arch Linux AppImage of MPV VVCEasy build.
 23/10/2023 - Added Arch Linux support to avoid segmentation fault reason, just another new AppImage.
@@ -93,8 +94,8 @@ On Windows, there is available MPV.NET custom build on this download. Source cod
 
 # SHA256 SUMS
 ```
-96d27b117e879ef31fe32b969a07c7905b18a3a2c83303c616ac3662ba214398  MPV-VVCEasy-API29debug.apk
-4fc32c716d10ffda43efa91ee06477cc86ee46ae54664e06387c2a7cba750496  MPV-VVCEasy-API29release-unsigned.apk
+a6c919faec391a0b4f0abeedcf8a25ba8d7f96fc1c15b949d00e1ecc2e1ede54  MPV-VVCEasy-API29debug.apk
+8ebe2d883c85f301054069a91f5f50da4fdc64a5ef00a0782f72b4bccb69caa2  MPV-VVCEasy-API29release-unsigned.apk
 6cca9e73a23a376f704f60e716d1ecc206c290e908b42aab341353f304dacc58  MPV-VVCEasy-API29debug-gpunext.apk
 55a4182bf4a0bec8b0236e7de3c2f169a4df33735b842b083951647dbf5bfe64  MPV-VVCEasy-API29release-unsigned-gpunext.apk
 d618a1cf6f1319d4934920d5a931e3fdbbc830ccbdb9b1d70cf81a6dbdebde3e  MPV-VVCEasy-Windows-x64.7z
