@@ -81,11 +81,11 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 # FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
 
-[Windows x64](https://mega.nz/file/2p9UmAJQ#ruJqmmFqCbwgIEeYaVjTF9_VzU5iZ8jIVuunUMsf3Cc)
+[Windows x64](https://mega.nz/file/61kxUbqC#vUNOyr3if_AyPLwjHVyDpJ9vdFCyWmJkeEWjlvV2yMs)
 
 [Mac OS x86_64](https://mega.nz/file/f08UFTbA#TCQ1KKGaa_kX0MFHOdoJ9hJbL3DZKpo3KLbopzLSVjc)
 
-[Linux x64](https://mega.nz/file/D9dglQpL#YWY_WhHXPj0bZF4NR4sQEUNqx5FxUGl2zuQ8N1Mhkj0) (Only FFplay static won't work)
+[Linux x64](https://mega.nz/file/SgdH3RqK#baVtb5CVJt16MWPPn7HyUUogoTrfLqO29bCZ4ogT6Q4) (Only FFplay static won't work)
 
 [FFmpeg-FixVVC archived old source code](https://mega.nz/file/G81QyT5S#jcbE1sYPEy1OMIDPCF8BPeAK-3KAGF50u23MVJzmBgw) (old)
 
@@ -95,6 +95,7 @@ I use always Windows to compile FFmpeg, so I forgot to compile every time for Ma
 
 ### Changelog
 ```
+17/11/2023: Enable all filters via additional configuration of GPL 3 and non-free. Updated FFmpeg and others.
 12/11/2023: New FFmpeg 6.1+ latest VVCEasy build with updated vvenc, vvdec and others. Released new Mac OS x86_64 build.
 10/10/2023: Updated FFmpeg features with vvenc and vvdec on Windows build.
 21/09/2023: Added zimg and soxr features build configuration on Windows FFmpeg.
