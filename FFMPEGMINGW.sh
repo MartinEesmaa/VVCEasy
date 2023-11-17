@@ -161,8 +161,8 @@ cd ../../
 
 echo Starting configuring and making FFmpeg VVCEasy build...
 cd FFmpeg-VVC
-./configure --enable-libfdk-aac --enable-static --enable-libvvenc --enable-libvvdec --enable-pic \
+./configure --enable-gpl --enable-version3 --enable-nonfree --enable-libfdk-aac --enable-static --enable-libvvenc --enable-libvvdec --enable-pic \
 --enable-zlib --enable-libxml2 --enable-libdav1d --enable-libopus --enable-libcodec2 --enable-libjxl --enable-libzimg \
---enable-libvmaf --enable-libsoxr --extra-ldexeflags=-static --pkg-config-flags=-static --disable-w32threads --enable-sdl2 && \
+--enable-libvmaf --enable-libsoxr --extra-ldexeflags=-static --pkg-config-flags=-static --disable-w32threads --enable-sdl2 --extra-version=VVCEasy && \
 make -j
 echo FFmpeg VVC version tools are now compiled, please see buildffmpegwin/FFmpeg folder.
