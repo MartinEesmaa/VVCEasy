@@ -85,7 +85,7 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 [Mac OS x86_64](https://mega.nz/file/f08UFTbA#TCQ1KKGaa_kX0MFHOdoJ9hJbL3DZKpo3KLbopzLSVjc)
 
-[Linux x64](https://mega.nz/file/SgdH3RqK#baVtb5CVJt16MWPPn7HyUUogoTrfLqO29bCZ4ogT6Q4) (Only FFplay static won't work)
+[Linux x64](https://mega.nz/file/qgEz0YKZ#fiSuSDmwz0RWtqh9R8L_vPSF2-dnUVTs35dIpn6REOo)
 
 [FFmpeg-FixVVC archived old source code](https://mega.nz/file/G81QyT5S#jcbE1sYPEy1OMIDPCF8BPeAK-3KAGF50u23MVJzmBgw) (old)
 
@@ -95,6 +95,7 @@ I use always Windows to compile FFmpeg, so I forgot to compile every time for Ma
 
 ### Changelog
 ```
+22/11/2023: New FFmpeg VVCEasy Linux complete static build using BtbN FFmpeg-Builds script of my forked repository. FFplay is now working and no broken.
 22/11/2023: New FFmpeg VVCEasy Windows build cross compiled on Linux using BtbN FFmpeg-Builds script of my forked repository.
 17/11/2023: Enable all filters via additional configuration of GPL 3 and non-free. Updated FFmpeg and others.
 12/11/2023: New FFmpeg 6.1+ latest VVCEasy build with updated vvenc, vvdec and others. Released new Mac OS x86_64 build.
