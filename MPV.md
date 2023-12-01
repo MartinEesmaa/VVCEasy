@@ -24,9 +24,9 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 
 [Arch Linux MPV VVCEasy version x64](https://mega.nz/file/SwchXCqJ#Ht0ym-ru9WqaGvQIjz9nAFDrD7LrdG9nHVBEhZer5YE)
 
-[Android API 29 .APK Debug (Recommended)](https://mega.nz/file/b5dk2ABS#wmabcKc2kWGoZkn7DY-VxmYSI83Ql7zCpEjBdfMQtuA)
+[Android API 29 .APK Debug (Recommended)](https://mega.nz/file/T1MAjBCQ#Ii88wsE1iIhLOr-iVCofnnWTW8eQMteQQfygxgN0XSs)
 
-[Android API 29 .APK Release unsigned](https://mega.nz/file/n5cHnCjJ#1GaQp9Us2iCl-HIOqjP1GUkyb0zjvfaxoQlmWa85Nqs)
+[Android API 29 .APK Release unsigned](https://mega.nz/file/rgsizBBR#Ay2cqwRIaJg_APDnVbXlj0b4JptFOq22xUe7uNbiryE)
 
 [Android API 29 .APK Debug with gpu-next](https://mega.nz/file/3p0zyCCI#BRmCY58lwikvck0gbcyFX3IvcGu_7wxZn-mWezaD1uk)
 
@@ -37,6 +37,7 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 Please check the changelog before you download the new version.
 
 ```
+01/12/2023 - Updated Android MPV VVCEasy latest build
 29/11/2023 - Fixed MPV Android VVCEasy build for file picker legacy issue
 29/11/2023 - Updated Android MPV VVCEasy build with latest FFmpeg, vvdec and others.
 18/11/2023 - Updated FFmpeg with MPV/MPV.NET/MPV LIB VVCEasy Windows build, vvdec and others.
@@ -97,8 +98,8 @@ On Windows, there is available MPV.NET custom build on this download. Source cod
 
 # SHA256 SUMS
 ```
-32a8d6e4a224a64e0373b2cb34de99b8f997d75c23d7ff77415ba6dc0639479a  MPV-VVCEasy-API29debug.apk
-3dcc528dfd3cc5bd6c723a40837fdcd336a4e59fe6b5ae14166dbd735427ab82  MPV-VVCEasy-API29release-unsigned.apk
+6325fabf9d7bea8886f2339d3338c2745dff088e25878176be39eec5356a8513  MPV-VVCEasy-API29debug.apk
+d58559388f7f04087ff01ca809b979f76d7d6fa1c21c6377a5123876f9135f9e  MPV-VVCEasy-API29release-unsigned.apk
 6cca9e73a23a376f704f60e716d1ecc206c290e908b42aab341353f304dacc58  MPV-VVCEasy-API29debug-gpunext.apk
 55a4182bf4a0bec8b0236e7de3c2f169a4df33735b842b083951647dbf5bfe64  MPV-VVCEasy-API29release-unsigned-gpunext.apk
 074e05a14f934eb8bd05a2964e5a53e73a0ae9f72a93372ad8b2873c883a7d0d  MPV-VVCEasy-Windows-x64.7z
