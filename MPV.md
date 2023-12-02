@@ -20,9 +20,9 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 
 [Windows MPVLIB VVCEasy version x64](https://mega.nz/file/T1kGXDCY#nvAK48k84Bg3NnWLPOUIp6ZPx1SdlhL-jGVOYs0hE7w)
 
-[Linux MPV VVCEasy version x64](https://mega.nz/file/qgcjFJhJ#m5O4SHVlPAoZZXVH75mPa39nxJvF-OS6IuCcoXlwD-s)
+[Linux MPV VVCEasy version x64](https://mega.nz/file/StMQ0aCY#ZKzzLgtvdWrrnm1m8aigIA363qpSH3iwentBeGwcXUg)
 
-[Arch Linux MPV VVCEasy version x64](https://mega.nz/file/SwchXCqJ#Ht0ym-ru9WqaGvQIjz9nAFDrD7LrdG9nHVBEhZer5YE)
+[Arch Linux MPV VVCEasy version x64](https://mega.nz/file/79sWRZiB#bZmEzEAci8o1vW2jdqkCmxpiHq06idr0NcDx8f_ILZU)
 
 [Android API 29 .APK Debug (Recommended)](https://mega.nz/file/T1MAjBCQ#Ii88wsE1iIhLOr-iVCofnnWTW8eQMteQQfygxgN0XSs)
 
@@ -37,6 +37,7 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 Please check the changelog before you download the new version.
 
 ```
+02/12/2023 - Updated FFmpeg latest with MPV VVCEasy Linux latest version and others.
 01/12/2023 - Updated Android MPV VVCEasy latest build
 29/11/2023 - Fixed MPV Android VVCEasy build for file picker legacy issue
 29/11/2023 - Updated Android MPV VVCEasy build with latest FFmpeg, vvdec and others.
@@ -105,8 +106,8 @@ d58559388f7f04087ff01ca809b979f76d7d6fa1c21c6377a5123876f9135f9e  MPV-VVCEasy-AP
 074e05a14f934eb8bd05a2964e5a53e73a0ae9f72a93372ad8b2873c883a7d0d  MPV-VVCEasy-Windows-x64.7z
 c418e4e06fef4c4774b22c8ab4d2a94305678fd3be088dfb1eceb6b5ba9fbe83  MPV.NET-VVCEasy-Windows-x64.7z
 140da53d1a0a7153dfe2cad43d9598c4b50782d8cf2b75b7ea84ba4ea29b991f  MPVLIB-VVCEasy-Windows-x64.7z
-e051b12c2a5fd4e4bf29ec809a03dbfc3cff20b4a16d5853f97dd66851f44dab  MPV-VVCEasy-Linux-x64.7z
-824015159b5a26afa6e1110c35eb71af4aaf48f36305c44d6c377943e153c7ea  MPV-VVCEasy-ArchLinux-x64.7z
+8baab60eca7d6047f59629219d54459de50e07348ef6d3a2f6f7dec015d99da2  MPV-VVCEasy-Linux-x64.7z
+22f0b865dea27ef4978d897bb733dd8ad32be98eefb9eb087f4201767e2b2fa6  MPV-VVCEasy-ArchLinux-x64.7z
 ```
 
 # Build MPV Android with VVC and xHE-AAC:
