@@ -81,11 +81,11 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 # FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
 
-[Windows x64](https://mega.nz/file/as8kDBpb#HlxmrVWNIr-53LynCchj5LmiNbJq62hjp7VQ0uL2pnI)
+[Windows x64](https://mega.nz/file/2xMDjRaa#TYKLVAkBPFBrumTrHBWgId-wzZ7CUqK9uCYsNA-4Y8k)
 
 [Mac OS x86_64](https://mega.nz/file/f08UFTbA#TCQ1KKGaa_kX0MFHOdoJ9hJbL3DZKpo3KLbopzLSVjc)
 
-[Linux x64](https://mega.nz/file/71MHlRpR#HJAJWq1mBo6uJbw2KokfQ2waVm5q8vbz056DWrGAdJY)
+[Linux x64](https://mega.nz/file/m8thnDpa#JkwSMnzw6bL4lem8ZgfV-isc3bs24ooLQu7qnabOtt8)
 
 [FFmpeg-FixVVC archived old source code](https://mega.nz/file/G81QyT5S#jcbE1sYPEy1OMIDPCF8BPeAK-3KAGF50u23MVJzmBgw) (old)
 
@@ -95,6 +95,7 @@ I use always Windows to compile FFmpeg, so I forgot to compile every time for Ma
 
 ### Changelog
 ```
+06/12/2023: Updated FFmpeg and other libraries.
 28/11/2023: Updated FFmpeg and others.
 22/11/2023: New FFmpeg VVCEasy Linux complete static build using BtbN FFmpeg-Builds script of my forked repository. FFplay is now working and no broken.
 22/11/2023: New FFmpeg VVCEasy Windows build cross compiled on Linux using BtbN FFmpeg-Builds script of my forked repository.
