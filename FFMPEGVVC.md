@@ -168,9 +168,10 @@ Homebrew
 Code to build FFmpeg VVC version:
 
 ```
-brew install libxml2 ffmpeg fdk-aac nasm
+brew install libxml2 ffmpeg nasm
 git clone https://github.com/fraunhoferhhi/vvenc
 git clone https://github.com/fraunhoferhhi/vvdec
+git clone https://github.com/mstorsjo/fdk-aac
 cd vvenc && mkdir build && cd build
 cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local ..
 sudo cmake --build . --target install -j $nproc
@@ -179,8 +180,13 @@ cd vvdec && mkdir build && cd build
 cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local ..
 sudo cmake --build . --target install -j $nproc
 cd ../../
+cd fdk-aac && ./autogen.sh && ./configure
+make -j
+sudo make install
+cd ../
 git clone --depth=1 https://github.com/MartinEesmaa/FFmpeg-FixVVC
 cd FFmpeg-FixVVC
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 ./configure --enable-libfdk-aac --enable-libvvenc --enable-libvvdec --enable-static --enable-pic --enable-libxml2 --pkg-config-flags="--static" --enable-sdl2
 make -j
 ```
