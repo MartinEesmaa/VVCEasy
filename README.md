@@ -48,7 +48,7 @@ https://lemmy.ml/c/vvceasy
 
 - [FFmpeg VVC En/Decoder & xHE-AAC support](#ffmpeg-vvencdec--xhe-aac-support)
 
-- [MPV libvvdec + xHE-AAC support (Windows x64/Android only)](#mpv-libvvdec--xhe-aac-support-windows-x64android-only)
+- [MPV libvvdec + xHE-AAC support (Windows x64/Linux/Android only)](#mpv-libvvdec--xhe-aac-support-windows-x64linuxandroid-only)
 
 - [LAVFilters VVC version x64](#lavfilters-vvc-version-x64)
 
@@ -121,11 +121,13 @@ FFmpeg VVC En/Decoder & xHE-AAC supports of Windows, Mac and Linux.
 
 See [FFMPEGVVC.md](FFMPEGVVC.md).
 
-# MPV libvvdec + xHE-AAC support (Windows x64/Android only)
+# MPV libvvdec + xHE-AAC support (Windows x64/Linux/Android only)
 
-MPV libvvdec & xHE-AAC supports only of Windows x64 & Android.
+MPV libvvdec & xHE-AAC supports only of Windows x64, Linux & Android.
 
 The VVC and MP4 mux with VVC codec can be played on MPV libvvdec + xHE-AAC version. Only MP4 mixed with VVC supports seek.
+
+MPV.NET is also only available for Windows.
 
 See [MPV.md](MPV.md).
 
