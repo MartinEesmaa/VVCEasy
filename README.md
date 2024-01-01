@@ -380,7 +380,7 @@ Or you can chat us: https://matrix.to/#/#vvceasy:matrix.org
 
 License: MIT
 
-© 2021-2023 [Martin Eesmaa](https://github.com/MartinEesmaa) (All rights reserved)
+© 2021-2024 [Martin Eesmaa](https://github.com/MartinEesmaa) (All rights reserved)
 
 ---
 
@@ -392,7 +392,7 @@ License: MIT
 
 License: BSD 3-Clause Clear License (all of three repositories)
 
-© 2018-2023, Fraunhofer-Gesellschaft zur Förderung der angewandten Forschung e.V. & The VVC Authors. (All rights reserved)
+© 2018-2024, Fraunhofer-Gesellschaft zur Förderung der angewandten Forschung e.V. & The VVC Authors. (All rights reserved)
 
 GitHub: [Fraunhoferhhi](https://github.com/fraunhoferhhi)
 
@@ -404,7 +404,7 @@ GitHub: [Fraunhoferhhi](https://github.com/fraunhoferhhi)
 
 License: GPL Version 2 (VLC Original version) & LGPL-2.1 (VLC VTM Decoder Plugin)
 
-© 2000-2023 [VLC Media Player](https://code.videolan.org/) Developers (All rights reserved)
+© 2000-2024 [VLC Media Player](https://code.videolan.org/) Developers (All rights reserved)
 
 © 2021-2023 [Inter Digital Inc](https://github.com/InterDigitalInc) (All rights reserved)
 
@@ -414,7 +414,7 @@ License: GPL Version 2 (VLC Original version) & LGPL-2.1 (VLC VTM Decoder Plugin
 
 License: BSD 3-Clause License
 
-© 2021-2022, Tampere University, ITU/ISO/IEC, project contributors (All rights reserved)
+© 2021-2023, Tampere University, ITU/ISO/IEC, project contributors (All rights reserved)
 
 ---
 
@@ -434,7 +434,7 @@ License: LGPL-2.1+ & GPL-2.0+
 
 For my custom build configuration license is LGPL-2.1.
 
-© 2000-2023 [FFmpeg developers](https://github.com/FFmpeg) (All rights reserved)
+© 2000-2024 [FFmpeg developers](https://github.com/FFmpeg) (All rights reserved)
 
 ---
 
@@ -442,7 +442,7 @@ For my custom build configuration license is LGPL-2.1.
 
 License: None
 
-© 2012-2022 [Martin Storsjö](https://github.com/mstorsjo) (All rights reserved)
+© 2012-2023 [Martin Storsjö](https://github.com/mstorsjo) (All rights reserved)
 
 ---
 
@@ -452,7 +452,7 @@ License: LGPL-2.1+ & GPL-2.0+
 
 For my custom build license: GPL-3.0+ with nonfree (fdk-aac) for FFmpeg
 
-© 2013-2023 [Vincent Lang, MPlayer, mplayer2 & MPV developers](https://github.com/mpv-player) (All rights reserved)
+© 2013-2024 [Vincent Lang, MPlayer, mplayer2 & MPV developers](https://github.com/mpv-player) (All rights reserved)
 
 ---
 
@@ -462,7 +462,7 @@ VVC developer & forker: [tbiat](https://github.com/tbiat) & [Martin Eesmaa](http
 
 License: MIT
 
-© 2016-2023 Ilya Zhuravlev, sfan5 & mpv developers (All rights reserved)
+© 2016-2024 Ilya Zhuravlev, sfan5 & mpv developers (All rights reserved)
 
 ---
 
@@ -470,7 +470,7 @@ License: MIT
 
 License: LGPL-2.1
 
-© 2003-2023 [Jean Le Feuvre](https://github.com/jeanlf) & [GPAC developers/contributors](https://github.com/gpac/gpac/graphs/contributors) (All rights reserved)
+© 2003-2024 [Jean Le Feuvre](https://github.com/jeanlf) & [GPAC developers/contributors](https://github.com/gpac/gpac/graphs/contributors) (All rights reserved)
 
 ---
 
@@ -488,7 +488,7 @@ License: GPL-3.0
 
 © 2007-2018 [MPC-HC Community Forum & contributors](https://github.com/mpc-hc) (Original) (All rights reserved)
 
-© 2018-2023 [clsid2](https://github.com/clsid2) (forked) (All rights reserved)
+© 2018-2024 [clsid2](https://github.com/clsid2) (forked) (All rights reserved)
 
 ---
 
