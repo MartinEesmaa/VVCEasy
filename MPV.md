@@ -14,11 +14,11 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 
 # Download MPV Windows/Android Player (libvvdec + xHE-AAC plugin)
 
-[Windows 7 and later x64](https://mega.nz/file/DscFwJRS#Tdx0KLue8OMNiTHY_71SKkWatCf1rIhRBwAVLbQrdwk)
+[Windows 7 and later x64](https://mega.nz/file/CtdEUR7Z#VYHcf41ChA8iXwWQgGMGopbqSVQ5Nc5cr_ewRxLgbns)
 
-[Windows MPV.NET VVCEasy version x64](https://mega.nz/file/C0FxRLjY#iu_DLMFP7tjpFIi8tWbW27xIlABZtYlms0CSBlWMAzg)
+[Windows MPV.NET VVCEasy version x64](https://mega.nz/file/q8l1jLjQ#7DqypkvYV-3gGVdKVzT_oYsFNnBoNkfQ6qPXddfCv6w)
 
-[Windows MPVLIB VVCEasy version x64](https://mega.nz/file/yhkAxLRZ#3tna7R6yf9Z3GuEuf_r-ikPACtPLysNUUM0WL_ykOJw)
+[Windows MPVLIB VVCEasy version x64](https://mega.nz/file/Co91jArI#m2I_OF9ZeQCL-QFFIk8Sfqv2e_vx8ieiX7eRgpU2lTM)
 
 [Linux MPV VVCEasy version x64](https://mega.nz/file/StMQ0aCY#ZKzzLgtvdWrrnm1m8aigIA363qpSH3iwentBeGwcXUg)
 
@@ -37,6 +37,7 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 Please check the changelog before you download the new version.
 
 ```
+05/01/2024 - Updated Windows MPV/MPV.NET/MPV LIB VVCEasy build with FFmpeg and others.
 28/12/2023 - Updated Windows MPV/MPV.NET/MPV LIB VVCEasy build with FFmpeg, vvdec, Mediainfo and others.
 02/12/2023 - Updated FFmpeg latest with MPV VVCEasy Linux latest version and others.
 01/12/2023 - Updated Android MPV VVCEasy latest build
@@ -104,9 +105,9 @@ On Windows, there is available MPV.NET custom build on this download. Source cod
 d58559388f7f04087ff01ca809b979f76d7d6fa1c21c6377a5123876f9135f9e  MPV-VVCEasy-API29release-unsigned.apk
 6cca9e73a23a376f704f60e716d1ecc206c290e908b42aab341353f304dacc58  MPV-VVCEasy-API29debug-gpunext.apk
 55a4182bf4a0bec8b0236e7de3c2f169a4df33735b842b083951647dbf5bfe64  MPV-VVCEasy-API29release-unsigned-gpunext.apk
-2abe7de2e1ed31f1978c23dc52d358ec7ba6b49cbd257ee51cb29f34d9569160  MPV-VVCEasy-Windows-x64.7z
-a12e0255cc367c1fb154835c313da39d6d3ffc7d67f4e028b9d9d089ee7eca48  MPV.NET-VVCEasy-Windows-x64.7z
-34c7dbbf3a7d5aefc9757057ef292b38c0ff2873baf48e8156d34db16ceb135d  MPVLIB-VVCEasy-Windows-x64.7z
+a5bc89dd0a56954a5cbedb9c7ac587b919cea14eb04026b08803f391bf3baf9f  MPV-VVCEasy-Windows-x64.7z
+7415d99a954df654f1877b4ce6972f8eda669702dd0f5e5e41b4a36c579028ae  MPV.NET-VVCEasy-Windows-x64.7z
+8b049f3684d78d3f54629323e47d933b80c91dd362694d31d17daef1265f371c  MPVLIB-VVCEasy-Windows-x64.7z
 8baab60eca7d6047f59629219d54459de50e07348ef6d3a2f6f7dec015d99da2  MPV-VVCEasy-Linux-x64.7z
 22f0b865dea27ef4978d897bb733dd8ad32be98eefb9eb087f4201767e2b2fa6  MPV-VVCEasy-ArchLinux-x64.7z
 ```
