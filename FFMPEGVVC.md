@@ -81,11 +81,11 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 # FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
 
-[Windows x64](https://mega.nz/file/3x9X1JRD#EFeznjpugPFAPvHAWLv9DPBUuX7e4d3j0Ram3V07ap4)
+[Windows x64](https://mega.nz/file/3kEg3AbC#-wMbROfRSDaZavCTLyKRuClsIt-nefwseh8lnqFLAMA)
 
-[Mac OS x86_64](https://mega.nz/file/bpchmKCA#fXurRG43tGpTPL6aFWJNGFds2XTgY-uTtr_FTmLuh-I)
+[Mac OS x86_64](https://mega.nz/file/O5FHRaTI#--FJQdTPP6lJ9zjeqyW1ipzRMd6d2tM_8zzf7JUlYUM)
 
-[Linux x64](https://mega.nz/file/Wt0DGBja#HNBVB9-M2OIVpHx6KG__xl3JHeNbXfN4AvSq-_9xCaY)
+[Linux x64](https://mega.nz/file/D81jDbYQ#Gz1V_EPuRPg9sKxTBPOo13WlYcSc5qMsogPFfnJdIO8)
 
 [FFmpeg-FixVVC archived old source code](https://mega.nz/file/G81QyT5S#jcbE1sYPEy1OMIDPCF8BPeAK-3KAGF50u23MVJzmBgw) (old)
 
@@ -95,6 +95,7 @@ I use always Windows to compile FFmpeg, so I forgot to compile every time for Ma
 
 ### Changelog
 ```
+16/01/2024: Updated FFmpeg and added libspeex & libshine encoder features into FFmpeg VVCEasy builds for Windows & Linux.
 15/01/2024: Updated FFmpeg, vvenc, vvdec and other libraries. Added AMR-WB & iLBC encoder using libvo_amrwbenc & libilbc to FFmpeg for Windows and Linux (except only for ilBC encoder on Linux build), but for Linux build does not include iLBC encoder for linking failed to FFmpeg reason about PIE.
 27/12/2023: Updated FFmpeg, vvenc and other libraries.
 16/12/2023: Updated FFmpeg, vvenc and other libraries.
