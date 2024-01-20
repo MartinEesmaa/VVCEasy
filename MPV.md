@@ -12,13 +12,13 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 
 ![mpvlinuxvvceasy](mpvlinuxvvceasy.png)
 
-# Download MPV Windows/Android Player (libvvdec + xHE-AAC plugin)
+# Download MPV Windows/Linux/Android Player (libvvdec + xHE-AAC plugin)
 
-[Windows 7 and later x64](https://mega.nz/file/P8sCAABJ#eq2SJGn7b31o9gKjUkrUXFlv2R0X5tXh_qeqs372LXU)
+[Windows 7 and later x64](https://mega.nz/file/agtEibwQ#eq2SJGn7b31o9gKjUkrUXFlv2R0X5tXh_qeqs372LXU)
 
-[Windows MPV.NET VVCEasy version x64](https://mega.nz/file/jp8VgQZa#qwv_Jr07W0G-lUK7lWk1sgnUbOVdkoRT2GoL9U0RSA8)
+[Windows MPV.NET VVCEasy version x64](https://mega.nz/file/64sSCY7R#qwv_Jr07W0G-lUK7lWk1sgnUbOVdkoRT2GoL9U0RSA8)
 
-[Windows MPVLIB VVCEasy version x64](https://mega.nz/file/jlMhWZbI#xxFU_s0FMYi3Pat2C-MT7nA3q9BZeiDmw8MGWSTtgsE)
+[Windows MPVLIB VVCEasy version x64](https://mega.nz/file/e4EQAZBa#xxFU_s0FMYi3Pat2C-MT7nA3q9BZeiDmw8MGWSTtgsE)
 
 [Linux MPV VVCEasy version x64](https://mega.nz/file/StMQ0aCY#ZKzzLgtvdWrrnm1m8aigIA363qpSH3iwentBeGwcXUg)
 
@@ -98,7 +98,7 @@ Make sure to allow apps from unknown sources. Link: [Wikihow](https://www.wikiho
 
 If Google warns you that Android MPV (libvvdec plugin) app is malicious by Play Protect, press "Install anyway" on your phone.
 
-On Windows, there is available MPV.NET custom build on this download. Source code: https://github.com/stax76/mpv.net
+On Windows, there is available MPV.NET custom build on this download. You can have look for source code: https://github.com/stax76/mpv.net
 
 # SHA256 SUMS
 ```
