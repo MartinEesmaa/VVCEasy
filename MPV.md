@@ -16,7 +16,7 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 
 [Windows 7 and later x64](https://mega.nz/file/P8sCAABJ#eq2SJGn7b31o9gKjUkrUXFlv2R0X5tXh_qeqs372LXU)
 
-[Windows MPV.NET VVCEasy version x64](https://mega.nz/file/zxsySZ5Z#Wu_1ccorJQIjTshfJmSwyoskLqpgyQft8AEzVSJlFgM)
+[Windows MPV.NET VVCEasy version x64](https://mega.nz/file/jp8VgQZa#qwv_Jr07W0G-lUK7lWk1sgnUbOVdkoRT2GoL9U0RSA8)
 
 [Windows MPVLIB VVCEasy version x64](https://mega.nz/file/jlMhWZbI#xxFU_s0FMYi3Pat2C-MT7nA3q9BZeiDmw8MGWSTtgsE)
 
@@ -107,7 +107,7 @@ d58559388f7f04087ff01ca809b979f76d7d6fa1c21c6377a5123876f9135f9e  MPV-VVCEasy-AP
 6cca9e73a23a376f704f60e716d1ecc206c290e908b42aab341353f304dacc58  MPV-VVCEasy-API29debug-gpunext.apk
 55a4182bf4a0bec8b0236e7de3c2f169a4df33735b842b083951647dbf5bfe64  MPV-VVCEasy-API29release-unsigned-gpunext.apk
 637c6fd905643b850885be12bb96dd7e8721b3060ca03cc465c163a411f3f2fd  MPV-VVCEasy-Windows-x64.7z
-ffb4e1d72f7096f2d4a8fc98452f0ed6d9abb3ccd190571979067bee0e51ec66  MPV.NET-VVCEasy-Windows-x64.7z
+f781262bd993a8eb13570fb9a837b509221a14b64520aebf6fefcf08f5218875  MPV.NET-VVCEasy-Windows-x64.7z
 c27ba7202a650578cb36df26f4466c958a959992a7ec3ec2f5533e55ba53a127  MPVLIB-VVCEasy-Windows-x64.7z
 8baab60eca7d6047f59629219d54459de50e07348ef6d3a2f6f7dec015d99da2  MPV-VVCEasy-Linux-x64.7z
 22f0b865dea27ef4978d897bb733dd8ad32be98eefb9eb087f4201767e2b2fa6  MPV-VVCEasy-ArchLinux-x64.7z
