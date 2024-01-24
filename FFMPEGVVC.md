@@ -188,7 +188,7 @@ make -j
 sudo make install
 cd ../
 git clone --depth=1 https://github.com/MartinEesmaa/FFmpeg-VVC
-cd FFmpeg-FixVVC
+cd FFmpeg-VVC
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 ./configure --enable-libfdk-aac --enable-libvvenc --enable-libvvdec --enable-static --enable-pic --enable-libxml2 --pkg-config-flags="--static" --enable-sdl2
 make -j
