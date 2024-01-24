@@ -187,7 +187,7 @@ cd fdk-aac && ./autogen.sh && ./configure
 make -j
 sudo make install
 cd ../
-git clone --depth=1 https://github.com/MartinEesmaa/FFmpeg-FixVVC
+git clone --depth=1 https://github.com/MartinEesmaa/FFmpeg-VVC
 cd FFmpeg-FixVVC
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 ./configure --enable-libfdk-aac --enable-libvvenc --enable-libvvdec --enable-static --enable-pic --enable-libxml2 --pkg-config-flags="--static" --enable-sdl2
