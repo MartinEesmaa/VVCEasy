@@ -81,11 +81,11 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 # FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
 
-[Windows x64](https://mega.nz/file/38tAUZhY#Sjn2WFVmCMCW9nkaASlHczXl4L6L8dhd5KZbEV1ozDs)
+[Windows x64](https://mega.nz/file/W18xUbSY#9giNJxTG03Uae3NdwN0itJeAbLKOgyKgx1okba1YTOA)
 
-[Mac OS x86_64](https://mega.nz/file/rsNgBJaI#VcXHfakVVrxWp6-vZDj8QeYk8WD7bMaTMjWHxH8_Gao)
+[Mac OS x86_64](https://mega.nz/file/30kzELpS#bNavobgH1gSbfGvc491Xtrb_eA9gFXFnwFVVmJTekOg)
 
-[Linux x64](https://mega.nz/file/2tVg1abB#2haTUj-PHGvF6xDzkw-OLYWjdVzNgJmeT4vciW_wJJo)
+[Linux x64](https://mega.nz/file/Ts1iQA5Z#-VMXvGjRxHoFFw4xC72wrsosgmQqbJjmV9L9_Y6bInw)
 
 [FFmpeg-FixVVC archived old source code](https://mega.nz/file/G81QyT5S#jcbE1sYPEy1OMIDPCF8BPeAK-3KAGF50u23MVJzmBgw) (old)
 
@@ -95,6 +95,7 @@ I use always Windows to compile FFmpeg, so I forgot to compile every time for Ma
 
 ### Changelog
 ```
+27/01/2024: Updated FFmpeg, vvenc, vvdec and others. Added libbs2b, libcdio and libmodplug features to Windows and Linux for DSP, Audio CD and MOD.
 26/01/2024: Updated FFmpeg & vvdec. Added libxavs & libsnappy features to Windows and Linux for Chinese AVS & Vidvox Hap external video encoders.
 19/01/2024: Updated FFmpeg, vvenc and vvdec.
 16/01/2024: Updated FFmpeg and added libspeex & libshine encoder features into FFmpeg VVCEasy builds for Windows & Linux.
