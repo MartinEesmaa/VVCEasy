@@ -62,6 +62,8 @@ https://lemmy.ml/c/vvceasy
 
 - [Encode/Decode easy](#encodedecode-easy)
 
+- [GUI applications easy](#gui-applications-easy)
+
 - [Hard option](#without-vvceasy-experimental-option-for-professional-coders-other-developers-and-everyone-hard)
 
 - [VVEnc & VVDec compatibility test](#compatibility-results-vvenc-and-vvdec-tested-by-martin-eesmaa)
@@ -198,6 +200,20 @@ Before you run VVCEasy.bat or VVCEasy.exe, you need to change from your input vi
 Follow the instructions, the commands will give you options. Since 21 October 2021, VVCEasy is pre-release, but it's construction mode, but you can have a look with .BAT source code.
 
 -   Martin Eesmaa
+
+# GUI applications (easy)
+
+If you're not familiar for using CLI, you can use GUI with application window for ease use and without typing commands on your terminal.
+
+These VVC programs of encode/decode are listed:
+
+* [FastFlix](https://github.com/cdgriffith/FastFlix) (Note: You might need to download my custom FFmpeg builds for encoding/decoding VVC using external libraries, rename to ffmpeg.exe and ffprobe.exe from my custom names only, no ffplay executable file required) (created by Chris Griffith)
+
+* [VVC-GUI-Encoder](https://github.com/Disa-Kizonda/VVC-GUI-Encoder) (only encoder) (created by Disa Kizonda)
+
+* [aVVCator](https://github.com/gianni-rosato/aVVCator) (only encoder & Linux only) (created by Gianni Rosato)
+
+* [VVenCguiEx](https://github.com/rigaya/VVenCguiEx) (original Japanese language only for instructions and application (you can still translate), only encoder & Windows only, requires Aviutl) (this may be medium or hard) (created by rigaya)
 
 # Without VVCEasy, experimental option for professional coders, other developers, and everyone (hard)
 
