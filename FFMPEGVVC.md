@@ -20,13 +20,25 @@ Or if you have xHE-AAC audio codec:
 ffplay_vvceasy -codec:a libfdk_aac -i versatile.m4a
 ```
 
+# Official FFmpeg VVC native decoder implementation
+
+It started at January 4 2024 when the native VVC decoder is released on FFmpeg, but it was experimental without IBC (Intra Block Copy).
+
+On February 24 2024, the finally moment about Intra Block Copy has been merged into FFmpeg's official repository, which means native VVC decoder on FFmpeg is completed and it's stable.
+
+His hard work is very good and made by [nuomi2021](https://github.com/nuomi2021) to make native VVC decoder release to FFmpeg.
+
+Now you can use official FFmpeg binaries by BtBn or Gyan or my custom build of FFmpeg VVCEasy build to play or decode VVC in FFmpeg. Also mpv too with shinchiro or VVCEasy builds. :)
+
+But for libvvenc VVC encoder has not implemented yet into official FFmpeg. FFmpeg VVCEasy build has still libvvenc VVC encoder available by Martin Eesmaa's FFmpeg-VVC repository.
+
 # Limitations of FFmpeg VVC encoder
 
 Before encode to VVC video codec, see the limitations below.
 
 libvvenc (FFmpeg vvc version) works for:
 
-- Pixel format ⚠️ (only pixel format 10 bit)
+- Pixel format ⚠️ (only pixel format 10 bit is default, but you can still encode 8 bit by using `-bitdepth8 1`)
 - Video size (auto detects, but it doesn't detect for SAR and DAR anamorphic is glitch and corrupts the video) ⚠️ (Better way to use vvencapp without FFmpeg)
 - Frame rate ✅ (auto detects)
 - MP4/TS Mux ✅ (only works for stable if it's encoded VVC with MP4 or TS on FFmpeg and mp4box for muxing still works)

@@ -32,6 +32,16 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 
 [Android API 29 .APK Release with gpu-next](https://mega.nz/file/C5dyXbpJ#ta2DouVYLOaXeZ6VW9fLqIm7a3I2AoFxWlD-unG18T4)
 
+# Official MPV VVC native decoder implementation
+
+It started at January 4 2024 when the native VVC decoder is released on FFmpeg, but it was experimental without IBC (Intra Block Copy).
+
+On February 24 2024, the finally moment about Intra Block Copy has been merged into FFmpeg's official repository, which means native VVC decoder on FFmpeg is completed and it's stable.
+
+His hard work is very good and made by [nuomi2021](https://github.com/nuomi2021) to make native VVC decoder release to FFmpeg.
+
+Now you can use official MPV binaries by shinchiro or my custom build of MPV VVCEasy build to play or decode VVC in MPV. Also FFmpeg too with Btbn or Gyan or VVCEasy builds. :)
+
 ### Changelog
 
 Please check the changelog before you download the new version.
