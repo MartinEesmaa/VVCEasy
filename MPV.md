@@ -47,6 +47,7 @@ Now you can use official MPV binaries by shinchiro or my custom build of MPV VVC
 Please check the changelog before you download the new version.
 
 ```
+29/02/2024 - Note about official Windows MPV (shinchiro) and VVCEasy builds can play stable video of VVC for playing via decode. I'll release soon later...
 20/01/2024 - Updated Windows MPV/MPV.NET/MPV LIB VVCEasy build with FFmpeg, vvdec and others. About vvdec update, this lowers CPU usage than previous build.
 05/01/2024 - Updated Windows MPV/MPV.NET/MPV LIB VVCEasy build with FFmpeg and others.
 28/12/2023 - Updated Windows MPV/MPV.NET/MPV LIB VVCEasy build with FFmpeg, vvdec, Mediainfo and others.
