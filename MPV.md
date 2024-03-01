@@ -47,6 +47,7 @@ Now you can use official MPV binaries by shinchiro or my custom build of MPV VVC
 Please check the changelog before you download the new version.
 
 ```
+01/03/2024 - Just small added words on instructions.
 29/02/2024 - Note about official Windows MPV (shinchiro) and VVCEasy builds can play stable video of VVC for playing via decode. I'll release soon later...
 20/01/2024 - Updated Windows MPV/MPV.NET/MPV LIB VVCEasy build with FFmpeg, vvdec and others. About vvdec update, this lowers CPU usage than previous build.
 05/01/2024 - Updated Windows MPV/MPV.NET/MPV LIB VVCEasy build with FFmpeg and others.
@@ -97,7 +98,7 @@ Some Android users for 10-bit pixel format or/and tier high might not show video
 
 Solution: Please download latest mp4box nightly version and re-mux from .266 to .mp4 file again.
 
-AppImage needs required fuse installed on your Linux distribution.
+AppImage needs required fuse installed of your Linux distribution on your computer.
 
 Some Linux distributions may not work for AppImage, which may result segmentation fault. Builded & tested on Ubuntu 22.04.2.
 
@@ -107,7 +108,7 @@ If you're using Arch Linux, please download the Arch Linux AppImage version.
 
 Make sure to allow apps from unknown sources. Link: [Wikihow](https://www.wikihow.com/Allow-Apps-from-Unknown-Sources-on-Android)
 
-If Google warns you that Android MPV (libvvdec plugin) app is malicious by Play Protect, press "Install anyway" on your phone.
+If Google warns you that Android MPV (libvvdec plugin) app claimed is malicious by Play Protect, press "Install anyway" on your phone.
 
 On Windows, there is available MPV.NET custom build on this download. You can have look for source code: https://github.com/stax76/mpv.net
 

@@ -107,6 +107,7 @@ I use always Windows to compile FFmpeg, so I forgot to compile every time for Ma
 
 ### Changelog
 ```
+01/03/2024 - Updated limitations of FFmpeg VVC encoder in FFMPEGVVC.md
 29/02/2024 - Note about official FFmpeg and VVCEasy builds can play stable video of VVC for playing via decode, but libvvenc (external VVC encoder via vvenc) is still available on FFmpeg VVCEasy builds. I'll release soon later...
 15/02/2024: Updated FFmpeg and vvdec. Set libopus from stable to nightly latest version for improve with Windows & Linux.
 27/01/2024: Updated FFmpeg, vvenc, vvdec and others. Added libbs2b, libcdio and libmodplug features to Windows and Linux for DSP, Audio CD and MOD.
