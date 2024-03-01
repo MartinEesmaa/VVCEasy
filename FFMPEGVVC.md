@@ -48,8 +48,8 @@ libvvenc (FFmpeg vvc version) works for:
 - Audio with encode VVC ✅
 - Broadcasting ✅ (MPEG-TS)
 - Streaming ✅ (MPEG-DASH)
-- Bitrates ✅
-- Passes ⚠️ (you may need get passes using vvenc params on FFmpeg VVCEasy or use vvencapp)
+- Bitrates ✅ (average (`-b:v`) and maximum bitrate (`-maxrate`) are only supported)
+- Passes ⚠️ (you may need get passes using vvenc params on FFmpeg VVCEasy or use vvencapp, also it is only available to use bitrate for two passes, QP supports only one pass)
 - Presets ✅
 - QP ✅
 - HDR ✅
