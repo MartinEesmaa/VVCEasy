@@ -93,20 +93,21 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 # FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
 
-[Windows x64](https://mega.nz/file/nwdU0brD#LSgA-KAWnY8QlWJCZ2iwXgaUI-07P-9_ZvCphGgyGaE)
+[Windows x64](https://mega.nz/file/CochlZjB#41O8qfcTn_IpWsshXXzz3Kv3BatOzczZV6LXs_Qbz7g)
 
-[Mac OS x86_64](https://mega.nz/file/30kzELpS#bNavobgH1gSbfGvc491Xtrb_eA9gFXFnwFVVmJTekOg)
+[Mac OS x86_64](https://mega.nz/file/b4tCgCYI#4ilSG_jA0Mm_Xz8hgpndbHKIClK2lrmpE0gqT_qTjUA)
 
-[Linux x64](https://mega.nz/file/ah8wWBJL#EjbUT_CRvoZt3T8xpdPYk_kGudJt90GcD_y-bVu5y_Q)
+[Linux x64](https://mega.nz/file/G0U2gZCZ#onRCMwL7CovI7tsGHi2WLctMNKNBKkruhQGCRUVQU1A)
 
 [FFmpeg-FixVVC archived old source code](https://mega.nz/file/G81QyT5S#jcbE1sYPEy1OMIDPCF8BPeAK-3KAGF50u23MVJzmBgw) (old)
 
 ### Note about downloads
 
-I use always Windows to compile FFmpeg, so I forgot to compile every time for Mac OS and Linux. Also, please check changelog before you download the new version.
+Also, please check changelog before you download the new version.
 
 ### Changelog
 ```
+04/03/2024: Updated FFmpeg, vvenc, vvdec, libopus and others. Added libdvdnav and libdvdread to Windows & Linux. Switched from external VVC decoder (libvvdec) to native VVC decoder by removing experimental.
 01/03/2024 - Updated limitations of FFmpeg VVC encoder in FFMPEGVVC.md
 29/02/2024 - Note about official FFmpeg and VVCEasy builds can play stable video of VVC for playing via decode, but libvvenc (external VVC encoder via vvenc) is still available on FFmpeg VVCEasy builds. I'll release soon later...
 15/02/2024: Updated FFmpeg and vvdec. Set libopus from stable to nightly latest version for improve with Windows & Linux.
@@ -211,7 +212,7 @@ export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 make -j
 ```
 
-# Linux builders (Important for FFplay)
+# Linux builders (Important for FFplay) (old)
 
 You can build using [Linux script](libvvdecffmpeg.sh).
 
