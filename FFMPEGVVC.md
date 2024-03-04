@@ -93,11 +93,11 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 # FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
 
-[Windows x64](https://mega.nz/file/CochlZjB#41O8qfcTn_IpWsshXXzz3Kv3BatOzczZV6LXs_Qbz7g)
+[Windows x64](https://mega.nz/file/y9V3SDiI#XWYAATYo2BAu8oAS_2C46J4Ba3RdEf-Q5zUciwMixJk)
 
-[Mac OS x86_64](https://mega.nz/file/b4tCgCYI#4ilSG_jA0Mm_Xz8hgpndbHKIClK2lrmpE0gqT_qTjUA)
+[Mac OS x86_64](https://mega.nz/file/yoF3BJDb#QPTBSuWYG0dgd5WdUjRAjkSS6yJxqZlTVSwKRwtRlDs)
 
-[Linux x64](https://mega.nz/file/G0U2gZCZ#onRCMwL7CovI7tsGHi2WLctMNKNBKkruhQGCRUVQU1A)
+[Linux x64](https://mega.nz/file/ihtAzBxL#lPz9GIm9XpBDzS4BF0XuWMjmhrYOf8DZOcBYVD3f7ME)
 
 [FFmpeg-FixVVC archived old source code](https://mega.nz/file/G81QyT5S#jcbE1sYPEy1OMIDPCF8BPeAK-3KAGF50u23MVJzmBgw) (old)
 
@@ -107,9 +107,9 @@ Also, please check changelog before you download the new version.
 
 ### Changelog
 ```
-04/03/2024: Updated FFmpeg, vvenc, vvdec, libopus and others. Added libdvdnav and libdvdread to Windows & Linux. Switched from external VVC decoder (libvvdec) to native VVC decoder by removing experimental.
-01/03/2024 - Updated limitations of FFmpeg VVC encoder in FFMPEGVVC.md
-29/02/2024 - Note about official FFmpeg and VVCEasy builds can play stable video of VVC for playing via decode, but libvvenc (external VVC encoder via vvenc) is still available on FFmpeg VVCEasy builds. I'll release soon later...
+04/03/2024: Updated FFmpeg, vvenc, vvdec, libopus and others. Added libdvdnav and libdvdread, especially libdvdcss to Windows & Linux. Switched from external VVC decoder (libvvdec) to native VVC decoder by removing experimental.
+01/03/2024: Updated limitations of FFmpeg VVC encoder in FFMPEGVVC.md
+29/02/2024: Note about official FFmpeg and VVCEasy builds can play stable video of VVC for playing via decode, but libvvenc (external VVC encoder via vvenc) is still available on FFmpeg VVCEasy builds. I'll release soon later...
 15/02/2024: Updated FFmpeg and vvdec. Set libopus from stable to nightly latest version for improve with Windows & Linux.
 27/01/2024: Updated FFmpeg, vvenc, vvdec and others. Added libbs2b, libcdio and libmodplug features to Windows and Linux for DSP, Audio CD and MOD.
 26/01/2024: Updated FFmpeg & vvdec. Added libxavs & libsnappy features to Windows and Linux for Chinese AVS & Vidvox Hap external video encoders.
