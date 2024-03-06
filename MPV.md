@@ -14,11 +14,11 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 
 # Download MPV Windows/Linux/Android Player (libvvdec + xHE-AAC plugin)
 
-[Windows 7 and later x64](https://mega.nz/file/agtEibwQ#eq2SJGn7b31o9gKjUkrUXFlv2R0X5tXh_qeqs372LXU)
+[Windows 7 and later x64](https://mega.nz/file/GklUSKoC#n6rbZsK-h8v6yMO24MDgnS9YAJWMXCvU2scQVYxn_kU)
 
-[Windows MPV.NET VVCEasy version x64](https://mega.nz/file/64sSCY7R#qwv_Jr07W0G-lUK7lWk1sgnUbOVdkoRT2GoL9U0RSA8)
+[Windows MPV.NET VVCEasy version x64](https://mega.nz/file/usNnDSxa#UOvPHUqDbw3aq86ZLmdktnWZ1XBSUSI6V9NBQAz3xGg)
 
-[Windows MPVLIB VVCEasy version x64](https://mega.nz/file/e4EQAZBa#xxFU_s0FMYi3Pat2C-MT7nA3q9BZeiDmw8MGWSTtgsE)
+[Windows MPVLIB VVCEasy version x64](https://mega.nz/file/HskmhIgY#RsHtyfM-vFFApdNB-tmKWaZaBGx6pV_fFHucGGqZPDA)
 
 [Linux MPV VVCEasy version x64](https://mega.nz/file/StMQ0aCY#ZKzzLgtvdWrrnm1m8aigIA363qpSH3iwentBeGwcXUg)
 
@@ -47,6 +47,7 @@ Now you can use official MPV binaries by shinchiro or my custom build of MPV VVC
 Please check the changelog before you download the new version.
 
 ```
+06/03/2024 - Updated Windows MPV/MPV.NET/MPV LIB VVCEasy build with FFmpeg, vvdec and others. Switched from external VVC decoder to native VVC decoder for reduce CPU usage.
 01/03/2024 - Just small added words on instructions.
 29/02/2024 - Note about official Windows MPV (shinchiro) and VVCEasy builds can play stable video of VVC for playing via decode. I'll release soon later...
 20/01/2024 - Updated Windows MPV/MPV.NET/MPV LIB VVCEasy build with FFmpeg, vvdec and others. About vvdec update, this lowers CPU usage than previous build.
@@ -118,9 +119,9 @@ On Windows, there is available MPV.NET custom build on this download. You can ha
 d58559388f7f04087ff01ca809b979f76d7d6fa1c21c6377a5123876f9135f9e  MPV-VVCEasy-API29release-unsigned.apk
 6cca9e73a23a376f704f60e716d1ecc206c290e908b42aab341353f304dacc58  MPV-VVCEasy-API29debug-gpunext.apk
 55a4182bf4a0bec8b0236e7de3c2f169a4df33735b842b083951647dbf5bfe64  MPV-VVCEasy-API29release-unsigned-gpunext.apk
-637c6fd905643b850885be12bb96dd7e8721b3060ca03cc465c163a411f3f2fd  MPV-VVCEasy-Windows-x64.7z
-f781262bd993a8eb13570fb9a837b509221a14b64520aebf6fefcf08f5218875  MPV.NET-VVCEasy-Windows-x64.7z
-c27ba7202a650578cb36df26f4466c958a959992a7ec3ec2f5533e55ba53a127  MPVLIB-VVCEasy-Windows-x64.7z
+35f9b22206d5dc71ab28f0b935396c324d11f3a10500211d1a009c8023237e72  MPV-VVCEasy-Windows-x64.7z
+050887d02d1b83a1935336bfccf99a39b6931751d37b15a7d040bdfb5bfa2800  MPV.NET-VVCEasy-Windows-x64.7z
+de637f5223b3ce23c5e294f50d3a37b4b7fb463dd2df880c4831fefbee063156  MPVLIB-VVCEasy-Windows-x64.7z
 8baab60eca7d6047f59629219d54459de50e07348ef6d3a2f6f7dec015d99da2  MPV-VVCEasy-Linux-x64.7z
 22f0b865dea27ef4978d897bb733dd8ad32be98eefb9eb087f4201767e2b2fa6  MPV-VVCEasy-ArchLinux-x64.7z
 ```
