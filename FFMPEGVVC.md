@@ -93,11 +93,11 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 # FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
 
-[Windows x64](https://mega.nz/file/y9V3SDiI#XWYAATYo2BAu8oAS_2C46J4Ba3RdEf-Q5zUciwMixJk)
+[Windows x64](https://mega.nz/file/K9VFVDCR#4WM3Osr8RfnX5OO_xs2mCgUqo6ArcXAQGSESrBEF0NI)
 
 [Mac OS x86_64](https://mega.nz/file/yoF3BJDb#QPTBSuWYG0dgd5WdUjRAjkSS6yJxqZlTVSwKRwtRlDs)
 
-[Linux x64](https://mega.nz/file/ihtAzBxL#lPz9GIm9XpBDzS4BF0XuWMjmhrYOf8DZOcBYVD3f7ME)
+[Linux x64](https://mega.nz/file/y9shQASZ#FY7lFEu5uOVQgeaZIGoMbxZ_SUhpPKQMh9_Upmo5P2o)
 
 [FFmpeg-FixVVC archived old source code](https://mega.nz/file/G81QyT5S#jcbE1sYPEy1OMIDPCF8BPeAK-3KAGF50u23MVJzmBgw) (old)
 
@@ -107,6 +107,7 @@ Also, please check changelog before you download the new version.
 
 ### Changelog
 ```
+19/03/2024: Updated FFmpeg, vvenc, libopus and others. Official commit set native VVC decoder is experimental, now decodes default VVC video by using external libvvdec.
 04/03/2024: Updated FFmpeg, vvenc, vvdec, libopus and others. Added libdvdnav and libdvdread, especially libdvdcss to Windows & Linux. Switched from external VVC decoder (libvvdec) to native VVC decoder by removing experimental.
 01/03/2024: Updated limitations of FFmpeg VVC encoder in FFMPEGVVC.md
 29/02/2024: Note about official FFmpeg and VVCEasy builds can play stable video of VVC for playing via decode, but libvvenc (external VVC encoder via vvenc) is still available on FFmpeg VVCEasy builds. I'll release soon later...
