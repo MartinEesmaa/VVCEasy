@@ -14,11 +14,11 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 
 # Download MPV Windows/Linux/Android Player (libvvdec + xHE-AAC plugin)
 
-[Windows 7 and later x64](https://mega.nz/file/GklUSKoC#n6rbZsK-h8v6yMO24MDgnS9YAJWMXCvU2scQVYxn_kU)
+[Windows 7 and later x64](https://mega.nz/file/nlE13ASZ#vr_kUouY6B-YqT2vk0rVubo9DmaTfoBRyDnJlp63RxE)
 
-[Windows MPV.NET VVCEasy version x64](https://mega.nz/file/usNnDSxa#UOvPHUqDbw3aq86ZLmdktnWZ1XBSUSI6V9NBQAz3xGg)
+[Windows MPV.NET VVCEasy version x64](https://mega.nz/file/n4kVwASS#Xkw4HGCMfEw_9pY69TFUEEXh_LG7aZrnIW9FaS242No)
 
-[Windows MPVLIB VVCEasy version x64](https://mega.nz/file/HskmhIgY#RsHtyfM-vFFApdNB-tmKWaZaBGx6pV_fFHucGGqZPDA)
+[Windows MPVLIB VVCEasy version x64](https://mega.nz/file/TlEQiZSS#ZYWFS7EvTnjm_wcAEUv6VA3GggTwfIk0zhctR14bw9I)
 
 [Linux MPV VVCEasy version x64](https://mega.nz/file/StMQ0aCY#ZKzzLgtvdWrrnm1m8aigIA363qpSH3iwentBeGwcXUg)
 
@@ -42,11 +42,18 @@ His hard work is very good and made by [nuomi2021](https://github.com/nuomi2021)
 
 Now you can use official MPV binaries by shinchiro or my custom build of MPV VVCEasy build to play or decode VVC in MPV. Also FFmpeg too with Btbn or Gyan or VVCEasy builds. :)
 
+Update of 21.03.2024: On March 14th 2024, the official FFmpeg native VVC decoder set to experimental for some little bugs. 
+
+See the FFmpeg commit: https://github.com/FFmpeg/FFmpeg/commit/110d8549d575aae6b2f627cd63e2eb7082ab8926
+
+Switched native VVC decoder back to external VVC decoder of libvvdec after native VVC decoder is experimental.
+
 ### Changelog
 
 Please check the changelog before you download the new version.
 
 ```
+21/03/2024 - Updated Windows MPV/MPV.NET/MPV LIB VVCEasy build with FFmpeg, vvdec and others. Official FFmpeg commit made native VVC decoder set to experimental, now using libvvdec to decode VVC video. Fixed issue #42.
 06/03/2024 - Updated Windows MPV/MPV.NET/MPV LIB VVCEasy build with FFmpeg, vvdec and others. Switched from external VVC decoder to native VVC decoder for reduce CPU usage.
 01/03/2024 - Just small added words on instructions.
 29/02/2024 - Note about official Windows MPV (shinchiro) and VVCEasy builds can play stable video of VVC for playing via decode. I'll release soon later...
@@ -119,9 +126,9 @@ On Windows, there is available MPV.NET custom build on this download. You can ha
 d58559388f7f04087ff01ca809b979f76d7d6fa1c21c6377a5123876f9135f9e  MPV-VVCEasy-API29release-unsigned.apk
 6cca9e73a23a376f704f60e716d1ecc206c290e908b42aab341353f304dacc58  MPV-VVCEasy-API29debug-gpunext.apk
 55a4182bf4a0bec8b0236e7de3c2f169a4df33735b842b083951647dbf5bfe64  MPV-VVCEasy-API29release-unsigned-gpunext.apk
-35f9b22206d5dc71ab28f0b935396c324d11f3a10500211d1a009c8023237e72  MPV-VVCEasy-Windows-x64.7z
-050887d02d1b83a1935336bfccf99a39b6931751d37b15a7d040bdfb5bfa2800  MPV.NET-VVCEasy-Windows-x64.7z
-de637f5223b3ce23c5e294f50d3a37b4b7fb463dd2df880c4831fefbee063156  MPVLIB-VVCEasy-Windows-x64.7z
+6c4b03ee5fddbb454584e74408dafbecc57bbec2a077e857caaad940472081a4  MPV-VVCEasy-Windows-x64.7z
+873697344c700a12edd0d75522d0db879353793a9a2f10a84969eb24c24a9a6f  MPV.NET-VVCEasy-Windows-x64.7z
+50217737af02bd703b07c710a6f30d0f3391c4f952c4e8b972bdda1f8c283d7e  MPVLIB-VVCEasy-Windows-x64.7z
 8baab60eca7d6047f59629219d54459de50e07348ef6d3a2f6f7dec015d99da2  MPV-VVCEasy-Linux-x64.7z
 22f0b865dea27ef4978d897bb733dd8ad32be98eefb9eb087f4201767e2b2fa6  MPV-VVCEasy-ArchLinux-x64.7z
 ```
