@@ -20,6 +20,10 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 
 [Windows MPVLIB VVCEasy version x64](https://mega.nz/file/TlEQiZSS#ZYWFS7EvTnjm_wcAEUv6VA3GggTwfIk0zhctR14bw9I)
 
+[Windows 7 and later x86_64-v3 native](https://mega.nz/file/u1l2zTYA#HmiZtkd46EMd9pqcTnhWGC-M3nCv3Y__jLN9T7jLc-c)
+
+[Windows MPVLIB VVCEasy version x86_64-v3 native](https://mega.nz/file/24UggbYD#CsTqPGLa4nEfs_9UheV0auISenDXqFdu465PZfRqozY)
+
 [Linux MPV VVCEasy version x64](https://mega.nz/file/StMQ0aCY#ZKzzLgtvdWrrnm1m8aigIA363qpSH3iwentBeGwcXUg)
 
 [Arch Linux MPV VVCEasy version x64](https://mega.nz/file/79sWRZiB#bZmEzEAci8o1vW2jdqkCmxpiHq06idr0NcDx8f_ILZU)
@@ -53,6 +57,7 @@ Switched native VVC decoder back to external VVC decoder of libvvdec after nativ
 Please check the changelog before you download the new version.
 
 ```
+22/03/2024 - Added Windows MPV/MPV.LIB VVCEasy native x64-v3 build with use LLVM, Clang, mimalloc and LTO on, requested by Andarwinux at issue #42 improved.
 21/03/2024 - Updated Windows MPV/MPV.NET/MPV LIB VVCEasy build with FFmpeg, vvdec and others. Official FFmpeg commit made native VVC decoder set to experimental, now using libvvdec to decode VVC video. Fixed issue #42.
 06/03/2024 - Updated Windows MPV/MPV.NET/MPV LIB VVCEasy build with FFmpeg, vvdec and others. Switched from external VVC decoder to native VVC decoder for reduce CPU usage.
 01/03/2024 - Just small added words on instructions.
@@ -129,6 +134,8 @@ d58559388f7f04087ff01ca809b979f76d7d6fa1c21c6377a5123876f9135f9e  MPV-VVCEasy-AP
 6c4b03ee5fddbb454584e74408dafbecc57bbec2a077e857caaad940472081a4  MPV-VVCEasy-Windows-x64.7z
 873697344c700a12edd0d75522d0db879353793a9a2f10a84969eb24c24a9a6f  MPV.NET-VVCEasy-Windows-x64.7z
 50217737af02bd703b07c710a6f30d0f3391c4f952c4e8b972bdda1f8c283d7e  MPVLIB-VVCEasy-Windows-x64.7z
+8d486291a371c8663e7ddd1d9845cf54f81c316a9c795333a5b490f7621a6cb3  MPV-VVCEasy-Windows-NativeX64.7z
+003dbdf1cd6639ff906c2c17dde69a16c1df7fa565cf310ba014ea24b5b330a5  MPVLIB-VVCEasy-Windows-NativeX64.7z
 8baab60eca7d6047f59629219d54459de50e07348ef6d3a2f6f7dec015d99da2  MPV-VVCEasy-Linux-x64.7z
 22f0b865dea27ef4978d897bb733dd8ad32be98eefb9eb087f4201767e2b2fa6  MPV-VVCEasy-ArchLinux-x64.7z
 ```
