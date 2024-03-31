@@ -12,7 +12,7 @@ arm64 - API 21 (64-bit phones only)
 
 armeabi - API 19 (32-bit phones)
 
-x86 - API 21 (32-bit tablets only)
+x86 - API 19 (32-bit tablets only)
 
 x86_64 - API 21 (64-bit tablets only)
 
