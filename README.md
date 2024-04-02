@@ -197,7 +197,11 @@ dotnet run
 # Encode/Decode (easy)
 
 Before you run VVCEasy.bat or VVCEasy.exe, you need to change from your input video file name into input.mp4 (for example)
-Follow the instructions, the commands will give you options. From 21 October 2021 to 23 June 2022, VVCEasy is pre-release, but it's construction mode and you can have look with .BAT source code.
+Follow the instructions, the commands will give you options. From 21 October 2021 to 23 June 2022, VVCEasy was pre-release, but it's construction mode and you can have look with .BAT source code.
+
+Since 23 June 2022, VVCEasy was initial released on v1.0.0.
+
+To encode/decode, please see the GUI applications.
 
 -   Martin Eesmaa
 
