@@ -219,6 +219,8 @@ These VVC programs of encode/decode are listed:
 
 * [VVenCguiEx](https://github.com/rigaya/VVenCguiEx) (original Japanese language only for instructions and application (you can still translate), only encoder & Windows only, requires Aviutl) (this may be medium or hard) (created by rigaya)
 
+* [VVConvert](https://vvconvert.app/) (only encoder, encodes to VVC raw bitstream from any FFmpeg compatible video codecs, requires FFmpeg to open input video files) (created by Alec Carter) ([source code](https://github.com/alectr0/VVConvert))
+
 # Without VVCEasy, experimental option for professional coders, other developers, and everyone (hard)
 
 You need 7-Zip (requires ffmpeg and ffplay), ffmpeg, ffplay, vvenc/vvdec(app).
