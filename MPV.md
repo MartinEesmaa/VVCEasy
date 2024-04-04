@@ -24,9 +24,9 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 
 [Windows MPVLIB VVCEasy version x86_64-v3 native](https://mega.nz/file/24UggbYD#CsTqPGLa4nEfs_9UheV0auISenDXqFdu465PZfRqozY)
 
-[Linux MPV VVCEasy version x64](https://mega.nz/file/StMQ0aCY#ZKzzLgtvdWrrnm1m8aigIA363qpSH3iwentBeGwcXUg)
+[Linux MPV VVCEasy version x64](https://mega.nz/file/P0lznbBb#Ab8XupeUXf2Hvu9dTqd-V5A7gq1QfL2Cr1Sm2npRX7E)
 
-[Arch Linux MPV VVCEasy version x64](https://mega.nz/file/79sWRZiB#bZmEzEAci8o1vW2jdqkCmxpiHq06idr0NcDx8f_ILZU)
+[Arch Linux MPV VVCEasy version x64](https://mega.nz/file/D9dAyKRA#ym6oYWtWzABoLWrzkw6SdKjh7F7eEtk_eVMlI9dLuJc)
 
 [Android API 29 .APK Debug (Recommended)](https://mega.nz/file/T1MAjBCQ#Ii88wsE1iIhLOr-iVCofnnWTW8eQMteQQfygxgN0XSs)
 
@@ -57,6 +57,7 @@ Switched native VVC decoder back to external VVC decoder of libvvdec after nativ
 Please check the changelog before you download the new version.
 
 ```
+04/04/2024 - Updated FFmpeg latest with MPV VVCEasy Linux latest version, vvdec and others.
 22/03/2024 - Added Windows MPV/MPV.LIB VVCEasy native x64-v3 build with use LLVM, Clang, mimalloc and LTO on, requested by Andarwinux at issue #42 improved.
 21/03/2024 - Updated Windows MPV/MPV.NET/MPV LIB VVCEasy build with FFmpeg, vvdec and others. Official FFmpeg commit made native VVC decoder set to experimental, now using libvvdec to decode VVC video. Fixed issue #42.
 06/03/2024 - Updated Windows MPV/MPV.NET/MPV LIB VVCEasy build with FFmpeg, vvdec and others. Switched from external VVC decoder to native VVC decoder for reduce CPU usage.
@@ -136,8 +137,8 @@ d58559388f7f04087ff01ca809b979f76d7d6fa1c21c6377a5123876f9135f9e  MPV-VVCEasy-AP
 50217737af02bd703b07c710a6f30d0f3391c4f952c4e8b972bdda1f8c283d7e  MPVLIB-VVCEasy-Windows-x64.7z
 8d486291a371c8663e7ddd1d9845cf54f81c316a9c795333a5b490f7621a6cb3  MPV-VVCEasy-Windows-NativeX64.7z
 003dbdf1cd6639ff906c2c17dde69a16c1df7fa565cf310ba014ea24b5b330a5  MPVLIB-VVCEasy-Windows-NativeX64.7z
-8baab60eca7d6047f59629219d54459de50e07348ef6d3a2f6f7dec015d99da2  MPV-VVCEasy-Linux-x64.7z
-22f0b865dea27ef4978d897bb733dd8ad32be98eefb9eb087f4201767e2b2fa6  MPV-VVCEasy-ArchLinux-x64.7z
+892216b22bcb93573b0facb35097a0823b83454a5a2e5cb386ee3181e5a47e42  MPV-VVCEasy-Linux-x64.7z
+95cc275bc9ebbe646a77fb805b847aad7ea7b635f1df973b57844bcf53fe472b  MPV-VVCEasy-ArchLinux-x64.7z
 ```
 
 # Build MPV Android with VVC and xHE-AAC:
