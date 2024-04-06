@@ -93,11 +93,11 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 # FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
 
-[Windows x64](https://mega.nz/file/nlMjGZxI#vmAaMzbJXk5EoJBXSyRVDkEQMNixfrP4PEskWEEsvBI)
+[Windows x64](https://mega.nz/file/bwMTTIIa#U4Oq3u3dHvt3dpHnDcIsjYNKi7P50D0MDCwNKzCxumo)
 
-[Mac OS x86_64](https://mega.nz/file/r1cFQLyT#oa5xeLyIZEdkqhqq56l-OYN_8AieKZoIn0XinRFE1rg)
+[Mac OS x86_64](https://mega.nz/file/q1dDHD6Y#tZFnN2i8EGgSUBv96QyzHgfq6bI57SLqFZMvPPDqnjM)
 
-[Linux x64](https://mega.nz/file/7l0zAT6L#Nvzt05jCJLu7e5sk5q0MC-W5FFRX5qlRj8cJthPE-Hk)
+[Linux x64](https://mega.nz/file/igNmBbba#DIPaHheQBNgivNWhkvbqyOQV1lo7wk0d-6l8C5E493k)
 
 [FFmpeg-FixVVC archived old source code](https://mega.nz/file/G81QyT5S#jcbE1sYPEy1OMIDPCF8BPeAK-3KAGF50u23MVJzmBgw) (old)
 
@@ -107,6 +107,7 @@ Also, please check changelog before you download the new version.
 
 ### Changelog
 ```
+06/04/2024: Updated FFmpeg up to 7.0 latest with nightly, others & added Google LC3 encoder/decoder using liblc3 feature to Windows and Linux.
 31/03/2024: Updated FFmpeg, vvenc, libopus and others.
 19/03/2024: Updated FFmpeg, vvenc, libopus and others. Official commit set native VVC decoder is experimental, now decodes default VVC video by using external libvvdec.
 04/03/2024: Updated FFmpeg, vvenc, vvdec, libopus and others. Added libdvdnav and libdvdread, especially libdvdcss to Windows & Linux. Switched from external VVC decoder (libvvdec) to native VVC decoder by removing experimental.
