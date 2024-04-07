@@ -28,9 +28,9 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 
 [Arch Linux MPV VVCEasy version x64](https://mega.nz/file/D9dAyKRA#ym6oYWtWzABoLWrzkw6SdKjh7F7eEtk_eVMlI9dLuJc)
 
-[Android API 29 .APK Debug (Recommended)](https://mega.nz/file/P9USgJ7Y#jHdXXciF9HLtNPHVaEn4miydETTMVwUO1PPipYEsjl0)
+[Android API 29 .APK Debug (Recommended)](https://mega.nz/file/r4cExARB#7-g9_vBlY2L0c59dM7xJ3SWP2Lm8D4rbQti4NMRVnsI)
 
-[Android API 29 .APK Release unsigned](https://mega.nz/file/v4M2ja6K#IQ8OwbLnRBZ7QmIzv8p9gG2rb52I_Ggss1LtYlozcEs)
+[Android API 29 .APK Release unsigned](https://mega.nz/file/j81yVKQJ#3tbBL2wHSlW-gvH1eKNPtwOoiqMwIoEx8dXijymb7iM)
 
 # Official MPV VVC native decoder implementation
 
@@ -53,6 +53,7 @@ Switched native VVC decoder back to external VVC decoder of libvvdec after nativ
 Please check the changelog before you download the new version.
 
 ```
+07/04/2024 - Fixed the bug of Android MPV VVCEasy builds by allowing & showing permission of Files and media since Android 13 to access all full of files, also older than Android 13 is still fine.
 07/04/2024 - Updated Android MPV VVCEasy latest build with FFmpeg for up to 7.0 with nightly, vvdec and others. Removed libxml2 for configuration and compilation error for using latest version and NDK, so next time or some times I'll put libxml2 back when problem is solved. Downgraded from mbedtls v3 to v2 to make sure include "mbedtls/certs.h" is found during FFmpeg compiling.
 07/04/2024 - Updated Windows MPV/MPV.NET/MPV LIB VVCEasy build with FFmpeg for up to 7.0 with nightly, MediaInfo and others.
 04/04/2024 - Updated FFmpeg latest with MPV VVCEasy Linux latest version, vvdec and others.
@@ -126,8 +127,8 @@ On Windows, there is available MPV.NET custom build on this download. You can ha
 
 # SHA256 SUMS
 ```
-358bdaca1461eadf4e514e0d13f1adf6512591d9a6069f043759d5161254c862  MPV-VVCEasy-API29debug.apk
-8165f7eb73b06a958c1f1991037d533bef8fc94834dd274c62fb940b3eab7842  MPV-VVCEasy-API29release-unsigned.apk
+ee5d8b2ebdda7e9bacfe4a9dd2ce199e96f2a16ac56a8840190a5c66d86e2471  MPV-VVCEasy-API29debug.apk
+cc4ba84d91b91edda102bc0086fbfbfdee1a8b1dd9196bc76edd00101fdaff10  MPV-VVCEasy-API29release-unsigned.apk
 0543c9819db08d777386a616ba7317ada11109ababee18a7b7ea526de7f4c69d  MPV-VVCEasy-Windows-x64.7z
 2aca485d75d4a300cb5ef50230f754f3737a1557565b058298061aa87a416b3c  MPV.NET-VVCEasy-Windows-x64.7z
 fb320719d3b524cb79cfdfc079a2a7c39136df5a8fbdd747006ca747cfc6a02d  MPVLIB-VVCEasy-Windows-x64.7z
