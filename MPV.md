@@ -32,10 +32,6 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 
 [Android API 29 .APK Release unsigned](https://mega.nz/file/v4M2ja6K#IQ8OwbLnRBZ7QmIzv8p9gG2rb52I_Ggss1LtYlozcEs)
 
-[Android API 29 .APK Debug with gpu-next](https://mega.nz/file/3p0zyCCI#BRmCY58lwikvck0gbcyFX3IvcGu_7wxZn-mWezaD1uk)
-
-[Android API 29 .APK Release with gpu-next](https://mega.nz/file/C5dyXbpJ#ta2DouVYLOaXeZ6VW9fLqIm7a3I2AoFxWlD-unG18T4)
-
 # Official MPV VVC native decoder implementation
 
 It started at January 4 2024 when the native VVC decoder is released on FFmpeg, but it was experimental without IBC (Intra Block Copy).
@@ -132,8 +128,6 @@ On Windows, there is available MPV.NET custom build on this download. You can ha
 ```
 358bdaca1461eadf4e514e0d13f1adf6512591d9a6069f043759d5161254c862  MPV-VVCEasy-API29debug.apk
 8165f7eb73b06a958c1f1991037d533bef8fc94834dd274c62fb940b3eab7842  MPV-VVCEasy-API29release-unsigned.apk
-6cca9e73a23a376f704f60e716d1ecc206c290e908b42aab341353f304dacc58  MPV-VVCEasy-API29debug-gpunext.apk
-55a4182bf4a0bec8b0236e7de3c2f169a4df33735b842b083951647dbf5bfe64  MPV-VVCEasy-API29release-unsigned-gpunext.apk
 0543c9819db08d777386a616ba7317ada11109ababee18a7b7ea526de7f4c69d  MPV-VVCEasy-Windows-x64.7z
 2aca485d75d4a300cb5ef50230f754f3737a1557565b058298061aa87a416b3c  MPV.NET-VVCEasy-Windows-x64.7z
 fb320719d3b524cb79cfdfc079a2a7c39136df5a8fbdd747006ca747cfc6a02d  MPVLIB-VVCEasy-Windows-x64.7z
