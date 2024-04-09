@@ -6,7 +6,7 @@ sudo apt install build-essential cmake nasm autoconf pkg-config \
 python3-setuptools ninja-build python3-pip libtool git wget xxd -y && \
 sudo pip3 install meson
 
-if [ ! -d FFmpeg-FixVVC ]; then
+if [ ! -d FFmpeg-VVC ]; then
 git clone --depth=1 https://github.com/MartinEesmaa/FFmpeg-VVC
 else
 git -C FFmpeg-VVC pull

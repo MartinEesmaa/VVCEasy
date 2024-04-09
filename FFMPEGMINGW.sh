@@ -9,7 +9,7 @@ else
 cd buildffmpegwin
 fi
 
-if [ ! -d FFmpeg-FixVVC ]; then
+if [ ! -d FFmpeg-VVC ]; then
 git clone --depth=1 https://github.com/MartinEesmaa/FFmpeg-VVC
 else
 git -C FFmpeg-VVC pull
