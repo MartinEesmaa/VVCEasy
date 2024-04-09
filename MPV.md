@@ -24,9 +24,9 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 
 [Windows MPVLIB VVCEasy version x86_64-v3 native](https://mega.nz/file/24UggbYD#CsTqPGLa4nEfs_9UheV0auISenDXqFdu465PZfRqozY)
 
-[Linux MPV VVCEasy version x64](https://mega.nz/file/z1NhWRQA#6CmjjMHzLjVPzHDLNmJuIqAO-mxeWWq7dAJEkoMsbwM)
+[Linux MPV VVCEasy version x64](https://mega.nz/file/P1cFSLBA#1puDExJEG-sQOvv-BzLpUzRhcQp78dkoB8lma1k6AcQ)
 
-[Arch Linux MPV VVCEasy version x64](https://mega.nz/file/70cDiDwD#y8027GAfyB2C-lI5diee5SltaG5cL2UbeM0g-yRWe7g)
+[Arch Linux MPV VVCEasy version x64](https://mega.nz/file/2pFDTSzT#GwoVQ0u6RStUwjk3rc5LkIzLQgmSDMhgV1Xk8WMeQ-w)
 
 [Android API 29 .APK Debug (Recommended)](https://mega.nz/file/r4cExARB#7-g9_vBlY2L0c59dM7xJ3SWP2Lm8D4rbQti4NMRVnsI)
 
@@ -53,6 +53,7 @@ Switched native VVC decoder back to external VVC decoder of libvvdec after nativ
 Please check the changelog before you download the new version.
 
 ```
+09/04/2024 - Removed unnecessary shared object files of libgbm, libm, libc and libgcc_s on Linux and Arch Linux AppImages, but now standard Linux AppImage works for all Linux distributions without segmentation fault and Arch Linux AppImage works for Arch based only.
 08/04/2024 - Updated FFmpeg for up to 7.0 with nightly latest with MPV VVCEasy Linux latest version and others.
 07/04/2024 - Fixed the bug of Android MPV VVCEasy builds by allowing & showing permission of Files and media since Android 13 to access all full of files, also older than Android 13 is still fine.
 07/04/2024 - Updated Android MPV VVCEasy latest build with FFmpeg for up to 7.0 with nightly, vvdec and others. Removed libxml2 for configuration and compilation error for using latest version and NDK, so next time or some times I'll put libxml2 back when problem is solved. Downgraded from mbedtls v3 to v2 to make sure include "mbedtls/certs.h" is found during FFmpeg compiling.
@@ -135,8 +136,8 @@ cc4ba84d91b91edda102bc0086fbfbfdee1a8b1dd9196bc76edd00101fdaff10  MPV-VVCEasy-AP
 fb320719d3b524cb79cfdfc079a2a7c39136df5a8fbdd747006ca747cfc6a02d  MPVLIB-VVCEasy-Windows-x64.7z
 8d486291a371c8663e7ddd1d9845cf54f81c316a9c795333a5b490f7621a6cb3  MPV-VVCEasy-Windows-NativeX64.7z
 003dbdf1cd6639ff906c2c17dde69a16c1df7fa565cf310ba014ea24b5b330a5  MPVLIB-VVCEasy-Windows-NativeX64.7z
-2d589d25e9b9c0e791562e6a216424691a8ec4be55571cf9834b0021b035dfea  MPV-VVCEasy-Linux-x64.7z
-cafacbc60bd379fc4e2519ae4c1515b96e1192a7396ade33062e4b35ae6c1585  MPV-VVCEasy-ArchLinux-x64.7z
+2ec70f79011e341c92f06485c752e56311107e575d9d3fda9866a6fdba141f4e  MPV-VVCEasy-Linux-x64.7z
+ab23b1928069bd3584297dae1d90a95fe2910f91936766ddfa5bdafd53c8a300  MPV-VVCEasy-ArchLinux-x64.7z
 ```
 
 # Build MPV Android with VVC and xHE-AAC:
