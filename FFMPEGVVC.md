@@ -2,9 +2,9 @@
 
 Windows, Mac and Linux (Preview of VVC video in FFplay):
 
-![ffmpegplaypreview](https://user-images.githubusercontent.com/88035011/169019033-bcb7fcc7-a196-4436-a396-61db3071280c.png)
+![ffmpegplaypreview](Screenshots/windows-ffplay_vvceasy.png)
 ![macos_vvceasy_ff](https://user-images.githubusercontent.com/88035011/169693891-52271091-eb92-4198-82eb-2ad38296a917.png)
-![linux_vvceasy_ff](https://user-images.githubusercontent.com/88035011/169693886-3f8e97da-ad57-46ab-b3eb-45e5ff4e687d.png)
+![linux_vvceasy_ff](Screenshots/linux-ffplay_vvceasy.png)
 
 # Play video file
 
