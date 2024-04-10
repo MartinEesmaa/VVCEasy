@@ -2,7 +2,7 @@
 
 # MPV Windows/Linux/Android Player (libvvdec + xHE-AAC support)
 
-MPV Windows/Linux/Android Player (libvvdec + xHE-AAC support) can play your VVC decoded video file and mixed MP4 container with VVC video codec + audio.
+MPV Windows/Linux/Android Player (libvvdec + xHE-AAC support) can play your VVC decoded video file and mixed MP4 container with VVC video codec + audio, also it plays xHE-AAC audio with Fraunhofer FDK library.
 
 Screenshot preview, see top-left information of toggle stats on Windows/Linux/Android device:
 
@@ -181,6 +181,6 @@ Save the file in nano editor, when you finished removing `#ifdef __ANDROID` line
 
 Continue follow instructions to build your own MPV build:
 
-https://github.com/mpv-android/mpv-android/blob/master/buildscripts/README.md
+https://github.com/MartinEesmaa/mpv-android-vvc/blob/master/buildscripts/README.md
 
 -   Martin Eesmaa
