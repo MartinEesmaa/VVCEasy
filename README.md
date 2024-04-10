@@ -95,6 +95,8 @@ You can test Martin Eesmaa's encoded movies of VVC video codec and follow README
 
 [Tears of Steel VVC](https://mega.nz/folder/64swUYxI#WE5njn2aX6-6fxypNC3gtA)
 
+[Martin Eesmaa's VVC sample videos](https://mega.nz/folder/C5lFhALL#5fRQfHN4ulzdaq-B33WQ7w)
+
 # VLC InterDigital VTM VVC Plugin
 
 I have great news. VLC latest version worked out well of Inter Digital VTM plugins. On o266player, there were some problems on my computer for one reason...
