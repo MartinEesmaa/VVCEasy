@@ -105,7 +105,7 @@ Please check the changelog before you download the new version.
 
 # Limitations & Tips
 
-MPV Android libvvdec app requires your system type of ARM64 (aarch64), x86 (i686), ARMv7 (armeabi-v7a) and x86_64 to run on Android or Windows requires to run x64.
+MPV Android libvvdec app requires your system type of ARM64 (aarch64), x86 (i686), ARMv7 (armeabi-v7a) and x86_64 to run on Android, Windows requires to run x64 or Linux requires to run x64.
 
 Windows/Linux/Android MPV Player doesn't work seek duration of VVC decoded file only, but only mp4 video container mixed with VVC video codec is only seek supported, including audio & subtitle too.
 
@@ -117,7 +117,11 @@ AppImage needs required fuse installed of your Linux distribution on your comput
 
 Some Linux distributions may not work for AppImage, which may result segmentation fault. Builded & tested on Ubuntu 22.04.2.
 
-If you're using Arch Linux, please download the Arch Linux AppImage version.
+About Linux MPV VVCEasy AppImage problem before solution: The problem was that I put four shared object files of libgbm, libm, libc and libgcc_s on both AppImages, which makes some Linux distributions problem
+
+Solution: Please update latest version of Linux or Arch Linux MPV VVCEasy AppImage, because I removed four shared object files of libgbm, libm, libc and libgcc_s to make all Linux distributions work on standalone Linux AppImage, also includes Arch Linux AppImage can work for only all Arch based operating systems.
+
+If you're using Arch Linux or Arch based, please download the Arch Linux AppImage version. You can still use standalone Linux AppImage on Arch Linux or Arch based systems.
 
 ### Tips
 
