@@ -52,7 +52,7 @@ DVBPSI_DIR = DVBPSI source files
 
 ### Windows
 
-You need the CMAKE GUI, Visual Studio 2017 or newer, VLC SDK, [libvtmdec](https://vcgit.hhi.fraunhofer.de/delagrangep/VVCSoftware_VTM/-/tree/VTM-22.2-MT) precompiled shared dll in lib folder + sources, dvbpsi source and VLC source files of the desktop version. You need to modify vlc_threads.h, before compile.
+You need the CMAKE GUI, Visual Studio 2017 or newer, [VLC SDK Win64 3.0.9.2](https://download.videolan.org/pub/vlc/3.0.9.2/win64/) or [latest version](https://download.videolan.org/pub/vlc) (choose zip or 7z only), VLC source files .tar.xz, [libvtmdec](https://vcgit.hhi.fraunhofer.de/delagrangep/VVCSoftware_VTM/-/tree/VTM-22.2-MT) precompiled shared dll in lib folder + sources, dvbpsi source and VLC source files of the desktop version. You need to modify vlc_threads.h, before compile.
 
 vlc_threads.h can be found in VLC folder/sdk/include/vlc/plugins. Search `val = poll(fds, nfds, timeout);` and comment the only one file, that's it.
 
@@ -62,13 +62,23 @@ Build Decoder Plugin, see screenshot of CMAKE GUI:
 
 ![decoderplugin](https://user-images.githubusercontent.com/88035011/175105846-646ab744-ef1f-45b3-a084-a2f7ad3464a2.png)
 
+Before building TS demuxer plugin, please download source code of VLC 3.0.9.2 or latest version following .tar.xz file container and decompress to vlc-3.0.9.2/src or latest version like example vlc-3.0.2.0/src:
+
+https://download.videolan.org/pub/vlc/3.0.9.2/vlc-3.0.9.2.tar.xz
+
+For latest version, you need to find latest version by looking ascending:
+
+https://download.videolan.org/pub/vlc
+
 Build TS Demuxer Plugin, see screenshot of CMAKE GUI:
 
 ![tsdemuxplugin](https://user-images.githubusercontent.com/88035011/175105943-1f9e41ad-2f20-451c-9123-f163252c7106.png)
 
 ### Linux
 
-You need CMAKE GUI, build-essentials, VLC SDK, [libvtmdec](https://vcgit.hhi.fraunhofer.de/delagrangep/VVCSoftware_VTM/-/tree/VTM-22.2-MT) sources, dvbpsi source and VLC source files of the desktop version. You need to modify vlc_threads.h, before compile.
+You need CMAKE GUI, build-essentials, VLC SDK (you have to get from Windows build of 7z or zip compressed file that contains `sdk/lib` and `sdk/include` folders), [libvtmdec](https://vcgit.hhi.fraunhofer.de/delagrangep/VVCSoftware_VTM/-/tree/VTM-22.2-MT) sources, dvbpsi source and VLC source files of the desktop version. You need to modify vlc_threads.h, before compile.
+
+Please double-click downloaded compressed file and decompress VLC Windows SDK build to anywhere folder for example "~/vlc-3.0.9.2" or you can use CLI like 7-Zip `7z x vlc-3.0.9.2-win64.7z -o$HOME`.
 
 vlc_threads.h can be found in VLC folder/sdk/include/vlc/plugins. Search `val = poll(fds, nfds, timeout);` and comment the only one file, that's it.
 
@@ -79,11 +89,47 @@ Compiled file could be found in lib folder in libvtmdec.
 
 ```
 mkdir build && cd build
-cmake -DBUILD_SHARED_LIBS=1 ..
+cmake -DCMAKE_BUILD_TYPE=Release ..
 make -j
 ```
 
 Before build Decoder Plugin, you need to find libvlccore in Linux.
+
+### Option 1 (recommended):
+
+To find libvlccore, you can simply install VLC by your package distribution like apt, pacman or Snap.
+
+Most Linux package version can be found libvlccore:
+
+```
+/usr/lib/x86_64-linux-gnu/libvlccore.so.9.0.0
+```
+
+On Snap store version, the latest version of VLC can be found, but the numbers are different:
+
+```
+/snap/vlc/3777/usr/lib/libvlccore.so.9.0.1
+```
+
+If you can't find it, you can find libvlccore on `/` folder.
+
+```
+sudo find / -type f -name 'libvlccore.so*'
+```
+
+You can pick Linux package or Snap version, if unsure pick Linux package standalone or only that you installed on Linux package or Snap version.
+
+Once you've found, 
+
+### Option 2 (optional):
+
+If you don't want to find libvlccore and you don't want to get libvlccore installed on Linux package or Snap package, you can build source code of VLC shipped inside libVLC. 
+
+Instructions can be found there of LibVLC:
+
+https://wiki.videolan.org/LibVLC#Compiling
+
+If option one or/and two didn't work, you can create issue to [VLC Forums](https://forum.videolan.org) or/and VVCEasy, so the VLC community or I/we can help you to solve your problem.
 
 dvbpsi build requires of TS Demuxer Plugin:
 
@@ -121,6 +167,6 @@ The VVC video file cannot loaded by newest version of VLC 4.0.0-dev, because it 
 
 For more information about VLC 4.0.0-dev see: https://www.theverge.com/2021/2/12/22279750/vlc-4-0-new-user-interface-videolan-media-player-video-music-movie-database-web-player
 
-I tried to build two DLL files on VLC 4.0.0 SDK, but the compiler failed, so you must use VLC 3.0.9.2 and latest of VLC 3 version branch.
+I tried to build two DLL files on VLC 4.0.0 SDK, but the compiler failed, so you must use VLC 3.0.9.2 or latest of VLC 3 version branch.
 
 -   Martin Eesmaa
