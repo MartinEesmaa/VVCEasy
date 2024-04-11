@@ -139,7 +139,7 @@ See [MPV.md](MPV.md).
 
 For more information about LAVFilters Windows VVC version.
 
-See [LAVFilter folder](LAVFilter/README.md)
+See [LAVFilters folder](LAVFilters/README.md)
 
 # Deprecated builds
 
