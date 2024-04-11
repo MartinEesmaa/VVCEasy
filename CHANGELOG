@@ -1,0 +1,87 @@
+VVCEasy versions of changelog:
+
+To view or download releases with changelogs, please go to https://github.com/MartinEesmaa/VVCEasy/releases
+
+This is local changelog file.
+
+v2.0.0 Release (June 22, 2023):
+
+It is finally here for VVCEasy version 2. Sorry for waiting release yet.
+
+- Added Windows XP compatibility to Fraunhofer HHI vvenc/vvdec binaries.
+- Added Windows 32-bit, Linux aarch64 and Android all architecture builds of vvenc and vvdec.
+- Improved and complete static of FFmpeg VVCEasy build from my current repository, the FFmpeg-FixVVC is no longer - maintained and it's old.
+- Updated Mac OS builds, but for FFmpeg Mac OS version not yet and will be released later for future version.
+- Updated Windows MPV build using my forked repository of mpv-winbuild-cmake on my Arch Linux cross compilation.
+- Added LAVFilters VVCEasy build for Windows DirectShow users to play VVC video by an external player of Windows build.
+- Updated all vvenc and vvdec binaries.
+
+**Full Changelog**: https://github.com/MartinEesmaa/VVCEasy/compare/v.1.0.1...v2.0.0
+
+v1.0.1 Release (July 2, 2022):
+
+- Added Windows x64 build of MPV Player
+- Added Android vvdecapp applications (used in Termux app)
+
+v1.0.0 Release (June 23, 2022):
+
+- MPV OpenVVC is replaced by MPV libvvdec, seek support of mp4.
+- Add libvvenc to FFmpeg VVC, thanks @IsaMorphic!
+- Add build instructions for Windows & Linux users to build VLC InterDigital Plugin itself.
+- Add tests of videos in README.md
+
+v0.9.2 Beta (June 18, 2022):
+
+- i686/x86 support on Android MPV Player (OpenVVC plugin)
+- Updated VVC encoder of three operating systems
+- Updated vvDecWebPlayer
+- Added important note & build for Mac OS in FFMPEGVVC.md
+- Fix README instructions
+- Added Doom9 & Imgur account link in SOCIALMEDIA.md
+- Added some changes
+
+v0.9.0 Beta (May 24, 2022):
+
+- Added FFmpeg VVDec support + seek support (audio support required mp4box) FFmpeg VVC: FFMPEGVVC.md
+- Added Android MPV Player (OpenVVC support) MPV VVC: MPV.md
+- Added Linux support of InterDigital VLC VTM Plugin VLC VTM: INSTALLVLCPLUGIN directory
+- Updated to VVC systems
+- Added social media links on SOCIALMEDIA.md
+- Added some licenses & credits in README
+- Removed o266player (reason: The commits of o266player were longer than one year)
+
+v0.5.0 Beta (February 25, 2022):
+
+First VVCEasy beta version.
+
+- Batchfile (Windows version is ready)
+- C# (Might not be quite ready, but next release I'm sure... malfunction mode)
+
+On MacOS version should be very soon...
+
+Virustotal:
+https://www.virustotal.com/gui/file/fd310637f71cd0f956929d3838bbb523eb0fd03092e18ba3772b95dc9cd1f35b
+https://www.virustotal.com/gui/file/ff2cd6d2147aa0662072821cf6fa48c7bdf49266f682cc0aa755df67d9c1e301
+https://www.virustotal.com/gui/file/8c2f230c0d800846d9c127d4931d13e04ce98a384b95280fdca8b50ece18a772
+
+Hybrid Analysis:
+https://www.hybrid-analysis.com/sample/fd310637f71cd0f956929d3838bbb523eb0fd03092e18ba3772b95dc9cd1f35b
+https://www.hybrid-analysis.com/sample/ff2cd6d2147aa0662072821cf6fa48c7bdf49266f682cc0aa755df67d9c1e301
+https://www.hybrid-analysis.com/sample/8c2f230c0d800846d9c127d4931d13e04ce98a384b95280fdca8b50ece18a772
+
+v0.0.1 Alpha Windows only (December 23, 2021):
+
+- First pre-release.
+- Some settings won't work.
+- Compiled using Advanced BAT to EXE converter.
+
+Windows Executable file SHA256: 16A5686C80B9C894222A84BC6F3FFC2E1A91AAB9CF30EB504959D0718A0F9C80
+7z archived file SHA256: C5C904E4C8B7FB8F98C540E8140AF6CF9F9A2B562428CFD30C0F8EFABAE49FAB
+
+Virustotal:
+.EXE: https://www.virustotal.com/gui/file/16a5686c80b9c894222a84bc6f3ffc2e1a91aab9cf30eb504959d0718a0f9c80
+.7Z: https://www.virustotal.com/gui/file/c5c904e4c8b7fb8f98c540e8140af6cf9f9a2b562428cfd30c0f8efabae49fab
+
+After installation, the File Explorer will launch automatically path from your Program Files. Right click "RUNVVCEasy.bat" and click send to desktop (create shortcut) and run as admin.
+
+Changelogs written by Martin Eesmaa
