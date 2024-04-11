@@ -1,6 +1,6 @@
 # Android vvdec/uvg266 applications (Termux app)
 
-Requirements: Termux app with apk or F-Droid app. For uvg266/vvdecapp pipe, require FFmpeg on Termux app.
+Requirements: Termux app with apk or F-Droid app. For uvg266/vvdecapp pipe, it requires FFmpeg installed on Termux app.
 
 See the screenshot of vvdecapp in Termux app:
 
@@ -50,9 +50,9 @@ ffmpeg -i example.mp4 -f yuv4mpegpipe -pix_fmt yuv420p10 -strict -1 - | uvg266 -
 
 For 8-bit uvg266 application, remove `-strict -1`, change from `yuv420p10` to `yuv420p` and remove `--input-bitdepth-10`.
 
-When you want make device sleep during uvg266 encoding, tap Acquire wake lock on Termux notification.
+When you want make device sleep during uvg266 encoding, tap **Acquire wake lock** on Termux notification.
 
-If uvg266 froze itself for a couple minutes without printing info, means finished, tap CTRL + C.
+If uvg266 froze itself for couple minutes without printing the info, it means finished, tap CTRL + C.
 
 VVDEC might not decode with some uvg266 options (example uvg266 presets unplayable with vvdec: preset placebo & lossless.
 
