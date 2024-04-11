@@ -4,6 +4,26 @@ To view or download releases with changelogs, please go to https://github.com/Ma
 
 This is local changelog file.
 
+v2.5.0 Release (April 11, 2024):
+
+- New FFmpeg VVCEasy builds of Windows & Linux using my forked repository from BtBn/FFmpeg-Builds and up to 7.0 nightly latest.
+- No longer broken ffplay on Linux.
+- Added DVD-Video Demuxer (libdvdnav & libdvdread), Chinese AVS encoder, Vidvox Hap with Snappy, CD reader (libcdio), AMR-WB encoder, iLBC encoder (Windows only), MP3 Shine encoder, bs2b and Google LC3 features to Windows & Linux FFmpeg VVCEasy builds.
+- Added XPSNR filter support to FFmpeg VVCEasy builds.
+- Updated VLC VTM Decoder of VVC Plugins for Windows & Linux.
+- Updated Windows LAVFilters for up to 0.79.2 with new FFmpeg and vvdec.
+- Updated instructions of README and other markdown files.
+- Updated Android uvg266 builds.
+- New Mac OS FFmpeg VVCEasy build is now back.
+- Updated VVC binaries, FFmpeg VVCEasy & MPV VVCEasy builds.
+- Added & updated MPC-HC with pre-installed LAVFilters VVCEasy version and yt-dlp support.
+- Added & fixed Linux & Arch Linux of MPV VVCEasy builds for AppImages, but later removed unnecessary shared objects and it works all Linux distributions in one appimage of main Linux.
+- Removed Android MPV VVCEasy of gpu-next builds, now they're already support since 24th October 2023 in main builds.
+- Updated Android MPV VVCEasy builds, but libxml2 is skipped due to error configuration & compilation.
+- New added native Windows MPV VVCEasy x86_64-v3 build.
+- Added GUI application of lists in README.
+- Updated FFmpeg & MPV VVCEasy screenshots except Mac OS build screenshot of FFmpeg VVCEasy.
+
 v2.0.0 Release (June 22, 2023):
 
 It is finally here for VVCEasy version 2. Sorry for waiting release yet.
