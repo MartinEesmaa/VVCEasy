@@ -3,8 +3,19 @@ set welcometitle=Martin Eesmaa / VVCEasy
 set version=v2.5.0
 set versionname=Pretty big greatest ever!
 set vvceasydate=11 April 2024
+IF EXIST "%PROGRAMFILES(X86)%" (set bit=x64) ELSE (set bit=Win32)
 pushd "%~dp0"
 cls
+
+ver | find "DOS" > nul
+if %errorlevel% equ 0 (
+    goto doserror
+) else (
+    ver | find "95" > nul | goto error
+    ver | find "98" > nul | goto error
+    ver | find "Millennium" > nul | goto error
+    ver | findstr /i "5\.0\." > nul && goto error
+)
 
 REM === check and get the UAC for administrator privilege ===
 REM === code from https://sites.google.com/site/eneerge/scripts/batchgotadmin
@@ -66,13 +77,13 @@ echo 4. Exit
 echo 5. Install/Test path environment.
 echo 6. Install quickly through Anaconda (Python distribution) for FFmpeg (Windows)
 echo 7. Install/Update VVdec Web Player
-echo 8. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)
+echo 8. Install Windows VVC binaries
 echo 9. Install vvDecPlayer from BitMovin
 echo 10. Install/Update VLC VTM Plugins (Windows/Linux x64 of VLC plugins by Inter Digital Inc)
 echo 11. Install FFmpeg VVDec support.
 echo 12. Install MPV Windows/Android (libvvdec plugin)
 echo 13. Tests of VVC videos
-set /p VVCSTART=Number:
+set /p VVCSTART=Number: 
 
 if "%VVCSTART%" == "1" goto encodestart
 if "%VVCSTART%" == "2" goto decodestart
@@ -98,7 +109,7 @@ echo Welcome to VVC encoder.
 echo What do you like to encode to VVC?
 echo Before we move to settings quality, is your video lossy or lossless?
 echo 1. Lossy (example YouTube videos, Web videos, lossy compressed videos, and other webs)
-echo 2. Lossless (example XIPH Media, Camera uncompressed (MOV/MP4/AVI), Apple ProRes and others uncompressed files)
+echo 2. Lossless (example XIPH Media, Camera uncompressed RAW video, Apple ProRes and others uncompressed files)
 echo 3. Go back to the menu.
 set /p vvencquestion1=Number: 
 if "%vvencquestion1%" == 1 goto losslessvvenc2
@@ -167,7 +178,7 @@ echo After transcoding, your transcoded file should be: C:\Program Files\VVCEasy
 echo Note, if you are using portable, like your git cloned VVCEasy or downloaded source files, go to your Downloads folder and select VVCEasy.
 echo Portable won't work probably, you need copy from your Downloads folder\VVCEasy into Program Files\VVCEasy.
 echo 1. YUV (lossy video VVC)
-echo 2. Y4M (lossless video VVC)
+echo 2. Y4M (lossless video VVC, recommended)
 set /p decodestart1=Number: 
 if "%decodestart1%" == 1 goto DECODESTARTFROMVVCTOYUV
 if "%decodestart1%" == 2 goto DECODESTARTFROMVVCTOY4M
@@ -203,7 +214,7 @@ cls
 title INSTALL/TEST PATH ENVIRONMENT
 echo Martin Eesmaa is testing your paths, that you installed programs in PATH. Not sure, what is path?
 echo You can go here for link: https://stackoverflow.com/questions/4910721/python-on-cmd-path
-echo Also you can also search "What is PATH in Windows?" in DuckDuckGo or SearX.
+echo Also you can also search "What is PATH in Windows?" in DuckDuckGo, Google, SearX or your favorite search engine.
 echo Are you ready to test? (Y/N) or type "I" to install path environment.
 set /p readytestbefore=Answer: 
 if "%readytestbefore%" == Y goto nowtestingtime
@@ -220,8 +231,7 @@ ffmpeg
 ffplay
 wget
 git
-echo You need exit in Python for typing "exit()".
-python
+python --version
 echo Did that work in your PATH? Y/N?
 set /p testdidworkq=Answer: 
 if "%testdidworkq%" == Y goto youdidworktest
@@ -264,9 +274,9 @@ goto test
 
 :exit
 cls
-title Have a wonderful day!
-echo Have a wonderful day! Thank you for using VVCEasy. :)
-:::    _   _                 _                      
+title Have a nice day!
+echo Have a nice day! Thank you for using VVCEasy! :)
+:::     _   _                 _                      
 :::    | | | |               | |                     
 :::    | |_| |__   __ _ _ __ | | ___   _  ___  _   _ 
 :::    | __| '_ \ / _` | '_ \| |/ / | | |/ _ \| | | |
@@ -294,9 +304,9 @@ echo Have a wonderful day! Thank you for using VVCEasy. :)
                                                                         
 for /f "delims=: tokens=*" %%A in ('findstr /b ::: "%~f0"') do @echo(%%A
 echo.
-echo Copyright (C) 2021-2022 Martin Eesmaa
+echo Copyright (C) 2021-2024 Martin Eesmaa
 echo.
-echo ------------ END OF THE PROGRAM ----------------
+echo ------------ END OF WINDOWS BATCHFILE PROGRAM ----------------
 timeout 5 /nobreak
 exit
 
@@ -375,26 +385,36 @@ echo UPDATING VVDEC WEB PLAYER...
 cd vvdecWebPlayer
 git pull
 cd ../
-echo Your up to date is now latest.
+echo vvdecWebPlayer is now updated.
 echo Returning to main menu...
 timeout 3
 goto start
 
 :decompresswin7z
 cls
+title Decompress Windows VVC?
+echo Would you like to decompress Windows VVC binaries? Y/N?
+set /p decompwinvvc=Answer: 
+if "%decompwinvvc%" == Y goto decompresswin7z1
+if "%decompwinvvc%" == N goto start
+if "%decompwinvvc%" == y goto decompresswin7z1
+if "%decompwinvvc%" == n goto start
+
+:decompresswin7z1
 title WindowsVVC.7z (decompressing)
 echo Decompressing........
 cd WindowsVVC
-7z x WindowsVVC.7z
-certutil -hashfile vvencapp.exe SHA512
-certutil -hashfile vvdecapp.exe SHA512
-certutil -hashfile vvencFFapp.exe SHA512
-certutil -hashfile vvencinterfacetest.exe SHA512
-certutil -hashfile vvenclibtest.exe SHA512
-rename SHA512SUMS SHA512SUMS.txt
-SHA512SUMS.txt
-echo Now please make sure double check that needs to be same hash. If it matches hash same as .exe of SHA512SUMS.txt and CertUtil. That means good.
-echo If the hashes are not matched correctly, please contact and create issue to Martin Eesmaa/VVCEasy on GitHub for your own problem.
+7z x WindowsVVC.7z -i!%bit% -aoa
+certutil -hashfile %bit%\vvdecapp.exe SHA256
+certutil -hashfile %bit%\vvencapp.exe SHA256
+certutil -hashfile %bit%\vvencFFapp.exe SHA256
+certutil -hashfile %bit%\vvencinterfacetest.exe SHA256
+certutil -hashfile %bit%\vvenclibtest.exe SHA256
+type WindowsVVC.sha256 | findstr %bit%
+echo Now please make sure double check that needs to be same hash. If it matches hash same as .exe of WindowsVVC.sha256 and CertUtil. This means good.
+echo If the hashes are not matched correctly, please try again or manually extract the compressed file using 7-Zip.
+echo.
+echo Otherwise, please create issue to Martin Eesmaa/VVCEasy on GitHub for your own problem.
 pause
 echo Thank you for decompressing WindowsVVC.7z... Now back to the menu.
 timeout 3
@@ -502,7 +522,7 @@ echo You need to run Windows version of Windows Vista / Windows Server 2008 to p
 echo Windows XP can't load VTM plugins, but other plugins work.
 echo System type only = x64
 echo Linux is now available, see Linux installation at: https://github.com/MartinEesmaa/VVCEasy/tree/master/INSTALLVLCPLUGIN#for-linux-users
-echo Current version = 3.0.16, latest version 3.0.17-4 (it will work same latest version)
+echo Available: VLC 3.0.9.2 and later latest version 3 (it will work same latest version 3)
 echo Would you like to install VTM plugins to your VLC Media Player? Y/N?
 set /p vlcvtmyesorno=Answer: 
 if "%vlcvtmyesorno%" == Y goto installvlcvtmpluginnow
@@ -514,9 +534,25 @@ if "%vlcvtmyesorno%" == n goto start
 title Installing of VLC VTM Plugins by Inter Digital Inc... (Compiled by Martin Eesmaa)
 echo Installing VLC VTM Plugins by Inter Digital Inc... (Compiled by Martin Eesmaa)
 cd INSTALLVLCPLUGIN
-copy libvtmdec.dll "%programfiles%\VideoLAN\VLC\plugins\codec" /y
-copy libvvcdecoder_plugin.dll "%programfiles%\VideoLAN\VLC\plugins\codec" /y
-copy libvvctsdemux_plugin.dll "%programfiles%\VideoLAN\VLC\plugins\demux" /y
+:installingvlcvtmplugins
+if exist "%programfiles%\VideoLAN\VLC" (
+    copy libvtmdec.dll "%programfiles%\VideoLAN\VLC\plugins\codec" /y
+    copy libvvcdecoder_plugin.dll "%programfiles%\VideoLAN\VLC\plugins\codec" /y
+    copy libvvctsdemux_plugin.dll "%programfiles%\VideoLAN\VLC\plugins\demux" /y
+) else (
+    :tryagainafterinvalidvlc
+    echo Please make sure your VLC is installed on your computer.
+    echo After installing VLC, you can try again by pressing number one.
+    echo.
+    echo 1: Try again
+    echo 2: Go back to main menu
+    set /p vlcnotexisttryagain=Answer: 
+    if "%vlcnotexisttryagain%" == "1" goto installingvlcvtmplugins
+    if "%vlcnotexisttryagain%" == "2" goto start
+    echo Invalid input. Please enter a number 1 or 2.
+    pause
+    goto tryagainafterinvalidvlc
+)
 cd ../
 taskkill /im vlc.exe
 echo Three dll files are patched to your VLC Media Player.
@@ -569,3 +605,15 @@ echo Press enter to go back menu.
 pause
 goto start
 
+:error
+echo Your Windows version is not supported and outdated which may not work to run with VVC binaries and others too.
+echo This requires for Windows XP and later to use this script.
+pause
+exit
+
+:doserror
+echo DOS is not supported and outdated which may not work to run with VVC binaries and others too.
+echo Also MS-DOS, DOSBox and FreeDOS were also not supported.
+echo This requires for Windows XP and later to use this script.
+pause
+exit
