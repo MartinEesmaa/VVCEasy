@@ -411,12 +411,13 @@ certutil -hashfile %bit%\vvencFFapp.exe SHA256
 certutil -hashfile %bit%\vvencinterfacetest.exe SHA256
 certutil -hashfile %bit%\vvenclibtest.exe SHA256
 type WindowsVVC.sha256 | findstr %bit%
+cd ../
 echo Now please make sure double check that needs to be same hash. If it matches hash same as .exe of WindowsVVC.sha256 and CertUtil. This means good.
 echo If the hashes are not matched correctly, please try again or manually extract the compressed file using 7-Zip.
 echo.
 echo Otherwise, please create issue to Martin Eesmaa/VVCEasy on GitHub for your own problem.
 pause
-echo Thank you for decompressing WindowsVVC.7z... Now back to the menu.
+echo Thank you for decompressing Windows VVC binaries. Now back to the menu.
 timeout 3
 goto start
 
@@ -442,7 +443,7 @@ mkdir BitVVDecPlayerWIN
 cd BitVVDecPlayerWIN
 echo Downloading BitVVDecPlayer (Windows) from Bitmovin, compiled by Martin Eesmaa
 wget https://www.dropbox.com/s/75ouoeadcr2cl53/BitVVDecPlayerWIN.7z
-7z x BitVVDecPlayerWIN.7z
+7z x BitVVDecPlayerWIN.7z -aoa
 del /q BitVVDecPlayerWIN.7z
 vvDecPlayer
 echo Successfully running on BitVVDecPlayer, now if you have any problems, please go to Bitmovin/vvDecPlayer issues of https://github.com/bitmovin/vvDecPlayer/issues
@@ -458,10 +459,9 @@ mkdir BitVVDecPlayerMAC
 cd BitVVDecPlayerMAC
 echo Downloading BitVVDecPlayer (macOS) from Bitmovin, compiled by Martin Eesmaa
 wget https://www.dropbox.com/s/ilsoica7c8dh4hq/BitVVDecPlayerMAC.7z
-7z x BitVVDecPlayerMAC.7z
+7z x BitVVDecPlayerMAC.7z -aoa
 del /q BitVVDecPlayerMAC.7z
-./vvDecPlayer
-echo Successfully running on vvDecPlayer, now if you have any problems, please go to Bitmovin/vvDecPlayer issues of https://github.com/bitmovin/vvDecPlayer/issues
+echo Download completed, please put to macOS and run it, now if you have any problems, please go to Bitmovin/vvDecPlayer issues of https://github.com/bitmovin/vvDecPlayer/issues
 echo If vvDecPlayer won't work probably, it might be issue that you haven't installed Qt on your Mac OS. Please install using code: "brew install qt" on Homebrew.
 echo To build vvDecPlayer, please go to https://github.com/bitmovin/vvDecPlayer
 echo Or contact Bitmovin at https://www.bitmovin.com or create issue on VVCEasy.
@@ -475,10 +475,9 @@ mkdir BitVVDecPlayerLINUX
 cd BitVVDecPlayerLINUX
 echo Downloading BitVVDecPlayer (Linux) from Bitmovin, compiled by Martin Eesmaa
 wget https://www.dropbox.com/s/bihm3pyh21lcvte/BitVVDecPlayerLINUX.7z?dl=0
-7z x BitVVDecPlayerLINUX.7z
+7z x BitVVDecPlayerLINUX.7z -aoa
 del /q BitVVDecPlayerLINUX.7z
-./vvDecPlayer
-echo Successfully running on vvDecPlayer, now if you have any problems, please go to Bitmovin/vvDecPlayer issues of https://github.com/bitmovin/vvDecPlayer/issues
+echo Download completed, please put and run on your Linux machine, now if you have any problems, please go to Bitmovin/vvDecPlayer issues of https://github.com/bitmovin/vvDecPlayer/issues
 echo Note, this is only Ubuntu 20.04 LTS build.
 echo If you're running other Linux without Ubuntu 20.04, you might need to read Bitmovin.md instructions and build vvDecPlayer yourself.
 echo To build vvDecPlayer, please go to https://github.com/bitmovin/vvDecPlayer
@@ -499,7 +498,7 @@ title Downloading VVC sample files and Coffee Run JSON & Sprite Fright JSON... f
 echo Downloading VVC sample files and Coffee Run JSON & Sprite Fright JSON from Bitmovin...
 wget "https://www.dropbox.com/s/qncefmnhw8hzr2k/vvcBlogPostDemo.7z" "https://www.dropbox.com/s/ogxw1pz9pr9bphi/CoffeeRun.json" "https://www.dropbox.com/s/6kpnoin4bwzb1ob/SpriteFright.json"
 echo Extracting from archived file...
-7z x vvcBlogPostDemo.7z
+7z x vvcBlogPostDemo.7z -aoa
 echo Deleting archived file...
 del /q vvcBlogPostDemo.7z
 title Installation of BitVVDecPlayer
@@ -507,10 +506,10 @@ echo Please edit the location downloaded folder of vvcBlogPostDemo...
 CoffeeRun.json && SpriteFright.json
 echo Press any key, when you finished configured of your location folder...
 pause
-echo Okay, it seems you configured completely. Please run on vvDecPlayer on your operating system.
+echo Okay, it seems you configured completely. Please run vvDecPlayer on your computer.
 echo Go to File, then Open JSON manifest in BitVVDecPlayer...
 echo Select JSON file to run VVC movie and enjoy it.
-echo Still not working? Please chat us on https://matrix.to/#/#vvceasy:matrix.org to solve your problem or add new issue on GitHub.
+echo Still not working? Please create the new issue on GitHub or join community available with Discord, Revolt and Matrix.
 pause
 goto start
 
