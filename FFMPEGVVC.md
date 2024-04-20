@@ -234,6 +234,63 @@ mv ffprobe ffprobe_vvceasy
 sudo cp ffmpeg_vvceasy ffplay_vvceasy ffprobe_vvceasy /usr/local/bin
 ```
 
+# Compile FFmpeg-Builds for Windows & Linux
+
+If you want to compile your own FFmpeg with VVC support + xHE-AAC, here's what you need to do:
+
+You may need:
+- Any Linux distribution to cross-compile for Windows & Linux. Recommended architecture for x86_64 (amd64) to make faster compiling.
+- Docker Engine (https://docs.docker.com/engine/install/)
+- Git for clone repository to local computer.
+- Network connection for downloading repositories.
+
+
+Step 1: You need to install Docker Engine and to use shell script on Linux or maybe possible Windows using MSYS2.
+
+On Arch Linux, install: `sudo pacman -S docker`.
+
+Step 2: After installing Docker Engine, clone the repository following by:
+
+```
+git clone --depth=1 https://github.com/MartinEesmaa/FFmpeg-Builds
+cd FFmpeg-Builds
+chmod +x *.sh
+```
+
+If you have not installed Git, please install Git on your package manager on your Linux distribution.
+
+Step 3: Make image and build FFmpeg, example you can build one or two builds.
+```
+./makeimage.sh win64 nonfree && ./makeimage.sh linux64 nonfree
+./build.sh win64 nonfree && ./build.sh linux64 nonfree
+```
+
+Non-free allows to enable Fraunhofer FDK feature, other licenses may not allow to bring Fraunhofer FDK feature to FFmpeg.
+
+Step 4: After making image and building FFmpeg, you can look `artifacts` folder by inside compressed files of Windows & Linux.
+
+### Troubleshooting
+
+1: If you tried to make image and you got permission denied after trying to run Docker as non-root user.
+
+To fix the issue and make grant access permission Docker to your user:
+
+```
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
+```
+
+After these commands, try again to build image again.
+
+If it's still error, reboot the machine.
+
+2: If the network connection is interrupted or disconnected while downloading repository and made timed out, it is recommended to cancel and retry again.
+
+Press CTRL + C on your keyboard and try it again with make image or/and build FFmpeg command.
+
+3: If that did not work for you, please create an issue to VVCEasy or join communities of Discord, Revolt or/and Matrix to solve your problem.
+
 # Special thanks
 
 VVC programmers of FFmpeg:
