@@ -93,13 +93,13 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 # FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
 
-[Windows x64](https://mega.nz/file/mw9GURgJ#3obV7XWOJ8rVO8aFkyQrblAUMuUBQ-8ZW7Gbg09oM4E)
+[Windows x64](https://mega.nz/file/fstQDThY#h4Mt2U0VdxbLHyWfa7iJB7xdxtJ6YPQKEpGKSG-kmgI)
 
-[Mac OS x86_64](https://mega.nz/file/G1tEEDJa#xVytDb_KuRfNJoaoEeVevLEN3syVH4z6vDa-YJB5-sY)
+[Mac OS x86_64](https://mega.nz/file/m8UCjLRT#B0X0_vM-4Z4IzUTEocAgpi27BTm7j8JwWNUv7Qr4QUA)
 
-[Linux x64](https://mega.nz/file/O1kT1BoL#nhX7nXoIGMz4VcObbJ9cD5F_UcEjbwR72OF4OLIfJYA)
+[Linux x64](https://mega.nz/file/75VA2YZb#2s-3JMYI7VNQmRIkphag7Hq3cQ-PMmelOylajeQxqHk)
 
-[Linux Arm64](https://mega.nz/file/KgdUAZIL#abWPLDcClwJDwDxPnPePz0sv3h1y6W44zo0SNPToqZM)
+[Linux Arm64](https://mega.nz/file/LlkDXK6a#lAzSO_CKoEBnSc2s-VsbtZaszvljMDBtMHid3PMU2dw)
 
 [FFmpeg-FixVVC archived old source code](https://mega.nz/file/G81QyT5S#jcbE1sYPEy1OMIDPCF8BPeAK-3KAGF50u23MVJzmBgw) (old)
 
@@ -109,6 +109,7 @@ Also, please check changelog before you download the new version.
 
 ### Changelog
 ```
+24/04/2024: Updated FFmpeg with latest nightly, added SAC (State of the Art Codec) demuxer (code by Martin Eesmaa), aom, x264, x265, dav1d and others.
 18/04/2024: New Linux Arm64 FFmpeg VVCEasy build. Updated FFmpeg, libopus and others.
 09/04/2024: Updated FFmpeg with latest nightly and added early LC3 muxer & demuxer can encode, decode and play LC3 by liblc3 (Windows & Linux are already have liblc3) from FFmpeg patchwork.
 06/04/2024: Updated FFmpeg up to 7.0 latest with nightly, others & added Google LC3 encoder/decoder using liblc3 feature to Windows and Linux.
