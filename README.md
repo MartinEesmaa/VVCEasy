@@ -9,7 +9,7 @@ https://github.com/MartinEesmaa/VVCEasy/actions/workflows/dotnet.yml)
 ![Matrix](https://img.shields.io/matrix/vvceasy:matrix.org?label=VVCEasy%20Matrix)
 ![Discord](https://img.shields.io/discord/974611343237869619?label=VVCEasy%20Discord%20Chat)
 
-# VVCEasy (Windows, macOS, Linux & Android) (by Martin Eesmaa)
+# VVCEasy (Windows, macOS, Linux, BSD & Android) (by Martin Eesmaa)
 VVCEasy is that you don't have to compile or/and coding to encode VVC (known as Versatile Video Codec). Simple, Easy, Encode and Decode.
 
 VVCEasy comes to one-easy command of FFmpeg, VVC Tools, VLC o266player, VVDEC Web Player, Bitmovin VVDec Player, libvvdec and more.
