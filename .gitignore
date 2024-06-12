@@ -6,6 +6,15 @@ LinuxVVC/arm*
 LinuxVVC/x*
 Android/arm*
 Android/x*
+BSDVVC/vv*
+
+uvg266/Windows/Win32
+uvg266/Windows/x64
+uvg266/macOS/arm64
+uvg266/macOS/intel_x64
+uvg266/Linux/arm*
+uvg266/Linux/x*
+uvg266/BSD/uvg266
 
 [Oo]bj/
 [Bb]in/
