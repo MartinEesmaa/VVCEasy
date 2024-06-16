@@ -32,6 +32,16 @@ Now you can use official FFmpeg binaries by BtBn or Gyan or my custom build of F
 
 But for libvvenc VVC encoder has not implemented yet into official FFmpeg. FFmpeg VVCEasy build has still libvvenc VVC encoder available by Martin Eesmaa's FFmpeg-VVC repository.
 
+# Official FFmpeg VVC external encoder implementation
+
+On 15th June 2024, the external VVC encoder feature is released on FFmpeg.
+
+See commit: https://github.com/FFmpeg/FFmpeg/commit/c75940db290478df657c09089605d221dc47118e
+
+His hard work was very good and made by Thomas Siedel, authored by nuomi2021 and also co-authored by Christian Bartnik.
+
+This might come later to add feature after compiling for FFmpeg Gyan and BtBn builds, but FFmpeg VVCEasy builds is still available.
+
 # Limitations of FFmpeg VVC encoder
 
 Before encode to VVC video codec, see the limitations below.
@@ -93,13 +103,13 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 # FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
 
-[Windows x64](https://mega.nz/file/L5lhTIDa#QmBFRpNBeI2raQKCj38YgR_h4uRxDfYqAmA3Bg6LzwY)
+[Windows x64](https://mega.nz/file/u9NUzapL#DiuG5yrIoVgWcwdtJeDsihvJLvU8T35yQSUgovJ5cU8)
 
-[Mac OS x86_64](https://mega.nz/file/CpMXnaJL#Qef_0dDCd-fezy-JeHPXkgAuuxCSdupWVVdwfZg99lY)
+[Mac OS x86_64](https://mega.nz/file/bh0CgBhD#aur90G0VjJZ9Z6-5gKLfDRYL5VIYsQQqkLuKfDUFW2o)
 
-[Linux x64](https://mega.nz/file/O5VHCCJR#_gwSLP_Up2eEeV26gdoCchd4KKyeJfz8JNrj1BJru0A)
+[Linux x64](https://mega.nz/file/bgc0RLxa#Wf5ieX0-0VBNTmtMqSpftyUADNHDL07pnRu9L_FXqJA)
 
-[Linux Arm64](https://mega.nz/file/rs93iBRK#hDalOoNGmNgcuRe3rW-Pi8BdDC4icXDYt4lve8FKazI)
+[Linux Arm64](https://mega.nz/file/LtME0ZhD#2Zpxcvcdvrd3Yuw4xFKPk_BawIykbQYb08JSJrRHgp8)
 
 [FFmpeg-FixVVC archived old source code](https://mega.nz/file/G81QyT5S#jcbE1sYPEy1OMIDPCF8BPeAK-3KAGF50u23MVJzmBgw) (old)
 
@@ -109,6 +119,7 @@ Also, please check changelog before you download the new version.
 
 ### Changelog
 ```
+16/06/2024: Updated FFmpeg with latest nightly, officially new libvvenc feature to official FFmpeg, updated vvenc, vvdec and others.
 06/06/2024: Updated FFmpeg with latest nightly, added experimental xHE-AAC native decoder, but I turned it off to avoid problems.
 05/06/2024: Updated FFmpeg with latest nightly, vvenc, vvdec and others.
 08/05/2024: Updated FFmpeg with latest nightly, vvdec and others.
