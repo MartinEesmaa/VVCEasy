@@ -28,9 +28,9 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 
 [Arch Linux MPV VVCEasy version x64](https://mega.nz/file/2pFDTSzT#GwoVQ0u6RStUwjk3rc5LkIzLQgmSDMhgV1Xk8WMeQ-w)
 
-[Android API 29 .APK Debug (Recommended)](https://mega.nz/file/r4cExARB#7-g9_vBlY2L0c59dM7xJ3SWP2Lm8D4rbQti4NMRVnsI)
+[Android API 29 .APK Debug (Recommended)](https://mega.nz/file/DkswgKIT#rRhjtWR1TzwZU6yZECQsoPaWRLmnqgbWORZYi0RnlQI)
 
-[Android API 29 .APK Release unsigned](https://mega.nz/file/j81yVKQJ#3tbBL2wHSlW-gvH1eKNPtwOoiqMwIoEx8dXijymb7iM)
+[Android API 29 .APK Release unsigned](https://mega.nz/file/6gNRVLrR#cmgB7AaBFIm2XgG3spuAdGbzw9VCUHSLD5mPwSIIJok)
 
 # Official MPV VVC native decoder implementation
 
@@ -53,6 +53,7 @@ Switched native VVC decoder back to external VVC decoder of libvvdec after nativ
 Please check the changelog before you download the new version.
 
 ```
+17/06/2024 - Updated Android MPV VVCEasy latest build by replacing old FFmpeg by current new FFmpeg-VVC.
 30/05/2024 - Updated Windows MPV/MPV.NET/MPV LIB VVCEasy build with FFmpeg, vvdec and others.
 29/04/2024 - Updated Windows MPV/MPV.NET/MPV LIB & Linux standalone AppImage VVCEasy build with FFmpeg and others. Added official VVC Matroska tag of V_MPEGI/ISO/VVC, also still supports vvc1 fourcc on V_QUICKTIME tag.
 28/04/2024 - Updated Windows MPV/MPV.NET/MPV LIB & Linux standalone AppImage VVCEasy build with FFmpeg, MediaInfo and others. Added support matroska VVC demux on MPV & SAC demuxer (code by Martin Eesmaa).
