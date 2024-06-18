@@ -40,4 +40,16 @@ Changelog:
 05/08/2023: Uploaded MPC-HC 2.0.0 portable x64 VVCEasy version with LAVFilters64 installed.
 ```
 
+## MPC-BE 1.7.0+ (Black Edition)
+
+Since MPC-BE version 1.7.0 and later, it supports VVC (libvvdec) and USAC (libfdk_aac) decoding.
+
+MPC-BE is Windows universal video and audio player improved similar and more external features added than MPC-HC.
+
+Original forked source code: https://github.com/Aleksoid1978/MPC-BE
+
+You can download binaries on GitHub releases: https://github.com/Aleksoid1978/MPC-BE/releases
+
+Nightly builds: https://github.com/Aleksoid1978/MPC-BE/wiki/Nightly-builds
+
 - Martin Eesmaa
