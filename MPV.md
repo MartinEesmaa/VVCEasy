@@ -14,17 +14,17 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 
 # Download MPV Windows/Linux/Android Player (libvvdec + xHE-AAC plugin)
 
-[Windows 7 and later x64](https://mega.nz/file/Tl93XLpQ#vW19XU-1Lntpf1HTgbMEzcN9uGKReXq8TINQ3LQRBo8)
+[Windows 7 and later x64](https://mega.nz/file/j9N0WRCK#OpX7ySNnH82xuhIPyBpj4v4RbI_8SLRzMeUbKuhufrw)
 
-[Windows MPV.NET VVCEasy version x64](https://mega.nz/file/C411GS6b#Qoa76TvytpwG5EBbQzp9LCsx900K1eVFNjGGe2IRKiw)
+[Windows MPV.NET VVCEasy version x64](https://mega.nz/file/6okC0DDS#TQM_C-mpgPJomwvaoQHRHo_T44dF8h6bMSBlGmGR1dE)
 
-[Windows MPVLIB VVCEasy version x64](https://mega.nz/file/P19lAT6B#JyKc1KrSjRRqRyjnS_iarMexKHNJsVVrSlxHvwvYZjg)
+[Windows MPVLIB VVCEasy version x64](https://mega.nz/file/G492CYII#_Ad6nswQyVbg5andNzEzxXFeQW1IVXf2ZU9fXEgfgeE)
 
 [Windows 7 and later x86_64-v3 native](https://mega.nz/file/u1l2zTYA#HmiZtkd46EMd9pqcTnhWGC-M3nCv3Y__jLN9T7jLc-c)
 
 [Windows MPVLIB VVCEasy version x86_64-v3 native](https://mega.nz/file/24UggbYD#CsTqPGLa4nEfs_9UheV0auISenDXqFdu465PZfRqozY)
 
-[Linux MPV VVCEasy version x64](https://mega.nz/file/f49jlSIa#BTlvShG1N_9UbebV1etip6hjj8VBwh0Bgi5VtMYrUQA)
+[Linux MPV VVCEasy version x64](https://mega.nz/file/GoFiCK5A#qal_VVgzBuxVUa10NHEumencJ4L2kRQNEdX2zxxaito)
 
 [Arch Linux MPV VVCEasy version x64](https://mega.nz/file/2pFDTSzT#GwoVQ0u6RStUwjk3rc5LkIzLQgmSDMhgV1Xk8WMeQ-w)
 
@@ -53,6 +53,7 @@ Switched native VVC decoder back to external VVC decoder of libvvdec after nativ
 Please check the changelog before you download the new version.
 
 ```
+20/06/2024 - Updated Windows MPV/MPV.NET/MPV LIB & Linux standalone AppImage VVCEasy build with FFmpeg, vvdec, MediaInfo and others.
 17/06/2024 - Updated Android MPV VVCEasy latest build by replacing old FFmpeg by current new FFmpeg-VVC.
 30/05/2024 - Updated Windows MPV/MPV.NET/MPV LIB VVCEasy build with FFmpeg, vvdec and others.
 29/04/2024 - Updated Windows MPV/MPV.NET/MPV LIB & Linux standalone AppImage VVCEasy build with FFmpeg and others. Added official VVC Matroska tag of V_MPEGI/ISO/VVC, also still supports vvc1 fourcc on V_QUICKTIME tag.
@@ -139,12 +140,12 @@ On Windows, there is available MPV.NET custom build on this download. You can ha
 ```
 ee5d8b2ebdda7e9bacfe4a9dd2ce199e96f2a16ac56a8840190a5c66d86e2471  MPV-VVCEasy-API29debug.apk
 cc4ba84d91b91edda102bc0086fbfbfdee1a8b1dd9196bc76edd00101fdaff10  MPV-VVCEasy-API29release-unsigned.apk
-d8238a0540d2fcb03b1577fffc14157f601d51a4169f0ebe40b74df878da4d49  MPV-VVCEasy-Windows-x64.7z
-e1565f2f6d075dde34a0b2b02177c6037bfdd7c63347fd72ba4ded4fe0b7b969  MPV.NET-VVCEasy-Windows-x64.7z
-309556bead7a05b5a52240fa58ce79c34849d60b67a8ab719037e64605c07dc9  MPVLIB-VVCEasy-Windows-x64.7z
+9a54dcc4f0afe2dc86eb0053afd9231e87d67272327709b412ef1b836925c3d8  MPV-VVCEasy-Windows-x64.7z
+80fb94921463e1c1b7e1afe19ba785d5aaedb14da22ccd59c2efbcea6b7fc3de  MPV.NET-VVCEasy-Windows-x64.7z
+596d5381baa9c460f6f88fc9ea63eb5d3d0357267ad32b951b7ddc0730bbdb2c  MPVLIB-VVCEasy-Windows-x64.7z
 8d486291a371c8663e7ddd1d9845cf54f81c316a9c795333a5b490f7621a6cb3  MPV-VVCEasy-Windows-NativeX64.7z
 003dbdf1cd6639ff906c2c17dde69a16c1df7fa565cf310ba014ea24b5b330a5  MPVLIB-VVCEasy-Windows-NativeX64.7z
-78ca67fd602fdcc291e46c9bd964a8647538ea45a68841c4506e7b2fc0e040e1  MPV-VVCEasy-Linux-x64.7z
+94a7c7372cb6309a891f6f7d5670cb21bd706e15fecf861699777b977efe1b85  MPV-VVCEasy-Linux-x64.7z
 ab23b1928069bd3584297dae1d90a95fe2910f91936766ddfa5bdafd53c8a300  MPV-VVCEasy-ArchLinux-x64.7z
 ```
 
