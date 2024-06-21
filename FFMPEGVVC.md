@@ -105,7 +105,9 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 [Windows x64](https://mega.nz/file/u9NUzapL#DiuG5yrIoVgWcwdtJeDsihvJLvU8T35yQSUgovJ5cU8)
 
-[Mac OS x86_64](https://mega.nz/file/bh0CgBhD#aur90G0VjJZ9Z6-5gKLfDRYL5VIYsQQqkLuKfDUFW2o)
+[Mac OS x86_64](https://mega.nz/file/u0UlAIAT#7beFjniY7JUouuCq2XIEeZp_VOoN_LWqF4ieGVhf2JM)
+
+[Mac OS arm64](https://mega.nz/file/OtE2gK4a#Gaf_6zR-5zvz-kTVSUrt4GV7E0XI5qrULS82qnTZ6DQ)
 
 [Linux x64](https://mega.nz/file/bgc0RLxa#Wf5ieX0-0VBNTmtMqSpftyUADNHDL07pnRu9L_FXqJA)
 
@@ -119,6 +121,7 @@ Also, please check changelog before you download the new version.
 
 ### Changelog
 ```
+21/06/2024: Fix macOS x86_64 FFmpeg VVCEasy build from wrong architecture and added already support macOS FFmpeg VVCEasy arm64 build.
 16/06/2024: Updated FFmpeg with latest nightly, officially new libvvenc feature to official FFmpeg, updated vvenc, vvdec and others.
 06/06/2024: Updated FFmpeg with latest nightly, added experimental xHE-AAC native decoder, but I turned it off to avoid problems.
 05/06/2024: Updated FFmpeg with latest nightly, vvenc, vvdec and others.
