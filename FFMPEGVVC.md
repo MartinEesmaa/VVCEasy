@@ -103,15 +103,15 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 # FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
 
-[Windows x64](https://mega.nz/file/u9NUzapL#DiuG5yrIoVgWcwdtJeDsihvJLvU8T35yQSUgovJ5cU8)
+[Windows x64](https://mega.nz/file/e98ixJrJ#U4V24howfscGTcVW0Z09hsZZ4ReWtZOKmNeqIMeNlYs)
 
-[Mac OS x86_64](https://mega.nz/file/u0UlAIAT#7beFjniY7JUouuCq2XIEeZp_VOoN_LWqF4ieGVhf2JM)
+[Mac OS x86_64](https://mega.nz/file/uxNl2Yab#TwCuB3KehAayKvvkg1BBE84GhmW8cOQP1if30Bql-aU)
 
-[Mac OS arm64](https://mega.nz/file/OtE2gK4a#Gaf_6zR-5zvz-kTVSUrt4GV7E0XI5qrULS82qnTZ6DQ)
+[Mac OS arm64](https://mega.nz/file/ysFnzCoS#vCDxj8IMPa_afunC9_8p4mg72y5HCYbEj8sLNseHqpE)
 
-[Linux x64](https://mega.nz/file/bgc0RLxa#Wf5ieX0-0VBNTmtMqSpftyUADNHDL07pnRu9L_FXqJA)
+[Linux x64](https://mega.nz/file/alEngJTK#dPg3EDhE2x2wfFnsBZV6GorazL008wpIIFNWVtp_clc)
 
-[Linux Arm64](https://mega.nz/file/LtME0ZhD#2Zpxcvcdvrd3Yuw4xFKPk_BawIykbQYb08JSJrRHgp8)
+[Linux Arm64](https://mega.nz/file/n0cCSZaQ#bngZj3RpLXcxPq3chN6sqUg4X_2rxJ-UjToYr54km1E)
 
 [FFmpeg-FixVVC archived old source code](https://mega.nz/file/G81QyT5S#jcbE1sYPEy1OMIDPCF8BPeAK-3KAGF50u23MVJzmBgw) (old)
 
@@ -121,6 +121,7 @@ Also, please check changelog before you download the new version.
 
 ### Changelog
 ```
+22/06/2024: Updated FFmpeg with latest nightly, vvenc and others.
 21/06/2024: Fix macOS x86_64 FFmpeg VVCEasy build from wrong architecture and added already support macOS FFmpeg VVCEasy arm64 build.
 16/06/2024: Updated FFmpeg with latest nightly, officially new libvvenc feature to official FFmpeg, updated vvenc, vvdec and others.
 06/06/2024: Updated FFmpeg with latest nightly, added experimental xHE-AAC native decoder, but I turned it off to avoid problems.
