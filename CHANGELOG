@@ -4,6 +4,20 @@ To view or download releases with changelogs, please go to https://github.com/Ma
 
 This is local changelog file.
 
+v2.7.0 Release (June 23, 2024):
+
+- Updated FFmpeg and MPV VVCEasy builds
+- Updated VVC binaries
+- Added BSD x86_64 nightly VVC binaries (compiled on FreeBSD 13.3)
+- Updated Windows VLC VTM VVC Decoder plugin
+- Added Linux arm64 & macOS arm64 FFmpeg VVCEasy build support
+- Added MPC-BE information on LAVFilters folder
+- Added uvg266 binaries of Windows, macOS, Linux and BSD.
+- Updated 7-Zip latest
+- Added gitignore file
+- Improved Windows batchfile script
+- New libvvenc codes from official FFmpeg is done.
+
 v2.5.0 Release (April 11, 2024):
 
 - New FFmpeg VVCEasy builds of Windows & Linux using my forked repository from BtBn/FFmpeg-Builds and up to 7.0 nightly latest.

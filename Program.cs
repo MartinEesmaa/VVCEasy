@@ -6,8 +6,8 @@ namespace VVCEasy
     {
         public static void Main()
         {
-            string version = "v2.5.0";
-            string codeversion = "Pretty big greatest ever!";
+            string version = "v2.7.0";
+            string codeversion = "Martin Eesmaa at age 19, wow nice!";
             string title = "Martin Eesmaa / VVCEasy";
             bool exit = false;
             Console.Title = title;

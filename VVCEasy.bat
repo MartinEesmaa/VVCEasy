@@ -1,7 +1,7 @@
 echo off
 set welcometitle=Martin Eesmaa / VVCEasy
-set version=v2.5.0
-set versionname=Pretty big greatest ever!
+set version=v2.7.0
+set versionname=Martin Eesmaa at age 19, wow nice!
 set vvceasydate=11 April 2024
 IF EXIST "%PROGRAMFILES(X86)%" (set bit=x64) ELSE (set bit=Win32)
 pushd "%~dp0"
