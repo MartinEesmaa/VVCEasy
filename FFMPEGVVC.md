@@ -103,15 +103,15 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 # FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
 
-[Windows x64](https://mega.nz/file/e98ixJrJ#U4V24howfscGTcVW0Z09hsZZ4ReWtZOKmNeqIMeNlYs)
+[Windows x64](https://mega.nz/file/Whc0zRbb#U0oXKGw0B_XA7U_sJWaeKi9esn0ANAlJJwIClvLAtEQ)
 
-[Mac OS x86_64](https://mega.nz/file/uxNl2Yab#TwCuB3KehAayKvvkg1BBE84GhmW8cOQP1if30Bql-aU)
+[Mac OS x86_64](https://mega.nz/file/rt1HXSSa#dPlwnwrWyVtE65TPFDYye-tiLK8hyBfwjMYsa8tZaqw)
 
-[Mac OS arm64](https://mega.nz/file/ysFnzCoS#vCDxj8IMPa_afunC9_8p4mg72y5HCYbEj8sLNseHqpE)
+[Mac OS arm64](https://mega.nz/file/at1GyYAB#GElGLtjR7pbHEmrQHCVKEqYXw8VAgszDGwZj8HaP2SY)
 
-[Linux x64](https://mega.nz/file/alEngJTK#dPg3EDhE2x2wfFnsBZV6GorazL008wpIIFNWVtp_clc)
+[Linux x64](https://mega.nz/file/S9EzybSA#m2aoEfghjSyQ2f8vgUM2OlzL2IJ41KRR373bqDeAnvU)
 
-[Linux Arm64](https://mega.nz/file/n0cCSZaQ#bngZj3RpLXcxPq3chN6sqUg4X_2rxJ-UjToYr54km1E)
+[Linux Arm64](https://mega.nz/file/m8FkiARB#oiFdFmCSCvOOIPGuz3KTjEzuwnCAB7vLA3N_oXcJ8Tc)
 
 [FFmpeg-FixVVC archived old source code](https://mega.nz/file/G81QyT5S#jcbE1sYPEy1OMIDPCF8BPeAK-3KAGF50u23MVJzmBgw) (old)
 
@@ -121,6 +121,7 @@ Also, please check changelog before you download the new version.
 
 ### Changelog
 ```
+28/06/2024: Updated FFmpeg with latest nightly, vvenc, vvdec and others. New Film Grain Synthesis (FGS) has added to vvenc (experimental) and vvdec.
 22/06/2024: Updated FFmpeg with latest nightly, vvenc and others.
 21/06/2024: Fix macOS x86_64 FFmpeg VVCEasy build from wrong architecture and added already support macOS FFmpeg VVCEasy arm64 build.
 16/06/2024: Updated FFmpeg with latest nightly, officially new libvvenc feature to official FFmpeg, updated vvenc, vvdec and others.
