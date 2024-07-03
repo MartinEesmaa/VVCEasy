@@ -48,7 +48,7 @@ Before encode to VVC video codec, see the limitations below.
 
 libvvenc (FFmpeg vvc version) works for:
 
-- Pixel format ⚠️ (only pixel format 10 bit is default, but you can still encode 8 bit by using `-bitdepth8 1`)
+- Pixel format ⚠️ (only pixel format 10 bit is default, but you can still encode 8 bit by using vvenc params `-vvenc-params InternalBitDepth=8`)
 - Video size (auto detects, but it doesn't detect for SAR and DAR anamorphic is glitch and corrupts the video) ⚠️ (Better way to use vvencapp without FFmpeg)
 - Frame rate ✅ (auto detects)
 - MP4/TS Mux ✅ (only works for stable if it's encoded VVC with MP4 or TS on FFmpeg and mp4box for muxing still works)
