@@ -42,6 +42,16 @@ His hard work was very good and made by Thomas Siedel, authored by nuomi2021 and
 
 This might come later to add feature after compiling for FFmpeg Gyan and BtBn builds, but FFmpeg VVCEasy builds is still available.
 
+# Official Gyan & BtBn FFmpeg Builds of libvvenc support
+
+Since 1st July 2024, Gyan added libvvenc support to FFmpeg.
+
+Since 31st July 2024, Martin Eesmaa authored and BtBn committed to add libvvenc support, see the commit and my attempted pull request:
+
+https://github.com/BtbN/FFmpeg-Builds/commit/9b364761580b399266172956eed9778211b094a8
+
+https://github.com/BtbN/FFmpeg-Builds/pull/393
+
 # Limitations of FFmpeg VVC encoder
 
 Before encode to VVC video codec, see the limitations below.
