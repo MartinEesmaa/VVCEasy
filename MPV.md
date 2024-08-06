@@ -186,7 +186,7 @@ nano deps/fdkaac/libSBRdec/src/lpp_tran.cpp
 
 Save the file in nano editor, when you finished removing `#ifdef __ANDROID` lines.
 
-**TIP: You can edit script of vvdec.sh on your own choice.**
+**TIP: You can edit script of vvdec.sh by your own choice.**
 
 Continue follow instructions to build your own MPV build:
 

@@ -59,6 +59,8 @@ title %welcometitle%
 echo %welcometitle%
 echo Welcome to VVCEasy. (Batch file Release Version, %version%, %vvceasydate%)
 echo Version codename: %versionname%
+echo.
+echo Copyright (C) Martin Eesmaa 2021-2024 (MIT License)
 pause
 goto start
 
@@ -68,6 +70,7 @@ color 07
 cls
 echo VVCEasy (Batchfile Release Version, %version%, %vvceasydate%)
 echo Version codename: %versionname%
+echo Copyright (C) Martin Eesmaa 2021-2024 (MIT License)
 echo.
 echo What would you like to do to encode/decode of VVC?
 echo 1. Encode
@@ -76,12 +79,12 @@ echo 3. Help
 echo 4. Exit
 echo 5. Install/Test path environment.
 echo 6. Install quickly through Anaconda (Python distribution) for FFmpeg (Windows)
-echo 7. Install/Update VVdec Web Player
-echo 8. Install Windows VVC binaries
+echo 7. Install/Update VVdec Web Player (requires Python)
+echo 8. Install Windows VVC binaries (Windows XP and later)
 echo 9. Install vvDecPlayer from BitMovin
 echo 10. Install/Update VLC VTM Plugins (Windows/Linux x64 of VLC plugins by Inter Digital Inc)
-echo 11. Install FFmpeg VVDec support.
-echo 12. Install MPV Windows/Android (libvvdec plugin)
+echo 11. Install FFmpeg VVC support.
+echo 12. Install MPV VVC support
 echo 13. Tests of VVC videos
 set /p VVCSTART=Number: 
 
@@ -212,9 +215,9 @@ goto start
 :test
 cls
 title INSTALL/TEST PATH ENVIRONMENT
-echo Martin Eesmaa is testing your paths, that you installed programs in PATH. Not sure, what is path?
-echo You can go here for link: https://stackoverflow.com/questions/4910721/python-on-cmd-path
-echo Also you can also search "What is PATH in Windows?" in DuckDuckGo, Google, SearX or your favorite search engine.
+echo Martin Eesmaa is testing your paths, that you installed programs in PATH. If you're unsure, what is path?
+echo You can go there for link at https://stackoverflow.com/questions/4910721/python-on-cmd-path
+echo Also you can search "What is PATH in Windows?" in DuckDuckGo, Google, SearX or your favorite search engine.
 echo Are you ready to test? (Y/N) or type "I" to install path environment.
 set /p readytestbefore=Answer: 
 if "%readytestbefore%" == Y goto nowtestingtime
@@ -225,7 +228,7 @@ if "%readytestbefore%" == I goto installpath
 if "%readytestbefore%" == i goto installpath
 
 :nowtestingtime
-title Testing time...
+title Testing installed programs...
 7z
 ffmpeg
 ffplay
@@ -241,7 +244,7 @@ if "%testdidworkq%" == n goto ahhdidnotwork
 
 :youdidworktest
 title Great!
-echo Great, your PATHS working now. Now back to the menu...
+echo Great, your path environment is working. Going back to the menu...
 timeout 3
 goto start
 
@@ -304,7 +307,7 @@ echo Have a nice day! Thank you for using VVCEasy! :)
                                                                         
 for /f "delims=: tokens=*" %%A in ('findstr /b ::: "%~f0"') do @echo(%%A
 echo.
-echo Copyright (C) 2021-2024 Martin Eesmaa
+echo Copyright (C) 2021-2024 Martin Eesmaa (MIT License)
 echo.
 echo ------------ END OF WINDOWS BATCHFILE PROGRAM ----------------
 timeout 5 /nobreak
@@ -565,8 +568,8 @@ goto start
 
 :ffmpegvvdec
 cls
-title FFmpeg VVDec support
-echo Hello, would you like to download FFmpeg VVDec support? Y/N?
+title FFmpeg VVC support
+echo Hello, would you like to download FFmpeg VVC support? Y/N?
 set /p vvcnow0=Answer: 
 if "%vvcnow0%" == Y goto installvvdecffmpegnow
 if "%vvcnow0%" == N goto start
@@ -574,7 +577,7 @@ if "%vvcnow0%" == y goto installvvdecffmpegnow
 if "%vvcnow0%" == n goto start
 
 :installvvdecffmpegnow
-echo Your favorite operating system is available on FFmpeg VVDec support. Please copy the link to a web browser.
+echo It is available of FFmpeg VVC support. Please copy or open the link to a web browser.
 echo.
 echo Download link: https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md#ffmpeg-downloads-xhe-aac--vvc-endecoder-plugin-compiled-by-martin-eesmaa
 echo.
@@ -585,7 +588,7 @@ pause
 goto start
 
 :mpvandroidvvc
-echo Please see the document. The command will open the document for you.
+echo Please see a document. The command will open the document for you.
 MPV.md
 echo.
 echo See information MPV.md or online GitHub: https://github.com/MartinEesmaa/VVCEasy/blob/master/MPV.md

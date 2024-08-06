@@ -153,10 +153,10 @@ For VLC o266player build, see [o266player.md](o266player.md).
 
 ### VVCEasy Batchfile Version (optional) (Windows only)
 
-First, before you compile to VVCEasy Batchfile Version, you need Inno Setup to compile VVCEasy.
+First, before you compile to VVCEasy Batchfile Version, you need to install Inno Setup before compiling VVCEasy.
 Inno Setup link: https://jrsoftware.org/isdl.php
 
-Step 1: Clone VVCEasy git and open VVCEasy_compiler.iss
+Step 1: Clone VVCEasy git and open up VVCEasy_compiler.iss file
 ```
 cd %userprofile%\Downloads
 git clone --depth=1 https://github.com/MartinEesmaa/VVCEasy && cd VVCEasy
@@ -222,6 +222,8 @@ These VVC programs of encode/decode are listed:
 * [VVenCguiEx](https://github.com/rigaya/VVenCguiEx) (original Japanese language only for instructions and application (you can still translate), only encoder & Windows only, requires Aviutl) (this may be medium or hard) (created by rigaya)
 
 * [VVConvert](https://vvconvert.app/) (only encoder, encodes to VVC raw bitstream from any FFmpeg compatible video codecs, requires FFmpeg to open input video files) (created by Alec Carter) ([source code](https://github.com/alectr0/VVConvert))
+
+* [Av1ador](https://github.com/porcino/Av1ador) - This program allows to encode VVC while transcoding by preview and comparison from original video, includes other encoders as well. (created by porcino) ([source code](https://github.com/porcino/Av1ador))
 
 # Without VVCEasy, experimental option for professional coders, other developers, and everyone (hard)
 
