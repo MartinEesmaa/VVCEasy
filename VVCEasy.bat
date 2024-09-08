@@ -78,14 +78,13 @@ echo 2. Decode
 echo 3. Help
 echo 4. Exit
 echo 5. Install/Test path environment.
-echo 6. Install quickly through Anaconda (Python distribution) for FFmpeg (Windows)
-echo 7. Install/Update VVdec Web Player (requires Python)
-echo 8. Install Windows VVC binaries (Windows XP and later)
-echo 9. Install vvDecPlayer from BitMovin
-echo 10. Install/Update VLC VTM Plugins (Windows/Linux x64 of VLC plugins by Inter Digital Inc)
-echo 11. Install FFmpeg VVC support.
-echo 12. Install MPV VVC support
-echo 13. Tests of VVC videos
+echo 6. Install/Update VVdec Web Player (requires Python)
+echo 7. Install Windows VVC binaries (Windows XP and later)
+echo 8. Install vvDecPlayer from BitMovin
+echo 9. Install/Update VLC VTM Plugins (Windows/Linux x64 of VLC plugins by Inter Digital Inc)
+echo 10. Install FFmpeg VVC support.
+echo 11. Install MPV VVC support
+echo 12. Tests of VVC videos
 set /p VVCSTART=Number: 
 
 if "%VVCSTART%" == "1" goto encodestart
@@ -93,14 +92,13 @@ if "%VVCSTART%" == "2" goto decodestart
 if "%VVCSTART%" == "3" goto help
 if "%VVCSTART%" == "4" goto exit
 if "%VVCSTART%" == "5" goto test
-if "%VVCSTART%" == "6" goto conda
-if "%VVCSTART%" == "7" goto installvvdecweb
-if "%VVCSTART%" == "8" goto decompresswin7z
-if "%VVCSTART%" == "9" goto installbitmovin
-if "%VVCSTART%" == "10" goto vlcvtmplugininstall
-if "%VVCSTART%" == "11" goto ffmpegvvdec
-if "%VVCSTART%" == "12" goto mpvandroidvvc
-if "%VVCSTART%" == "13" goto testsofvideo
+if "%VVCSTART%" == "6" goto installvvdecweb
+if "%VVCSTART%" == "7" goto decompresswin7z
+if "%VVCSTART%" == "8" goto installbitmovin
+if "%VVCSTART%" == "9" goto vlcvtmplugininstall
+if "%VVCSTART%" == "10" goto ffmpegvvdec
+if "%VVCSTART%" == "11" goto mpvandroidvvc
+if "%VVCSTART%" == "12" goto testsofvideo
 echo Invalid input. Please enter a number between 1 and 13.
 pause
 goto start
@@ -312,22 +310,6 @@ echo.
 echo ------------ END OF WINDOWS BATCHFILE PROGRAM ----------------
 timeout 5 /nobreak
 exit
-
-:conda
-cls
-title ANACONDA (PYTHON DISTRIBUTION)
-echo Welcome to Anaconda (Python Distribution) Quick Install. This will do only one task to download FFmpeg. Would you like to install? Y/N?
-set /p anacondaman=Answer: 
-if "%anacondaman%" == Y goto condainstall
-if "%anacondaman%" == N goto start
-if "%anacondaman%" == y goto condainstall
-if "%anacondaman%" == n goto start
-
-:condainstall
-conda install -c conda-forge ffmpeg
-echo SUCCESS, going to back the menu...
-pause
-goto start
 
 :help
 cls
