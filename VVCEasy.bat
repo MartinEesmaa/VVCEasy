@@ -445,7 +445,7 @@ echo %installmessage%
 mkdir BitVVDecPlayerMAC
 cd BitVVDecPlayerMAC
 echo Downloading BitVVDecPlayer (macOS) from Bitmovin, compiled by Martin Eesmaa
-wget https://www.dropbox.com/s/ilsoica7c8dh4hq/BitVVDecPlayerMAC.7z
+wget -q https://www.dropbox.com/s/ilsoica7c8dh4hq/BitVVDecPlayerMAC.7z
 7z x BitVVDecPlayerMAC.7z -aoa
 del /q BitVVDecPlayerMAC.7z
 echo Download completed, please put to macOS and run it, if you have any problems, please go to Bitmovin/vvDecPlayer issues of https://github.com/bitmovin/vvDecPlayer/issues

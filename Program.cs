@@ -1,4 +1,5 @@
 using System.Net;
+using System.Diagnostics;
 
 namespace VVCEasy
 {
@@ -11,7 +12,7 @@ namespace VVCEasy
             string title = "Martin Eesmaa / VVCEasy";
             bool exit = false;
             Console.Title = title;
-            Console.WriteLine("Martin Eesmaa / VVCEasy\nWelcome to VVCEasy. (.NET Console Release Version, " + version + ")\nVersion codename: " + codeversion);
+            Console.WriteLine($"Martin Eesmaa / VVCEasy\nWelcome to VVCEasy (.NET Console Release Version, {version})\nVersion codename: {codeversion}");
             Console.ReadLine();
             do
             {
@@ -21,7 +22,7 @@ namespace VVCEasy
                 Console.WriteLine("Note: C# is not ready yet, malfunction mode\n");
                 Console.WriteLine("Copyright (C) Martin Eesmaa 2021-2024 (MIT License)");
                 Console.Title = title;
-                Console.WriteLine("What would you like to do for encode/decode of VVC?\n1. Encode\n2. Decode\n3. Help\n4. Exit\n5. Install/Test path environment\n6. Install FFmpeg VVDec support\n7. Install quickly through Anaconda for ffmpeg (Windows)\n8. Install VVdec Web Player\n9. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)\n10. Install vvDecPlayer from BitMovin\n11. Install/Update VLC VTM Plugins (Windows/Linux x64 of VLC plugins by Inter Digital Inc)\n12. Install MPV Windows/Android (libvvdec plugin)\n13. Tests of VVC videos");
+                Console.WriteLine("What would you like to do for encode/decode of VVC?\n1. Encode\n2. Decode\n3. Help\n4. Exit\n5. Install/Test path environment\n6. Install FFmpeg VVDec support\n7. Install VVdec Web Player\n8. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)\n9. Install vvDecPlayer from BitMovin\n10. Install/Update VLC VTM Plugins (Windows/Linux x64 of VLC plugins by Inter Digital Inc)\n11. Install MPV Windows/Android (libvvdec plugin)\n12. Tests of VVC videos");
 
                 string input = Console.ReadLine();
 
@@ -143,25 +144,11 @@ namespace VVCEasy
 
                     if (vlcinstall == "Y")
                     {
-                        Console.WriteLine("Your favorite operating system is available on FFmpeg VVDec support. Please copy the link to a web browser.\nWindows: https://mega.nz/file/e1MEUAwR#c7u7vDvwzp6JiSaRDwhCyOaH4cGnx1xQDPyKgbAd-qM\nMac OS: https://mega.nz/file/K09gRbYJ#SewWjY4LqVdvlivXJhqQMjrsXO6ec8a1jmapj5nO2Gs\nLinux (Only Ubuntu 20.04 built): https://mega.nz/file/T8l0GTqa#oWsDDrFYjzf3LhS9zRkuqqBz6H4yJmNQUNiu_erVQLo\n\nSee information on FFMPEGVVC.md or online GitHub: https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md\nPress enter to go back menu.\n");
+                        Console.WriteLine("Your favorite operating system is available on FFmpeg VVDec support.\n\nSee information on FFMPEGVVC.md or online GitHub to download FFmpeg custom build: https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md\nPress enter to go back menu.\n");
                         Console.ReadLine();
                     }
                 }
                 else if (input == "7")
-                {
-                    Console.Clear();
-                    Console.Title = "ANACONDA";
-                    Console.WriteLine("Welcome to Anaconda Quick Install. This will only one task for ffmpeg. Would you like to install? Y/N?");
-
-                    string anacondaman = Console.ReadLine();
-
-                    if (anacondaman == "Y")
-                    {
-                        Console.WriteLine("SUCCESS, going to back menu...");
-                        Console.ReadLine();
-                    }
-                }
-                else if (input == "8")
                 {
                     Console.Clear();
                     Console.Title = "VVdec Web Player.";
@@ -181,14 +168,14 @@ namespace VVCEasy
                         Console.ReadLine();
                     }
                 }
-                else if (input == "9")
+                else if (input == "8")
                 {
                     Console.Clear();
                     Console.Title = "WindowsVVC.7z (decompressing)";
                     Console.WriteLine("Decompressing...\nSorry, the command is not ready yet...");
                     Console.ReadLine();
                 }
-                else if (input == "10")
+                else if (input == "9")
                 {
                     Console.Clear();
                     Console.Title = "Install vvDecPlayer from BitMovin";
@@ -198,51 +185,57 @@ namespace VVCEasy
 
                     if (installbitmovin == "Y")
                     {
-                    bitmovingotoinstall:
-                        Console.Title = "Installing vvDecPlayer from BitMovin...";
-                        Console.WriteLine("Installing vvDecPlayer from BitMovin on your computer...\nWhich operating system are you using?\nWindows, Mac or Linux?\nType W for Windows\nType M for Mac\nType L for Linux");
+                        Console.WriteLine("Installing vvDecPlayer from BitMovin on your computer...\nWhich operating system are you using?");
+                        Console.WriteLine("Type W for Windows, M for Mac, L for Linux");
 
-                        string installbitmovin1 = Console.ReadLine();
+                        string osChoice = Console.ReadLine()?.ToUpper();
+                        string fileName = string.Empty;
+                        string fileUrl = string.Empty;
 
-                        if (installbitmovin1 == "W")
+                        while (string.IsNullOrEmpty(osChoice) || (osChoice != "W" && osChoice != "M" && osChoice != "L"))
                         {
-                            Console.WriteLine("Installing vvDecPlayer from BitMovin for Windows...\nSorry, the C# console is not ready yet...");
+                            osChoice = Console.ReadLine()?.ToUpper();
 
-                            using (WebClient web1 = new())
-                                web1.DownloadFile("", "");
+                            switch (osChoice)
+                            {
+                                case "W":
+                                    fileName = "BitVVDecPlayerWIN.7z";
+                                    fileUrl = "https://www.dropbox.com/scl/fi/x4v1qb60u8zp505dtx8p6/BitVVDecPlayerWIN.7z?rlkey=gs9duytd6h1sos69o53rw8vyy";
+                                    break;
+                                case "M":
+                                    fileName = "BitVVDecPlayerMAC.7z";
+                                    fileUrl = "https://www.dropbox.com/s/ilsoica7c8dh4hq/BitVVDecPlayerMAC.7z";
+                                    break;
+                                case "L":
+                                    fileName = "BitVVDecPlayerLINUX.AppImage";
+                                    fileUrl = "https://www.dropbox.com/scl/fi/9jgibpwxe52zkkjijycdc/BitVVDecPlayerLINUX.AppImage?rlkey=jrqxsnwuqltc1xj9fevk9xb1f";
+                                    break;
+                                case "X":
+                                    Console.WriteLine("Exiting installation. No changes made.");
+                                    return;
+                                default:
+                                    Console.WriteLine("Invalid input. Please type W for Windows, M for Mac, L for Linux, or X to exit.");
+                                    osChoice = string.Empty;
+                                    break; 
+                            }
+                        Console.WriteLine($"Installing vvDecPlayer for {osChoice}...");
+                        DownloadWithWget(fileUrl, fileName);
 
-                            Console.ReadLine();
-                        }
-                        else if (installbitmovin1 == "M")
+                        if (osChoice != "L")
                         {
-                            Console.WriteLine("Installing vvDecPlayer from BitMovin for Mac OS...\nSorry, the C# console is not ready yet...");
-
-                            using (WebClient web1 = new())
-                                web1.DownloadFile("", "");
-
-                            Console.ReadLine();
-                        }
-                        else if (installbitmovin1 == "L")
-                        {
-                            Console.WriteLine("Installing vvDecPlayer from BitMovin for Linux...\nSorry, the C# console is not ready yet...");
-
-                            using (WebClient web1 = new())
-                                web1.DownloadFile("", "");
-
-                            Console.ReadLine();
-                        }
-                        else if (installbitmovin1 == "Back")
-                        {
-
+                            ExtractWith7Zip(fileName, ".");
                         }
                         else
                         {
-                            Console.WriteLine("You typed wrong input command, follow the commands instructions... type Back to go back menu...");
-                            goto bitmovingotoinstall;
+                        }
+
+                        Console.WriteLine("Installation complete.");
+                        Console.ReadLine();
                         }
                     }
                 }
-                else if (input == "11")
+                
+                else if (input == "10")
                 {
                     Console.Clear();
                     Console.Title = "VLC VTM Plugins Install (Windows & Linux)";
@@ -261,14 +254,14 @@ namespace VVCEasy
                         Console.ReadLine();
                     }
                 }
-                else if (input == "12")
+                else if (input == "11")
                 {
                     Console.Clear();
                     Console.Title = "Android MPV Player (OpenVVC support)";
                     Console.WriteLine("See information MPV.md or online Github: https://github.com/MartinEesmaa/VVCEasy/blob/master/MPV.md\nPress enter to go back menu.\n");
                     Console.ReadLine();
                 }
-                else if (input == "13")
+                else if (input == "12")
                 {
                     Console.Clear();
                     Console.Title = "Tests of VVC videos";
@@ -277,6 +270,49 @@ namespace VVCEasy
                 }
             }
             while (exit == false);
+        }
+
+        public static void DownloadWithWget(string fileUrl, string outputFileName)
+        {
+            Process process = new Process();
+            process.StartInfo.FileName = "wget";
+            process.StartInfo.Arguments = $"{fileUrl} -q -O {outputFileName}";
+            process.StartInfo.RedirectStandardOutput = true;
+            process.StartInfo.RedirectStandardError = true;
+            process.StartInfo.UseShellExecute = false;
+            process.StartInfo.CreateNoWindow = true;
+
+            process.Start();
+
+            string output = process.StandardOutput.ReadToEnd();
+            string error = process.StandardError.ReadToEnd();
+
+            process.WaitForExit();
+
+            if (!string.IsNullOrEmpty(output)) Console.WriteLine(output);
+            if (!string.IsNullOrEmpty(error)) Console.WriteLine("Error: " + error);
+        }
+
+        public static void ExtractWith7Zip(string archiveFile, string destinationFolder)
+        {
+            Process process = new Process();
+            process.StartInfo.FileName = "7z";
+            process.StartInfo.Arguments = $"x {archiveFile} -o\"{destinationFolder}\"";
+            process.StartInfo.RedirectStandardOutput = true;
+            process.StartInfo.RedirectStandardError = true;
+            process.StartInfo.UseShellExecute = false;
+            process.StartInfo.CreateNoWindow = true;
+
+            process.Start();
+
+            string output = process.StandardOutput.ReadToEnd();
+            string error = process.StandardError.ReadToEnd();
+
+            process.WaitForExit();
+
+            Console.WriteLine("Extraction complete.");
+            if (!string.IsNullOrEmpty(output)) Console.WriteLine(output);
+            if (!string.IsNullOrEmpty(error)) Console.WriteLine("Error: " + error);
         }
     }
 }
