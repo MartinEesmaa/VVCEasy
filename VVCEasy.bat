@@ -85,6 +85,7 @@ echo 9. Install/Update VLC VTM Plugins (Windows/Linux x64 of VLC plugins by Inte
 echo 10. Install FFmpeg VVC support.
 echo 11. Install MPV VVC support
 echo 12. Tests of VVC videos
+echo 13. Build vvenc & vvdec by yourself from sources
 set /p VVCSTART=Number: 
 
 if "%VVCSTART%" == "1" goto encodestart
@@ -99,6 +100,7 @@ if "%VVCSTART%" == "9" goto vlcvtmplugininstall
 if "%VVCSTART%" == "10" goto ffmpegvvdec
 if "%VVCSTART%" == "11" goto mpvandroidvvc
 if "%VVCSTART%" == "12" goto testsofvideo
+if "%VVCSTART%" == "13" goto main123
 echo Invalid input. Please enter a number between 1 and 13.
 pause
 goto start
@@ -478,7 +480,7 @@ if "%vvcsampleyeah%" == n goto start
 :downloadvvcnowbit
 title Downloading VVC sample files and Coffee Run JSON & Sprite Fright JSON... from Bitmovin
 echo Downloading VVC sample files and Coffee Run JSON & Sprite Fright JSON from Bitmovin...
-wget "https://www.dropbox.com/s/qncefmnhw8hzr2k/vvcBlogPostDemo.7z" "https://www.dropbox.com/s/ogxw1pz9pr9bphi/CoffeeRun.json" "https://www.dropbox.com/s/6kpnoin4bwzb1ob/SpriteFright.json"
+wget -q https://www.dropbox.com/s/qncefmnhw8hzr2k/vvcBlogPostDemo.7z https://www.dropbox.com/s/ogxw1pz9pr9bphi/CoffeeRun.json https://www.dropbox.com/s/6kpnoin4bwzb1ob/SpriteFright.json
 echo Extracting from archived file...
 7z x vvcBlogPostDemo.7z -aoa
 echo Deleting archived file...
@@ -583,6 +585,54 @@ echo.
 echo See information on FFMPEGVVC.md or online GitHub: https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md
 echo.
 echo Press enter to go back menu.
+pause
+goto start
+
+:main123
+title Build vvenc & vvdec by yourself from sources
+cls
+echo Do you want build of vvenc and vvdec yourself on your computer?
+echo Before you agree to build for Windows, you need Cmake and Visual Studio on your computer.
+echo Requires build to Windows VVC by Cmake 3.13.0+ (need pathed environment) and Visual Studio 2017 and later (requires Desktop C++ and only one individual component ML.NET Model Builder).
+echo Requires download VVEnc and VVDec for (Git for Windows).
+echo Yes means build. No means will exit the program.
+echo Y/N?
+set /p main1234= Answer: 
+if %main1234% == Y goto installmain123
+if %main1234% == y goto installmain123
+if %main1234% == N goto exit
+if %main1234% == n goto exit
+
+:installmain123
+title Building time...
+echo Building time...
+echo Downloading VVENC and VVDEC from Fraunhoferhhi GitHub...
+git clone --depth=1 https://github.com/fraunhoferhhi/vvenc
+git clone --depth=1 https://github.com/fraunhoferhhi/vvdec
+cd vvenc
+mkdir build && cd build
+cmake ..
+cmake --build . --config Release
+cd ../../
+cd vvdec
+mkdir build && cd build
+cmake ..
+cmake --build . --config Release
+cd ../../
+goto successnow
+
+:successnow
+echo.
+echo.
+echo.
+echo Successfully build of vvenc and vvdec on your Windows.
+echo Copying executable files to build\%bit%
+mkdir build\%bit%
+copy vvenc\bin\release-static\*.exe build\%bit%
+copy vvdec\bin\release-static\*.exe build\%bit%
+echo Cleaning up of build, lib and bin folders of both dependencies...
+rmdir /s /q vvenc\bin vvenc\lib vvenc\build vvdec\bin vvdec\bin vvdec\lib vvdec\build
+echo Done! Press Enter to go back the menu.
 pause
 goto start
 

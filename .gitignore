@@ -19,5 +19,7 @@ uvg266/BSD/uvg266
 [Oo]bj/
 [Bb]in/
 vvdecWebPlayer/
+vvenc/
+vvdec/
 
 .vscode
