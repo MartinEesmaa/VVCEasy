@@ -19,10 +19,10 @@ AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
 DefaultDirName={autopf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
-LicenseFile=C:\Users\User\Downloads\VVCEasy\LICENSE
+LicenseFile=LICENSE
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
-OutputDir=C:\Users\User\Downloads
+OutputDir=Install
 OutputBaseFilename=VVCEasy
 Compression=lzma2/ultra64
 SolidCompression=yes
@@ -34,6 +34,20 @@ CompressionThreads=1
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Files]
-Source: "C:\Users\User\Downloads\VVCEasy\*"; DestDir: "{win}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "WindowsVVC\WindowsVVC.7z"; DestDir: "{app}\WindowsVVC"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "uvg266\Windows\uvg266-Windows.7z"; DestDir: "{app}\uvg266\Windows"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "LAVFilters\LAVFilters-0.79.2-x64-VVCEasy.7z"; DestDir: "{app}\LAVFilters"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "VVCEasy.bat"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "wget.exe"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "7-Zip\7z.exe"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "7-Zip\7z.dll"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "INSTALLVLCPLUGIN\libvtmdec.dll"; DestDir: "{app}\INSTALLVLCPLUGIN"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "INSTALLVLCPLUGIN\libvvcdecoder_plugin.dll"; DestDir: "{app}\INSTALLVLCPLUGIN"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "INSTALLVLCPLUGIN\libvvctsdemux_plugin.dll"; DestDir: "{app}\INSTALLVLCPLUGIN"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
+[Icons]
+Name: "{group}\VVCEasy"; Filename: "{app}\VVCEasy.bat"; WorkingDir: "{app}"; Comment: "Run VVCEasy"
+
+[Run]
+Filename: "{app}\VVCEasy.bat"; Description: "Launch VVCEasy"; Flags: nowait postinstall skipifdoesntexist

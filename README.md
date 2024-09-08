@@ -163,10 +163,7 @@ git clone --depth=1 https://github.com/MartinEesmaa/VVCEasy && cd VVCEasy
 VVCEasy_compiler.iss
 ```
 
-Step 2: Before you compile, please replace example username by your username of LicenseFile, OutputDir and Source. See the image:
-![Instructionsofcompilevvceasy](https://user-images.githubusercontent.com/88035011/153736145-a24a1997-1133-4933-8797-de7c62295d1d.png)
-
-Step 3: Once you're replaced of your username, press F9 to compile on your keyboard. After compiling, VVCEasy.exe (Installer) will be on your Downloads folder.
+Step 2: Press F9 to compile on your keyboard. After compiling, VVCEasy.exe (Installer) can be found on Install folder.
 ![VVCEasyclickblueplaybutton](https://user-images.githubusercontent.com/88035011/153736303-b0949f5a-5ac5-4123-92c5-305211a8aadc.png)
 
 ---

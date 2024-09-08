@@ -21,5 +21,7 @@ uvg266/BSD/uvg266
 vvdecWebPlayer/
 vvenc/
 vvdec/
+*.7z
+[Ii]nstall/
 
 .vscode

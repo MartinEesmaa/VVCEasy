@@ -2,9 +2,9 @@
 OS=$(uname)
 echo "Martin Eesmaa / VVC Compiler (vvenc and vvdec)"
 echo "You're running on $OS of bash script version to compile VVC binaries"
+echo "Checking and installing required packages..."
 
 setup_linux() {
-    echo "Checking and installing required packages..."
     sudo apt update && sudo apt upgrade -y
     sudo apt install build-essential cmake -y
 }
@@ -22,21 +22,16 @@ setup_macos() {
 }
 
 setup_msys64() {
-    echo "Checking and installing required packages..."
     pacman -Syu --noconfirm
     pacman -S --noconfirm base-devel cmake git
 }
 
 setup_freebsd() {
-    echo "Checking and installing required packages..."
     pkg update && pkg upgrade -y
     pkg install -y cmake git gmake
 }
 
 build_repos() {
-    echo "Cloning repositories..."
-    cd ~/Downloads
-
     if [ ! -d vvenc ]; then
         git clone --depth=1 https://github.com/fraunhoferhhi/vvenc
     else
@@ -59,7 +54,7 @@ build_repos() {
             cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXE_LINKER_FLAGS="-static" ..
             cmake --build . -j $(nproc)
     fi
-    cd ../../
+    cd -
 done
     echo "Please see the build files starting with (vvenc/vvdec)/bin/release-static."
 }
