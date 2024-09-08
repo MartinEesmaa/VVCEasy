@@ -85,7 +85,7 @@ echo 9. Install/Update VLC VTM Plugins (Windows/Linux x64 of VLC plugins by Inte
 echo 10. Install FFmpeg VVC support.
 echo 11. Install MPV VVC support
 echo 12. Tests of VVC videos
-echo 13. Build vvenc & vvdec by yourself from sources
+echo 13. Build vvenc and vvdec by yourself from sources
 set /p VVCSTART=Number: 
 
 if "%VVCSTART%" == "1" goto encodestart
@@ -589,7 +589,7 @@ pause
 goto start
 
 :main123
-title Build vvenc & vvdec by yourself from sources
+title Build vvenc and vvdec by yourself from sources
 cls
 echo Do you want build of vvenc and vvdec yourself on your computer?
 echo Before you agree to build for Windows, you need Cmake and Visual Studio on your computer.
