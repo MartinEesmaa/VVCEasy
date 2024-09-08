@@ -44,25 +44,25 @@ JSON:
 
 # Bitmovin VVDec Player Downloads (including build instructions):
 
-[Windows Pre-Builded](https://www.dropbox.com/s/75ouoeadcr2cl53/BitVVDecPlayerWIN.7z)
+[Windows Pre-Builded](https://www.dropbox.com/scl/fi/x4v1qb60u8zp505dtx8p6/BitVVDecPlayerWIN.7z?rlkey=gs9duytd6h1sos69o53rw8vyy)
 
 [Mac OS Pre-Builded](https://www.dropbox.com/s/ilsoica7c8dh4hq/BitVVDecPlayerMAC.7z)
 
-[Linux Pre-Builded](https://www.dropbox.com/s/bihm3pyh21lcvte/BitVVDecPlayerLINUX.7z)
+[Linux Pre-Builded](https://www.dropbox.com/scl/fi/9jgibpwxe52zkkjijycdc/BitVVDecPlayerLINUX.AppImage?rlkey=jrqxsnwuqltc1xj9fevk9xb1f)
 
 Want to build VVDec (.dll (Windows)/.dylib (Mac OS)/.so (Linux)) yourself?
 
 Here is a code:
 
 ```
-git clone https://github.com/fraunhoferhhi/vvdec.git
+git clone https://github.com/fraunhoferhhi/vvdec
 cd vvdec
 mkdir build && cd build
 cmake -DBUILD_SHARED_LIBS=1 ..
 cmake --build . --config Release
 ```
 
-The build files might be vvdec/bin/release-shared
+The build files can be located at vvdec/bin/release-shared
 
 Windows: vvdec.dll
 
@@ -74,42 +74,38 @@ Linux: libvvdecLib.so
 
 # System requirements
 
-### Windows
-Operating System: Windows 7 / Windows Server 2012 and earlier versions
+This program requires architecture of x86_64/AMD64.
 
-System type: x64
+### Windows
+Operating System: Windows 7 / Windows Server 2012 and later versions
 
 Requirements to run program: Microsoft Visual C++ Redistributable 2015-2017-2019-2022 and vvdec.dll
 
 Internet required to download segments for Bitmovin streams
 
-Offline availability for segments
+Offline availability for local segments
 
 ---
 
 ### Mac OS
-Operating System: macOS 10.15 and earlier versions.
-
-System type: x64
+Operating System: macOS 10.15 and later versions.
 
 Requirements to run program: Qt framework (version 5) and libvvdec.dylib
 
 Internet required to download segments for Bitmovin streams.
 
-Offline availability for segments
+Offline availability for local segments
 
 ---
 
 ### Linux
-Operating System: Linux (Ubuntu 18.04 and earlier versions)
-
-System type: x64
+Operating System: Linux 3.20+ (Ubuntu 12.04 LTS and later versions)
 
 Requirements to run program: Qt framework (version 5), glib (build-essential) and libvvdecLib.so
 
 Internet required to download segments for Bitmovin streams.
 
-Offline availability for segments
+Offline availability for local segments
 
 # Bitmovin VVDec Player (Test compatibility)
 

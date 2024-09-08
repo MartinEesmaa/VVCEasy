@@ -367,11 +367,10 @@ if "%okletsdoit%" == u goto updatevvdecwebplayer
 :installnowplayer
 cls
 title INSTALLING VVDEC WEB PLAYER...
-git clone https://github.com/fraunhoferhhi/vvdecWebPlayer.git
+git clone https://github.com/fraunhoferhhi/vvdecWebPlayer
 copy VVDECWEBINSTALL "vvdecWebPlayer/bin" /y
 cd vvdecWebPlayer
-wget https://www.dropbox.com/s/zp8b3xg0b5p1pwe/VVCEasy.266
-rename VVCEasy.266 dummy_raw_bitstream.266
+copy ..\VVCEasy.266 dummy_raw_bitstream.266
 echo Note: If you want to go back to menu, press CTRL + C on your keyboard in Windows Terminal/CMD and type "Y" to terminate server and this will go back to main menu options.
 echo The python file is porting 8000 on your local host computer.
 python wasm_test-server.py
@@ -415,10 +414,10 @@ certutil -hashfile %bit%\vvencinterfacetest.exe SHA256
 certutil -hashfile %bit%\vvenclibtest.exe SHA256
 type WindowsVVC.sha256 | findstr %bit%
 cd ../
-echo Now please make sure double check that needs to be same hash. If it matches hash same as .exe of WindowsVVC.sha256 and CertUtil. This means good.
-echo If the hashes are not matched correctly, please try again or manually extract the compressed file using 7-Zip.
+echo Please make sure double check that needs to be same hash. If it matches hash same as .exe of WindowsVVC.sha256 and CertUtil. This means good.
+echo If the hashes are not matched correctly, please try it again or manual extract the compressed file using 7-Zip.
 echo.
-echo Otherwise, please create issue to Martin Eesmaa/VVCEasy on GitHub for your own problem.
+echo Otherwise, please create an issue to Martin Eesmaa/VVCEasy on GitHub for your own problem.
 pause
 echo Thank you for decompressing Windows VVC binaries. Now back to the menu.
 timeout 3
@@ -429,6 +428,7 @@ cls
 title Install BitVVDecPlayer from BitMovin
 echo Would you like to install on your operating system?
 echo Windows for W, Mac OS for M and Linux for L, Main Menu for N/n.
+set installmessage=Installing BitVVDecPlayer from BitMovin...
 set /p installbitmovind=Answer: 
 if "%installbitmovind%" == W goto installbitmovin1windows
 if "%installbitmovind%" == w goto installbitmovin1windows
@@ -440,31 +440,31 @@ if "%installbitmovind%" == N goto start
 if "%installbitmovind%" == n goto start
 
 :installbitmovin1windows
-title Installing BitVVDecPlayer from BitMovin...
-echo Installing BitVVDecPlayer from BitMovin...
+title %installmessage%
+echo %installmessage%
 mkdir BitVVDecPlayerWIN
 cd BitVVDecPlayerWIN
 echo Downloading BitVVDecPlayer (Windows) from Bitmovin, compiled by Martin Eesmaa
-wget https://www.dropbox.com/s/75ouoeadcr2cl53/BitVVDecPlayerWIN.7z
+wget -q https://www.dropbox.com/scl/fi/x4v1qb60u8zp505dtx8p6/BitVVDecPlayerWIN.7z?rlkey=gs9duytd6h1sos69o53rw8vyy -o BitVVDecPlayerWIN.7z
 7z x BitVVDecPlayerWIN.7z -aoa
 del /q BitVVDecPlayerWIN.7z
 vvDecPlayer
-echo Successfully running on BitVVDecPlayer, now if you have any problems, please go to Bitmovin/vvDecPlayer issues of https://github.com/bitmovin/vvDecPlayer/issues
-echo If you receive error, that MSVCP140.DLL is missing, you might need download Microsoft Visual C++ Redistributable of 2015-2017-2019-2022: https://docs.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist
+echo Successfully running on BitVVDecPlayer, if you have any problems, please go to Bitmovin/vvDecPlayer issues of https://github.com/bitmovin/vvDecPlayer/issues
+echo If you received error about MSVCP140.DLL is missing, you need to download Microsoft Visual C++ Redistributable of 2015-2017-2019-2022: https://docs.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist
 echo To build vvDecPlayer, please go to https://github.com/bitmovin/vvDecPlayer
-echo Or contact Bitmovin at https://www.bitmovin.com or create issue on VVCEasy.
+echo Or contact Bitmovin at https://www.bitmovin.com or create issue to VVCEasy.
 goto downloadbitmovinvvcsample
 
 :installbitmovin1macos
-title Installing BitVVDecPlayer from BitMovin...
-echo Installing BitVVDecPlayer from BitMovin...
+title %installmessage%
+echo %installmessage%
 mkdir BitVVDecPlayerMAC
 cd BitVVDecPlayerMAC
 echo Downloading BitVVDecPlayer (macOS) from Bitmovin, compiled by Martin Eesmaa
 wget https://www.dropbox.com/s/ilsoica7c8dh4hq/BitVVDecPlayerMAC.7z
 7z x BitVVDecPlayerMAC.7z -aoa
 del /q BitVVDecPlayerMAC.7z
-echo Download completed, please put to macOS and run it, now if you have any problems, please go to Bitmovin/vvDecPlayer issues of https://github.com/bitmovin/vvDecPlayer/issues
+echo Download completed, please put to macOS and run it, if you have any problems, please go to Bitmovin/vvDecPlayer issues of https://github.com/bitmovin/vvDecPlayer/issues
 echo If vvDecPlayer won't work probably, it might be issue that you haven't installed Qt on your Mac OS. Please install using code: "brew install qt" on Homebrew.
 echo To build vvDecPlayer, please go to https://github.com/bitmovin/vvDecPlayer
 echo Or contact Bitmovin at https://www.bitmovin.com or create issue on VVCEasy.
@@ -472,19 +472,16 @@ echo For more information, see Bitmovin.md.
 goto downloadbitmovinvvcsample
 
 :installbitmovin1linux
-title Installing BitVVDecPlayer from BitMovin...
-echo Installing BitVVDecPlayer from BitMovin...
+title %installmessage%
+echo %installmessage%
 mkdir BitVVDecPlayerLINUX
 cd BitVVDecPlayerLINUX
 echo Downloading BitVVDecPlayer (Linux) from Bitmovin, compiled by Martin Eesmaa
-wget https://www.dropbox.com/s/bihm3pyh21lcvte/BitVVDecPlayerLINUX.7z?dl=0
-7z x BitVVDecPlayerLINUX.7z -aoa
-del /q BitVVDecPlayerLINUX.7z
-echo Download completed, please put and run on your Linux machine, now if you have any problems, please go to Bitmovin/vvDecPlayer issues of https://github.com/bitmovin/vvDecPlayer/issues
-echo Note, this is only Ubuntu 20.04 LTS build.
-echo If you're running other Linux without Ubuntu 20.04, you might need to read Bitmovin.md instructions and build vvDecPlayer yourself.
+wget -q https://www.dropbox.com/scl/fi/9jgibpwxe52zkkjijycdc/BitVVDecPlayerLINUX.AppImage?rlkey=jrqxsnwuqltc1xj9fevk9xb1f -o BitVVDecPlayerLINUX.AppImage
+echo Download completed, please execute and run on your Linux machine, if you have any problems, please go to Bitmovin/vvDecPlayer issues of https://github.com/bitmovin/vvDecPlayer/issues
+echo Note, this is AppImage format to run universal Linux distros.
 echo To build vvDecPlayer, please go to https://github.com/bitmovin/vvDecPlayer
-echo If vvDecPlayer won't work probably, it might be issue that you haven't installed Qt on your Linux. Please install using code: "sudo apt install qt5-default build-essential" on Linux terminal.
+echo If vvDecPlayer won't work probably, please install fuse2 on your Linux distro or/and it does not support for old operating systems.
 echo Or contact Bitmovin at https://www.bitmovin.com or create issue on VVCEasy.
 goto downloadbitmovinvvcsample
 
