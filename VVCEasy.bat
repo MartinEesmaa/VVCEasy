@@ -118,6 +118,9 @@ set /p vvencquestion1=Number:
 if "%vvencquestion1%" == 1 goto losslessvvenc2
 if "%vvencquestion1%" == 2 goto lossyvvenc2
 if "%vvencquestion1%" == 3 goto start
+echo Invalid input. Please enter a number between 1 and 3.
+pause
+goto encodestart
 
 :losslessvvenc2
 title Lossless settings with Lossless uncompressed (VVC Encoder)
@@ -133,6 +136,9 @@ echo Only 8-bit uncompressed movies input to Y4M.
 set /p doyouhavey4mvvencquestion3=Number: 
 if "%doyouhavey4mvvencquestion3%" == 1 goto startlosslessvvenc2
 if "%doyouhavey4mvvencquestion3%" == 2 goto encodestart
+echo Invalid input. Please enter a number 1 or 2.
+pause
+goto losslessvvenc2
 
 :startlosslessvvenc2
 cls
@@ -158,6 +164,9 @@ echo Example: ffmpeg -i yourfile.mp4 -strict 1 yourfinal.yuv
 set /p doyouhaveyuvvvencquestion4=Number: 
 if "%doyouhaveyuvvvencquestion4%" == 1 goto startlossyvvenc2
 if "%doyouhaveyuvvvencquestion4%" == 2 goto encodestart
+echo Invalid input. Please enter a number 1 or 2.
+pause
+goto lossyvvenc2
 
 :startlossyvvenc2
 cls
@@ -171,7 +180,6 @@ pause
 goto start
 
 :decodestart
-explorer "C:\Program Files\VVCEasy\WindowsVVC"
 cls
 title Decode from VVC to YUV/Y4M
 echo Do you want to transcode back from VVC to YUV or Y4M? Which did you choose settings? Choosing settings will transcode back.
@@ -185,6 +193,9 @@ echo 2. Y4M (lossless video VVC, recommended)
 set /p decodestart1=Number: 
 if "%decodestart1%" == 1 goto DECODESTARTFROMVVCTOYUV
 if "%decodestart1%" == 2 goto DECODESTARTFROMVVCTOY4M
+echo Invalid input. Please enter a number 1 or 2.
+pause
+goto decodestart
 
 :DECODESTARTFROMVVCTOYUV
 cls
@@ -226,6 +237,9 @@ if "%readytestbefore%" == y goto nowtestingtime
 if "%readytestbefore%" == n goto start
 if "%readytestbefore%" == I goto installpath
 if "%readytestbefore%" == i goto installpath
+echo Invalid input. Please enter a valid letter of Y, N or I.
+pause
+goto test
 
 :nowtestingtime
 title Testing installed programs...
@@ -241,6 +255,9 @@ if "%testdidworkq%" == Y goto youdidworktest
 if "%testdidworkq%" == N goto ahhdidnotwork
 if "%testdidworkq%" == y goto youdidworktest
 if "%testdidworkq%" == n goto ahhdidnotwork
+echo Invalid input. Please enter a valid letter of Y or N.
+pause
+goto nowtestingtime
 
 :youdidworktest
 title Great!
@@ -265,6 +282,9 @@ if "%installpath1%" == Y goto installingpath
 if "%installpath1%" == N goto test
 if "%installpath1%" == y goto installingpath
 if "%installpath1%" == n goto test
+echo Invalid input. Please enter a valid letter of Y or N.
+pause
+goto installpath
 
 :installingpath
 title INSTALLING 7-ZIP on your path environments...
@@ -329,6 +349,9 @@ if "%helper%" == Y goto help
 if "%helper%" == N goto start
 if "%helper%" == y goto help
 if "%helper%" == n goto start
+echo Invalid input. Please enter a valid letter of Y or N.
+pause
+goto help
 
 :installvvdecweb
 cls
@@ -347,6 +370,9 @@ if "%okletsdoit%" == y goto installnowplayer
 if "%okletsdoit%" == n goto start
 if "%okletsdoit%" == U goto updatevvdecwebplayer
 if "%okletsdoit%" == u goto updatevvdecwebplayer
+echo Invalid input. Please enter a valid letter of Y, N or U.
+pause
+goto installvvdecweb
 
 :installnowplayer
 cls
@@ -385,6 +411,9 @@ if "%decompwinvvc%" == Y goto decompresswin7z1
 if "%decompwinvvc%" == N goto start
 if "%decompwinvvc%" == y goto decompresswin7z1
 if "%decompwinvvc%" == n goto start
+echo Invalid input. Please enter a valid letter of Y or N.
+pause
+goto decompresswin7z
 
 :decompresswin7z1
 title WindowsVVC.7z (decompressing)
@@ -422,6 +451,9 @@ if "%installbitmovind%" == L goto installbitmovin1linux
 if "%installbitmovind%" == l goto installbitmovin1linux
 if "%installbitmovind%" == N goto start
 if "%installbitmovind%" == n goto start
+echo Invalid input. Please enter a valid letter of W, M, L or N.
+pause
+goto installbitmovin
 
 :installbitmovin1windows
 title %installmessage%
@@ -476,6 +508,9 @@ if "%vvcsampleyeah%" == Y goto downloadvvcnowbit
 if "%vvcsampleyeah%" == y goto downloadvvcnowbit
 if "%vvcsampleyeah%" == N goto start
 if "%vvcsampleyeah%" == n goto start
+echo Invalid input. Please enter a valid letter of Y or N.
+pause
+goto downloadbitmovinvvcsample
 
 :downloadvvcnowbit
 title Downloading VVC sample files and Coffee Run JSON & Sprite Fright JSON... from Bitmovin
@@ -512,6 +547,9 @@ if "%vlcvtmyesorno%" == Y goto installvlcvtmpluginnow
 if "%vlcvtmyesorno%" == y goto installvlcvtmpluginnow
 if "%vlcvtmyesorno%" == N goto start
 if "%vlcvtmyesorno%" == n goto start
+echo Invalid input. Please enter a valid letter of W, M, L or N.
+pause
+goto vlcvtmplugininstall
 
 :installvlcvtmpluginnow
 title Installing of VLC VTM Plugins by Inter Digital Inc... (Compiled by Martin Eesmaa)
@@ -556,6 +594,9 @@ if "%vvcnow0%" == Y goto installvvdecffmpegnow
 if "%vvcnow0%" == N goto start
 if "%vvcnow0%" == y goto installvvdecffmpegnow
 if "%vvcnow0%" == n goto start
+echo Invalid input. Please enter a valid letter of Y or N.
+pause
+goto ffmpegvvdec
 
 :installvvdecffmpegnow
 echo It is available of FFmpeg VVC support. Please copy or open the link to a web browser.
@@ -602,6 +643,9 @@ if %main1234% == Y goto installmain123
 if %main1234% == y goto installmain123
 if %main1234% == N goto exit
 if %main1234% == n goto exit
+echo Invalid input. Please enter a valid letter of Y or N.
+pause
+goto main123
 
 :installmain123
 title Building time...
