@@ -231,12 +231,9 @@ echo You can go there for link at https://stackoverflow.com/questions/4910721/py
 echo Also you can search "What is PATH in Windows?" in DuckDuckGo, Google, SearX or your favorite search engine.
 echo Are you ready to test? (Y/N) or type "I" to install path environment.
 set /p readytestbefore=Answer: 
-if "%readytestbefore%" == Y goto nowtestingtime
-if "%readytestbefore%" == N goto start
-if "%readytestbefore%" == y goto nowtestingtime
-if "%readytestbefore%" == n goto start
-if "%readytestbefore%" == I goto installpath
-if "%readytestbefore%" == i goto installpath
+if /I "%readytestbefore%"=="Y" goto nowtestingtime
+if /I "%readytestbefore%"=="N" goto start
+if /I "%readytestbefore%"=="I" goto installpath
 echo Invalid input. Please enter a valid letter of Y, N or I.
 pause
 goto test
@@ -251,10 +248,8 @@ git
 python --version
 echo Did that work in your PATH? Y/N?
 set /p testdidworkq=Answer: 
-if "%testdidworkq%" == Y goto youdidworktest
-if "%testdidworkq%" == N goto ahhdidnotwork
-if "%testdidworkq%" == y goto youdidworktest
-if "%testdidworkq%" == n goto ahhdidnotwork
+if /I "%testdidworkq%"=="Y" goto youdidworktest
+if /I "%testdidworkq%"=="N" goto ahhdidnotwork
 echo Invalid input. Please enter a valid letter of Y or N.
 pause
 goto nowtestingtime
@@ -278,10 +273,8 @@ echo Other programs should need manual, but Python, FFmpeg, wget and git must be
 echo Do you want patch 7-Zip on your path environment, so you can type "7z" next time.
 echo Would you like to install 7-Zip on your path environments? Y/N? No means go back to test menu.
 set /p installpath1=Answer: 
-if "%installpath1%" == Y goto installingpath
-if "%installpath1%" == N goto test
-if "%installpath1%" == y goto installingpath
-if "%installpath1%" == n goto test
+if /I "%installpath1%"=="Y" goto installingpath
+if /I "%installpath1%"=="N" goto test
 echo Invalid input. Please enter a valid letter of Y or N.
 pause
 goto installpath
@@ -345,10 +338,8 @@ pause
 echo If you have any problems that you do not understand VVCEasy. Please contact Martin Eesmaa by creating issues for questions or/and problems.
 echo Do you want to start over help instructions? If yes, then it will go back from the beginning. If No, going to back menu. Y/N?
 set /p helper=Answer: 
-if "%helper%" == Y goto help
-if "%helper%" == N goto start
-if "%helper%" == y goto help
-if "%helper%" == n goto start
+if /I "%helper%"=="Y" goto help
+if /I "%helper%"=="N" goto start
 echo Invalid input. Please enter a valid letter of Y or N.
 pause
 goto help
@@ -364,12 +355,9 @@ echo After all of that, we will run Python to start web server of your localhost
 echo If you already have installed of VVDec Web Player, you can type "U" to update files of VVDec Web Player.
 echo Would you like to install VVDEC Web Player?
 set /p okletsdoit=Answer: 
-if "%okletsdoit%" == Y goto installnowplayer
-if "%okletsdoit%" == N goto start
-if "%okletsdoit%" == y goto installnowplayer
-if "%okletsdoit%" == n goto start
-if "%okletsdoit%" == U goto updatevvdecwebplayer
-if "%okletsdoit%" == u goto updatevvdecwebplayer
+if /I "%okletsdoit%"=="Y" goto installnowplayer
+if /I "%okletsdoit%"=="N" goto start
+if /I "%okletsdoit%"=="U" goto updatevvdecwebplayer
 echo Invalid input. Please enter a valid letter of Y, N or U.
 pause
 goto installvvdecweb
@@ -407,10 +395,8 @@ cls
 title Decompress Windows VVC?
 echo Would you like to decompress Windows VVC binaries? Y/N?
 set /p decompwinvvc=Answer: 
-if "%decompwinvvc%" == Y goto decompresswin7z1
-if "%decompwinvvc%" == N goto start
-if "%decompwinvvc%" == y goto decompresswin7z1
-if "%decompwinvvc%" == n goto start
+if /I "%decompwinvvc%"=="Y" goto decompresswin7z1
+if /I "%decompwinvvc%"=="N" goto start
 echo Invalid input. Please enter a valid letter of Y or N.
 pause
 goto decompresswin7z
@@ -443,14 +429,10 @@ echo Would you like to install on your operating system?
 echo Windows for W, Mac OS for M and Linux for L, Main Menu for N/n.
 set installmessage=Installing BitVVDecPlayer from BitMovin...
 set /p installbitmovind=Answer: 
-if "%installbitmovind%" == W goto installbitmovin1windows
-if "%installbitmovind%" == w goto installbitmovin1windows
-if "%installbitmovind%" == M goto installbitmovin1macos
-if "%installbitmovind%" == m goto installbitmovin1macos
-if "%installbitmovind%" == L goto installbitmovin1linux
-if "%installbitmovind%" == l goto installbitmovin1linux
-if "%installbitmovind%" == N goto start
-if "%installbitmovind%" == n goto start
+if /I "%installbitmovind%"=="W" goto installbitmovin1windows
+if /I "%installbitmovind%"=="M" goto installbitmovin1macos
+if /I "%installbitmovind%"=="L" goto installbitmovin1linux
+if /I "%installbitmovind%"=="N" goto start
 echo Invalid input. Please enter a valid letter of W, M, L or N.
 pause
 goto installbitmovin
@@ -504,10 +486,8 @@ goto downloadbitmovinvvcsample
 :downloadbitmovinvvcsample
 echo Would you like to download VVC sample video files from Bitmovin? Y/N?
 set /p vvcsampleyeah=Answer: 
-if "%vvcsampleyeah%" == Y goto downloadvvcnowbit
-if "%vvcsampleyeah%" == y goto downloadvvcnowbit
-if "%vvcsampleyeah%" == N goto start
-if "%vvcsampleyeah%" == n goto start
+if /I "%vvcsampleyeah%"=="Y" goto downloadvvcnowbit
+if /I "%vvcsampleyeah%"=="N" goto start
 echo Invalid input. Please enter a valid letter of Y or N.
 pause
 goto downloadbitmovinvvcsample
@@ -543,10 +523,8 @@ echo Linux is now available, see Linux installation at: https://github.com/Marti
 echo Available: VLC 3.0.9.2 and later latest version 3 (it will work same latest version 3)
 echo Would you like to install VTM plugins to your VLC Media Player? Y/N?
 set /p vlcvtmyesorno=Answer: 
-if "%vlcvtmyesorno%" == Y goto installvlcvtmpluginnow
-if "%vlcvtmyesorno%" == y goto installvlcvtmpluginnow
-if "%vlcvtmyesorno%" == N goto start
-if "%vlcvtmyesorno%" == n goto start
+if /I "%vlcvtmyesorno%"=="Y" goto installvlcvtmpluginnow
+if /I "%vlcvtmyesorno%"=="N" goto start
 echo Invalid input. Please enter a valid letter of W, M, L or N.
 pause
 goto vlcvtmplugininstall
@@ -590,10 +568,8 @@ cls
 title FFmpeg VVC support
 echo Hello, would you like to download FFmpeg VVC support? Y/N?
 set /p vvcnow0=Answer: 
-if "%vvcnow0%" == Y goto installvvdecffmpegnow
-if "%vvcnow0%" == N goto start
-if "%vvcnow0%" == y goto installvvdecffmpegnow
-if "%vvcnow0%" == n goto start
+if /I "%vvcnow0%"=="Y" goto installvvdecffmpegnow
+if /I "%vvcnow0%"=="N" goto start
 echo Invalid input. Please enter a valid letter of Y or N.
 pause
 goto ffmpegvvdec
@@ -639,10 +615,8 @@ echo Requires download VVEnc and VVDec for (Git for Windows).
 echo Yes means build. No means will exit the program.
 echo Y/N?
 set /p main1234= Answer: 
-if %main1234% == Y goto installmain123
-if %main1234% == y goto installmain123
-if %main1234% == N goto exit
-if %main1234% == n goto exit
+if /I "%main1234%"=="Y" goto installmain123
+if /I "%main1234%"=="N" goto exit
 echo Invalid input. Please enter a valid letter of Y or N.
 pause
 goto main123
