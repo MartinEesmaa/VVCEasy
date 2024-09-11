@@ -42,12 +42,12 @@ fi
 
 echo Starting to build fdk-aac:
 cd fdk-aac
-autoreconf -if && ./configure --enable-static --disable-shared --prefix=$MSYSTEM_PREFIX && make install -j $nproc
+./autogen.sh && ./configure --enable-static --disable-shared --prefix=$MSYSTEM_PREFIX && make install -j $nproc
 cd ..
 
 echo Starting to build libxml2:
 cd libxml2
-autoreconf -if && ./configure --enable-static --disable-shared --prefix=$MSYSTEM_PREFIX && make install -j $nproc
+./autogen.sh && ./configure --enable-static --disable-shared --prefix=$MSYSTEM_PREFIX && make install -j $nproc
 cd ..
 
 echo Starting to build sdl2:
@@ -57,7 +57,7 @@ cd ../../
 
 echo Starting to build libopus to improve decode quality on FFmpeg:
 cd opus
-autoreconf -if && CFLAGS="-O2 -D_FORTIFY_SOURCE=0" LDFLAGS="-flto -s" ./configure --enable-static --disable-shared --prefix=$MSYSTEM_PREFIX && make install -j $nproc
+./autogen.sh && CFLAGS="-O2 -D_FORTIFY_SOURCE=0" LDFLAGS="-flto -s" ./configure --enable-static --disable-shared --prefix=$MSYSTEM_PREFIX && make install -j $nproc
 cd ..
 
 echo Starting to build libjxl:
@@ -69,11 +69,11 @@ mkdir -p dav1d/build && cd dav1d/build && meson -Denable_docs=false -Ddefault_li
 cd ../../
 
 echo Starting to build zimg:
-cd zimg && autoreconf -if && ./configure --disable-shared --prefix=$MSYSTEM_PREFIX && make install -j $nproc
+cd zimg && ./autogen.sh && ./configure --disable-shared --prefix=$MSYSTEM_PREFIX && make install -j $nproc
 cd ..
 
 echo Starting to build soxr:
-mkdir soxr/build && cd soxr/build && cmake -D{WITH_LSR_BINDINGS,BUILD_TESTS,WITH_OPENMP}=off -DCMAKE_INSTALL_PREFIX=$MSYSTEM_PREFIX -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -Wno-dev .. -G "MinGW Makefiles"
+mkdir -p soxr/build && cd soxr/build && cmake -D{WITH_LSR_BINDINGS,BUILD_TESTS,WITH_OPENMP}=off -DCMAKE_INSTALL_PREFIX=$MSYSTEM_PREFIX -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -Wno-dev .. -G "MinGW Makefiles"
 cmake --build . -j $nproc --target install
 cd ../../
 
