@@ -205,7 +205,6 @@ cd WindowsVVC
 vvdecapp -b VVC.vvc -o VVCTOYUV.yuv
 move VVCTOYUV.yuv ../
 move VVCTOYUV.yuv transcodedback
-explorer "C:\Program Files\VVCEasy\transcodedback"
 echo FINISHED. Going back to the menu...
 timeout 3
 goto start
@@ -218,7 +217,6 @@ cd WindowsVVC
 vvdecapp -b VVC.vvc --y4m -o VVCTOYUV.y4m
 move VVCTOYUV.y4m ../
 move VVCTOYUV.y4m transcodedback
-explorer "C:\Program Files\VVCEasy\transcodedback"
 echo FINISHED. Going back to the menu...
 timeout 3
 goto start
