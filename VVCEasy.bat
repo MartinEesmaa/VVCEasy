@@ -2,7 +2,8 @@ echo off
 set welcometitle=Martin Eesmaa / VVCEasy
 set version=v2.7.0
 set versionname=Martin Eesmaa at age 19, wow nice!
-set vvceasydate=11 April 2024
+set vvceasydate=23 June 2024
+set copyrightinfo=Copyright (C) Martin Eesmaa 2021-2024 (MIT License)
 IF EXIST "%PROGRAMFILES(X86)%" (set bit=x64) ELSE (set bit=Win32)
 pushd "%~dp0"
 cls
@@ -60,7 +61,7 @@ echo %welcometitle%
 echo Welcome to VVCEasy. (Batch file Release Version, %version%, %vvceasydate%)
 echo Version codename: %versionname%
 echo.
-echo Copyright (C) Martin Eesmaa 2021-2024 (MIT License)
+echo %copyrightinfo%
 pause
 goto start
 
@@ -70,7 +71,7 @@ color 07
 cls
 echo VVCEasy (Batchfile Release Version, %version%, %vvceasydate%)
 echo Version codename: %versionname%
-echo Copyright (C) Martin Eesmaa 2021-2024 (MIT License)
+echo %copyrightinfo%
 echo.
 echo What would you like to do to encode/decode of VVC?
 echo 1. Encode
@@ -318,7 +319,7 @@ echo Have a nice day! Thank you for using VVCEasy! :)
                                                                         
 for /f "delims=: tokens=*" %%A in ('findstr /b ::: "%~f0"') do @echo(%%A
 echo.
-echo Copyright (C) 2021-2024 Martin Eesmaa (MIT License)
+echo %copyrightinfo%
 echo.
 echo ------------ END OF WINDOWS BATCHFILE PROGRAM ----------------
 timeout 5 /nobreak
