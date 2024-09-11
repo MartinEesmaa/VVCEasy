@@ -3,96 +3,41 @@ pacman -Syu
 echo Installing MSYS2 packages...
 pacman -S python git nasm vim wget $MINGW_PACKAGE_PREFIX-{toolchain,cmake,autotools,meson,ninja}
 echo Starting process of FFmpeg build with libvvenc and libvvdec...
-if [ ! -d buildffmpegwin ]; then
-mkdir buildffmpegwin && cd buildffmpegwin
-else
+[ ! -d buildffmpegwin ] && mkdir buildffmpegwin
 cd buildffmpegwin
-fi
 
-if [ ! -d FFmpeg-VVC ]; then
-git clone --depth=1 https://github.com/MartinEesmaa/FFmpeg-VVC
-else
-git -C FFmpeg-VVC pull
-fi
+clonepull() {
+  if [ ! -d "$1" ]; then
+    git clone --depth=1 "$2" "$1"
+  else
+    git -C "$1" pull
+  fi
+}
 
-if [ ! -d vvenc ]; then
-git clone --depth=1 https://github.com/fraunhoferhhi/vvenc
-else
-git -C vvenc pull
-fi
-
-if [ ! -d vvdec ]; then
-git clone --depth=1 https://github.com/fraunhoferhhi/vvdec
-else
-git -C vvdec pull
-fi
-
-if [ ! -d fdk-aac ]; then
-git clone --depth=1 https://github.com/mstorsjo/fdk-aac
-else
-git -C fdk-aac pull
-fi
-
-if [ ! -d SDL ]; then
-git clone --depth=1 https://github.com/libsdl-org/SDL -b SDL2
-else
-git -C SDL pull
-fi
-
-if [ ! -d libxml2 ]; then
-git clone --depth=1 https://github.com/gnome/libxml2
-else
-git -C libxml2 pull
-fi
-
-if [ ! -d opus ]; then
-git clone --depth=1 https://github.com/xiph/opus
-else
-git -C opus pull
-fi
+clonepull FFmpeg-VVC https://github.com/MartinEesmaa/FFmpeg-VVC
+clonepull vvenc https://github.com/fraunhoferhhi/vvenc
+clonepull vvdec https://github.com/fraunhoferhhi/vvdec
+clonepull fdk-aac https://github.com/mstorsjo/fdk-aac
+clonepull SDL https://github.com/libsdl-org/SDL -b SDL2
+clonepull libxml2 https://github.com/gnome/libxml2
+clonepull opus https://github.com/xiph/opus
+clonepull libjxl https://github.com/libjxl/libjxl
+clonepull zimg https://github.com/sekrit-twc/zimg
+clonepull soxr https://github.com/chirlu/soxr
+clonepull dav1d https://code.videolan.org/videolan/dav1d
+clonepull codec2 https://github.com/drowe67/codec2
+clonepull vmaf https://github.com/netflix/vmaf
 
 if [ ! -d libjxl ]; then
-git clone --depth=1 https://github.com/libjxl/libjxl
 sed -i 's/-lm/-lm -lstdc++/g' libjxl/lib/jxl/libjxl.pc.in libjxl/lib/threads/libjxl_threads.pc.in
-git -C libjxl submodule update --init --recursive --depth 1 --recommend-shallow
-else
-git -C libjxl pull
 git -C libjxl submodule update --init --recursive --depth 1 --recommend-shallow
 fi
 
 if [ ! -d zimg ]; then
-git clone --depth=1 https://github.com/sekrit-twc/zimg
 git -C zimg submodule update --init --recursive --depth 1
 wget https://raw.githubusercontent.com/m-ab-s/mabs-patches/master/zimg/0001-libm_wrapper-define-__CRT__NO_INLINE-before-math.h.patch
 git -C zimg apply 0001-libm_wrapper-define-__CRT__NO_INLINE-before-math.h.patch
 rm 0001-libm_wrapper-define-__CRT__NO_INLINE-before-math.h.patch
-else
-git -C zimg pull
-git -C zimg submodule update --init --recursive --depth 1
-fi
-
-if [ ! -d soxr ]; then
-git clone --depth=1 https://github.com/chirlu/soxr
-else
-git -C soxr pull
-fi
-
-if [ ! -d dav1d ]; then
-git clone --depth=1 https://code.videolan.org/videolan/dav1d
-else
-git -C dav1d pull
-fi
-
-if [ ! -d codec2 ]; then
-git clone --depth=1 https://github.com/drowe67/codec2
-else
-git -C codec2 pull
-fi
-
-if [ ! -d vmaf ]; then
-git clone --depth=1 https://github.com/netflix/vmaf
-else
-git -C vmaf pull
 fi
 
 echo Starting to build fdk-aac:
@@ -106,8 +51,8 @@ autoreconf -if && ./configure --enable-static --disable-shared --prefix=$MSYSTEM
 cd ..
 
 echo Starting to build sdl2:
-cd SDL
-mkdir build && cd build && cmake -DCMAKE_EXE_LINKER_FLAGS="-static" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$MSYSTEM_PREFIX .. -G "MinGW Makefiles" && cmake --build . --target install -j $nproc
+mkdir -p SDL/build
+cd build && cmake -DCMAKE_EXE_LINKER_FLAGS="-static" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$MSYSTEM_PREFIX .. -G "MinGW Makefiles" && cmake --build . --target install -j $nproc
 cd ../../
 
 echo Starting to build libopus to improve decode quality on FFmpeg:
@@ -116,11 +61,11 @@ autoreconf -if && CFLAGS="-O2 -D_FORTIFY_SOURCE=0" LDFLAGS="-flto -s" ./configur
 cd ..
 
 echo Starting to build libjxl:
-mkdir libjxl/build && cd libjxl/build && cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DBUILD_SHARED_LIBS=OFF -DJPEGXL_ENABLE_BENCHMARK=OFF -DJPEGXL_ENABLE_PLUGINS=ON -DJPEGXL_ENABLE_MANPAGES=OFF -DJPEGXL_FORCE_SYSTEM_BROTLI=ON -DJPEGXL_FORCE_SYSTEM_GTEST=ON -DCMAKE_INSTALL_PREFIX=$MSYSTEM_PREFIX .. && ninja install
+mkdir -p libjxl/build && cd libjxl/build && cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DBUILD_SHARED_LIBS=OFF -DJPEGXL_ENABLE_BENCHMARK=OFF -DJPEGXL_ENABLE_PLUGINS=ON -DJPEGXL_ENABLE_MANPAGES=OFF -DJPEGXL_FORCE_SYSTEM_BROTLI=ON -DJPEGXL_FORCE_SYSTEM_GTEST=ON -DCMAKE_INSTALL_PREFIX=$MSYSTEM_PREFIX .. && ninja install
 cd ../../
 
 echo Starting to build dav1d:
-mkdir dav1d/build && cd dav1d/build && meson -Denable_docs=false -Ddefault_library=static -Dprefix=$MSYSTEM_PREFIX .. && ninja install
+mkdir -p dav1d/build && cd dav1d/build && meson -Denable_docs=false -Ddefault_library=static -Dprefix=$MSYSTEM_PREFIX .. && ninja install
 cd ../../
 
 echo Starting to build zimg:
@@ -142,7 +87,7 @@ cmake --build . -j $nproc --target install
 cd ../../
 
 echo Starting to build vmaf to apply calculate VVC video references from original video:
-mkdir vmaf/libvmaf/build && cd vmaf/libvmaf/build && CFLAGS="-msse2 -mfpmath=sse -mstackrealign" meson -Denable_docs=false -Ddefault_library=static -Denable_float=true -Dbuilt_in_models=true -Dprefix=$MSYSTEM_PREFIX .. && ninja install
+mkdir -p vmaf/libvmaf/build && cd vmaf/libvmaf/build && CFLAGS="-msse2 -mfpmath=sse -mstackrealign" meson -Denable_docs=false -Ddefault_library=static -Denable_float=true -Dbuilt_in_models=true -Dprefix=$MSYSTEM_PREFIX .. && ninja install
 cd ../../../
 sed -i 's/-lm/-lm -lstdc++/g' $MSYSTEM_PREFIX/lib/pkgconfig/libvmaf.pc
 
