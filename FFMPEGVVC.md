@@ -28,7 +28,11 @@ On February 24 2024, the finally moment about Intra Block Copy has been merged i
 
 His hard work is very good and made by [nuomi2021](https://github.com/nuomi2021) to make native VVC decoder release to FFmpeg.
 
-Now you can use official FFmpeg binaries by BtBn or Gyan or my custom build of FFmpeg VVCEasy build to play or decode VVC in FFmpeg. Also mpv too with shinchiro or VVCEasy builds. :)
+But on March 14th 2024, James Almer set VVC native decoding from stable to experimental by reasons due to problem issues with different MD5 of some rare videos encoded along advanced parameters.
+
+Frank Plowman and Nuo Mi removed experimental flag, cause it's now fully stable completed on September 7 2024 and should be released on version 7.1 for future date.
+
+Meanwhile, you can use official FFmpeg binaries by BtBn or Gyan or my custom build of FFmpeg VVCEasy build to play or decode VVC in FFmpeg. Also mpv too with shinchiro or VVCEasy builds. :)
 
 But for libvvenc VVC encoder has not implemented yet into official FFmpeg. FFmpeg VVCEasy build has still libvvenc VVC encoder available by Martin Eesmaa's FFmpeg-VVC repository.
 
