@@ -431,7 +431,7 @@ License: GPL Version 2 (VLC Original version) & LGPL-2.1 (VLC VTM Decoder Plugin
 
 © 2000-2024 [VLC Media Player](https://code.videolan.org/) Developers (All rights reserved)
 
-© 2021-2023 [Inter Digital Inc](https://github.com/InterDigitalInc) (All rights reserved)
+© 2021-2024 [Inter Digital Inc](https://github.com/InterDigitalInc) (All rights reserved)
 
 ---
 
@@ -439,7 +439,7 @@ License: GPL Version 2 (VLC Original version) & LGPL-2.1 (VLC VTM Decoder Plugin
 
 License: BSD 3-Clause License
 
-© 2021-2023, Tampere University, ITU/ISO/IEC, project contributors (All rights reserved)
+© 2021-2024, Tampere University, ITU/ISO/IEC, project contributors (All rights reserved)
 
 ---
 
@@ -457,7 +457,7 @@ VVC developers & forkers: [Christian Lehmann](https://github.com/lehmann-c), [tb
 
 License: LGPL-2.1+ & GPL-2.0+
 
-For my custom build configuration license is LGPL-2.1.
+For my custom build configuration license is GPL-3.0+ with nonfree (fdk-aac) for FFmpeg.
 
 © 2000-2024 [FFmpeg developers](https://github.com/FFmpeg) (All rights reserved)
 
@@ -503,7 +503,7 @@ License: LGPL-2.1
 
 License: None
 
-© 2010-2023 [Hendrik Leppkes](https://github.com/Nevcairiel) (All rights reserved)
+© 2010-2024 [Hendrik Leppkes](https://github.com/Nevcairiel) (All rights reserved)
 
 ---
 
@@ -517,13 +517,23 @@ License: GPL-3.0
 
 ---
 
+[MPC-BE](https://github.com/Aleksoid1978/MPC-BE) - Media Player Black Edition (forked by Aleksoid1978)
+
+License: GPL-3.0
+
+© 2007-2018 [MPC-HC Community Forum & contributors](https://github.com/mpc-hc) (Original) (All rights reserved)
+
+© 2012-2024 [Alexander Vodiannikov](https://github.com/Aleksoid1978) (forked) (All rights reserved)
+
+---
+
 [7-Zip](https://sourceforge.net/projects/sevenzip/files/7-Zip/) - 7-Zip is a file archiver with a high compression ratio.
 
 Official website: https://7-zip.org
 
 License: LGPL-2.1-or-later with unRAR restriction & LZMA SDK in the public domain
 
-© 1999-2023 Igor Pavlov (All rights reserved)
+© 1999-2024 Igor Pavlov (All rights reserved)
 
 ---
 
