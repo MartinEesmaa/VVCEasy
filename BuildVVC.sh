@@ -1,12 +1,42 @@
 #!/bin/bash
 OS=$(uname)
+DISTRO=""
+
+# Detect Linux distribution
+if [ "$OS" = "Linux" ]; then
+    if [ -f /etc/os-release ]; then
+        DISTRO=$(awk -F= '/^ID=/{print $2}' /etc/os-release)
+    fi
+fi
+
 echo "Martin Eesmaa / VVC Compiler (vvenc and vvdec)"
-echo "You're running on $OS of bash script version to compile VVC binaries"
+
+if [ "$OS" = "Linux" ]; then
+    echo "You're running on $OS with distribution $DISTRO of bash script version to compile VVC binaries"
+    else
+    echo "You're running on $OS of bash script version to compile VVC binaries"
+fi
+
 echo "Checking and installing required packages..."
 
-setup_linux() {
+setup_debian() {
     sudo apt update && sudo apt upgrade -y
-    sudo apt install build-essential cmake -y
+    sudo apt install build-essential cmake git -y
+}
+
+setup_fedora() {
+    sudo dnf update -y
+    sudo dnf install cmake gcc gcc-c++ make git -y
+}
+
+setup_arch() {
+    sudo pacman -Syu --noconfirm
+    sudo pacman -S --noconfirm base-devel cmake git
+}
+
+setup_gentoo() {
+    sudo emerge --sync
+    sudo emerge cmake git
 }
 
 setup_macos() {
@@ -35,34 +65,53 @@ build_repos() {
     if [ ! -d vvenc ]; then
         git clone --depth=1 https://github.com/fraunhoferhhi/vvenc
     else
-        git pull -C vvenc
+        git -C vvenc pull
     fi
 
     if [ ! -d vvdec ]; then
         git clone --depth=1 https://github.com/fraunhoferhhi/vvdec
     else
-        git pull -C vvdec
+        git -C vvdec pull
     fi
 
     for REPO in vvenc vvdec; do
         cd $REPO
-        mkdir build && cd build
+        mkdir -p build && cd build
         if [ "$OS" = "Darwin" ]; then
+            CORES=$(sysctl -n hw.ncpu || echo 1)
             cmake -DCMAKE_BUILD_TYPE=Release ..
-            cmake --build . -j $(sysctl -n hw.ncpu)
+            cmake --build . -j $CORES
         else
+            CORES=$(nproc || echo 1)
             cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXE_LINKER_FLAGS="-static" ..
-            cmake --build . -j $(nproc)
-    fi
-    cd -
-done
+            cmake --build . -j $CORES
+        fi
+        cd -
+    done
     echo "Please see the build files starting with (vvenc/vvdec)/bin/release-static."
 }
 
 # Main script execution
 case "$OS" in
     Linux)
-        setup_linux
+        case "$DISTRO" in
+            debian|ubuntu)
+                setup_debian
+                ;;
+            fedora)
+                setup_fedora
+                ;;
+            arch)
+                setup_arch
+                ;;
+            gentoo)
+                setup_gentoo
+                ;;
+            *)
+                echo "Unsupported Linux distribution: $DISTRO"
+                exit 1
+                ;;
+        esac
         ;;
     Darwin)
         setup_macos
