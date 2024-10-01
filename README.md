@@ -20,6 +20,8 @@ Windows source run (Batch-file): VVCEasy.bat
 
 Windows/Mac/Linux source run (Csharp): Bin/Release or Debug/netX.x/VVCEasy.exe (after build of C#), this requires VVCEasy.dll to run console application.
 
+### Community
+
 Matrix chat: https://matrix.to/#/#vvceasy:matrix.org
 
 Revolt: https://app.revolt.chat/invite/0Y10qHzP
@@ -371,32 +373,32 @@ Linux (./vvencapp):
 
 # FAQ (known as Frequently Asked Questions)
 
-Before you ask any question, please see the questions below.
+Before you ask any question, see the questions below please.
 
-Are you the real creator of VVCEasy?
+**Q1**: Are you the real creator of VVCEasy?
 
-Yes... but I'm not a real creator of VVC, I didn't built VVC, it was Fraunhofer HHI that he built VVC.
+**A1**: Yes... but I'm not a real creator of VVC, I didn't built VVC, it was Fraunhofer HHI that he built VVC.
 
-Are you trying to work build of VVCEasy?
+**Q2**: Are you trying to work build of VVCEasy?
 
-Well, yes... it takes longer time to make VVCEasy easier, but VVCEasy is not yet finished until further/update announcement. I don't have employees, so I'm the only one worker.
+**A2**: Well, yes... it takes longer time to make VVCEasy easier, but VVCEasy is not yet finished until further/update announcement. I don't have employees, so I'm the only one worker.
 
-Is it okay to bring my proof screenshots of errors?
+**Q3**: Is it okay to bring my proof screenshots of errors?
 
-Yes, you can bring error screenshots for your proof. More proof, easy to solve it.
+**A3**: Yes, you can bring error screenshots for your proof. More proof, easy to solve it.
 
-My question is not listed on FAQ. Can I ask any question to you?
+**Q4**: My question is not listed on FAQ. Can I ask any question to you?
 
-Sure, just go to Issues tab, ask questions or/and give your issue to me, I'd be happy to solve :).
+**A4**: Sure, just go to Issues tab, ask questions or/and give your issue to me, I'd be happy to solve :).
 
-Do you know what you have skills in your programming?
+**Q5**: Do you know what you have skills in your programming?
 
-I know about batch file and HTML programming. Some hard programming languages might be difficult for me :/.
+**A5**: I know about batch file and HTML programming. Some hard programming languages might be difficult for me :/.
 Update of 19th February 2022: Maybe I should make C# Console program, that will be easy for Windows, Mac and Linux multi support.
 
-If you have any questions or/and any issues, please go to Issues tab and create your issue.
+If you have any questions or/and any issues, please go to Issues tab and create your own issue.
 
-Or you can chat us: https://matrix.to/#/#vvceasy:matrix.org
+Or you can join and chat us our community: [Link for communities at top](#community)
 -   Martin Eesmaa
 
 # Credits & Licenses
