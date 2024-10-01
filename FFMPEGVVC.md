@@ -58,25 +58,27 @@ https://github.com/BtbN/FFmpeg-Builds/pull/393
 
 # Limitations of FFmpeg VVC encoder
 
-Before encode to VVC video codec, see the limitations below.
+Before encoding VVC video codec, see limitations below.
 
-libvvenc (FFmpeg vvc version) works for:
+FFmpeg-VVC (for libvvenc feature) works for:
 
-- Pixel format ⚠️ (only pixel format 10 bit is default, but you can still encode 8 bit by using vvenc params `-vvenc-params InternalBitDepth=8`)
-- Video size (auto detects, but it doesn't detect for SAR and DAR anamorphic is glitch and corrupts the video) ⚠️ (Better way to use vvencapp without FFmpeg)
-- Frame rate ✅ (auto detects)
-- MP4/TS Mux ✅ (only works for stable if it's encoded VVC with MP4 or TS on FFmpeg and mp4box for muxing still works)
-- Mux MP4/TS container from raw bitstream on FFmpeg ⚠️ (the first frame freezes may just print error messages for libvvdec when muxed and seeking in FFmpeg, use mp4box for recommendation)
-- Matroska mux ⚠️ (Only matroska mux has an experimental, causing problem of the video sync delay with audio and others for FFmpeg libvvdec. It is unofficial support)
-- Demux ✅
-- Audio with encode VVC ✅
-- Broadcasting ✅ (MPEG-TS)
-- Streaming ✅ (MPEG-DASH)
-- Bitrates ✅ (average (`-b:v`) and maximum bitrate (`-maxrate`) are only supported)
-- Passes ⚠️ (you may need get passes using vvenc params on FFmpeg VVCEasy or use vvencapp, also it is only available to use bitrate for two passes, QP supports only one pass)
-- Presets ✅
-- QP ✅
-- HDR ✅
+| Features | Notes |
+--- | --- |
+Pixel format | ⚠️ (only pixel format 10 bit is default, but you can still encode 8 bit by using vvenc params `-vvenc-params InternalBitDepth=8`)
+Video size | (auto detects, but it doesn't detect for SAR and DAR anamorphic is glitch and corrupts the video) ⚠️ (Better way to use vvencapp without FFmpeg)
+Frame rate | ✅ (auto detects)
+MP4/TS Mux | ✅ (only works for stable if it's encoded VVC with MP4 or TS on FFmpeg and mp4box for muxing still works)
+Mux MP4/TS container from raw bitstream on FFmpeg | ⚠️ (the first frame freezes may just print error messages for libvvdec when muxed and seeking in FFmpeg, use mp4box for recommendation)
+Matroska Mux | ⚠️ (Only matroska mux has an experimental, causing problem of the video sync delay with audio and others for FFmpeg libvvdec. It is unofficial support)
+Demux | ✅
+Audio with encode VVC | ✅
+Broadcasting | ✅ (MPEG-TS)
+Streaming | ✅ (MPEG-DASH)
+Bitrates | ✅ (average (`-b:v`) and maximum bitrate (`-maxrate`) are only supported)
+Passes | ⚠️ (you may need get passes using vvenc params on FFmpeg VVCEasy or use vvencapp, also it is only available to use bitrate for two passes, QP supports only one pass)
+Presets | ✅
+QP | ✅
+HDR | ✅
 
 Built in libvvenc for FFmpeg command:
 
@@ -86,13 +88,13 @@ ffmpeg -i example.mp4 -c:v libvvenc -qp 37 -preset slow example.266
 
 For more options for libvvenc in FFmpeg VVCEasy version, type `ffmpeg_vvceasy -h encoder=libvvenc` for available commands.
 
-Additional command: You can convert to VVC video without taking a much space for vvencapp, example:
+Additionally... you can convert to VVC video without taking a much space for vvencapp by using pipe for example:
 
 ```
 ffmpeg -i example.mp4 -pix_fmt yuv420p -f yuv4mpegpipe - | vvencapp --y4m -i - --preset medium --qp 35 -o converted.266
 ```
 
-Converting xHE-AAC to AAC audio:
+Converting from xHE-AAC to AAC audio:
 
 ```
 ffmpeg -c:a libfdk_aac -i mymusic.m4a -c:a aac -b:a 128k mymusic.aac
@@ -222,13 +224,13 @@ Step 3: Click "Open" button, this does not hurt your computer.
 
 Requirements:
 
-Xcode
+- Xcode
 
-CMake
+- CMake
 
-NASM
+- NASM
 
-Homebrew
+- Homebrew
 
 Code to build FFmpeg VVC version:
 
@@ -324,7 +326,7 @@ If it's still error, reboot the machine.
 
 2: If the network connection is interrupted or disconnected while downloading repository and made timed out, it is recommended to cancel and retry again.
 
-Press CTRL + C on your keyboard and try it again with make image or/and build FFmpeg command.
+Press CTRL + C to cancel operation on your keyboard and try it again with make image or/and build FFmpeg command.
 
 3: If that did not work for you, please create an issue to VVCEasy or join communities of Discord, Revolt or/and Matrix to solve your problem.
 
