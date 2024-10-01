@@ -145,9 +145,9 @@ See [LAVFilters folder](LAVFilters/README.md)
 
 Those deprecated builds were no new commits/codes after one year.
 
-For Bitmovin VVDec Player, see [Bitmovin.md](Bitmovin.md).
+For Bitmovin VVDec Player, see [Bitmovin.md](docs-old/Bitmovin.md).
 
-For VLC o266player build, see [o266player.md](o266player.md).
+For VLC o266player build, see [o266player.md](docs-old/o266player.md).
 
 # Compile for VVCEasy
 
