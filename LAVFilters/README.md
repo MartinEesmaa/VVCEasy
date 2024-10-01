@@ -10,6 +10,7 @@ Original source code: https://github.com/Nevcairiel/LAVFilters
 
 Changelog:
 ```
+01/10/2024: Updated LAVFilters with new commits, FFmpeg, vvdec and others. Added support VVC Matroska demux and also much better for shrinking DLL files down.
 09/04/2024: Updated LAVFilters with new commits, FFmpeg and others.
 30/03/2024: Updated LAVFilters with new commits, FFmpeg, vvdec and others, still uses libvvdec library and disabled VVC native decoder.
 29/01/2024: Updated LAVFilters with new clsid2 commits, FFmpeg, vvdec and others.
@@ -20,11 +21,11 @@ Changelog:
 21/03/2023: Full VVC support and libfdk_aac is default after native AAC and AAC Fixed decoder disabled to fix USAC/xHE-AAC playable.
 ```
 
-## MPC-HC 2.2.0 (VVC version)
+## MPC-HC 2.3.5 (VVC version)
 
-MPC-HC 2.2.0 comes with LAVFilters VVC installed and it is portable.
+MPC-HC 2.3.5 comes with LAVFilters VVC installed and it is portable.
 
-You can download via cloud link: https://mega.nz/file/X512UBwA#5HQ6Tj2ZfsNWimMitnR73SR3PcDAKCj4fdGIxELHu0I
+You can download via cloud link: https://mega.nz/file/i5tnRBIQ#W342OZPr0E0iuOUCPB-Yd7ASKxlPF3J41p-7dlm-vww
 
 After downloading, extract compressed file via [7-Zip](https://7-zip.org) and run `mpc-hc64.exe`. This program doesn't require administrator privileges.
 
@@ -32,6 +33,7 @@ Original forked source code: https://github.com/clsid2/mpc-hc
 
 Changelog:
 ```
+01/10/2024: Updated MPC-HC, LAVFilters with new commits, FFmpeg, vvdec, yt-dlp and others. Added support VVC Matroska demux and also much better for shrinking DLL files down.
 09/04/2024: Updated MPC-HC, LAVFilters with new commits, FFmpeg and others.
 30/03/2024: Updated MPC-HC, LAVFilters with new commits, FFmpeg, MediaInfo, yt-dlp, vvdec and others, still uses libvvdec library and disabled VVC native decoder.
 29/01/2024: Updated MPC-HC, LAVFilters with new clsid2 commits, FFmpeg, vvdec, Mediainfo, yt-dlp and others.
