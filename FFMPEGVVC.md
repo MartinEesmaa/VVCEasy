@@ -119,15 +119,15 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 # FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
 
-[Windows x64](https://mega.nz/file/y9dSFJiZ#Sfc-OeyH0lSUY6s5Eo3H2BFM7iaNFv2lvB_aM_8HkdM)
+[Windows x64](https://mega.nz/file/n81UTSbA#g6n9GIYk3ClehtOuQMykz59uNnJK7vo3SUnaZOsNsqU)
 
-[Mac OS x86_64](https://mega.nz/file/vslCWYCZ#FOZ5c99Bcfm1fXsAE9PNooFQWTJMqHgNsNIkK7zUN70)
+[Mac OS x86_64](https://mega.nz/file/ep90lYhC#PDg-a-VS9Vb7CXuSYfSJXugNDqtU31DJsaYstdriqKI)
 
-[Mac OS arm64](https://mega.nz/file/TwFHgBCI#kxKEkiTGiz1BmIdcSJipWWtbl1Azn_kXCz0sotCxKOY)
+[Mac OS arm64](https://mega.nz/file/fxFwkQLA#i04ePB7CBSPwYVjslbPRkpZkcHwjRwEdc9M_-hZrJ50)
 
-[Linux x64](https://mega.nz/file/a00FyYIA#TeSaOQl-7Qu_slluQzN7wWNNu4FVfF04RN5EXgLyuqU)
+[Linux x64](https://mega.nz/file/jkUFyKxT#jaXXYGpt6Pi52REioQV80O_xq-o-eN9dBy1IQSW9O0o)
 
-[Linux Arm64](https://mega.nz/file/658nkCQA#aVgMoIYYnw64WoVCUX3deBH2yJ4AbW1ynYJdd4CuU6s)
+[Linux Arm64](https://mega.nz/file/C1cAjADC#_yiWcLPBPCxXlkjI3wURQRRIzqNPsnqNLie619evjQY)
 
 [FFmpeg-FixVVC archived old source code](https://mega.nz/file/G81QyT5S#jcbE1sYPEy1OMIDPCF8BPeAK-3KAGF50u23MVJzmBgw) (old)
 
@@ -137,6 +137,7 @@ Also, please check changelog before you download the new version.
 
 ### Changelog
 ```
+05/10/2024: Updated FFmpeg with up to 7.1 and latest nightly, vvenc, vvdec latest up to 3.0.0-rc2 and others.
 25/09/2024: Updated FFmpeg with latest nightly, vvenc, vvdec and others. Added support of qrencode and quirc for QR-code encoding/decoding external filter for Windows & Linux builds only. (sorry for hiatus nearly three months)
 30/06/2024: Updated FFmpeg with latest nightly, vvenc and others. Added support of SVT-HEVC and SVT-VP9 external libraries to FFmpeg VVCEasy builds for Windows & Linux x86_64 only.
 28/06/2024: Updated FFmpeg with latest nightly, vvenc, vvdec and others. New Film Grain Synthesis (FGS) has added to vvenc (experimental) and vvdec.
