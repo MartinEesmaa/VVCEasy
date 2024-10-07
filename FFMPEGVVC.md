@@ -259,9 +259,9 @@ export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 make -j
 ```
 
-# Linux builders (Important for FFplay) (old)
+# Linux builders (Important for FFplay) (old, deprecated)
 
-You can build using [Linux script](libvvdecffmpeg.sh).
+You can build using [Linux script](BuildFFmpeg.sh).
 
 If you want actually play VVC file with FFplay on your local distro, you need to remove command `--extra-ldexeflags="-static"`, otherwise it might give result segmentation fault for FFplay static only.
 
@@ -273,6 +273,8 @@ mv ffplay ffplay_vvceasy
 mv ffprobe ffprobe_vvceasy
 sudo cp ffmpeg_vvceasy ffplay_vvceasy ffprobe_vvceasy /usr/local/bin
 ```
+
+Windows is also available to compile FFmpeg-VVC using MSYS2, but build of FFmpeg-VVC shell script is deprecated.
 
 # Compile FFmpeg-Builds for Windows & Linux
 
