@@ -12,7 +12,7 @@ https://github.com/MartinEesmaa/VVCEasy/actions/workflows/dotnet.yml)
 # VVCEasy (Windows, macOS, Linux, BSD & Android) (by Martin Eesmaa)
 VVCEasy is that you don't have to compile or/and coding to encode VVC (known as Versatile Video Codec). Simple, Easy, Encode and Decode.
 
-VVCEasy comes to one-easy command of FFmpeg, VVC Tools, VLC o266player, VVDEC Web Player, Bitmovin VVDec Player, libvvdec and more.
+VVCEasy comes for one-easy command by FFmpeg-VVC, Fraunhofer HHI VVC binaries, uvg266, MPV, LAVFilters with MPC-HC & MPC-BE and more.
 
 Installation: Go to the releases and download latest version.
 
@@ -33,7 +33,7 @@ lemmy.ml (c/VVCEasy) | https://lemmy.ml/c/vvceasy
 lemmy.world (c/VVC) | https://lemmy.world/c/vvc
 lemmy.world (c/VVCEasy) | https://lemmy.world/c/vvceasy
 
-*Note: Please note for my first language is Estonian and not native with English language. Some my English words might be errors with incomprehensible.*
+*Note: Please note of my first language is Estonian and not native with English language. Some English words may be errors with incomprehensible.*
 
 # All lists
 
@@ -56,6 +56,8 @@ lemmy.world (c/VVCEasy) | https://lemmy.world/c/vvceasy
   - [VVCEasy Batchfile Compile](#vvceasy-batchfile-version-optional-windows-only)
 
   - [VVCEasy .NET Compile](#vvceasy-net-console-version-optional)
+
+    - [Publish single .NET binary executable](#publish-single-net-binary-executable)
 
 - [Encode/Decode easy](#encodedecode-easy)
 
@@ -175,7 +177,7 @@ Step 1: Clone git and cd VVCEasy
 git clone --depth=1 https://github.com/MartinEesmaa/VVCEasy && cd VVCEasy
 ```
 
-Step 2: Before you build, make sure to build it. Don't worry, when you build with .NET, it will restore project and build.
+Step 2: When you build, this will restore project first and then compiles.
 ```
 dotnet build -c Release
 ```
@@ -190,6 +192,15 @@ cd bin/Release
 dotnet run
 ```
 
+### Publish single .NET binary executable
+
+If you want to compile and publish into one portable executable file, you can create if you wish like.
+```
+dotnet publish -c Release
+```
+
+After that, it should be found for example at bin\Release\netX.x\win-x64\publish.
+
 # Encode/Decode (easy)
 
 Before you run VVCEasy.bat or VVCEasy.exe, you need to change from your input video file name into input.mp4 (for example)
@@ -198,8 +209,6 @@ Follow the instructions, the commands will give you options. From 21 October 202
 Since 23 June 2022, VVCEasy was initial released on v1.0.0.
 
 To encode/decode, please see the GUI applications.
-
--   Martin Eesmaa
 
 # GUI applications (easy)
 
@@ -480,7 +489,7 @@ For my custom build license: GPL-3.0+ with nonfree (fdk-aac) for FFmpeg
 
 [mpv-android](https://github.com/mpv-android/mpv-android) - #mpv-android @ libera.chat
 
-VVC developer & forker: [tbiat](https://github.com/tbiat) & [Martin Eesmaa](https://github.com/MartinEesmaa/mpv-android-vvc)
+VVC forkers: [tbiat](https://github.com/tbiat) & [Martin Eesmaa](https://github.com/MartinEesmaa/mpv-android-vvc)
 
 License: MIT
 
@@ -506,21 +515,15 @@ License: None
 
 [MPC-HC](https://github.com/clsid2/mpc-hc/) - Media Player Classic (forked by clsid2)
 
-License: GPL-3.0
-
-© 2007-2018 [MPC-HC Community Forum & contributors](https://github.com/mpc-hc) (Original) (All rights reserved)
-
-© 2018-2024 [clsid2](https://github.com/clsid2) (forked) (All rights reserved)
-
----
-
 [MPC-BE](https://github.com/Aleksoid1978/MPC-BE) - Media Player Black Edition (forked by Aleksoid1978)
 
 License: GPL-3.0
 
 © 2007-2018 [MPC-HC Community Forum & contributors](https://github.com/mpc-hc) (Original) (All rights reserved)
 
-© 2012-2024 [Alexander Vodiannikov](https://github.com/Aleksoid1978) (forked) (All rights reserved)
+© 2018-2024 [clsid2](https://github.com/clsid2) (forked of MPC-HC) (All rights reserved)
+
+© 2012-2024 [Alexander Vodiannikov](https://github.com/Aleksoid1978) (forked of MPC-BE) (All rights reserved)
 
 ---
 
