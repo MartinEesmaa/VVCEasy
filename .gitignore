@@ -4,8 +4,8 @@ MacOSVVC/arm64
 MacOSVVC/intel_x64
 LinuxVVC/arm*
 LinuxVVC/x*
-Android/arm*
-Android/x*
+AndroidVVC/arm*
+AndroidVVC/x*
 BSDVVC/vv*
 
 uvg266/Windows/Win32
@@ -21,7 +21,6 @@ uvg266/BSD/uvg266
 vvdecWebPlayer/
 vvenc/
 vvdec/
-*.7z
 [Ii]nstall/
 
 .vscode
