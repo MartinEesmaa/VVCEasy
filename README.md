@@ -22,21 +22,16 @@ Windows/Mac/Linux source run (Csharp): Bin/Release or Debug/netX.x/VVCEasy.exe (
 
 ### Community
 
-Matrix chat: https://matrix.to/#/#vvceasy:matrix.org
-
-Revolt: https://app.revolt.chat/invite/0Y10qHzP
-
-Discord: https://discord.gg/t54cADTbWW
-
-Reddit's community: https://reddit.com/r/VVCEasy
-
-Lemmy's community of VVC (lemmy.world & lemmy.ml): https://lemmy.world/c/vvc
-
-https://lemmy.ml/c/vvc
-
-Lemmy's community of VVCEasy (lemmy.world & lemmy.ml): https://lemmy.world/c/vvceasy
-
-https://lemmy.ml/c/vvceasy
+| Communities | Link |
+--- | --- |
+Matrix chat ![Matrix](https://img.shields.io/matrix/vvceasy:matrix.org) | https://matrix.to/#/#vvceasy:matrix.org
+Revolt | https://app.revolt.chat/invite/0Y10qHzP
+Discord ![Discord](https://img.shields.io/discord/974611343237869619) | https://discord.gg/t54cADTbWW
+Reddit | https://reddit.com/r/VVCEasy
+lemmy.ml (c/VVC) | https://lemmy.ml/c/vvc
+lemmy.ml (c/VVCEasy) | https://lemmy.ml/c/vvceasy
+lemmy.world (c/VVC) | https://lemmy.world/c/vvc
+lemmy.world (c/VVCEasy) | https://lemmy.world/c/vvceasy
 
 *Note: Please note for my first language is Estonian and not native with English language. Some my English words might be errors with incomprehensible.*
 
