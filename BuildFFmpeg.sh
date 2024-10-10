@@ -64,7 +64,7 @@ case "$(uname -s)" in
     Darwin*)
         OS="macOS"
         echo "Building FFmpeg VVCEasy macOS version..."
-        echo "Checking for downloading brew requirement packages..."
+        echo "Checking for Brew packages requirements..."
         
         if ! command -v brew &> /dev/null; then
             echo "Homebrew is not installed. Please install Homebrew and try again."
@@ -72,6 +72,7 @@ case "$(uname -s)" in
         else
             brew install ffmpeg cmake nasm opus meson autoconf automake wget ninja
         fi
+        ;;
     *)
         echo "Only for Windows, macOS & Linux are only supported"
         exit 1
