@@ -150,6 +150,7 @@ fi
 
 cd FFmpeg-VVC
 chmod +x configure
+export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig
 ./configure --prefix=$PREFIX --enable-static --pkg-config-flags="--static" --extra-ldexeflags="-static" \
 --enable-libfdk-aac --enable-libvvenc --enable-libvvdec --enable-pic \
 --enable-libxml2 --enable-libopus --enable-libdav1d --enable-libjxl --enable-libzimg \
