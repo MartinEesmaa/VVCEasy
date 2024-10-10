@@ -61,8 +61,19 @@ case "$(uname -s)" in
         echo "Installing MSYS2 packages..."
         pacman -S python git nasm vim wget xxd $MINGW_PACKAGE_PREFIX-{toolchain,cmake,autotools,meson,ninja}
         ;;
+    Darwin*)
+        OS="macOS"
+        echo "Building FFmpeg VVCEasy macOS version..."
+        echo "Checking for downloading brew requirement packages..."
+        
+        if ! command -v brew &> /dev/null; then
+            echo "Homebrew is not installed. Please install Homebrew and try again."
+            exit 1
+        else
+            brew install ffmpeg cmake nasm opus meson autoconf automake wget ninja
+        fi
     *)
-        echo "Only for Windows & Linux are only supported"
+        echo "Only for Windows, macOS & Linux are only supported"
         exit 1
         ;;
 esac
