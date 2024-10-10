@@ -63,9 +63,9 @@ lemmy.world (c/VVCEasy) | https://lemmy.world/c/vvceasy
 
 - [GUI applications easy](#gui-applications-easy)
 
-- [Hard option](#without-vvceasy-experimental-option-for-professional-coders-other-developers-and-everyone-hard)
+- [Hard option (deprecated)](#without-vvceasy-experimental-option-for-professional-coders-other-developers-and-everyone-hard-deprecated)
 
-- [VVEnc & VVDec compatibility test](#compatibility-results-vvenc-and-vvdec-tested-by-martin-eesmaa)
+- [VVEnc & VVDec compatibility test (moving soon)](#compatibility-results-vvenc-and-vvdec-tested-by-martin-eesmaa-moving-soon)
 
 - [FAQ](#faq-known-as-frequently-asked-questions)
 
@@ -228,7 +228,7 @@ These VVC programs of encode/decode are listed:
 
 * [Av1ador](https://github.com/porcino/Av1ador) - This program allows to encode VVC while transcoding by preview and comparison from original video, includes other encoders as well. (created by porcino) ([source code](https://github.com/porcino/Av1ador))
 
-# Without VVCEasy, experimental option for professional coders, other developers, and everyone (hard)
+# Without VVCEasy, experimental option for professional coders, other developers, and everyone (hard, deprecated)
 
 You need 7-Zip (requires ffmpeg and ffplay), ffmpeg, ffplay, vvenc/vvdec(app).
 
@@ -364,7 +364,7 @@ Drag your video file of .h266, .266 or .vvc to play.
 
 If you are still not happy about VVC (known as Versatile Video Coding), that you think is too hard to encode and decode, use AOMEDIA ONE (AV1) that is recommended for most users to easily play VLC Media Player and others. VVC should need played on VLC Media Player in future.
 
-# Compatibility results (VVENC AND VVDEC) TESTED BY MARTIN EESMAA
+# Compatibility results (VVENC AND VVDEC) TESTED BY MARTIN EESMAA (moving soon)
 
 Windows (vvencapp):
 ![WindowsVVENCDEC](https://user-images.githubusercontent.com/88035011/145812753-eddf04c5-1a10-4892-9118-7478735b1475.png)
