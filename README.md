@@ -15,11 +15,15 @@ VVCEasy is that you don't have to compile or/and coding to encode VVC (known as 
 
 It supports Windows, macOS, Linux, BSD, Android & WebAssembly for VVCEasy builds.
 
+From 20 October 2021 to 23 June 2022, VVCEasy was pre-release and construction mode.
+
+Since 23 June 2022, VVCEasy was initial released on v1.0.0.
+
 VVCEasy comes for one-easy command by FFmpeg-VVC, Fraunhofer HHI VVC binaries, uvg266, MPV, LAVFilters with MPC-HC & MPC-BE and more.
 
 Installation: Go to the releases and download latest version.
 
-Windows source run (Batch-file): [VVCEasy.bat](VVCEasy.bat)
+Windows source run (Batch-file) (for encoding/decoding, it needs to be manually edit batchfile to modify video file name): [VVCEasy.bat](VVCEasy.bat)
 
 Windows/Mac/Linux source run (Csharp): Bin/Release or Debug/netX.x/VVCEasy.exe (after build of C#), this requires VVCEasy.dll to run console application.
 
@@ -63,8 +67,6 @@ lemmy.world (c/VVCEasy) | https://lemmy.world/c/vvceasy
   - [VVCEasy .NET Compile](#vvceasy-net-console-version-optional)
 
     - [Publish single .NET binary executable](#publish-single-net-binary-executable)
-
-- [Encode/Decode easy](#encodedecode-easy)
 
 - [GUI applications easy](#gui-applications-easy)
 
@@ -209,15 +211,6 @@ dotnet publish -c Release
 ```
 
 After that, it should be found for example at bin\Release\netX.x\win-x64\publish.
-
-# Encode/Decode (easy)
-
-Before you run VVCEasy.bat or VVCEasy.exe, you need to change from your input video file name into input.mp4 (for example)
-Follow the instructions, the commands will give you options. From 21 October 2021 to 23 June 2022, VVCEasy was pre-release, but it's construction mode and you can have look with .BAT source code.
-
-Since 23 June 2022, VVCEasy was initial released on v1.0.0.
-
-To encode/decode, please see the GUI applications.
 
 # GUI applications (easy)
 
