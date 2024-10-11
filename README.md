@@ -49,6 +49,8 @@ lemmy.world (c/VVCEasy) | https://lemmy.world/c/vvceasy
 
 - [LAVFilters VVC version x64](#lavfilters-vvc-version-x64)
 
+- [VVC binaries](#vvc-binaries)
+
 - [Deprecated builds](#deprecated-builds)
 
 - [Compile for VVCEasy](#compile-for-vvceasy)
@@ -139,6 +141,12 @@ See [MPV.md](MPV.md).
 For more information about LAVFilters Windows VVC version.
 
 See [LAVFilters folder](LAVFilters/README.md)
+
+# VVC binaries
+
+Versatile Video Codec binaries has two tools of vvenc & vvdec and uvg266.
+
+See [VVC.md](VVC.md)
 
 # Deprecated builds
 
