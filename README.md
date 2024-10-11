@@ -70,8 +70,6 @@ lemmy.world (c/VVCEasy) | https://lemmy.world/c/vvceasy
 
 - [Hard option (deprecated)](#without-vvceasy-experimental-option-for-professional-coders-other-developers-and-everyone-hard-deprecated)
 
-- [VVEnc & VVDec compatibility test (moving soon)](#compatibility-results-vvenc-and-vvdec-tested-by-martin-eesmaa-moving-soon)
-
 - [FAQ](#faq-known-as-frequently-asked-questions)
 
 - [Credits & Licenses](#credits--licenses)
@@ -371,17 +369,6 @@ After encoding VVC, you can play using my custom VVCEasy build of [FFmpeg](https
 Drag your video file of .h266, .266 or .vvc to play.
 
 If you are still not happy about VVC (known as Versatile Video Coding), that you think is too hard to encode and decode, use AOMEDIA ONE (AV1) that is recommended for most users to easily play VLC Media Player and others. VVC should need played on VLC Media Player in future.
-
-# Compatibility results (VVENC AND VVDEC) TESTED BY MARTIN EESMAA (moving soon)
-
-Windows (vvencapp):
-![WindowsVVENCDEC](https://user-images.githubusercontent.com/88035011/145812753-eddf04c5-1a10-4892-9118-7478735b1475.png)
-
-Mac (./vvencapp):
-![MacOSterminal12](https://user-images.githubusercontent.com/88035011/146367066-1fbfcf2a-8e1f-470c-8701-c3ec8c2b9701.png)
-
-Linux (./vvencapp):
-![UbuntuVVENCDEC](https://user-images.githubusercontent.com/88035011/145812781-9a270e03-0dc0-47e6-95ad-4316757d3435.png)
 
 # FAQ (known as Frequently Asked Questions)
 

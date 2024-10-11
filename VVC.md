@@ -19,6 +19,17 @@ Fraunhofer HHI VVC binaries is just standard easy tool, which allows to encode &
 * For decoding, it can output to YUV, Y4M or pipe.
 * Lossless encoding (only for vvencFFapp with CostMode argument)
 
+Screenshots of three desktop operating systems:
+
+Windows:
+![WindowsVVENCDEC](https://user-images.githubusercontent.com/88035011/145812753-eddf04c5-1a10-4892-9118-7478735b1475.png)
+
+Mac:
+![MacOSterminal12](https://user-images.githubusercontent.com/88035011/146367066-1fbfcf2a-8e1f-470c-8701-c3ec8c2b9701.png)
+
+Linux:
+![UbuntuVVENCDEC](https://user-images.githubusercontent.com/88035011/145812781-9a270e03-0dc0-47e6-95ad-4316757d3435.png)
+
 ## uvg266 (VVC Scalable encoder tool)
 
 uvg266 is only scalable encoder which helps to make it faster for older & newer computers, but still a bit good quality than vvenc, seems okay.
