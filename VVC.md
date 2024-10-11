@@ -23,7 +23,7 @@ Fraunhofer HHI VVC binaries is just standard easy tool, which allows to encode &
 
 uvg266 is only scalable encoder which helps to make it faster for older & newer computers, but still a bit good quality than vvenc, seems okay.
 
-* C98 programming language
+* C99 programming language
 * Supports Windows, macOS, Linux, BSD, Android & iOS.
 * SIMDE: MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, AVX, AVX2, NEON & AltiVec (PowerPC only).
 * Can only encode 8-bit VVC output for rest operating system supported, but for 10-bit needs compiled with definition, this only works for Android users.
