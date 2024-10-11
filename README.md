@@ -9,7 +9,7 @@ https://github.com/MartinEesmaa/VVCEasy/actions/workflows/dotnet.yml)
 ![Matrix](https://img.shields.io/matrix/vvceasy:matrix.org?label=VVCEasy%20Matrix)
 ![Discord](https://img.shields.io/discord/974611343237869619?label=VVCEasy%20Discord%20Chat)
 
-<h1><center>VVCEasy by Martin Eesmaa</center></h1>
+<h1 align="center">VVCEasy by Martin Eesmaa</h1>
 
 VVCEasy is that you don't have to compile or/and coding to encode VVC (known as Versatile Video Codec). Simple, Easy, Encode and Decode.
 
