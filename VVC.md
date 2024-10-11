@@ -8,7 +8,7 @@ Versatile Video Codec binaries has available two tools for you to choose.
 
 Fraunhofer HHI VVC binaries is just standard easy tool, which allows to encode & decode with arguments and also encodes good quality for slow preset, but it may be slow...
 
-* C++ 17 programming language
+* C++ 14 programming language
 * Supports Windows, macOS, Linux, BSD, Android, iOS & WebAssembly.
 * SIMDE: SCALAR, SSE4.1, SSE4.2, AVX, AVX2, AVX512 (unsupported yet), NEON (arm only) and WASM (Web browsers only).
 * Faster speeding up for newer computer machine of CPUs.
