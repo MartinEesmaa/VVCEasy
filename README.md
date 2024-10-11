@@ -227,17 +227,14 @@ If you're not familiar for using CLI, you can use GUI with application window fo
 
 These VVC programs of encode/decode are listed:
 
-* [FastFlix](https://github.com/cdgriffith/FastFlix) (Note: You might need to download my custom FFmpeg builds for encoding/decoding VVC using external libraries, rename to ffmpeg.exe and ffprobe.exe from my custom names only, no ffplay executable file required) (created by Chris Griffith)
-
-* [VVC-GUI-Encoder](https://github.com/Disa-Kizonda/VVC-GUI-Encoder) (only encoder) (created by Disa Kizonda)
-
-* [aVVCator](https://github.com/gianni-rosato/aVVCator) (only encoder & Linux only) (created by Gianni Rosato)
-
-* [VVenCguiEx](https://github.com/rigaya/VVenCguiEx) (original Japanese language only for instructions and application (you can still translate), only encoder & Windows only, requires Aviutl) (this may be medium or hard) (created by rigaya)
-
-* [VVConvert](https://vvconvert.app/) (only encoder, encodes to VVC raw bitstream from any FFmpeg compatible video codecs, requires FFmpeg to open input video files) (created by Alec Carter) ([source code](https://github.com/alectr0/VVConvert))
-
-* [Av1ador](https://github.com/porcino/Av1ador) - This program allows to encode VVC while transcoding by preview and comparison from original video, includes other encoders as well. (created by porcino) ([source code](https://github.com/porcino/Av1ador))
+| Programs with website or GitHub link | Note | Creator
+--- | --- | --- |
+[Fastflix](https://github.com/cdgriffith/FastFlix) | You might need to download my custom FFmpeg builds for encoding/decoding VVC using external libraries, rename to ffmpeg.exe and ffprobe.exe from my custom names only, no ffplay executable file required | Chris Griffith
+[VVC-GUI-Encoder](https://github.com/Disa-Kizonda/VVC-GUI-Encoder) | Only encoder | Disa Kizonda
+[aVVCator](https://github.com/gianni-rosato/aVVCator) | Only encoder & Linux only | Gianni Rosato
+[VVenCguiEx](https://github.com/rigaya/VVenCguiEx) | Original Japanese language only for instructions and application (you can still translate), only encoder & Windows only, requires Aviutl (this may be medium or hard) | rigaya
+[VVConvert](https://vvconvert.app/) | (only encoder, encodes to VVC raw bitstream from any FFmpeg compatible video codecs, requires FFmpeg to open input video files) | Alec Carter ([source code](https://github.com/alectr0/VVConvert))
+[Av1ador](https://github.com/porcino/Av1ador) | This program allows to encode VVC while transcoding by preview and comparison from original video, includes other encoders as well. | porcino
 
 # Without VVCEasy, experimental option for professional coders, other developers, and everyone (hard, deprecated)
 
