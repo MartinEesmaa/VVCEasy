@@ -119,15 +119,15 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 # FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
 
-[Windows x64](https://mega.nz/file/fgk2yBbI#2sIwx6LFPY0C2Q76ac2qi3-Y2BJFUecXdkrIiV5ujNY)
+[Windows x64](https://mega.nz/file/joMhFCZQ#Cun0oU-n_thlMQf5mw4bJYXa7rEIg5xobNGoOQDpZcs)
 
-[Mac OS x86_64](https://mega.nz/file/O4dQFSoL#qHExlmPpjzPfeMBw1hoYR5jUZcDr0HXOqAslEAfTjz0)
+[Mac OS x86_64](https://mega.nz/file/K49xgCbJ#C7mAFScpfjAizbIou3ZNTfNDpO98CFqkPzQ_3Fr4URk)
 
-[Mac OS arm64](https://mega.nz/file/S5UTQbyb#xwPGBe1ACmafk7MCx1AzzpHsi2tgg5w3oTNG6BwanBE)
+[Mac OS arm64](https://mega.nz/file/m9szRZ6Y#Exxgd0B92Hss2FT79kqawjihC1-_67YoaPwExE68Myg)
 
-[Linux x64](https://mega.nz/file/P49TECoI#ilbUHoAd2Fb2_-U5iFeB-GN6Pl5sPhMd7Z179GQb8wk)
+[Linux x64](https://mega.nz/file/T8thRBzY#fKmyRCzAPgLUdQhkVetqRXKzmHTGc581esE8cwUT4HA)
 
-[Linux Arm64](https://mega.nz/file/GgcAzCRA#PurVHzs-Jf3i4j2Vw6x6KqAzv4h0qlfl8dyZuKXhcb4)
+[Linux Arm64](https://mega.nz/file/S0Ew2Z7K#3Uq18-RTKUish3G0k1ZhXZpsJQSkZb3Wdt2C7DOY5fE)
 
 [FFmpeg-FixVVC archived old source code](https://mega.nz/file/G81QyT5S#jcbE1sYPEy1OMIDPCF8BPeAK-3KAGF50u23MVJzmBgw) (old)
 
@@ -139,6 +139,7 @@ Since 15th October 2024, Windows and Linux custom builds of FFmpeg-VVC on my for
 
 ### Changelog
 ```
+15/10/2024: Fix JPEG-XL MP4/MOV mux bug.
 15/10/2024: Updated FFmpeg with latest nightly, vvenc, vvdec and others. Fix static VVC Matroska mux, added Dolby AC-4 experimental decoder back & support JPEG-XL of mux on MP4, MOV, MKV, TS & AVI, also VVC mux of AVI. Automatic builds are on way for Windows & Linux...
 05/10/2024: Updated FFmpeg with up to 7.1 and latest nightly, vvenc, vvdec latest up to 3.0.0-rc2 and others.
 25/09/2024: Updated FFmpeg with latest nightly, vvenc, vvdec and others. Added support of qrencode and quirc for QR-code encoding/decoding external filter for Windows & Linux builds only. (sorry for hiatus nearly three months)
