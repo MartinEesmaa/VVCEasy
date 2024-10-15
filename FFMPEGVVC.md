@@ -119,15 +119,15 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 # FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
 
-[Windows x64](https://mega.nz/file/n81UTSbA#g6n9GIYk3ClehtOuQMykz59uNnJK7vo3SUnaZOsNsqU)
+[Windows x64](https://mega.nz/file/fgk2yBbI#2sIwx6LFPY0C2Q76ac2qi3-Y2BJFUecXdkrIiV5ujNY)
 
-[Mac OS x86_64](https://mega.nz/file/ep90lYhC#PDg-a-VS9Vb7CXuSYfSJXugNDqtU31DJsaYstdriqKI)
+[Mac OS x86_64](https://mega.nz/file/O4dQFSoL#qHExlmPpjzPfeMBw1hoYR5jUZcDr0HXOqAslEAfTjz0)
 
-[Mac OS arm64](https://mega.nz/file/fxFwkQLA#i04ePB7CBSPwYVjslbPRkpZkcHwjRwEdc9M_-hZrJ50)
+[Mac OS arm64](https://mega.nz/file/S5UTQbyb#xwPGBe1ACmafk7MCx1AzzpHsi2tgg5w3oTNG6BwanBE)
 
-[Linux x64](https://mega.nz/file/jkUFyKxT#jaXXYGpt6Pi52REioQV80O_xq-o-eN9dBy1IQSW9O0o)
+[Linux x64](https://mega.nz/file/P49TECoI#ilbUHoAd2Fb2_-U5iFeB-GN6Pl5sPhMd7Z179GQb8wk)
 
-[Linux Arm64](https://mega.nz/file/C1cAjADC#_yiWcLPBPCxXlkjI3wURQRRIzqNPsnqNLie619evjQY)
+[Linux Arm64](https://mega.nz/file/GgcAzCRA#PurVHzs-Jf3i4j2Vw6x6KqAzv4h0qlfl8dyZuKXhcb4)
 
 [FFmpeg-FixVVC archived old source code](https://mega.nz/file/G81QyT5S#jcbE1sYPEy1OMIDPCF8BPeAK-3KAGF50u23MVJzmBgw) (old)
 
@@ -135,8 +135,11 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 Also, please check changelog before you download the new version.
 
+Since 15th October 2024, Windows and Linux custom builds of FFmpeg-VVC on my forked repo FFmpeg-Builds will turn from my manual time to automatic computer to save my time.
+
 ### Changelog
 ```
+15/10/2024: Updated FFmpeg with latest nightly, vvenc, vvdec and others. Fix static VVC Matroska mux, added Dolby AC-4 experimental decoder back & support JPEG-XL of mux on MP4, MOV, MKV, TS & AVI, also VVC mux of AVI. Automatic builds are on way for Windows & Linux...
 05/10/2024: Updated FFmpeg with up to 7.1 and latest nightly, vvenc, vvdec latest up to 3.0.0-rc2 and others.
 25/09/2024: Updated FFmpeg with latest nightly, vvenc, vvdec and others. Added support of qrencode and quirc for QR-code encoding/decoding external filter for Windows & Linux builds only. (sorry for hiatus nearly three months)
 30/06/2024: Updated FFmpeg with latest nightly, vvenc and others. Added support of SVT-HEVC and SVT-VP9 external libraries to FFmpeg VVCEasy builds for Windows & Linux x86_64 only.
