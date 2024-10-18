@@ -119,15 +119,11 @@ For Linux and Mac OS users: Replace **mp4box** by **gpac**
 
 # FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
 
-[Windows x64](https://mega.nz/file/a80X2aRS#0wqGq88L4ar23HZAOtkok4zJiXsz9d8-1HZu3WH33nM)
+[Windows (x64) & Linux (x64/arm64)](https://github.com/MartinEesmaa/FFmpeg-Builds/releases/tag/latest) - Automated builds every day at 12:00 (12 PM) UTC of FFmpeg VVCEasy custom builds.
 
 [Mac OS x86_64](https://mega.nz/file/Oh0FHCDL#kdYYOdeNgAypzqwWXBfTo_VYGxfLMotmUXjRoxsxP8A)
 
 [Mac OS arm64](https://mega.nz/file/f1FjxASR#WspQ7zp1p8PS8qFZGwXK-XIv-zs1iLqppY-fUP5V8DE)
-
-[Linux x64](https://mega.nz/file/vlknXAKL#VoK400iQJPmrDsfbI5Nigr3MSgDudGe3P1cAlPrIOMc)
-
-[Linux Arm64](https://mega.nz/file/al9kjBqL#W_WT-lNM8osAMsdQaKkpe6Ksd4fMO4GKXysMB5IjiJQ)
 
 [FFmpeg-FixVVC archived old source code](https://mega.nz/file/G81QyT5S#jcbE1sYPEy1OMIDPCF8BPeAK-3KAGF50u23MVJzmBgw) (old)
 
@@ -137,8 +133,19 @@ Also, please check changelog before you download the new version.
 
 Since 15th October 2024, Windows and Linux custom builds of FFmpeg-VVC on my forked repo FFmpeg-Builds will turn from my manual time to automatic computer to save my time.
 
+## Deprecated manual builds
+
+Before automated builds started of Windows & Linux, here are the last links of manual pre-compiled builds:
+
+[Windows x64](https://mega.nz/file/a80X2aRS#0wqGq88L4ar23HZAOtkok4zJiXsz9d8-1HZu3WH33nM)
+
+[Linux x64](https://mega.nz/file/vlknXAKL#VoK400iQJPmrDsfbI5Nigr3MSgDudGe3P1cAlPrIOMc)
+
+[Linux Arm64](https://mega.nz/file/al9kjBqL#W_WT-lNM8osAMsdQaKkpe6Ksd4fMO4GKXysMB5IjiJQ)
+
 ### Changelog
 ```
+16/10/2024: Added libgsm external feature to FFmpeg VVCEasy builds for Windows & Linux only.
 15/10/2024: Fixed missing JPEG-XL demux MKTAG of MP4/MOV container format bug.
 15/10/2024: Fix JPEG-XL MP4/MOV mux bug.
 15/10/2024: Updated FFmpeg with latest nightly, vvenc, vvdec and others. Fix static VVC Matroska mux, added Dolby AC-4 experimental decoder back & support JPEG-XL of mux on MP4, MOV, MKV, TS & AVI, also VVC mux of AVI. Automatic builds are on way for Windows & Linux...
@@ -279,11 +286,11 @@ mv ffprobe ffprobe_vvceasy
 sudo cp ffmpeg_vvceasy ffplay_vvceasy ffprobe_vvceasy /usr/local/bin
 ```
 
-Windows is also available to compile FFmpeg-VVC using MSYS2, but build of FFmpeg-VVC shell script is deprecated.
+On Windows is also available to compile FFmpeg-VVC using MSYS2, but build of FFmpeg-VVC shell script is deprecated.
 
 # Compile FFmpeg-Builds for Windows & Linux
 
-If you want to compile your own FFmpeg with VVC support + xHE-AAC, here's what you need to do:
+If you want to compile by your own self FFmpeg with VVC support + xHE-AAC, here's what you need to do:
 
 You may need:
 - Any Linux distribution to cross-compile for Windows & Linux. Recommended architecture for x86_64 (amd64) to make faster compiling.
@@ -291,6 +298,9 @@ You may need:
 - Git for clone repository to local computer.
 - Network connection for downloading repositories.
 
+**Tip:** If you don't want to compile, you can download my latest automated builds of Windows & Linux, [link here](https://github.com/MartinEesmaa/FFmpeg-Builds/releases/tag/latest) and also you can have look logs on Actions tab.
+
+Anyway moving to Step 1 by compiling manually.
 
 Step 1: You need to install Docker Engine and to use shell script on Linux or maybe possible Windows using MSYS2.
 
@@ -313,6 +323,14 @@ Step 3: Make image and build FFmpeg, example you can build one or two builds.
 ```
 
 Non-free allows to enable Fraunhofer FDK feature, other licenses may not allow to bring Fraunhofer FDK feature to FFmpeg.
+
+**Tip 2:**: If you don't want make image, Martin Eesmaa's pre-package of non-free feature is only available. It saves your time without making it.
+
+```
+./build.sh win64 nonfree && ./build.sh linux64 nonfree
+```
+
+This will download Martin Eesmaa's pre-package of non-free feature only. However only non-free pre-package is available, not others. If you would like want others than non-free, you can create an feature request to VVCEasy repo on GitHub.
 
 Step 4: After making image and building FFmpeg, you can look `artifacts` folder by inside compressed files of Windows & Linux.
 
