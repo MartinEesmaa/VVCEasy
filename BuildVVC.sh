@@ -62,17 +62,14 @@ setup_freebsd() {
 }
 
 build_repos() {
-    if [ ! -d vvenc ]; then
-        git clone --depth=1 https://github.com/fraunhoferhhi/vvenc
-    else
-        git -C vvenc pull
-    fi
-
-    if [ ! -d vvdec ]; then
-        git clone --depth=1 https://github.com/fraunhoferhhi/vvdec
-    else
-        git -C vvdec pull
-    fi
+    
+    for clone in vvenc vvdec; do
+        if [ ! -d $clone ]; then
+            git clone --depth=1 https://github.com/fraunhoferhhi/$clone
+        else
+            git -C $clone pull
+        fi
+    done
 
     for REPO in vvenc vvdec; do
         cd $REPO

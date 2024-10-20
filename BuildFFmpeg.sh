@@ -123,17 +123,18 @@ fi
 
 make="make install-r install-prefix=$PREFIX"
 autogen="./autogen.sh && ./configure --prefix=$PREFIX --enable-static --disable-shared && make install -j $(nproc)"
+cmakeoptions="-DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$PREFIX -DBUILD_SHARED_LIBS=OFF"
 
 cd vvenc && $make && cd ..
 cd vvdec && $make && cd ..
 cd fdk-aac && $autogen && cd ..
 cd libxml2 && $autogen && cd ..
-cd opus && ./autogen.sh && CFLAGS="-O2 -D_FORTIFY_SOURCE=0" LDFLAGS="-flto -s" ./configure --prefix=$PREFIX --enable-static --disable-shared && make install -j $(nproc) && cd ..
-mkdir -p libjxl/build && cd libjxl/build && cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_{TESTING,SHARED_LIBS}=OFF -DJPEGXL_ENABLE_{BENCHMARK,MANPAGES}=OFF -DJPEGXL_{ENABLE_PLUGINS,FORCE_SYSTEM_BROTLI}=ON -DCMAKE_INSTALL_PREFIX=$PREFIX .. -G Ninja && ninja install && cd ../../
+cd opus && CFLAGS="-O2 -D_FORTIFY_SOURCE=0" LDFLAGS="-flto -s" $autogen && cd ..
+mkdir -p libjxl/build && cd libjxl/build && cmake $cmakeoptions -DBUILD_{TESTING,SHARED_LIBS}=OFF -DJPEGXL_ENABLE_{BENCHMARK,MANPAGES}=OFF -DJPEGXL_{ENABLE_PLUGINS,FORCE_SYSTEM_BROTLI}=ON .. -G Ninja && ninja install && cd ../../
 mkdir -p vmaf/libvmaf/build && cd vmaf/libvmaf/build && CFLAGS="-msse2 -mfpmath=sse -mstackrealign" meson -Denable_docs=false -Ddefault_library=static -Denable_float=true -Dbuilt_in_models=true -Dprefix=$PREFIX .. && ninja install && cd ../../../
-mkdir -p SDL/build && cd SDL/build && cmake -DCMAKE_EXE_LINKER_FLAGS="-static" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$PREFIX .. && make install -j $(nproc) && cd ../../
+mkdir -p SDL/build && cd SDL/build && cmake $cmakeoptions .. && make install -j $(nproc) && cd ../../
 cd zimg && $autogen && cd ..
-mkdir -p soxr/build && cd soxr/build && cmake -D{WITH_LSR_BINDINGS,BUILD_TESTS,WITH_OPENMP}=off -DCMAKE_INSTALL_PREFIX=$PREFIX -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF .. && cmake --build . -j $(nproc) --target install && cd ../../
+mkdir -p soxr/build && cd soxr/build && cmake -D{WITH_LSR_BINDINGS,BUILD_TESTS,WITH_OPENMP}=off $cmakeoptions .. && cmake --build . -j $(nproc) --target install && cd ../../
 mkdir -p dav1d/build && cd dav1d/build && meson -Denable_docs=false -Ddefault_library=static -Dprefix=$PREFIX .. && ninja install && cd ../../
 
 sed -i 's/-lm/-lm -lstdc++/g' $PREFIX/lib/pkgconfig/libvmaf.pc
