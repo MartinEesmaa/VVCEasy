@@ -233,28 +233,15 @@ If you're looking hard option of document information, you can check out there: 
 
 # FAQ (known as Frequently Asked Questions)
 
-Before you ask any question, see the questions below please.
+Before you ask any question, see the questions at table please.
 
-**Q1**: Are you the real creator of VVCEasy?
-
-**A1**: Yes... but I'm not a real creator of VVC, I didn't built VVC, it was Fraunhofer HHI that he built VVC.
-
-**Q2**: Are you trying to work build of VVCEasy?
-
-**A2**: Well, yes... it takes longer time to make VVCEasy easier, but VVCEasy is not yet finished until further/update announcement. I don't have employees, so I'm the only one worker.
-
-**Q3**: Is it okay to bring my proof screenshots of errors?
-
-**A3**: Yes, you can bring error screenshots for your proof. More proof, easy to solve it.
-
-**Q4**: My question is not listed on FAQ. Can I ask any question to you?
-
-**A4**: Sure, just go to Issues tab, ask questions or/and give your issue to me, I'd be happy to solve :).
-
-**Q5**: Do you know what you have skills in your programming?
-
-**A5**: I know about batch file and HTML programming. Some hard programming languages might be difficult for me :/.
-Update of 19th February 2022: Maybe I should make C# Console program, that will be easy for Windows, Mac and Linux multi support.
+| Question | Answer
+--- | --- |
+**1:** Are you the real creator of VVCEasy? | Yes... but I'm not a real creator of VVC, I didn't built VVC, it was Fraunhofer HHI that he built VVC.
+**2:** Are you trying to work build of VVCEasy? | Well, yes... it takes longer time to make VVCEasy easier, but VVCEasy is not yet finished until further/update announcement. I don't have employees, so I'm the only one worker.
+**3:** Is it okay to bring my proof screenshots of errors? | Yes, you can bring error screenshots for your proof. More proof, more easy to solve it.
+**4:** My question is not listed on FAQ. Can I ask any question to you? | Sure, just go to Issues tab, ask questions or/and give your issue to me, I'd be happy to solve :).
+**5:** Do you know what you have skills in your programming? | I know about batch file and HTML programming. Some hard programming languages might be difficult for me :/. Update of 19th February 2022: Maybe I should make C# Console program, that will be easy for Windows, Mac and Linux multi support.
 
 If you have any questions or/and any issues, please go to Issues tab and create your own issue.
 
