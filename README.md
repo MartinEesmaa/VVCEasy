@@ -40,7 +40,7 @@ lemmy.ml (c/VVCEasy) | https://lemmy.ml/c/vvceasy
 lemmy.world (c/VVC) | https://lemmy.world/c/vvc
 lemmy.world (c/VVCEasy) | https://lemmy.world/c/vvceasy
 
-*Note: Please note of my first language is Estonian and not native with English language. Some English words may be errors with incomprehensible.*
+*Note: Please note my first language is Estonian and not natively with English language. Some English words may be incorrect and incomprehensible.*
 
 # All lists
 
@@ -224,7 +224,7 @@ These VVC programs of encode/decode are listed:
 [VVC-GUI-Encoder](https://github.com/Disa-Kizonda/VVC-GUI-Encoder) | Only encoder | Disa Kizonda
 [aVVCator](https://github.com/gianni-rosato/aVVCator) | Only encoder & Linux only | Gianni Rosato
 [VVenCguiEx](https://github.com/rigaya/VVenCguiEx) | Original Japanese language only for instructions and application (you can still translate), only encoder & Windows only, requires Aviutl (this may be medium or hard) | rigaya
-[VVConvert](https://vvconvert.app/) | (only encoder, encodes to VVC raw bitstream from any FFmpeg compatible video codecs, requires FFmpeg to open input video files) | Alec Carter ([source code](https://github.com/alectr0/VVConvert))
+[VVConvert](https://vvconvert.app/) | Only encoder, encodes to VVC raw bitstream from any FFmpeg compatible video codecs, requires FFmpeg to open input video files | Alec Carter ([source code](https://github.com/alectr0/VVConvert))
 [Av1ador](https://github.com/porcino/Av1ador) | This program allows to encode VVC while transcoding by preview and comparison from original video, includes other encoders as well. | porcino
 
 # Hard option (deprecated)
