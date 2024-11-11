@@ -72,7 +72,7 @@ lemmy.world (c/VVCEasy) | https://lemmy.world/c/vvceasy
 
 - [Hard option (deprecated)](#hard-option-deprecated)
 
-- [FAQ](#faq-known-as-frequently-asked-questions)
+- [FAQ](#faq-frequently-asked-questions)
 
 - [Credits & Licenses](#credits--licenses)
 
@@ -231,7 +231,7 @@ These VVC programs of encode/decode are listed:
 
 If you're looking hard option of document information, you can check out there: [docs-old/advanced.md](docs-old/advanced.md)
 
-# FAQ (known as Frequently Asked Questions)
+# FAQ (Frequently Asked Questions)
 
 Before you ask any question, see the questions at table please.
 
