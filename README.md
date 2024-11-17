@@ -103,25 +103,9 @@ You can test Martin Eesmaa's encoded movies of VVC video codec and follow README
 
 # VLC InterDigital VTM VVC Plugin
 
-I have great news. VLC latest version worked out well of Inter Digital VTM plugins. On o266player, there were some problems on my computer for one reason...
+VLC InterDigital VTM VVC Plugin is an external VVC decoder plugin from third party developer.
 
-One reason that my Windows 11 operating system won't view video of VVC file on o266player version. On VTM plugins of VLC, now it shows me VVC video good.
-
-Here is a comparison of o266player version and VTM VVC plugins:
-
-Top left and right is o266player by Tencent Cloud.
-
-Bottom left and right is VLC VTM plugins by Inter Digital Inc.
-
-![windows8testbetweno266playerandvtmplugins](https://user-images.githubusercontent.com/88035011/160266040-863aa216-4694-4b2f-9957-4aa5b5a07ec3.png)
-
-***UPDATE of 19/04/2022 00:20 AEST:***
-
-Bug of Inter Digital VTM VLC Plugin:
-
-When you try to play your MPEG-TS or TS file, it will crash with your InterDigital VLC VTM Plugin installed on your VLC Media Player.
-
-Without InterDigital VLC VTM Plugin, playing MPEG-TS or TS file will play fine in your all original plugins (except VLC VTM Plugin) on your VLC Media Player.
+See [INSTALLVLCPLUGIN folder](INSTALLVLCPLUGIN/README.md).
 
 # FFmpeg VVENC/DEC & xHE-AAC support
 
