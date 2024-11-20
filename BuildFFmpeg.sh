@@ -105,17 +105,19 @@ clonepull soxr https://github.com/chirlu/soxr
 clonepull dav1d https://code.videolan.org/videolan/dav1d
 clonepull vmaf https://github.com/netflix/vmaf
 
+gitsub="submodule update --init --recursive --depth 1 --recommend-shallow"
+
 if [ $OS = "Windows" ]; then
 clonepull codec2 https://github.com/drowe67/codec2
 fi
 
 if [ ! -d libjxl ]; then
 sed -i 's/-lm/-lm -lstdc++/g' libjxl/lib/jxl/libjxl.pc.in libjxl/lib/threads/libjxl_threads.pc.in
-git -C libjxl submodule update --init --recursive --depth 1 --recommend-shallow
+git -C libjxl $gitsub
 fi
 
 if [ ! -d zimg ]; then
-git -C zimg submodule update --init --recursive --depth 1
+git -C zimg $gitsub
 wget https://raw.githubusercontent.com/m-ab-s/mabs-patches/master/zimg/0001-libm_wrapper-define-__CRT__NO_INLINE-before-math.h.patch
 git -C zimg apply 0001-libm_wrapper-define-__CRT__NO_INLINE-before-math.h.patch
 rm 0001-libm_wrapper-define-__CRT__NO_INLINE-before-math.h.patch
@@ -124,18 +126,19 @@ fi
 make="make install-r install-prefix=$PREFIX"
 autogen="./autogen.sh && ./configure --prefix=$PREFIX --enable-static --disable-shared && make install -j $(nproc)"
 cmakeoptions="-DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$PREFIX -DBUILD_SHARED_LIBS=OFF"
+mesonoptions="-Ddefault_library=static -Dprefix=$PREFIX"
 
 cd vvenc && $make && cd ..
 cd vvdec && $make && cd ..
 cd fdk-aac && $autogen && cd ..
 cd libxml2 && $autogen && cd ..
 cd opus && CFLAGS="-O2 -D_FORTIFY_SOURCE=0" LDFLAGS="-flto -s" $autogen && cd ..
-mkdir -p libjxl/build && cd libjxl/build && cmake $cmakeoptions -DBUILD_{TESTING,SHARED_LIBS}=OFF -DJPEGXL_ENABLE_{BENCHMARK,MANPAGES}=OFF -DJPEGXL_{ENABLE_PLUGINS,FORCE_SYSTEM_BROTLI}=ON .. -G Ninja && ninja install && cd ../../
-mkdir -p vmaf/libvmaf/build && cd vmaf/libvmaf/build && CFLAGS="-msse2 -mfpmath=sse -mstackrealign" meson -Denable_docs=false -Ddefault_library=static -Denable_float=true -Dbuilt_in_models=true -Dprefix=$PREFIX .. && ninja install && cd ../../../
+mkdir -p libjxl/build && cd libjxl/build && cmake $cmakeoptions -DBUILD_TESTING=OFF -DJPEGXL_ENABLE_{BENCHMARK,MANPAGES,EXAMPLES,DOXYGEN}=OFF -DJPEGXL_FORCE_SYSTEM_BROTLI=ON .. -G Ninja && ninja install && cd ../../
+mkdir -p vmaf/libvmaf/build && cd vmaf/libvmaf/build && CFLAGS="-msse2 -mfpmath=sse -mstackrealign" meson -Denable_{docs,tests}=false -Denable_float=true $mesonoptions .. && ninja install && cd ../../../
 mkdir -p SDL/build && cd SDL/build && cmake $cmakeoptions .. && make install -j $(nproc) && cd ../../
 cd zimg && $autogen && cd ..
 mkdir -p soxr/build && cd soxr/build && cmake -D{WITH_LSR_BINDINGS,BUILD_TESTS,WITH_OPENMP}=off $cmakeoptions .. && cmake --build . -j $(nproc) --target install && cd ../../
-mkdir -p dav1d/build && cd dav1d/build && meson -Denable_docs=false -Ddefault_library=static -Dprefix=$PREFIX .. && ninja install && cd ../../
+mkdir -p dav1d/build && cd dav1d/build && meson -Denable_docs=false $mesonoptions .. && ninja install && cd ../../
 
 sed -i 's/-lm/-lm -lstdc++/g' $PREFIX/lib/pkgconfig/libvmaf.pc
 
@@ -144,13 +147,12 @@ if [ "$OS" = "Windows" ]; then
     sed -i 's|if(WIN32)|if(FALSE)|g' CMakeLists.txt
     grep -ERl "\b(lsp|lpc)_to_(lpc|lsp)" --include="*.[ch]" | \
                 xargs -r sed -ri "s;((lsp|lpc)_to_(lpc|lsp));c2_\1;g"
-    mkdir -p build && cd build && cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$PREFIX -D{UNITTEST,INSTALL_EXAMPLES}=off -DBUILD_SHARED_LIBS=OFF -DCMAKE_EXE_LINKER_FLAGS="-static" .. -G "MinGW Makefiles"
+    mkdir -p build && cd build && cmake $cmakeoptions -D{UNITTEST,INSTALL_EXAMPLES}=off .. -G "MinGW Makefiles"
     cmake --build . -j $nproc --target install
     cd ../../
 fi
 
 cd FFmpeg-VVC
-chmod +x configure
 export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig
 ./configure --prefix=$PREFIX --enable-static --pkg-config-flags="--static" --extra-ldexeflags="-static" \
 --enable-libfdk-aac --enable-libvvenc --enable-libvvdec --enable-pic \
