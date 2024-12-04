@@ -9,10 +9,10 @@ Versatile Video Codec binaries has available two tools for you to choose.
 Fraunhofer HHI VVC binaries is just standard easy tool, which allows to encode & decode with arguments and also encodes good quality for slow preset, but it may be slow...
 
 * C++14 programming language
-* Supports Windows, macOS, Linux, BSD, Android, iOS & WebAssembly.
+* Supports Windows, macOS, Linux, BSD, Android, iOS (library only with new app) & WebAssembly.
 * SIMDE: SCALAR, SSE4.1, SSE4.2, AVX, AVX2, AVX512 (unsupported yet), NEON (arm only) and WASM (Web browsers only).
-* Faster speeding up for newer computer machine of CPUs.
-* Preset can be used from faster to slower.
+* Faster depends speeding up for newer computer machine of CPUs.
+* Presets can be used from faster to slower.
 * Includes advanced tool of encode (vvencFFapp)
 * Two-pass control of bitrate is only allowed.
 * Default encoding pixel format is 10-bit.
@@ -35,12 +35,12 @@ Linux:
 uvg266 is only scalable encoder which helps to make it faster for older & newer computers, but still a bit good quality than vvenc, seems okay.
 
 * C99 programming language
-* Supports Windows, macOS, Linux, BSD, Android & iOS.
+* Supports Windows, macOS, Linux, BSD, Android & iOS (library only with new app).
 * SIMDE: MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, AVX, AVX2, NEON & AltiVec (PowerPC only).
 * Can only encode 8-bit VVC output for rest operating system supported, but for 10-bit needs compiled with definition, this only works for Android users.
 * Faster encoding scalable of old & new computers than vvenc.
 * Supports presets from ultrafast to placebo like x264 presets, however it is recommended to use from faster to slower to avoid VVC decoding fail issue.
-* Lossless encoding, but not recommended due decoding fail.
+* Lossless encoding is not recommended due decoding fail.
 
 ### Downloads
 
