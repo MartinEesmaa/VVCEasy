@@ -42,6 +42,16 @@ uvg266 is only scalable encoder which helps to make it faster for older & newer 
 * Supports presets from ultrafast to placebo like x264 presets, however it is recommended to use from faster to slower to avoid VVC decoding fail issue.
 * Lossless encoding is not recommended due decoding fail.
 
+### Minimum requirements
+
+**vvenc/vvdec**:
+
+- Windows XP and later (requires Visual C++ Redistributable for Visual Studio 2019 installed)
+- macOS 10.13 and later (arm64 since macOS 11.0)
+- Linux kernel 3.2.0 and later (eg. Ubuntu 12.04 LTS and later)
+- BSD (FreeBSD & x64 only)
+- Android 4.4 and later (arm64 & x86_64 since Android 5.0)
+
 ### Downloads
 
 NOTE: uvg266 compiled by same architectures supported of vvenc & vvdec.
