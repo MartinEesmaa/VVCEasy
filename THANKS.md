@@ -14,6 +14,8 @@ See the lists:
 
 -  Thanks, Artem! [VVCEasy thread](https://forum.doom9.org/showthread.php?p=1974413#post1974413)
 
+-  Thanks, Mark Litwintschik! [VVC encoding](https://tech.marksblogg.com/vvc-encoding.html)
+
 - And to thank you all for using VVCEasy of prebuilt binaries, custom builds and more!
 
 -  Martin Eesmaa (@MartinEesmaa)
