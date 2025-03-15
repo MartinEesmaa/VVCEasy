@@ -54,7 +54,7 @@ uvg266 is only scalable encoder which helps to make it faster for older & newer 
 
 **uvg266**:
 
-- Windows 7 and later (requires Visual C++ Redistributable, for Windows XP support needs [OneCoreAPI](https://github.com/shorthorn-project/One-Core-API-Binaries))
+- Windows Vista and later (requires Visual C++ Redistributable)
 - macOS 10.13 and later (arm64 since macOS 11.0)
 - Linux kernel 3.2.0 and later (eg. Ubuntu 12.04 LTS and later)
 - BSD (FreeBSD & x64 only)
