@@ -300,7 +300,7 @@ For my custom build configuration license is GPL-3.0+ with nonfree (fdk-aac) for
 
 License: None
 
-© 2012-2023 [Martin Storsjö](https://github.com/mstorsjo) (All rights reserved)
+© 2012-2025 [Martin Storsjö](https://github.com/mstorsjo) (All rights reserved)
 
 ---
 
