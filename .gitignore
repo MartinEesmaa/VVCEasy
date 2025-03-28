@@ -1,5 +1,6 @@
 WindowsVVC/Win32
 WindowsVVC/x64
+WindowsVVC/arm64
 MacOSVVC/arm64
 MacOSVVC/intel_x64
 LinuxVVC/arm*
