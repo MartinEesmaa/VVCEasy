@@ -14,6 +14,8 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 
 # Download MPV Windows/Linux/Android Player (libvvdec + xHE-AAC plugin)
 
+[Manual builds generated Windows x64 on GitHub Actions](https://github.com/MartinEesmaa/mpv-winbuild-cmake/releases)
+
 [Windows 7 and later x64](https://mega.nz/file/20syxBgS#69Hs6eKFHJz1seJFVeP1bZ_Qv7Zb4ygCC90rQqfBY7o)
 
 [Windows MPV.NET VVCEasy version x64](https://mega.nz/file/mgVCBAIb#cxLIN76oRacfnVLhHBEjieGwz2M0CeV9mI2mbHc6aFo)
@@ -53,6 +55,7 @@ Switched native VVC decoder back to external VVC decoder of libvvdec after nativ
 Please check the changelog before you download the new version.
 
 ```
+28/03/2025 - Added manual automatic builds of Windows x64 inside GitHub actions on my forked repo.
 19/03/2025 - After nine months, it is now updated MPV Linux VVCEasy build with latest version.
 07/12/2024 - Updated Windows MPV/MPV.NET/MPV LIB VVCEasy build with FFmpeg latest, vvenc, vvdec, Mediainfo and others. Automatic builds will be soon for Windows, Linux and Android if possible.
 07/10/2024 - Updated Windows MPV/MPV.NET/MPV LIB VVCEasy build with FFmpeg for up to 7.1, vvdec up to 3.0.0-rc2, Mediainfo and others.
