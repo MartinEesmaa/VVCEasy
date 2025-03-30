@@ -10,6 +10,7 @@ Original source code: https://github.com/Nevcairiel/LAVFilters
 
 Changelog:
 ```
+30/03/2025: Updated LAVFilters with new commits, FFmpeg, vvdec and others. Sorry long time and also sorry big DLL sizes.
 01/10/2024: Updated LAVFilters with new commits, FFmpeg, vvdec and others. Added support VVC Matroska demux and also much better for shrinking DLL files down.
 09/04/2024: Updated LAVFilters with new commits, FFmpeg and others.
 30/03/2024: Updated LAVFilters with new commits, FFmpeg, vvdec and others, still uses libvvdec library and disabled VVC native decoder.
