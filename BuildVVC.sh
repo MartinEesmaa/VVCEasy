@@ -17,6 +17,11 @@ if [ "$OS" = "Linux" ]; then
     echo "You're running on $OS of bash script version to compile VVC binaries"
 fi
 
+if [ "$OS" = "SunOS" ]; then
+    echo "Sorry, SunOS like Oracle Solaris is not supported due to various error compilations for compiling VVC binaries."
+    exit 1
+fi
+
 echo "Checking and installing required packages..."
 
 setup_debian() {
