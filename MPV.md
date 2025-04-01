@@ -26,7 +26,7 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 
 [Windows MPVLIB VVCEasy version x86_64-v3 native](https://mega.nz/file/24UggbYD#CsTqPGLa4nEfs_9UheV0auISenDXqFdu465PZfRqozY)
 
-[Linux MPV VVCEasy version x64](https://mega.nz/file/SgNHSYTT#XjZXFc3KMNRGhCKVK1jv1hYaysqbGi5qSXR_qfGdLkI)
+[Linux MPV VVCEasy version x64](https://mega.nz/file/roNhCRzA#0a4Gl4hcldnv034KlvRPdHgBy02I3TyUyPVv4SCTBN4)
 
 [Arch Linux MPV VVCEasy version x64](https://mega.nz/file/2pFDTSzT#GwoVQ0u6RStUwjk3rc5LkIzLQgmSDMhgV1Xk8WMeQ-w)
 
@@ -55,6 +55,7 @@ Switched native VVC decoder back to external VVC decoder of libvvdec after nativ
 Please check the changelog before you download the new version.
 
 ```
+01/04/2025 - Fixed Linux MPV VVCEasy build by removing shared object file of libstdc++ for some distributions.
 28/03/2025 - Added manual automatic builds of Windows x64 inside GitHub actions on my forked repo.
 19/03/2025 - After nine months, it is now updated MPV Linux VVCEasy build with latest version.
 07/12/2024 - Updated Windows MPV/MPV.NET/MPV LIB VVCEasy build with FFmpeg latest, vvenc, vvdec, Mediainfo and others. Automatic builds will be soon for Windows, Linux and Android if possible.
@@ -151,7 +152,7 @@ cc4ba84d91b91edda102bc0086fbfbfdee1a8b1dd9196bc76edd00101fdaff10  MPV-VVCEasy-AP
 7cb80e644657e0447eea33c51517ae428ed841cdc7d0b4155f986ab5226c5894  MPVLIB-VVCEasy-Windows-x64.7z
 8d486291a371c8663e7ddd1d9845cf54f81c316a9c795333a5b490f7621a6cb3  MPV-VVCEasy-Windows-NativeX64.7z
 003dbdf1cd6639ff906c2c17dde69a16c1df7fa565cf310ba014ea24b5b330a5  MPVLIB-VVCEasy-Windows-NativeX64.7z
-cdb6e08ba37fd2c869e70021992227cb1d92146fcd6eacfd6eee9513890a4648  MPV-VVCEasy-Linux-x64.7z
+c477c0214221f706301b7be620f7442731bb4746d1b5719a890128769bc62767  MPV-VVCEasy-Linux-x64.7z
 ab23b1928069bd3584297dae1d90a95fe2910f91936766ddfa5bdafd53c8a300  MPV-VVCEasy-ArchLinux-x64.7z
 ```
 
