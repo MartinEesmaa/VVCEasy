@@ -118,9 +118,7 @@ fi
 
 if [ ! -d zimg ]; then
 git -C zimg $gitsub
-wget https://raw.githubusercontent.com/m-ab-s/mabs-patches/master/zimg/0001-libm_wrapper-define-__CRT__NO_INLINE-before-math.h.patch
-git -C zimg apply 0001-libm_wrapper-define-__CRT__NO_INLINE-before-math.h.patch
-rm 0001-libm_wrapper-define-__CRT__NO_INLINE-before-math.h.patch
+wget -q -O - https://raw.githubusercontent.com/m-ab-s/mabs-patches/master/zimg/0001-libm_wrapper-define-__CRT__NO_INLINE-before-math.h.patch | git -C zimg apply
 fi
 
 make="make install-r install-prefix=$PREFIX"
