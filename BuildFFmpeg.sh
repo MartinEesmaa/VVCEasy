@@ -126,17 +126,21 @@ autogen="./autogen.sh && ./configure --prefix=$PREFIX --enable-static --disable-
 cmakeoptions="-DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$PREFIX -DBUILD_SHARED_LIBS=OFF"
 mesonoptions="-Ddefault_library=static -Dprefix=$PREFIX -Denable_docs=false"
 
+for MKBUILD in libjxl vmaf/libvmaf SDL soxr dav1d; do
+    mkdir -p "$MKBUILD"/build
+done
+
 cd vvenc && $make && cd ..
 cd vvdec && $make && cd ..
 cd fdk-aac && $autogen && cd ..
 cd libxml2 && $autogen && cd ..
 cd opus && CFLAGS="-O2 -D_FORTIFY_SOURCE=0" LDFLAGS="-flto -s" $autogen && cd ..
-mkdir -p libjxl/build && cd libjxl/build && cmake $cmakeoptions -DBUILD_TESTING=OFF -DJPEGXL_ENABLE_{BENCHMARK,MANPAGES,EXAMPLES,DOXYGEN}=OFF -DJPEGXL_FORCE_SYSTEM_BROTLI=ON .. -G Ninja && ninja install && cd ../../
-mkdir -p vmaf/libvmaf/build && cd vmaf/libvmaf/build && CFLAGS="-msse2 -mfpmath=sse -mstackrealign" meson -Denable_tests=false -Denable_float=true $mesonoptions .. && ninja install && cd ../../../
-mkdir -p SDL/build && cd SDL/build && cmake $cmakeoptions .. && make install -j $(nproc) && cd ../../
+cd libjxl/build && cmake $cmakeoptions -DBUILD_TESTING=OFF -DJPEGXL_ENABLE_{BENCHMARK,MANPAGES,EXAMPLES,DOXYGEN}=OFF -DJPEGXL_FORCE_SYSTEM_BROTLI=ON .. -G Ninja && ninja install && cd ../../
+cd vmaf/libvmaf/build && CFLAGS="-msse2 -mfpmath=sse -mstackrealign" meson -Denable_tests=false -Denable_float=true $mesonoptions .. && ninja install && cd ../../../
+cd SDL/build && cmake $cmakeoptions .. && make install -j $(nproc) && cd ../../
 cd zimg && $autogen && cd ..
-mkdir -p soxr/build && cd soxr/build && cmake -D{WITH_LSR_BINDINGS,BUILD_TESTS,WITH_OPENMP}=off $cmakeoptions .. && cmake --build . -j $(nproc) --target install && cd ../../
-mkdir -p dav1d/build && cd dav1d/build && meson $mesonoptions .. && ninja install && cd ../../
+cd soxr/build && cmake -D{WITH_LSR_BINDINGS,BUILD_TESTS,WITH_OPENMP}=off $cmakeoptions .. && cmake --build . -j $(nproc) --target install && cd ../../
+cd dav1d/build && meson $mesonoptions .. && ninja install && cd ../../
 
 sed -i 's/-lm/-lm -lstdc++/g' $PREFIX/lib/pkgconfig/libvmaf.pc
 
@@ -145,17 +149,15 @@ if [ "$OS" = "Windows" ]; then
     sed -i 's|if(WIN32)|if(FALSE)|g' CMakeLists.txt
     grep -ERl "\b(lsp|lpc)_to_(lpc|lsp)" --include="*.[ch]" | \
                 xargs -r sed -ri "s;((lsp|lpc)_to_(lpc|lsp));c2_\1;g"
-    mkdir -p build && cd build && cmake $cmakeoptions -D{UNITTEST,INSTALL_EXAMPLES}=off .. -G "MinGW Makefiles"
-    cmake --build . -j $nproc --target install
-    cd ../../
+    cmake -B build $cmakeoptions -D{UNITTEST,INSTALL_EXAMPLES}=off -G "MinGW Makefiles"
+    cmake --build build -j $nproc --target install
+    cd ..
 fi
 
 cd FFmpeg-VVC
 export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig
-./configure --prefix=$PREFIX --enable-static --pkg-config-flags="--static" --extra-ldexeflags="-static" \
---enable-libfdk-aac --enable-libvvenc --enable-libvvdec --enable-pic \
---enable-libxml2 --enable-libopus --enable-libdav1d --enable-libjxl --enable-libzimg \
---enable-libvmaf --enable-libsoxr --enable-sdl2 $extra --extra-version=VVCEasy && \
+./configure --prefix=$PREFIX --enable-{static,pic,sdl2} --pkg-config-flags="--static" --extra-ldexeflags="-static" \
+--enable-lib{fdk-aac,vvenc,vvdec,xml2,opus,dav1d,jxl,zimg,vmaf,soxr} $extra --extra-version=VVCEasy && \
 make -j
 cd ..
 echo It is ready to go for prebuilt binaries of FFmpeg-VVC, you need to go directory called FFmpeg-VVC.
