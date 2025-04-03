@@ -123,10 +123,10 @@ fi
 
 make="make install-r install-prefix=$PREFIX"
 autogen="./autogen.sh && ./configure --prefix=$PREFIX --enable-static --disable-shared && make install -j $(nproc)"
-cmakeoptions="-DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$PREFIX -DBUILD_SHARED_LIBS=OFF"
+cmakeoptions="-DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$PREFIX -DBUILD_SHARED_LIBS=OFF -B build"
 mesonoptions="-Ddefault_library=static -Dprefix=$PREFIX -Denable_docs=false"
 
-for MKBUILD in libjxl vmaf/libvmaf SDL soxr dav1d; do
+for MKBUILD in vmaf/libvmaf dav1d; do
     mkdir -p "$MKBUILD"/build
 done
 
@@ -135,11 +135,11 @@ cd vvdec && $make && cd ..
 cd fdk-aac && $autogen && cd ..
 cd libxml2 && $autogen && cd ..
 cd opus && CFLAGS="-O2 -D_FORTIFY_SOURCE=0" LDFLAGS="-flto -s" $autogen && cd ..
-cd libjxl/build && cmake $cmakeoptions -DBUILD_TESTING=OFF -DJPEGXL_ENABLE_{BENCHMARK,MANPAGES,EXAMPLES,DOXYGEN}=OFF -DJPEGXL_FORCE_SYSTEM_BROTLI=ON .. -G Ninja && ninja install && cd ../..
+cd libjxl && cmake $cmakeoptions -DBUILD_TESTING=OFF -DJPEGXL_ENABLE_{BENCHMARK,MANPAGES,EXAMPLES,DOXYGEN}=OFF -DJPEGXL_FORCE_SYSTEM_BROTLI=ON -G Ninja && ninja -C build install && cd ..
 cd vmaf/libvmaf/build && CFLAGS="-msse2 -mfpmath=sse -mstackrealign" meson -Denable_tests=false -Denable_float=true $mesonoptions .. && ninja install && cd ../../..
-cd SDL/build && cmake $cmakeoptions .. && make install -j $(nproc) && cd ../..
+cd SDL && cmake $cmakeoptions && make install -C build -j $(nproc) && cd ..
 cd zimg && $autogen && cd ..
-cd soxr/build && cmake -D{WITH_LSR_BINDINGS,BUILD_TESTS,WITH_OPENMP}=off $cmakeoptions .. && cmake --build . -j $(nproc) --target install && cd ../..
+cd soxr && cmake -D{WITH_LSR_BINDINGS,BUILD_TESTS,WITH_OPENMP}=off $cmakeoptions && cmake --build build -j $(nproc) --target install && cd ..
 cd dav1d/build && meson $mesonoptions .. && ninja install && cd ../..
 
 sed -i 's/-lm/-lm -lstdc++/g' $PREFIX/lib/pkgconfig/libvmaf.pc
