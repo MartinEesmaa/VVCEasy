@@ -115,15 +115,15 @@ mp4box -add video.266 -add audio.m4a -new convertedvvc.mp4
 
 Containers are also acceptable video containers of .mkv, .mp4, .mov and more.
 
-For Linux and Mac OS users: Replace **mp4box** by **gpac**
+For Linux and Mac OS users: Type correctly `MP4Box` for execute binary, but no small or big lettercase letters.
 
 # FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
 
-[Windows (x64) & Linux (x64/arm64)](https://github.com/MartinEesmaa/FFmpeg-Builds/releases/tag/latest) - Automated builds every day at 12:00 (12 PM) UTC of FFmpeg VVCEasy custom builds.
+[Windows (x64/x86/winarm64) & Linux (x64/arm64)](https://github.com/MartinEesmaa/FFmpeg-Builds/releases/tag/latest) - Automated builds every day at 12:00 (12 PM) UTC of FFmpeg VVCEasy custom builds.
 
-[Mac OS x86_64](https://mega.nz/file/Oh0FHCDL#kdYYOdeNgAypzqwWXBfTo_VYGxfLMotmUXjRoxsxP8A)
+[Mac OS x86_64](https://mega.nz/file/jo0RWZSC#PIGNsk1ak_W3vVJTNy09hTx0f2OoZgJd9MvXOoXGMAI)
 
-[Mac OS arm64](https://mega.nz/file/f1FjxASR#WspQ7zp1p8PS8qFZGwXK-XIv-zs1iLqppY-fUP5V8DE)
+[Mac OS arm64](https://mega.nz/file/e1FmATYA#WYSRWKJ8kE_60PhyitPDOUu8dxvD-RnQIdujcu4FjDE)
 
 [FFmpeg-FixVVC archived old source code](https://mega.nz/file/G81QyT5S#jcbE1sYPEy1OMIDPCF8BPeAK-3KAGF50u23MVJzmBgw) (old)
 
@@ -145,6 +145,7 @@ Before automated builds started of Windows & Linux, here are the last links of m
 
 ### Changelog
 ```
+06/04/2025: Updated FFmpeg with latest, vvenc, vvdec and others. Sorry for six months. (macOS only)
 16/10/2024: Added libgsm external feature to FFmpeg VVCEasy builds for Windows & Linux only.
 15/10/2024: Fixed missing JPEG-XL demux MKTAG of MP4/MOV container format bug.
 15/10/2024: Fix JPEG-XL MP4/MOV mux bug.
