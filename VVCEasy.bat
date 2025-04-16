@@ -4,7 +4,16 @@ set version=v2.7.0
 set versionname=Martin Eesmaa at age 19, wow nice!
 set vvceasydate=23 June 2024
 set copyrightinfo=Copyright (C) Martin Eesmaa 2021-2024 (MIT License)
-IF EXIST "%PROGRAMFILES(X86)%" (set bit=x64) ELSE (set bit=Win32)
+for /f "tokens=2*" %%A in ('reg query "HKLM\System\CurrentControlSet\Control\Session Manager\Environment" /v "PROCESSOR_ARCHITECTURE"') do set ProcessorArchitecture=%%B
+
+if /i "%ProcessorArchitecture%"=="AMD64" (
+    set bit=x64
+) else if /i "%ProcessorArchitecture%"=="ARM64" (
+    set bit=arm64
+) else (
+    set bit=Win32
+)
+
 pushd "%~dp0"
 cls
 
@@ -71,6 +80,7 @@ color 07
 cls
 echo VVCEasy (Batchfile Release Version, %version%, %vvceasydate%)
 echo Version codename: %versionname%
+echo Current system architecture: %bit%
 echo %copyrightinfo%
 echo.
 echo What would you like to do to encode/decode VVC?
@@ -512,8 +522,15 @@ pause
 goto start
 
 :vlcvtmplugininstall
+if /i "%bit%" == "x64" (
+    echo.
+) else (
+    echo Sorry, VLC VTM Plugins is only available for x64/amd64 architecture
+    pause
+    goto start
+)
 cls
-title VLC VTM Plugins Install (Windows & Linux)
+title VLC VTM Plugins Install (Windows and Linux)
 echo Welcome to VLC Media Player of VTM Plugins Installation.
 echo You need to run Windows version of Windows Vista / Windows Server 2008 to play VVC files.
 echo Windows XP can't load VTM plugins, but other plugins work.
