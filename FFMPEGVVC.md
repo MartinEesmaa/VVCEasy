@@ -284,7 +284,7 @@ If compiling is success and finished, you can install FFmpeg VVC for using the c
 mv ffmpeg ffmpeg_vvceasy
 mv ffplay ffplay_vvceasy
 mv ffprobe ffprobe_vvceasy
-sudo cp ffmpeg_vvceasy ffplay_vvceasy ffprobe_vvceasy /usr/local/bin
+sudo cp ff*_vvceasy /usr/local/bin
 ```
 
 On Windows is also available to compile FFmpeg-VVC using MSYS2, but build of FFmpeg-VVC shell script is deprecated.

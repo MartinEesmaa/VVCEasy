@@ -10,12 +10,12 @@ case "$(uname -s)" in
         OS="Linux"
         DISTRO=$(cat /etc/*release | grep ^ID= | cut -d= -f2 | tr -d '"')
         echo "Building FFmpeg VVCEasy $OS version..."
-        echo "Updating and upgrading system packages..."
+        echo "Downloading system required packages..."
 
         case $DISTRO in
             debian|ubuntu)
                 echo "Detected Debian/Ubuntu"
-                sudo apt update && sudo apt upgrade -y
+                sudo apt update
                 echo "Installing dependencies for Debian/Ubuntu..."
                 sudo apt install build-essential cmake nasm autoconf pkg-config \
                 python3-setuptools ninja-build python3-pip libtool git wget xxd -y
@@ -23,7 +23,7 @@ case "$(uname -s)" in
                 ;;
             arch)
                 echo "Detected Arch Linux"
-                sudo pacman -Syu --noconfirm
+                sudo pacman -Sy
                 echo "Installing dependencies for Arch..."
                 sudo pacman -S --noconfirm base-devel cmake nasm autoconf pkg-config \
                 python-setuptools ninja python-pip libtool git wget xxd
@@ -57,7 +57,7 @@ case "$(uname -s)" in
         extra="--disable-w32threads --enable-libcodec2"
         echo "Building FFmpeg VVCEasy Windows version..."
         echo "Updating and upgrading MSYS2 packages..."
-        pacman -Syu
+        pacman -Sy
         echo "Installing MSYS2 packages..."
         pacman -S python git nasm vim wget xxd $MINGW_PACKAGE_PREFIX-{toolchain,cmake,autotools,meson,ninja}
         ;;
@@ -139,7 +139,7 @@ cd libjxl && cmake $cmakeoptions -DBUILD_TESTING=OFF -DJPEGXL_ENABLE_{BENCHMARK,
 cd vmaf/libvmaf/build && CFLAGS="-msse2 -mfpmath=sse -mstackrealign" meson -Denable_tests=false -Denable_float=true $mesonoptions .. && ninja install && cd ../../..
 cd SDL && cmake $cmakeoptions && make install -C build -j $(nproc) && cd ..
 cd zimg && $autogen && cd ..
-cd soxr && cmake -D{WITH_LSR_BINDINGS,BUILD_TESTS,WITH_OPENMP}=off $cmakeoptions && cmake --build build -j $(nproc) --target install && cd ..
+cd soxr && cmake -D{WITH_{LSR_BINDINGS,OPENMP},BUILD_TESTS}=off $cmakeoptions && cmake --build build -j $(nproc) --target install && cd ..
 cd dav1d/build && meson $mesonoptions .. && ninja install && cd ../..
 
 sed -i 's/-lm/-lm -lstdc++/g' $PREFIX/lib/pkgconfig/libvmaf.pc
