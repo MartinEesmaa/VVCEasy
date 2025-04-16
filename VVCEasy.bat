@@ -73,7 +73,7 @@ echo VVCEasy (Batchfile Release Version, %version%, %vvceasydate%)
 echo Version codename: %versionname%
 echo %copyrightinfo%
 echo.
-echo What would you like to do to encode/decode of VVC?
+echo What would you like to do to encode/decode VVC?
 echo 1. Encode
 echo 2. Decode
 echo 3. Help
@@ -109,10 +109,10 @@ goto start
 :encodestart
 title Encode to VVC
 cls
-echo Welcome to VVC encoder.
+echo Welcome to the VVC encoder.
 echo What do you like to encode to VVC?
 echo Before we move to settings quality, is your video lossy or lossless?
-echo 1. Lossy (example YouTube videos, Web videos, lossy compressed videos, and other webs)
+echo 1. Lossy (example YouTube videos, Web videos, lossy compressed videos, and other web)
 echo 2. Lossless (example XIPH Media, Camera uncompressed RAW video, Apple ProRes and others uncompressed files)
 echo 3. Go back to the menu.
 set /p vvencquestion1=Number: 
@@ -128,12 +128,12 @@ title Lossless settings with Lossless uncompressed (VVC Encoder)
 cls
 echo Do you have Y4M?
 echo If you have Y4M already, move your Y4M file into C:\Program Files\VVCEasy\
-echo If you do not have Y4M, your instruction will go to next...
+echo If you do not have Y4M, your instruction will go to the next...
 echo 1. I have Y4M already (I am ready) 
 echo 2. No, I am not ready yet (go back to previous)
-echo If you don't have Y4M already... you need transcode file from your uncompressed file to Y4M.
+echo If you don't have Y4M already... You need to transcode the file from your uncompressed file to Y4M.
 echo Example: ffmpeg -i yourfile.mov -strict 1 yourfinal.y4m
-echo Only 8-bit uncompressed movies input to Y4M.
+echo Only 8-bit uncompressed movies are input to Y4M.
 set /p doyouhavey4mvvencquestion3=Number: 
 if "%doyouhavey4mvvencquestion3%" == 1 goto startlosslessvvenc2
 if "%doyouhavey4mvvencquestion3%" == 2 goto encodestart
@@ -144,10 +144,10 @@ goto losslessvvenc2
 :startlosslessvvenc2
 cls
 title VVC ENCODER (Y4M LOSSLESS)
-echo Before we start encoding from your Y4M file to VVC file, I'm afraid I cannot do automatically for you.
-echo You must manually encode to VVC, the batchfile won't work.
+echo Before we start encoding from your Y4M file to VVC file, I'm afraid I cannot do it automatically for you.
+echo You must manually encode it to VVC, as the batch file won't work.
 echo Here is code: vvencapp --qp 18 -i yourinput.y4m -s 854x480 -r 30 --preset slow --threads 16 --tier high -o yourfinalvvc.266
-echo YOU HAVE TO REPLACE VIDEO SIZE AND FRAME RATE. -s is video size and -r is frame rate.
+echo YOU HAVE TO REPLACE THE VIDEO SIZE AND FRAME RATE. -s is video size and -r is frame rate.
 echo INPUT VIDEO BIT DEPTH IS 8-BIT ONLY FOR UNCOMPRESSED MOVIE FILES.
 pause
 goto start
@@ -157,10 +157,10 @@ title Lossy settings with Lossy compressed (VVC Encoder)
 cls
 echo Do you have YUV?
 echo If you have YUV already, move your YUV file into C:\Program Files\VVCEasy\
-echo If you do not have YUV, your instruction will go to next...
+echo If you do not have YUV, your instruction will go to the next...
 echo 1. I have YUV already (I am ready) 
 echo 2. No, I am not ready yet (go back to previous)
-echo If you don't have Y4M already... you need transcode file from your lossy video file to YUV.
+echo If you don't have Y4M already... You need to transcode the file from your lossy video file to YUV.
 echo Example: ffmpeg -i yourfile.mp4 -strict 1 yourfinal.yuv
 set /p doyouhaveyuvvvencquestion4=Number: 
 if "%doyouhaveyuvvvencquestion4%" == 1 goto startlossyvvenc2
@@ -172,10 +172,10 @@ goto lossyvvenc2
 :startlossyvvenc2
 cls
 title VVC ENCODER (YUV LOSSY)
-echo Before we start encoding from your YUV file to VVC file, I'm afraid I cannot do automatically for you.
-echo You must manually encode to VVC, the batchfile won't work.
+echo Before we start encoding from your YUV file to VVC file, I'm afraid I cannot do it automatically for you.
+echo You must manually encode it to VVC, as the batch file won't work.
 echo Here is code: vvencapp --qp 38 -i yourinput.yuv -s 854x480 -r 30 -o youroutputlossy.266
-echo YOU HAVE TO REPLACE VIDEO SIZE AND FRAME RATE. -s is video size and -r is frame rate.
+echo YOU HAVE TO REPLACE THE VIDEO SIZE AND FRAME RATE. -s is video size and -r is frame rate.
 echo You can also add for "--tier high" or/and 10-bit video "-c yuv420_10", if necessary.
 pause
 goto start
@@ -183,12 +183,12 @@ goto start
 :decodestart
 cls
 title Decode from VVC to YUV/Y4M
-echo Do you want to transcode back from VVC to YUV or Y4M? Which did you choose settings? Choosing settings will transcode back.
-echo You need copy from your VVC file to C:\Program Files\VVCEasy\WindowsVVC\. Windows Explorer will open automatically.
-echo After copying your VVC file into VVCEasy folder, you need rename to VVC.vvc. It will transcode from your VVC file to YUV/Y4M.
+echo Do you want to transcode back from VVC to YUV or Y4M? Which did you choose for the settings? Choosing settings will transcode back.
+echo You need to copy from your VVC file to C:\Program Files\VVCEasy\WindowsVVC\. Windows Explorer will open automatically.
+echo After copying your VVC file into the VVCEasy folder, rename it to VVC.vvc. It will transcode from your VVC file to YUV/Y4M.
 echo After transcoding, your transcoded file should be: C:\Program Files\VVCEasy\transcodedback
 echo Note, if you are using portable, like your git cloned VVCEasy or downloaded source files, go to your Downloads folder and select VVCEasy.
-echo Portable won't work probably, you need copy from your Downloads folder\VVCEasy into Program Files\VVCEasy.
+echo Portable won't work probably, you need to copy from your Downloads folder\VVCEasy into Program Files\VVCEasy.
 echo 1. YUV (lossy video VVC)
 echo 2. Y4M (lossless video VVC, recommended)
 set /p decodestart1=Number: 
@@ -225,10 +225,10 @@ goto start
 :test
 cls
 title INSTALL/TEST PATH ENVIRONMENT
-echo Martin Eesmaa is testing your paths, that you installed programs in PATH. If you're unsure, what is path?
-echo You can go there for link at https://stackoverflow.com/questions/4910721/python-on-cmd-path
-echo Also you can search "What is PATH in Windows?" in DuckDuckGo, Google, SearX or your favorite search engine.
-echo Are you ready to test? (Y/N) or type "I" to install path environment.
+echo Martin Eesmaa is testing your paths, where you installed programs in PATH. If you're unsure, what is the path?
+echo You can go there for a link at https://stackoverflow.com/questions/4910721/python-on-cmd-path
+echo Also search "What is PATH in Windows?" in DuckDuckGo, Google, SearX or your favorite search engine.
+echo Are you ready to test? (Y/N) Or type "I" to install the path environment.
 set /p readytestbefore=Answer: 
 if /I "%readytestbefore%"=="Y" goto nowtestingtime
 if /I "%readytestbefore%"=="N" goto start
@@ -255,22 +255,22 @@ goto nowtestingtime
 
 :youdidworktest
 title Great!
-echo Great, your path environment is working. Going back to the menu...
+echo Great, your PATH environment is working. Going back to the menu...
 timeout 3
 goto start
 
 :ahhdidnotwork
 title Sorry...
-echo Sorry, your path environment did not work. Make sure follow that needs to be add it on paths installation like Python.
-echo Still not working? You can ask questions in Stack Overflow.
+echo Sorry, your path environment did not work. Make sure to follow the steps that need to be added to the path's installation, like Python.
+echo Still not working? You can ask questions on Stack Overflow.
 pause
 goto start
 
 :installpath
 echo Installer path environment will be only for 7-Zip.
-echo Other programs should need manual, but Python, FFmpeg, wget and git must be installed manually and add automatically path environments.
-echo Do you want patch 7-Zip on your path environment, so you can type "7z" next time.
-echo Would you like to install 7-Zip on your path environments? Y/N? No means go back to test menu.
+echo Other programs should need a manual, but Python, FFmpeg, wget and git must be installed manually and the paths to their environments must be added automatically.
+echo Do you want to patch 7-Zip on your path environment so that you can type "7z" next time?
+echo Would you like to install 7-Zip on your path environments? Y/N? No means go back to the test menu.
 set /p installpath1=Answer: 
 if /I "%installpath1%"=="Y" goto installingpath
 if /I "%installpath1%"=="N" goto test
@@ -328,14 +328,14 @@ exit
 :help
 cls
 echo Welcome to VVCEasy help instructions!
-echo Here is tutorial about... How to use VVCEasy?
+echo Here is a tutorial about... How to use VVCEasy?
 pause
-echo Step 1: Run on VVCEasy.bat. When you see the screen of Welcome to VVCEasy. You can press any key continue to main menu.
-echo Step 2: Here is the list of main menus, that you need type any number will go to direction like (goto) command.
-echo Step 3: Follow the command instructions and that is easy.
+echo Step 1: Run on VVCEasy.bat. When you see the screen: "Welcome to VVCEasy. You can press any key to continue to the main menu."
+echo Step 2: Here is the list of main menus, where you must type any number to go in the direction, like the (goto) command.
+echo Step 3: Follow the command instructions, and that is easy.
 pause
-echo If you have any problems that you do not understand VVCEasy. Please contact Martin Eesmaa by creating issues for questions or/and problems.
-echo Do you want to start over help instructions? If yes, then it will go back from the beginning. If No, going to back menu. Y/N?
+echo If you have any problems that you do not understand VVCEasy. Please get in touch with Martin Eesmaa by creating issues for questions and/or problems.
+echo Do you want to start over with the help instructions? If yes, then it will go back to the beginning. If no, go back to the menu. Y/N?
 set /p helper=Answer: 
 if /I "%helper%"=="Y" goto help
 if /I "%helper%"=="N" goto start
@@ -349,9 +349,9 @@ title VVdec Web Player.
 echo Welcome to VVDEC Web Player.
 echo By installing, you will have to agree to download VVDec Web Player from Fraunhoferhhi GitHub. 
 echo See the code of VVDEC Web Player: https://github.com/fraunhoferhhi/vvdecWebPlayer
-echo When you agree to install, it will clone VVDec Web Player repository using git. After git, we will copy from VVDECWEBINSTALL files into vvdecWebPlayer/bin folder.
-echo After all of that, we will run Python to start web server of your localhost port 8000.
-echo If you already have installed of VVDec Web Player, you can type "U" to update files of VVDec Web Player.
+echo When you agree to install, it will clone the VVDec Web Player repository using git. After git, we will copy from the VVDECWEBINSTALL files into the vvdecWebPlayer/bin folder.
+echo After that, it will run Python to start the web server on your localhost port 8000.
+If you have already installed VVDec Web Player, you can type "U" to update the files of VVDec Web Player.
 echo Would you like to install VVDEC Web Player?
 set /p okletsdoit=Answer: 
 if /I "%okletsdoit%"=="Y" goto installnowplayer
@@ -368,12 +368,12 @@ git clone https://github.com/fraunhoferhhi/vvdecWebPlayer
 copy VVDECWEBINSTALL "vvdecWebPlayer/bin" /y
 cd vvdecWebPlayer
 copy ..\VVCEasy.266 dummy_raw_bitstream.266
-echo Note: If you want to go back to menu, press CTRL + C on your keyboard in Windows Terminal/CMD and type "Y" to terminate server and this will go back to main menu options.
-echo The python file is porting 8000 on your local host computer.
+echo Note: If you want to go back to the menu, press CTRL + C on your keyboard in Windows Terminal/CMD and type "Y" to terminate the server, and this will go back to the main menu options.
+echo The Python file is running on port 8000 on your local host computer.
 python wasm_test-server.py
 cd ../
-echo Thanks for trying out VVDEC Web Player. If you want to run on your VVDEC Web Player Server, go to folder of vvdecWebPlayer and run one click wasm_test-server.py.
-echo Press any key to go back menu.
+echo Thanks for trying out VVDEC Web Player. If you want to run on your VVDEC Web Player Server, go to the folder of vvdecWebPlayer and run one-click wasm_test-server.py.
+echo Press any key to go back to the menu.
 timeout 10
 goto start
 
@@ -412,12 +412,12 @@ certutil -hashfile %bit%\vvencinterfacetest.exe SHA256
 certutil -hashfile %bit%\vvenclibtest.exe SHA256
 type WindowsVVC.sha256 | findstr %bit%
 cd ../
-echo Please make sure double check that needs to be same hash. If it matches hash same as .exe of WindowsVVC.sha256 and CertUtil. This means good.
-echo If the hashes are not matched correctly, please try it again or manual extract the compressed file using 7-Zip.
+echo Please double-check that it needs to be the same hash. If it matches the hash, it is the same as the .exe of WindowsVVC.sha256 and CertUtil. This means good.
+echo If the hashes are not matched correctly, please try it again or manually extract the compressed file using 7-Zip.
 echo.
-echo Otherwise, please create an issue to Martin Eesmaa/VVCEasy on GitHub for your own problem.
+echo Otherwise, please create an issue to Martin Eesmaa/VVCEasy on GitHub for your problem.
 pause
-echo Thank you for decompressing Windows VVC binaries. Now back to the menu.
+echo Thank you for decompressing Windows VVC binaries. Now, back to the menu.
 timeout 3
 goto start
 
@@ -461,7 +461,7 @@ echo Downloading BitVVDecPlayer (macOS) from Bitmovin, compiled by Martin Eesmaa
 wget -q https://www.dropbox.com/s/ilsoica7c8dh4hq/BitVVDecPlayerMAC.7z
 7z x BitVVDecPlayerMAC.7z -aoa
 del /q BitVVDecPlayerMAC.7z
-echo Download completed, please put to macOS and run it, if you have any problems, please go to Bitmovin/vvDecPlayer issues of https://github.com/bitmovin/vvDecPlayer/issues
+echo Download completed, please put on macOS and run it, if you have any problems, please go to Bitmovin/vvDecPlayer issues of https://github.com/bitmovin/vvDecPlayer/issues
 echo If vvDecPlayer won't work probably, it might be issue that you haven't installed Qt on your Mac OS. Please install using code: "brew install qt" on Homebrew.
 echo To build vvDecPlayer, please go to https://github.com/bitmovin/vvDecPlayer
 echo Or contact Bitmovin at https://www.bitmovin.com or create issue on VVCEasy.
@@ -655,13 +655,13 @@ goto start
 
 :error
 echo Your Windows version is not supported and outdated which may not work to run with VVC binaries and others too.
-echo This requires for Windows XP and later to use this script.
+echo This requires Windows XP and later to use this script.
 pause
 exit
 
 :doserror
-echo DOS is not supported and outdated which may not work to run with VVC binaries and others too.
-echo Also MS-DOS, DOSBox and FreeDOS were also not supported.
-echo This requires for Windows XP and later to use this script.
+echo DOS is not supported and outdated, which may not work to run with VVC binaries and others too.
+echo Also, MS-DOS, DOSBox and FreeDOS were not supported.
+echo This requires Windows XP and later to use this script.
 pause
 exit
