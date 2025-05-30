@@ -3,7 +3,7 @@ set welcometitle=Martin Eesmaa / VVCEasy
 set version=v2.7.0
 set versionname=Martin Eesmaa at age 19, wow nice!
 set vvceasydate=23 June 2024
-set copyrightinfo=Copyright (C) Martin Eesmaa 2021-2024 (MIT License)
+set copyrightinfo=Copyright (C) Martin Eesmaa 2021-2025 (MIT License)
 for /f "tokens=2*" %%A in ('reg query "HKLM\System\CurrentControlSet\Control\Session Manager\Environment" /v "PROCESSOR_ARCHITECTURE"') do set ProcessorArchitecture=%%B
 
 if /i "%ProcessorArchitecture%"=="AMD64" (
@@ -89,7 +89,7 @@ echo 2. Decode
 echo 3. Help
 echo 4. Exit
 echo 5. Install/Test path environment.
-echo 6. Install/Update VVdec Web Player (requires Python)
+echo 6. Install/Update VVdec Web Player (requires Python and pull for git)
 echo 7. Install Windows VVC binaries (Windows XP and later)
 echo 8. Install vvDecPlayer from BitMovin
 echo 9. Install/Update VLC VTM Plugins (Windows/Linux x64 of VLC plugins by Inter Digital Inc)
@@ -192,6 +192,7 @@ goto start
 
 :decodestart
 cls
+if not exist "transcodedback" mkdir transcodedback
 title Decode from VVC to YUV/Y4M
 echo Do you want to transcode back from VVC to YUV or Y4M? Which did you choose for the settings? Choosing settings will transcode back.
 echo You need to copy from your VVC file to C:\Program Files\VVCEasy\WindowsVVC\. Windows Explorer will open automatically.
@@ -211,11 +212,9 @@ goto decodestart
 :DECODESTARTFROMVVCTOYUV
 cls
 title STARTING TRANSCODING BACK FROM VVC TO YUV...
-mkdir transcodedback
 cd WindowsVVC
 vvdecapp -b VVC.vvc -o VVCTOYUV.yuv
-move VVCTOYUV.yuv ../
-move VVCTOYUV.yuv transcodedback
+move VVCTOYUV.yuv ..\transcodedback
 echo FINISHED. Going back to the menu...
 timeout 3
 goto start
@@ -223,11 +222,9 @@ goto start
 :DECODESTARTFROMVVCTOY4M
 cls
 title STARTING TRANSCODING BACK FROM VVC TO Y4M...
-mkdir transcodedback
 cd WindowsVVC
 vvdecapp -b VVC.vvc --y4m -o VVCTOYUV.y4m
-move VVCTOYUV.y4m ../
-move VVCTOYUV.y4m transcodedback
+move VVCTOYUV.y4m ..\transcodedback
 echo FINISHED. Going back to the menu...
 timeout 3
 goto start
@@ -382,7 +379,7 @@ echo Note: If you want to go back to the menu, press CTRL + C on your keyboard i
 echo The Python file is running on port 8000 on your local host computer.
 python wasm_test-server.py
 cd ../
-echo Thanks for trying out VVDEC Web Player. If you want to run on your VVDEC Web Player Server, go to the folder of vvdecWebPlayer and run one-click wasm_test-server.py.
+echo Thanks for trying out VVDEC Web Player. If you want to run on your VVDEC Web Player Server, go to the folder called vvdecWebPlayer and double click the file wasm_test-server.py.
 echo Press any key to go back to the menu.
 timeout 10
 goto start
@@ -391,9 +388,7 @@ goto start
 cls
 title UPDATING VVDEC WEB PLAYER...
 echo UPDATING VVDEC WEB PLAYER...
-cd vvdecWebPlayer
-git pull
-cd ../
+git -C vvdecWebPlayer pull
 echo vvdecWebPlayer is now updated.
 echo Returning to main menu...
 timeout 3
@@ -435,7 +430,7 @@ goto start
 cls
 title Install BitVVDecPlayer from BitMovin
 echo Would you like to install on your operating system?
-echo Windows for W, Mac OS for M and Linux for L, Main Menu for N/n.
+echo Windows for W, Mac OS for M and Linux for L, Main Menu for N.
 set installmessage=Installing BitVVDecPlayer from BitMovin...
 set /p installbitmovind=Answer: 
 if /I "%installbitmovind%"=="W" goto installbitmovin1windows
@@ -449,7 +444,7 @@ goto installbitmovin
 :installbitmovin1windows
 title %installmessage%
 echo %installmessage%
-mkdir BitVVDecPlayerWIN
+if not exist "BitVVDecPlayerWIN" mkdir BitVVDecPlayerWIN
 cd BitVVDecPlayerWIN
 echo Downloading BitVVDecPlayer (Windows) from Bitmovin, compiled by Martin Eesmaa
 wget -q https://www.dropbox.com/scl/fi/x4v1qb60u8zp505dtx8p6/BitVVDecPlayerWIN.7z?rlkey=gs9duytd6h1sos69o53rw8vyy -o BitVVDecPlayerWIN.7z
@@ -465,7 +460,7 @@ goto downloadbitmovinvvcsample
 :installbitmovin1macos
 title %installmessage%
 echo %installmessage%
-mkdir BitVVDecPlayerMAC
+if not exist "BitVVDecPlayerMAC" mkdir BitVVDecPlayerMAC
 cd BitVVDecPlayerMAC
 echo Downloading BitVVDecPlayer (macOS) from Bitmovin, compiled by Martin Eesmaa
 wget -q https://www.dropbox.com/s/ilsoica7c8dh4hq/BitVVDecPlayerMAC.7z
@@ -481,7 +476,7 @@ goto downloadbitmovinvvcsample
 :installbitmovin1linux
 title %installmessage%
 echo %installmessage%
-mkdir BitVVDecPlayerLINUX
+if not exist "BitVVDecPlayerLINUX" mkdir BitVVDecPlayerLINUX
 cd BitVVDecPlayerLINUX
 echo Downloading BitVVDecPlayer (Linux) from Bitmovin, compiled by Martin Eesmaa
 wget -q https://www.dropbox.com/scl/fi/9jgibpwxe52zkkjijycdc/BitVVDecPlayerLINUX.AppImage?rlkey=jrqxsnwuqltc1xj9fevk9xb1f -o BitVVDecPlayerLINUX.AppImage
@@ -502,7 +497,7 @@ pause
 goto downloadbitmovinvvcsample
 
 :downloadvvcnowbit
-title Downloading VVC sample files and Coffee Run JSON & Sprite Fright JSON... from Bitmovin
+title Downloading VVC sample files and Coffee Run JSON & Sprite Fright JSON from Bitmovin...
 echo Downloading VVC sample files and Coffee Run JSON & Sprite Fright JSON from Bitmovin...
 wget -q https://www.dropbox.com/s/qncefmnhw8hzr2k/vvcBlogPostDemo.7z https://www.dropbox.com/s/ogxw1pz9pr9bphi/CoffeeRun.json https://www.dropbox.com/s/6kpnoin4bwzb1ob/SpriteFright.json
 echo Extracting from archived file...
@@ -512,11 +507,11 @@ del /q vvcBlogPostDemo.7z
 title Installation of BitVVDecPlayer
 echo Please edit the location downloaded folder of vvcBlogPostDemo...
 CoffeeRun.json && SpriteFright.json
-echo Press any key, when you finished configured of your location folder...
+echo Press any key, when you done editing JSON files.
 pause
-echo Okay, it seems you configured completely. Please run vvDecPlayer on your computer.
-echo Go to File, then Open JSON manifest in BitVVDecPlayer...
-echo Select JSON file to run VVC movie and enjoy it.
+echo Okay, you configured manually success. Please run vvDecPlayer on your computer.
+echo Go to File tab, then Open JSON manifest in BitVVDecPlayer...
+echo Select JSON file to play VVC movie and enjoy it.
 echo Still not working? Please create the new issue on GitHub or join community available with Discord, Revolt and Matrix.
 pause
 goto start
@@ -533,15 +528,15 @@ cls
 title VLC VTM Plugins Install (Windows and Linux)
 echo Welcome to VLC Media Player of VTM Plugins Installation.
 echo You need to run Windows version of Windows Vista / Windows Server 2008 to play VVC files.
-echo Windows XP can't load VTM plugins, but other plugins work.
+echo Windows XP can't load VTM plugins, but other plugins works.
 echo System type only = x64
 echo Linux is now available, see Linux installation at: https://github.com/MartinEesmaa/VVCEasy/tree/master/INSTALLVLCPLUGIN#for-linux-users
-echo Available: VLC 3.0.9.2 and later latest version 3 (it will work same latest version 3)
+echo Available: VLC 3.0.9.2 and later (it will work same latest version 3 only)
 echo Would you like to install VTM plugins to your VLC Media Player? Y/N?
 set /p vlcvtmyesorno=Answer: 
 if /I "%vlcvtmyesorno%"=="Y" goto installvlcvtmpluginnow
 if /I "%vlcvtmyesorno%"=="N" goto start
-echo Invalid input. Please enter a valid letter of W, M, L or N.
+echo Invalid input. Please enter a valid letter of Y or N.
 pause
 goto vlcvtmplugininstall
 
@@ -557,7 +552,7 @@ if exist "%programfiles%\VideoLAN\VLC" (
 ) else (
     :tryagainafterinvalidvlc
     echo Please make sure your VLC is installed on your computer.
-    echo After installing VLC, you can try again by pressing number one.
+    echo After that, please try again.
     echo.
     echo 1: Try again
     echo 2: Go back to main menu
@@ -640,30 +635,27 @@ goto main123
 :installmain123
 title Building time...
 echo Building time...
-echo Downloading VVENC and VVDEC from Fraunhoferhhi GitHub...
+echo Cloning vvenc and vvdec from Fraunhofer HHI on GitHub...
 git clone --depth=1 https://github.com/fraunhoferhhi/vvenc
 git clone --depth=1 https://github.com/fraunhoferhhi/vvdec
 cd vvenc
-mkdir build && cd build
-cmake ..
-cmake --build . --config Release
-cd ../../
-cd vvdec
-mkdir build && cd build
-cmake ..
-cmake --build . --config Release
-cd ../../
+cmake -S . -B build
+cmake --build build --config Release
+cd ../vvdec
+cmake -S . -B build
+cmake --build build --config Release
+cd ..
 goto successnow
 
 :successnow
 echo.
 echo.
 echo.
-echo Successfully build of vvenc and vvdec on your Windows.
+echo Success build of vvenc and vvdec on Windows.
 echo Copying executable files to build\%bit%
-mkdir build\%bit%
-copy vvenc\bin\release-static\*.exe build\%bit%
-copy vvdec\bin\release-static\*.exe build\%bit%
+if not exist build\%bit% mkdir build\%bit%
+copy /y "vvenc\bin\release-static\*.exe" "build\%bit%"
+copy /y "vvdec\bin\release-static\*.exe" "build\%bit%"
 echo Cleaning up of build, lib and bin folders of both dependencies...
 rmdir /s /q vvenc\bin vvenc\lib vvenc\build vvdec\bin vvdec\bin vvdec\lib vvdec\build
 echo Done! Press Enter to go back the menu.
@@ -671,14 +663,14 @@ pause
 goto start
 
 :error
-echo Your Windows version is not supported and outdated which may not work to run with VVC binaries and others too.
-echo This requires Windows XP and later to use this script.
+echo Your Windows version is unsupported and outdated which does not work to run with VVC binaries and others too.
+echo This batchfile script requires Windows XP and later.
 pause
 exit
 
 :doserror
-echo DOS is not supported and outdated, which may not work to run with VVC binaries and others too.
-echo Also, MS-DOS, DOSBox and FreeDOS were not supported.
-echo This requires Windows XP and later to use this script.
+echo DOS is unsupported and outdated, which does not work to run with VVC binaries and others too.
+echo MS-DOS, DOSBox and FreeDOS were not supported.
+echo This batchfile script requires Windows XP and later.
 pause
 exit
