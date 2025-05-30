@@ -84,10 +84,9 @@ echo 6. Install/Update VVdec Web Player (requires Python and pull for git)
 echo 7. Install Windows VVC binaries (Windows XP and later)
 echo 8. Install vvDecPlayer from BitMovin
 echo 9. Install/Update VLC VTM Plugins (Windows/Linux x64 of VLC plugins by Inter Digital Inc)
-echo 10. Install FFmpeg VVC support.
-echo 11. Install MPV VVC support
-echo 12. Tests of VVC videos
-echo 13. Build vvenc and vvdec by yourself from sources
+echo 10. Install FFmpeg/MPV external VVC support.
+echo 11. Tests of VVC videos
+echo 12. Build vvenc and vvdec by yourself from sources
 set /p VVCSTART=Number: 
 
 if "%VVCSTART%" == "1" goto encodestart
@@ -99,10 +98,9 @@ if "%VVCSTART%" == "6" goto installvvdecweb
 if "%VVCSTART%" == "7" goto decompresswin7z
 if "%VVCSTART%" == "8" goto installbitmovin
 if "%VVCSTART%" == "9" goto vlcvtmplugininstall
-if "%VVCSTART%" == "10" goto ffmpegvvdec
-if "%VVCSTART%" == "11" goto mpvandroidvvc
-if "%VVCSTART%" == "12" goto testsofvideo
-if "%VVCSTART%" == "13" goto main123
+if "%VVCSTART%" == "10" goto installvvdecffmpegmpvnow
+if "%VVCSTART%" == "11" goto testsofvideo
+if "%VVCSTART%" == "12" goto main123
 echo Invalid input. Please enter a number between 1 and 13.
 pause
 goto start
@@ -553,45 +551,26 @@ if exist "%programfiles%\VideoLAN\VLC" (
     goto tryagainafterinvalidvlc
 )
 cd ../
-taskkill /im vlc.exe
+tasklist /fi "imagename eq vlc.exe" | find /i "vlc.exe" >nul
+if not errorlevel 1 taskkill /im vlc.exe >nul
 echo Three dll files are patched to your VLC Media Player.
-echo Restarting and starting VLC Media Player...
+echo Restarting VLC Media Player...
 echo Please load your VVC (codec) video file to VLC Media Player.
-echo For more information and options, please go at https://github.com/InterDigitalInc/VTMDecoder_VLCPlugin
-echo Once you're finished, you don't have to patch again. You can continue normally VLC Media Player next time after VVCEasy.
+echo For more information, please go to at https://github.com/InterDigitalInc/VTMDecoder_VLCPlugin
+echo Once you're finished, you don't have to patch again. You can continue VLC Media Player next time after patch.
 "%programfiles%\VideoLAN\VLC\vlc.exe"
 pause
 goto start
 
-:ffmpegvvdec
-cls
-title FFmpeg VVC support
-echo Hello, would you like to download FFmpeg VVC support? Y/N?
-set /p vvcnow0=Answer: 
-if /I "%vvcnow0%"=="Y" goto installvvdecffmpegnow
-if /I "%vvcnow0%"=="N" goto start
-echo Invalid input. Please enter a valid letter of Y or N.
-pause
-goto ffmpegvvdec
-
-:installvvdecffmpegnow
-echo It is available of FFmpeg VVC support. Please copy or open the link to a web browser.
+:installvvdecffmpegmpvnow
+echo It is available of FFmpeg and MPV VVC support. Please copy or open the link to a web browser.
 echo.
-echo Download link: https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md#ffmpeg-downloads-xhe-aac--vvc-endecoder-plugin-compiled-by-martin-eesmaa
+echo Download link for FFmpeg: https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md#ffmpeg-downloads-xhe-aac--vvc-endecoder-plugin-compiled-by-martin-eesmaa
+echo Download link for MPV: https://github.com/MartinEesmaa/VVCEasy/blob/master/MPV.md#downloads-for-mpv-android-vvc-support
 echo.
-echo See information on FFMPEGVVC.md or online GitHub: https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md
+echo For FFmpeg, see information on FFMPEGVVC.md or online GitHub: https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md
+echo For MPV, see information on MPV.md or online GitHub: https://github.com/MartinEesmaa/VVCEasy/blob/master/MPV.md
 echo.
-echo Press enter to go back menu.
-pause
-goto start
-
-:mpvandroidvvc
-echo Please see a document. The command will open the document for you.
-MPV.md
-echo.
-echo See information MPV.md or online GitHub: https://github.com/MartinEesmaa/VVCEasy/blob/master/MPV.md
-echo.
-echo Press enter to go back to the main menu.
 pause
 goto start
 
@@ -612,11 +591,11 @@ echo Do you want build of vvenc and vvdec yourself on your computer?
 echo Before you agree to build for Windows, you need Cmake and Visual Studio on your computer.
 echo Requires build to Windows VVC by Cmake 3.13.0+ (need pathed environment) and Visual Studio 2017 and later (requires Desktop C++ and only one individual component ML.NET Model Builder).
 echo Requires download VVEnc and VVDec for (Git for Windows).
-echo Yes means build. No means will exit the program.
+echo Yes: To start build. No: To go back to the main menu.
 echo Y/N?
 set /p main1234= Answer: 
 if /I "%main1234%"=="Y" goto installmain123
-if /I "%main1234%"=="N" goto exit
+if /I "%main1234%"=="N" goto start
 echo Invalid input. Please enter a valid letter of Y or N.
 pause
 goto main123
