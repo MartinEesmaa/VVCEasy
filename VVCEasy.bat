@@ -39,7 +39,7 @@ if '%errorlevel%' NEQ '0' (
     if '%1' EQU '1' (
         echo Cannot elevate administrator privilege
         echo Please try again with "Run as Administrator"
-        echo Installation failed.
+        echo Permission denied.
         pause
         exit /B
     ) else (
@@ -61,34 +61,24 @@ if '%errorlevel%' NEQ '0' (
     CD /D "%~dp0"
 :--------------------------------------
 
-goto welcomenow
-
-:welcomenow
-cls
-title %welcometitle%
-echo %welcometitle%
-echo Welcome to VVCEasy. (Batch file Release Version, %version%, %vvceasydate%)
-echo Version codename: %versionname%
-echo.
-echo %copyrightinfo%
-pause
 goto start
 
 :start
 title %welcometitle%
 color 07
 cls
+echo Welcome to VVCEasy!
 echo VVCEasy (Batchfile Release Version, %version%, %vvceasydate%)
 echo Version codename: %versionname%
 echo Current system architecture: %bit%
 echo %copyrightinfo%
 echo.
 echo What would you like to do to encode/decode VVC?
-echo 1. Encode
-echo 2. Decode
+echo 1. Encode (too old, deprecated)
+echo 2. Decode (too old, deprecated)
 echo 3. Help
 echo 4. Exit
-echo 5. Install/Test path environment.
+echo 5. Install/Test path environment. (deprecated)
 echo 6. Install/Update VVdec Web Player (requires Python and pull for git)
 echo 7. Install Windows VVC binaries (Windows XP and later)
 echo 8. Install vvDecPlayer from BitMovin
@@ -246,10 +236,8 @@ goto test
 
 :nowtestingtime
 title Testing installed programs...
-7z
 ffmpeg
 ffplay
-wget
 git
 python --version
 echo Did that work in your PATH? Y/N?
@@ -409,7 +397,7 @@ goto decompresswin7z
 title WindowsVVC.7z (decompressing)
 echo Decompressing........
 cd WindowsVVC
-7z x WindowsVVC.7z -i!%bit% -aoa
+"7-Zip\%bit\7z" x WindowsVVC.7z -i!%bit% -aoa
 certutil -hashfile %bit%\vvdecapp.exe SHA256
 certutil -hashfile %bit%\vvencapp.exe SHA256
 certutil -hashfile %bit%\vvencFFapp.exe SHA256
@@ -448,7 +436,7 @@ if not exist "BitVVDecPlayerWIN" mkdir BitVVDecPlayerWIN
 cd BitVVDecPlayerWIN
 echo Downloading BitVVDecPlayer (Windows) from Bitmovin, compiled by Martin Eesmaa
 wget -q https://www.dropbox.com/scl/fi/x4v1qb60u8zp505dtx8p6/BitVVDecPlayerWIN.7z?rlkey=gs9duytd6h1sos69o53rw8vyy -o BitVVDecPlayerWIN.7z
-7z x BitVVDecPlayerWIN.7z -aoa
+"7-Zip\%bit\7z" x BitVVDecPlayerWIN.7z -aoa
 del /q BitVVDecPlayerWIN.7z
 vvDecPlayer
 echo Successfully running on BitVVDecPlayer, if you have any problems, please go to Bitmovin/vvDecPlayer issues of https://github.com/bitmovin/vvDecPlayer/issues
@@ -464,7 +452,7 @@ if not exist "BitVVDecPlayerMAC" mkdir BitVVDecPlayerMAC
 cd BitVVDecPlayerMAC
 echo Downloading BitVVDecPlayer (macOS) from Bitmovin, compiled by Martin Eesmaa
 wget -q https://www.dropbox.com/s/ilsoica7c8dh4hq/BitVVDecPlayerMAC.7z
-7z x BitVVDecPlayerMAC.7z -aoa
+"7-Zip\%bit\7z" x BitVVDecPlayerMAC.7z -aoa
 del /q BitVVDecPlayerMAC.7z
 echo Download completed, please put on macOS and run it, if you have any problems, please go to Bitmovin/vvDecPlayer issues of https://github.com/bitmovin/vvDecPlayer/issues
 echo If vvDecPlayer won't work probably, it might be issue that you haven't installed Qt on your Mac OS. Please install using code: "brew install qt" on Homebrew.
@@ -501,7 +489,7 @@ title Downloading VVC sample files and Coffee Run JSON & Sprite Fright JSON from
 echo Downloading VVC sample files and Coffee Run JSON & Sprite Fright JSON from Bitmovin...
 wget -q https://www.dropbox.com/s/qncefmnhw8hzr2k/vvcBlogPostDemo.7z https://www.dropbox.com/s/ogxw1pz9pr9bphi/CoffeeRun.json https://www.dropbox.com/s/6kpnoin4bwzb1ob/SpriteFright.json
 echo Extracting from archived file...
-7z x vvcBlogPostDemo.7z -aoa
+"7-Zip\%bit\7z" x vvcBlogPostDemo.7z -aoa
 echo Deleting archived file...
 del /q vvcBlogPostDemo.7z
 title Installation of BitVVDecPlayer
