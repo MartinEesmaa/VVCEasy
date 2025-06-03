@@ -15,17 +15,17 @@ VVCEasy is that you don't have to compile or/and coding to encode VVC (known as 
 
 It supports Windows, macOS, Linux, BSD, Android & WebAssembly for VVCEasy builds.
 
-From 20 October 2021 to 23 June 2022, VVCEasy was pre-release and construction mode.
+From October 20, 2021, to June 23, 2022, VVCEasy was in pre-release and construction mode.
 
-Since 23 June 2022, VVCEasy was initial released on v1.0.0.
+Since June 23, 2022, VVCEasy was initially released at version 1.0.0.
 
-VVCEasy comes for one-easy command by FFmpeg-VVC, Fraunhofer HHI VVC binaries, uvg266, MPV, LAVFilters with MPC-HC & MPC-BE and more.
+VVCEasy comes with one easy command, utilizing FFmpeg-VVC, Fraunhofer HHI VVC binaries, uvg266, MPV, LAVFilters, and MPC-HC & MPC-BE, among other features.
 
-Installation: Go to the releases and download latest version.
+Installation: Go to the releases and download the latest version.
 
 Windows source run (Batch-file) (for encoding/decoding, it needs to be manually edit batchfile to modify video file name): [VVCEasy.bat](VVCEasy.bat)
 
-Windows/Mac/Linux source run (Csharp): Bin/Release or Debug/netX.x/VVCEasy.exe (after build of C#), this requires VVCEasy.dll to run console application.
+Windows/Mac/Linux source run (C#): Bin/Release or Debug/netX.x/VVCEasy.exe (after building the C# project), which requires VVCEasy.dll to run the console application.
 
 ### Community
 
@@ -41,7 +41,7 @@ lemmy.world (c/VVC) | https://lemmy.world/c/vvc
 lemmy.world (c/VVCEasy) | https://lemmy.world/c/vvceasy
 
 > [!NOTE]
-> Please note my first language is Estonian and not natively with English language. Some English words may be incorrect and incomprehensible.
+> Please note my first language is Estonian and not native to the English language. Some English words may be incorrect and incomprehensible.
 
 # All lists
 
@@ -96,7 +96,7 @@ EE511700017003558571
 
 # Tests of VVC videos
 
-You can test Martin Eesmaa's encoded movies of VVC video codec and follow README.txt instructions.
+You can test Martin Eesmaa's encoded movies of VVC video codec and follow the instructions in README.txt.
 
 [Tears of Steel VVC](https://mega.nz/folder/64swUYxI#WE5njn2aX6-6fxypNC3gtA)
 
@@ -104,7 +104,7 @@ You can test Martin Eesmaa's encoded movies of VVC video codec and follow README
 
 # VLC InterDigital VTM VVC Plugin
 
-VLC InterDigital VTM VVC Plugin is an external VVC decoder plugin from third party developer.
+VLC InterDigital VTM VVC Plugin is an external VVC decoder plugin from a third-party developer.
 
 See [INSTALLVLCPLUGIN folder](INSTALLVLCPLUGIN/README.md).
 
@@ -116,9 +116,9 @@ See [FFMPEGVVC.md](FFMPEGVVC.md).
 
 # MPV libvvdec + xHE-AAC support (Windows x64/Linux/Android only)
 
-MPV libvvdec & xHE-AAC supports only of Windows x64, Linux & Android.
+MPV libvvdec & xHE-AAC support only Windows x64, Linux, and Android.
 
-The VVC and MP4 mux with VVC codec can be played on MPV libvvdec + xHE-AAC version. Only MP4 mixed with VVC supports seek.
+The VVC and MP4 mux with VVC codec can be played on MPV libvvdec + xHE-AAC version. Only MP4 files mixed with VVC support seeking.
 
 MPV.NET is also only available for Windows.
 
@@ -132,7 +132,7 @@ See [LAVFilters folder](LAVFilters/README.md)
 
 # VVC binaries
 
-Versatile Video Codec binaries has two tools of vvenc & vvdec and uvg266.
+The Versatile Video Codec binaries include two tools, vvenc and vvdec, as well as uvg266.
 
 See [VVC.md](VVC.md)
 
@@ -148,7 +148,7 @@ For VLC o266player build, see [o266player.md](docs-old/o266player.md).
 
 ### VVCEasy Batchfile Version (optional) (Windows only)
 
-First, before you compile to VVCEasy Batchfile Version, you need to install Inno Setup before compiling VVCEasy.
+First, before compiling to VVCEasy Batchfile Version, you need to install Inno Setup to compile it.
 Inno Setup link: https://jrsoftware.org/isdl.php
 
 Step 1: Clone VVCEasy git and open up VVCEasy_compiler.iss file
@@ -158,7 +158,7 @@ git clone --depth=1 https://github.com/MartinEesmaa/VVCEasy && cd VVCEasy
 VVCEasy_compiler.iss
 ```
 
-Step 2: Press F9 to compile on your keyboard. After compiling, VVCEasy.exe (Installer) can be found on Install folder.
+Step 2: Press F9 on your keyboard to compile. After compiling, VVCEasy.exe (Installer) can be found in the Install folder.
 ![VVCEasyclickblueplaybutton](https://user-images.githubusercontent.com/88035011/153736303-b0949f5a-5ac5-4123-92c5-305211a8aadc.png)
 
 ---
@@ -173,7 +173,7 @@ Step 1: Clone git and cd VVCEasy
 git clone --depth=1 https://github.com/MartinEesmaa/VVCEasy && cd VVCEasy
 ```
 
-Step 2: When you build, this will restore project first and then compiles.
+Step 2: When you build, this will restore the project first and it compiles.
 ```
 dotnet build -c Release
 ```
@@ -191,7 +191,7 @@ dotnet run
 
 ### Publish single .NET binary executable
 
-If you want to compile and publish into one portable executable file, you can create if you wish like.
+If you want to compile and publish it into a portable executable file, you can do so if you wish.
 ```
 dotnet publish -c Release
 ```
@@ -200,9 +200,9 @@ After that, it should be found for example at bin\Release\netX.x\win-x64\publish
 
 # GUI applications (easy)
 
-If you're not familiar for using CLI, you can use GUI with application window for ease use and without typing commands on your terminal.
+If you're not familiar with using the CLI, you can use a GUI with an application window for ease of use, eliminating the need to type commands in your terminal.
 
-These VVC programs of encode/decode are listed:
+These VVC programs for encoding/decoding are listed:
 
 | Programs with website or GitHub link | Note | Creator
 --- | --- | --- |
@@ -215,7 +215,7 @@ These VVC programs of encode/decode are listed:
 
 # Hard option (deprecated)
 
-If you're looking hard option of document information, you can check out there: [docs-old/advanced.md](docs-old/advanced.md)
+If you're looking for a hard option of document information, you can check out there: [docs-old/advanced.md](docs-old/advanced.md)
 
 # FAQ (Frequently Asked Questions)
 
@@ -223,15 +223,15 @@ Before you ask any question, see the questions at table please.
 
 | Question | Answer
 --- | --- |
-**1:** Are you the real creator of VVCEasy? | Yes... but I'm not a real creator of VVC, I didn't built VVC, it was Fraunhofer HHI that he built VVC.
-**2:** Are you trying to work build of VVCEasy? | Well, yes... it takes longer time to make VVCEasy easier, but VVCEasy is not yet finished until further/update announcement. I don't have employees, so I'm the only one worker.
-**3:** Is it okay to bring my proof screenshots of errors? | Yes, you can bring error screenshots for your proof. More proof, more easy to solve it.
-**4:** My question is not listed on FAQ. Can I ask any question to you? | Sure, just go to Issues tab, ask questions or/and give your issue to me, I'd be happy to solve :).
-**5:** Do you know what you have skills in your programming? | I know about batch file and HTML programming. Some hard programming languages might be difficult for me :/. Update of 19th February 2022: Maybe I should make C# Console program, that will be easy for Windows, Mac and Linux multi support.
+**1:** Are you the real creator of VVCEasy? | Yes... But I'm not a real creator of VVC; I didn't build VVC. It was Fraunhofer HHI that built VVC.
+**2:** Are you trying to build VVCEasy? | Well, yes... it takes a longer time to make VVCEasy easier, but VVCEasy is not yet finished until further update announcements. I don't have employees, so I'm the only worker.
+**3:** Is it okay to bring my proof screenshots of errors? | Yes, you can include error screenshots as proof. More proof, it's easier to solve.
+**4:** My question is not listed on the FAQ. Can I ask you any questions? | Sure, go to the Issues tab, ask questions, and give me your issue. I'd be happy to solve it :).
+**5:** Do you know what skills you have in your programming? | I know about batch files and HTML programming. Some programming languages might be difficult for me. Update of 19th February 2022: Perhaps I should create a C# Console program, which will support Windows, Mac, and Linux.
 
-If you have any questions or/and any issues, please go to Issues tab and create your own issue.
+If you have any questions or/any issues, please go to the Issues tab and create your issue.
 
-Or you can join and chat us our community: [Link for communities at top](#community)
+Or you can join and chat with us in our community: [Link for communities at top](#community)
 -   Martin Eesmaa
 
 # Credits & Licenses
