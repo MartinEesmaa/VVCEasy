@@ -40,7 +40,8 @@ lemmy.ml (c/VVCEasy) | https://lemmy.ml/c/vvceasy
 lemmy.world (c/VVC) | https://lemmy.world/c/vvc
 lemmy.world (c/VVCEasy) | https://lemmy.world/c/vvceasy
 
-*Note: Please note my first language is Estonian and not natively with English language. Some English words may be incorrect and incomprehensible.*
+> [!NOTE]
+> Please note my first language is Estonian and not natively with English language. Some English words may be incorrect and incomprehensible.
 
 # All lists
 
@@ -182,7 +183,8 @@ Step 3: Once building is done, the build folder directory is bin/Release
 cd bin/Release
 ```
 
-*Tip: You can run VVCEasy without building.*
+> [!TIP]
+> *You can run VVCEasy without building.*
 ```
 dotnet run
 ```
