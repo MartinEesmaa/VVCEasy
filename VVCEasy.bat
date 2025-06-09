@@ -80,11 +80,11 @@ echo 2. Decode (too old, deprecated)
 echo 3. Help
 echo 4. Exit
 echo 5. Install/Test path environment. (deprecated)
-echo 6. Install/Update VVdec Web Player (requires Python and pull for git)
+echo 6. Install/Update VVdec Web Player (requires Python and clone/pull for git)
 echo 7. Install Windows VVC binaries (Windows XP and later)
 echo 8. Install vvDecPlayer from BitMovin
 echo 9. Install/Update VLC VTM Plugins (Windows/Linux x64 of VLC plugins by Inter Digital Inc)
-echo 10. Install FFmpeg/MPV external VVC support.
+echo 10. Install FFmpeg/MPV external VVC support
 echo 11. Tests of VVC videos
 echo 12. Build vvenc and vvdec by yourself from sources
 set /p VVCSTART=Number: 
@@ -345,46 +345,42 @@ echo By installing, you will have to agree to download VVDec Web Player from Fra
 echo See the code of VVDEC Web Player: https://github.com/fraunhoferhhi/vvdecWebPlayer
 echo When you agree to install, it will clone the VVDec Web Player repository using git. After git, we will copy from the VVDECWEBINSTALL files into the vvdecWebPlayer/bin folder.
 echo After that, it will run Python to start the web server on your localhost port 8000.
-If you have already installed VVDec Web Player, you can type "U" to update the files of VVDec Web Player.
+echo If you have already installed VVDec Web Player, this will check if any upcoming updates are available.
 echo Would you like to install VVDEC Web Player?
 set /p okletsdoit=Answer: 
 if /I "%okletsdoit%"=="Y" goto installnowplayer
 if /I "%okletsdoit%"=="N" goto start
-if /I "%okletsdoit%"=="U" goto updatevvdecwebplayer
-echo Invalid input. Please enter a valid letter of Y, N or U.
+echo Invalid input. Please enter a valid letter of Y or N.
 pause
 goto installvvdecweb
 
 :installnowplayer
 cls
-title INSTALLING VVDEC WEB PLAYER...
-git clone https://github.com/fraunhoferhhi/vvdecWebPlayer
+echo INSTALLING VVDEC WEB PLAYER...
+if exist "vvdecWebPlayer\.git" (
+    echo Updating vvdecWebPlayer...
+    git -C vvdecWebPlayer pull
+) else (
+    echo Cloning vvdecWebPlayer...
+    git clone https://github.com/fraunhoferhhi/vvdecWebPlayer
+)
 copy VVDECWEBINSTALL "vvdecWebPlayer/bin" /y
 cd vvdecWebPlayer
-copy ..\VVCEasy.266 dummy_raw_bitstream.266
+copy /y ..\VVCEasy.266 dummy_raw_bitstream.266
 echo Note: If you want to go back to the menu, press CTRL + C on your keyboard in Windows Terminal/CMD and type "Y" to terminate the server, and this will go back to the main menu options.
 echo The Python file is running on port 8000 on your local host computer.
 python wasm_test-server.py
 cd ../
+echo.
 echo Thanks for trying out VVDEC Web Player. If you want to run on your VVDEC Web Player Server, go to the folder called vvdecWebPlayer and double click the file wasm_test-server.py.
 echo Press any key to go back to the menu.
-timeout 10
-goto start
-
-:updatevvdecwebplayer
-cls
-title UPDATING VVDEC WEB PLAYER...
-echo UPDATING VVDEC WEB PLAYER...
-git -C vvdecWebPlayer pull
-echo vvdecWebPlayer is now updated.
-echo Returning to main menu...
-timeout 3
+pause
 goto start
 
 :decompresswin7z
 cls
-title Decompress Windows VVC?
-echo Would you like to decompress Windows VVC binaries? Y/N?
+title Install of Windows VVC binaries
+echo Would you like to install Windows VVC binaries? Y/N?
 set /p decompwinvvc=Answer: 
 if /I "%decompwinvvc%"=="Y" goto decompresswin7z1
 if /I "%decompwinvvc%"=="N" goto start
@@ -393,8 +389,7 @@ pause
 goto decompresswin7z
 
 :decompresswin7z1
-title WindowsVVC.7z (decompressing)
-echo Decompressing........
+echo Installing........
 cd WindowsVVC
 %sevenzip% x WindowsVVC.7z -i!%bit% -aoa
 certutil -hashfile %bit%\vvdecapp.exe SHA256
@@ -429,7 +424,6 @@ pause
 goto installbitmovin
 
 :installbitmovin1windows
-title %installmessage%
 echo %installmessage%
 if not exist "BitVVDecPlayerWIN" mkdir BitVVDecPlayerWIN
 cd BitVVDecPlayerWIN
@@ -445,7 +439,6 @@ echo Or contact Bitmovin at https://www.bitmovin.com or create issue to VVCEasy.
 goto downloadbitmovinvvcsample
 
 :installbitmovin1macos
-title %installmessage%
 echo %installmessage%
 if not exist "BitVVDecPlayerMAC" mkdir BitVVDecPlayerMAC
 cd BitVVDecPlayerMAC
@@ -461,7 +454,6 @@ echo For more information, see Bitmovin.md.
 goto downloadbitmovinvvcsample
 
 :installbitmovin1linux
-title %installmessage%
 echo %installmessage%
 if not exist "BitVVDecPlayerLINUX" mkdir BitVVDecPlayerLINUX
 cd BitVVDecPlayerLINUX
@@ -484,7 +476,6 @@ pause
 goto downloadbitmovinvvcsample
 
 :downloadvvcnowbit
-title Downloading VVC sample files and Coffee Run JSON & Sprite Fright JSON from Bitmovin...
 echo Downloading VVC sample files and Coffee Run JSON & Sprite Fright JSON from Bitmovin...
 wget -q https://www.dropbox.com/s/qncefmnhw8hzr2k/vvcBlogPostDemo.7z https://www.dropbox.com/s/ogxw1pz9pr9bphi/CoffeeRun.json https://www.dropbox.com/s/6kpnoin4bwzb1ob/SpriteFright.json
 echo Extracting from archived file...
@@ -528,7 +519,6 @@ pause
 goto vlcvtmplugininstall
 
 :installvlcvtmpluginnow
-title Installing of VLC VTM Plugins by Inter Digital Inc... (Compiled by Martin Eesmaa)
 echo Installing VLC VTM Plugins by Inter Digital Inc... (Compiled by Martin Eesmaa)
 cd INSTALLVLCPLUGIN
 :installingvlcvtmplugins
@@ -601,7 +591,6 @@ pause
 goto main123
 
 :installmain123
-title Building time...
 echo Building time...
 echo Cloning vvenc and vvdec from Fraunhofer HHI on GitHub...
 git clone --depth=1 https://github.com/fraunhoferhhi/vvenc
