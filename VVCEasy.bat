@@ -389,22 +389,41 @@ pause
 goto decompresswin7z
 
 :decompresswin7z1
-echo Installing........
+echo Installing...
 cd WindowsVVC
 %sevenzip% x WindowsVVC.7z -i!%bit% -aoa
-certutil -hashfile %bit%\vvdecapp.exe SHA256
-certutil -hashfile %bit%\vvencapp.exe SHA256
-certutil -hashfile %bit%\vvencFFapp.exe SHA256
-certutil -hashfile %bit%\vvencinterfacetest.exe SHA256
-certutil -hashfile %bit%\vvenclibtest.exe SHA256
-type WindowsVVC.sha256 | findstr %bit%
-cd ../
-echo Please double-check that it needs to be the same hash. If it matches the hash, it is the same as the .exe of WindowsVVC.sha256 and CertUtil. This means good.
-echo If the hashes are not matched correctly, please try it again or manually extract the compressed file using 7-Zip.
 echo.
-echo Otherwise, please create an issue to Martin Eesmaa/VVCEasy on GitHub for your problem.
+echo Checking SHA256 checksums for Windows VVC binaries...
+
+setlocal enabledelayedexpansion
+set "allok=1"
+
+for %%F in (vvdecapp.exe vvencapp.exe vvencFFapp.exe vvencinterfacetest.exe vvenclibtest.exe) do (
+    for /f "tokens=1,2" %%A in ('findstr /i "%bit%/%%F" WindowsVVC.sha256') do (
+        certutil -hashfile %bit%\%%F SHA256 | find /i "%%A" >nul
+        if errorlevel 1 (
+            echo ERROR: SHA256 mismatch for %bit%\%%F
+            set allok=0
+        )
+    )
+)
+echo.
+
+if "!allok!"=="1" (
+    echo All checksums were identical successful!
+    echo Thank you for installing Windows VVC binaries. Now, back to the menu.
+) else (
+    echo The files do not match identical checksums for some or all files.
+    echo Please try again or manually extract the compressed file.
+    echo Make sure you have free disk space or/and memory RAM available.
+    echo Otherwise, please create an issue to Martin Eesmaa/VVCEasy on GitHub for your problem.
+)
+
+endlocal
+
+cd ../
+echo.
 pause
-echo Thank you for decompressing Windows VVC binaries. Now, back to the menu.
 timeout 3
 goto start
 
