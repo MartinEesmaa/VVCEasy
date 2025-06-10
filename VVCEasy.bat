@@ -3,7 +3,7 @@ set welcometitle=Martin Eesmaa / VVCEasy
 set version=v2.7.0
 set versionname=Martin Eesmaa at age 19, wow nice!
 set vvceasydate=23 June 2024
-set copyrightinfo=Copyright (C) Martin Eesmaa 2021-2025 (MIT License)
+set copyrightinfo=Copyright (C) 2021-2025 Martin Eesmaa (MIT License)
 for /f "tokens=2*" %%A in ('reg query "HKLM\System\CurrentControlSet\Control\Session Manager\Environment" /v "PROCESSOR_ARCHITECTURE"') do set ProcessorArchitecture=%%B
 
 if /i "%ProcessorArchitecture%"=="AMD64" (
@@ -79,7 +79,7 @@ echo 1. Encode (too old, deprecated)
 echo 2. Decode (too old, deprecated)
 echo 3. Help
 echo 4. Exit
-echo 5. Install/Test path environment. (deprecated)
+echo 5. Test path environment
 echo 6. Install/Update VVdec Web Player (requires Python and clone/pull for git)
 echo 7. Install Windows VVC binaries (Windows XP and later)
 echo 8. Install vvDecPlayer from BitMovin
@@ -220,70 +220,75 @@ goto start
 
 :test
 cls
-title INSTALL/TEST PATH ENVIRONMENT
-echo Martin Eesmaa is testing your paths, where you installed programs in PATH. If you're unsure, what is the path?
-echo You can go there for a link at https://stackoverflow.com/questions/4910721/python-on-cmd-path
-echo Also search "What is PATH in Windows?" in DuckDuckGo, Google, SearX or your favorite search engine.
-echo Are you ready to test? (Y/N) Or type "I" to install the path environment.
+title Test path environment
+echo This script will check if required programs are installed in PATH environment.
+echo Are you ready to test of your programs installed? (Y/N)
 set /p readytestbefore=Answer: 
 if /I "%readytestbefore%"=="Y" goto nowtestingtime
 if /I "%readytestbefore%"=="N" goto start
-if /I "%readytestbefore%"=="I" goto installpath
-echo Invalid input. Please enter a valid letter of Y, N or I.
+echo Invalid input. Please enter a valid letter of Y or N.
 pause
 goto test
 
 :nowtestingtime
-title Testing installed programs...
-ffmpeg
-ffplay
-git
-python --version
-echo Did that work in your PATH? Y/N?
-set /p testdidworkq=Answer: 
-if /I "%testdidworkq%"=="Y" goto youdidworktest
-if /I "%testdidworkq%"=="N" goto ahhdidnotwork
-echo Invalid input. Please enter a valid letter of Y or N.
-pause
-goto nowtestingtime
+echo Testing installed programs...
+setlocal enabledelayedexpansion
 
-:youdidworktest
-title Great!
-echo Great, your PATH environment is working. Going back to the menu...
-timeout 3
-goto start
+set "missing="
+set "found="
 
-:ahhdidnotwork
-title Sorry...
-echo Sorry, your path environment did not work. Make sure to follow the steps that need to be added to the path's installation, like Python.
-echo Still not working? You can ask questions on Stack Overflow.
-pause
-goto start
+where ffmpeg >nul 2>nul
+if errorlevel 1 (
+    echo Missing ffmpeg is not found in PATH.
+    set missing=!missing! ffmpeg
+) else (
+    echo FFmpeg found. Good to go encode and decode!
+    set found=!found! ffmpeg
+)
 
-:installpath
-echo Installer path environment will be only for 7-Zip.
-echo Other programs should need a manual, but Python, FFmpeg, wget and git must be installed manually and the paths to their environments must be added automatically.
-echo Do you want to patch 7-Zip on your path environment so that you can type "7z" next time?
-echo Would you like to install 7-Zip on your path environments? Y/N? No means go back to the test menu.
-set /p installpath1=Answer: 
-if /I "%installpath1%"=="Y" goto installingpath
-if /I "%installpath1%"=="N" goto test
-echo Invalid input. Please enter a valid letter of Y or N.
-pause
-goto installpath
+where git >nul 2>nul
+if errorlevel 1 (
+    echo Missing git in PATH.
+    set missing=!missing! git
+) else (
+    echo Git found. Good to go for git cloning and pulling!
+    set found=!found! git
+)
 
-:installingpath
-title INSTALLING 7-ZIP on your path environments...
-echo INSTALLING 7-ZIP on your path environments...
-set PATH=%PATH%;C:\Program Files\7-Zip
-echo DONE!
-echo Returning to test menu...
-timeout 3 /nobreak
-goto test
+where python >nul 2>nul
+if errorlevel 1 (
+    echo MISSING: python not installed/found in PATH.
+    set missing=!missing! python
+) else (
+    echo Python found. Good to go with Web Server on vvDecWebPlayer!
+    set found=!found! python
+)
+
+echo.
+
+if defined missing (
+    echo The following programs are missing or not in your PATH:!missing!
+    echo.
+    echo Please install any missing programs on your computer.
+    echo Installation links:
+    echo - Python install: https://www.python.org/downloads/
+    echo - FFmpeg install: https://www.wikihow.com/Install-FFmpeg-on-Windows
+    echo - Git install: https://git-scm.com/download/win
+    echo.
+    echo Once you have installed missing program !missing!, please try again.
+    pause
+    endlocal
+    goto start
+) else (
+    echo All required programs are found in your PATH!
+    echo So that means it is working correctly.
+    endlocal
+    pause
+    goto start
+)
 
 :exit
 cls
-title Have a nice day!
 echo Have a nice day! Thank you for using VVCEasy! :)
 :::     _   _                 _                      
 :::    | | | |               | |                     
@@ -589,7 +594,6 @@ echo https://github.com/MartinEesmaa/VVCEasy/#tests-of-vvc-videos
 echo.
 echo See information on FFMPEGVVC.md or online GitHub: https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md
 echo.
-echo Press enter to go back menu.
 pause
 goto start
 
