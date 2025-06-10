@@ -398,7 +398,7 @@ echo Checking SHA256 checksums for Windows VVC binaries...
 setlocal enabledelayedexpansion
 set "allok=1"
 
-for %%F in (vvdecapp.exe vvencapp.exe vvencFFapp.exe vvencinterfacetest.exe vvenclibtest.exe) do (
+for %%F in (vvdecapp.exe vvencapp.exe vvencFFapp.exe vvencinterfacetest.exe vvenclibtest.exe vvenc_unit_test.exe) do (
     for /f "tokens=1,2" %%A in ('findstr /i "%bit%/%%F" WindowsVVC.sha256') do (
         certutil -hashfile %bit%\%%F SHA256 | find /i "%%A" >nul
         if errorlevel 1 (
