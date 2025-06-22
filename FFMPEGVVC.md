@@ -121,9 +121,9 @@ For Linux and Mac OS users: Type correctly `MP4Box` for execute binary, but no s
 
 [Windows (x64/x86/winarm64) & Linux (x64/arm64)](https://github.com/MartinEesmaa/FFmpeg-Builds/releases/tag/latest) - Automated builds every day at 12:00 (12 PM) UTC of FFmpeg VVCEasy custom builds.
 
-[Mac OS x86_64](https://mega.nz/file/jo0RWZSC#PIGNsk1ak_W3vVJTNy09hTx0f2OoZgJd9MvXOoXGMAI)
+[Mac OS x86_64](https://mega.nz/file/W8thHRwJ#7FnDe3d8yFzpz87DHlRXIjbIV9e2fVA7Q_P8rB02d5Q)
 
-[Mac OS arm64](https://mega.nz/file/e1FmATYA#WYSRWKJ8kE_60PhyitPDOUu8dxvD-RnQIdujcu4FjDE)
+[Mac OS arm64](https://mega.nz/file/y58WXIaJ#0IcVKGwGRVIk1XhEFz3tepR9dXDoCvNk5YWm8kOP5Cc)
 
 [FFmpeg-FixVVC archived old source code](https://mega.nz/file/G81QyT5S#jcbE1sYPEy1OMIDPCF8BPeAK-3KAGF50u23MVJzmBgw) (old)
 
@@ -145,6 +145,7 @@ Before automated builds started of Windows & Linux, here are the last links of m
 
 ### Changelog
 ```
+22/06/2025: Updated FFmpeg with latest, vvenc, vvdec and others. Again sorry for two months hiatus.
 06/04/2025: Updated FFmpeg with latest, vvenc, vvdec and others. Sorry for six months. (macOS only)
 16/10/2024: Added libgsm external feature to FFmpeg VVCEasy builds for Windows & Linux only.
 15/10/2024: Fixed missing JPEG-XL demux MKTAG of MP4/MOV container format bug.
