@@ -4,6 +4,24 @@ To view or download releases with changelogs, please go to https://github.com/Ma
 
 This is local changelog file.
 
+v3.0.0 Release (June 23, 2025):
+
+- Updated FFmpeg and MPV VVCEasy builds
+- Updated VVC and uvg266 binaries
+- Automated FFmpeg VVCEasy builds of Windows & Linux
+- Added support of 7-Zip Win32 and arm64 for decompressing use.
+- Added support Windows ARM64 VVC binaries
+- Improved Windows batchfile and ISS install script.
+- Final build of Bitmovin vvDecPlayer for Windows & Linux.
+- Integrated of building VVC into batch files
+- Added build shell scripts for FFmpeg and VVC binaries.
+- Added MPC-BE information to LAVFilters and in README
+- Old documents have moved into docs-old due deprecated and superseeded.
+- Improved README file with graphics and table.
+- Renamed from Android to AndroidVVC folder.
+- Added VVC binaries of information link in README
+- Added Mark Litwintschik list to THANKS file due providing blog about VVCEasy
+
 v2.7.0 Release (June 23, 2024):
 
 - Updated FFmpeg and MPV VVCEasy builds
