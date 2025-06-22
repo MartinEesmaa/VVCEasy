@@ -156,7 +156,7 @@ fi
 
 cd FFmpeg-VVC
 export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig
-./configure --prefix=$PREFIX --enable-{static,pic,sdl2} --pkg-config-flags="--static" --extra-ldexeflags="-static" \
+./configure --prefix=$PREFIX --enable-{static,pic,sdl2} --disable-audiotoolbox --pkg-config-flags="--static" --extra-ldexeflags="-static" \
 --enable-lib{fdk-aac,vvenc,vvdec,xml2,opus,dav1d,jxl,zimg,vmaf,soxr} $extra --extra-version=VVCEasy && \
 make -j
 cd ..
