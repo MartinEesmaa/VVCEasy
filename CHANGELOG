@@ -23,6 +23,7 @@ v3.0.0 Release (June 23, 2025):
 - Added VVC binaries of information link in README
 - Added Mark Litwintschik list to THANKS file due providing blog about VVCEasy
 - Finally implemented automatic Windows builds of mpv-winbuild forked repo
+- Added GUI application tables for beginners in README
 
 v2.7.0 Release (June 23, 2024):
 
