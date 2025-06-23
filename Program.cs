@@ -7,8 +7,8 @@ namespace VVCEasy
     {
         public static void Main()
         {
-            string version = "v2.7.0";
-            string codeversion = "Martin Eesmaa at age 19, wow nice!";
+            string version = "v3.0.0";
+            string codeversion = "The important life of Martin Eesmaa";
             string title = "Martin Eesmaa / VVCEasy";
             bool exit = false;
             Console.Title = title;
@@ -20,7 +20,7 @@ namespace VVCEasy
                 Console.WriteLine("VVCEasy (.NET Console Release Version, " + version + ")");
                 Console.WriteLine("Version codename: " + codeversion);
                 Console.WriteLine("Note: C# is not ready yet, malfunction mode\n");
-                Console.WriteLine("Copyright (C) Martin Eesmaa 2021-2024 (MIT License)");
+                Console.WriteLine("Copyright (C) 2021-2025 Martin Eesmaa (MIT License)");
                 Console.Title = title;
                 Console.WriteLine("What would you like to do for encode/decode of VVC?\n1. Encode\n2. Decode\n3. Help\n4. Exit\n5. Install/Test path environment\n6. Install FFmpeg VVDec support\n7. Install VVdec Web Player\n8. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)\n9. Install vvDecPlayer from BitMovin\n10. Install/Update VLC VTM Plugins (Windows/Linux x64 of VLC plugins by Inter Digital Inc)\n11. Install MPV Windows/Android (libvvdec plugin)\n12. Tests of VVC videos");
 
@@ -102,7 +102,7 @@ namespace VVCEasy
                     Console.Clear();
                     Console.Title = "Have a wonderful day!";
                     Console.WriteLine("Have a wonderful day! Thank you for using VVCEasy. :)");
-                    Console.WriteLine("    _   _                 _                      \n    | | | |               | |                     \n    | |_| |__   __ _ _ __ | | ___   _  ___  _   _ \n    | __| '_ / / _` | '_ /| |/ / | | |/ _ /| | | |\n    | |_| | | | (_| | | | |   <| |_| | (_) | |_| |\n     /__|_| |_|/__,_|_| |_|_|/_\\__, |/___/ /__,_|\n                                 __/ |            \n                                |___/\n\n\n    __      ____      _______ ______                \n    / /    / // /    / / ____|  ____|               \n      / // /    / // /| |    |  __| / _` / __| | | |\n       /  /      /  / | |____| |___| (_| /__ / |_| |\n        //        //   /_____|______/__,_|___//__, |\n                                               __/ |\n                                              |___/ \n\n\n     __  __            _   _         ______                                \n    |  //  |          | | (_)       |  ____|                               \n    | /  / | __ _ _ __| |_ _ _ __   | |__   ___  ___ _ __ ___   __ _  __ _ \n    | |//| |/ _` | '__| __| | '_ /  |  __| / _ // __| '_ ` _ / / _` |/ _` |\n    | |  | | (_| | |  | |_| | | | | | |___|  __//__ / | | | | | (_| | (_| |\n    |_|  |_|/__,_|_|   /__|_|_| |_| |______/___||___/_| |_| |_|/__,_|/__,_|\nCopyright (C) Martin Eesmaa 2021-2024 (MIT License)\n\nExiting program...");
+                    Console.WriteLine("    _   _                 _                      \n    | | | |               | |                     \n    | |_| |__   __ _ _ __ | | ___   _  ___  _   _ \n    | __| '_ / / _` | '_ /| |/ / | | |/ _ /| | | |\n    | |_| | | | (_| | | | |   <| |_| | (_) | |_| |\n     /__|_| |_|/__,_|_| |_|_|/_\\__, |/___/ /__,_|\n                                 __/ |            \n                                |___/\n\n\n    __      ____      _______ ______                \n    / /    / // /    / / ____|  ____|               \n      / // /    / // /| |    |  __| / _` / __| | | |\n       /  /      /  / | |____| |___| (_| /__ / |_| |\n        //        //   /_____|______/__,_|___//__, |\n                                               __/ |\n                                              |___/ \n\n\n     __  __            _   _         ______                                \n    |  //  |          | | (_)       |  ____|                               \n    | /  / | __ _ _ __| |_ _ _ __   | |__   ___  ___ _ __ ___   __ _  __ _ \n    | |//| |/ _` | '__| __| | '_ /  |  __| / _ // __| '_ ` _ / / _` |/ _` |\n    | |  | | (_| | |  | |_| | | | | | |___|  __//__ / | | | | | (_| | (_| |\n    |_|  |_|/__,_|_|   /__|_|_| |_| |______/___||___/_| |_| |_|/__,_|/__,_|\nCopyright (C) 2021-2025 Martin Eesmaa (MIT License)\n\nExiting program...");
                     Thread.Sleep(5000);
                     exit = true;
                 }

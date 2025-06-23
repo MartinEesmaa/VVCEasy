@@ -1,8 +1,8 @@
 echo off
 set welcometitle=Martin Eesmaa / VVCEasy
-set version=v2.7.0
-set versionname=Martin Eesmaa at age 19, wow nice!
-set vvceasydate=23 June 2024
+set version=v3.0.0
+set versionname=The important life of Martin Eesmaa
+set vvceasydate=23 June 2025
 set copyrightinfo=Copyright (C) 2021-2025 Martin Eesmaa (MIT License)
 for /f "tokens=2*" %%A in ('reg query "HKLM\System\CurrentControlSet\Control\Session Manager\Environment" /v "PROCESSOR_ARCHITECTURE"') do set ProcessorArchitecture=%%B
 

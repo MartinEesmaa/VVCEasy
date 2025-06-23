@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "VVCEasy"
-#define MyAppVersion "2.7.0"
+#define MyAppVersion "3.0.0"
 #define MyAppPublisher "Martin Eesmaa"
 #define MyAppURL "https://github.com/MartinEesmaa/VVCEasy"
 
