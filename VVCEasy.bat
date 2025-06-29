@@ -4,6 +4,7 @@ set version=v3.0.0
 set versionname=The important life of Martin Eesmaa
 set vvceasydate=23 June 2025
 set copyrightinfo=Copyright (C) 2021-2025 Martin Eesmaa (MIT License)
+set invalidletter=Invalid input. Please enter a valid letter of Y or N.
 for /f "tokens=2*" %%A in ('reg query "HKLM\System\CurrentControlSet\Control\Session Manager\Environment" /v "PROCESSOR_ARCHITECTURE"') do set ProcessorArchitecture=%%B
 
 if /i "%ProcessorArchitecture%"=="AMD64" (
@@ -226,7 +227,7 @@ echo Are you ready to test of your programs installed? (Y/N)
 set /p readytestbefore=Answer: 
 if /I "%readytestbefore%"=="Y" goto nowtestingtime
 if /I "%readytestbefore%"=="N" goto start
-echo Invalid input. Please enter a valid letter of Y or N.
+echo %invalidletter%
 pause
 goto test
 
@@ -275,13 +276,13 @@ if defined missing (
     echo - FFmpeg install: https://www.wikihow.com/Install-FFmpeg-on-Windows
     echo - Git install: https://git-scm.com/download/win
     echo.
-    echo Once you have installed missing program !missing!, please try again.
+    echo Once you have installed missing program !missing!, please exit and try again.
     pause
     endlocal
     goto start
 ) else (
     echo All required programs are found in your PATH!
-    echo So that means it is working correctly.
+    echo Ready to go with all programs!
     endlocal
     pause
     goto start
@@ -320,7 +321,6 @@ for /f "delims=: tokens=*" %%A in ('findstr /b ::: "%~f0"') do @echo(%%A
 echo.
 echo %copyrightinfo%
 echo.
-echo ------------ END OF WINDOWS BATCHFILE PROGRAM ----------------
 timeout 5 /nobreak
 exit
 
@@ -329,33 +329,28 @@ cls
 echo Welcome to VVCEasy help instructions!
 echo Here is a tutorial about... How to use VVCEasy?
 pause
-echo Step 1: Run on VVCEasy.bat. When you see the screen: "Welcome to VVCEasy. You can press any key to continue to the main menu."
-echo Step 2: Here is the list of main menus, where you must type any number to go in the direction, like the (goto) command.
-echo Step 3: Follow the command instructions, and that is easy.
+echo Step 1: Run on VVCEasy.bat. If administrator privilege is required, it will ask you to run as administrator.
+echo Step 2: Here are the list of main menu, where you must type any number to go in the direction, like the (goto) command.
+echo Step 3: Follow the command instructions, and that's it!
 pause
-echo If you have any problems that you do not understand VVCEasy. Please get in touch with Martin Eesmaa by creating issues for questions and/or problems.
-echo Do you want to start over with the help instructions? If yes, then it will go back to the beginning. If no, go back to the menu. Y/N?
-set /p helper=Answer: 
-if /I "%helper%"=="Y" goto help
-if /I "%helper%"=="N" goto start
-echo Invalid input. Please enter a valid letter of Y or N.
+echo If you have any problems that you may not understand. Please file an issue on GitHub or community.
 pause
 goto help
 
 :installvvdecweb
 cls
-title VVdec Web Player.
-echo Welcome to VVDEC Web Player.
-echo By installing, you will have to agree to download VVDec Web Player from Fraunhoferhhi GitHub. 
-echo See the code of VVDEC Web Player: https://github.com/fraunhoferhhi/vvdecWebPlayer
-echo When you agree to install, it will clone the VVDec Web Player repository using git. After git, we will copy from the VVDECWEBINSTALL files into the vvdecWebPlayer/bin folder.
+title vvDec Web Player.
+echo Welcome to vvDec Web Player.
+echo By installing, you will have to agree to download vvDec Web Player from Fraunhoferhhi GitHub. 
+echo See the code of vvDec Web Player: https://github.com/fraunhoferhhi/vvdecWebPlayer
+echo When you agree to install, it will clone the vvDec Web Player repository using git. After git, we will copy from the VVDECWEBINSTALL files into the vvdecWebPlayer/bin folder.
 echo After that, it will run Python to start the web server on your localhost port 8000.
-echo If you have already installed VVDec Web Player, this will check if any upcoming updates are available.
-echo Would you like to install VVDEC Web Player?
+echo If you have already installed vvDec Web Player, this will check if any upcoming updates are available.
+echo Would you like to install vvDec Web Player?
 set /p okletsdoit=Answer: 
 if /I "%okletsdoit%"=="Y" goto installnowplayer
 if /I "%okletsdoit%"=="N" goto start
-echo Invalid input. Please enter a valid letter of Y or N.
+echo %invalidletter%
 pause
 goto installvvdecweb
 
@@ -372,24 +367,24 @@ if exist "vvdecWebPlayer\.git" (
 copy VVDECWEBINSTALL "vvdecWebPlayer/bin" /y
 cd vvdecWebPlayer
 copy /y ..\VVCEasy.266 dummy_raw_bitstream.266
-echo Note: If you want to go back to the menu, press CTRL + C on your keyboard in Windows Terminal/CMD and type "Y" to terminate the server, and this will go back to the main menu options.
-echo The Python file is running on port 8000 on your local host computer.
+echo Note: If you want to go back to the menu, press CTRL + C on your keyboard in terminal and type "Y" to terminate the server, and it will go back to the main menu.
+echo The Python file is running on port 8000 on your computer.
 python wasm_test-server.py
 cd ../
 echo.
-echo Thanks for trying out VVDEC Web Player. If you want to run on your VVDEC Web Player Server, go to the folder called vvdecWebPlayer and double click the file wasm_test-server.py.
+echo Thanks for trying out vvDec Web Player. If you want to run on your vvDec Web Player Server, go to the folder called vvdecWebPlayer and double click the file wasm_test-server.py.
 echo Press any key to go back to the menu.
 pause
 goto start
 
 :decompresswin7z
 cls
-title Install of Windows VVC binaries
+title Installation of Windows VVC binaries
 echo Would you like to install Windows VVC binaries? Y/N?
 set /p decompwinvvc=Answer: 
 if /I "%decompwinvvc%"=="Y" goto decompresswin7z1
 if /I "%decompwinvvc%"=="N" goto start
-echo Invalid input. Please enter a valid letter of Y or N.
+echo %invalidletter%
 pause
 goto decompresswin7z
 
@@ -421,6 +416,7 @@ if "!allok!"=="1" (
     echo The files do not match identical checksums for some or all files.
     echo Please try again or manually extract the compressed file.
     echo Make sure you have free disk space or/and memory RAM available.
+    echo Ensure that you have your permissions to write files in the folder.
     echo Otherwise, please create an issue to Martin Eesmaa/VVCEasy on GitHub for your problem.
 )
 
@@ -495,26 +491,23 @@ echo Would you like to download VVC sample video files from Bitmovin? Y/N?
 set /p vvcsampleyeah=Answer: 
 if /I "%vvcsampleyeah%"=="Y" goto downloadvvcnowbit
 if /I "%vvcsampleyeah%"=="N" goto start
-echo Invalid input. Please enter a valid letter of Y or N.
+echo %invalidletter%
 pause
 goto downloadbitmovinvvcsample
 
 :downloadvvcnowbit
 echo Downloading VVC sample files and Coffee Run JSON & Sprite Fright JSON from Bitmovin...
-wget -q https://www.dropbox.com/s/qncefmnhw8hzr2k/vvcBlogPostDemo.7z https://www.dropbox.com/s/ogxw1pz9pr9bphi/CoffeeRun.json https://www.dropbox.com/s/6kpnoin4bwzb1ob/SpriteFright.json
+wget -q https://www.dropbox.com/scl/fi/lglxlcoiav5xgwo6mktvk/vvcBlogPostDemo.zip?rlkey=2sj0qbovn0z4ipwilj0vkumdf -O vvcBlogPostDemo.7z
+wget -q https://www.dropbox.com/scl/fi/4iy06ektd7ux6squnrkam/SpriteFright.json?rlkey=lshrlc0s0v0vi7dwz7j4ediep -O SpriteFright.json
+wget -q https://www.dropbox.com/scl/fi/n65bw1iiv2skv16l49013/CoffeeRun.json?rlkey=63w013tayac9nwpr6azznina2 -O CoffeeRun.json
 echo Extracting from archived file...
-%sevenzip% x vvcBlogPostDemo.7z -aoa
+%sevenzip% x vvcBlogPostDemo.zip -aoa
 echo Deleting archived file...
-del /q vvcBlogPostDemo.7z
-title Installation of BitVVDecPlayer
-echo Please edit the location downloaded folder of vvcBlogPostDemo...
-CoffeeRun.json && SpriteFright.json
-echo Press any key, when you done editing JSON files.
-pause
+del /q vvcBlogPostDemo.zip
 echo Okay, you configured manually success. Please run vvDecPlayer on your computer.
-echo Go to File tab, then Open JSON manifest in BitVVDecPlayer...
+echo Go to the File tab, then Open JSON manifest in BitVVDecPlayer...
 echo Select JSON file to play VVC movie and enjoy it.
-echo Still not working? Please create the new issue on GitHub or join community available with Discord, Revolt and Matrix.
+echo Still not working? Please create the new issue on GitHub or join community on Discord, Revolt or Matrix.
 pause
 goto start
 
@@ -538,7 +531,7 @@ echo Would you like to install VTM plugins to your VLC Media Player? Y/N?
 set /p vlcvtmyesorno=Answer: 
 if /I "%vlcvtmyesorno%"=="Y" goto installvlcvtmpluginnow
 if /I "%vlcvtmyesorno%"=="N" goto start
-echo Invalid input. Please enter a valid letter of Y or N.
+echo %invalidletter%
 pause
 goto vlcvtmplugininstall
 
@@ -605,7 +598,7 @@ echo Y/N?
 set /p main1234= Answer: 
 if /I "%main1234%"=="Y" goto installmain123
 if /I "%main1234%"=="N" goto start
-echo Invalid input. Please enter a valid letter of Y or N.
+echo %invalidletter%
 pause
 goto main123
 
