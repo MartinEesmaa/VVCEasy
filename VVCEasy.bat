@@ -71,7 +71,7 @@ cls
 echo Welcome to VVCEasy!
 echo VVCEasy (Batchfile Release Version, %version%, %vvceasydate%)
 echo Version codename: %versionname%
-echo Current system architecture: %bit%
+echo System type architecture: %bit%
 echo %copyrightinfo%
 echo.
 echo What would you like to do to encode/decode VVC?
@@ -86,7 +86,7 @@ echo 8. Install vvDecPlayer from BitMovin
 echo 9. Install/Update VLC VTM Plugins (Windows/Linux x64 of VLC plugins by Inter Digital Inc)
 echo 10. Install FFmpeg/MPV external VVC support
 echo 11. Tests of VVC videos
-echo 12. Build vvenc and vvdec by yourself from sources
+echo 12. Build vvenc and vvdec from source
 set /p VVCSTART=Number: 
 
 if "%VVCSTART%" == "1" goto encodestart
@@ -99,7 +99,7 @@ if "%VVCSTART%" == "7" goto decompresswin7z
 if "%VVCSTART%" == "8" goto installbitmovin
 if "%VVCSTART%" == "9" goto vlcvtmplugininstall
 if "%VVCSTART%" == "10" goto installvvdecffmpegmpvnow
-if "%VVCSTART%" == "11" goto testsofvideo
+if "%VVCSTART%" == "11" goto installvvdecffmpegmpvnow
 if "%VVCSTART%" == "12" goto main123
 echo Invalid input. Please enter a number between 1 and 13.
 pause
@@ -529,11 +529,11 @@ if /i "%bit%" == "x64" (
 cls
 title VLC VTM Plugins Install (Windows and Linux)
 echo Welcome to VLC Media Player of VTM Plugins Installation.
-echo You need to run Windows version of Windows Vista / Windows Server 2008 to play VVC files.
-echo Windows XP can't load VTM plugins, but other plugins works.
-echo System type only = x64
+echo You need to run Windows version of Vista / Server 2008 to play VVC files.
+echo Windows XP can't load VTM plugins, but other plugins do work.
+echo Available: x86_64
 echo Linux is now available, see Linux installation at: https://github.com/MartinEesmaa/VVCEasy/tree/master/INSTALLVLCPLUGIN#for-linux-users
-echo Available: VLC 3.0.9.2 and later (it will work same latest version 3 only)
+echo Available: VLC 3.0.9.2 and later (it will work only with the same latest version 3)
 echo Would you like to install VTM plugins to your VLC Media Player? Y/N?
 set /p vlcvtmyesorno=Answer: 
 if /I "%vlcvtmyesorno%"=="Y" goto installvlcvtmpluginnow
@@ -543,7 +543,7 @@ pause
 goto vlcvtmplugininstall
 
 :installvlcvtmpluginnow
-echo Installing VLC VTM Plugins by Inter Digital Inc... (Compiled by Martin Eesmaa)
+echo Installing VLC VTM Plugins by Inter Digital Inc...
 cd INSTALLVLCPLUGIN
 :installingvlcvtmplugins
 if exist "%programfiles%\VideoLAN\VLC" (
@@ -577,7 +577,7 @@ pause
 goto start
 
 :installvvdecffmpegmpvnow
-echo It is available of FFmpeg and MPV VVC support. Please copy or open the link to a web browser.
+echo It is available of FFmpeg and MPV VVC support, including video tests. Please copy or open the link to a web browser.
 echo.
 echo Download link for FFmpeg: https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md#ffmpeg-downloads-xhe-aac--vvc-endecoder-plugin-compiled-by-martin-eesmaa
 echo Download link for MPV: https://github.com/MartinEesmaa/VVCEasy/blob/master/MPV.md#downloads-for-mpv-android-vvc-support
@@ -585,11 +585,7 @@ echo.
 echo For FFmpeg, see information on FFMPEGVVC.md or online GitHub: https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md
 echo For MPV, see information on MPV.md or online GitHub: https://github.com/MartinEesmaa/VVCEasy/blob/master/MPV.md
 echo.
-pause
-goto start
-
-:testsofvideo
-echo Please see the paragraph in README.md.
+echo For the video tests, see the paragraph in README.md.
 echo https://github.com/MartinEesmaa/VVCEasy/#tests-of-vvc-videos
 echo.
 echo See information on FFMPEGVVC.md or online GitHub: https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md
