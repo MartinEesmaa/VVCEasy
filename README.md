@@ -159,13 +159,14 @@ VVCEasy_compiler.iss
 ```
 
 Step 2: Press F9 on your keyboard to compile. After compiling, VVCEasy.exe (Installer) can be found in the Install folder.
+
 ![VVCEasyclickblueplaybutton](https://user-images.githubusercontent.com/88035011/153736303-b0949f5a-5ac5-4123-92c5-305211a8aadc.png)
 
 ---
 
 ### VVCEasy .NET Console Version (optional)
 
-First, before you compile to VVCEasy .NET Console Version, you need .NET SDK x64 from Microsoft.
+You need .NET SDK from Microsoft.
 Link: https://dotnet.microsoft.com/en-us/download
 
 Step 1: Clone git and cd VVCEasy
@@ -173,12 +174,12 @@ Step 1: Clone git and cd VVCEasy
 git clone --depth=1 https://github.com/MartinEesmaa/VVCEasy && cd VVCEasy
 ```
 
-Step 2: When you build, this will restore the project first and it compiles.
+Step 2: Start building the project by command:
 ```
 dotnet build -c Release
 ```
 
-Step 3: Once building is done, the build folder directory is bin/Release
+Step 3: Once build is done, the result folder directory is bin/Release
 ```
 cd bin/Release
 ```
@@ -196,7 +197,7 @@ If you want to compile and publish it into a portable executable file, you can d
 dotnet publish -c Release
 ```
 
-After that, it should be found for example at bin\Release\netX.x\win-x64\publish.
+After that, it can be found for example at bin\Release\netX.x\win-x64\publish.
 
 # GUI applications (easy)
 
@@ -219,7 +220,7 @@ If you're looking for a hard option of document information, you can check out t
 
 # FAQ (Frequently Asked Questions)
 
-Before you ask any question, see the questions at table please.
+Before you ask any question, see the questions below at table please.
 
 | Question | Answer
 --- | --- |
@@ -232,11 +233,12 @@ Before you ask any question, see the questions at table please.
 If you have any questions or/any issues, please go to the Issues tab and create your issue.
 
 Or you can join and chat with us in our community: [Link for communities at top](#community)
--   Martin Eesmaa
+
+Martin Eesmaa, creator of VVCEasy
 
 # Credits & Licenses
 
-[VVCEasy](https://github.com/MartinEesmaa/VVCEasy) - VVCEasy is easy VVC, that no need to compile. 
+[VVCEasy](https://github.com/MartinEesmaa/VVCEasy) - VVCEasy contains ready to serve prebuilt binaries VVC programs, including players and more.
 
 License: MIT
 
@@ -262,7 +264,7 @@ GitHub: [Fraunhoferhhi](https://github.com/fraunhoferhhi)
 
 [VLC Original Version](https://code.videolan.org/videolan/vlc) - VLC Media Player
 
-License: GPL Version 2 (VLC Original version) & LGPL-2.1 (VLC VTM Decoder Plugin)
+License: GPL-2.0 (VLC Original version) & LGPL-2.1 (VLC VTM Decoder Plugin)
 
 © 2000-2025 [VLC Media Player](https://code.videolan.org/) Developers (All rights reserved)
 
@@ -290,7 +292,7 @@ License: MIT
 
 VVC developers & forkers: [Christian Lehmann](https://github.com/lehmann-c), [tbiat](https://github.com/tbiat), [Isabelle Santin](https://github.com/IsaMorphic) & [Martin Eesmaa](https://github.com/MartinEesmaa)
 
-License: LGPL-2.1+ & GPL-2.0+
+License: LGPL-2.1 & GPL-2.0
 
 For my custom build configuration license is GPL-3.0+ with nonfree (fdk-aac) for FFmpeg.
 
@@ -300,17 +302,15 @@ For my custom build configuration license is GPL-3.0+ with nonfree (fdk-aac) for
 
 [fdk-aac](https://github.com/mstorsjo/fdk-aac) - A standalone library of the Fraunhofer FDK AAC code from Android.
 
-License: None
-
 © 2012-2025 [Martin Storsjö](https://github.com/mstorsjo) (All rights reserved)
 
 ---
 
 [mpv](https://github.com/mpv-player/mpv) - 🎥 Command line video player
 
-License: LGPL-2.1+ & GPL-2.0+
+License: LGPL-2.1 & GPL-2.0
 
-For my custom build license: GPL-3.0+ with nonfree (fdk-aac) for FFmpeg
+For my custom build license: GPL-3.0 with nonfree (fdk-aac) for FFmpeg
 
 © 2013-2025 [Vincent Lang, MPlayer, mplayer2 & MPV developers](https://github.com/mpv-player) (All rights reserved)
 
@@ -336,8 +336,6 @@ License: LGPL-2.1
 
 [LAVFilters](https://github.com/Nevcairiel/LAVFilters) - LAV Filters - Open-Source DirectShow Media Splitter and Decoders
 
-License: None
-
 © 2010-2025 [Hendrik Leppkes](https://github.com/Nevcairiel) (All rights reserved)
 
 ---
@@ -360,7 +358,7 @@ License: GPL-3.0
 
 Official website: https://7-zip.org
 
-License: LGPL-2.1-or-later with unRAR restriction & LZMA SDK in the public domain
+License: LGPL-2.1 with unRAR restriction & LZMA SDK in the public domain
 
 © 1999-2025 Igor Pavlov (All rights reserved)
 
@@ -368,7 +366,7 @@ License: LGPL-2.1-or-later with unRAR restriction & LZMA SDK in the public domai
 
 [wget](https://git.savannah.gnu.org/cgit/wget.git) - GNU Wget is a free software package for retrieving files using HTTP, HTTPS, FTP and FTPS, the most widely used Internet protocols.
 
-License: GPL-3.0-or-later
+License: GPL-3.0
 
 Original written by Hrvoje Nikšić
 
