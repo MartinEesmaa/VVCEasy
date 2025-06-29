@@ -452,7 +452,7 @@ echo %installmessage%
 if not exist "BitVVDecPlayerWIN" mkdir BitVVDecPlayerWIN
 cd BitVVDecPlayerWIN
 echo Downloading BitVVDecPlayer (Windows) from Bitmovin, compiled by Martin Eesmaa
-wget -q https://www.dropbox.com/scl/fi/x4v1qb60u8zp505dtx8p6/BitVVDecPlayerWIN.7z?rlkey=gs9duytd6h1sos69o53rw8vyy -o BitVVDecPlayerWIN.7z
+wget -q https://www.dropbox.com/scl/fi/x4v1qb60u8zp505dtx8p6/BitVVDecPlayerWIN.7z?rlkey=gs9duytd6h1sos69o53rw8vyy -O BitVVDecPlayerWIN.7z
 %sevenzip% x BitVVDecPlayerWIN.7z -aoa
 del /q BitVVDecPlayerWIN.7z
 vvDecPlayer
@@ -482,7 +482,7 @@ echo %installmessage%
 if not exist "BitVVDecPlayerLINUX" mkdir BitVVDecPlayerLINUX
 cd BitVVDecPlayerLINUX
 echo Downloading BitVVDecPlayer (Linux) from Bitmovin, compiled by Martin Eesmaa
-wget -q https://www.dropbox.com/scl/fi/9jgibpwxe52zkkjijycdc/BitVVDecPlayerLINUX.AppImage?rlkey=jrqxsnwuqltc1xj9fevk9xb1f -o BitVVDecPlayerLINUX.AppImage
+wget -q https://www.dropbox.com/scl/fi/9jgibpwxe52zkkjijycdc/BitVVDecPlayerLINUX.AppImage?rlkey=jrqxsnwuqltc1xj9fevk9xb1f -O BitVVDecPlayerLINUX.AppImage
 echo Download completed, please execute and run on your Linux machine, if you have any problems, please go to Bitmovin/vvDecPlayer issues of https://github.com/bitmovin/vvDecPlayer/issues
 echo Note, this is AppImage format to run universal Linux distros.
 echo To build vvDecPlayer, please go to https://github.com/bitmovin/vvDecPlayer
