@@ -1,4 +1,4 @@
-7-Zip 25.00
+7-Zip 25.01
 -----------
 
 7-Zip is a file archiver for Windows.
