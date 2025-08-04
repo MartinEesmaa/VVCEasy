@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 printf "\033[33m"
 echo "Warning: It is deprecated, but you're welcome to use it anyway."
@@ -161,4 +161,4 @@ export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig
 make -j
 cd ..
 echo It is ready to go for prebuilt binaries of FFmpeg-VVC, you need to go directory called FFmpeg-VVC.
-echo "- 2024 Martin Eesmaa (VVCEasy, MIT License)"
+echo "- 2025 Martin Eesmaa (VVCEasy, MIT License)"
