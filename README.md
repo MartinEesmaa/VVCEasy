@@ -8,6 +8,9 @@ https://github.com/MartinEesmaa/VVCEasy/actions/workflows/dotnet.yml)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/MartinEesmaa/VVCEasy)
 ![Matrix](https://img.shields.io/matrix/vvceasy:matrix.org?label=VVCEasy%20Matrix)
 ![Discord](https://img.shields.io/discord/974611343237869619?label=VVCEasy%20Discord%20Chat)
+![Revolt](https://img.shields.io/revolt/invite/0Y10qHzP?label=VVCEasy%20Revolt)
+![GitHub Repo stars](https://img.shields.io/github/stars/MartinEesmaa/VVCEasy?style=flat&label=Martin%20Eesmaa's%20VVCEasy%20stars&color=yellow)
+
 
 <h1 align="center">VVCEasy by Martin Eesmaa</h1>
 
@@ -32,7 +35,7 @@ Windows/Mac/Linux source run (C#): Bin/Release or Debug/netX.x/VVCEasy.exe (afte
 | Communities | Link |
 --- | --- |
 Matrix chat ![Matrix](https://img.shields.io/matrix/vvceasy:matrix.org) | https://matrix.to/#/#vvceasy:matrix.org
-Revolt | https://app.revolt.chat/invite/0Y10qHzP
+Revolt ![Revolt](https://img.shields.io/revolt/invite/0Y10qHzP) | https://app.revolt.chat/invite/0Y10qHzP
 Discord ![Discord](https://img.shields.io/discord/974611343237869619) | https://discord.gg/t54cADTbWW
 Reddit | https://reddit.com/r/VVCEasy
 lemmy.ml (c/VVC) | https://lemmy.ml/c/vvc
