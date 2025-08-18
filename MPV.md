@@ -164,17 +164,25 @@ ab23b1928069bd3584297dae1d90a95fe2910f91936766ddfa5bdafd53c8a300  MPV-VVCEasy-Ar
 
 # Build MPV Android with VVC and xHE-AAC:
 
-If you want to build MPV Android, you need to update & upgrade first, then install packages:
+If you want to build MPV Android, you need to first update & upgrade, then install packages:
 ```
 sudo apt update && sudo apt upgrade -y
-sudo apt install build-essential cmake nasm libsimde-dev python3 git
+sudo apt install build-essential cmake nasm libsimde-dev python3 python3-pip git openjdk-17-jdk
+sudo pip install meson -U
 ```
+
+# Optional for install Temurin from Adoptium
+
+Note: If you already installed Temurin from Adoptium 
+or normal Java package from package manager, you can skip this step.
 
 Next download Temurin from Adoptium and follow the install instructions:
 
 https://adoptium.net/installation/linux
 
-After you installed Temurin from Adoptium, you can verify that is installed on your system:
+---
+
+After you installed Java JDK from package manager or Temurin from Adoptium, you can verify that is installed on your system:
 ```
 java --version
 ```
@@ -184,11 +192,6 @@ After installing the packages on Linux, clone mpv-android-vvc repository:
 cd
 git clone https://github.com/MartinEesmaa/mpv-android-vvc
 cd mpv-android-vvc/buildscripts
-```
-
-Give shell scripts permission in buildscripts folder:
-```
-chmod +x scripts/*.sh
 ```
 
 Before you build, you need to search `#ifdef __ANDROID__` and delete the lines by end `#endif`:
