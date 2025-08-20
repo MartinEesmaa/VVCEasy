@@ -34,9 +34,9 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 
 [Arch Linux MPV VVCEasy version x64](https://mega.nz/file/2pFDTSzT#GwoVQ0u6RStUwjk3rc5LkIzLQgmSDMhgV1Xk8WMeQ-w)
 
-[Android API 29 .APK Debug (Recommended)](https://mega.nz/file/DkswgKIT#rRhjtWR1TzwZU6yZECQsoPaWRLmnqgbWORZYi0RnlQI)
+[Android API 29 .APK Release signed (Recommended)](https://mega.nz/file/3wcCQYzS#R6yixj96Isd7uO07odLXVgj1cp0fkS18St85OiduuBg)
 
-[Android API 29 .APK Release unsigned](https://mega.nz/file/6gNRVLrR#cmgB7AaBFIm2XgG3spuAdGbzw9VCUHSLD5mPwSIIJok)
+[Android API 29 .APK Debug (for debugging)](https://mega.nz/file/OtUXlIbB#lSrgd_1jGgSlUbqSFk1GTuAuhjJbmVZeBIzMSQob7-8)
 
 # Official MPV VVC native decoder implementation
 
@@ -59,6 +59,7 @@ Switched native VVC decoder back to external VVC decoder of libvvdec after nativ
 Please check the changelog before you download the new version.
 
 ```
+20/08/2025 - Finally updated of Android MPV VVCEasy latest build and new signed APK with release & debug for new FFmpeg, vvdec and others. After one year and bug code fixes, it is finally updated.
 23/06/2025 - Updated Windows MPV/MPV.NET/MPV LIB VVCEasy build with FFmpeg latest, vvenc, vvdec, Mediainfo and others. Sorry about six months and it is automatic build of new forked repo mpv-winbuild.
 23/06/2025 - Updated Linux MPV VVCEasy build for FFmpeg, vvdec and others. Sorry for two months hiatus.
 01/04/2025 - Fixed Linux MPV VVCEasy build by removing shared object file of libstdc++ for some distributions.
@@ -151,8 +152,8 @@ On Windows, there is available MPV.NET custom build on this download. You can ha
 
 # SHA256 SUMS
 ```
-ee5d8b2ebdda7e9bacfe4a9dd2ce199e96f2a16ac56a8840190a5c66d86e2471  MPV-VVCEasy-API29debug.apk
-cc4ba84d91b91edda102bc0086fbfbfdee1a8b1dd9196bc76edd00101fdaff10  MPV-VVCEasy-API29release-unsigned.apk
+5aa4f56c3842e712293020994da19ca4f1e829567ea270fcd7587fb963f70edf  MPV-VVCEasy-API29debug-signed.apk
+bee5b44e39d79a11265a79d4deaf167528958b94ec09eeedd52f09057b6c5499  MPV-VVCEasy-API29release-signed.apk
 9044b7d67eaa020d5e59d437b3fc10dd2e6f60eedfff8034c4dd608145bff17d  MPV-VVCEasy-Windows-x64.7z
 108e5c82619e4f28f4f47f0cb4b0b568fdbfd6d7b032acc0aa004a098137e20b  MPV.NET-VVCEasy-Windows-x64.7z
 7cb80e644657e0447eea33c51517ae428ed841cdc7d0b4155f986ab5226c5894  MPVLIB-VVCEasy-Windows-x64.7z
