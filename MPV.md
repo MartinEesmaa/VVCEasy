@@ -195,14 +195,6 @@ git clone https://github.com/MartinEesmaa/mpv-android-vvc
 cd mpv-android-vvc/buildscripts
 ```
 
-Before you build, you need to search `#ifdef __ANDROID__` and delete the lines by end `#endif`:
-
-```
-nano deps/fdkaac/libSBRdec/src/lpp_tran.cpp
-```
-
-Save the file in nano editor, when you finished removing `#ifdef __ANDROID` lines.
-
 **TIP: You can edit script of vvdec.sh by your own choice.**
 
 Continue follow instructions to build your own MPV build:
