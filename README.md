@@ -105,6 +105,8 @@ You can test Martin Eesmaa's encoded movies of VVC video codec and follow the in
 
 [Martin Eesmaa's VVC sample videos](https://mega.nz/folder/C5lFhALL#5fRQfHN4ulzdaq-B33WQ7w)
 
+Update of 30.08.2025: New 4K Tears of Steel VVC video encoded with xHE-AAC existing audio.
+
 # VLC InterDigital VTM VVC Plugin
 
 VLC InterDigital VTM VVC Plugin is an external VVC decoder plugin from a third-party developer.
