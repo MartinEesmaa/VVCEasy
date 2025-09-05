@@ -1,14 +1,14 @@
-# Android vvdec/uvg266 applications (Termux app)
+# Android vvenc & vvdec/uvg266 applications (Termux app)
 
-Requirements: Termux app with apk or F-Droid app. For uvg266/vvdecapp pipe, it requires FFmpeg installed on Termux app.
+Requirements: Termux app with apk or F-Droid app. For uvg266/vvenc/vvdec pipe, it requires FFmpeg installed on Termux app.
 
 See the screenshot of vvdecapp in Termux app:
 
 ![termuxvvdecappinandroid](https://user-images.githubusercontent.com/88035011/176990694-52279bf1-86fd-419e-a2b7-1b6d1038ac18.jpg)
 
-All system types of arm64, armeabi, x86 and x86_64 is built on vvdecapp & uvg266, it is use of Termux app.
+All system types of arm64, armeabi, x86 and x86_64 is built on vvenc, vvdec & uvg266, it is use of Termux app.
 
-arm64 - API 21 (64-bit phones only)
+arm64 - API 21 (64-bit phones & tablets only)
 
 armeabi - API 19 (32-bit phones)
 
@@ -28,8 +28,6 @@ cp vvencapp vvdecapp uvg266 $PREFIX/bin
 Screenshot (tested my phone):
 
 ![vvencapptermux](vvencapptermux.png)
-
-Please note, that supports 64-bit programs only.
 
 ### uvg266 encoder (Scalable video encoder)
 
