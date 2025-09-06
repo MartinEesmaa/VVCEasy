@@ -229,13 +229,13 @@ Before you ask any question, see the questions below at table please.
 
 | Question | Answer
 --- | --- |
-**1:** Are you the real creator of VVCEasy? | Yes... But I'm not a real creator of VVC; I didn't build VVC. It was Fraunhofer HHI that built VVC.
+**1:** Are you the real creator of VVCEasy? | That's correct, but I'm not a real founder of VVC nor I didn't build VVC. It was JVET built VVC.
 **2:** Are you trying to build VVCEasy? | Well, yes... it takes a longer time to make VVCEasy easier, but VVCEasy is not yet finished until further update announcements. I don't have employees, so I'm the only worker.
-**3:** Is it okay to bring my proof screenshots of errors? | Yes, you can include error screenshots as proof. More proof, it's easier to solve.
-**4:** My question is not listed on the FAQ. Can I ask you any questions? | Sure, go to the Issues tab, ask questions, and give me your issue. I'd be happy to solve it :).
+**3:** Is it okay if I bring my proof screenshots? | Yes, you can include screenshots as proof. More proofs, easy to solve it.
+**4:** My question is not listed on the FAQ. | It's okay. You can go to the Issues tab by filing an issue with your question. I'd be happy to solve it :).
 **5:** Do you know what skills you have in your programming? | I know about batch files and HTML programming. Some programming languages might be difficult for me. Update of 19th February 2022: Perhaps I should create a C# Console program, which will support Windows, Mac, and Linux.
 
-If you have any questions or/any issues, please go to the Issues tab and create your issue.
+If you have any questions or/any issues, please go to the Issues tab and feel free to create an issue.
 
 Or you can join and chat with us in our community: [Link for communities at top](#community)
 
