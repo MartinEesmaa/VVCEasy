@@ -587,13 +587,13 @@ pause
 goto start
 
 :main123
-title Build vvenc and vvdec by yourself from sources
+title Build vvenc and vvdec by yourself from source codes
 cls
-echo Do you want build of vvenc and vvdec yourself on your computer?
-echo Before you agree to build for Windows, you need Cmake and Visual Studio on your computer.
-echo Requires build to Windows VVC by Cmake 3.13.0+ (need pathed environment) and Visual Studio 2017 and later (requires Desktop C++ and only one individual component ML.NET Model Builder).
-echo Requires download VVEnc and VVDec for (Git for Windows).
-echo Yes: To start build. No: To go back to the main menu.
+echo Do you want build vvenc and vvdec on your computer?
+echo Before you build for Windows, you need CMake and Visual Studio on your computer.
+echo Requires build to Windows VVC by CMake 3.13.0+ (need pathed environment) and Visual Studio 2017 and later (requires Desktop C++ and only one individual component ML.NET Model Builder).
+echo Requires download vvenc and vvdec for (Git for Windows).
+echo Yes: Build. No: Go back to the main menu.
 echo Y/N?
 set /p main1234= Answer: 
 if /I "%main1234%"=="Y" goto installmain123
@@ -633,13 +633,13 @@ goto start
 
 :error
 echo Your Windows version is unsupported and outdated which does not work to run with VVC binaries and others too.
-echo This batchfile script requires Windows XP and later.
+echo This batchfile script requires to run Windows XP and later.
 pause
 exit
 
 :doserror
 echo DOS is unsupported and outdated, which does not work to run with VVC binaries and others too.
-echo MS-DOS, DOSBox and FreeDOS were not supported.
-echo This batchfile script requires Windows XP and later.
+echo MS-DOS, DOSBox and FreeDOS were also not supported.
+echo This batchfile script requires to run Windows XP and later.
 pause
 exit
