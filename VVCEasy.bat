@@ -17,6 +17,7 @@ if /i "%ProcessorArchitecture%"=="AMD64" (
 
 pushd "%~dp0"
 set sevenzip=%~dp07-Zip\%bit%\7z.exe
+set wget=%~dp0wget.exe
 cls
 
 ver | find "DOS" > nul
@@ -85,9 +86,8 @@ echo 6. Install/Update VVdec Web Player (requires Python and clone/pull for git)
 echo 7. Install Windows VVC binaries (Windows XP and later)
 echo 8. Install vvDecPlayer from BitMovin
 echo 9. Install/Update VLC VTM Plugins (Windows/Linux x64 of VLC plugins by Inter Digital Inc)
-echo 10. Install FFmpeg/MPV external VVC support
-echo 11. Tests of VVC videos
-echo 12. Build vvenc and vvdec from source
+echo 10. Install FFmpeg/MPV external VVC support and tests of VVC videos
+echo 11. Build vvenc and vvdec from source
 set /p VVCSTART=Number: 
 
 if "%VVCSTART%" == "1" goto encodestart
@@ -100,8 +100,7 @@ if "%VVCSTART%" == "7" goto decompresswin7z
 if "%VVCSTART%" == "8" goto installbitmovin
 if "%VVCSTART%" == "9" goto vlcvtmplugininstall
 if "%VVCSTART%" == "10" goto installvvdecffmpegmpvnow
-if "%VVCSTART%" == "11" goto installvvdecffmpegmpvnow
-if "%VVCSTART%" == "12" goto main123
+if "%VVCSTART%" == "11" goto main123
 echo Invalid input. Please enter a number between 1 and 13.
 pause
 goto start
@@ -116,9 +115,9 @@ echo 1. Lossy (example YouTube videos, Web videos, lossy compressed videos, and 
 echo 2. Lossless (example XIPH Media, Camera uncompressed RAW video, Apple ProRes and others uncompressed files)
 echo 3. Go back to the menu.
 set /p vvencquestion1=Number: 
-if "%vvencquestion1%" == 1 goto losslessvvenc2
-if "%vvencquestion1%" == 2 goto lossyvvenc2
-if "%vvencquestion1%" == 3 goto start
+if "%vvencquestion1%" == "1" goto losslessvvenc2
+if "%vvencquestion1%" == "2" goto lossyvvenc2
+if "%vvencquestion1%" == "3" goto start
 echo Invalid input. Please enter a number between 1 and 3.
 pause
 goto encodestart
@@ -135,9 +134,10 @@ echo If you don't have Y4M already... You need to transcode the file from your u
 echo Example: ffmpeg -i yourfile.mov -strict 1 yourfinal.y4m
 echo Only 8-bit uncompressed movies are input to Y4M.
 set /p doyouhavey4mvvencquestion3=Number: 
-if "%doyouhavey4mvvencquestion3%" == 1 goto startlosslessvvenc2
-if "%doyouhavey4mvvencquestion3%" == 2 goto encodestart
-echo Invalid input. Please enter a number 1 or 2.
+if "%doyouhavey4mvvencquestion3%" == "1" goto startlosslessvvenc2
+if "%doyouhavey4mvvencquestion3%" == "2" goto encodestart
+if "%doyouhavey4mvvencquestion3%" == "3" goto start
+echo Invalid input. Please enter a number between 1 and 3.
 pause
 goto losslessvvenc2
 
@@ -146,8 +146,7 @@ cls
 title VVC ENCODER (Y4M LOSSLESS)
 echo Before we start encoding from your Y4M file to VVC file, I'm afraid I cannot do it automatically for you.
 echo You must manually encode it to VVC, as the batch file won't work.
-echo Here is code: vvencapp --qp 18 -i yourinput.y4m -s 854x480 -r 30 --preset slow --threads 16 --tier high -o yourfinalvvc.266
-echo YOU HAVE TO REPLACE THE VIDEO SIZE AND FRAME RATE. -s is video size and -r is frame rate.
+echo Here is code: vvencapp --qp 18 -i yourinput.y4m --preset slow --threads 16 --tier high -o yourfinalvvc.266
 echo INPUT VIDEO BIT DEPTH IS 8-BIT ONLY FOR UNCOMPRESSED MOVIE FILES.
 pause
 goto start
@@ -163,9 +162,10 @@ echo 2. No, I am not ready yet (go back to previous)
 echo If you don't have Y4M already... You need to transcode the file from your lossy video file to YUV.
 echo Example: ffmpeg -i yourfile.mp4 -strict 1 yourfinal.yuv
 set /p doyouhaveyuvvvencquestion4=Number: 
-if "%doyouhaveyuvvvencquestion4%" == 1 goto startlossyvvenc2
-if "%doyouhaveyuvvvencquestion4%" == 2 goto encodestart
-echo Invalid input. Please enter a number 1 or 2.
+if "%doyouhaveyuvvvencquestion4%" == "1" goto startlossyvvenc2
+if "%doyouhaveyuvvvencquestion4%" == "2" goto encodestart
+if "%doyouhaveyuvvvencquestion4%" == "3" goto start
+echo Invalid input. Please enter a number between 1 and 3.
 pause
 goto lossyvvenc2
 
@@ -192,10 +192,12 @@ echo Note, if you are using portable, like your git cloned VVCEasy or downloaded
 echo Portable won't work probably, you need to copy from your Downloads folder\VVCEasy into Program Files\VVCEasy.
 echo 1. YUV (lossy video VVC)
 echo 2. Y4M (lossless video VVC, recommended)
+echo 3. Go back to the menu.
 set /p decodestart1=Number: 
-if "%decodestart1%" == 1 goto DECODESTARTFROMVVCTOYUV
-if "%decodestart1%" == 2 goto DECODESTARTFROMVVCTOY4M
-echo Invalid input. Please enter a number 1 or 2.
+if "%decodestart1%" == "1" goto DECODESTARTFROMVVCTOYUV
+if "%decodestart1%" == "2" goto DECODESTARTFROMVVCTOY4M
+if "%decodestart1%" == "3" goto start
+echo Invalid input. Please enter a number between 1 and 3.
 pause
 goto decodestart
 
@@ -332,10 +334,9 @@ pause
 echo Step 1: Run on VVCEasy.bat. If administrator privilege is required, it will ask you to run as administrator.
 echo Step 2: Here are the list of main menu, where you must type any number to go in the direction, like the (goto) command.
 echo Step 3: Follow the command instructions, and that's it!
-pause
 echo If you have any problems that you may not understand. Please file an issue on GitHub or community.
 pause
-goto help
+goto start
 
 :installvvdecweb
 cls
@@ -374,7 +375,7 @@ cd ../
 echo.
 echo Thanks for trying out vvDec Web Player. If you want to run on your vvDec Web Player Server, go to the folder called vvdecWebPlayer and double click the file wasm_test-server.py.
 echo Press any key to go back to the menu.
-pause
+pause > nul
 goto start
 
 :decompresswin7z
@@ -425,7 +426,6 @@ endlocal
 cd ../
 echo.
 pause
-timeout 3
 goto start
 
 :installbitmovin
@@ -433,58 +433,48 @@ cls
 title Install BitVVDecPlayer from BitMovin
 echo Would you like to install on your operating system?
 echo Windows for W, Mac OS for M and Linux for L, Main Menu for N.
-set installmessage=Installing BitVVDecPlayer from BitMovin...
 set /p installbitmovind=Answer: 
-if /I "%installbitmovind%"=="W" goto installbitmovin1windows
-if /I "%installbitmovind%"=="M" goto installbitmovin1macos
-if /I "%installbitmovind%"=="L" goto installbitmovin1linux
-if /I "%installbitmovind%"=="N" goto start
-echo Invalid input. Please enter a valid letter of W, M, L or N.
-pause
-goto installbitmovin
+if /I "%installbitmovind%"=="W" (
+    set surfix=WIN
+    set "url=https://www.dropbox.com/scl/fi/x4v1qb60u8zp505dtx8p6/BitVVDecPlayerWIN.7z?rlkey=gs9duytd6h1sos69o53rw8vyy"
+    set "filename=BitVVDecPlayerWIN.7z"
+) else if /I "%installbitmovind%"=="M" (
+    set surfix=MAC
+    set "url=https://www.dropbox.com/s/ilsoica7c8dh4hq/BitVVDecPlayerMAC.7z"
+    set "filename=BitVVDecPlayerMAC.7z"
+) else if /I "%installbitmovind%"=="L" (
+    set surfix=LINUX
+    set "url=https://www.dropbox.com/scl/fi/9jgibpwxe52zkkjijycdc/BitVVDecPlayerLINUX.AppImage?rlkey=jrqxsnwuqltc1xj9fevk9xb1f"
+    set "filename=BitVVDecPlayerLINUX.AppImage"
+) else if /I "%installbitmovind%"=="N" (
+    goto start
+) else (
+    echo Invalid input. Please enter a valid letter of W, M, L or N.
+    pause
+    goto installbitmovin
+)
 
-:installbitmovin1windows
-echo %installmessage%
-if not exist "BitVVDecPlayerWIN" mkdir BitVVDecPlayerWIN
-cd BitVVDecPlayerWIN
-echo Downloading BitVVDecPlayer (Windows) from Bitmovin, compiled by Martin Eesmaa
-wget -q https://www.dropbox.com/scl/fi/x4v1qb60u8zp505dtx8p6/BitVVDecPlayerWIN.7z?rlkey=gs9duytd6h1sos69o53rw8vyy -O BitVVDecPlayerWIN.7z
-%sevenzip% x BitVVDecPlayerWIN.7z -aoa
-del /q BitVVDecPlayerWIN.7z
-vvDecPlayer
-echo Successfully running on BitVVDecPlayer, if you have any problems, please go to Bitmovin/vvDecPlayer issues of https://github.com/bitmovin/vvDecPlayer/issues
-echo If you received error about MSVCP140.DLL is missing, you need to download Microsoft Visual C++ Redistributable of 2015-2017-2019-2022: https://docs.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist
-echo To build vvDecPlayer, please go to https://github.com/bitmovin/vvDecPlayer
-echo Or contact Bitmovin at https://www.bitmovin.com or create issue to VVCEasy.
-goto downloadbitmovinvvcsample
+if not exist "BitVVDecPlayer%surfix%" mkdir "BitVVDecPlayer%surfix%"
+echo Downloading BitVVDecPlayer from Bitmovin for %surfix% version
+cd "BitVVDecPlayer%surfix%"
+%wget% -q "%url%" -O "%filename%"
+echo Successful downloading on BitVVDecPlayer %surfix%
 
-:installbitmovin1macos
-echo %installmessage%
-if not exist "BitVVDecPlayerMAC" mkdir BitVVDecPlayerMAC
-cd BitVVDecPlayerMAC
-echo Downloading BitVVDecPlayer (macOS) from Bitmovin, compiled by Martin Eesmaa
-wget -q https://www.dropbox.com/s/ilsoica7c8dh4hq/BitVVDecPlayerMAC.7z
-%sevenzip% x BitVVDecPlayerMAC.7z -aoa
-del /q BitVVDecPlayerMAC.7z
-echo Download completed, please put on macOS and run it, if you have any problems, please go to Bitmovin/vvDecPlayer issues of https://github.com/bitmovin/vvDecPlayer/issues
-echo If vvDecPlayer won't work probably, it might be issue that you haven't installed Qt on your Mac OS. Please install using code: "brew install qt" on Homebrew.
-echo To build vvDecPlayer, please go to https://github.com/bitmovin/vvDecPlayer
+if /I "%installbitmovind%"=="L" (
+echo Please run the AppImage on your Linux machine only.
+echo If vvDecPlayer doesn't work, please install fuse2 on your Linux distro or/and does not support for old operating systems.
+) else if /I "%installbitmovind%"=="W" (
+%sevenzip% x "%filename%" -aoa
+del /q "%filename%"
+echo If you received error about MSVCP140.DLL is missing, you need to install latest Microsoft Visual C++ Redistributable: https://docs.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist
+) else (
+echo If vvDecPlayer doesnt't work, it might be issue that you haven't installed Qt on your Mac OS. Please install using code: "brew install qt" on Homebrew.
+)
+
+echo To build vvDecPlayer or create the issue, please go to https://github.com/bitmovin/vvDecPlayer
 echo Or contact Bitmovin at https://www.bitmovin.com or create issue on VVCEasy.
-echo For more information, see Bitmovin.md.
-goto downloadbitmovinvvcsample
-
-:installbitmovin1linux
-echo %installmessage%
-if not exist "BitVVDecPlayerLINUX" mkdir BitVVDecPlayerLINUX
-cd BitVVDecPlayerLINUX
-echo Downloading BitVVDecPlayer (Linux) from Bitmovin, compiled by Martin Eesmaa
-wget -q https://www.dropbox.com/scl/fi/9jgibpwxe52zkkjijycdc/BitVVDecPlayerLINUX.AppImage?rlkey=jrqxsnwuqltc1xj9fevk9xb1f -O BitVVDecPlayerLINUX.AppImage
-echo Download completed, please execute and run on your Linux machine, if you have any problems, please go to Bitmovin/vvDecPlayer issues of https://github.com/bitmovin/vvDecPlayer/issues
-echo Note, this is AppImage format to run universal Linux distros.
-echo To build vvDecPlayer, please go to https://github.com/bitmovin/vvDecPlayer
-echo If vvDecPlayer won't work probably, please install fuse2 on your Linux distro or/and it does not support for old operating systems.
-echo Or contact Bitmovin at https://www.bitmovin.com or create issue on VVCEasy.
-goto downloadbitmovinvvcsample
+echo.
+cd ..
 
 :downloadbitmovinvvcsample
 echo Would you like to download VVC sample video files from Bitmovin? Y/N?
@@ -496,8 +486,8 @@ pause
 goto downloadbitmovinvvcsample
 
 :downloadvvcnowbit
-echo Downloading VVC sample files and Coffee Run JSON & Sprite Fright JSON from Bitmovin...
-wget -q https://www.dropbox.com/scl/fi/lglxlcoiav5xgwo6mktvk/vvcBlogPostDemo.zip?rlkey=2sj0qbovn0z4ipwilj0vkumdf -O vvcBlogPostDemo.7z
+echo Downloading VVC sample files, Coffee Run JSON and Sprite Fright JSON from Bitmovin...
+wget -q https://www.dropbox.com/scl/fi/lglxlcoiav5xgwo6mktvk/vvcBlogPostDemo.zip?rlkey=2sj0qbovn0z4ipwilj0vkumdf -O vvcBlogPostDemo.zip
 wget -q https://www.dropbox.com/scl/fi/4iy06ektd7ux6squnrkam/SpriteFright.json?rlkey=lshrlc0s0v0vi7dwz7j4ediep -O SpriteFright.json
 wget -q https://www.dropbox.com/scl/fi/n65bw1iiv2skv16l49013/CoffeeRun.json?rlkey=63w013tayac9nwpr6azznina2 -O CoffeeRun.json
 echo Extracting from archived file...
@@ -521,10 +511,9 @@ if /i "%bit%" == "x64" (
 )
 cls
 title VLC VTM Plugins Install (Windows and Linux)
-echo Welcome to VLC Media Player of VTM Plugins Installation.
-echo You need to run Windows version of Vista / Server 2008 to play VVC files.
+echo Welcome to VLC Media Player of VTM Plugins Installation. Available only x64/amd64
+echo You need to be at least Windows Vista / Server 2008 and later to play VVC files.
 echo Windows XP can't load VTM plugins, but other plugins do work.
-echo Available: x86_64
 echo Linux is now available, see Linux installation at: https://github.com/MartinEesmaa/VVCEasy/tree/master/INSTALLVLCPLUGIN#for-linux-users
 echo Available: VLC 3.0.9.2 and later (it will work only with the same latest version 3)
 echo Would you like to install VTM plugins to your VLC Media Player? Y/N?
@@ -540,8 +529,7 @@ echo Installing VLC VTM Plugins by Inter Digital Inc...
 cd INSTALLVLCPLUGIN
 :installingvlcvtmplugins
 if exist "%programfiles%\VideoLAN\VLC" (
-    copy libvtmdec.dll "%programfiles%\VideoLAN\VLC\plugins\codec" /y
-    copy libvvcdecoder_plugin.dll "%programfiles%\VideoLAN\VLC\plugins\codec" /y
+    for %%F in (libvtmdec.dll libvvcdecoder_plugin.dll) do copy "%%F" "%programfiles%\VideoLAN\VLC\plugins\codec" /y
     copy libvvctsdemux_plugin.dll "%programfiles%\VideoLAN\VLC\plugins\demux" /y
 ) else (
     :tryagainafterinvalidvlc
@@ -561,11 +549,10 @@ cd ../
 tasklist /fi "imagename eq vlc.exe" | find /i "vlc.exe" >nul
 if not errorlevel 1 taskkill /im vlc.exe >nul
 echo Three dll files are patched to your VLC Media Player.
-echo Restarting VLC Media Player...
+echo Stopping VLC Media Player...
 echo Please load your VVC (codec) video file to VLC Media Player.
 echo For more information, please go to at https://github.com/InterDigitalInc/VTMDecoder_VLCPlugin
-echo Once you're finished, you don't have to patch again. You can continue VLC Media Player next time after patch.
-"%programfiles%\VideoLAN\VLC\vlc.exe"
+echo Once you're finished, you don't need to patch again. You can continue using VLC Media Player after patch.
 pause
 goto start
 
@@ -605,28 +592,22 @@ goto main123
 :installmain123
 echo Building time...
 echo Cloning vvenc and vvdec from Fraunhofer HHI on GitHub...
-git clone --depth=1 https://github.com/fraunhoferhhi/vvenc
-git clone --depth=1 https://github.com/fraunhoferhhi/vvdec
-cd vvenc
-cmake -S . -B build
-cmake --build build --config Release
-cd ../vvdec
-cmake -S . -B build
-cmake --build build --config Release
-cd ..
+if not exist build\%bit% mkdir build\%bit%
+for %%d in (vvenc vvdec) do (
+    git clone --depth=1 https://github.com/fraunhoferhhi/%%d
+    cmake -S %%d -B buildvvc-temp\%%d
+    cmake --build buildvvc-temp\%%d --config Release
+    move /y "%%d\bin\release-static\*.exe" "build\%bit%"
+)
 goto successnow
 
 :successnow
 echo.
 echo.
-echo.
 echo Success build of vvenc and vvdec on Windows.
-echo Copying executable files to build\%bit%
-if not exist build\%bit% mkdir build\%bit%
-copy /y "vvenc\bin\release-static\*.exe" "build\%bit%"
-copy /y "vvdec\bin\release-static\*.exe" "build\%bit%"
-echo Cleaning up of build, lib and bin folders of both dependencies...
-rmdir /s /q vvenc\bin vvenc\lib vvenc\build vvdec\bin vvdec\bin vvdec\lib vvdec\build
+echo Done copying compiled executable files into build\%bit%
+echo Cleaning up of temp build, lib and bin folders of both dependencies...
+rmdir /s /q buildvvc-temp vvenc\bin vvenc\lib vvdec\bin vvdec\lib
 echo Done! Press Enter to go back the menu.
 pause
 goto start
