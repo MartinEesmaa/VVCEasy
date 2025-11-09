@@ -55,7 +55,7 @@ uvg266 is only scalable encoder which helps to make it faster for older & newer 
 **uvg266**:
 
 - Windows Vista and later (requires Visual C++ Redistributable)
-- Mac OS X 10.5 and later (arm64 since macOS 11.0)
+- Mac OS X 10.4 and later (amd64 since Mac OS X 10.4, x86 from Mac OS X 10.6 to 10.14, arm64 since macOS 11.0)
 - Linux kernel 3.2.0 and later (eg. Ubuntu 12.04 LTS and later)
 - BSD (FreeBSD & x64 only)
 - Android 4.3 (API 18, Jelly Bean) and later (arm64 & x86_64 since Android 5.0)
