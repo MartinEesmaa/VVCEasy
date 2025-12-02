@@ -1,8 +1,7 @@
 WindowsVVC/Win32
 WindowsVVC/x64
 WindowsVVC/arm64
-MacOSVVC/arm64
-MacOSVVC/intel_x64
+MacOSVVC/vv*
 LinuxVVC/arm*
 LinuxVVC/x*
 AndroidVVC/arm*
@@ -11,8 +10,7 @@ BSDVVC/vv*
 
 uvg266/Windows/Win32
 uvg266/Windows/x64
-uvg266/macOS/arm64
-uvg266/macOS/intel_x64
+uvg266/macOS/uvg266
 uvg266/Linux/arm*
 uvg266/Linux/x*
 uvg266/BSD/uvg266
