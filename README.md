@@ -243,12 +243,13 @@ Martin Eesmaa, creator of VVCEasy
 
 # Credits & Licenses
 
+Special thanks and used softwares for other purposes and also all the copyright owners have all rights reserved.
+
 [VVCEasy](https://github.com/MartinEesmaa/VVCEasy) - VVCEasy contains ready to serve prebuilt binaries VVC programs, including players and more.
 
 License: MIT
 
-© 2021-2025 [Martin Eesmaa](https://github.com/MartinEesmaa) (All rights reserved)
-
+© 2021-2025 [Martin Eesmaa](https://github.com/MartinEesmaa)
 ---
 
 [Versatile Video Encoder](https://github.com/fraunhoferhhi/vvenc) - Fraunhofer Versatile Video Encoder (VVenC)
@@ -259,7 +260,7 @@ License: MIT
 
 License: BSD 3-Clause Clear License (all of three repositories)
 
-© 2018-2025, Fraunhofer-Gesellschaft zur Förderung der angewandten Forschung e.V. & The VVC Authors. (All rights reserved)
+© 2018-2025, Fraunhofer-Gesellschaft zur Förderung der angewandten Forschung e.V. & The VVC Authors
 
 GitHub: [Fraunhoferhhi](https://github.com/fraunhoferhhi)
 
@@ -271,9 +272,9 @@ GitHub: [Fraunhoferhhi](https://github.com/fraunhoferhhi)
 
 License: GPL-2.0 (VLC Original version) & LGPL-2.1 (VLC VTM Decoder Plugin)
 
-© 2000-2025 [VLC Media Player](https://code.videolan.org/) Developers (All rights reserved)
+© 2000-2025 [VLC Media Player](https://code.videolan.org/) Developers
 
-© 2021-2024 [Inter Digital Inc](https://github.com/InterDigitalInc) (All rights reserved)
+© 2021-2024 [Inter Digital Inc](https://github.com/InterDigitalInc)
 
 ---
 
@@ -281,7 +282,7 @@ License: GPL-2.0 (VLC Original version) & LGPL-2.1 (VLC VTM Decoder Plugin)
 
 License: BSD 3-Clause License
 
-© 2021-2025, Tampere University, ITU/ISO/IEC, project contributors (All rights reserved)
+© 2021-2025, Tampere University, ITU/ISO/IEC, project contributors
 
 ---
 
@@ -289,7 +290,7 @@ License: BSD 3-Clause License
 
 License: MIT
 
-© 2021-2022 [Christian Feldmann](https://github.com/ChristianFeldmann) (All rights reserved)
+© 2021-2022 [Christian Feldmann](https://github.com/ChristianFeldmann)
 
 ---
 
@@ -301,13 +302,13 @@ License: LGPL-2.1 & GPL-2.0
 
 For my custom build configuration license is GPL-3.0+ with nonfree (fdk-aac) for FFmpeg.
 
-© 2000-2025 [FFmpeg developers](https://github.com/FFmpeg) (All rights reserved)
+© 2000-2025 [FFmpeg developers](https://github.com/FFmpeg)
 
 ---
 
 [fdk-aac](https://github.com/mstorsjo/fdk-aac) - A standalone library of the Fraunhofer FDK AAC code from Android.
 
-© 2012-2025 [Martin Storsjö](https://github.com/mstorsjo) (All rights reserved)
+© 2012-2025 [Martin Storsjö](https://github.com/mstorsjo)
 
 ---
 
@@ -317,7 +318,7 @@ License: LGPL-2.1 & GPL-2.0
 
 For my custom build license: GPL-3.0 with nonfree (fdk-aac) for FFmpeg
 
-© 2013-2025 [Vincent Lang, MPlayer, mplayer2 & MPV developers](https://github.com/mpv-player) (All rights reserved)
+© 2013-2025 [Vincent Lang, MPlayer, mplayer2 & MPV developers](https://github.com/mpv-player)
 
 ---
 
@@ -327,7 +328,7 @@ VVC forkers: [tbiat](https://github.com/tbiat) & [Martin Eesmaa](https://github.
 
 License: MIT
 
-© 2016-2025 Ilya Zhuravlev, sfan5 & mpv developers (All rights reserved)
+© 2016-2025 Ilya Zhuravlev, sfan5 & mpv developers
 
 ---
 
@@ -335,13 +336,13 @@ License: MIT
 
 License: LGPL-2.1
 
-© 2003-2025 [Jean Le Feuvre](https://github.com/jeanlf) & [GPAC developers/contributors](https://github.com/gpac/gpac/graphs/contributors) (All rights reserved)
+© 2003-2025 [Jean Le Feuvre](https://github.com/jeanlf) & [GPAC developers/contributors](https://github.com/gpac/gpac/graphs/contributors)
 
 ---
 
 [LAVFilters](https://github.com/Nevcairiel/LAVFilters) - LAV Filters - Open-Source DirectShow Media Splitter and Decoders
 
-© 2010-2025 [Hendrik Leppkes](https://github.com/Nevcairiel) (All rights reserved)
+© 2010-2025 [Hendrik Leppkes](https://github.com/Nevcairiel)
 
 ---
 
@@ -351,11 +352,11 @@ License: LGPL-2.1
 
 License: GPL-3.0
 
-© 2007-2018 [MPC-HC Community Forum & contributors](https://github.com/mpc-hc) (Original) (All rights reserved)
+© 2007-2018 [MPC-HC Community Forum & contributors](https://github.com/mpc-hc) (Original)
 
-© 2018-2025 [clsid2](https://github.com/clsid2) (forked of MPC-HC) (All rights reserved)
+© 2018-2025 [clsid2](https://github.com/clsid2) (forked of MPC-HC)
 
-© 2012-2025 [Alexander Vodiannikov](https://github.com/Aleksoid1978) (forked of MPC-BE) (All rights reserved)
+© 2012-2025 [Alexander Vodiannikov](https://github.com/Aleksoid1978) (forked of MPC-BE)
 
 ---
 
@@ -365,7 +366,7 @@ Official website: https://7-zip.org
 
 License: LGPL-2.1 with unRAR restriction & LZMA SDK in the public domain
 
-© 1999-2025 Igor Pavlov (All rights reserved)
+© 1999-2025 Igor Pavlov
 
 ---
 
@@ -375,4 +376,4 @@ License: GPL-3.0
 
 Original written by Hrvoje Nikšić
 
-© 2015 Free Software Foundation, Inc. (All rights reserved)
+© 2015 Free Software Foundation, Inc.
