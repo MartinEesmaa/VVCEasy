@@ -243,13 +243,14 @@ Martin Eesmaa, creator of VVCEasy
 
 # Credits & Licenses
 
-Special thanks and used softwares for other purposes and also all the copyright owners have all rights reserved.
+Special thanks with used softwares for purposes. All the copyright owners have all rights reserved.
 
 [VVCEasy](https://github.com/MartinEesmaa/VVCEasy) - VVCEasy contains ready to serve prebuilt binaries VVC programs, including players and more.
 
 License: MIT
 
 © 2021-2025 [Martin Eesmaa](https://github.com/MartinEesmaa)
+
 ---
 
 [Versatile Video Encoder](https://github.com/fraunhoferhhi/vvenc) - Fraunhofer Versatile Video Encoder (VVenC)
