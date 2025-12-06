@@ -54,6 +54,24 @@ Preview:
 
 ![preview](vvceasylinuxvlc.png)
 
+# Customize playback frame rate
+
+If you want to customize playback frame rate per second, here's you can do in VLC media player if the VVC decoder plugin is installed.
+
+Here are steps:
+
+Step 1: Open VLC media player, go to Tools -> Preferences or press CTRL + P.
+
+Step 2: Toggle All in show settings, see the very bottom-left.
+
+Step 3: Search for "vvcdec" and you can see the available vvcdec options.
+
+You may see after steps following the screenshot:
+
+![preferenceVLCvvcplugin](preferencesVLCvvcplugin.png)
+
+Reference from original issue at [#61](https://github.com/MartinEesmaa/VVCEasy/issues/61) on GitHub.
+
 # Build VLC InterDigital Plugin
 
 Explanation of CMAKE names:
