@@ -121,9 +121,7 @@ For Linux and Mac OS users: Type correctly `MP4Box` for execute binary, but no s
 
 [Windows (x64/x86/winarm64) & Linux (x64/arm64)](https://github.com/MartinEesmaa/FFmpeg-Builds/releases/tag/latest) - Automated builds every day at 12:00 (12 PM) UTC of FFmpeg VVCEasy custom builds.
 
-[Mac OS x86_64](https://mega.nz/file/W8thHRwJ#7FnDe3d8yFzpz87DHlRXIjbIV9e2fVA7Q_P8rB02d5Q)
-
-[Mac OS arm64](https://mega.nz/file/y58WXIaJ#0IcVKGwGRVIk1XhEFz3tepR9dXDoCvNk5YWm8kOP5Cc)
+[macOS universal (x86_64/arm64)](https://mega.nz/file/v0k1nCyB#iSEvomy1SFpGXjTAdDhoAAh7uZDezzHX9aSLkcVy3cA)
 
 [FFmpeg-FixVVC archived old source code](https://mega.nz/file/G81QyT5S#jcbE1sYPEy1OMIDPCF8BPeAK-3KAGF50u23MVJzmBgw) (old)
 
@@ -145,6 +143,7 @@ Before automated builds started of Windows & Linux, here are the last links of m
 
 ### Changelog
 ```
+07/12/2025: Merged macOS universal architectures of FFmpeg VVCEasy from x86_64 and arm64 builds, updated FFmpeg latest, vvenc, vvdec and others. Very sorry again for almost six months hiatus.
 22/06/2025: Updated FFmpeg with latest, vvenc, vvdec and others. Again sorry for two months hiatus.
 06/04/2025: Updated FFmpeg with latest, vvenc, vvdec and others. Sorry for six months. (macOS only)
 16/10/2024: Added libgsm external feature to FFmpeg VVCEasy builds for Windows & Linux only.
