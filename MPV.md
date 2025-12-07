@@ -20,9 +20,9 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 
 [Linux MPV VVCEasy version x64](https://mega.nz/file/GgsCVYaZ#No95tKTpER9Ymms7J7AeFCcH9X6Qx74_qOBsDcO681g)
 
-[Android API 29 .APK Release signed (Recommended)](https://mega.nz/file/3wcCQYzS#R6yixj96Isd7uO07odLXVgj1cp0fkS18St85OiduuBg)
+[Android API 29 .APK Release signed (Recommended)](https://mega.nz/file/29sEEC6I#IJohZsd0ua7_E2o0BQEjr_-ILpexf_CCKisQt5BQIHU)
 
-[Android API 29 .APK Debug (for debugging)](https://mega.nz/file/OtUXlIbB#lSrgd_1jGgSlUbqSFk1GTuAuhjJbmVZeBIzMSQob7-8)
+[Android API 29 .APK Debug (for debugging)](https://mega.nz/file/e98CQaLS#g7znnn4YsF8UEhUiz3Qr-mMABLI_Zx628Ffmhzk7Id4)
 
 ### Deprecated builds
 
@@ -61,6 +61,7 @@ Switched native VVC decoder back to external VVC decoder of libvvdec after nativ
 Please check the changelog before you download the new version.
 
 ```
+07/12/2025 - Updated Android MPV VVCEasy latest build with FFmpeg, vvdec and others.
 07/12/2025 - Updated Windows MPV.NET VVCEasy build with mpv-dev build tag (2025-12-07-dbd7a90) from Martin Eesmaa's mpv-winbuild repo and others.
 20/08/2025 - Finally updated of Android MPV VVCEasy latest build and new signed APK with release & debug for new FFmpeg, vvdec and others. After one year and bug code fixes, it is finally updated.
 23/06/2025 - Updated Windows MPV/MPV.NET/MPV LIB VVCEasy build with FFmpeg latest, vvenc, vvdec, Mediainfo and others. Sorry about six months and it is automatic build of new forked repo mpv-winbuild.
