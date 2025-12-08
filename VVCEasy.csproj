@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <Product>VVCEasy</Product>
-    <Version>3.0.0</Version>
+    <Version>3.2.0</Version>
     <Authors>Martin Eesmaa</Authors>
     <Copyright>© 2021-2025 Martin Eesmaa</Copyright>
     <Description>VVCEasy is easy VVC, that no need to compile.</Description>

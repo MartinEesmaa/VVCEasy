@@ -7,8 +7,8 @@ namespace VVCEasy
     {
         public static void Main()
         {
-            string version = "v3.0.0";
-            string codeversion = "The important life of Martin Eesmaa";
+            string version = "v3.2.0";
+            string codeversion = "Estonian winter birds";
             string title = "Martin Eesmaa / VVCEasy";
             bool exit = false;
             Console.Title = title;
