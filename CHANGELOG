@@ -4,6 +4,26 @@ To view or download releases with changelogs, please go to https://github.com/Ma
 
 This is local changelog file.
 
+v3.2.0 Release (December 8, 2025):
+
+- Updated FFmpeg and MPV VVCEasy builds (finally updated macOS and Android)
+- Updated VVC, uvg266 and 7-Zip binaries
+- Updated LAVFilters and MPC-HC VVC version.
+- Updated documentations, instructions and some fixes
+- Added little instruction of VLC VTM decoder plugin customize playback frame rate, thanks @ChuangbinC for idea!
+- New MartinEesmaa's FFmpeg-Builds shared builds, thanks @tormento for request!
+- New macOS universal binaries of VVC and uvg266 compiled using osxcross
+- Merged FFmpeg VVCEasy of macOS architectures into universal binaries
+- Supports Mac OS X 10.9 and later to vvenc and vvdec binaries.
+- Supports Mac OS X 10.4 and later to uvg266 binaries with new i386 architecture
+- Fixed wget output argument command
+- More big improvements of Windows batchfile script
+- Update shell script bangs for better portability
+- VVC bitstream of Tears of Steel 4K VVC released
+- Added Snow Lynx list to THANKS file due new tutorial video of VVCEasy v3.0.0
+- Added AlternativeTo list to social media
+- Optimized screenshot of mpv-vvceasy Android
+
 v3.0.0 Release (June 23, 2025):
 
 - Updated FFmpeg and MPV VVCEasy builds (but except Android, next time will release)
