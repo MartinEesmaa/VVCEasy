@@ -40,6 +40,8 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 
 [Arch Linux MPV VVCEasy version x64](https://mega.nz/file/2pFDTSzT#GwoVQ0u6RStUwjk3rc5LkIzLQgmSDMhgV1Xk8WMeQ-w)
 
+For Windows 7 users, official mpv build already dropped support of Windows 7 for already past little year ago. I can bring back mpv build for Windows 7 support later on later meanwhile three options alternatives way for [eko5624's mpv](https://github.com/eko5624/mpv-win64) of Windows 7 support, MPC-HC or MPC-BE.
+
 # Official MPV VVC native decoder implementation
 
 It started at January 4 2024 when the native VVC decoder is released on FFmpeg, but it was experimental without IBC (Intra Block Copy).

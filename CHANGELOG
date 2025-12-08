@@ -10,6 +10,7 @@ v3.2.0 Release (December 8, 2025):
 - Updated VVC, uvg266 and 7-Zip binaries
 - Updated LAVFilters and MPC-HC VVC version.
 - Updated documentations, instructions and some fixes
+- Add some notes about MPV for deprecated builds and Windows 7 users
 - Added little instruction of VLC VTM decoder plugin customize playback frame rate, thanks @ChuangbinC for idea!
 - New MartinEesmaa's FFmpeg-Builds shared builds, thanks @tormento for request!
 - New macOS universal binaries of VVC and uvg266 compiled using osxcross
