@@ -42,6 +42,12 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 
 For Windows 7 users, official mpv build already dropped support of Windows 7 for already past little year ago. I can bring back mpv build for Windows 7 support later on later meanwhile three options alternatives way for [eko5624's mpv](https://github.com/eko5624/mpv-win64) of Windows 7 support, MPC-HC or MPC-BE.
 
+I already found that builds vvdec library and implement for eko5624's mpv windows build script:
+
+https://github.com/eko5624/mpv-win64/tree/static/vvdec-dev
+
+But still for Fraunhofer FDK external decoder library may not implemented to eko5624's mpv builds.
+
 # Official MPV VVC native decoder implementation
 
 It started at January 4 2024 when the native VVC decoder is released on FFmpeg, but it was experimental without IBC (Intra Block Copy).
