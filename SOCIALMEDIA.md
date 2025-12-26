@@ -1,8 +1,8 @@
 # Martin Eesmaa's social media links
 
-Linktree: https://linktr.ee/MartinEesmaa
+Linktree: <https://linktr.ee/MartinEesmaa>
 
-YouTube: https://www.youtube.com/channel/UC8uLpZMsXjU3G3etHj4rr1Q
+YouTube: <https://www.youtube.com/channel/UC8uLpZMsXjU3G3etHj4rr1Q>
 
 Reddit: [u/MartinEesmaa](https://reddit.com/u/MartinEesmaa)
 

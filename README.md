@@ -11,7 +11,6 @@ https://github.com/MartinEesmaa/VVCEasy/actions/workflows/dotnet.yml)
 ![Revolt](https://img.shields.io/revolt/invite/0Y10qHzP?label=VVCEasy%20Revolt)
 ![GitHub Repo stars](https://img.shields.io/github/stars/MartinEesmaa/VVCEasy?style=flat&label=Martin%20Eesmaa's%20VVCEasy%20stars&color=yellow)
 
-
 <h1 align="center">VVCEasy by Martin Eesmaa</h1>
 
 VVCEasy is that you don't have to compile or/and coding to encode VVC (known as Versatile Video Codec). Simple, Easy, Encode and Decode.
@@ -33,22 +32,22 @@ Windows/Mac/Linux source run (C#): Bin/Release or Debug/netX.x/VVCEasy.exe (afte
 ### Community
 
 | Communities | Link |
---- | --- |
-Matrix chat ![Matrix](https://img.shields.io/matrix/vvceasy:matrix.org) | https://matrix.to/#/#vvceasy:matrix.org
-Revolt ![Revolt](https://img.shields.io/revolt/invite/0Y10qHzP) | https://app.revolt.chat/invite/0Y10qHzP
-Discord ![Discord](https://img.shields.io/discord/974611343237869619) | https://discord.gg/t54cADTbWW
-Reddit | https://reddit.com/r/VVCEasy
-lemmy.ml (c/VVC) | https://lemmy.ml/c/vvc
-lemmy.ml (c/VVCEasy) | https://lemmy.ml/c/vvceasy
-lemmy.world (c/VVC) | https://lemmy.world/c/vvc
-lemmy.world (c/VVCEasy) | https://lemmy.world/c/vvceasy
+| --- | --- |
+| Matrix chat ![Matrix](https://img.shields.io/matrix/vvceasy:matrix.org) | <https://matrix.to/#/#vvceasy:matrix.org> |
+| Revolt ![Revolt](https://img.shields.io/revolt/invite/0Y10qHzP) | <https://app.revolt.chat/invite/0Y10qHzP> |
+| Discord ![Discord](https://img.shields.io/discord/974611343237869619) | <https://discord.gg/t54cADTbWW> |
+| Reddit | <https://reddit.com/r/VVCEasy> |
+| lemmy.ml (c/VVC) | <https://lemmy.ml/c/vvc> |
+| lemmy.ml (c/VVCEasy) | <https://lemmy.ml/c/vvceasy> |
+| lemmy.world (c/VVC) | <https://lemmy.world/c/vvc> |
+| lemmy.world (c/VVCEasy) | <https://lemmy.world/c/vvceasy> |
 
 > [!NOTE]
 > Please note my first language is Estonian and not native to the English language. Some English words may be incorrect and incomprehensible.
 
 Experimental GitLab mirror is available for alternative purposes or anything:
 
-https://gitlab.com/MartinEesmaa/VVCEasy
+<https://gitlab.com/MartinEesmaa/VVCEasy>
 
 # All lists
 
@@ -86,18 +85,23 @@ https://gitlab.com/MartinEesmaa/VVCEasy
 
 # Donate to Martin Eesmaa for a cryptocurrencies
 
-- **BTC (BITCOIN):** 
-```
+- **BTC (BITCOIN):**
+
+```text
 bc1qhf4zu5uythr7vyt2dru73qp0k2rzrx355fsx47yjxc2ueunz8frqxmwap3
 ```
-- **XMR (MONERO):** 
-```
+
+- **XMR (MONERO):**
+
+```text
 46Fk6k3qzhwXpLsDRWo4Uh63DDmwRX7gbL6P3zodAnvnRDr9Psi9uau19nCRQFHbmp3nLR3d5Ve8WRid71nuLZxAGygZ258
 ```
+
 - **BAT (BASIC ATTENTION TOKEN):** For Brave Browser users only, you can also contribute by supporting me, I'm a verified Brave user on Brave Rewards.
 
 - **Estonian bank account (Luminor Eesti IBAN):** You can donate to me. You have to pay a little network send fees before donate.
-```
+
+```text
 EE511700017003558571
 ```
 
@@ -155,13 +159,14 @@ For VLC o266player build, see [o266player.md](docs-old/o266player.md).
 
 # Compile for VVCEasy
 
-### VVCEasy Batchfile Version (optional) (Windows only)
+## VVCEasy Batchfile Version (optional) (Windows only)
 
 First, before compiling to VVCEasy Batchfile Version, you need to install Inno Setup to compile it.
-Inno Setup link: https://jrsoftware.org/isdl.php
+Inno Setup link: <https://jrsoftware.org/isdl.php>
 
 Step 1: Clone VVCEasy git and open up VVCEasy_compiler.iss file
-```
+
+```batch
 cd %userprofile%\Downloads
 git clone --depth=1 https://github.com/MartinEesmaa/VVCEasy && cd VVCEasy
 VVCEasy_compiler.iss
@@ -176,33 +181,38 @@ Step 2: Press F9 on your keyboard to compile. After compiling, VVCEasy.exe (Inst
 ### VVCEasy .NET Console Version (optional)
 
 You need .NET SDK from Microsoft.
-Link: https://dotnet.microsoft.com/en-us/download
+Link: <https://dotnet.microsoft.com/en-us/download>
 
 Step 1: Clone git and cd VVCEasy
-```
+
+```bash
 git clone --depth=1 https://github.com/MartinEesmaa/VVCEasy && cd VVCEasy
 ```
 
 Step 2: Start building the project by command:
-```
+
+```bash
 dotnet build -c Release
 ```
 
 Step 3: Once build is done, the result folder directory is bin/Release
-```
+
+```bash
 cd bin/Release
 ```
 
 > [!TIP]
 > *You can run VVCEasy without building.*
-```
+
+```bash
 dotnet run
 ```
 
 ### Publish single .NET binary executable
 
 If you want to compile and publish it into a portable executable file, you can do so if you wish.
-```
+
+```bash
 dotnet publish -c Release
 ```
 
@@ -214,14 +224,14 @@ If you're not familiar with using the CLI, you can use a GUI with an application
 
 These VVC programs for encoding/decoding are listed:
 
-| Programs with website or GitHub link | Note | Creator
---- | --- | --- |
-[Fastflix](https://github.com/cdgriffith/FastFlix) | You might need to download my custom FFmpeg builds for encoding/decoding VVC using external libraries, rename to ffmpeg.exe and ffprobe.exe from my custom names only, no ffplay executable file required | Chris Griffith
-[VVC-GUI-Encoder](https://github.com/Disa-Kizonda/VVC-GUI-Encoder) | Only encoder | Disa Kizonda
-[aVVCator](https://github.com/gianni-rosato/aVVCator) | Only encoder & Linux only | Gianni Rosato
-[VVenCguiEx](https://github.com/rigaya/VVenCguiEx) | Original Japanese language only for instructions and application (you can still translate), only encoder & Windows only, requires Aviutl (this may be medium or hard) | rigaya
-[VVConvert](https://vvconvert.app/) | Only encoder, encodes to VVC raw bitstream from any FFmpeg compatible video codecs, requires FFmpeg to open input video files | Alec Carter ([source code](https://github.com/alectr0/VVConvert))
-[Av1ador](https://github.com/porcino/Av1ador) | This program allows to encode VVC while transcoding by preview and comparison from original video, includes other encoders as well. | porcino
+| Programs with website or GitHub link | Note | Creator |
+| --- | --- | --- |
+| [Fastflix](https://github.com/cdgriffith/FastFlix) | You might need to download my custom FFmpeg builds for encoding/decoding VVC using external libraries, rename to ffmpeg.exe and ffprobe.exe from my custom names only, no ffplay executable file required | Chris Griffith |
+| [VVC-GUI-Encoder](https://github.com/Disa-Kizonda/VVC-GUI-Encoder) | Only encoder | Disa Kizonda |
+| [aVVCator](https://github.com/gianni-rosato/aVVCator) | Only encoder & Linux only | Gianni Rosato |
+| [VVenCguiEx](https://github.com/rigaya/VVenCguiEx) | Original Japanese language only for instructions and application (you can still translate), only encoder & Windows only, requires Aviutl (this may be medium or hard) | rigaya |
+| [VVConvert](https://vvconvert.app/) | Only encoder, encodes to VVC raw bitstream from any FFmpeg compatible video codecs, requires FFmpeg to open input video files | Alec Carter ([source code](https://github.com/alectr0/VVConvert)) |
+| [Av1ador](https://github.com/porcino/Av1ador) | This program allows to encode VVC while transcoding by preview and comparison from original video, includes other encoders as well. | porcino |
 
 # Hard option (deprecated)
 
@@ -231,13 +241,13 @@ If you're looking for a hard option of document information, you can check out t
 
 Before you ask any question, see the questions below at table please.
 
-| Question | Answer
---- | --- |
-**1:** Are you the real creator of VVCEasy? | That's correct, but I'm not a real founder of VVC nor I didn't build VVC. It was JVET built VVC.
-**2:** Are you trying to build VVCEasy? | Well, yes... it takes a longer time to make VVCEasy easier, but VVCEasy is not yet finished until further update announcements. I don't have employees, so I'm the only worker.
-**3:** Is it okay if I bring my proof screenshots? | Yes, you can include screenshots as proof. More proofs, easy to solve it.
-**4:** My question is not listed on the FAQ. | It's okay. You can go to the Issues tab by filing an issue with your question. I'd be happy to solve it :).
-**5:** Do you know what skills you have in your programming? | I know about batch files and HTML programming. Some programming languages might be difficult for me. Update of 19th February 2022: Perhaps I should create a C# Console program, which will support Windows, Mac, and Linux.
+| Question | Answer |
+| --- | --- |
+| **1:** Are you the real creator of VVCEasy? | That's correct, but I'm not a real founder of VVC nor I didn't build VVC. It was JVET built VVC. |
+| **2:** Are you trying to build VVCEasy? | Well, yes... it takes a longer time to make VVCEasy easier, but VVCEasy is not yet finished until further update announcements. I don't have employees, so I'm the only worker. |
+| **3:** Is it okay if I bring my proof screenshots? | Yes, you can include screenshots as proof. More proofs, easy to solve it. |
+| **4:** My question is not listed on the FAQ. | It's okay. You can go to the Issues tab by filing an issue with your question. I'd be happy to solve it :). |
+| **5:** Do you know what skills you have in your programming? | I know about batch files and HTML programming. Some programming languages might be difficult for me. Update of 19th February 2022: Perhaps I should create a C# Console program, which will support Windows, Mac, and Linux. |
 
 If you have any questions or/any issues, please go to the Issues tab and feel free to create an issue.
 
@@ -299,7 +309,7 @@ License: MIT
 
 ---
 
-[FFmpeg](https://github.com/FFmpeg/FFmpeg) - Mirror of https://git.ffmpeg.org/ffmpeg.git
+[FFmpeg](https://github.com/FFmpeg/FFmpeg) - Mirror of <https://git.ffmpeg.org/ffmpeg.git>
 
 VVC developers & forkers: [Christian Lehmann](https://github.com/lehmann-c), [tbiat](https://github.com/tbiat), [Isabelle Santin](https://github.com/IsaMorphic) & [Martin Eesmaa](https://github.com/MartinEesmaa)
 
@@ -367,7 +377,7 @@ License: GPL-3.0
 
 [7-Zip](https://sourceforge.net/projects/sevenzip/files/7-Zip/) - 7-Zip is a file archiver with a high compression ratio.
 
-Official website: https://7-zip.org
+Official website: <https://7-zip.org>
 
 License: LGPL-2.1 with unRAR restriction & LZMA SDK in the public domain
 

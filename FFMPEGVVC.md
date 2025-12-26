@@ -6,7 +6,7 @@ Windows, Mac and Linux (Preview of VVC video in FFplay):
 ![macos_vvceasy_ff](https://user-images.githubusercontent.com/88035011/169693891-52271091-eb92-4198-82eb-2ad38296a917.png)
 ![linux_vvceasy_ff](Screenshots/linux-ffplay_vvceasy.png)
 
-# Play video file
+## Play video file
 
 You can play VVC video codec with .h266, .vvc, .266 and anything or .mp4 mixed with VVC codec:
 
@@ -63,22 +63,22 @@ Before encoding VVC video codec, see limitations below.
 FFmpeg-VVC (for libvvenc feature) works for:
 
 | Features | Notes |
---- | --- |
-Pixel format | ⚠️ (only pixel format 10 bit is default, but you can still encode 8 bit by using vvenc params `-vvenc-params InternalBitDepth=8`)
-Video size | (auto detects, but it doesn't detect for SAR and DAR anamorphic is glitch and corrupts the video) ⚠️ (Better way to use vvencapp without FFmpeg)
-Frame rate | ✅ (auto detects)
-MP4/TS Mux | ✅ (only works for stable if it's encoded VVC with MP4 or TS on FFmpeg and mp4box for muxing still works)
-Mux MP4/TS container from raw bitstream on FFmpeg | ⚠️ (the first frame freezes may just print error messages for libvvdec when muxed and seeking in FFmpeg, use mp4box for recommendation)
-Matroska Mux | ⚠️ (Only matroska mux has an experimental, causing problem of the video sync delay with audio and others for FFmpeg libvvdec. It is unofficial support)
-Demux | ✅
-Audio with encode VVC | ✅
-Broadcasting | ✅ (MPEG-TS)
-Streaming | ✅ (MPEG-DASH)
-Bitrates | ✅ (average (`-b:v`) and maximum bitrate (`-maxrate`) are only supported)
-Passes | ⚠️ (you may need get passes using vvenc params on FFmpeg VVCEasy or use vvencapp, also it is only available to use bitrate for two passes, QP supports only one pass)
-Presets | ✅
-QP | ✅
-HDR | ✅
+| --- | --- |
+| Pixel format | ⚠️ (only pixel format 10 bit is default, but you can still encode 8 bit by using vvenc params `-vvenc-params InternalBitDepth=8`) |
+| Video size | (auto detects, but it doesn't detect for SAR and DAR anamorphic is glitch and corrupts the video) ⚠️ (Better way to use vvencapp without FFmpeg) |
+| Frame rate | ✅ (auto detects) |
+| MP4/TS Mux | ✅ (only works for stable if it's encoded VVC with MP4 or TS on FFmpeg and mp4box for muxing still works) |
+| Mux MP4/TS container from raw bitstream on FFmpeg | ⚠️ (the first frame freezes may just print error messages for libvvdec when muxed and seeking in FFmpeg, use mp4box for recommendation) |
+| Matroska Mux | ⚠️ (Only matroska mux has an experimental, causing problem of the video sync delay with audio and others for FFmpeg libvvdec. It is unofficial support) |
+| Demux | ✅ |
+| Audio with encode VVC | ✅ |
+| Broadcasting | ✅ (MPEG-TS) |
+| Streaming | ✅ (MPEG-DASH) |
+| Bitrates | ✅ (average (`-b:v`) and maximum bitrate (`-maxrate`) are only supported) |
+| Passes | ⚠️ (you may need get passes using vvenc params on FFmpeg VVCEasy or use vvencapp, also it is only available to use bitrate for two passes, QP supports only one pass) |
+| Presets | ✅ |
+| QP | ✅ |
+| HDR | ✅ |
 
 Built in libvvenc for FFmpeg command:
 
@@ -365,20 +365,20 @@ Press CTRL + C to cancel operation on your keyboard and try it again with make i
 
 VVC programmers of FFmpeg:
 
-Original author: [@FFmpeg](https://github.com/FFmpeg) Repository: https://github.com/FFmpeg/FFmpeg
+Original author: [@FFmpeg](https://github.com/FFmpeg) Repository: <https://github.com/FFmpeg/FFmpeg>
 
-[@lehmann-c](https://github.com/lehmann-c) (Christian Lehmann) Repository: https://github.com/lehmann-c/FFmpeg
+[@lehmann-c](https://github.com/lehmann-c) (Christian Lehmann) Repository: <https://github.com/lehmann-c/FFmpeg>
 
-[@tbiat](https://github.com/tbiat) (Thibaud Biatek) Repository: https://github.com/tbiat/FFmpeg
+[@tbiat](https://github.com/tbiat) (Thibaud Biatek) Repository: <https://github.com/tbiat/FFmpeg>
 
-VVC encoder programmer to FFmpeg: [@IsaMorphic](https://github.com/IsaMorphic) (Isabelle Santin) Repository: https://github.com/IsaMorphic/FFmpeg-VVC
+VVC encoder programmer to FFmpeg: [@IsaMorphic](https://github.com/IsaMorphic) (Isabelle Santin) Repository: <https://github.com/IsaMorphic/FFmpeg-VVC>
 
-[@MartinEesmaa](https://github.com/MartinEesmaa) (Martin Eesmaa) Repository: https://github.com/MartinEesmaa/FFmpeg-VVC
+[@MartinEesmaa](https://github.com/MartinEesmaa) (Martin Eesmaa) Repository: <https://github.com/MartinEesmaa/FFmpeg-VVC>
 
 [@NuoMi](https://github.com/nuomi2021) of some codes and [Thomas Siedel](https://patchwork.ffmpeg.org/project/ffmpeg/list/?series=8577) of new external VVC encoder & decoder, also native VVC decoder ([ffvvc](https://github.com/ffvvc/FFmpeg)) by NuoMi.
 
-AC4 decoder programmer to FFmpeg: [@richardpl](https://github.com/richardpl) (Paul B Mahol) Repository: https://github.com/richardpl/FFmpeg/tree/ac4
+AC4 decoder programmer to FFmpeg: [@richardpl](https://github.com/richardpl) (Paul B Mahol) Repository: <https://github.com/richardpl/FFmpeg/tree/ac4>
 
-AC4 support in mp4 container: [@AUGxhub](https://github.com/AUGxhub) Repository: https://github.com/AUGxhub/FFmpeg/tree/patch-1
+AC4 support in mp4 container: [@AUGxhub](https://github.com/AUGxhub) Repository: <https://github.com/AUGxhub/FFmpeg/tree/patch-1>
 
 - Martin Eesmaa

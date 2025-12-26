@@ -6,10 +6,11 @@ For VVC version, it includes external VVC decoder libvvdec and xHE-AAC with LAV 
 
 To install LAV Filters VVC version on your computer, you need right click and run as administrator for batch files (.BAT file).
 
-Original source code: https://github.com/Nevcairiel/LAVFilters
+Original source code: <https://github.com/Nevcairiel/LAVFilters>
 
 Changelog:
-```
+
+```text
 02/12/2025: Updated LAVFilters nightly with new commits, FFmpeg, vvdec and others.
 22/06/2025: Updated LAVFilters for up to version 0.80 with new commits, FFmpeg, vvdec and others. Sorry for long time hiatus.
 30/03/2025: Updated LAVFilters with new commits, FFmpeg, vvdec and others. Sorry long time and also sorry big DLL sizes.
@@ -28,14 +29,15 @@ Changelog:
 
 MPC-HC 2.5.5.30 comes with LAVFilters VVC installed and it is portable.
 
-You can download via cloud link: https://mega.nz/file/ipc1TYiL#RpqK8X1gvBsP7s9hA78rKdalXFUsjMFy_C75s5TpnvA
+You can download via cloud link: <https://mega.nz/file/ipc1TYiL#RpqK8X1gvBsP7s9hA78rKdalXFUsjMFy_C75s5TpnvA>
 
 After downloading, extract compressed file via [7-Zip](https://7-zip.org) and run `mpc-hc64.exe`. This program doesn't require administrator privileges.
 
-Original forked source code: https://github.com/clsid2/mpc-hc
+Original forked source code: <https://github.com/clsid2/mpc-hc>
 
 Changelog:
-```
+
+```text
 04/12/2025: Updated MPC-HC for up to 2.5.5.30, LAVFilters nightly new commits, FFmpeg, vvdec, yt-dlp and others.
 22/06/2025: Updated MPC-HC for up to 2.4.3.6, LAVFilters for up to 0.80 with new commits, FFmpeg, vvdec, yt-dlp and others. Also sorry for DLL files increased and also hiatus for 8 months.
 01/10/2024: Updated MPC-HC, LAVFilters with new commits, FFmpeg, vvdec, yt-dlp and others. Added support VVC Matroska demux and also much better for shrinking DLL files down.
@@ -53,10 +55,10 @@ Since MPC-BE version 1.7.0 and later, it supports VVC (libvvdec) and USAC (libfd
 
 MPC-BE is Windows universal video and audio player improved similar and more external features added than MPC-HC.
 
-Original forked source code: https://github.com/Aleksoid1978/MPC-BE
+Original forked source code: <https://github.com/Aleksoid1978/MPC-BE>
 
-You can download binaries on GitHub releases: https://github.com/Aleksoid1978/MPC-BE/releases
+You can download binaries on GitHub releases: <https://github.com/Aleksoid1978/MPC-BE/releases>
 
-Nightly builds: https://github.com/Aleksoid1978/MPC-BE/wiki/Nightly-builds
+Nightly builds: <https://github.com/Aleksoid1978/MPC-BE/wiki/Nightly-builds>
 
 - Martin Eesmaa

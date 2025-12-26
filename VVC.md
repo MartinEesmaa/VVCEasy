@@ -46,19 +46,19 @@ uvg266 is only scalable encoder which helps to make it faster for older & newer 
 
 **vvenc/vvdec**:
 
-- Windows XP and later (requires Visual C++ Redistributable for Visual Studio 2019 installed)
-- Mac OS X 10.9 and later (arm64 since macOS 11.0)
-- Linux kernel 3.2.0 and later (eg. Ubuntu 12.04 LTS and later)
-- BSD (FreeBSD & x64 only)
-- Android 4.1 (API 16, Jelly Bean) and later (arm64 & x86_64 since Android 5.0)
+* Windows XP and later (requires Visual C++ Redistributable for Visual Studio 2019 installed)
+* Mac OS X 10.9 and later (arm64 since macOS 11.0)
+* Linux kernel 3.2.0 and later (eg. Ubuntu 12.04 LTS and later)
+* BSD (FreeBSD & x64 only)
+* Android 4.1 (API 16, Jelly Bean) and later (arm64 & x86_64 since Android 5.0)
 
 **uvg266**:
 
-- Windows Vista and later (requires Visual C++ Redistributable)
-- Mac OS X 10.4 and later (amd64 since Mac OS X 10.4, x86 from Mac OS X 10.6 to 10.14, arm64 since macOS 11.0)
-- Linux kernel 3.2.0 and later (eg. Ubuntu 12.04 LTS and later)
-- BSD (FreeBSD & x64 only)
-- Android 4.3 (API 18, Jelly Bean) and later (arm64 & x86_64 since Android 5.0)
+* Windows Vista and later (requires Visual C++ Redistributable)
+* Mac OS X 10.4 and later (amd64 since Mac OS X 10.4, x86 from Mac OS X 10.6 to 10.14, arm64 since macOS 11.0)
+* Linux kernel 3.2.0 and later (eg. Ubuntu 12.04 LTS and later)
+* BSD (FreeBSD & x64 only)
+* Android 4.3 (API 18, Jelly Bean) and later (arm64 & x86_64 since Android 5.0)
 
 ### Downloads
 
@@ -67,12 +67,12 @@ NOTE: uvg266 compiled by same architectures supported of vvenc & vvdec.
 All compiled builds are compressed files on 7-Zip.
 
 | OS | vvenc & vvdec | uvg266 |
---- | --- | --- |
-Windows | [x64/x86](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/WindowsVVC/WindowsVVC.7z) | [Download](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/uvg266/Windows/uvg266-Windows.7z)
-macOS | [Arm64/x64](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/MacOSVVC/MacOSVVC.7z) | [Download](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/uvg266/macOS/uvg266-macOS.7z)
-Linux | [x86_64/x86/arm64/armv7a](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/uvg266/Linux/uvg266-Linux.7z) | [Download](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/uvg266/Linux/uvg266-Linux.7z)
-BSD | [x86_64](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/BSDVVC/BSDVVC.7z) | [Download](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/uvg266/BSD/uvg266-BSD.7z)
-Android | [x86_64/x86/arm64/armv7a](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/AndroidVVC/AndroidVVC.7z) | [Download](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/AndroidVVC/AndroidUVG266-8bit.7z) or [10-bit build](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/AndroidVVC/AndroidUVG266.7z)
+| --- | --- | --- |
+| Windows | [x64/x86](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/WindowsVVC/WindowsVVC.7z) | [Download](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/uvg266/Windows/uvg266-Windows.7z) |
+| macOS | [Arm64/x64](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/MacOSVVC/MacOSVVC.7z) | [Download](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/uvg266/macOS/uvg266-macOS.7z) |
+| Linux | [x86_64/x86/arm64/armv7a](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/uvg266/Linux/uvg266-Linux.7z) | [Download](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/uvg266/Linux/uvg266-Linux.7z) |
+| BSD | [x86_64](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/BSDVVC/BSDVVC.7z) | [Download](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/uvg266/BSD/uvg266-BSD.7z) |
+| Android | [x86_64/x86/arm64/armv7a](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/AndroidVVC/AndroidVVC.7z) | [Download](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/AndroidVVC/AndroidUVG266-8bit.7z) or [10-bit build](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/AndroidVVC/AndroidUVG266.7z) |
 
 ## Comparisions between vvenc/vvdec and uvg266
 
