@@ -194,8 +194,8 @@ echo 1. YUV (lossy video VVC)
 echo 2. Y4M (lossless video VVC, recommended)
 echo 3. Go back to the menu.
 set /p decodestart1=Number:
-if "%decodestart1%" == "1" set scf=yuv && goto DECODESTARTFROMVVC
-if "%decodestart1%" == "2" set scf=y4m && goto DECODESTARTFROMVVC
+if "%decodestart1%" == "1" set scf=yuv && set scff= && goto DECODESTARTFROMVVC
+if "%decodestart1%" == "2" set scf=y4m && set scff=--y4m && goto DECODESTARTFROMVVC
 if "%decodestart1%" == "3" goto start
 echo Invalid input. Please enter a number between 1 and 3.
 pause
@@ -205,7 +205,7 @@ goto decodestart
 cls
 title STARTING TRANSCODING BACK FROM VVC TO %scf%...
 cd WindowsVVC
-vvdecapp -b VVC.vvc --y4m -o VVCTOYUV.%scf%
+vvdecapp -b VVC.vvc %scff% -o VVCTOYUV.%scf%
 move VVCTOYUV.%scf% ..\transcodedback
 echo FINISHED. Going back to the menu...
 timeout 3
