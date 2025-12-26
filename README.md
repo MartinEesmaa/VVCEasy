@@ -46,9 +46,13 @@ lemmy.world (c/VVCEasy) | https://lemmy.world/c/vvceasy
 > [!NOTE]
 > Please note my first language is Estonian and not native to the English language. Some English words may be incorrect and incomprehensible.
 
+GitLab mirror is available for alternative purposes or anything:
+
+https://gitlab.com/MartinEesmaa/VVCEasy
+
 # All lists
 
-- [Donate to Martin Eesmaa using cryptocurrency](#donate-to-martin-eesmaa-for-an-cryptocurrencies)
+- [Donate to Martin Eesmaa using cryptocurrency](#donate-to-martin-eesmaa-for-a-cryptocurrencies)
 
 - [Tests of VVC videos](#tests-of-vvc-videos)
 
