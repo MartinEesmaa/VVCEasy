@@ -88,7 +88,7 @@ echo 8. Install vvDecPlayer from BitMovin
 echo 9. Install/Update VLC VTM Plugins (Windows/Linux x64 of VLC plugins by Inter Digital Inc)
 echo 10. Install FFmpeg/MPV external VVC support and tests of VVC videos
 echo 11. Build vvenc and vvdec from source
-set /p VVCSTART=Number: 
+set /p VVCSTART=Number:
 
 if "%VVCSTART%" == "1" goto encodestart
 if "%VVCSTART%" == "2" goto decodestart
@@ -101,7 +101,7 @@ if "%VVCSTART%" == "8" goto installbitmovin
 if "%VVCSTART%" == "9" goto vlcvtmplugininstall
 if "%VVCSTART%" == "10" goto installvvdecffmpegmpvnow
 if "%VVCSTART%" == "11" goto main123
-echo Invalid input. Please enter a number between 1 and 13.
+echo Invalid input. Please enter a number between 1 and 11.
 pause
 goto start
 
@@ -114,7 +114,7 @@ echo Before we move to settings quality, is your video lossy or lossless?
 echo 1. Lossy (example YouTube videos, Web videos, lossy compressed videos, and other web)
 echo 2. Lossless (example XIPH Media, Camera uncompressed RAW video, Apple ProRes and others uncompressed files)
 echo 3. Go back to the menu.
-set /p vvencquestion1=Number: 
+set /p vvencquestion1=Number:
 if "%vvencquestion1%" == "1" goto losslessvvenc2
 if "%vvencquestion1%" == "2" goto lossyvvenc2
 if "%vvencquestion1%" == "3" goto start
@@ -133,7 +133,7 @@ echo 2. No, I am not ready yet (go back to previous)
 echo If you don't have Y4M already... You need to transcode the file from your uncompressed file to Y4M.
 echo Example: ffmpeg -i yourfile.mov -strict 1 yourfinal.y4m
 echo Only 8-bit uncompressed movies are input to Y4M.
-set /p doyouhavey4mvvencquestion3=Number: 
+set /p doyouhavey4mvvencquestion3=Number:
 if "%doyouhavey4mvvencquestion3%" == "1" goto startlosslessvvenc2
 if "%doyouhavey4mvvencquestion3%" == "2" goto encodestart
 if "%doyouhavey4mvvencquestion3%" == "3" goto start
@@ -161,7 +161,7 @@ echo 1. I have YUV already (I am ready)
 echo 2. No, I am not ready yet (go back to previous)
 echo If you don't have Y4M already... You need to transcode the file from your lossy video file to YUV.
 echo Example: ffmpeg -i yourfile.mp4 -strict 1 yourfinal.yuv
-set /p doyouhaveyuvvvencquestion4=Number: 
+set /p doyouhaveyuvvvencquestion4=Number:
 if "%doyouhaveyuvvvencquestion4%" == "1" goto startlossyvvenc2
 if "%doyouhaveyuvvvencquestion4%" == "2" goto encodestart
 if "%doyouhaveyuvvvencquestion4%" == "3" goto start
@@ -193,7 +193,7 @@ echo Portable won't work probably, you need to copy from your Downloads folder\V
 echo 1. YUV (lossy video VVC)
 echo 2. Y4M (lossless video VVC, recommended)
 echo 3. Go back to the menu.
-set /p decodestart1=Number: 
+set /p decodestart1=Number:
 if "%decodestart1%" == "1" goto DECODESTARTFROMVVCTOYUV
 if "%decodestart1%" == "2" goto DECODESTARTFROMVVCTOY4M
 if "%decodestart1%" == "3" goto start
@@ -568,15 +568,13 @@ echo.
 echo For the video tests, see the paragraph in README.md.
 echo https://github.com/MartinEesmaa/VVCEasy/#tests-of-vvc-videos
 echo.
-echo See information on FFMPEGVVC.md or online GitHub: https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md
-echo.
 pause
 goto start
 
 :main123
 title Build vvenc and vvdec by yourself from source codes
 cls
-echo Do you want build vvenc and vvdec on your computer?
+echo Would you like to build vvenc and vvdec on your computer?
 echo Before you build for Windows, you need CMake and Visual Studio on your computer.
 echo Requires build to Windows VVC by CMake 3.13.0+ (need pathed environment) and Visual Studio 2017 and later (requires Desktop C++ and only one individual component ML.NET Model Builder).
 echo Requires download vvenc and vvdec for (Git for Windows).
