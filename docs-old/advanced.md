@@ -108,7 +108,9 @@ Lossy video/Smallest video size:
 vvencapp --qp 38 -i out.yuv -s 854x480 -r 30 -o vvc.266
 ```
 
-**NOTE 1: If you want to have true lossless on your video, please use H.264 Lossless video codec or VVC with vvencffapp command of CostMode Lossless**
+## Notes
+
+### NOTE 1: If you want to have true lossless on your video, please use H.264 Lossless video codec or VVC with vvencffapp command of CostMode Lossless**
 
 **NOTE 1.1: In vvencffapp application, you can add command `--CostMode lossless`. Y4M accepts chroma subsampling 420 only, but YUV accepts 400, 420, 422 and 444.**
 

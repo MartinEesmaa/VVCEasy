@@ -190,7 +190,7 @@ Original documentation must be in the original repository: <https://github.com/I
 
 ### Alternative using command line of Windows
 
-Open Windows Terminal/Windows Command Prompt, make sure you do cd of C:/Users/(put your username)/Downloads/VVCEasy/VLC
+Open Windows Terminal/Windows Command Prompt and make sure you're in this current folder.
 
 Copy code following:
 
@@ -206,6 +206,6 @@ The VVC video file cannot loaded by newest version of VLC 4.0.0-dev, because it 
 
 For more information about VLC 4.0.0-dev see: <https://www.theverge.com/2021/2/12/22279750/vlc-4-0-new-user-interface-videolan-media-player-video-music-movie-database-web-player>
 
-I tried to build two DLL files on VLC 4.0.0 SDK, but the compiler failed, so you must use VLC 3.0.9.2 or latest of VLC 3 version branch.
+I tried to build two DLL files on VLC 4.0.0 SDK, but the compiler failed, so you must use VLC 3.0.9.2 or the latest of VLC 3 version branch.
 
 - Martin Eesmaa
