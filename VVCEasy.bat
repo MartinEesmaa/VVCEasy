@@ -194,29 +194,19 @@ echo 1. YUV (lossy video VVC)
 echo 2. Y4M (lossless video VVC, recommended)
 echo 3. Go back to the menu.
 set /p decodestart1=Number:
-if "%decodestart1%" == "1" goto DECODESTARTFROMVVCTOYUV
-if "%decodestart1%" == "2" goto DECODESTARTFROMVVCTOY4M
+if "%decodestart1%" == "1" set scf=yuv && goto DECODESTARTFROMVVC
+if "%decodestart1%" == "2" set scf=y4m && goto DECODESTARTFROMVVC
 if "%decodestart1%" == "3" goto start
 echo Invalid input. Please enter a number between 1 and 3.
 pause
 goto decodestart
 
-:DECODESTARTFROMVVCTOYUV
+:DECODESTARTFROMVVC
 cls
-title STARTING TRANSCODING BACK FROM VVC TO YUV...
+title STARTING TRANSCODING BACK FROM VVC TO %scf%...
 cd WindowsVVC
-vvdecapp -b VVC.vvc -o VVCTOYUV.yuv
-move VVCTOYUV.yuv ..\transcodedback
-echo FINISHED. Going back to the menu...
-timeout 3
-goto start
-
-:DECODESTARTFROMVVCTOY4M
-cls
-title STARTING TRANSCODING BACK FROM VVC TO Y4M...
-cd WindowsVVC
-vvdecapp -b VVC.vvc --y4m -o VVCTOYUV.y4m
-move VVCTOYUV.y4m ..\transcodedback
+vvdecapp -b VVC.vvc --y4m -o VVCTOYUV.%scf%
+move VVCTOYUV.%scf% ..\transcodedback
 echo FINISHED. Going back to the menu...
 timeout 3
 goto start
@@ -317,8 +307,8 @@ echo Have a nice day! Thank you for using VVCEasy! :)
 :::    | |\/| |/ _` | '__| __| | '_ \  |  __| / _ \/ __| '_ ` _ \ / _` |/ _` |
 :::    | |  | | (_| | |  | |_| | | | | | |___|  __/\__ \ | | | | | (_| | (_| |
 :::    |_|  |_|\__,_|_|   \__|_|_| |_| |______\___||___/_| |_| |_|\__,_|\__,_|
-                                                                        
-                                                                        
+
+
 for /f "delims=: tokens=*" %%A in ('findstr /b ::: "%~f0"') do @echo(%%A
 echo.
 echo %copyrightinfo%
