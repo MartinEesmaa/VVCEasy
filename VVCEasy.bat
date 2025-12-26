@@ -64,6 +64,14 @@ if '%errorlevel%' NEQ '0' (
     CD /D "%~dp0"
 :--------------------------------------
 
+if exist .git (
+    if errorlevel 1 (
+        set gitnightly=Master nightly commit SHA: Unavailable
+    ) else (
+        FOR /F %%i IN ('type .git\refs\heads\master') DO SET gitnightly=Master nightly commit SHA: %%i
+    )
+)
+
 goto start
 
 :start
@@ -75,6 +83,7 @@ echo VVCEasy (Batchfile Release Version, %version%, %vvceasydate%)
 echo Version codename: %versionname%
 echo System type architecture: %bit%
 echo %copyrightinfo%
+echo %gitnightly%
 echo.
 echo What would you like to do to encode/decode VVC?
 echo 1. Encode (too old, deprecated)
