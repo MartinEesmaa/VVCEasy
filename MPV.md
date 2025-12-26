@@ -1,6 +1,6 @@
-![mpv-icon128](https://user-images.githubusercontent.com/88035011/169686347-e7f06fa5-01ea-4b13-9ec6-c87570873db7.png)
-
 # MPV Windows/Linux/Android Player (libvvdec + xHE-AAC support)
+
+![mpv-icon128](https://user-images.githubusercontent.com/88035011/169686347-e7f06fa5-01ea-4b13-9ec6-c87570873db7.png)
 
 MPV Windows/Linux/Android Player (libvvdec + xHE-AAC support) can play your VVC decoded video file and mixed MP4 container with VVC video codec + audio, also it plays xHE-AAC audio with Fraunhofer FDK library.
 
@@ -12,7 +12,7 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 
 ![mpv-vvceasy-android](Screenshots/mpv-vvceasy-android.png)
 
-# Download MPV Windows/Linux/Android Player (libvvdec + xHE-AAC plugin)
+## Download MPV Windows/Linux/Android Player (libvvdec + xHE-AAC plugin)
 
 [All releases Windows builds of mpv-winbuild](https://github.com/MartinEesmaa/mpv-winbuild/releases)
 
@@ -44,11 +44,11 @@ For Windows 7 users, official mpv build already dropped support of Windows 7 for
 
 I already found that builds vvdec library and implement for eko5624's mpv windows build script:
 
-https://github.com/eko5624/mpv-win64/tree/static/vvdec-dev
+<https://github.com/eko5624/mpv-win64/tree/static/vvdec-dev>
 
 But still for Fraunhofer FDK external decoder library may not implemented to eko5624's mpv builds.
 
-# Official MPV VVC native decoder implementation
+## Official MPV VVC native decoder implementation
 
 It started at January 4 2024 when the native VVC decoder is released on FFmpeg, but it was experimental without IBC (Intra Block Copy).
 
@@ -58,9 +58,9 @@ His hard work is very good and made by [nuomi2021](https://github.com/nuomi2021)
 
 Now you can use official MPV binaries by shinchiro or my custom build of MPV VVCEasy build to play or decode VVC in MPV. Also FFmpeg too with Btbn or Gyan or VVCEasy builds. :)
 
-Update of 21.03.2024: On March 14th 2024, the official FFmpeg native VVC decoder set to experimental for some little bugs. 
+Update of 21.03.2024: On March 14th 2024, the official FFmpeg native VVC decoder set to experimental for some little bugs.
 
-See the FFmpeg commit: https://github.com/FFmpeg/FFmpeg/commit/110d8549d575aae6b2f627cd63e2eb7082ab8926
+See the FFmpeg commit: <https://github.com/FFmpeg/FFmpeg/commit/110d8549d575aae6b2f627cd63e2eb7082ab8926>
 
 Switched native VVC decoder back to external VVC decoder of libvvdec after native VVC decoder is experimental.
 
@@ -68,7 +68,7 @@ Switched native VVC decoder back to external VVC decoder of libvvdec after nativ
 
 Please check the changelog before you download the new version.
 
-```
+```text
 08/12/2025 - Updated Linux MPV VVCEasy build for FFmpeg, vvdec, others and fixed UNIX permissions. Again sorry for almost six months hiatus.
 07/12/2025 - Updated Android MPV VVCEasy latest build with FFmpeg, vvdec and others.
 07/12/2025 - Updated Windows MPV.NET VVCEasy build with mpv-dev build tag (2025-12-07-dbd7a90) from Martin Eesmaa's mpv-winbuild repo and others.
@@ -135,7 +135,7 @@ Please check the changelog before you download the new version.
 01/09/2022 - New complete static of Windows MPV VVCEasy build.
 ```
 
-# Limitations & Tips
+## Limitations & Tips
 
 MPV Android libvvdec app requires your system type of ARM64 (aarch64), x86 (i686), ARMv7 (armeabi-v7a) and x86_64 to run on Android, Windows requires to run x64 or Linux requires to run x64.
 
@@ -161,10 +161,11 @@ Make sure to allow apps from unknown sources. Link: [Wikihow](https://www.wikiho
 
 If Google warns you that Android MPV (libvvdec plugin) app claimed is malicious by Play Protect, press "Install anyway" on your phone.
 
-On Windows, there is available MPV.NET custom build on this download. You can have look for source code: https://github.com/stax76/mpv.net
+On Windows, there is available MPV.NET custom build on this download. You can have look for source code: <https://github.com/stax76/mpv.net>
 
-# SHA256 SUMS
-```
+## SHA256 SUMS
+
+```text
 86688ed872173e70678d36454b05b5b2dce09eb71587ae9706dccac38c865122  MPV-VVCEasy-API29debug-signed.apk
 c2129528da3cc880dd15b02da9e277cd7f374119d49bc7b05ea54f5d385b43d3  MPV-VVCEasy-API29release-signed.apk
 9044b7d67eaa020d5e59d437b3fc10dd2e6f60eedfff8034c4dd608145bff17d  MPV-VVCEasy-Windows-x64.7z
@@ -176,33 +177,36 @@ c2129528da3cc880dd15b02da9e277cd7f374119d49bc7b05ea54f5d385b43d3  MPV-VVCEasy-AP
 ab23b1928069bd3584297dae1d90a95fe2910f91936766ddfa5bdafd53c8a300  MPV-VVCEasy-ArchLinux-x64.7z
 ```
 
-# Build MPV Android with VVC and xHE-AAC:
+## Build MPV Android with VVC and xHE-AAC
 
 If you want to build MPV Android, you need to first update & upgrade, then install packages:
-```
+
+```bash
 sudo apt update && sudo apt upgrade -y
 sudo apt install build-essential cmake nasm libsimde-dev python3 python3-pip git openjdk-17-jdk
 sudo pip install meson -U
 ```
 
-# Optional for install Temurin from Adoptium
+## Optional for install Temurin from Adoptium
 
-Note: If you already installed Temurin from Adoptium 
+Note: If you already installed Temurin from Adoptium
 or normal Java package from package manager, you can skip this step.
 
 Next download Temurin from Adoptium and follow the install instructions:
 
-https://adoptium.net/installation/linux
+<https://adoptium.net/installation/linux>
 
 ---
 
 After you installed Java JDK from package manager or Temurin from Adoptium, you can verify that is installed on your system:
-```
+
+```bash
 java --version
 ```
 
 After installing the packages on Linux, clone mpv-android-vvc repository:
-```
+
+```bash
 cd
 git clone https://github.com/MartinEesmaa/mpv-android-vvc
 cd mpv-android-vvc/buildscripts
@@ -212,6 +216,6 @@ cd mpv-android-vvc/buildscripts
 
 Continue follow instructions to build your own MPV build:
 
-https://github.com/MartinEesmaa/mpv-android-vvc/blob/master/buildscripts/README.md
+<https://github.com/MartinEesmaa/mpv-android-vvc/blob/master/buildscripts/README.md>
 
--   Martin Eesmaa
+- Martin Eesmaa

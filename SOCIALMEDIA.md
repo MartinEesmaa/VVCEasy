@@ -8,13 +8,13 @@ Reddit: [u/MartinEesmaa](https://reddit.com/u/MartinEesmaa)
 
 Lemmy.world: [u/MartinEesmaa](https://lemmy.world/u/MartinEesmaa)
 
-Pastebin: https://pastebin.com/u/MartinEesmaa
+Pastebin: <https://pastebin.com/u/MartinEesmaa>
 
 Github: [MartinEesmaa](https://github.com/MartinEesmaa)
 
 Gitlab: [MartinEesmaa](https://gitlab.com/MartinEesmaa)
 
-LinkedIn: https://www.linkedin.com/in/martin-eesmaa-4b355587/
+LinkedIn: <https://www.linkedin.com/in/martin-eesmaa-4b355587/>
 
 Wikipedia: [MartinHero13](https://en.wikipedia.org/wiki/User:MartinHero13)
 

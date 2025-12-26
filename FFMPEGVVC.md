@@ -10,17 +10,17 @@ Windows, Mac and Linux (Preview of VVC video in FFplay):
 
 You can play VVC video codec with .h266, .vvc, .266 and anything or .mp4 mixed with VVC codec:
 
-```
+```bash
 ffplay_vvceasy versatile.266
 ```
 
 Or if you have xHE-AAC audio codec:
 
-```
+```bash
 ffplay_vvceasy -codec:a libfdk_aac -i versatile.m4a
 ```
 
-# Official FFmpeg VVC native decoder implementation
+## Official FFmpeg VVC native decoder implementation
 
 It started at January 4 2024 when the native VVC decoder is released on FFmpeg, but it was experimental without IBC (Intra Block Copy).
 
@@ -36,27 +36,27 @@ Meanwhile, you can use official FFmpeg binaries by BtBn or Gyan or my custom bui
 
 But for libvvenc VVC encoder has not implemented yet into official FFmpeg. FFmpeg VVCEasy build has still libvvenc VVC encoder available by Martin Eesmaa's FFmpeg-VVC repository.
 
-# Official FFmpeg VVC external encoder implementation
+## Official FFmpeg VVC external encoder implementation
 
 On 15th June 2024, the external VVC encoder feature is released on FFmpeg.
 
-See commit: https://github.com/FFmpeg/FFmpeg/commit/c75940db290478df657c09089605d221dc47118e
+See commit: <https://github.com/FFmpeg/FFmpeg/commit/c75940db290478df657c09089605d221dc47118e>
 
 His hard work was very good and made by Thomas Siedel, authored by nuomi2021 and also co-authored by Christian Bartnik.
 
 This might come later to add feature after compiling for FFmpeg Gyan and BtBn builds, but FFmpeg VVCEasy builds is still available.
 
-# Official Gyan & BtBn FFmpeg Builds of libvvenc support
+## Official Gyan & BtBn FFmpeg Builds of libvvenc support
 
 Since 1st July 2024, Gyan added libvvenc support to FFmpeg.
 
 Since 31st July 2024, Martin Eesmaa authored and BtBn committed to add libvvenc support, see the commit and my attempted pull request:
 
-https://github.com/BtbN/FFmpeg-Builds/commit/9b364761580b399266172956eed9778211b094a8
+<https://github.com/BtbN/FFmpeg-Builds/commit/9b364761580b399266172956eed9778211b094a8>
 
-https://github.com/BtbN/FFmpeg-Builds/pull/393
+<https://github.com/BtbN/FFmpeg-Builds/pull/393>
 
-# Limitations of FFmpeg VVC encoder
+## Limitations of FFmpeg VVC encoder
 
 Before encoding VVC video codec, see limitations below.
 
@@ -82,7 +82,7 @@ HDR | ✅
 
 Built in libvvenc for FFmpeg command:
 
-```
+```bash
 ffmpeg -i example.mp4 -c:v libvvenc -qp 37 -preset slow example.266
 ```
 
@@ -90,13 +90,13 @@ For more options for libvvenc in FFmpeg VVCEasy version, type `ffmpeg_vvceasy -h
 
 Additionally... you can convert to VVC video without taking a much space for vvencapp by using pipe for example:
 
-```
+```bash
 ffmpeg -i example.mp4 -pix_fmt yuv420p -f yuv4mpegpipe - | vvencapp --y4m -i - --preset medium --qp 35 -o converted.266
 ```
 
 Converting from xHE-AAC to AAC audio:
 
-```
+```bash
 ffmpeg -c:a libfdk_aac -i mymusic.m4a -c:a aac -b:a 128k mymusic.aac
 ```
 
@@ -109,7 +109,8 @@ Good news, you can play .mp4 file after .h266 and audio format were merged into 
 About [xHE-AAC](https://www.iis.fraunhofer.de/en/ff/amm/broadcast-streaming/xheaac.html), now it's available decode support xHE-AAC of FFmpeg. [Exhale](https://gitlab.com/ecodis/exhale) (encoder) is free to use and open source, but if you want Fraunhofer IIS xHE-AAC, you can download [EZ CD Audio Converter](https://www.poikosoft.com/music-converter) for Windows only. You can also merge your encoded xHE-AAC audio into mp4 too.
 
 To make playable mp4 with audio and video together, you need VVC video encoded, audio file and [GPAC Nightly build](https://gpac.wp.imt.fr/downloads/gpac-nightly-builds/). Code for mp4box/gpac to merge VVC video encoded and audio file:
-```
+
+```bash
 mp4box -add video.266 -add audio.m4a -new convertedvvc.mp4
 ```
 
@@ -117,7 +118,7 @@ Containers are also acceptable video containers of .mkv, .mp4, .mov and more.
 
 For Linux and Mac OS users: Type correctly `MP4Box` for execute binary, but no small or big lettercase letters.
 
-# FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
+## FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
 
 [Windows (x64/x86/winarm64) & Linux (x64/arm64)](https://github.com/MartinEesmaa/FFmpeg-Builds/releases/tag/latest) - Automated builds every day at 12:00 (12 PM) UTC of FFmpeg VVCEasy custom builds.
 
@@ -142,7 +143,8 @@ Before automated builds started of Windows & Linux, here are the last links of m
 [Linux Arm64](https://mega.nz/file/al9kjBqL#W_WT-lNM8osAMsdQaKkpe6Ksd4fMO4GKXysMB5IjiJQ)
 
 ### Changelog
-```
+
+```text
 07/12/2025: Merged macOS universal architectures of FFmpeg VVCEasy from x86_64 and arm64 builds, updated FFmpeg latest, vvenc, vvdec and others. Very sorry again for almost six months hiatus.
 22/06/2025: Updated FFmpeg with latest, vvenc, vvdec and others. Again sorry for two months hiatus.
 06/04/2025: Updated FFmpeg with latest, vvenc, vvdec and others. Sorry for six months. (macOS only)
@@ -216,7 +218,7 @@ Before automated builds started of Windows & Linux, here are the last links of m
 29/08/2022: Brought back vvenc.
 ```
 
-# Mac OS downloaders (Important note)
+## Mac OS downloaders (Important note)
 
 Please note, this is not a malware of my compiled build, see the three screenshots to make run FFmpeg tools customized version
 
@@ -248,7 +250,7 @@ Requirements:
 
 Code to build FFmpeg VVC version:
 
-```
+```bash
 brew install libxml2 ffmpeg nasm
 git clone https://github.com/fraunhoferhhi/vvenc
 git clone https://github.com/fraunhoferhhi/vvdec
@@ -272,7 +274,7 @@ export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 make -j
 ```
 
-# Linux builders (Important for FFplay) (old, deprecated)
+## Linux builders (Important for FFplay) (old, deprecated)
 
 You can build using [Linux script](BuildFFmpeg.sh).
 
@@ -280,7 +282,7 @@ If you want actually play VVC file with FFplay on your local distro, you need to
 
 If compiling is success and finished, you can install FFmpeg VVC for using the code:
 
-```
+```bash
 mv ffmpeg ffmpeg_vvceasy
 mv ffplay ffplay_vvceasy
 mv ffprobe ffprobe_vvceasy
@@ -289,13 +291,14 @@ sudo cp ff*_vvceasy /usr/local/bin
 
 On Windows is also available to compile FFmpeg-VVC using MSYS2, but build of FFmpeg-VVC shell script is deprecated.
 
-# Compile FFmpeg-Builds for Windows & Linux
+## Compile FFmpeg-Builds for Windows & Linux
 
 If you want to compile by your own self FFmpeg with VVC support + xHE-AAC, here's what you need to do:
 
 You may need:
+
 - Any Linux distribution to cross-compile for Windows & Linux. Recommended architecture for x86_64 (amd64) to make faster compiling.
-- Docker Engine (https://docs.docker.com/engine/install/)
+- Docker Engine (<https://docs.docker.com/engine/install/>)
 - Git for clone repository to local computer.
 - Network connection for downloading repositories.
 
@@ -309,7 +312,7 @@ On Arch Linux, install: `sudo pacman -S docker`.
 
 Step 2: After installing Docker Engine, clone the repository following by:
 
-```
+```bash
 git clone --depth=1 https://github.com/MartinEesmaa/FFmpeg-Builds
 cd FFmpeg-Builds
 chmod +x *.sh
@@ -318,7 +321,8 @@ chmod +x *.sh
 If you have not installed Git, please install Git on your package manager on your Linux distribution.
 
 Step 3: Make image and build FFmpeg, example you can build one or two builds.
-```
+
+```bash
 ./makeimage.sh win64 nonfree && ./makeimage.sh linux64 nonfree
 ./build.sh win64 nonfree && ./build.sh linux64 nonfree
 ```
@@ -327,7 +331,7 @@ Non-free allows to enable Fraunhofer FDK feature, other licenses may not allow t
 
 **Tip 2:**: If you don't want make image, Martin Eesmaa's pre-package of non-free feature is only available. It saves your time without making it.
 
-```
+```bash
 ./build.sh win64 nonfree && ./build.sh linux64 nonfree
 ```
 
@@ -341,7 +345,7 @@ Step 4: After making image and building FFmpeg, you can look `artifacts` folder 
 
 To fix the issue and make grant access permission Docker to your user:
 
-```
+```bash
 sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
@@ -357,7 +361,7 @@ Press CTRL + C to cancel operation on your keyboard and try it again with make i
 
 3: If that did not work for you, please create an issue to VVCEasy or join communities of Discord, Revolt or/and Matrix to solve your problem.
 
-# Special thanks
+## Special thanks
 
 VVC programmers of FFmpeg:
 
@@ -377,4 +381,4 @@ AC4 decoder programmer to FFmpeg: [@richardpl](https://github.com/richardpl) (Pa
 
 AC4 support in mp4 container: [@AUGxhub](https://github.com/AUGxhub) Repository: https://github.com/AUGxhub/FFmpeg/tree/patch-1
 
--   Martin Eesmaa
+- Martin Eesmaa
