@@ -9,7 +9,8 @@ Otherwise, if you put VVC file (which is all together of one file) without segme
 To make probably decoded well for segments, here is an example of this:
 
 Example of code (1 second/24 frames). After first segment (1 sec), it will go up 1 second (total frames 48):
-```
+
+```bash
 vvencapp --qp 34 -i out.yuv -s 854x480 -r 24 --preset slow --threads 16 --tier high --segment mid -f 24 -fs 24 -o EXTREME-1.266
 ```
 
@@ -26,7 +27,8 @@ Total is three seconds and three segments. Example of my segments, including log
 [VVC Segments](https://github.com/MartinEesmaa/VVCEasy/files/8308682/BBBVVCTHREESEC.zip)
 
 JSON:
-```
+
+```json
 {
   "Name": "Big Buck Bunny Test Video Three Sec",
   "NrSegments": 2,
@@ -42,7 +44,7 @@ JSON:
 }
 ```
 
-# Bitmovin VVDec Player Downloads (including build instructions):
+# Bitmovin VVDec Player Downloads (including build instructions)
 
 [Windows Pre-Builded](https://www.dropbox.com/scl/fi/x4v1qb60u8zp505dtx8p6/BitVVDecPlayerWIN.7z?rlkey=gs9duytd6h1sos69o53rw8vyy)
 
@@ -54,7 +56,7 @@ Want to build VVDec (.dll (Windows)/.dylib (Mac OS)/.so (Linux)) yourself?
 
 Here is a code:
 
-```
+```bash
 git clone https://github.com/fraunhoferhhi/vvdec
 cd vvdec
 mkdir build && cd build
@@ -76,7 +78,8 @@ Linux: libvvdecLib.so
 
 This program requires architecture of x86_64/AMD64.
 
-### Windows
+## Windows
+
 Operating System: Windows 7 / Windows Server 2012 and later versions
 
 Requirements to run program: Microsoft Visual C++ Redistributable 2015-2017-2019-2022 and vvdec.dll
@@ -87,7 +90,8 @@ Offline availability for local segments
 
 ---
 
-### Mac OS
+## Mac OS
+
 Operating System: macOS 10.15 and later versions.
 
 Requirements to run program: Qt framework (version 5) and libvvdec.dylib
@@ -98,7 +102,8 @@ Offline availability for local segments
 
 ---
 
-### Linux
+## Linux from other distributions
+
 Operating System: Linux 3.20+ (Ubuntu 12.04 LTS and later versions)
 
 Requirements to run program: Qt framework (version 5), glib (build-essential) and libvvdecLib.so
@@ -109,18 +114,24 @@ Offline availability for local segments
 
 # Bitmovin VVDec Player (Test compatibility)
 
-### Windows 7+: 
+## Windows 7+
 
 ![okd933](https://user-images.githubusercontent.com/88035011/158054088-5d28de91-c2f8-40e4-b1e0-e0a0788fab93.gif)
--------------------------
-### macOS 10.15+:
+
+---
+
+## macOS 10.15+
 
 ![Macosbitvvdecplayer](https://user-images.githubusercontent.com/88035011/160053200-9f986127-46a5-48ca-b2b3-ba3540afa953.png)
--------------------------
-### Linux: 
+
+---
+
+## Linux
 
 ![LinuxBITVVCTest](https://user-images.githubusercontent.com/88035011/158130385-0f475e1f-9630-4623-acc4-6b0c842b6a35.gif)
--------------------------
+
+---
+
 Tests will be coming sooner.
 
 - Martin Eesmaa

@@ -18,12 +18,12 @@ x86_64 - API 21 (64-bit tablets only)
 
 TIP: You can install my built applications:
 
-```
+```bash
 chmod +x vvdecapp uvg266 vvencapp
 cp vvencapp vvdecapp uvg266 $PREFIX/bin
 ```
 
-### vvencapp encoder (Fraunhofer HHI)
+## vvencapp encoder (Fraunhofer HHI)
 
 Screenshot (tested my phone):
 
@@ -42,7 +42,8 @@ AndroidUVG266.7z - 10-bit input/encoder only.
 AndroidUVG266-8bit.7z - 8-bit input/encoder only.
 
 If you want pipe from FFmpeg to uvg266, you can do command:
-```
+
+```bash
 ffmpeg -i example.mp4 -f yuv4mpegpipe -pix_fmt yuv420p10 -strict -1 - | uvg266 -i - --input-file-format y4m --input-bitdepth 10 -o converted.266
 ```
 
