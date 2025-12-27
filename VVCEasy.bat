@@ -22,7 +22,7 @@ cls
 
 ver | find "DOS" > nul
 if %errorlevel% equ 0 (
-    goto doserror
+    goto error
 ) else (
     ver | find "95" > nul | goto error
     ver | find "98" > nul | goto error
@@ -398,7 +398,7 @@ echo Checking SHA256 checksums for Windows VVC binaries...
 setlocal enabledelayedexpansion
 set "allok=1"
 
-for %%F in (vvdecapp.exe vvencapp.exe vvencFFapp.exe vvencinterfacetest.exe vvenclibtest.exe vvenc_unit_test.exe) do (
+for %%F in (vvdecapp.exe vvencapp.exe vvencFFapp.exe vvencinterfacetest.exe vvenclibtest.exe vvenc_unit_test.exe vvdec_unit_test.exe) do (
     for /f "tokens=1,2" %%A in ('findstr /i "%bit%/%%F" WindowsVVC.sha256') do (
         certutil -hashfile %bit%\%%F SHA256 | find /i "%%A" >nul
         if errorlevel 1 (
@@ -579,7 +579,7 @@ echo Requires build to Windows VVC by CMake 3.13.0+ (need pathed environment) an
 echo Requires download vvenc and vvdec for (Git for Windows).
 echo Yes: Build. No: Go back to the main menu.
 echo Y/N?
-set /p main1234= Answer: 
+set /p main1234=Answer:
 if /I "%main1234%"=="Y" goto installmain123
 if /I "%main1234%"=="N" goto start
 echo %invalidletter%
@@ -596,9 +596,6 @@ for %%d in (vvenc vvdec) do (
     cmake --build buildvvc-temp\%%d --config Release
     move /y "%%d\bin\release-static\*.exe" "build\%bit%"
 )
-goto successnow
-
-:successnow
 echo.
 echo.
 echo Success build of vvenc and vvdec on Windows.
@@ -610,13 +607,7 @@ pause
 goto start
 
 :error
-echo Your Windows version is unsupported and outdated which does not work to run with VVC binaries and others too.
-echo This batchfile script requires to run Windows XP and later.
-pause
-exit
-
-:doserror
-echo DOS is unsupported and outdated, which does not work to run with VVC binaries and others too.
+echo Your Windows/DOS version is unsupported and outdated which does not work to run with VVC binaries and others too.
 echo MS-DOS, DOSBox and FreeDOS were also not supported.
 echo This batchfile script requires to run Windows XP and later.
 pause
