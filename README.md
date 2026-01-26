@@ -77,6 +77,8 @@ Experimental GitLab mirror is available for alternative purposes or anything:
 
 - [GUI applications easy](#gui-applications-easy)
 
+- [Alternative bindings of CLI](#alternative-bindings-of-cli)
+
 - [Hard option (deprecated)](#hard-option-deprecated)
 
 - [FAQ](#faq-frequently-asked-questions)
@@ -232,6 +234,15 @@ These VVC programs for encoding/decoding are listed:
 | [VVenCguiEx](https://github.com/rigaya/VVenCguiEx) | Original Japanese language only for instructions and application (you can still translate), only encoder & Windows only, requires Aviutl (this may be medium or hard) | rigaya |
 | [VVConvert](https://vvconvert.app/) | Only encoder, encodes to VVC raw bitstream from any FFmpeg compatible video codecs, requires FFmpeg to open input video files | Alec Carter ([source code](https://github.com/alectr0/VVConvert)) |
 | [Av1ador](https://github.com/porcino/Av1ador) | This program allows to encode VVC while transcoding by preview and comparison from original video, includes other encoders as well. | porcino |
+
+## Alternative bindings of CLI
+
+| Programs with website or GitHub link | Note | Creator |
+| --- | --- | --- |
+| [wrenc](https://github.com/hjmkt/wrenc) | An experimental H.266/VVC Rust encoder (last updated October 2022) | hjkmt |
+| [xin26x](https://github.com/pigpeppa/xin26x) | Video Encoder for Now and Next Decade (please note it is partially open source and can only built for Windows) | pigpeppa |
+| [vvdec-rs](https://github.com/cadubentzen/vvdec-rs) | Rust bindings for VVdeC | cadubentzen |
+| [vvenc-rs](https://github.com/cadubentzen/vvenc-rs) | Rust bindings for VVenC | cadubentzen |
 
 # Hard option (deprecated)
 
