@@ -36,6 +36,7 @@ Windows/Mac/Linux source run (C#): Bin/Release or Debug/netX.x/VVCEasy.exe (afte
 | Matrix chat ![Matrix](https://img.shields.io/matrix/vvceasy:matrix.org) | <https://matrix.to/#/#vvceasy:matrix.org> |
 | Revolt ![Revolt](https://img.shields.io/revolt/invite/0Y10qHzP) | <https://app.revolt.chat/invite/0Y10qHzP> |
 | Discord ![Discord](https://img.shields.io/discord/974611343237869619) | <https://discord.gg/t54cADTbWW> |
+| Reddit | <https://reddit.com/r/VVC> |
 | Reddit | <https://reddit.com/r/VVCEasy> |
 | lemmy.ml (c/VVC) | <https://lemmy.ml/c/vvc> |
 | lemmy.ml (c/VVCEasy) | <https://lemmy.ml/c/vvceasy> |
@@ -243,6 +244,7 @@ These VVC programs for encoding/decoding are listed:
 | [xin26x](https://github.com/pigpeppa/xin26x) | Video Encoder for Now and Next Decade (please note it is partially open source and can only built for Windows) | pigpeppa |
 | [vvdec-rs](https://github.com/cadubentzen/vvdec-rs) | Rust bindings for VVdeC | cadubentzen |
 | [vvenc-rs](https://github.com/cadubentzen/vvenc-rs) | Rust bindings for VVenC | cadubentzen |
+| [OpenVVC](https://github.com/OpenVVC/OpenVVC) | C binding of VVC decoder | OpenVVC (maintainer) |
 
 # Hard option (deprecated)
 
