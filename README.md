@@ -29,26 +29,35 @@ Windows source run (Batch-file) (for encoding/decoding, it needs to be manually 
 
 Windows/Mac/Linux source run (C#): Bin/Release or Debug/netX.x/VVCEasy.exe (after building the C# project), which requires VVCEasy.dll to run the console application.
 
-### Community
+## Community
 
 | Communities | Link |
 | --- | --- |
 | Matrix chat ![Matrix](https://img.shields.io/matrix/vvceasy:matrix.org) | <https://matrix.to/#/#vvceasy:matrix.org> |
-| Revolt ![Revolt](https://img.shields.io/revolt/invite/0Y10qHzP) | <https://app.revolt.chat/invite/0Y10qHzP> |
 | Discord ![Discord](https://img.shields.io/discord/974611343237869619) | <https://discord.gg/t54cADTbWW> |
-| Reddit | <https://reddit.com/r/VVC> |
+| Reddit (r/VVC) | <https://reddit.com/r/VVC> |
+| AV1 Discord Community (below note) | <https://discord.gg/HSBxne3> |
+
+> [!NOTE]
+> Please note my first language is Estonian and not native to the English language. Some English words may be incorrect and incomprehensible. Also some members of AV1 Discord Community including me can help about VVC issues.
+
+Experimental GitLab mirror is available for alternative purposes or anything:
+
+<https://gitlab.com/MartinEesmaa/VVCEasy>
+
+### Deprecated communities
+
+Deprecated communities are inactive due to no more new posts/messages recently.
+However you're welcome to post there or/and direct message for little help. :)
+
+| Communities | Link |
+| --- | --- |
+| Revolt ![Revolt](https://img.shields.io/revolt/invite/0Y10qHzP) | <https://app.revolt.chat/invite/0Y10qHzP> |
 | Reddit | <https://reddit.com/r/VVCEasy> |
 | lemmy.ml (c/VVC) | <https://lemmy.ml/c/vvc> |
 | lemmy.ml (c/VVCEasy) | <https://lemmy.ml/c/vvceasy> |
 | lemmy.world (c/VVC) | <https://lemmy.world/c/vvc> |
 | lemmy.world (c/VVCEasy) | <https://lemmy.world/c/vvceasy> |
-
-> [!NOTE]
-> Please note my first language is Estonian and not native to the English language. Some English words may be incorrect and incomprehensible.
-
-Experimental GitLab mirror is available for alternative purposes or anything:
-
-<https://gitlab.com/MartinEesmaa/VVCEasy>
 
 # All lists
 
