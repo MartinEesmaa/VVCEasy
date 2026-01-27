@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1200"
+   height="200"
+   viewBox="0 0 317.49999 52.916666"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="VVCEasy-banner.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title11">VVCEasy new banner</title>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:lockguides="false"
+     inkscape:zoom="1.0128998"
+     inkscape:cx="629.87474"
+     inkscape:cy="153.51963"
+     inkscape:window-width="2560"
+     inkscape:window-height="1351"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient4"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#e1ffff;stop-opacity:1;"
+         offset="0"
+         id="stop11" />
+      <stop
+         style="stop-color:#d4ffc9;stop-opacity:1;"
+         offset="1"
+         id="stop10" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient26"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#cbff00;stop-opacity:1;"
+         offset="0"
+         id="stop25" />
+      <stop
+         style="stop-color:#f3d81f;stop-opacity:1;"
+         offset="1"
+         id="stop26" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#40ff00;stop-opacity:1;"
+         offset="0"
+         id="stop8" />
+      <stop
+         style="stop-color:#208900;stop-opacity:1;"
+         offset="1"
+         id="stop9" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient1"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#0039ff;stop-opacity:1;"
+         offset="0"
+         id="stop1" />
+      <stop
+         style="stop-color:#89dfff;stop-opacity:1;"
+         offset="0.35664889"
+         id="stop3" />
+      <stop
+         style="stop-color:#4571c2;stop-opacity:1;"
+         offset="0.75"
+         id="stop4" />
+      <stop
+         style="stop-color:#002780;stop-opacity:1;"
+         offset="1"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1"
+       id="linearGradient2"
+       x1="149.15303"
+       y1="4.7018471"
+       x2="149.41425"
+       y2="48.063324"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.82094601,0,0,0.95556589,26.14873,0.74882076)" />
+    <filter
+       inkscape:label="Felt Feather"
+       inkscape:menu="Blurs"
+       inkscape:menu-tooltip="Overlays two copies with different blur amounts and modifiable blend and composite"
+       style="color-interpolation-filters:sRGB;"
+       id="filter91"
+       x="-0.068301414"
+       y="-1.3933496"
+       width="1.1366028"
+       height="3.7866991">
+      <feGaussianBlur
+         stdDeviation="5"
+         result="fbSourceGraphic"
+         id="feGaussianBlur90" />
+      <feGaussianBlur
+         stdDeviation="0.01"
+         in="SourceGraphic"
+         result="result1"
+         id="feGaussianBlur91" />
+      <feComposite
+         in2="result1"
+         operator="arithmetic"
+         in="fbSourceGraphic"
+         k2="0.5"
+         k3="0.5"
+         result="result2"
+         id="feComposite91" />
+      <feBlend
+         in2="fbSourceGraphic"
+         mode="normal"
+         result="fbSourceGraphic"
+         id="feBlend91" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix146" />
+      <feGaussianBlur
+         id="feGaussianBlur146"
+         stdDeviation="3.53824 1.65079"
+         result="blur"
+         in="fbSourceGraphic" />
+      <feComposite
+         id="feComposite146"
+         in="fbSourceGraphic"
+         in2="blur"
+         operator="atop"
+         result="composite1" />
+      <feComposite
+         id="feComposite147"
+         in2="composite1"
+         operator="in"
+         result="composite2" />
+      <feComposite
+         id="feComposite148"
+         in2="composite2"
+         operator="in"
+         result="composite3" />
+      <feTurbulence
+         id="feTurbulence148"
+         type="fractalNoise"
+         numOctaves="2"
+         seed="1"
+         baseFrequency="0.211735 0.05"
+         result="turbulence" />
+      <feDisplacementMap
+         id="feDisplacementMap148"
+         in="composite3"
+         in2="turbulence"
+         xChannelSelector="R"
+         scale="80.805"
+         yChannelSelector="G"
+         result="map" />
+      <feColorMatrix
+         id="feColorMatrix148"
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 5.71429 -0 "
+         result="colormatrix" />
+      <feComposite
+         id="feComposite149"
+         in="composite3"
+         in2="colormatrix"
+         operator="atop"
+         result="composite4" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5"
+       id="linearGradient6"
+       x1="41.152245"
+       y1="94.567612"
+       x2="147.4678"
+       y2="94.567612"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(3.2906284,0,0,3.2906284,-68.207859,-289.34602)" />
+    <linearGradient
+       id="linearGradient5"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#f6ff00;stop-opacity:1;"
+         offset="0"
+         id="stop5" />
+      <stop
+         style="stop-color:#e8b13c;stop-opacity:1;"
+         offset="0.5"
+         id="stop7" />
+      <stop
+         style="stop-color:#ff9314;stop-opacity:1;"
+         offset="1"
+         id="stop6" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3"
+       id="radialGradient9"
+       cx="-7.0979818"
+       cy="-11.418244"
+       fx="-7.0979818"
+       fy="-11.418244"
+       r="36.615134"
+       gradientTransform="matrix(1,0,0,0.95666706,0,-0.49478613)"
+       gradientUnits="userSpaceOnUse" />
+    <filter
+       inkscape:label="Drop Shadow"
+       inkscape:menu="Bevels"
+       inkscape:menu-tooltip="Basic specular bevel to use for building textures"
+       style="color-interpolation-filters:sRGB;"
+       id="filter23"
+       x="-0.26301396"
+       y="-0.99672465"
+       width="1.494418"
+       height="3.2064067">
+      <feGaussianBlur
+         stdDeviation="6"
+         in="SourceGraphic"
+         result="result0"
+         id="feGaussianBlur21" />
+      <feDiffuseLighting
+         lighting-color="rgb(255,255,255)"
+         diffuseConstant="1"
+         surfaceScale="4"
+         result="result5"
+         id="feDiffuseLighting21">
+        <feDistantLight
+           elevation="45"
+           azimuth="235"
+           id="feDistantLight21" />
+      </feDiffuseLighting>
+      <feComposite
+         k1="1.4"
+         in2="SourceGraphic"
+         in="result5"
+         result="fbSourceGraphic"
+         operator="arithmetic"
+         id="feComposite21" />
+      <feGaussianBlur
+         result="result0"
+         in="fbSourceGraphic"
+         stdDeviation="6"
+         id="feGaussianBlur22" />
+      <feSpecularLighting
+         specularExponent="25"
+         specularConstant="1"
+         surfaceScale="4"
+         lighting-color="rgb(255,255,255)"
+         result="result1"
+         in="result0"
+         id="feSpecularLighting22">
+        <feDistantLight
+           azimuth="235"
+           elevation="45"
+           id="feDistantLight22" />
+      </feSpecularLighting>
+      <feComposite
+         k3="1"
+         k2="1"
+         operator="arithmetic"
+         in="fbSourceGraphic"
+         in2="result1"
+         result="result4"
+         id="feComposite22" />
+      <feComposite
+         operator="in"
+         result="fbSourceGraphic"
+         in2="SourceGraphic"
+         in="result4"
+         id="feComposite23" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix24" />
+      <feFlood
+         id="feFlood24"
+         result="flood"
+         in="fbSourceGraphic"
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)" />
+      <feGaussianBlur
+         id="feGaussianBlur24"
+         result="blur"
+         in="fbSourceGraphic"
+         stdDeviation="6.079027" />
+      <feOffset
+         id="feOffset24"
+         result="offset"
+         in="blur"
+         dx="-5.927052"
+         dy="9.270516" />
+      <feComposite
+         id="feComposite24"
+         result="comp1"
+         operator="in"
+         in="flood"
+         in2="offset" />
+      <feComposite
+         id="feComposite25"
+         result="comp2"
+         operator="over"
+         in="fbSourceGraphic"
+         in2="comp1" />
+    </filter>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient26"
+       id="radialGradient9-9"
+       cx="-7.0979819"
+       cy="-11.418244"
+       fx="-7.0979819"
+       fy="-11.418244"
+       r="36.615135"
+       gradientTransform="matrix(1,0,0,0.95666706,0,-0.49478613)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4"
+       id="linearGradient11"
+       x1="207.60222"
+       y1="47.761204"
+       x2="286.47001"
+       y2="47.761204"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Kiht 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:url(#linearGradient2);fill-opacity:1;stroke-width:0.795361"
+       id="rect1"
+       width="262.90634"
+       height="52.916668"
+       x="25.076517"
+       y="0" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.898001;filter:url(#filter91)"
+       id="path90"
+       d="m 14.809597,29.326449 c 5.639239,-1.02674 11.337781,-1.684721 17.027262,-2.360666 6.965743,-0.866732 13.960697,-1.407339 20.972309,-1.696384 4.120636,-0.15255 8.244191,-0.151651 12.366852,-0.134897 3.068701,-0.1016 6.068034,0.625834 9.054362,1.228031 5.101285,1.024396 10.235559,2.01303 15.435077,2.379348 1.241793,0.08749 2.486946,0.117975 3.730416,0.176964 7.683325,0.313568 15.375525,0.08093 23.061015,-0.03081 5.42393,-0.0536 10.84553,-0.224351 16.26913,-0.302983 4.29078,-0.04533 8.58195,-0.07698 12.87293,-0.05571 5.2888,0.02959 10.57233,0.189606 15.85438,0.448868 4.14912,0.207331 8.30301,0.30743 12.4571,0.278974 2.80734,0.139775 5.36798,-0.411961 8.04348,-1.147677 0.47277,-0.179843 0.60981,-0.315161 0.56663,-0.804527 -0.007,-0.08469 -0.0472,-0.167754 -0.0377,-0.25224 0.0377,-0.335892 0.16404,-0.479962 0.33073,-0.765686 0.72414,-0.91998 1.32254,-0.897162 2.3876,-0.58855 1.09236,0.580131 2.11593,1.313397 3.2488,1.818071 0.25984,0.115756 0.53313,0.198607 0.79969,0.297908 1.82704,0.62879 3.725,0.975984 5.64472,1.144738 2.29663,0.186831 4.60045,0.288941 6.90352,0.356804 2.40146,0.116242 4.80047,0.276246 7.1908,0.535914 3.97047,0.605538 7.97352,0.895662 11.9786,1.145238 4.26714,0.300257 8.54137,0.489831 12.81742,0.599046 3.43055,0.05427 6.86058,0.04357 10.28947,0.170468 2.37035,0.102148 4.74194,0.113969 7.10887,0.282824 2.74792,0.161306 5.48487,0.450567 8.2295,0.653907 2.75759,0.143013 5.51363,0.319876 8.27206,0.447606 2.47179,0.101987 4.9466,0.09533 7.42009,0.100256 0.47815,-7.94e-4 0.95628,-0.0019 1.43443,-0.0024 1.2753,-0.0021 1.8161,-0.02323 3.10537,0.0618 1.64856,0.108723 3.29456,0.321329 4.9367,0.498653 2.4847,0.299278 4.98467,0.415025 7.48487,0.474863 1.73467,0.03001 3.46956,0.04036 5.20444,0.04447 1.23989,-5.29e-4 2.47973,-0.0034 3.71962,-0.0024 1.01663,0.05742 2.01152,-0.04919 3.00347,-0.257464 0.87378,-0.249761 1.7663,-0.432141 2.63871,-0.684667 0.96121,-0.237101 1.94363,-0.35578 2.89357,-0.640138 0.8682,-0.266314 1.65581,-0.724244 2.44702,-1.158722 0,0 -3.29089,-2.145821 -3.29089,-2.145821 v 0 c -0.76753,0.427204 -1.54564,0.850461 -2.39844,1.083765 -0.95777,0.258895 -1.94557,0.368834 -2.9023,0.631822 -0.87043,0.23489 -1.74606,0.452732 -2.62324,0.660882 -0.97007,0.191209 -1.94939,0.243271 -2.93788,0.207608 -1.23716,0.0031 -2.4743,0.0036 -3.71147,0.0085 -1.71616,0.0088 -3.43259,0.01897 -5.14855,-0.01603 -2.47631,-0.06056 -4.9508,-0.183062 -7.41357,-0.460565 -1.64645,-0.168783 -3.29549,-0.373711 -4.94787,-0.47584 -1.2819,-0.07923 -1.866,-0.06013 -3.13309,-0.06453 -0.48196,-0.0016 -0.9639,-0.0044 -1.44587,-0.0066 -2.47607,-0.01093 -4.9526,-0.02334 -7.42703,-0.124928 -2.74524,-0.117869 -5.48909,-0.271293 -8.23196,-0.433242 -2.75371,-0.218493 -5.50205,-0.500242 -8.25949,-0.673021 -2.36407,-0.163914 -4.73319,-0.174733 -7.10101,-0.258926 -3.41001,-0.09166 -6.82116,-0.0448 -10.23155,-0.124595 -4.26556,-0.099 -8.52979,-0.263012 -12.78455,-0.593093 -4.02435,-0.262789 -8.04585,-0.569468 -12.03216,-1.206127 -2.4178,-0.268308 -4.84435,-0.457295 -7.27515,-0.559228 -2.29835,-0.05911 -4.59848,-0.136314 -6.88627,-0.377963 -1.90437,-0.207698 -3.79424,-0.557567 -5.59155,-1.242462 -0.74407,-0.321167 -1.43939,-0.684715 -2.14655,-1.080021 -0.15287,-0.08546 -1.14701,-0.654336 -1.29577,-0.72661 -0.22075,-0.107254 -0.45271,-0.189698 -0.67907,-0.284548 -1.22156,-0.193577 -1.91132,-0.03212 -2.66848,0.994262 -0.24182,0.408633 -0.31222,0.463367 -0.43619,0.920101 -0.0396,0.145802 -0.11151,0.298635 -0.0793,0.446239 0.0126,0.05791 0.12052,-0.01053 0.17774,0.0049 0.0161,0.0043 0.0296,0.03756 0.0161,0.04738 -0.10216,0.07433 -0.22145,0.121708 -0.33218,0.18256 -1.03216,0.307152 -2.0756,0.609488 -3.13644,0.802764 -1.55863,0.283964 -3.14059,0.343045 -4.7215,0.349456 -4.13476,0.02973 -8.26853,-0.09399 -12.39971,-0.260532 -5.2799,-0.207539 -10.55917,-0.39387 -15.84377,-0.426162 -4.30218,-0.07417 -8.60477,-0.04117 -12.90674,0.04421 -5.37899,0.112323 -10.7563,0.286303 -16.13522,0.399534 -7.66942,0.14629 -15.349082,0.404791 -23.015535,0.03224 -1.268084,-0.08331 -2.537531,-0.147981 -3.804253,-0.249922 -5.205322,-0.418907 -10.3588,-1.327682 -15.455841,-2.443382 -3.046834,-0.659453 -6.101827,-1.447798 -9.246632,-1.274318 -4.060486,0.03126 -8.120303,0.135694 -12.1779,0.290689 -6.985686,0.325036 -13.950773,0.92432 -20.89177,1.785496 -5.807525,0.675587 -11.609214,1.403892 -17.418273,2.064057 z"
+       transform="matrix(0.76281308,0,0,1.1984139,33.149559,-7.3735601)" />
+    <text
+       xml:space="preserve"
+       style="font-size:46.4344px;line-height:1;font-family:'Cascadia Code';-inkscape-font-specification:'Cascadia Code';letter-spacing:0px;fill:url(#linearGradient6);stroke-width:2.95499;filter:url(#filter23)"
+       x="64.30674"
+       y="38.890957"
+       id="text5"><tspan
+         sodipodi:role="line"
+         id="tspan5"
+         style="fill:url(#linearGradient6);stroke-width:2.95499"
+         x="64.30674"
+         y="38.890957">VVCEasy</tspan></text>
+    <path
+       sodipodi:type="star"
+       style="fill:url(#radialGradient9);fill-opacity:1;stroke-width:0.898001"
+       id="path1"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="-7.3139844"
+       sodipodi:cy="-14.889182"
+       sodipodi:r1="38.505775"
+       sodipodi:r2="19.252886"
+       sodipodi:arg1="0.29600517"
+       sodipodi:arg2="0.9243237"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 29.517152,-3.6569915 4.2834643,0.47873244 -6.6149853,23.610248 -18.345931,0.88959379 -43.713116,-2.3274161 -25.729551,-20.505277 -30.508884,-45.625014 -7.6634839,-34.138895 14.749911,-46.446737 10.88558,-21.170064 Z"
+       inkscape:transform-center-x="-0.10967578"
+       inkscape:transform-center-y="1.7623738"
+       transform="matrix(0.50775143,0,0,0.50775143,26.545608,32.257995)" />
+    <path
+       sodipodi:type="star"
+       style="fill:url(#radialGradient9-9);fill-opacity:1;stroke-width:0.898001"
+       id="path1-1"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="-7.3139844"
+       sodipodi:cy="-14.889182"
+       sodipodi:r1="38.505775"
+       sodipodi:r2="19.252886"
+       sodipodi:arg1="0.29600517"
+       sodipodi:arg2="0.9243237"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 29.517152,-3.6569915 4.2834643,0.47873244 -6.6149853,23.610248 -18.345931,0.88959379 -43.713116,-2.3274161 -25.729551,-20.505277 -30.508884,-45.625014 -7.6634839,-34.138895 14.749911,-46.446737 10.88558,-21.170064 Z"
+       inkscape:transform-center-x="-0.1096758"
+       inkscape:transform-center-y="1.7623768"
+       transform="matrix(0.50775143,0,0,0.50775143,293.59983,31.734939)" />
+    <text
+       xml:space="preserve"
+       style="font-size:10.468px;line-height:1;font-family:'Cascadia Code';-inkscape-font-specification:'Cascadia Code';letter-spacing:0px;fill:url(#linearGradient11);fill-opacity:1;stroke-width:0.37;stroke-dasharray:none"
+       x="206.94797"
+       y="51.604923"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         style="stroke-width:0.37;fill:url(#linearGradient11);fill-opacity:1;stroke-dasharray:none"
+         x="206.94797"
+         y="51.604923">Martin Eesmaa</tspan></text>
+  </g>
+  <metadata
+     id="metadata11">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>VVCEasy new banner</dc:title>
+        <dc:date>27.01.2026</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Martin Eesmaa</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>CC-BY-SA 4.0 (all rights reversed by Martin Eesmaa)</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>https://github.com/MartinEesmaa/VVCEasy</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

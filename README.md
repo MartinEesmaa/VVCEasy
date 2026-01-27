@@ -1,4 +1,4 @@
-![VVCEasy](VVCEasy.png)
+![VVCEasy](VVCEasy-banner.png)
 ![GitHub all releases](https://img.shields.io/github/downloads/MartinEesmaa/VVCEasy/total)
 ![GitHub](https://img.shields.io/github/license/MartinEesmaa/VVCEasy)
 [![Build](https://github.com/MartinEesmaa/VVCEasy/actions/workflows/dotnet.yml/badge.svg)](
