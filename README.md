@@ -35,6 +35,7 @@ Windows/Mac/Linux source run (C#): Bin/Release or Debug/netX.x/VVCEasy.exe (afte
 | --- | --- |
 | Matrix chat ![Matrix](https://img.shields.io/matrix/vvceasy:matrix.org) | <https://matrix.to/#/#vvceasy:matrix.org> |
 | Discord ![Discord](https://img.shields.io/discord/974611343237869619) | <https://discord.gg/t54cADTbWW> |
+| Fluxer.app | <https://fluxer.gg/On1FkIkb> |
 | Reddit (r/VVC) | <https://reddit.com/r/VVC> |
 | AV1 Discord Community (below note) | <https://discord.gg/HSBxne3> |
 
