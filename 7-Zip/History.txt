@@ -5,11 +5,20 @@ This file contains information about changes for latest versions of 7-Zip.
 The full changelog file can be downloaded here:
 https://7-zip.org/history.txt
 
+26.00          2026-02-12
+-------------------------
+- improved code for ZIP, CPIO, RAR, UFD, QCOW, Compound.
+- 7-Zip File Manager: improved sorting order of the file list. It uses file name as secondary sorting key.
+- 7-Zip File Manager: improved Benchmark to support systems with more than 64 CPU threads.
+- the bug was fixed: 7-Zip could not correctly extract TAR archives containing sparse files.
+- some bugs were fixed.
+
+
 25.01          2025-08-03
 -------------------------
-- The code for handling symbolic links has been changed 
+- CVE-2025-55188 : The code for handling symbolic links has been changed
   to provide greater security when extracting files from archives.
-  Command line switch -snld20 can be used to bypass default security 
+  Command line switch -snld20 can be used to bypass default security
   checks when creating symbolic links.
 
 
@@ -22,9 +31,11 @@ https://7-zip.org/history.txt
 - bzip2 compression speed was increased by 15-40%.
 - deflate (zip/gz) compression speed was increased by 1-3%.
 - improved support for zip, cpio and fat archives.
-- fixed some bugs and vulnerabilities.
-- the bug was fixed : CVE-2025-53816 : 7-Zip could work incorrectly for some incorrect RAR archives. 
-- the bug was fixed : CVE-2025-53817 : 7-Zip could crash for some incorrect COM (Compound File) archives. 
+- fixed some bugs.
+- CVE-2025-11001 and CVE-2025-11002 : A vulnerability was fixed for symbolic links processing,
+  when extracting files from archives.
+- the bug was fixed : CVE-2025-53816 : 7-Zip could work incorrectly for some incorrect RAR archives.
+- the bug was fixed : CVE-2025-53817 : 7-Zip could crash for some incorrect COM (Compound File) archives.
 
 
 24.09          2024-11-29
