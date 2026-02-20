@@ -491,8 +491,14 @@ wget -q https://www.dropbox.com/scl/fi/4iy06ektd7ux6squnrkam/SpriteFright.json?r
 wget -q https://www.dropbox.com/scl/fi/n65bw1iiv2skv16l49013/CoffeeRun.json?rlkey=63w013tayac9nwpr6azznina2 -O CoffeeRun.json
 echo Extracting from archived file...
 %sevenzip% x vvcBlogPostDemo.zip -aoa
+echo Would you like to delete temp archived file?
+echo If you're unsure, archived compressed file will be kept.
+set /p deletetemp=Answer:
+if /I "%deletetemp%"=="N" goto afterthat
+if /I "%deletetemp%"=="Y"
 echo Deleting archived file...
 del /q vvcBlogPostDemo.zip
+:afterthat
 echo Okay, you configured manually success. Please run vvDecPlayer on your computer.
 echo Go to the File tab, then Open JSON manifest in BitVVDecPlayer...
 echo Select JSON file to play VVC movie and enjoy it.
