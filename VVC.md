@@ -51,6 +51,7 @@ uvg266 is only scalable encoder which helps to make it faster for older & newer 
 * Linux kernel 3.2.0 and later (eg. Ubuntu 12.04 LTS and later)
 * BSD (FreeBSD & x64 only)
 * Android 4.1 (API 16, Jelly Bean) and later (arm64 & x86_64 since Android 5.0)
+* Haiku OS (x86_64 only)
 
 **uvg266**:
 
@@ -59,6 +60,7 @@ uvg266 is only scalable encoder which helps to make it faster for older & newer 
 * Linux kernel 3.2.0 and later (eg. Ubuntu 12.04 LTS and later)
 * BSD (FreeBSD & x64 only)
 * Android 4.3 (API 18, Jelly Bean) and later (arm64 & x86_64 since Android 5.0)
+* Haiku OS (x86_64 only)
 
 ### Downloads
 
