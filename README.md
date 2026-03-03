@@ -15,7 +15,7 @@ https://github.com/MartinEesmaa/VVCEasy/actions/workflows/dotnet.yml)
 
 VVCEasy is that you don't have to compile or/and coding to encode VVC (known as Versatile Video Codec). Simple, Easy, Encode and Decode.
 
-It supports Windows, macOS, Linux, BSD, Android & WebAssembly for VVCEasy builds.
+It supports Windows, macOS, Linux, BSD, Android, WebAssembly & Haiku OS for VVCEasy builds.
 
 From October 20, 2021, to June 23, 2022, VVCEasy was in pre-release and construction mode.
 

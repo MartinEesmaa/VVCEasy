@@ -7,6 +7,7 @@ LinuxVVC/x*
 AndroidVVC/arm*
 AndroidVVC/x*
 BSDVVC/vv*
+HaikuVVC/vv*
 
 uvg266/Windows/Win32
 uvg266/Windows/x64
@@ -14,6 +15,7 @@ uvg266/macOS/uvg266
 uvg266/Linux/arm*
 uvg266/Linux/x*
 uvg266/BSD/uvg266
+uvg266/Haiku/uvg266
 
 [Oo]bj/
 [Bb]in/
