@@ -96,6 +96,7 @@ All compiled builds are compressed files on 7-Zip.
 | Linux | [x86_64/x86/arm64/armv7a](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/uvg266/Linux/uvg266-Linux.7z) | [Download](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/uvg266/Linux/uvg266-Linux.7z) |
 | BSD | [x86_64](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/BSDVVC/BSDVVC.7z) | [Download](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/uvg266/BSD/uvg266-BSD.7z) |
 | Android | [x86_64/x86/arm64/armv7a](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/AndroidVVC/AndroidVVC.7z) | [Download](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/AndroidVVC/AndroidUVG266-8bit.7z) or [10-bit build](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/AndroidVVC/AndroidUVG266.7z) |
+| Haiku | [x86_64](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/HaikuVVC/HaikuVVC.7z) | [Download](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/uvg266/Haiku/uvg266-HaikuOS.7z) |
 
 ## Comparisions between vvenc/vvdec and uvg266
 
