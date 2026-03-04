@@ -42,6 +42,18 @@ uvg266 is only scalable encoder which helps to make it faster for older & newer 
 * Supports presets from ultrafast to placebo like x264 presets, however it is recommended to use from faster to slower to avoid VVC decoding fail issue.
 * Lossless encoding is not recommended due decoding fail.
 
+## OpenVVC (VVC decoder open license)
+
+OpenVVC is another VVC decoder library licensed under LGPLv2.1.
+
+* C89 programming language
+* Supports Windows, macOS, Linux, BSD, Android & iOS.
+* Supports SIMD optimizations of x86 and arm of SSE and AVX2.
+* Most modern VVC encoded files do not work at all, some old VVC encoded files works
+* Still faster decoding, outputs to YUV only.
+* Lossless decoding VVC is not supported.
+* Optional SLHDR external library to support decode HDR videos
+
 ### Minimum requirements
 
 **vvenc/vvdec**:
@@ -60,6 +72,15 @@ uvg266 is only scalable encoder which helps to make it faster for older & newer 
 * Linux kernel 3.2.0 and later (eg. Ubuntu 12.04 LTS and later)
 * BSD (FreeBSD & x64 only)
 * Android 4.3 (API 18, Jelly Bean) and later (arm64 & x86_64 since Android 5.0)
+* Haiku OS (x86_64 only)
+
+**OpenVVC**:
+
+* Windows ME and later
+* Mac OS X 10.4 and later
+* Linux kernel 3.2.0 and later (eg. Ubuntu 12.04 LTS and later)
+* BSD
+* Android 4.0.1 (API 14, Ice Cream Sandwich) and later
 * Haiku OS (x86_64 only)
 
 ### Downloads
