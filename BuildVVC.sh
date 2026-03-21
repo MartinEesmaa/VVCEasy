@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 OS=$(uname)
 DISTRO=""
 
@@ -22,21 +22,23 @@ if [ "$OS" = "SunOS" ]; then
     exit 1
 fi
 
+echo "Make sure your packages are up to date."
 echo "Checking and installing required packages..."
+echo "Always confirm manual review installation."
 
 setup_debian() {
-    sudo apt update && sudo apt upgrade -y
-    sudo apt install build-essential cmake git -y
+    sudo apt update
+    sudo apt install build-essential cmake git
 }
 
 setup_fedora() {
-    sudo dnf update -y
-    sudo dnf install cmake gcc gcc-c++ make git -y
+    sudo dnf update
+    sudo dnf install cmake gcc gcc-c++ make git
 }
 
 setup_arch() {
-    sudo pacman -Syu --noconfirm
-    sudo pacman -S --noconfirm base-devel cmake git
+    sudo pacman -Sy
+    sudo pacman -S base-devel cmake git
 }
 
 setup_gentoo() {
@@ -57,8 +59,8 @@ setup_macos() {
 }
 
 setup_msys64() {
-    pacman -Syu --noconfirm
-    pacman -S --noconfirm base-devel cmake git
+    pacman -Sy
+    pacman -S base-devel cmake git
 }
 
 setup_freebsd() {
@@ -76,9 +78,8 @@ build_repos() {
         fi
     done
 
-    for REPO in vvenc vvdec; do
-        cd $REPO
-        mkdir -p build && cd build
+    for repo in vvdec vvenc; do
+        mkdir -p $repo/build && cd $repo/build
         if [ "$OS" = "Darwin" ]; then
             CORES=$(sysctl -n hw.ncpu || echo 1)
             cmake -DCMAKE_BUILD_TYPE=Release ..
@@ -90,7 +91,7 @@ build_repos() {
         fi
         cd -
     done
-    echo "Please see the build files starting with (vvenc/vvdec)/bin/release-static."
+    echo "Please see the build files starting with (vvdec/vvenc)/bin/release-static."
 }
 
 # Main script execution
