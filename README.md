@@ -53,7 +53,7 @@ However you're welcome to post in there or/and direct message for a little help.
 
 | Communities | Link |
 | --- | --- |
-| Stoat.chat (formerly Revolt) ![Revolt](https://img.shields.io/revolt/invite/0Y10qHzP) | <https://app.revolt.chat/invite/0Y10qHzP> |
+| Stoat.chat (previously Revolt) ![Revolt](https://img.shields.io/revolt/invite/0Y10qHzP) | <https://app.revolt.chat/invite/0Y10qHzP> |
 | Reddit | <https://reddit.com/r/VVCEasy> |
 | lemmy.ml (c/VVC) | <https://lemmy.ml/c/vvc> |
 | lemmy.ml (c/VVCEasy) | <https://lemmy.ml/c/vvceasy> |
