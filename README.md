@@ -13,19 +13,19 @@ https://github.com/MartinEesmaa/VVCEasy/actions/workflows/dotnet.yml)
 
 <h1 align="center">VVCEasy by Martin Eesmaa</h1>
 
-VVCEasy is that you don't have to compile or/and coding to encode VVC (known as Versatile Video Codec). Simple, Easy, Encode and Decode.
+VVCEasy provides ready prebuilt VVC (Versatile Video Codec) binaries & players. Simple, Easy, Encode and Decode.
 
-It supports Windows, macOS, Linux, BSD, Android, WebAssembly & Haiku OS for VVCEasy builds.
+Supports Windows, macOS, Linux, BSD, Android, WebAssembly & Haiku OS for VVCEasy builds.
 
 From October 20, 2021, to June 23, 2022, VVCEasy was in pre-release and construction mode.
 
 Since June 23, 2022, VVCEasy was initially released at version 1.0.0.
 
-VVCEasy comes with one easy command, utilizing FFmpeg-VVC, Fraunhofer HHI VVC binaries, uvg266, MPV, LAVFilters, and MPC-HC & MPC-BE, among other features.
+VVCEasy comes with one easy all-in-one for FFmpeg-VVC, Fraunhofer HHI VVC binaries, uvg266, MPV, LAVFilters, and MPC-HC & MPC-BE, among other features.
 
 Installation: Go to the releases and download the latest version.
 
-Windows source run (Batch-file) (for encoding/decoding, it needs to be manually edit batchfile to modify video file name): [VVCEasy.bat](VVCEasy.bat)
+Windows source run (Batch-file) (for decoding/encoding, it needs manual edit the batchfile to modify video file name): [VVCEasy.bat](VVCEasy.bat)
 
 Windows/Mac/Linux source run (C#): Bin/Release or Debug/netX.x/VVCEasy.exe (after building the C# project), which requires VVCEasy.dll to run the console application.
 
@@ -40,7 +40,7 @@ Windows/Mac/Linux source run (C#): Bin/Release or Debug/netX.x/VVCEasy.exe (afte
 | AV1 Discord Community (below note) | <https://discord.gg/HSBxne3> |
 
 > [!NOTE]
-> Please note my first language is Estonian and not native to the English language. Some English words may be incorrect and incomprehensible. Also some members of AV1 Discord Community including me can help about VVC issues.
+> Please note my first language is Estonian and it is not native due to my second English language. Some words may have incorrect and incomprehensible. The members of AV1 Discord Community including me can help about VVC issues.
 
 Experimental GitLab mirror is available for alternative purposes or anything:
 
@@ -49,7 +49,7 @@ Experimental GitLab mirror is available for alternative purposes or anything:
 ### Deprecated communities
 
 Deprecated communities are inactive due to no more new posts/messages recently.
-However you're welcome to post there or/and direct message for little help. :)
+However you're welcome to post in there or/and direct message for a little help. :)
 
 | Communities | Link |
 | --- | --- |
@@ -174,7 +174,7 @@ For VLC o266player build, see [o266player.md](docs-old/o266player.md).
 
 ## VVCEasy Batchfile Version (optional) (Windows only)
 
-First, before compiling to VVCEasy Batchfile Version, you need to install Inno Setup to compile it.
+First, before compiling to VVCEasy Batchfile Version, you need to install Inno Setup to make package.
 Inno Setup link: <https://jrsoftware.org/isdl.php>
 
 Step 1: Clone VVCEasy git and open up VVCEasy_compiler.iss file
@@ -185,7 +185,7 @@ git clone --depth=1 https://github.com/MartinEesmaa/VVCEasy && cd VVCEasy
 VVCEasy_compiler.iss
 ```
 
-Step 2: Press F9 on your keyboard to compile. After compiling, VVCEasy.exe (Installer) can be found in the Install folder.
+Step 2: Press F9 on your keyboard to make installer. After that, VVCEasy.exe (Installer) can be found in the Install folder.
 
 ![VVCEasyclickblueplaybutton](https://user-images.githubusercontent.com/88035011/153736303-b0949f5a-5ac5-4123-92c5-305211a8aadc.png)
 
@@ -193,7 +193,7 @@ Step 2: Press F9 on your keyboard to compile. After compiling, VVCEasy.exe (Inst
 
 ### VVCEasy .NET Console Version (optional)
 
-You need .NET SDK from Microsoft.
+You need .NET SDK installed from Microsoft.
 Link: <https://dotnet.microsoft.com/en-us/download>
 
 Step 1: Clone git and cd VVCEasy
@@ -235,11 +235,11 @@ After that, it can be found for example at bin\Release\netX.x\win-x64\publish.
 
 If you're not familiar with using the CLI, you can use a GUI with an application window for ease of use, eliminating the need to type commands in your terminal.
 
-These VVC programs for encoding/decoding are listed:
+These VVC programs for decoding/encoding are listed:
 
 | Programs with website or GitHub link | Note | Creator |
 | --- | --- | --- |
-| [Fastflix](https://github.com/cdgriffith/FastFlix) | You might need to download my custom FFmpeg builds for encoding/decoding VVC using external libraries, rename to ffmpeg.exe and ffprobe.exe from my custom names only, no ffplay executable file required | Chris Griffith |
+| [Fastflix](https://github.com/cdgriffith/FastFlix) | You might need to download my custom FFmpeg builds for decoding/encoding VVC using external libraries, rename to ffmpeg.exe and ffprobe.exe from my custom names only, no ffplay executable file required | Chris Griffith |
 | [VVC-GUI-Encoder](https://github.com/Disa-Kizonda/VVC-GUI-Encoder) | Only encoder | Disa Kizonda |
 | [aVVCator](https://github.com/gianni-rosato/aVVCator) | Only encoder & Linux only | Gianni Rosato |
 | [VVenCguiEx](https://github.com/rigaya/VVenCguiEx) | Original Japanese language only for instructions and application (you can still translate), only encoder & Windows only, requires Aviutl (this may be medium or hard) | rigaya |
@@ -274,15 +274,15 @@ Before you ask any question, see the questions below at table please.
 
 If you have any questions or/any issues, please go to the Issues tab and feel free to create an issue.
 
-Or you can join and chat with us in our community: [Link for communities at top](#community)
+You can join and chat in our communities: [Link for communities at top](#community)
 
-Martin Eesmaa, creator of VVCEasy
+Martin Eesmaa, creator and founder of VVCEasy
 
 # Credits & Licenses
 
 Special thanks with used softwares for purposes. All the copyright owners have all rights reserved.
 
-[VVCEasy](https://github.com/MartinEesmaa/VVCEasy) - VVCEasy contains ready to serve prebuilt binaries VVC programs, including players and more.
+[VVCEasy](https://github.com/MartinEesmaa/VVCEasy) - VVCEasy contains ready prebuilt binaries VVC programs, including players and more.
 
 License: MIT
 
