@@ -6,10 +6,10 @@ https://github.com/MartinEesmaa/VVCEasy/actions/workflows/dotnet.yml)
 ![GitHub repo size](https://img.shields.io/github/repo-size/MartinEesmaa/VVCEasy)
 ![GitHub release (release name instead of tag name)](https://img.shields.io/github/v/release/MartinEesmaa/VVCEasy?include_prereleases)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/MartinEesmaa/VVCEasy)
-![Matrix](https://img.shields.io/matrix/vvceasy:matrix.org?label=VVCEasy%20Matrix)
+![Matrix](https://img.shields.io/matrix/vvceasy:matrix.org?label=VVCEasy%20Matrix.org)
 ![Discord](https://img.shields.io/discord/974611343237869619?label=VVCEasy%20Discord%20Chat)
-![Revolt](https://img.shields.io/revolt/invite/0Y10qHzP?label=VVCEasy%20Revolt)
-![GitHub Repo stars](https://img.shields.io/github/stars/MartinEesmaa/VVCEasy?style=flat&label=Martin%20Eesmaa's%20VVCEasy%20stars&color=yellow)
+![Revolt](https://img.shields.io/revolt/invite/0Y10qHzP?label=VVCEasy%20Stoat.chat)
+![GitHub Repo stars](https://img.shields.io/github/stars/MartinEesmaa/VVCEasy?style=flat&label=Martin%20Eesmaa's%20VVCEasy%20GitHub%20stars&color=yellow)
 
 <h1 align="center">VVCEasy by Martin Eesmaa</h1>
 
@@ -53,7 +53,7 @@ However you're welcome to post in there or/and direct message for a little help.
 
 | Communities | Link |
 | --- | --- |
-| Revolt ![Revolt](https://img.shields.io/revolt/invite/0Y10qHzP) | <https://app.revolt.chat/invite/0Y10qHzP> |
+| Stoat.chat (formerly Revolt) ![Revolt](https://img.shields.io/revolt/invite/0Y10qHzP) | <https://app.revolt.chat/invite/0Y10qHzP> |
 | Reddit | <https://reddit.com/r/VVCEasy> |
 | lemmy.ml (c/VVC) | <https://lemmy.ml/c/vvc> |
 | lemmy.ml (c/VVCEasy) | <https://lemmy.ml/c/vvceasy> |
@@ -286,7 +286,7 @@ Special thanks with used softwares for purposes. All the copyright owners have a
 
 License: MIT
 
-© 2021-2025 [Martin Eesmaa](https://github.com/MartinEesmaa)
+© 2021-2026 [Martin Eesmaa](https://github.com/MartinEesmaa)
 
 ---
 
@@ -298,7 +298,7 @@ License: MIT
 
 License: BSD 3-Clause Clear License (all of three repositories)
 
-© 2018-2025, Fraunhofer-Gesellschaft zur Förderung der angewandten Forschung e.V. & The VVC Authors
+© 2018-2026, Fraunhofer-Gesellschaft zur Förderung der angewandten Forschung e.V. & The VVC Authors
 
 GitHub: [Fraunhoferhhi](https://github.com/fraunhoferhhi)
 
@@ -310,7 +310,7 @@ GitHub: [Fraunhoferhhi](https://github.com/fraunhoferhhi)
 
 License: GPL-2.0 (VLC Original version) & LGPL-2.1 (VLC VTM Decoder Plugin)
 
-© 2000-2025 [VLC Media Player](https://code.videolan.org/) Developers
+© 2000-2026 [VLC Media Player](https://code.videolan.org/) Developers
 
 © 2021-2024 [Inter Digital Inc](https://github.com/InterDigitalInc)
 
@@ -320,7 +320,7 @@ License: GPL-2.0 (VLC Original version) & LGPL-2.1 (VLC VTM Decoder Plugin)
 
 License: BSD 3-Clause License
 
-© 2021-2025, Tampere University, ITU/ISO/IEC, project contributors
+© 2021-2026, Tampere University, ITU/ISO/IEC, project contributors
 
 ---
 
@@ -340,7 +340,7 @@ License: LGPL-2.1 & GPL-2.0
 
 For my custom build configuration license is GPL-3.0+ with nonfree (fdk-aac) for FFmpeg.
 
-© 2000-2025 [FFmpeg developers](https://github.com/FFmpeg)
+© 2000-2026 [FFmpeg developers](https://github.com/FFmpeg)
 
 ---
 
@@ -356,7 +356,7 @@ License: LGPL-2.1 & GPL-2.0
 
 For my custom build license: GPL-3.0 with nonfree (fdk-aac) for FFmpeg
 
-© 2013-2025 [Vincent Lang, MPlayer, mplayer2 & MPV developers](https://github.com/mpv-player)
+© 2013-2026 [Vincent Lang, MPlayer, mplayer2 & MPV developers](https://github.com/mpv-player)
 
 ---
 
@@ -366,7 +366,7 @@ VVC forkers: [tbiat](https://github.com/tbiat) & [Martin Eesmaa](https://github.
 
 License: MIT
 
-© 2016-2025 Ilya Zhuravlev, sfan5 & mpv developers
+© 2016-2026 Ilya Zhuravlev, sfan5 & mpv developers
 
 ---
 
@@ -374,13 +374,13 @@ License: MIT
 
 License: LGPL-2.1
 
-© 2003-2025 [Jean Le Feuvre](https://github.com/jeanlf) & [GPAC developers/contributors](https://github.com/gpac/gpac/graphs/contributors)
+© 2003-2026 [Jean Le Feuvre](https://github.com/jeanlf) & [GPAC developers/contributors](https://github.com/gpac/gpac/graphs/contributors)
 
 ---
 
 [LAVFilters](https://github.com/Nevcairiel/LAVFilters) - LAV Filters - Open-Source DirectShow Media Splitter and Decoders
 
-© 2010-2025 [Hendrik Leppkes](https://github.com/Nevcairiel)
+© 2010-2026 [Hendrik Leppkes](https://github.com/Nevcairiel)
 
 ---
 
@@ -392,9 +392,9 @@ License: GPL-3.0
 
 © 2007-2018 [MPC-HC Community Forum & contributors](https://github.com/mpc-hc) (Original)
 
-© 2018-2025 [clsid2](https://github.com/clsid2) (forked of MPC-HC)
+© 2018-2026 [clsid2](https://github.com/clsid2) (forked of MPC-HC)
 
-© 2012-2025 [Alexander Vodiannikov](https://github.com/Aleksoid1978) (forked of MPC-BE)
+© 2012-2026 [Alexander Vodiannikov](https://github.com/Aleksoid1978) (forked of MPC-BE)
 
 ---
 
@@ -404,7 +404,7 @@ Official website: <https://7-zip.org>
 
 License: LGPL-2.1 with unRAR restriction & LZMA SDK in the public domain
 
-© 1999-2025 Igor Pavlov
+© 1999-2026 Igor Pavlov
 
 ---
 
