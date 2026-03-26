@@ -3,7 +3,7 @@ set welcometitle=Martin Eesmaa / VVCEasy
 set version=v3.2.0
 set versionname=Estonian winter birds
 set vvceasydate=8 December 2025
-set copyrightinfo=Copyright (C) 2021-2025 Martin Eesmaa (MIT License)
+set copyrightinfo=Copyright (C) 2021-2026 Martin Eesmaa (MIT License)
 set invalidletter=Invalid input. Please enter a valid letter of Y or N.
 for /f "tokens=2*" %%A in ('reg query "HKLM\System\CurrentControlSet\Control\Session Manager\Environment" /v "PROCESSOR_ARCHITECTURE"') do set ProcessorArchitecture=%%B
 
@@ -93,10 +93,10 @@ echo 4. Exit
 echo 5. Test path environment
 echo 6. Install/Update VVdec Web Player (requires Python and clone/pull for git)
 echo 7. Install Windows VVC binaries (Windows XP and later)
-echo 8. Install vvDecPlayer from BitMovin
+echo 8. Install vvDecPlayer from BitMovin (deprecated)
 echo 9. Install/Update VLC VTM Plugins (Windows/Linux x64 of VLC plugins by Inter Digital Inc)
 echo 10. Install FFmpeg/MPV external VVC support and tests of VVC videos
-echo 11. Build vvenc and vvdec from source
+echo 11. Build vvdec and vvenc from source
 set /p VVCSTART=Number:
 
 if "%VVCSTART%" == "1" goto encodestart
@@ -277,7 +277,7 @@ if defined missing (
     echo - FFmpeg install: https://www.wikihow.com/Install-FFmpeg-on-Windows
     echo - Git install: https://git-scm.com/download/win
     echo.
-    echo Once you have installed missing program !missing!, please exit and try again.
+    echo Once you have installed missing program !missing!, please exit it and try again.
     pause
     endlocal
     goto start
@@ -322,7 +322,7 @@ for /f "delims=: tokens=*" %%A in ('findstr /b ::: "%~f0"') do @echo(%%A
 echo.
 echo %copyrightinfo%
 echo.
-timeout 5 /nobreak
+timeout 3 /nobreak
 exit
 
 :help
@@ -341,8 +341,8 @@ goto start
 cls
 title vvDec Web Player.
 echo Welcome to vvDec Web Player.
-echo By installing, you will have to agree to download vvDec Web Player from Fraunhoferhhi GitHub. 
-echo See the code of vvDec Web Player: https://github.com/fraunhoferhhi/vvdecWebPlayer
+echo By installing, you will agree to download vvDec Web Player from Fraunhofer HHI on GitHub. 
+echo See the source code of vvDec Web Player: https://github.com/fraunhoferhhi/vvdecWebPlayer
 echo When you agree to install, it will clone the vvDec Web Player repository using git. After git, we will copy from the VVDECWEBINSTALL files into the vvdecWebPlayer/bin folder.
 echo After that, it will run Python to start the web server on your localhost port 8000.
 echo If you have already installed vvDec Web Player, this will check if any upcoming updates are available.
@@ -411,13 +411,13 @@ echo.
 
 if "!allok!"=="1" (
     echo All checksums were identical successful!
-    echo Thank you for installing Windows VVC binaries. Now, back to the menu.
+    echo Thank you for installing Windows VVC binaries!
 ) else (
     echo The files do not match identical checksums for some or all files.
     echo Please try again or manually extract the compressed file.
     echo Make sure you have free disk space or/and memory RAM available.
     echo Ensure that you have your permissions to write files in the folder.
-    echo Otherwise, please create an issue to Martin Eesmaa/VVCEasy on GitHub for your problem.
+    echo Otherwise, please create an issue to Martin Eesmaa/VVCEasy on GitHub.
 )
 
 endlocal
@@ -491,7 +491,7 @@ wget -q https://www.dropbox.com/scl/fi/4iy06ektd7ux6squnrkam/SpriteFright.json?r
 wget -q https://www.dropbox.com/scl/fi/n65bw1iiv2skv16l49013/CoffeeRun.json?rlkey=63w013tayac9nwpr6azznina2 -O CoffeeRun.json
 echo Extracting from archived file...
 %sevenzip% x vvcBlogPostDemo.zip -aoa
-echo Would you like to delete temp archived file?
+echo Would you like to delete temporary archived file?
 echo If you're unsure, archived compressed file will be kept.
 set /p deletetemp=Answer:
 if /I "%deletetemp%"=="N" goto afterthat
@@ -520,7 +520,7 @@ echo Welcome to VLC Media Player of VTM Plugins Installation. Available only x64
 echo You need to be at least Windows Vista / Server 2008 and later to play VVC files.
 echo Windows XP can't load VTM plugins, but other plugins do work.
 echo Linux is now available, see Linux installation at: https://github.com/MartinEesmaa/VVCEasy/tree/master/INSTALLVLCPLUGIN#for-linux-users
-echo Available: VLC 3.0.9.2 and later (it will work only with the same latest version 3)
+echo VLC version: 3.0.9.2 and later
 echo Would you like to install VTM plugins to your VLC Media Player? Y/N?
 set /p vlcvtmyesorno=Answer: 
 if /I "%vlcvtmyesorno%"=="Y" goto installvlcvtmpluginnow
@@ -538,7 +538,7 @@ if exist "%programfiles%\VideoLAN\VLC" (
     copy libvvctsdemux_plugin.dll "%programfiles%\VideoLAN\VLC\plugins\demux" /y
 ) else (
     :tryagainafterinvalidvlc
-    echo Please make sure your VLC is installed on your computer.
+    echo Please make sure your VLC media player is installed on your computer.
     echo After that, please try again.
     echo.
     echo 1: Try again
@@ -552,17 +552,18 @@ if exist "%programfiles%\VideoLAN\VLC" (
 )
 cd ../
 tasklist /fi "imagename eq vlc.exe" | find /i "vlc.exe" >nul
-if not errorlevel 1 taskkill /im vlc.exe >nul
-echo Three dll files are patched to your VLC Media Player.
-echo Stopping VLC Media Player...
-echo Please load your VVC (codec) video file to VLC Media Player.
+if not errorlevel 1 taskkill /im vlc.exe >nul (
+    echo Stopping VLC Media Player...
+)
+echo Three dll files were patched to VLC Media Player.
+echo Please load your VVC video file to VLC Media Player.
 echo For more information, please go to at https://github.com/InterDigitalInc/VTMDecoder_VLCPlugin
 echo Once you're finished, you don't need to patch again. You can continue using VLC Media Player after patch.
 pause
 goto start
 
 :installvvdecffmpegmpvnow
-echo It is available of FFmpeg and MPV VVC support, including video tests. Please copy or open the link to a web browser.
+echo FFmpeg and MPV VVC support are available, including video tests. Please copy or open the link to a web browser.
 echo.
 echo Download link for FFmpeg: https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md#ffmpeg-downloads-xhe-aac--vvc-endecoder-plugin-compiled-by-martin-eesmaa
 echo Download link for MPV: https://github.com/MartinEesmaa/VVCEasy/blob/master/MPV.md#downloads-for-mpv-android-vvc-support
@@ -570,19 +571,19 @@ echo.
 echo For FFmpeg, see information on FFMPEGVVC.md or online GitHub: https://github.com/MartinEesmaa/VVCEasy/blob/master/FFMPEGVVC.md
 echo For MPV, see information on MPV.md or online GitHub: https://github.com/MartinEesmaa/VVCEasy/blob/master/MPV.md
 echo.
-echo For the video tests, see the paragraph in README.md.
+echo For video tests, see the paragraph in README.md.
 echo https://github.com/MartinEesmaa/VVCEasy/#tests-of-vvc-videos
 echo.
 pause
 goto start
 
 :main123
-title Build vvenc and vvdec by yourself from source codes
+title Build vvdec and vvenc from source code
 cls
-echo Would you like to build vvenc and vvdec on your computer?
+echo Would you like to build vvdec and vvenc on your computer?
 echo Before you build for Windows, you need CMake and Visual Studio on your computer.
-echo Requires build to Windows VVC by CMake 3.13.0+ (need pathed environment) and Visual Studio 2017 and later (requires Desktop C++ and only one individual component ML.NET Model Builder).
-echo Requires download vvenc and vvdec for (Git for Windows).
+echo Requires building Windows VVC binaries by CMake 3.13.0+ (need pathed environment) and Visual Studio 2017 and later (requires Desktop C++ and only one individual component ML.NET Model Builder).
+echo Requires download vvdec and vvenc for (Git for Windows).
 echo Yes: Build. No: Go back to the main menu.
 echo Y/N?
 set /p main1234=Answer:
@@ -594,9 +595,9 @@ goto main123
 
 :installmain123
 echo Building time...
-echo Cloning vvenc and vvdec from Fraunhofer HHI on GitHub...
+echo Cloning vvdec and vvenc from Fraunhofer HHI on GitHub...
 if not exist build\%bit% mkdir build\%bit%
-for %%d in (vvenc vvdec) do (
+for %%d in (vvdec vvenc) do (
     git clone --depth=1 https://github.com/fraunhoferhhi/%%d
     cmake -S %%d -B buildvvc-temp\%%d
     cmake --build buildvvc-temp\%%d --config Release
@@ -604,9 +605,9 @@ for %%d in (vvenc vvdec) do (
 )
 echo.
 echo.
-echo Success build of vvenc and vvdec on Windows.
+echo Success build of vvdec and vvenc on Windows.
 echo Done copying compiled executable files into build\%bit%
-echo Cleaning up of temp build, lib and bin folders of both dependencies...
+echo Cleaning up of temporary build, lib and bin folders of both dependencies...
 rmdir /s /q buildvvc-temp vvenc\bin vvenc\lib vvdec\bin vvdec\lib
 echo Done! Press Enter to go back the menu.
 pause
@@ -614,7 +615,7 @@ goto start
 
 :error
 echo Your Windows/DOS version is unsupported and outdated which does not work to run with VVC binaries and others too.
-echo MS-DOS, DOSBox and FreeDOS were also not supported.
-echo This batchfile script requires to run Windows XP and later.
+echo MS-DOS, DOSBox and FreeDOS were also not supported due to very limited.
+echo This batchfile script is compatible only for Windows XP and later.
 pause
 exit

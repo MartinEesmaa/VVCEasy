@@ -23,5 +23,7 @@ vvdecWebPlayer/
 vvenc/
 vvdec/
 [Ii]nstall/
+[Bb]uild/
+buildvvc-temp/
 
 .vscode
