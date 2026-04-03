@@ -15,7 +15,7 @@ https://github.com/MartinEesmaa/VVCEasy/actions/workflows/dotnet.yml)
 
 VVCEasy provides ready prebuilt VVC (Versatile Video Codec) binaries & players. Simple, Easy, Encode and Decode.
 
-Supports Windows, macOS, Linux, BSD, Android, WebAssembly & Haiku OS for VVCEasy builds.
+Supports Windows, macOS, Linux, FreeBSD, Android, WebAssembly & Haiku OS for VVCEasy builds.
 
 From October 20, 2021, to June 23, 2022, VVCEasy was in pre-release and construction mode.
 
@@ -54,7 +54,7 @@ However you're welcome to post in there or/and direct message for a little help.
 | Communities | Link |
 | --- | --- |
 | Stoat.chat (previously Revolt) ![Revolt](https://img.shields.io/revolt/invite/0Y10qHzP) | <https://app.revolt.chat/invite/0Y10qHzP> |
-| Reddit | <https://reddit.com/r/VVCEasy> |
+| Reddit (r/VVCEasy) | <https://reddit.com/r/VVCEasy> |
 | lemmy.ml (c/VVC) | <https://lemmy.ml/c/vvc> |
 | lemmy.ml (c/VVCEasy) | <https://lemmy.ml/c/vvceasy> |
 | lemmy.world (c/VVC) | <https://lemmy.world/c/vvc> |
@@ -66,15 +66,17 @@ However you're welcome to post in there or/and direct message for a little help.
 
 - [Tests of VVC videos](#tests-of-vvc-videos)
 
-- [VLC InterDigital VTM VVC Plugin](#vlc-interdigital-vtm-vvc-plugin)
+- [Prebuilt VVC binaries](#prebuilt-vvc-binaries)
 
-- [FFmpeg VVC En/Decoder & xHE-AAC support](#ffmpeg-vvencdec--xhe-aac-support)
+  - [VLC InterDigital VTM VVC Plugin](INSTALLVLCPLUGIN/README.md)
 
-- [MPV libvvdec + xHE-AAC support (Windows x64/Linux/Android only)](#mpv-libvvdec--xhe-aac-support-windows-x64linuxandroid-only)
+  - [FFmpeg VVC En/Decoder & xHE-AAC support](FFMPEGVVC.md)
 
-- [LAVFilters VVC version x64](#lavfilters-vvc-version-x64)
+  - [MPV libvvdec + xHE-AAC support (Windows x64/Linux/Android only)](MPV.md)
 
-- [VVC binaries](#vvc-binaries)
+  - [LAVFilters VVC version x64](LAVFilters/README.md)
+
+  - [VVC binaries](VVC.md)
 
 - [Deprecated builds](#deprecated-builds)
 
@@ -128,41 +130,19 @@ You can test Martin Eesmaa's encoded movies of VVC video codec and follow the in
 
 Update of 30.08.2025: New 4K Tears of Steel VVC video encoded with xHE-AAC existing audio.
 
-# VLC InterDigital VTM VVC Plugin
+# Prebuilt VVC binaries
 
-VLC InterDigital VTM VVC Plugin is an external VVC decoder plugin from a third-party developer.
+There are prebuilt VVC binaries over support ease of use without needing to compile by manually.
 
-See [INSTALLVLCPLUGIN folder](INSTALLVLCPLUGIN/README.md).
+| Name | Description | Availability |
+| ---- | ----------- | ------------ |
+| [VLC InterDigital VTM VVC Plugin](INSTALLVLCPLUGIN/README.md) | VLC InterDigital VTM VVC Plugin is an external VVC decoder plugin from a third-party developer. | Windows & Linux (desktop: x86_64) |
+| [FFmpeg VVENC/DEC & xHE-AAC support](FFMPEGVVC.md) | FFmpeg VVCEasy provides external VVC decoder, including xHE-AAC. | Windows, macOS & Linux
+| [MPV VVCEasy](MPV.md) | MPV VVCEasy provides external VVC decoder and xHE-AAC decoder for improve | Windows, Linux & Android (desktop: x86_64, MPV.NET: Windows only) |
+| [LAVFilters VVC](LAVFilters/README.md) | Ready to go play with any LAVFilters compatible with FFmpeg VVCEasy Windows version | Windows 64-bit |
+| [VVC binaries](VVC.md) | The Versatile Video Codec binaries include two tools, vvenc and vvdec, as well as uvg266. | Windows, macOS, Linux, FreeBSD, Haiku, Android & WASM |
 
-# FFmpeg VVENC/DEC & xHE-AAC support
-
-FFmpeg VVC En/Decoder & xHE-AAC supports of Windows, Mac and Linux.
-
-See [FFMPEGVVC.md](FFMPEGVVC.md).
-
-# MPV libvvdec + xHE-AAC support (Windows x64/Linux/Android only)
-
-MPV libvvdec & xHE-AAC support only Windows x64, Linux, and Android.
-
-The VVC and MP4 mux with VVC codec can be played on MPV libvvdec + xHE-AAC version. Only MP4 files mixed with VVC support seeking.
-
-MPV.NET is also only available for Windows.
-
-See [MPV.md](MPV.md).
-
-# LAVFilters VVC version x64
-
-For more information about LAVFilters Windows VVC version.
-
-See [LAVFilters folder](LAVFilters/README.md)
-
-# VVC binaries
-
-The Versatile Video Codec binaries include two tools, vvenc and vvdec, as well as uvg266.
-
-See [VVC.md](VVC.md)
-
-# Deprecated builds
+## Deprecated builds
 
 Those deprecated builds were no new commits/codes after one year.
 
