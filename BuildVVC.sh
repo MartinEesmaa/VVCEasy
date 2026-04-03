@@ -26,24 +26,9 @@ echo "Make sure your packages are up to date."
 echo "Checking and installing required packages..."
 echo "Always confirm manual review installation."
 
-setup_debian() {
-    sudo apt update
-    sudo apt install build-essential cmake git
-}
-
-setup_fedora() {
-    sudo dnf update
-    sudo dnf install cmake gcc gcc-c++ make git
-}
-
-setup_arch() {
-    sudo pacman -Sy
-    sudo pacman -S base-devel cmake git
-}
-
-setup_gentoo() {
-    sudo emerge --sync
-    sudo emerge cmake git
+setup_linux() {
+    sudo "$pkgupdate"
+    sudo "$pkginstall"
 }
 
 setup_macos() {
@@ -64,13 +49,21 @@ setup_msys64() {
 }
 
 setup_freebsd() {
-    pkg update && pkg upgrade -y
-    pkg install -y cmake git gmake
+    pkg update
+    pkg install cmake git gmake
+}
+
+setup_openbsd() {
+    if ! command -v cmake &> /dev/null || ! command -v git &> /dev/null; then
+        echo "Please install cmake and git using pkg_add and try again."
+        echo "Manual installation command: pkg_add cmake git"
+        exit 1
+    fi
 }
 
 build_repos() {
     
-    for clone in vvenc vvdec; do
+    for clone in vvdec vvenc; do
         if [ ! -d $clone ]; then
             git clone --depth=1 https://github.com/fraunhoferhhi/$clone
         else
@@ -80,14 +73,12 @@ build_repos() {
 
     for repo in vvdec vvenc; do
         mkdir -p $repo/build && cd $repo/build
-        if [ "$OS" = "Darwin" ]; then
+        if [ "$OS" = "Darwin" || "$OS" = "FreeBSD" || "$OS" = "OpenBSD" ]; then
             CORES=$(sysctl -n hw.ncpu || echo 1)
-            cmake -DCMAKE_BUILD_TYPE=Release ..
-            cmake --build . -j $CORES
         else
             CORES=$(nproc || echo 1)
-            cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXE_LINKER_FLAGS="-static" ..
-            cmake --build . -j $CORES
+        cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXE_LINKER_FLAGS="-static" ..
+        cmake --build . -j $CORES
         fi
         cd -
     done
@@ -99,16 +90,24 @@ case "$OS" in
     Linux)
         case "$DISTRO" in
             debian|ubuntu)
-                setup_debian
+                pkgupdate="apt update"
+                pkginstall="apt install build-essential cmake git"
+                setup_linux
                 ;;
             fedora)
-                setup_fedora
+                pkgupdate="dnf update"
+                pkginstall="dnf install cmake gcc gcc-c++ make git"
+                setup_linux
                 ;;
             arch)
-                setup_arch
+                pkgupdate="pacman -Sy"
+                pkginstall="pacman -S base-devel cmake git"
+                setup_linux
                 ;;
             gentoo)
-                setup_gentoo
+                pkgupdate="emerge --sync"
+                pkginstall="emerge cmake git"
+                setup_linux
                 ;;
             *)
                 echo "Unsupported Linux distribution: $DISTRO"
@@ -125,13 +124,16 @@ case "$OS" in
     FreeBSD)
         setup_freebsd
         ;;
+    OpenBSD)
+        setup_openbsd
+        ;;
     *)
         echo "Unsupported OS: $OS"
-        echo "Supports Windows MSYS64, macOS, Linux & FreeBSD"
+        echo "Supports Windows MSYS64, macOS, Linux, FreeBSD, OpenBSD and Android"
         echo "May coming soon for some platforms..."
         exit 1
         ;;
 esac
 
 build_repos
-read -p "Finished building vvenc & vvdec. Press [Enter] to continue..."
+read -p "Finished building vvdec & vvenc. Press [Enter] to continue..."
