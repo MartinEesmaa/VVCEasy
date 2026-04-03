@@ -136,11 +136,11 @@ There are prebuilt VVC binaries over support ease of use without needing to comp
 
 | Name | Description | Availability |
 | ---- | ----------- | ------------ |
-| [VLC InterDigital VTM VVC Plugin](INSTALLVLCPLUGIN/README.md) | VLC InterDigital VTM VVC Plugin is an external VVC decoder plugin from a third-party developer. | Windows & Linux (desktop: x86_64) |
-| [FFmpeg VVENC/DEC & xHE-AAC support](FFMPEGVVC.md) | FFmpeg VVCEasy provides external VVC decoder, including xHE-AAC. | Windows, macOS & Linux
+| [VVC binaries](VVC.md) | The Versatile Video Codec binaries includes two tools of vvdec & vvenc and uvg266. | Windows, macOS, Linux, FreeBSD, Haiku, Android & WASM |
+| [FFmpeg VVENC/DEC & xHE-AAC support](FFMPEGVVC.md) | FFmpeg VVCEasy provides external VVC decoder & encoder, including xHE-AAC. | Windows, macOS & Linux |
 | [MPV VVCEasy](MPV.md) | MPV VVCEasy provides external VVC decoder and xHE-AAC decoder for improve | Windows, Linux & Android (desktop: x86_64, MPV.NET: Windows only) |
 | [LAVFilters VVC](LAVFilters/README.md) | Ready to go play with any LAVFilters compatible with FFmpeg VVCEasy Windows version | Windows 64-bit |
-| [VVC binaries](VVC.md) | The Versatile Video Codec binaries include two tools, vvenc and vvdec, as well as uvg266. | Windows, macOS, Linux, FreeBSD, Haiku, Android & WASM |
+| [VLC InterDigital VTM VVC Plugin](INSTALLVLCPLUGIN/README.md) | VLC InterDigital VTM VVC Plugin is an external VVC decoder plugin from a third-party developer. | Windows & Linux (desktop: x86_64) |
 
 ## Deprecated builds
 
@@ -160,7 +160,6 @@ Inno Setup link: <https://jrsoftware.org/isdl.php>
 Step 1: Clone VVCEasy git and open up VVCEasy_compiler.iss file
 
 ```batch
-cd %userprofile%\Downloads
 git clone --depth=1 https://github.com/MartinEesmaa/VVCEasy && cd VVCEasy
 VVCEasy_compiler.iss
 ```
@@ -256,7 +255,7 @@ If you have any questions or/any issues, please go to the Issues tab and feel fr
 
 You can join and chat in our communities: [Link for communities at top](#community)
 
-Martin Eesmaa, creator and founder of VVCEasy
+Martin Eesmaa, creator and founder of VVCEasy from Estonia
 
 # Credits & Licenses
 
@@ -316,7 +315,7 @@ License: MIT
 
 VVC developers & forkers: [Christian Lehmann](https://github.com/lehmann-c), [tbiat](https://github.com/tbiat), [Isabelle Santin](https://github.com/IsaMorphic) & [Martin Eesmaa](https://github.com/MartinEesmaa)
 
-License: LGPL-2.1 & GPL-2.0
+License: LGPL-2.1, LGPL-3.0, GPL-2.0 & GPL-3.0
 
 For my custom build configuration license is GPL-3.0+ with nonfree (fdk-aac) for FFmpeg.
 
@@ -372,9 +371,9 @@ License: GPL-3.0
 
 © 2007-2018 [MPC-HC Community Forum & contributors](https://github.com/mpc-hc) (Original)
 
-© 2018-2026 [clsid2](https://github.com/clsid2) (forked of MPC-HC)
-
 © 2012-2026 [Alexander Vodiannikov](https://github.com/Aleksoid1978) (forked of MPC-BE)
+
+© 2018-2026 [clsid2](https://github.com/clsid2) (forked of MPC-HC)
 
 ---
 
