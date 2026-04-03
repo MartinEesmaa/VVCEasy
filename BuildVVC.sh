@@ -9,6 +9,12 @@ if [ "$OS" = "Linux" ]; then
     fi
 fi
 
+# Detect Android environment on Termux app
+if [ -f /data/data/com.termux/files/usr/bin/termux-change-repo ]; then
+    echo "Sorry, Android native build is not supported. Please use cross compiling of Android using NDK on a computer."
+    exit 1
+fi
+
 echo "Martin Eesmaa / VVC Compiler (vvenc and vvdec)"
 
 if [ "$OS" = "Linux" ]; then
@@ -129,7 +135,7 @@ case "$OS" in
         ;;
     *)
         echo "Unsupported OS: $OS"
-        echo "Supports Windows MSYS64, macOS, Linux, FreeBSD, OpenBSD and Android"
+        echo "Supports Windows MSYS64, macOS, Linux, FreeBSD and OpenBSD"
         echo "May coming soon for some platforms..."
         exit 1
         ;;
