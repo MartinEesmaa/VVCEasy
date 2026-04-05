@@ -1,4 +1,4 @@
-![vvc](https://upload.wikimedia.org/wikipedia/en/b/ba/Versatile_Video_Coding_%28logo%29.svg)
+![vvc](Screenshots/VVC.svg)
 
 # Versatile Video Codec binaries
 
@@ -22,13 +22,13 @@ Fraunhofer HHI VVC binaries is just standard easy tool, which allows to encode &
 Old screenshots in 2021 of three desktop operating systems:
 
 Windows:
-![WindowsVVENCDEC](https://user-images.githubusercontent.com/88035011/145812753-eddf04c5-1a10-4892-9118-7478735b1475.png)
+![WindowsVVENCDEC](Screenshots/WindowsVVENCDEC.png)
 
 Mac:
-![MacOSterminal12](https://user-images.githubusercontent.com/88035011/146367066-1fbfcf2a-8e1f-470c-8701-c3ec8c2b9701.png)
+![MacOSterminal12](Screenshots/MacOSterminal12.png)
 
 Linux:
-![UbuntuVVENCDEC](https://user-images.githubusercontent.com/88035011/145812781-9a270e03-0dc0-47e6-95ad-4316757d3435.png)
+![UbuntuVVENCDEC](Screenshots/UbuntuVVENCDEC.png)
 
 ## uvg266 (VVC Scalable encoder tool)
 
@@ -48,7 +48,7 @@ OpenVVC is another VVC decoder library licensed under LGPLv2.1.
 
 * C89 programming language
 * Supports Windows, macOS, Linux, BSD, Android & iOS.
-* Supports SIMD optimizations of x86 and arm of SSE and AVX2.
+* Supports SIMD optimizations of x86 (SSE & AVX2) and ARM.
 * Most modern VVC encoded files do not work at all, some old VVC encoded files works
 * Still faster decoding, outputs to YUV only.
 * Lossless decoding VVC is not supported.
@@ -73,6 +73,7 @@ OpenVVC is another VVC decoder library licensed under LGPLv2.1.
 * BSD (FreeBSD & x64 only)
 * Android 4.3 (API 18, Jelly Bean) and later (arm64 & x86_64 since Android 5.0)
 * Haiku OS (x86_64 only)
+* Oracle Solaris 11
 
 **OpenVVC**:
 
@@ -82,10 +83,11 @@ OpenVVC is another VVC decoder library licensed under LGPLv2.1.
 * BSD
 * Android 4.0.1 (API 14, Ice Cream Sandwich) and later
 * Haiku OS (x86_64 only)
+* Oracle Solaris 11
 
 ### Downloads
 
-NOTE: uvg266 compiled by same architectures supported of vvenc & vvdec.
+NOTE: uvg266 compiled by same architectures supported of vvdec & vvenc.
 
 All compiled builds are compressed files on 7-Zip.
 
