@@ -126,3 +126,26 @@ enforcement ladder](https://github.com/mozilla/diversity).
 For answers to common questions about this code of conduct, see the FAQ at
 <https://www.contributor-covenant.org/faq>. Translations are available at
 <https://www.contributor-covenant.org/translations>.
+
+## Server community rules
+
+**Message date: 30th January 2026 14:45 UTC+02:00**
+
+Please take a fully reminder friendly note to follow the important rules...
+
+1. Be kind and respectful to our server and greet the new members too. We will try to solve the problems possible as we can.
+2. No NSFW contents please, ensure it is safe and appropriate, double check always before you post a message with SFW content only.
+3. Due to the safety reasons, the server minimum age is 13+ years old following with official age rule.
+4. Follow the Code of Conduct rules on official VVCEasy repository, this applies to Discord too. (this gives professional details and recommendation)
+5. No discrimination, no inappropriate behavior and no pedophile of this server. Behaviors are not tolerated and may result ban.
+6. No spamming please, you will be given warning with timeout. Repeated spams will be ban result.
+7. Follow the Terms of Service rules from any owned platform server.
+8. For promotions, advertisements or any it is related to promotion, please post it to only channel called promotions.
+9. No impersonation from creator or anyone else please.
+10. No doxing, no black market and absolutely no illegal behaviors.
+I hope you acknowledged and appreciated these rules.
+
+If you have any question, issue, feedback, improve the rules, safety issue or anything,
+please feel free to reach me out over my social medias, GitHub, server DM or the email. Thanks! :)
+
+* Martin Eesmaa

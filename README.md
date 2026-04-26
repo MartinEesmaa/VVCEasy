@@ -41,6 +41,8 @@ Windows/Mac/Linux source run (C#): Bin/Release or Debug/netX.x/VVCEasy.exe (afte
 
 > [!NOTE]
 > Please note my first language is Estonian and it is not native due to my second English language. Some words may have incorrect and incomprehensible. The members of AV1 Discord Community including me can help about VVC issues.
+> [!IMPORTANT]
+> Please make sure you read the code of conduct rules first before you join the server, just in case for safety.
 
 Experimental GitLab mirror is available for alternative purposes or anything:
 
