@@ -5,6 +5,22 @@ This file contains information about changes for latest versions of 7-Zip.
 The full changelog file can be downloaded here:
 https://7-zip.org/history.txt
 
+26.01          2026-04-27
+-------------------------
+- linux version of 7-Zip can use huge pages (2 MB pages). It can increase compression
+  speed for 10% for 7z/xz/LZMA/LZMA2 compression.
+- new -spo[d|c|r] switch specifies the path generation mode for the output directory
+  for archive extraction. The output directory path is generated from the path specified
+  in the -o{dir_path} switch and the name of the archive being unpacked.
+    -spod : for Linux/Posix/macOS: -o{dir_path} specifies the direct path to the output directory.
+            The asterisk (*) character in {dir_path} will not be replaced by the archive name.
+    -spoc : 7-Zip will concatenate the path specified in -o{dir_path} with the archive name
+            to form the final path to the output directory.
+    -spor : 7-Zip will replace asterisk (*) character in the path specified in the -o{dir_path}
+            with the archive name. This is the default option.
+- some bugs were fixed.
+
+
 26.00          2026-02-12
 -------------------------
 - improved code for ZIP, CPIO, RAR, UFD, QCOW, Compound.
@@ -73,12 +89,12 @@ https://7-zip.org/history.txt
   in "Confirm File Replace" window, causing problems after 1600 displays of "Confirm File Replace"
   window from same running 7-Zip process.
 - Some optimizations for displaying file icons in 7-Zip File Manager and in "Confirm File Replace" window.
-- Some bugs were fixed.
+- Some bugs were fixed. CVE-2024-11612.
 
 
 24.07          2024-06-19
 -------------------------
-- The bug was fixed: 7-Zip could crash for some incorrect ZSTD archives.
+- The bug was fixed: 7-Zip could crash for some incorrect ZSTD archives (CVE-2024-11477).
 
 
 24.06          2024-05-26
