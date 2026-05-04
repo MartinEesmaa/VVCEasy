@@ -16,6 +16,7 @@ uvg266/Linux/arm*
 uvg266/Linux/x*
 uvg266/BSD/uvg266
 uvg266/Haiku/uvg266
+uvg266/Solaris/uvg266
 
 [Oo]bj/
 [Bb]in/
