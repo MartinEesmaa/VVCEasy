@@ -139,7 +139,7 @@ There are prebuilt VVC binaries over support ease of use without needing to comp
 
 | Name | Description | Availability |
 | ---- | ----------- | ------------ |
-| [VVC binaries](VVC.md) | The Versatile Video Codec binaries includes two tools of vvdec & vvenc and uvg266. | Windows, macOS, Linux, FreeBSD, Haiku, Android & WASM |
+| [VVC binaries](VVC.md) | The Versatile Video Codec binaries includes two tools of vvdec & vvenc and uvg266. | Windows, macOS, Linux, FreeBSD, Haiku, Android, Oracle Solaris (uvg266) & WASM (vvdec) |
 | [FFmpeg VVENC/DEC & xHE-AAC support](FFMPEGVVC.md) | FFmpeg VVCEasy provides external VVC decoder & encoder, including xHE-AAC. | Windows, macOS & Linux |
 | [MPV VVCEasy](MPV.md) | MPV VVCEasy provides external VVC decoder and xHE-AAC decoder for improve | Windows, Linux & Android (desktop: x86_64, MPV.NET: Windows only) |
 | [LAVFilters VVC](LAVFilters/README.md) | Ready to go play with any LAVFilters compatible with FFmpeg VVCEasy Windows version | Windows 64-bit |
