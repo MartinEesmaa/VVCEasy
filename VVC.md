@@ -101,6 +101,14 @@ All compiled builds are compressed files on 7-Zip.
 | Android | [x86_64/x86/arm64/armv7a](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/AndroidVVC/AndroidVVC.7z) | [Download](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/AndroidVVC/AndroidUVG266-8bit.7z) or [10-bit build](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/AndroidVVC/AndroidUVG266.7z) |
 | Haiku | [x86_64](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/HaikuVVC/HaikuVVC.7z) | [Download](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/uvg266/Haiku/uvg266-HaikuOS.7z) |
 
+### Distribution packages installation
+
+Some operating systems supports VVC packages of vvdec/vvenc or/and uvg266.
+
+Official distributions packages of VVC and uvg266: FreeBSD 14+, OpenBSD, Homebrew (macOS & Linux) and OpenMandriva.
+
+Third party packages of VVC and uvg266: Arch Linux, Enterprise Linux 10, Debian 11+, Fedora 43+, openSUSE Leap 16.0/Tumbleweed and Slackwave 15.0+.
+
 ## Comparisions between vvenc/vvdec and uvg266
 
 If you're using newer computer or/and you wanted it to encode 10-bit with fast encoding to get good quality, use vvenc recommended.
