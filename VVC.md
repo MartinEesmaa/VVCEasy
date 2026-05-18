@@ -54,6 +54,10 @@ OpenVVC is another VVC decoder library licensed under LGPLv2.1.
 * Lossless decoding VVC is not supported.
 * Optional SLHDR external library to support decode HDR videos
 
+Tested using Windows ME to decode old VVC video file 10-bit SDR into raw YUV uncompressed video:
+
+![openvvcwin](Screenshots/openvvcwin-MartinEesmaa.png)
+
 ### Minimum requirements
 
 **vvdec/vvenc**:
