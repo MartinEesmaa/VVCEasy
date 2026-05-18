@@ -116,6 +116,19 @@ Official distributions packages of VVC and uvg266: FreeBSD 14+, OpenBSD, Homebre
 
 Third party packages of VVC and uvg266: Arch Linux, Enterprise Linux 10, Debian 11+, Fedora 43+, openSUSE Leap 16.0/Tumbleweed and Slackwave 15.0+.
 
+Official stable version package from command installation:
+
+```text
+# FreeBSD 14+
+pkg install vvdec vvenc uvg266
+# OpenBSD
+pkg_add vvdec vvenc
+# Homebrew
+brew install vvdec vvenc
+# OpenMandriva
+dnf install vvdec vvenc
+```
+
 ## Comparisions between vvenc/vvdec and uvg266
 
 If you're using newer computer or/and you wanted it to encode 10-bit with fast encoding to get good quality, use vvenc recommended.
