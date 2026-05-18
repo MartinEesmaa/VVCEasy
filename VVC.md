@@ -42,6 +42,8 @@ uvg266 is only scalable encoder which helps to make it faster for older & newer 
 * Supports presets from ultrafast to placebo like x264 presets, however it is recommended to use from faster to slower to avoid VVC decoding fail issue.
 * Lossless encoding is not recommended due decoding fail.
 
+For Windows ME/2000 to Windows XP users, please use command argument `--no-cpuid` to disable runtime CPU optimizations to avoid errors. Use i386 architecture binary of uvg266.
+
 ## OpenVVC (VVC decoder open license)
 
 OpenVVC is another VVC decoder library licensed under LGPLv2.1.
@@ -72,10 +74,11 @@ Tested using Windows ME to decode old VVC video file 10-bit SDR into raw YUV unc
 
 **uvg266**:
 
-* Windows Vista and later (requires Visual C++ Redistributable)
+* Windows ME and later
 * Mac OS X 10.4 and later (amd64 since Mac OS X 10.4, x86 from Mac OS X 10.6 to 10.14, arm64 since macOS 11.0)
 * Linux kernel 3.2.0 and later (eg. Ubuntu 12.04 LTS and later)
-* BSD (FreeBSD & x64 only)
+* FreeBSD 9.0 and later
+* OpenBSD 6.6 and later
 * Android 4.3 (API 18, Jelly Bean) and later (arm64 & x86_64 since Android 5.0)
 * Haiku OS (x86_64 only)
 * Oracle Solaris 11
