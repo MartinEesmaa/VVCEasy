@@ -34,15 +34,19 @@ Linux:
 
 uvg266 is only scalable encoder which helps to make it faster for older & newer computers, but still a bit good quality than vvenc, seems okay.
 
-* C99 programming language
+* C11 programming language
 * Supports Windows, macOS, Linux, BSD, Android & iOS (library only with new app or non-signed binary executable on jailbroken device).
-* SIMDE: MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, AVX, AVX2, NEON & AltiVec (PowerPC only).
+* SIMDE: SSE2, SSE4.1, SSE4.2, AVX2 & AltiVec (PowerPC only).
 * Can only encode 8-bit VVC output for rest operating system supported, but for 10-bit needs compiled with definition, this only works for Android users.
 * Faster encoding scalable of old & new computers than vvenc.
 * Supports presets from ultrafast to placebo like x264 presets, however it is recommended to use from faster to slower to avoid VVC decoding fail issue.
 * Lossless encoding is not recommended due decoding fail.
 
-For Windows ME/2000 to Windows XP users, please use command argument `--no-cpuid` to disable runtime CPU optimizations to avoid errors. Use i386 architecture binary of uvg266.
+For Windows 98/ME/2000 to Windows XP users, please use command argument `--no-cpuid` to disable runtime CPU optimizations to avoid errors. Use i386 architecture binary of uvg266.
+
+Tested using Windows 98 (First Edition) with PCem v17 Pentium II 300MHZ to encode raw Y4M uncompressed video file into VVC 8-bit raw video file using uvg266:
+
+![uvg266encwin](Screenshots/uvg266win-MartinEesmaa.png)
 
 ## OpenVVC (VVC decoder open license)
 
@@ -74,9 +78,9 @@ Tested using Windows ME to decode old VVC video file 10-bit SDR into raw YUV unc
 
 **uvg266**:
 
-* Windows ME and later
+* Windows 98 and later
 * Mac OS X 10.4 and later (amd64 since Mac OS X 10.4, x86 from Mac OS X 10.6 to 10.14, arm64 since macOS 11.0)
-* Linux kernel 3.2.0 and later (eg. Ubuntu 12.04 LTS and later)
+* Linux kernel 2.6.32 and later (eg. Ubuntu 10.04 LTS and later)
 * FreeBSD 9.0 and later
 * OpenBSD 6.6 and later
 * Android 4.3 (API 18, Jelly Bean) and later (arm64 & x86_64 since Android 5.0)
@@ -85,10 +89,11 @@ Tested using Windows ME to decode old VVC video file 10-bit SDR into raw YUV unc
 
 **OpenVVC**:
 
-* Windows ME and later
+* Windows 98 and later
 * Mac OS X 10.4 and later
-* Linux kernel 3.2.0 and later (eg. Ubuntu 12.04 LTS and later)
-* BSD
+* Linux kernel 2.6.32 and later (eg. Ubuntu 10.04 LTS and later)
+* FreeBSD 9.0 and later
+* OpenBSD 6.6 and later
 * Android 4.0.1 (API 14, Ice Cream Sandwich) and later
 * Haiku OS (x86_64 only)
 * Oracle Solaris 11
