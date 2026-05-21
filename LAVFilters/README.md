@@ -11,6 +11,7 @@ Original source code: <https://github.com/Nevcairiel/LAVFilters>
 Changelog:
 
 ```text
+21/05/2026: Updated LAVFilters for up to version 0.81 nightly with new commits, FFmpeg, vvdec, dav1d and others. Sorry took long wait hiatus.
 02/12/2025: Updated LAVFilters nightly with new commits, FFmpeg, vvdec and others.
 22/06/2025: Updated LAVFilters for up to version 0.80 with new commits, FFmpeg, vvdec and others. Sorry for long time hiatus.
 30/03/2025: Updated LAVFilters with new commits, FFmpeg, vvdec and others. Sorry long time and also sorry big DLL sizes.
@@ -25,11 +26,11 @@ Changelog:
 21/03/2023: Full VVC support and libfdk_aac is default after native AAC and AAC Fixed decoder disabled to fix USAC/xHE-AAC playable.
 ```
 
-## MPC-HC 2.5.5.30 (VVC version)
+## MPC-HC (VVC version)
 
-MPC-HC 2.5.5.30 comes with LAVFilters VVC installed and it is portable.
+MPC-HC 2.7.1.21 comes with LAVFilters VVC installed and it is portable.
 
-You can download via cloud link: <https://mega.nz/file/ipc1TYiL#RpqK8X1gvBsP7s9hA78rKdalXFUsjMFy_C75s5TpnvA>
+You can download via cloud link: <https://mega.nz/file/nl8FgTgC#FZIyjiGzYmbSmb0UwZ_BSZ1GQK6nuYDjQqltoIDFbc8>
 
 After downloading, extract compressed file via [7-Zip](https://7-zip.org) and run `mpc-hc64.exe`. This program doesn't require administrator privileges.
 
@@ -38,6 +39,7 @@ Original forked source code: <https://github.com/clsid2/mpc-hc>
 Changelog:
 
 ```text
+21/05/2026: Updated MPC-HC for up to 2.7.1.21, LAVFilters for up to 0.81 nightly new commits, FFmpeg, MediaInfo, vvdec, dav1d, yt-dlp and others.
 04/12/2025: Updated MPC-HC for up to 2.5.5.30, LAVFilters nightly new commits, FFmpeg, vvdec, yt-dlp and others.
 22/06/2025: Updated MPC-HC for up to 2.4.3.6, LAVFilters for up to 0.80 with new commits, FFmpeg, vvdec, yt-dlp and others. Also sorry for DLL files increased and also hiatus for 8 months.
 01/10/2024: Updated MPC-HC, LAVFilters with new commits, FFmpeg, vvdec, yt-dlp and others. Added support VVC Matroska demux and also much better for shrinking DLL files down.
