@@ -17,7 +17,7 @@ VVCEasy provides ready prebuilt VVC (Versatile Video Codec) binaries & players. 
 
 Supports Windows, macOS, Linux, FreeBSD, Android, WebAssembly & Haiku OS for VVCEasy builds.
 
-From October 20, 2021, to June 23, 2022, VVCEasy was in pre-release and construction mode.
+From October 20, 2021, to June 23, 2022, VVCEasy was in pre-release.
 
 Since June 23, 2022, VVCEasy was initially released at version 1.0.0.
 
@@ -139,7 +139,7 @@ There are prebuilt VVC binaries over support ease of use without needing to comp
 
 | Name | Description | Availability |
 | ---- | ----------- | ------------ |
-| [VVC binaries](VVC.md) | The Versatile Video Codec binaries includes two tools of vvdec & vvenc and uvg266. | Windows, macOS, Linux, FreeBSD, OpenBSD, Haiku, Android, Oracle Solaris (uvg266) & WASM (vvdec) |
+| [VVC binaries](VVC.md) | The Versatile Video Codec binaries includes two tools of vvdec & vvenc and uvg266. | Windows, macOS, Linux, FreeBSD, Haiku, Android, Oracle Solaris (uvg266) & WASM (vvdec), also OpenBSD & NetBSD |
 | [FFmpeg VVENC/DEC & xHE-AAC support](FFMPEGVVC.md) | FFmpeg VVCEasy provides external VVC decoder & encoder, including xHE-AAC. | Windows, macOS & Linux |
 | [MPV VVCEasy](MPV.md) | MPV VVCEasy provides external VVC decoder and xHE-AAC decoder for improve | Windows, Linux & Android (desktop: x86_64, MPV.NET: Windows only) |
 | [LAVFilters VVC](LAVFilters/README.md) | Ready to go play with any LAVFilters compatible with FFmpeg VVCEasy Windows version | Windows 64-bit |
