@@ -4,19 +4,20 @@
 
 Versatile Video Codec binaries has available two tools for you to choose.
 
+It supports Windows, macOS, Linux, BSD-like, Haiku OS, Android, iOS (library only with new app or non-signed binary executable on jailbroken device), Oracle Solaris & WebAssembly for some VVC tools.
+
 ## Fraunhofer HHI (vvenc/vvdec)
 
 Fraunhofer HHI VVC binaries is just standard easy tool, which allows to encode & decode with arguments and also encodes good quality for slow preset, but it may be slow...
 
 * C++14 programming language
-* Supports Windows, macOS, Linux, BSD, Android, iOS (library only with new app or non-signed binary executable on jailbroken device) & WebAssembly.
-* SIMDE: SCALAR, SSE4.1, SSE4.2, AVX, AVX2 & AVX512 (unsupported yet). NEON, NEON_RDM, SVE & SVE2 (arm only) and WASM (Web browsers only).
+* SIMDE: SCALAR, SSE4.1, SSE4.2, AVX, AVX2 (PC only). NEON, NEON_RDM, SVE & SVE2 (ARM only) and WASM (Web browsers only).
 * Faster depends speeding up for newer computer machine of CPUs.
 * Presets can be used from faster to slower.
 * Includes advanced tool of encode (vvencFFapp)
 * Two-pass control of bitrate is only allowed.
 * Default encoding pixel format is 10-bit.
-* For decoding, it can output to YUV, Y4M or pipe.
+* For decoding, it can output to YUV, Y4M, PYUV or pipe.
 * Lossless encoding (only for vvencFFapp with CostMode argument)
 
 Old screenshots in 2021 of three desktop operating systems:
@@ -35,7 +36,6 @@ Linux:
 uvg266 is only scalable encoder which helps to make it faster for older & newer computers, but still a bit good quality than vvenc, seems okay.
 
 * C11 programming language
-* Supports Windows, macOS, Linux, BSD, Android & iOS (library only with new app or non-signed binary executable on jailbroken device).
 * SIMDE: SSE2, SSE4.1, SSE4.2, AVX2 & AltiVec (PowerPC only).
 * Can only encode 8-bit VVC output for rest operating system supported, but for 10-bit needs compiled with definition, this only works for Android users.
 * Faster encoding scalable of old & new computers than vvenc.
@@ -53,7 +53,6 @@ Tested using Windows 98 (First Edition) with PCem v17 Pentium II 300MHZ to encod
 OpenVVC is another VVC decoder library licensed under LGPLv2.1.
 
 * C89 programming language
-* Supports Windows, macOS, Linux, BSD, Android & iOS.
 * Supports SIMD optimizations of x86 (SSE & AVX2) and ARM.
 * Most modern VVC encoded files do not work at all, some old VVC encoded files works
 * Still faster decoding, outputs to YUV only.
