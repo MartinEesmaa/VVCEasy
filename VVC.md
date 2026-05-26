@@ -74,7 +74,7 @@ Tested using Windows ME to decode old VVC video file 10-bit SDR into raw YUV unc
 * FreeBSD 9.0 and later
 * OpenBSD 6.6 and later
 * Android 4.1 (API 16, Jelly Bean) and later (arm64 & x86_64 since Android 5.0)
-* Haiku OS (x86_64 only)
+* Haiku OS (64-bit only)
 
 **uvg266**:
 
@@ -84,7 +84,7 @@ Tested using Windows ME to decode old VVC video file 10-bit SDR into raw YUV unc
 * FreeBSD 9.0 and later
 * OpenBSD 6.6 and later
 * Android 4.3 (API 18, Jelly Bean) and later (arm64 & x86_64 since Android 5.0)
-* Haiku OS (x86_64 only)
+* Haiku OS (32-bit/64-bit)
 * Oracle Solaris 11
 
 **OpenVVC**:
@@ -95,7 +95,6 @@ Tested using Windows ME to decode old VVC video file 10-bit SDR into raw YUV unc
 * FreeBSD 9.0 and later
 * OpenBSD 6.6 and later
 * Android 4.0.1 (API 14, Ice Cream Sandwich) and later
-* Haiku OS (x86_64 only)
 * Oracle Solaris 11
 
 ### Downloads
