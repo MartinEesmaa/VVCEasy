@@ -1,3 +1,5 @@
+# VVC binaries
+
 WindowsVVC/Win32
 WindowsVVC/x64
 WindowsVVC/arm64
@@ -9,6 +11,8 @@ AndroidVVC/x*
 FreeBSDVVC/vv*
 HaikuVVC/vv*
 
+# uvg266 builds
+
 uvg266/Windows/Win32
 uvg266/Windows/x64
 uvg266/Windows/i386
@@ -19,12 +23,16 @@ uvg266/FreeBSD/uvg266
 uvg266/Haiku/uvg266
 uvg266/Solaris/uvg266
 
+# OpenVVC builds
+
 OpenVVC/dectest
 OpenVVC/dectest.exe
 OpenVVC/arm64
 OpenVVC/armv7
 OpenVVC/x64
 OpenVVC/x86
+
+# Others
 
 [Oo]bj/
 [Bb]in/
@@ -34,5 +42,4 @@ vvdec/
 [Ii]nstall/
 [Bb]uild/
 buildvvc-temp/
-
 .vscode
