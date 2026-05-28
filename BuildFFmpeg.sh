@@ -5,66 +5,52 @@ echo "Warning: It is deprecated, but you're welcome to use it anyway."
 printf "\033[39m"
 PREFIX="$(pwd)/buildffmpeg/prefix"
 echo "Note: Your prefix folder with full directory will be built: $PREFIX"
-case "$(uname -s)" in
+echo "Building FFmpeg VVCEasy $(uname) version..."
+case "$(uname)" in
     Linux*)
         OS="Linux"
-        DISTRO=$(cat /etc/*release | grep ^ID= | cut -d= -f2 | tr -d '"')
-        echo "Building FFmpeg VVCEasy $OS version..."
-        echo "Downloading system required packages..."
-
+        DISTRO=$(awk -F= '/^ID=/{print $2}' /etc/os-release)
+        echo "Detected Linux $DISTRO distribution, installing system required dependencies..."
         case $DISTRO in
             debian|ubuntu)
-                echo "Detected Debian/Ubuntu"
                 sudo apt update
-                echo "Installing dependencies for Debian/Ubuntu..."
                 sudo apt install build-essential cmake nasm autoconf pkg-config \
-                python3-setuptools ninja-build python3-pip libtool git wget xxd -y
-                sudo pip3 install meson
+                python3-setuptools ninja-build python3-pip libtool git wget -y
                 ;;
             arch)
-                echo "Detected Arch Linux"
                 sudo pacman -Sy
-                echo "Installing dependencies for Arch..."
                 sudo pacman -S --noconfirm base-devel cmake nasm autoconf pkg-config \
-                python-setuptools ninja python-pip libtool git wget xxd
-                sudo pip install meson
+                python-setuptools ninja python-pip libtool git wget
                 ;;
             fedora)
-                echo "Detected Fedora"
                 sudo dnf update -y
-                echo "Installing dependencies for Fedora..."
                 sudo dnf install -y gcc gcc-c++ cmake nasm autoconf pkgconfig \
-                python3-setuptools ninja-build python3-pip libtool git wget xxd
-                sudo pip3 install meson
+                python3-setuptools ninja-build python3-pip libtool git wget
                 ;;
             gentoo)
-                echo "Detected Gentoo"
                 sudo emerge --sync
-                echo "Installing dependencies for Gentoo..."
                 sudo emerge -av dev-util/cmake media-libs/nasm sys-devel/autoconf \
                 dev-python/setuptools dev-util/ninja dev-python/pip sys-libs/libtool \
-                dev-vcs/git net-misc/wget app-editors/vim
-                sudo pip3 install meson
+                dev-vcs/git net-misc/wget
                 ;;
             *)
                 echo "Unsupported Linux distribution: $DISTRO"
                 exit 1
                 ;;
         esac
+        sudo pip3 install meson
         ;;
     MSYS*|MINGW*)
         OS="Windows"
         extra="--disable-w32threads --enable-libcodec2"
-        echo "Building FFmpeg VVCEasy Windows version..."
-        echo "Updating and upgrading MSYS2 packages..."
+        echo "Updating MSYS2 packages lists..."
         pacman -Sy
         echo "Installing MSYS2 packages..."
         pacman -S python git nasm vim wget xxd $MINGW_PACKAGE_PREFIX-{toolchain,cmake,autotools,meson,ninja}
         ;;
     Darwin*)
         OS="macOS"
-        echo "Building FFmpeg VVCEasy macOS version..."
-        echo "Checking for Brew packages requirements..."
+        echo "Checking Homebrew packages requirements..."
         
         if ! command -v brew &> /dev/null; then
             echo "Homebrew is not installed. Please install Homebrew and try again."
@@ -87,10 +73,8 @@ clonepull() {
   fi
 }
 
-[ ! -d buildffmpeg ] && mkdir buildffmpeg
+[ ! -d buildffmpeg/prefix ] && mkdir -p buildffmpeg/prefix
 cd buildffmpeg
-
-[ ! -d prefix ] && mkdir prefix
 
 clonepull FFmpeg-VVC https://github.com/MartinEesmaa/FFmpeg-VVC
 clonepull vvenc https://github.com/fraunhoferhhi/vvenc
@@ -135,7 +119,7 @@ cd vvdec && $make && cd ..
 cd fdk-aac && $autogen && cd ..
 cd libxml2 && $autogen && cd ..
 cd opus && CFLAGS="-O2 -D_FORTIFY_SOURCE=0" LDFLAGS="-flto -s" $autogen && cd ..
-cd libjxl && cmake $cmakeoptions -DBUILD_TESTING=OFF -DJPEGXL_ENABLE_{BENCHMARK,MANPAGES,EXAMPLES,DOXYGEN}=OFF -DJPEGXL_FORCE_SYSTEM_BROTLI=ON -G Ninja && ninja -C build install && cd ..
+cd libjxl && cmake $cmakeoptions -DBUILD_TESTING=OFF -DJPEGXL_ENABLE_{BENCHMARK,MANPAGES,EXAMPLES,DOXYGEN}=OFF -G Ninja && ninja -C build install && cd ..
 cd vmaf/libvmaf/build && CFLAGS="-msse2 -mfpmath=sse -mstackrealign" meson -Denable_tests=false -Denable_float=true $mesonoptions .. && ninja install && cd ../../..
 cd SDL && cmake $cmakeoptions && make install -C build -j $(nproc) && cd ..
 cd zimg && $autogen && cd ..
@@ -160,5 +144,5 @@ export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig
 --enable-lib{fdk-aac,vvenc,vvdec,xml2,opus,dav1d,jxl,zimg,vmaf,soxr} $extra --extra-version=VVCEasy && \
 make -j
 cd ..
-echo It is ready to go for prebuilt binaries of FFmpeg-VVC, you need to go directory called FFmpeg-VVC.
-echo "- 2025 Martin Eesmaa (VVCEasy, MIT License)"
+echo It is ready to go for prebuilt binaries of FFmpeg-VVC, you need to go folder directory called FFmpeg-VVC.
+echo "- 2026 Martin Eesmaa (VVCEasy, MIT License)"
