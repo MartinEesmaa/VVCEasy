@@ -8,13 +8,13 @@ Windows, Mac and Linux (Preview of VVC video in FFplay):
 
 ## Play video file
 
-You can play VVC video codec with .h266, .vvc, .266 and anything or .mp4 mixed with VVC codec:
+You can play VVC video codec with .h266, .vvc, .266, .mp4 and more:
 
 ```bash
 ffplay_vvceasy versatile.266
 ```
 
-Or if you have xHE-AAC audio codec:
+Or if you have xHE-AAC audio codec (old, deprecated):
 
 ```bash
 ffplay_vvceasy -codec:a libfdk_aac -i versatile.m4a
@@ -94,7 +94,7 @@ Additionally... you can convert to VVC video without taking a much space for vve
 ffmpeg -i example.mp4 -pix_fmt yuv420p -f yuv4mpegpipe - | vvencapp --y4m -i - --preset medium --qp 35 -o converted.266
 ```
 
-Converting from xHE-AAC to AAC audio:
+Converting from xHE-AAC to AAC audio (example):
 
 ```bash
 ffmpeg -c:a libfdk_aac -i mymusic.m4a -c:a aac -b:a 128k mymusic.aac
@@ -108,13 +108,13 @@ Good news, you can play .mp4 file after .h266 and audio format were merged into 
 
 About [xHE-AAC](https://www.iis.fraunhofer.de/en/ff/amm/broadcast-streaming/xheaac.html), now it's available decode support xHE-AAC of FFmpeg. [Exhale](https://gitlab.com/ecodis/exhale) (encoder) is free to use and open source, but if you want Fraunhofer IIS xHE-AAC, you can download [EZ CD Audio Converter](https://www.poikosoft.com/music-converter) for Windows only. You can also merge your encoded xHE-AAC audio into mp4 too.
 
-To make playable mp4 with audio and video together, you need VVC video encoded, audio file and [GPAC Nightly build](https://gpac.wp.imt.fr/downloads/gpac-nightly-builds/). Code for mp4box/gpac to merge VVC video encoded and audio file:
+To make a playable MP4 with audio and video together, you need VVC video encoded, audio file and [GPAC Nightly build](https://gpac.wp.imt.fr/downloads/gpac-nightly-builds/). Here is the code for mp4box/gpac to merge VVC video encoded and audio file:
 
 ```bash
 mp4box -add video.266 -add audio.m4a -new convertedvvc.mp4
 ```
 
-Containers are also acceptable video containers of .mkv, .mp4, .mov and more.
+Media video containers accepts of .mkv, .mp4, .mov and more.
 
 For Linux and Mac OS users: Type correctly `MP4Box` for execute binary, but no small or big lettercase letters.
 
@@ -122,7 +122,7 @@ For Linux and Mac OS users: Type correctly `MP4Box` for execute binary, but no s
 
 [Windows (x64/x86/winarm64) & Linux (x64/arm64)](https://github.com/MartinEesmaa/FFmpeg-Builds/releases/tag/latest) - Automated builds every day at 12:00 (12 PM) UTC of FFmpeg VVCEasy custom builds.
 
-[macOS universal (x86_64/arm64)](https://mega.nz/file/v0k1nCyB#iSEvomy1SFpGXjTAdDhoAAh7uZDezzHX9aSLkcVy3cA)
+[macOS universal (x64/arm64)](https://mega.nz/file/v0k1nCyB#iSEvomy1SFpGXjTAdDhoAAh7uZDezzHX9aSLkcVy3cA)
 
 [FFmpeg-FixVVC archived old source code](https://mega.nz/file/G81QyT5S#jcbE1sYPEy1OMIDPCF8BPeAK-3KAGF50u23MVJzmBgw) (old)
 
@@ -130,7 +130,7 @@ For Linux and Mac OS users: Type correctly `MP4Box` for execute binary, but no s
 
 Also, please check changelog before you download the new version.
 
-Since 15th October 2024, Windows and Linux custom builds of FFmpeg-VVC on my forked repo FFmpeg-Builds will turn from my manual time to automatic computer to save my time.
+Since 15th October 2024, Windows and Linux custom builds binaries of FFmpeg-VVC on my forked repo FFmpeg-Builds will turn from my manual time to automatic computer to save my time.
 
 ## Deprecated manual builds
 
@@ -143,6 +143,8 @@ Before automated builds started of Windows & Linux, here are the last links of m
 [Linux Arm64](https://mega.nz/file/al9kjBqL#W_WT-lNM8osAMsdQaKkpe6Ksd4fMO4GKXysMB5IjiJQ)
 
 ### Changelog
+
+Note: This was only for legacy Windows & Linux FFmpeg builds, but macOS builds may be continue for the changelogs...
 
 ```text
 07/12/2025: Merged macOS universal architectures of FFmpeg VVCEasy from x86_64 and arm64 builds, updated FFmpeg latest, vvenc, vvdec and others. Very sorry again for almost six months hiatus.
@@ -241,11 +243,8 @@ Step 3: Click "Open" button, this does not hurt your computer.
 Requirements:
 
 - Xcode
-
 - CMake
-
 - NASM
-
 - Homebrew
 
 Code to build FFmpeg VVC version:
@@ -320,24 +319,24 @@ chmod +x *.sh
 
 If you have not installed Git, please install Git on your package manager on your Linux distribution.
 
-Step 3: Make image and build FFmpeg, example you can build one or two builds.
+Step 3: Make an image and build FFmpeg, for example you can build one or two builds.
 
 ```bash
 ./makeimage.sh win64 nonfree && ./makeimage.sh linux64 nonfree
 ./build.sh win64 nonfree && ./build.sh linux64 nonfree
 ```
 
-Non-free allows to enable Fraunhofer FDK feature, other licenses may not allow to bring Fraunhofer FDK feature to FFmpeg.
+Non-free license allows to enable Fraunhofer FDK feature, other licenses may not allow to bring Fraunhofer FDK feature to FFmpeg.
 
-**Tip 2:**: If you don't want make image, Martin Eesmaa's pre-package of non-free feature is only available. It saves your time without making it.
+**Tip 2:**: If you don't want make image, Martin Eesmaa's pre packages of non-free feature is only available. It saves your time without compiling it.
 
 ```bash
 ./build.sh win64 nonfree && ./build.sh linux64 nonfree
 ```
 
-This will download Martin Eesmaa's pre-package of non-free feature only. However only non-free pre-package is available, not others. If you would like want others than non-free, you can create an feature request to VVCEasy repo on GitHub.
+This will download Martin Eesmaa's pre-package of non-free feature only. However only non-free pre-package is available, not others. If you would like want others than non-free, you can create an feature request to VVCEasy repository on GitHub.
 
-Step 4: After making image and building FFmpeg, you can look `artifacts` folder by inside compressed files of Windows & Linux.
+Step 4: After making image and building FFmpeg, you can look up `artifacts` folder inside compressed files of Windows & Linux.
 
 ### Troubleshooting
 

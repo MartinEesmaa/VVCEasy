@@ -11,6 +11,6 @@ See the lists:
 - Thanks, Mark Litwintschik! [VVC encoding](https://tech.marksblogg.com/vvc-encoding.html)
 - Dziękuje, Snow Lynx! [VVCEasy pakiet do konwersji do H.266 (VVC)](https://www.youtube.com/watch?v=xo6o-LuooXA) (Polish only and English AI audio track)
 
-And to thank you all for using VVCEasy of prebuilt binaries, custom builds and more!
+And thank you all for using VVCEasy with prebuilt binaries, custom builds and more!
 
 - Martin Eesmaa (@MartinEesmaa)

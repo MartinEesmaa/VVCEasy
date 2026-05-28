@@ -1,22 +1,19 @@
 # Android vvenc & vvdec/uvg266 applications (Termux app)
 
-Requirements: Termux app with apk or F-Droid app. For uvg266/vvenc/vvdec pipe, it requires FFmpeg installed on Termux app.
+Requirements: Termux app with apk or F-Droid app or ADB connection. For uvg266/vvenc/vvdec pipe, it requires FFmpeg installed on Termux app.
 
 See the screenshot of vvdecapp in Termux app:
 
 ![termuxvvdecappinandroid](https://user-images.githubusercontent.com/88035011/176990694-52279bf1-86fd-419e-a2b7-1b6d1038ac18.jpg)
 
-All system types of arm64, armeabi, x86 and x86_64 is built on vvenc, vvdec & uvg266, it is use of Termux app.
+All system types of arm64, armeabi, x86 and x86_64 is built on vvdec, vvenc & uvg266, it is use of Termux app.
 
-arm64 - API 21 (64-bit phones & tablets only)
+- arm64 - API 21 (64-bit phones & tablets only)
+- x86_64 - API 21 (64-bit tablets/phones only)
+- armeabi - API 19 (32-bit phones)
+- x86 - API 19 (32-bit tablets only)
 
-armeabi - API 19 (32-bit phones)
-
-x86 - API 19 (32-bit tablets only)
-
-x86_64 - API 21 (64-bit tablets only)
-
-TIP: You can install my built applications:
+TIP: You can install my built VVC binaries:
 
 ```bash
 chmod +x vvdecapp uvg266 vvencapp

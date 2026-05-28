@@ -178,6 +178,8 @@ Step 2: Press F9 on your keyboard to make installer. After that, VVCEasy.exe (In
 You need .NET SDK installed from Microsoft.
 Link: <https://dotnet.microsoft.com/en-us/download>
 
+Minimum requirement SDK version: .NET 6.0 SDK
+
 Step 1: Clone git and cd VVCEasy
 
 ```bash
@@ -215,7 +217,7 @@ After that, it can be found for example at bin\Release\netX.x\win-x64\publish.
 
 # GUI applications (easy)
 
-If you're not familiar with using the CLI, you can use a GUI with an application window for ease of use, eliminating the need to type commands in your terminal.
+If you're not familiar with using the CLI (command line interface), you can use a GUI (graphical user interface) with an application window for ease of use, eliminating the need to type commands in your terminal.
 
 These VVC programs for decoding/encoding are listed:
 
@@ -233,7 +235,7 @@ These VVC programs for decoding/encoding are listed:
 | Programs with website or GitHub link | Note | Creator |
 | --- | --- | --- |
 | [wrenc](https://github.com/hjmkt/wrenc) | An experimental H.266/VVC Rust encoder (last updated October 2022) | hjkmt |
-| [xin26x](https://github.com/pigpeppa/xin26x) | Video Encoder for Now and Next Decade (please note it is partially open source and can only built for Windows) | pigpeppa |
+| [xin26x](https://github.com/pigpeppa/xin26x) | Video Encoder for Now and Next Decade (please note it is partially open source and can only built target for Windows) | pigpeppa |
 | [vvdec-rs](https://github.com/cadubentzen/vvdec-rs) | Rust bindings for VVdeC | cadubentzen |
 | [vvenc-rs](https://github.com/cadubentzen/vvenc-rs) | Rust bindings for VVenC | cadubentzen |
 | [OpenVVC](https://github.com/OpenVVC/OpenVVC) | C binding of VVC decoder | OpenVVC (maintainer) |
@@ -250,15 +252,15 @@ Before you ask any question, see the questions below at table please.
 | --- | --- |
 | **1:** Are you the real creator of VVCEasy? | That's correct, but I'm not a real founder of VVC nor I didn't build VVC. It was JVET built VVC. |
 | **2:** Are you trying to build VVCEasy? | Well, yes... it takes a longer time to make VVCEasy easier, but VVCEasy is not yet finished until further update announcements. I don't have employees, so I'm the only worker. |
-| **3:** Is it okay if I bring my proof screenshots? | Yes, you can include screenshots as proof. More proofs, easy to solve it. |
+| **3:** Is it okay if I can bring my proof screenshots? | Yes, you can include screenshots as proof. More proofs, easy to solve it. |
 | **4:** My question is not listed on the FAQ. | It's okay. You can go to the Issues tab by filing an issue with your question. I'd be happy to solve it :). |
-| **5:** Do you know what skills you have in your programming? | I know about batch files and HTML programming. Some programming languages might be difficult for me. Update of 19th February 2022: Perhaps I should create a C# Console program, which will support Windows, Mac, and Linux. |
+| **5:** Do you know what programming skills you had? | I know about batch files and HTML programming. Some programming languages might be difficult for me. Update of 19th February 2022: Perhaps I should create a C# Console program, which will support Windows, Mac OS and Linux. |
 
-If you have any questions or/any issues, please go to the Issues tab and feel free to create an issue.
+If you have any questions or/and issues, please go to the Issues tab and feel free to create an issue.
 
-You can join and chat in our communities: [Link for communities at top](#community)
+You can join and chat in our communities: [Link for communities at the top](#community)
 
-Martin Eesmaa, creator and founder of VVCEasy from Estonia
+Martin Eesmaa, creator and founder of VVCEasy from Tallinn, Estonia
 
 # Credits & Licenses
 
