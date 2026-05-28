@@ -106,10 +106,11 @@ All compiled builds are compressed files on 7-Zip.
 | --- | --- | --- | --- |
 | Windows | [x64/x86](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/WindowsVVC/WindowsVVC.7z) | [Download](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/uvg266/Windows/uvg266-Windows.7z) | [x86](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/OpenVVC/OpenVVC-Windows.zip) |
 | macOS | [Arm64/x64](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/MacOSVVC/MacOSVVC.7z) | [Download](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/uvg266/macOS/uvg266-macOS.7z) | [Download](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/OpenVVC/OpenVVC-macOS.zip) |
-| Linux | [x86_64/x86/arm64/armv7a](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/uvg266/Linux/uvg266-Linux.7z) | [Download](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/uvg266/Linux/uvg266-Linux.7z) | [Download](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/OpenVVC/OpenVVC-Linux.tar.gz) |
-| FreeBSD | [x86_64](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/FreeBSDVVC/FreeBSDVVC.7z) | [Download](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/uvg266/FreeBSD/uvg266-FreeBSD.7z) | N/A |
-| Android | [x86_64/x86/arm64/armv7a](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/AndroidVVC/AndroidVVC.7z) | [Download](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/AndroidVVC/AndroidUVG266-8bit.7z) or [10-bit build](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/AndroidVVC/AndroidUVG266.7z) | N/A |
+| Linux | [x86_64/x86/arm64/armv7](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/uvg266/Linux/uvg266-Linux.7z) | [Download](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/uvg266/Linux/uvg266-Linux.7z) | [Download](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/OpenVVC/OpenVVC-Linux.tar.gz) |
+| FreeBSD | [x86_64](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/FreeBSDVVC/FreeBSDVVC.7z) | [Download](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/uvg266/FreeBSD/uvg266-FreeBSD.7z) | [Download](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/OpenVVC/OpenVVC-FreeBSD.7z) |
+| Android | [x86_64/x86/arm64/armv7](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/AndroidVVC/AndroidVVC.7z) | [Download](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/AndroidVVC/AndroidUVG266-8bit.7z) or [10-bit build](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/AndroidVVC/AndroidUVG266.7z) | N/A |
 | Haiku | [x86_64](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/HaikuVVC/HaikuVVC.7z) | [Download](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/uvg266/Haiku/uvg266-HaikuOS.7z) | N/A |
+| Solaris | N/A | [Download](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/uvg266/Solaris/uvg266-Solaris.7z) | [Download](https://github.com/MartinEesmaa/VVCEasy/raw/refs/heads/master/OpenVVC/OpenVVC-Solaris.7z) |
 
 ### Distribution packages installation
 
@@ -127,9 +128,9 @@ pkg install vvdec vvenc uvg266
 # OpenBSD
 pkg_add vvdec vvenc
 # Homebrew
-brew install vvdec vvenc
+brew install vvdec vvenc uvg266
 # OpenMandriva
-dnf install vvdec vvenc
+dnf install vvdec vvenc uvg266
 ```
 
 ## Comparisions between vvenc/vvdec and uvg266
