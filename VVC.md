@@ -140,3 +140,18 @@ If you're using newer computer or/and you wanted it to encode 10-bit with fast e
 If you're using older computer or/and more faster encoding of 8-bit than vvenc, use uvg266 recommended.
 
 Also for decoding, use vvdec and also it is faster decoding for older (possible) & newer computers.
+
+### Additional tests
+
+All VVC binaries are compiled after compiled and tested commons architectures with OS are working of x86, x86_64, arm64 and armv7.
+
+| OS arch | vvdec | vvenc | uvg266 | OpenVVC |
+| ---- | --- | --- | --- | --- |
+| Windows armv7 | 🔲 | 🔲 | 🔲 | 🔲 |
+| iOS (native SDK) | ❔ | ❔ | ❔ | ❔ |
+| Linux riscv64 | ✅ | ✅ | ✅ | ✅ |
+
+* ✅ - Passed and tested
+* 🔲 - Compiled successfully, but untested.
+* ❔ - Unknown
+* ❌ - Failed for compile or/and tests
