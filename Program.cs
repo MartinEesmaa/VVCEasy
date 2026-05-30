@@ -19,7 +19,7 @@ namespace VVCEasy
                 Console.Clear();
                 Console.WriteLine("VVCEasy (.NET Console Release Version, " + version + ")");
                 Console.WriteLine("Version codename: " + codeversion);
-                Console.WriteLine("Note: C# version is deprecated.\n");
+                Console.WriteLine("Note: C# version is deprecated, soon replacement...\n");
                 Console.WriteLine("Copyright (C) 2021-2026 Martin Eesmaa (MIT License)");
                 Console.Title = title;
                 Console.WriteLine("What would you like to do for encode/decode of VVC?\n1. Encode\n2. Decode\n3. Help\n4. Exit\n5. Install/Test path environment\n6. Install FFmpeg VVDec support\n7. Install VVdec Web Player\n8. Decompress WindowsVVC.7z (Before you use new VVCEasy version!!!)\n9. Install vvDecPlayer from BitMovin\n10. Install/Update VLC VTM Plugins (Windows/Linux x64 of VLC plugins by Inter Digital Inc)\n11. Install MPV Windows/Android (libvvdec plugin)\n12. Tests of VVC videos");
