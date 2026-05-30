@@ -20,9 +20,9 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 
 [Linux MPV VVCEasy version x64](https://mega.nz/file/ugdWHJ7L#Tc6dsCdQD3fM4YW2fnEd9LDQbTqp2CDdpt-Z8ytcUCM)
 
-[Android API 29 .APK Release signed (Recommended)](https://mega.nz/file/29sEEC6I#IJohZsd0ua7_E2o0BQEjr_-ILpexf_CCKisQt5BQIHU)
+[Android API 29 .APK Release signed (Recommended)](https://mega.nz/file/P4FUSYbC#q53ZjzQ2A73RNBx3zEzM35vkNrrJoo5dPdTtn0ZJoM0)
 
-[Android API 29 .APK Debug (for debugging)](https://mega.nz/file/e98CQaLS#g7znnn4YsF8UEhUiz3Qr-mMABLI_Zx628Ffmhzk7Id4)
+[Android API 29 .APK Debug (for debugging)](https://mega.nz/file/75ck2A6D#jHc3hqHonZ0RCOS5xgDr_5kzKObL4fo7ULa8mw6kRbw)
 
 ### Deprecated builds
 
@@ -69,6 +69,7 @@ Switched native VVC decoder back to external VVC decoder of libvvdec after nativ
 Please check the changelog before you download the new version.
 
 ```text
+30/05/2026 - Updated Android MPV VVCEasy latest build with FFmpeg, vvdec and others. Good news for libxml2 support is back after two years.
 08/12/2025 - Updated Linux MPV VVCEasy build for FFmpeg, vvdec, others and fixed UNIX permissions. Again sorry for almost six months hiatus.
 07/12/2025 - Updated Android MPV VVCEasy latest build with FFmpeg, vvdec and others.
 07/12/2025 - Updated Windows MPV.NET VVCEasy build with mpv-dev build tag (2025-12-07-dbd7a90) from Martin Eesmaa's mpv-winbuild repo and others.
@@ -166,8 +167,8 @@ On Windows, there is available MPV.NET custom build on this download. You can ha
 ## SHA256 SUMS
 
 ```text
-86688ed872173e70678d36454b05b5b2dce09eb71587ae9706dccac38c865122  MPV-VVCEasy-API29debug-signed.apk
-c2129528da3cc880dd15b02da9e277cd7f374119d49bc7b05ea54f5d385b43d3  MPV-VVCEasy-API29release-signed.apk
+5d7bdd57b8a0cc965d6e9beb055fb7b2d8031ea1dd0f0ef2bb496b861e699ae2  MPV-VVCEasy-API29debug-signed.apk
+996c0736cd801fb3bf5ba6ee11c213fecaa60519ed9255c53e974151f3372f45  MPV-VVCEasy-API29release-signed.apk
 9044b7d67eaa020d5e59d437b3fc10dd2e6f60eedfff8034c4dd608145bff17d  MPV-VVCEasy-Windows-x64.7z
 0326a442f6ce1b23cc597016c6fe99c844618744260be6dc036df6f284f04bd4  MPV.NET-VVCEasy-Windows-x64.7z
 7cb80e644657e0447eea33c51517ae428ed841cdc7d0b4155f986ab5226c5894  MPVLIB-VVCEasy-Windows-x64.7z
