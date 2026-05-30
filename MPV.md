@@ -169,12 +169,17 @@ On Windows, there is available MPV.NET custom build on this download. You can ha
 ```text
 5d7bdd57b8a0cc965d6e9beb055fb7b2d8031ea1dd0f0ef2bb496b861e699ae2  MPV-VVCEasy-API29debug-signed.apk
 996c0736cd801fb3bf5ba6ee11c213fecaa60519ed9255c53e974151f3372f45  MPV-VVCEasy-API29release-signed.apk
-9044b7d67eaa020d5e59d437b3fc10dd2e6f60eedfff8034c4dd608145bff17d  MPV-VVCEasy-Windows-x64.7z
 0326a442f6ce1b23cc597016c6fe99c844618744260be6dc036df6f284f04bd4  MPV.NET-VVCEasy-Windows-x64.7z
+430402131e64190b7bfb4566fd5fa5ef760e1c20c6da31c8ed5049c5a146e020  MPV-VVCEasy-Linux-x64.7z
+```
+
+## Deprecated old builds with SHA256 sums
+
+```text
+9044b7d67eaa020d5e59d437b3fc10dd2e6f60eedfff8034c4dd608145bff17d  MPV-VVCEasy-Windows-x64.7z
 7cb80e644657e0447eea33c51517ae428ed841cdc7d0b4155f986ab5226c5894  MPVLIB-VVCEasy-Windows-x64.7z
 8d486291a371c8663e7ddd1d9845cf54f81c316a9c795333a5b490f7621a6cb3  MPV-VVCEasy-Windows-NativeX64.7z
 003dbdf1cd6639ff906c2c17dde69a16c1df7fa565cf310ba014ea24b5b330a5  MPVLIB-VVCEasy-Windows-NativeX64.7z
-430402131e64190b7bfb4566fd5fa5ef760e1c20c6da31c8ed5049c5a146e020  MPV-VVCEasy-Linux-x64.7z
 ab23b1928069bd3584297dae1d90a95fe2910f91936766ddfa5bdafd53c8a300  MPV-VVCEasy-ArchLinux-x64.7z
 ```
 
