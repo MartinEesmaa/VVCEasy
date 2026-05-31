@@ -19,8 +19,8 @@ case "$(uname)" in
                 ;;
             arch)
                 sudo pacman -Sy
-                sudo pacman -S --noconfirm base-devel cmake nasm autoconf pkg-config \
-                python-setuptools ninja python-pip libtool git wget
+                sudo pacman -S base-devel cmake nasm pkg-config \
+                python-setuptools ninja python-pip git wget
                 ;;
             fedora)
                 sudo dnf update -y
@@ -110,21 +110,17 @@ autogen="./autogen.sh && ./configure --prefix=$PREFIX --enable-static --disable-
 cmakeoptions="-DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$PREFIX -DBUILD_SHARED_LIBS=OFF -B build"
 mesonoptions="-Ddefault_library=static -Dprefix=$PREFIX -Denable_docs=false"
 
-for MKBUILD in vmaf/libvmaf dav1d; do
-    mkdir -p "$MKBUILD"/build
-done
-
 cd vvenc && $make && cd ..
 cd vvdec && $make && cd ..
 cd fdk-aac && $autogen && cd ..
 cd libxml2 && $autogen && cd ..
 cd opus && CFLAGS="-O2 -D_FORTIFY_SOURCE=0" LDFLAGS="-flto -s" $autogen && cd ..
 cd libjxl && cmake $cmakeoptions -DBUILD_TESTING=OFF -DJPEGXL_ENABLE_{BENCHMARK,MANPAGES,EXAMPLES,DOXYGEN}=OFF -G Ninja && ninja -C build install && cd ..
-cd vmaf/libvmaf/build && CFLAGS="-msse2 -mfpmath=sse -mstackrealign" meson -Denable_tests=false -Denable_float=true $mesonoptions .. && ninja install && cd ../../..
+cd vmaf && CFLAGS="-msse2 -mfpmath=sse -mstackrealign" meson -Denable_tests=false -Denable_float=true $mesonoptions libvmaf/build libvmaf && ninja install -C libvmaf/build && cd ..
 cd SDL && cmake $cmakeoptions && make install -C build -j $(nproc) && cd ..
 cd zimg && $autogen && cd ..
 cd soxr && cmake -D{WITH_{LSR_BINDINGS,OPENMP},BUILD_TESTS}=off $cmakeoptions && cmake --build build -j $(nproc) --target install && cd ..
-cd dav1d/build && meson $mesonoptions .. && ninja install && cd ../..
+cd dav1d && meson $mesonoptions build && ninja install -C build && cd ..
 
 sed -i 's/-lm/-lm -lstdc++/g' $PREFIX/lib/pkgconfig/libvmaf.pc
 
