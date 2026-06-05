@@ -2,6 +2,8 @@
 OS=$(uname)
 DISTRO=""
 
+echo "Martin Eesmaa / VVC Compiler (vvdec and vvenc)"
+
 # Detect Linux distribution
 if [ "$OS" = "Linux" ]; then
     if [ -f /etc/os-release ]; then
@@ -14,8 +16,6 @@ if [ -f /data/data/com.termux/files/usr/bin/termux-change-repo ]; then
     echo "Sorry, Android native build is not supported. Please use cross compiling of Android using NDK on a computer."
     exit 1
 fi
-
-echo "Martin Eesmaa / VVC Compiler (vvenc and vvdec)"
 
 if [ "$OS" = "Linux" ]; then
     echo "You're running on $OS with distribution $DISTRO of bash script version to compile VVC binaries"
@@ -67,6 +67,10 @@ setup_openbsd() {
     fi
 }
 
+setup_haiku() {
+    pkgman install cmake
+}
+
 build_repos() {
     
     for clone in vvdec vvenc; do
@@ -83,7 +87,7 @@ build_repos() {
             CORES=$(sysctl -n hw.ncpu || echo 1)
         else
             CORES=$(nproc || echo 1)
-        cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXE_LINKER_FLAGS="-static" ..
+        cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXE_LINKER_FLAGS="-static" $extrafix ..
         cmake --build . -j $CORES
         fi
         cd -
@@ -133,9 +137,13 @@ case "$OS" in
     OpenBSD)
         setup_openbsd
         ;;
+    Haiku)
+        extrafix="-DCMAKE_C_FLAGS="-fPIC" -DCMAKE_CXX_FLAGS="-fPIC""
+        setup_haiku
+        ;;
     *)
         echo "Unsupported OS: $OS"
-        echo "Supports Windows MSYS64, macOS, Linux, FreeBSD and OpenBSD"
+        echo "Supports Windows MSYS64, macOS, Linux, FreeBSD, OpenBSD and Haiku."
         echo "May coming soon for some platforms..."
         exit 1
         ;;
