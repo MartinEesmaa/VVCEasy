@@ -22,9 +22,9 @@
 
 echo off
 set welcometitle=Martin Eesmaa / VVCEasy
-set version=v3.2.0
-set versionname=Estonian winter birds
-set vvceasydate=8 December 2025
+set version=v3.5.0
+set versionname=Kind support
+set vvceasydate=9 June 2026
 set copyrightinfo=Copyright (C) 2021-2026 Martin Eesmaa (MIT License)
 set invalidletter=Invalid input. Please enter a valid letter of Y or N.
 for /f "tokens=2*" %%A in ('reg query "HKLM\System\CurrentControlSet\Control\Session Manager\Environment" /v "PROCESSOR_ARCHITECTURE"') do set ProcessorArchitecture=%%B

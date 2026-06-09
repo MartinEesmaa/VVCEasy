@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "VVCEasy"
-#define MyAppVersion "3.2.0"
+#define MyAppVersion "3.5.0"
 #define MyAppPublisher "Martin Eesmaa"
 #define MyAppURL "https://github.com/MartinEesmaa/VVCEasy"
 
@@ -36,7 +36,8 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 [Files]
 Source: "WindowsVVC\WindowsVVC.7z"; DestDir: "{app}\WindowsVVC"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "uvg266\Windows\uvg266-Windows.7z"; DestDir: "{app}\uvg266\Windows"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "LAVFilters\LAVFilters-0.80-x64-VVCEasy.7z"; DestDir: "{app}\LAVFilters"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "LAVFilters\LAVFilters-0.81-x64-VVCEasy.7z"; DestDir: "{app}\LAVFilters"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "OpenVVC\OpenVVC-Windows.zip"; DestDir: "{app}\uvg266\Windows"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "VVCEasy.bat"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "wget.exe"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "7-Zip\x64\7z.exe"; DestDir: "{app}\7-Zip\x64"; Flags: ignoreversion recursesubdirs createallsubdirs
