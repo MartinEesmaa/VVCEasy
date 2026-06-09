@@ -122,7 +122,7 @@ For Linux and Mac OS users: Type correctly `MP4Box` for execute binary, but no s
 
 [Windows (x64/x86/winarm64) & Linux (x64/arm64)](https://github.com/MartinEesmaa/FFmpeg-Builds/releases/tag/latest) - Automated builds every day at 12:00 (12 PM) UTC of FFmpeg VVCEasy custom builds.
 
-[macOS universal (x64/arm64)](https://mega.nz/file/v0k1nCyB#iSEvomy1SFpGXjTAdDhoAAh7uZDezzHX9aSLkcVy3cA)
+[macOS universal (x64/arm64)](https://mega.nz/file/2hN2UbSD#eZI9Eq6WzoJ4VN4CcpiZr2c3TyjxBCoMzt0uk1f_Nb8)
 
 [FFmpeg-FixVVC archived old source code](https://mega.nz/file/G81QyT5S#jcbE1sYPEy1OMIDPCF8BPeAK-3KAGF50u23MVJzmBgw) (old)
 
@@ -147,6 +147,7 @@ Before automated builds started of Windows & Linux, here are the last links of m
 Note: This was only for legacy Windows & Linux FFmpeg builds, but macOS builds may be continue for the changelogs...
 
 ```text
+09/06/2026: Updated macOS FFmpeg latest with vvdec, vvenc and others.
 07/12/2025: Merged macOS universal architectures of FFmpeg VVCEasy from x86_64 and arm64 builds, updated FFmpeg latest, vvenc, vvdec and others. Very sorry again for almost six months hiatus.
 22/06/2025: Updated FFmpeg with latest, vvenc, vvdec and others. Again sorry for two months hiatus.
 06/04/2025: Updated FFmpeg with latest, vvenc, vvdec and others. Sorry for six months. (macOS only)
@@ -350,9 +351,9 @@ sudo usermod -aG docker $USER
 newgrp docker
 ```
 
-After these commands, try again to build image again.
+After that, please try again to build image again.
 
-If it's still error, reboot the machine.
+If it's still error occurred, reboot the machine.
 
 2: If the network connection is interrupted or disconnected while downloading repository and made timed out, it is recommended to cancel and retry again.
 
