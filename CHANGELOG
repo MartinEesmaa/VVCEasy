@@ -4,6 +4,33 @@ To view or download releases with changelogs, please go to https://github.com/Ma
 
 This is local changelog file.
 
+v3.5.0 Release (June 9, 2026):
+- Updated FFmpeg and MPV VVCEasy builds
+- Updated VVC, uvg266 and 7-Zip binaries
+- Updated LAVFilters and MPC-HC Windows VVC version
+- Updated documentations, instructions and social media links
+- Improvement fixes of Markdown files to remove warnings
+- Support ReactOS like Windows based by linking static MSVC runtime library for Windows VVC binaries
+- New Windows MPV VVCEasy build architectures of x86_64-v3 and arm64 (MartinEesmaa's mpv-winbuild)
+- New Haiku OS VVC binaries
+- New Oracle Solaris 11 uvg266 VVC binary
+- New OpenVVC decoder final builds to support Windows 98 and other operating systems
+- New VVCEasy logo and banner
+- New Fluxer app community server of VVCEasy
+- Deprecated some communities
+- C# (Csharp) .NET Console version is deprecated, soon it will be replacement soon in next future...
+- Detect git nightly commit print info on batchfile
+- More improvements of batchfile and bash script files to reduce more lines with fixes
+- Update workflow latest by switching from windows-latest to ubuntu-latest and other versions
+- Added server community rules to code of conduct
+- More improvements batchfile and shell script files with various fixes
+- Renamed from BSDVVC to FreeBSDVVC to avoid confusion with title
+- Provide official & third party packages installation instructions for Linux distros, FreeBSD, OpenBSD and others.
+- Implemented tables from VVC tools informations in README
+- Added list of alternative bindings of VVC tools
+- More tests architectures with operating systems documentation of VVC informations
+- Added some few new little VVC video tests
+
 v3.2.0 Release (December 8, 2025):
 
 - Updated FFmpeg and MPV VVCEasy builds (finally updated macOS and Android)
