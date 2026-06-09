@@ -18,7 +18,7 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 
 [Windows MPV.NET VVCEasy version x64](https://mega.nz/file/OtdxiQhK#cK_8DnjX8nDlcfVBL90W2kNC-QszqXwMGgFZ__vH91E)
 
-[Linux MPV VVCEasy version x64](https://mega.nz/file/ugdWHJ7L#Tc6dsCdQD3fM4YW2fnEd9LDQbTqp2CDdpt-Z8ytcUCM)
+[Linux MPV VVCEasy version x64](https://mega.nz/file/Wk8wlayZ#bqbVK7UC9Y1SI9OH9m1moOYeTaqgQr7SS1lf-wSb4bo)
 
 [Android API 29 .APK Release signed (Recommended)](https://mega.nz/file/P4FUSYbC#q53ZjzQ2A73RNBx3zEzM35vkNrrJoo5dPdTtn0ZJoM0)
 
@@ -69,6 +69,7 @@ Switched native VVC decoder back to external VVC decoder of libvvdec after nativ
 Please check the changelog before you download the new version.
 
 ```text
+09/06/2026 - Updated Linux MPV VVCEasy build for FFmpeg, vvdec and others.
 30/05/2026 - Updated Android MPV VVCEasy latest build with FFmpeg, vvdec and others. Good news for libxml2 support is back after two years.
 08/12/2025 - Updated Linux MPV VVCEasy build for FFmpeg, vvdec, others and fixed UNIX permissions. Again sorry for almost six months hiatus.
 07/12/2025 - Updated Android MPV VVCEasy latest build with FFmpeg, vvdec and others.
