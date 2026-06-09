@@ -16,9 +16,9 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 
 [All releases Windows builds of mpv-winbuild](https://github.com/MartinEesmaa/mpv-winbuild/releases)
 
-[Windows MPV.NET VVCEasy version x64](https://mega.nz/file/OtdxiQhK#cK_8DnjX8nDlcfVBL90W2kNC-QszqXwMGgFZ__vH91E)
+[Windows MPV.NET VVCEasy version x64](https://mega.nz/file/y5FBzKhb#1rlMtu53yJ2po2CONUhyelVjrLZlaloy0y-GWB2OWIc)
 
-[Linux MPV VVCEasy version x64](https://mega.nz/file/Wk8wlayZ#bqbVK7UC9Y1SI9OH9m1moOYeTaqgQr7SS1lf-wSb4bo)
+[Linux MPV VVCEasy version x64](https://mega.nz/file/DtUQWDzA#Qkn5oqvpHoGuFcsYjUbtQJs49iqXLeRxqlQWkyB3CZk)
 
 [Android API 29 .APK Release signed (Recommended)](https://mega.nz/file/P4FUSYbC#q53ZjzQ2A73RNBx3zEzM35vkNrrJoo5dPdTtn0ZJoM0)
 
@@ -69,6 +69,7 @@ Switched native VVC decoder back to external VVC decoder of libvvdec after nativ
 Please check the changelog before you download the new version.
 
 ```text
+09/06/2026 - Updated Windows MPV.NET VVCEasy build with mpv-dev build tag (2026-06-09-6444c05059) from Martin Eesmaa's mpv-winbuild repo and others. Linux: Fix file for missing README...
 09/06/2026 - Updated Linux MPV VVCEasy build for FFmpeg, vvdec and others.
 30/05/2026 - Updated Android MPV VVCEasy latest build with FFmpeg, vvdec and others. Good news for libxml2 support is back after two years.
 08/12/2025 - Updated Linux MPV VVCEasy build for FFmpeg, vvdec, others and fixed UNIX permissions. Again sorry for almost six months hiatus.
@@ -170,8 +171,8 @@ On Windows, there is available MPV.NET custom build on this download. You can ha
 ```text
 5d7bdd57b8a0cc965d6e9beb055fb7b2d8031ea1dd0f0ef2bb496b861e699ae2  MPV-VVCEasy-API29debug-signed.apk
 996c0736cd801fb3bf5ba6ee11c213fecaa60519ed9255c53e974151f3372f45  MPV-VVCEasy-API29release-signed.apk
-0326a442f6ce1b23cc597016c6fe99c844618744260be6dc036df6f284f04bd4  MPV.NET-VVCEasy-Windows-x64.7z
-430402131e64190b7bfb4566fd5fa5ef760e1c20c6da31c8ed5049c5a146e020  MPV-VVCEasy-Linux-x64.7z
+b236afd850ab8a5fcff1716a3404075b064d1e71874058f8d8b1155d9d661ab1  MPV.NET-VVCEasy-Windows-x64.7z
+557e9ec10016f5256949b821d96557e1535e0abe068cbd24615d7029314fffcd  MPV-VVCEasy-Linux-x64.7z
 ```
 
 ## Deprecated old builds with SHA256 sums
