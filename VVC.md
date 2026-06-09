@@ -148,8 +148,10 @@ All VVC binaries are compiled after compiled and tested commons architectures wi
 | OS arch | vvdec | vvenc | uvg266 | OpenVVC |
 | ---- | --- | --- | --- | --- |
 | Windows armv7 | 🔲 | 🔲 | 🔲 | 🔲 |
+| ReactOS | ✅ | ✅ | ✅ | ✅ |
 | iOS (native SDK) | ❔ | ❔ | ❔ | ❔ |
 | Linux riscv64 | ✅ | ✅ | ✅ | ✅ |
+| NetBSD 11.0 | ❌ (compile) | ❌ (compile) | ❌ (compile) | ❌ (illegal instruction) |
 
 * ✅ - Passed and tested
 * 🔲 - Compiled successfully, but untested.
