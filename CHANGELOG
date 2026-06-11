@@ -5,6 +5,7 @@ To view or download releases with changelogs, please go to https://github.com/Ma
 This is local changelog file.
 
 v3.5.0 Release (June 9, 2026):
+
 - Updated FFmpeg and MPV VVCEasy builds
 - Updated VVC, uvg266 and 7-Zip binaries
 - Updated LAVFilters and MPC-HC Windows VVC version
