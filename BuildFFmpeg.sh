@@ -8,7 +8,6 @@ echo "Note: Your prefix folder with full directory will be built: $PREFIX"
 echo "Building FFmpeg VVCEasy $(uname) version..."
 case "$(uname)" in
     Linux*)
-        OS="Linux"
         DISTRO=$(awk -F= '/^ID=/{print $2}' /etc/os-release)
         echo "Detected Linux $DISTRO distribution, installing system required dependencies..."
         case $DISTRO in
@@ -41,15 +40,13 @@ case "$(uname)" in
         sudo pip3 install meson
         ;;
     MSYS*|MINGW*)
-        OS="Windows"
-        extra="--disable-w32threads --enable-libcodec2"
+        extra="--disable-w32threads"
         echo "Updating MSYS2 packages lists..."
         pacman -Sy
         echo "Installing MSYS2 packages..."
-        pacman -S python git nasm vim wget xxd $MINGW_PACKAGE_PREFIX-{toolchain,cmake,autotools,meson,ninja}
+        pacman -S python git nasm wget $MINGW_PACKAGE_PREFIX-{toolchain,cmake,autotools,meson,ninja}
         ;;
     Darwin*)
-        OS="macOS"
         echo "Checking Homebrew packages requirements..."
         
         if ! command -v brew &> /dev/null; then
@@ -60,7 +57,7 @@ case "$(uname)" in
         fi
         ;;
     *)
-        echo "Only for Windows, macOS & Linux are only supported"
+        echo "Only Windows, macOS & Linux are supported"
         exit 1
         ;;
 esac
@@ -91,10 +88,6 @@ clonepull vmaf https://github.com/netflix/vmaf
 
 gitsub="submodule update --init --recursive --depth 1 --recommend-shallow"
 
-if [ $OS = "Windows" ]; then
-clonepull codec2 https://github.com/drowe67/codec2
-fi
-
 if [ ! -d libjxl ]; then
 sed -i 's/-lm/-lm -lstdc++/g' libjxl/lib/jxl/libjxl.pc.in libjxl/lib/threads/libjxl_threads.pc.in
 git -C libjxl $gitsub
@@ -123,16 +116,6 @@ cd soxr && cmake -D{WITH_{LSR_BINDINGS,OPENMP},BUILD_TESTS}=off $cmakeoptions &&
 cd dav1d && meson $mesonoptions build && ninja install -C build && cd ..
 
 sed -i 's/-lm/-lm -lstdc++/g' $PREFIX/lib/pkgconfig/libvmaf.pc
-
-if [ "$OS" = "Windows" ]; then
-    cd codec2
-    sed -i 's|if(WIN32)|if(FALSE)|g' CMakeLists.txt
-    grep -ERl "\b(lsp|lpc)_to_(lpc|lsp)" --include="*.[ch]" | \
-                xargs -r sed -ri "s;((lsp|lpc)_to_(lpc|lsp));c2_\1;g"
-    cmake -B build $cmakeoptions -D{UNITTEST,INSTALL_EXAMPLES}=off -G "MinGW Makefiles"
-    cmake --build build -j $nproc --target install
-    cd ..
-fi
 
 cd FFmpeg-VVC
 export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig

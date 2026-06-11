@@ -23,7 +23,7 @@ if [ "$OS" = "Linux" ]; then
     echo "You're running on $OS of bash script version to compile VVC binaries"
 fi
 
-if [ "$OS" = "SunOS" || "$OS" = "NetBSD" ]; then
+if [ "$OS" = "SunOS" ] || [ "$OS" = "NetBSD" ]; then
     echo "Sorry, SunOS like Oracle Solaris and NetBSD are not supported due to various error compilations for compiling VVC binaries."
     exit 1
 fi
@@ -33,14 +33,14 @@ echo "Checking and installing required packages..."
 echo "Always confirm manual review installation."
 
 setup_linux() {
-    sudo "$pkgupdate"
-    sudo "$pkginstall"
+    sudo $pkgupdate
+    sudo $pkginstall
 }
 
 setup_macos() {
     echo "Please make sure Xcode is installed in your Applications."
     if ! command -v brew &> /dev/null; then
-        echo "Homebrew is not installed. Please install Homebrew and rerun the script."
+        echo "Homebrew is not installed. Please install Homebrew and rerun the script again."
         exit 1
     fi
     if ! brew list | grep -q cmake; then
@@ -51,7 +51,7 @@ setup_macos() {
 
 setup_msys64() {
     pacman -Sy
-    pacman -S base-devel cmake git
+    pacman -S base-devel cmake git ccache
 }
 
 setup_freebsd() {
@@ -72,27 +72,24 @@ setup_haiku() {
 }
 
 build_repos() {
-    
+    if [ "$OS" = "Darwin" ] || [ "$OS" = "FreeBSD" ] || [ "$OS" = "OpenBSD" ]; then
+        CORES=$(sysctl -n hw.ncpu || echo 1)
+    else
+        CORES=$(nproc || echo 1)
+    fi
+
     for clone in vvdec vvenc; do
         if [ ! -d $clone ]; then
-            git clone --depth=1 https://github.com/fraunhoferhhi/$clone
+            git clone --depth=1 https://github.com/fraunhoferhhi/$clone.git
         else
             git -C $clone pull
         fi
     done
 
     for repo in vvdec vvenc; do
-        mkdir -p $repo/build && cd $repo/build
-        if [ "$OS" = "Darwin" || "$OS" = "FreeBSD" || "$OS" = "OpenBSD" ]; then
-            CORES=$(sysctl -n hw.ncpu || echo 1)
-        else
-            CORES=$(nproc || echo 1)
-        cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXE_LINKER_FLAGS="-static" $extrafix ..
-        cmake --build . -j $CORES
-        fi
-        cd -
+        cmake -B $repo/build -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXE_LINKER_FLAGS="-static" $extrafix
+        cmake --build $repo/build -j $CORES
     done
-    echo "Please see the build files starting with (vvdec/vvenc)/bin/release-static."
 }
 
 # Main script execution
@@ -101,29 +98,26 @@ case "$OS" in
         case "$DISTRO" in
             debian|ubuntu)
                 pkgupdate="apt update"
-                pkginstall="apt install build-essential cmake git"
-                setup_linux
+                pkginstall="apt install build-essential cmake git ccache"
                 ;;
             fedora)
                 pkgupdate="dnf update"
-                pkginstall="dnf install cmake gcc gcc-c++ make git"
-                setup_linux
+                pkginstall="dnf install cmake gcc gcc-c++ make git ccache"
                 ;;
             arch)
                 pkgupdate="pacman -Sy"
-                pkginstall="pacman -S base-devel cmake git"
-                setup_linux
+                pkginstall="pacman -S base-devel cmake git ccache"
                 ;;
             gentoo)
                 pkgupdate="emerge --sync"
-                pkginstall="emerge cmake git"
-                setup_linux
+                pkginstall="emerge cmake git ccache"
                 ;;
             *)
                 echo "Unsupported Linux distribution: $DISTRO"
                 exit 1
                 ;;
         esac
+        setup_linux
         ;;
     Darwin)
         setup_macos
@@ -150,4 +144,5 @@ case "$OS" in
 esac
 
 build_repos
-read -p "Finished building vvdec & vvenc. Press [Enter] to continue..."
+echo "Please see the build files starting with (vvdec/vvenc)/bin/release-static."
+echo "Finished building vvdec & vvenc."
