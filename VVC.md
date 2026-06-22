@@ -67,7 +67,7 @@ Tested using Windows ME to decode old VVC video file 10-bit SDR into raw YUV unc
 
 **vvdec/vvenc**:
 
-* Windows XP and later (requires Visual C++ Redistributable for Visual Studio 2019 installed)
+* Windows XP SP3 (latest) and later
 * Mac OS X 10.9 and later (arm64 since macOS 11.0)
 * Linux kernel 3.2.0 and later (eg. Ubuntu 12.04 LTS and later)
 * FreeBSD 9.0 and later
@@ -147,6 +147,9 @@ All VVC binaries are compiled after compiled and tested commons architectures wi
 
 | OS arch | vvdec | vvenc | uvg266 | OpenVVC |
 | ---- | --- | --- | --- | --- |
+| Windows XP SP1 (x86) | ❌ (entry not found EncodePointer) | ❌ (same as vvdec) | ✅ | ✅ |
+| Windows XP SP2 (x86) | ❌ (entry not found GetLogicalProcessorInformation) | ❌ (same as vvdec) | ✅ | ✅ |
+| Windows XP SP3 (x86) | ✅ | ✅ | ✅ | ✅ |
 | Windows armv7 | 🔲 | 🔲 | 🔲 | 🔲 |
 | ReactOS | ✅ | ✅ | ✅ | ✅ |
 | iOS (native SDK) | ❔ | ❔ | ❔ | ❔ |
