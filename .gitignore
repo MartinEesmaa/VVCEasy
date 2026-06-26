@@ -19,6 +19,8 @@ uvg266/Windows/i386
 uvg266/macOS/uvg266
 uvg266/Linux/arm*
 uvg266/Linux/x*
+uvg266/Android/arm*
+uvg266/Android/x*
 uvg266/FreeBSD/uvg266
 uvg266/Haiku/uvg266
 uvg266/Solaris/uvg266
