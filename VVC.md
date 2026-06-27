@@ -154,7 +154,8 @@ All VVC binaries are compiled after compiled and tested commons architectures wi
 | ReactOS | ✅ | ✅ | ✅ | ✅ |
 | iOS (native SDK) | ❔ | ❔ | ❔ | ❔ |
 | Linux riscv64 | ✅ | ✅ | ✅ | ✅ |
-| NetBSD 11.0 | ❌ (compile) | ❌ (compile) | ❌ (compile) | ❌ (illegal instruction) |
+| NetBSD 11.0 (gcc) | ❌ (compile) | ❌ (compile) | ❌ (compile) | ❌ (illegal instruction) |
+| Haiku R1/beta5 x64 (gcc) | ✅ | ✅ | ✅ | ❌ (illegal instruction) |
 
 * ✅ - Passed and tested
 * 🔲 - Compiled successfully, but untested.
