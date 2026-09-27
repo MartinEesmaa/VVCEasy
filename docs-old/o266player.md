@@ -44,6 +44,6 @@ If your operating system is working to decode VVC video format like you're runni
 [Download Windows VLC 3.0.11.1 o266player version](https://www.dropbox.com/s/hs7yoa9hkxa6ugd/vlc-3.0.11.1-w64.7z)
 
 UPDATE 13th December 2021: VLC Media Player (custom VLC build of o266player, 3.0.11.1 Vetenari, Windows 11) is tested by Martin Eesmaa. It can play only about 600 frames limit / 20+ seconds.
-![VLC Media Player (VVC test)](https://user-images.githubusercontent.com/88035011/145756567-d156f630-9e7f-4042-99b5-6ffe8a6b4b64.png)
+![VLC Media Player (VVC test)](../assets/Screenshots/vlc/o266player.png)
 
 - Martin Eesmaa
