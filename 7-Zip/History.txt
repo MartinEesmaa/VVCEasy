@@ -5,9 +5,18 @@ This file contains information about changes for latest versions of 7-Zip.
 The full changelog file can be downloaded here:
 https://7-zip.org/history.txt
 
+
+26.03          2026-09-03
+-------------------------
+- Improved support for Joliet ISO images and Compound archives.
+- Some bugs and vulnerabilities were fixed.
+- CVE-2026-58052 : 7-Zip failed to preserve the Mark-of-the-Web when extracting a crafted archive.
+
+
 26.02          2026-06-25
 -------------------------
 - Some bugs and vulnerabilities were fixed.
+- CVE-2026-14266 : XZ Decompression Heap-based Buffer Overflow Remote Code Execution.
 
 
 26.01          2026-04-27
@@ -23,8 +32,15 @@ https://7-zip.org/history.txt
             to form the final path to the output directory.
     -spor : 7-Zip will replace asterisk (*) character in the path specified in the -o{dir_path}
             with the archive name. This is the default option.
-- some bugs were fixed.
-- CVE-2026-48095 : A vulnerability was fixed : Heap buffer overflow in the NTFS archive handler.
+- Some bugs and vulnerabilities were fixed.
+- CVE-2026-48092 : A heap memory disclosure via SquashFS fragment offset integer overflow on 32-bit builds.
+- CVE-2026-48095 : A heap buffer overflow in the NTFS archive handler.
+- CVE-2026-48101 : An uninitialized memory disclosure vulnerability in the UEFI archive handler.
+- CVE-2026-48102 : A heap out-of-bounds read in the UDF archive handler.
+- CVE-2026-48103 : A heap out-of-bounds read in the WIM archive handler.
+- CVE-2026-48104 : An uninitialized heap read in the SquashFS archive handler.
+- CVE-2026-48111 : An out-of-bounds read vulnerability UEFI archive handler.
+- CVE-2026-48112 : A heap out-of-bounds read in 7-Zip Ar archive handler.
 
 
 26.00          2026-02-12
