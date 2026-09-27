@@ -154,7 +154,7 @@ VVCEasy_compiler.iss
 
 Step 2: Press F9 on your keyboard to make installer. After that, VVCEasy.exe (Installer) can be found in the Install folder.
 
-![VVCEasyclickblueplaybutton](https://user-images.githubusercontent.com/88035011/153736303-b0949f5a-5ac5-4123-92c5-305211a8aadc.png)
+![VVCEasyclickblueplaybutton](assets/Screenshots/VVCEasyclickblueplaybutton.png)
 
 ---
 
