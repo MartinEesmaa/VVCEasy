@@ -25,7 +25,7 @@ Old screenshots in 2021 of three desktop operating systems:
 Windows:
 ![WindowsVVENCDEC](assets/Screenshots/WindowsVVENCDEC.png)
 
-Mac:
+macOS:
 ![MacOSterminal12](assets/Screenshots/MacOSterminal12.png)
 
 Linux:

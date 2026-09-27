@@ -9,22 +9,22 @@ On macOS 10.15.6, I tried build, but it failed, you can have a look for Stack Ov
 On Linux, it doesn't support VLC (o266player build).
 If you want to run VLC (o266player version), you need to run Windows only for a virtual machine or a real computer.
 
-| Windows | Compatibility (only x64) | Screenshot | Date report (DD/MM/YYYY, 24hr) |
+| Windows | Compatibility (only x64) | Screenshot | Date report (DD.MM.YYYY, 24hr) |
 | ------- | ------- | --------------- | ------------- |
-| Windows 2000/ME or older | :x: (Cannot run custom build) | [Screenshot](https://i.imgur.com/hHnh5Cx.png) | 19/02/2022 18:35:34 (AEDT) |
-| Windows XP | ⚠️ (Terminal only, GUI is not working) | [Screenshot](https://i.imgur.com/v3jMW3d.png) | 11/12/2021 15:18:29 (AEDT) |
+| Windows 2000/ME or older | :x: (Cannot run custom build) | [Screenshot](https://i.imgur.com/hHnh5Cx.png) | 19.02.2022 07:35:34 (UTC) |
+| Windows XP | ⚠️ (Terminal only, GUI is not working) | [Screenshot](https://i.imgur.com/v3jMW3d.png) | 11.12.2021 04:18:29 (UTC) |
 | Windows Vista | :white_check_mark: (All checked) | None | None |
-| Windows 7 | :white_check_mark: (All checked) | [Screenshot](https://i.imgur.com/4cANwDQ.png) | 17/12/2021 21:32:38 (AEDT) |
-| Windows 8.0 | :white_check_mark: (All checked) | [Screenshot](https://i.imgur.com/cl8qASz.png) | 20/02/2022 15:27:40 (AEDT) |
-| Windows 8.1 | :white_check_mark: (All checked) | [Screenshot](https://i.imgur.com/1Fe6xGW.png) | 17/12/2021 18:23:35 (AEDT) |
+| Windows 7 | :white_check_mark: (All checked) | [Screenshot](https://i.imgur.com/4cANwDQ.png) | 17.12.2021 10:32:38 (UTC) |
+| Windows 8.0 | :white_check_mark: (All checked) | [Screenshot](https://i.imgur.com/cl8qASz.png) | 20.02.2022 04:27:40 (UTC) |
+| Windows 8.1 | :white_check_mark: (All checked) | [Screenshot](https://i.imgur.com/1Fe6xGW.png) | 17.12.2021 07:23:35 (UTC) |
 | Windows 10 | :white_check_mark: (All checked) | None | None |
-| Windows 11 | :white_check_mark: (All checked) | [Screenshot](https://i.imgur.com/Me2L998.png) | 13/12/2021 15:58:55 (AEDT) |
+| Windows 11 | :white_check_mark: (All checked) | [Screenshot](https://i.imgur.com/Me2L998.png) | 13.12.2021 04:58:55 (UTC) |
 
-| Windows Server | Compatibility (only x64) | Screenshot | Date report (DD/MM/YYYY, 24hr) |
+| Windows Server | Compatibility (only x64) | Screenshot | Date report (DD.MM.YYYY, 24hr) |
 | ------- | ------- | --------- | --------- |
-| Windows Server 2003 | ⚠️ (Terminal only, GUI is not working) | [Screenshot](https://i.imgur.com/G7F2bif.png) | 19/02/2022 21:38:20 (AEDT) |
-| Windows Server 2008 | ⚠️ (GUI Works, but VVC won't show video) | [Screenshot](https://i.imgur.com/GXFgIt8.png) | 20/02/2022 14:02:28 (AEDT) |
-| Windows Server 2012 | :white_check_mark: (All checked) | [Screenshot](https://i.imgur.com/Vcgag8B.png) | 17/12/2021 20:57:16 (AEDT) |
+| Windows Server 2003 | ⚠️ (Terminal only, GUI is not working) | [Screenshot](https://i.imgur.com/G7F2bif.png) | 19.02.2022 10:38:20 (UTC) |
+| Windows Server 2008 | ⚠️ (GUI Works, but VVC won't show video) | [Screenshot](https://i.imgur.com/GXFgIt8.png) | 20.02.2022 03:02:28 (UTC) |
+| Windows Server 2012 | :white_check_mark: (All checked) | [Screenshot](https://i.imgur.com/Vcgag8B.png) | 17.12.2021 09:57:16 (UTC) |
 | Windows Server 2016 | :white_check_mark: (Already checked by Tencent Cloud) | None | None |
 | Windows Server 2019 | :white_check_mark: (All checked) | None | None |
 | Windows Server 2022 | :white_check_mark: (All checked) | None | None |

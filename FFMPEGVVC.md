@@ -346,13 +346,13 @@ newgrp docker
 
 After that, please try again to build image again.
 
-If it's still error occurred, reboot the machine.
+If error persists, restart the machine.
 
-2: If the network connection is interrupted or disconnected while downloading repository and made timed out, it is recommended to cancel and retry again.
+2: If the network connection is interrupted or disconnected while downloading repository and made timed out, it is recommended to cancel it and retry it again.
 
-Press CTRL + C to cancel operation on your keyboard and try it again with make image or/and build FFmpeg command.
+Press CTRL + C to cancel operation on your keyboard and try it again during making image or/and building FFmpeg command.
 
-3: If that did not work for you, please create an issue to VVCEasy or join communities of Discord, Revolt or/and Matrix to solve your problem.
+3: If that didn't work, please create an issue to VVCEasy or join communities of Discord, Revolt or/and Matrix to solve your problem.
 
 ## Special thanks
 

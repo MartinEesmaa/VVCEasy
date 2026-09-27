@@ -3,11 +3,12 @@
 You need 7-Zip (requires ffmpeg and ffplay), ffmpeg, ffplay, vvenc/vvdec(app).
 
 Here are the links:
-FFMPEG/FFPLAY: <https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-full.7z> (go to bin folder and extract two files of ffmpeg and ffplay)
-VVENC/VVDEC (Windows, Mac and Linux):
-Windows: <https://github.com/MartinEesmaa/VVCEasy/blob/master/WindowsVVC/WindowsVVC.7z>
-Mac: <https://github.com/MartinEesmaa/VVCEasy/tree/master/MacOSVVC/MacOSVVC.7z>
-Linux: <https://github.com/MartinEesmaa/VVCEasy/blob/master/LinuxVVC/LinuxVVC.7z>
+
+- FFMPEG/FFPLAY: <https://www.gyan.dev/ffmpeg/builds/ffmpeg-git-full.7z> (go to bin folder and extract two files of ffmpeg and ffplay)
+- VVENC/VVDEC (Windows, Mac and Linux):
+- Windows: <https://github.com/MartinEesmaa/VVCEasy/blob/master/WindowsVVC/WindowsVVC.7z>
+- Mac: <https://github.com/MartinEesmaa/VVCEasy/tree/master/MacOSVVC/MacOSVVC.7z>
+- Linux: <https://github.com/MartinEesmaa/VVCEasy/blob/master/LinuxVVC/LinuxVVC.7z>
 
 Before we start, you need to make path environments for ffmpeg, ffplay and vvenc/vvdec to make easily.
 In Command Prompt (Windows):
@@ -86,15 +87,11 @@ ffmpeg -i example.mp4 -pix_fmt yuv420p -f rawvideo - | vvencapp -i - -s 1920x108
 
 **WARNING: If you encode from yuv/y4m of your frame rate is 11.988, 14.985, 23.976, 29.970 or 59.940 FPS, replace this command -r by --fps.**
 
-11.988 fps = `--fps 12000/1001`
-
-14.985 fps = `--fps 15000/1001`
-
-23.976 fps = `--fps 24000/1001`
-
-29.970 fps = `--fps 30000/1001`
-
-59.940 fps = `--fps 60000/1001`
+- 11.988 fps = `--fps 12000/1001`
+- 14.985 fps = `--fps 15000/1001`
+- 23.976 fps = `--fps 24000/1001`
+- 29.970 fps = `--fps 30000/1001`
+- 59.940 fps = `--fps 60000/1001`
 
 The default of VVENC: Quantization Parameter is 32 and preset is medium.
 

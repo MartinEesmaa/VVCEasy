@@ -7,38 +7,26 @@ MPV Windows/Linux/Android Player (libvvdec + xHE-AAC support) can play your VVC 
 Screenshot preview, see top-left information of toggle stats on Windows/Linux/Android device:
 
 ![mpv-vvceasy-windows](assets/Screenshots/mpv-vvceasy-windows.png)
-
 ![mpvlinuxvvceasy](assets/Screenshots/mpv-vvceasy-linux.png)
-
 ![mpv-vvceasy-android](assets/Screenshots/mpv-vvceasy-android.png)
 
 ## Download MPV Windows/Linux/Android Player (libvvdec + xHE-AAC plugin)
 
-[All releases Windows builds of mpv-winbuild](https://github.com/MartinEesmaa/mpv-winbuild/releases)
-
-[Windows MPV.NET VVCEasy version x64](https://mega.nz/file/y5FBzKhb#1rlMtu53yJ2po2CONUhyelVjrLZlaloy0y-GWB2OWIc)
-
-[Linux MPV VVCEasy version x64](https://mega.nz/file/DtUQWDzA#Qkn5oqvpHoGuFcsYjUbtQJs49iqXLeRxqlQWkyB3CZk)
-
-[Android API 29 .APK Release signed (Recommended)](https://mega.nz/file/P4FUSYbC#q53ZjzQ2A73RNBx3zEzM35vkNrrJoo5dPdTtn0ZJoM0)
-
-[Android API 29 .APK Debug (for debugging)](https://mega.nz/file/75ck2A6D#jHc3hqHonZ0RCOS5xgDr_5kzKObL4fo7ULa8mw6kRbw)
+- [All releases Windows builds of mpv-winbuild](https://github.com/MartinEesmaa/mpv-winbuild/releases)
+- [Windows MPV.NET VVCEasy version x64](https://mega.nz/file/y5FBzKhb#1rlMtu53yJ2po2CONUhyelVjrLZlaloy0y-GWB2OWIc)
+- [Linux MPV VVCEasy version x64](https://mega.nz/file/DtUQWDzA#Qkn5oqvpHoGuFcsYjUbtQJs49iqXLeRxqlQWkyB3CZk)
+- [Android API 29 .APK Release signed (Recommended)](https://mega.nz/file/P4FUSYbC#q53ZjzQ2A73RNBx3zEzM35vkNrrJoo5dPdTtn0ZJoM0)
+- [Android API 29 .APK Debug (for debugging)](https://mega.nz/file/75ck2A6D#jHc3hqHonZ0RCOS5xgDr_5kzKObL4fo7ULa8mw6kRbw)
 
 ### Deprecated builds
 
-[Windows 7 and later x64](https://mega.nz/file/20syxBgS#69Hs6eKFHJz1seJFVeP1bZ_Qv7Zb4ygCC90rQqfBY7o)
-
-[Windows MPVLIB VVCEasy version x64](https://mega.nz/file/Tl92DKzA#DuE3ZMBT4sd1wOO6YAOZXrj0tMLsGvlbCXlU7YsVWVE)
-
-[Windows 7 and later x86_64-v3 native](https://mega.nz/file/u1l2zTYA#HmiZtkd46EMd9pqcTnhWGC-M3nCv3Y__jLN9T7jLc-c)
-
-[Windows MPVLIB VVCEasy version x86_64-v3 native](https://mega.nz/file/24UggbYD#CsTqPGLa4nEfs_9UheV0auISenDXqFdu465PZfRqozY)
-
-[Manual builds generated Windows x64 on GitHub Actions](https://github.com/MartinEesmaa/mpv-winbuild-cmake/releases)
-
-[Automatic build of Windows on mpv-winbuild](https://github.com/MartinEesmaa/mpv-winbuild/releases/tag/2025-06-23-18defc8)
-
-[Arch Linux MPV VVCEasy version x64](https://mega.nz/file/2pFDTSzT#GwoVQ0u6RStUwjk3rc5LkIzLQgmSDMhgV1Xk8WMeQ-w)
+- [Windows 7 and later x64](https://mega.nz/file/20syxBgS#69Hs6eKFHJz1seJFVeP1bZ_Qv7Zb4ygCC90rQqfBY7o)
+- [Windows MPVLIB VVCEasy version x64](https://mega.nz/file/Tl92DKzA#DuE3ZMBT4sd1wOO6YAOZXrj0tMLsGvlbCXlU7YsVWVE)
+- [Windows 7 and later x86_64-v3 native](https://mega.nz/file/u1l2zTYA#HmiZtkd46EMd9pqcTnhWGC-M3nCv3Y__jLN9T7jLc-c)
+- [Windows MPVLIB VVCEasy version x86_64-v3 native](https://mega.nz/file/24UggbYD#CsTqPGLa4nEfs_9UheV0auISenDXqFdu465PZfRqozY)
+- [Manual builds generated Windows x64 on GitHub Actions](https://github.com/MartinEesmaa/mpv-winbuild-cmake/releases)
+- [Automatic build of Windows on mpv-winbuild](https://github.com/MartinEesmaa/mpv-winbuild/releases/tag/2025-06-23-18defc8)
+- [Arch Linux MPV VVCEasy version x64](https://mega.nz/file/2pFDTSzT#GwoVQ0u6RStUwjk3rc5LkIzLQgmSDMhgV1Xk8WMeQ-w)
 
 For Windows 7 users, official mpv build already dropped support of Windows 7 for already past little year ago. I can bring back mpv build for Windows 7 support later on later meanwhile three options alternatives way for [eko5624's mpv](https://github.com/eko5624/mpv-win64) of Windows 7 support, MPC-HC or MPC-BE.
 

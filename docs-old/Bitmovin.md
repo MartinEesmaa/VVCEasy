@@ -22,9 +22,8 @@ Last segment (last) will be ending from video, 2 sec -> 3 sec. (segment-2.vvc)
 
 Total is three seconds and three segments. Example of my segments, including log:
 
-[Log file](https://pastebin.com/qrCyfDEU)
-
-[VVC Segments](https://github.com/MartinEesmaa/VVCEasy/files/8308682/BBBVVCTHREESEC.zip)
+- [Log file](https://pastebin.com/qrCyfDEU)
+- [VVC Segments](https://github.com/MartinEesmaa/VVCEasy/files/8308682/BBBVVCTHREESEC.zip)
 
 JSON:
 
@@ -46,11 +45,9 @@ JSON:
 
 # Bitmovin VVDec Player Downloads (including build instructions)
 
-[Windows Pre-Builded](https://www.dropbox.com/scl/fi/x4v1qb60u8zp505dtx8p6/BitVVDecPlayerWIN.7z?rlkey=gs9duytd6h1sos69o53rw8vyy)
-
-[Mac OS Pre-Builded](https://www.dropbox.com/s/ilsoica7c8dh4hq/BitVVDecPlayerMAC.7z)
-
-[Linux Pre-Builded](https://www.dropbox.com/scl/fi/9jgibpwxe52zkkjijycdc/BitVVDecPlayerLINUX.AppImage?rlkey=jrqxsnwuqltc1xj9fevk9xb1f)
+- [Windows Pre-Builded](https://www.dropbox.com/scl/fi/x4v1qb60u8zp505dtx8p6/BitVVDecPlayerWIN.7z?rlkey=gs9duytd6h1sos69o53rw8vyy)
+- [Mac OS Pre-Builded](https://www.dropbox.com/s/ilsoica7c8dh4hq/BitVVDecPlayerMAC.7z)
+- [Linux Pre-Builded](https://www.dropbox.com/scl/fi/9jgibpwxe52zkkjijycdc/BitVVDecPlayerLINUX.AppImage?rlkey=jrqxsnwuqltc1xj9fevk9xb1f)
 
 Want to build VVDec (.dll (Windows)/.dylib (Mac OS)/.so (Linux)) yourself?
 
@@ -59,18 +56,15 @@ Here is a code:
 ```bash
 git clone https://github.com/fraunhoferhhi/vvdec
 cd vvdec
-mkdir build && cd build
-cmake -DBUILD_SHARED_LIBS=1 ..
-cmake --build . --config Release
+cmake -DBUILD_SHARED_LIBS=1 -B build
+cmake --build build --config Release
 ```
 
-The build files can be located at vvdec/bin/release-shared
+The build files can be located at `vvdec/bin/release-shared`
 
-Windows: vvdec.dll
-
-Mac OS: libvvdec.dylib
-
-Linux: libvvdecLib.so
+- Windows: vvdec.dll
+- Mac OS: libvvdec.dylib
+- Linux: libvvdecLib.so
 
 ***Note to Linux: If the file (.so) can't load into your Bitmovin VVDec Player. You have to rename libvvdec.so into libvvdecLib.so***
 
@@ -78,39 +72,23 @@ Linux: libvvdecLib.so
 
 This program requires architecture of x86_64/AMD64.
 
+- Internet required to download segments for Bitmovin streams.
+- Offline availability for local segments
+
 ## Windows
 
-Operating System: Windows 7 / Windows Server 2012 and later versions
-
-Requirements to run program: Microsoft Visual C++ Redistributable 2015-2017-2019-2022 and vvdec.dll
-
-Internet required to download segments for Bitmovin streams
-
-Offline availability for local segments
-
----
+- Operating System: Windows 7 / Windows Server 2012 and later versions
+- Requirements to run program: Microsoft Visual C++ Redistributable 2015-2017-2019-2022 and vvdec.dll
 
 ## Mac OS
 
-Operating System: macOS 10.15 and later versions.
-
-Requirements to run program: Qt framework (version 5) and libvvdec.dylib
-
-Internet required to download segments for Bitmovin streams.
-
-Offline availability for local segments
-
----
+- Operating System: macOS 10.15 and later versions.
+- Requirements to run program: Qt framework (version 5) and libvvdec.dylib
 
 ## Linux from other distributions
 
-Operating System: Linux 3.20+ (Ubuntu 12.04 LTS and later versions)
-
-Requirements to run program: Qt framework (version 5), glib (build-essential) and libvvdecLib.so
-
-Internet required to download segments for Bitmovin streams.
-
-Offline availability for local segments
+- Operating System: Linux 3.20+ (Ubuntu 12.04 LTS and later versions)
+- Requirements to run program: Qt framework (version 5), glib (build-essential) and libvvdecLib.so
 
 # Bitmovin VVDec Player (Test compatibility)
 
@@ -118,13 +96,9 @@ Offline availability for local segments
 
 ![okd933](../assets/Screenshots/bitmovin/windows7-bitmovin.gif)
 
----
-
 ## macOS 10.15+
 
 ![Macosbitvvdecplayer](../assets/Screenshots/bitmovin/macos-bitmovin.png)
-
----
 
 ## Linux
 
