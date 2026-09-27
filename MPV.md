@@ -15,8 +15,8 @@ Screenshot preview, see top-left information of toggle stats on Windows/Linux/An
 - [All releases Windows builds of mpv-winbuild](https://github.com/MartinEesmaa/mpv-winbuild/releases)
 - [Windows MPV.NET VVCEasy version x64](https://mega.nz/file/y5FBzKhb#1rlMtu53yJ2po2CONUhyelVjrLZlaloy0y-GWB2OWIc)
 - [Linux MPV VVCEasy version x64](https://mega.nz/file/DtUQWDzA#Qkn5oqvpHoGuFcsYjUbtQJs49iqXLeRxqlQWkyB3CZk)
-- [Android API 29 .APK Release signed (Recommended)](https://mega.nz/file/P4FUSYbC#q53ZjzQ2A73RNBx3zEzM35vkNrrJoo5dPdTtn0ZJoM0)
-- [Android API 29 .APK Debug (for debugging)](https://mega.nz/file/75ck2A6D#jHc3hqHonZ0RCOS5xgDr_5kzKObL4fo7ULa8mw6kRbw)
+- [Android API 30 .APK Release signed (Recommended, allstorage)](https://mega.nz/file/rhc0zL4I#8IX--oDRuLzDZ7Mq3d5i-d4P1BXdSegyv9G4yToNngg)
+- [Android API 30 .APK Debug (for debugging, allstorage)](https://mega.nz/file/b9EzFJCQ#qoE1zsVt6kFB1p2if60pVWyngQL_Zbkxc5Xfo2POu04)
 
 ### Deprecated builds
 
@@ -57,6 +57,7 @@ Switched native VVC decoder back to external VVC decoder of libvvdec after nativ
 Please check the changelog before you download the new version.
 
 ```text
+27/09/2026 - Updated Android MPV VVCEasy latest build with FFmpeg, vvdec and others.
 09/06/2026 - Updated Windows MPV.NET VVCEasy build with mpv-dev build tag (2026-06-09-6444c05059) from Martin Eesmaa's mpv-winbuild repo and others. Linux: Fix file for missing README...
 09/06/2026 - Updated Linux MPV VVCEasy build for FFmpeg, vvdec and others.
 30/05/2026 - Updated Android MPV VVCEasy latest build with FFmpeg, vvdec and others. Good news for libxml2 support is back after two years.
@@ -157,8 +158,8 @@ On Windows, there is available MPV.NET custom build on this download. You can ha
 ## SHA256 SUMS
 
 ```text
-5d7bdd57b8a0cc965d6e9beb055fb7b2d8031ea1dd0f0ef2bb496b861e699ae2  MPV-VVCEasy-API29debug-signed.apk
-996c0736cd801fb3bf5ba6ee11c213fecaa60519ed9255c53e974151f3372f45  MPV-VVCEasy-API29release-signed.apk
+6e6346e4bd9929e77e5943d718cbbbccca2165af9c73c14249f77c1867f22354  MPV-VVCEasy-debug-signed.apk
+db9df2299e40b586c40de25740a36a7b4841d4bbbeb33aafaddfc288a8ad86d7  MPV-VVCEasy-release-signed.apk
 b236afd850ab8a5fcff1716a3404075b064d1e71874058f8d8b1155d9d661ab1  MPV.NET-VVCEasy-Windows-x64.7z
 557e9ec10016f5256949b821d96557e1535e0abe068cbd24615d7029314fffcd  MPV-VVCEasy-Linux-x64.7z
 ```
