@@ -2,8 +2,8 @@
 
 Windows, Mac and Linux (Preview of VVC video in FFplay):
 
-![ffmpegplaypreview](assets/Screenshots/windows-ffplay_vvceasy.png)
-![macos_vvceasy_ff](https://user-images.githubusercontent.com/88035011/169693891-52271091-eb92-4198-82eb-2ad38296a917.png)
+![windows_vvceasy_ff](assets/Screenshots/windows-ffplay_vvceasy.png)
+![macos_vvceasy_ff](assets/Screenshots/macos-ffplay_vvceasy.png)
 ![linux_vvceasy_ff](assets/Screenshots/linux-ffplay_vvceasy.png)
 
 ## Play video file
@@ -14,7 +14,7 @@ You can play VVC video codec with .h266, .vvc, .266, .mp4 and more:
 ffplay_vvceasy versatile.266
 ```
 
-Or if you have xHE-AAC audio codec (old, deprecated):
+Or if you have xHE-AAC audio codec (old earlier FFmpeg versions, deprecated):
 
 ```bash
 ffplay_vvceasy -codec:a libfdk_aac -i versatile.m4a
@@ -88,7 +88,7 @@ ffmpeg -i example.mp4 -c:v libvvenc -qp 37 -preset slow example.266
 
 For more options for libvvenc in FFmpeg VVCEasy version, type `ffmpeg_vvceasy -h encoder=libvvenc` for available commands.
 
-Additionally... you can convert to VVC video without taking a much space for vvencapp by using pipe for example:
+Additional way, you can convert to VVC video without taking a much space for vvencapp by using pipe for example:
 
 ```bash
 ffmpeg -i example.mp4 -pix_fmt yuv420p -f yuv4mpegpipe - | vvencapp --y4m -i - --preset medium --qp 35 -o converted.266
@@ -116,15 +116,12 @@ mp4box -add video.266 -add audio.m4a -new convertedvvc.mp4
 
 Media video containers accepts of .mkv, .mp4, .mov and more.
 
-For Linux and Mac OS users: Type correctly `MP4Box` for execute binary, but no small or big lettercase letters.
+For Linux and Mac OS users: Type `MP4Box` correctly to execute binary, but no small or big lettercase letters.
 
 ## FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
 
-[Windows (x64/x86/winarm64) & Linux (x64/arm64)](https://github.com/MartinEesmaa/FFmpeg-Builds/releases/tag/latest) - Automated builds every day at 12:00 (12 PM) UTC of FFmpeg VVCEasy custom builds.
-
-[macOS universal (x64/arm64)](https://mega.nz/file/2hN2UbSD#eZI9Eq6WzoJ4VN4CcpiZr2c3TyjxBCoMzt0uk1f_Nb8)
-
-[FFmpeg-FixVVC archived old source code](https://mega.nz/file/G81QyT5S#jcbE1sYPEy1OMIDPCF8BPeAK-3KAGF50u23MVJzmBgw) (old)
+- [Windows (x64/x86/winarm64) & Linux (x64/arm64)](https://github.com/MartinEesmaa/FFmpeg-Builds/releases/tag/latest) - Automated builds every day at 12:00 (12 PM) UTC of FFmpeg VVCEasy custom builds.
+- [macOS universal (x64/arm64)](https://mega.nz/file/2hN2UbSD#eZI9Eq6WzoJ4VN4CcpiZr2c3TyjxBCoMzt0uk1f_Nb8)
 
 ### Note about downloads
 
@@ -136,11 +133,10 @@ Since 15th October 2024, Windows and Linux custom builds binaries of FFmpeg-VVC 
 
 Before automated builds started of Windows & Linux, here are the last links of manual pre-compiled builds:
 
-[Windows x64](https://mega.nz/file/a80X2aRS#0wqGq88L4ar23HZAOtkok4zJiXsz9d8-1HZu3WH33nM)
-
-[Linux x64](https://mega.nz/file/vlknXAKL#VoK400iQJPmrDsfbI5Nigr3MSgDudGe3P1cAlPrIOMc)
-
-[Linux Arm64](https://mega.nz/file/al9kjBqL#W_WT-lNM8osAMsdQaKkpe6Ksd4fMO4GKXysMB5IjiJQ)
+- [Windows x64](https://mega.nz/file/a80X2aRS#0wqGq88L4ar23HZAOtkok4zJiXsz9d8-1HZu3WH33nM)
+- [Linux x64](https://mega.nz/file/vlknXAKL#VoK400iQJPmrDsfbI5Nigr3MSgDudGe3P1cAlPrIOMc)
+- [Linux Arm64](https://mega.nz/file/al9kjBqL#W_WT-lNM8osAMsdQaKkpe6Ksd4fMO4GKXysMB5IjiJQ)
+- [Old source code archival of FFmpeg-FixVVC](https://mega.nz/file/G81QyT5S#jcbE1sYPEy1OMIDPCF8BPeAK-3KAGF50u23MVJzmBgw)
 
 ### Changelog
 
@@ -229,15 +225,15 @@ You need to allow the app on your Mac OS for chmod write access & Security & Pri
 
 Step 1: Click cancel button, do not move to bin.
 
-![Kuvatõmmis 2022-06-18 103427](https://user-images.githubusercontent.com/88035011/174431074-10a867d3-787a-47aa-9910-53fcef89e30e.png)
+![Kuvatõmmis 2022-06-18 103427](assets/Screenshots/macosfix/01-cannotopen.png)
 
 Step 2: Go to Security & Privacy on Mac OS Settings app, then check App Store & identified developers or anywhere is on. Click "Allow anyway" to unblock an application.
 
-![Kuvatõmmis 2022-06-18 103518](https://user-images.githubusercontent.com/88035011/174431083-1d1d9b2b-5b45-425e-86d1-015e44588b4e.png)
+![Kuvatõmmis 2022-06-18 103518](assets/Screenshots/macosfix/02-security.png)
 
 Step 3: Click "Open" button, this does not hurt your computer.
 
-![Kuvatõmmis 2022-06-18 103557](https://user-images.githubusercontent.com/88035011/174431086-9eb0df35-2fde-4ca7-99d4-2efa45a0a946.png)
+![Kuvatõmmis 2022-06-18 103557](assets/Screenshots/macosfix/03-openverify.png)
 
 ### Build Mac OS for FFmpeg VVC build
 
@@ -304,18 +300,15 @@ You may need:
 
 **Tip:** If you don't want to compile, you can download my latest automated builds of Windows & Linux, [link here](https://github.com/MartinEesmaa/FFmpeg-Builds/releases/tag/latest) and also you can have look logs on Actions tab.
 
-Anyway moving to Step 1 by compiling manually.
-
 Step 1: You need to install Docker Engine and to use shell script on Linux or maybe possible Windows using MSYS2.
 
-On Arch Linux, install: `sudo pacman -S docker`.
+On Arch Linux, install: `sudo pacman -S docker docker-buildx`.
 
 Step 2: After installing Docker Engine, clone the repository following by:
 
 ```bash
 git clone --depth=1 https://github.com/MartinEesmaa/FFmpeg-Builds
 cd FFmpeg-Builds
-chmod +x *.sh
 ```
 
 If you have not installed Git, please install Git on your package manager on your Linux distribution.
@@ -365,20 +358,13 @@ Press CTRL + C to cancel operation on your keyboard and try it again with make i
 
 VVC programmers of FFmpeg:
 
-Original author: [@FFmpeg](https://github.com/FFmpeg) Repository: <https://github.com/FFmpeg/FFmpeg>
-
-[@lehmann-c](https://github.com/lehmann-c) (Christian Lehmann) Repository: <https://github.com/lehmann-c/FFmpeg>
-
-[@tbiat](https://github.com/tbiat) (Thibaud Biatek) Repository: <https://github.com/tbiat/FFmpeg>
-
-VVC encoder programmer to FFmpeg: [@IsaMorphic](https://github.com/IsaMorphic) (Isabelle Santin) Repository: <https://github.com/IsaMorphic/FFmpeg-VVC>
-
-[@MartinEesmaa](https://github.com/MartinEesmaa) (Martin Eesmaa) Repository: <https://github.com/MartinEesmaa/FFmpeg-VVC>
-
-[@NuoMi](https://github.com/nuomi2021) of some codes and [Thomas Siedel](https://patchwork.ffmpeg.org/project/ffmpeg/list/?series=8577) of new external VVC encoder & decoder, also native VVC decoder ([ffvvc](https://github.com/ffvvc/FFmpeg)) by NuoMi.
-
-AC4 decoder programmer to FFmpeg: [@richardpl](https://github.com/richardpl) (Paul B Mahol) Repository: <https://github.com/richardpl/FFmpeg/tree/ac4>
-
-AC4 support in mp4 container: [@AUGxhub](https://github.com/AUGxhub) Repository: <https://github.com/AUGxhub/FFmpeg/tree/patch-1>
+- Original author: [@FFmpeg](https://github.com/FFmpeg) Repository: <https://github.com/FFmpeg/FFmpeg>
+- [@lehmann-c](https://github.com/lehmann-c) (Christian Lehmann) Repository: <https://github.com/lehmann-c/FFmpeg>
+- [@tbiat](https://github.com/tbiat) (Thibaud Biatek) Repository: <https://github.com/tbiat/FFmpeg>
+- VVC encoder programmer to FFmpeg: [@IsaMorphic](https://github.com/IsaMorphic) (Isabelle Santin) Repository: <https://github.com/IsaMorphic/FFmpeg-VVC>
+- [@MartinEesmaa](https://github.com/MartinEesmaa) (Martin Eesmaa) Repository: <https://github.com/MartinEesmaa/FFmpeg-VVC>
+- [@NuoMi](https://github.com/nuomi2021) of some codes and [Thomas Siedel](https://patchwork.ffmpeg.org/project/ffmpeg/list/?series=8577) of new external VVC encoder & decoder, also native VVC decoder ([ffvvc](https://github.com/ffvvc/FFmpeg)) by NuoMi.
+- AC4 decoder programmer to FFmpeg: [@richardpl](https://github.com/richardpl) (Paul B Mahol) Repository: <https://github.com/richardpl/FFmpeg/tree/ac4>
+- AC4 support in mp4 container: [@AUGxhub](https://github.com/AUGxhub) Repository: <https://github.com/AUGxhub/FFmpeg/tree/patch-1>
 
 - Martin Eesmaa

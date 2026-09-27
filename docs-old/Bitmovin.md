@@ -116,19 +116,19 @@ Offline availability for local segments
 
 ## Windows 7+
 
-![okd933](https://user-images.githubusercontent.com/88035011/158054088-5d28de91-c2f8-40e4-b1e0-e0a0788fab93.gif)
+![okd933](../assets/Screenshots/bitmovin/windows7-bitmovin.gif)
 
 ---
 
 ## macOS 10.15+
 
-![Macosbitvvdecplayer](https://user-images.githubusercontent.com/88035011/160053200-9f986127-46a5-48ca-b2b3-ba3540afa953.png)
+![Macosbitvvdecplayer](../assets/Screenshots/bitmovin/macos-bitmovin.png)
 
 ---
 
 ## Linux
 
-![LinuxBITVVCTest](https://user-images.githubusercontent.com/88035011/158130385-0f475e1f-9630-4623-acc4-6b0c842b6a35.gif)
+![LinuxBITVVCTest]((../assets/Screenshots/bitmovin/linux-bitmovin.gif))
 
 ---
 

@@ -1,10 +1,10 @@
 # Android vvenc & vvdec/uvg266 applications (Termux app)
 
-Requirements: Termux app with apk or F-Droid app or ADB connection. For uvg266/vvenc/vvdec pipe, it requires FFmpeg installed on Termux app.
+Requirements: Termux app with apk, F-Droid app or ADB connection. For uvg266/vvenc/vvdec pipe, you need FFmpeg installed requirement on Termux app.
 
 See the screenshot of vvdecapp in Termux app:
 
-![termuxvvdecappinandroid](https://user-images.githubusercontent.com/88035011/176990694-52279bf1-86fd-419e-a2b7-1b6d1038ac18.jpg)
+![termuxvvdecappinandroid](../assets/Screenshots/termuxvvdecappinandroid.jpg)
 
 All system types of arm64, armeabi, x86 and x86_64 is built on vvdec, vvenc & uvg266, it is use of Termux app.
 
@@ -30,13 +30,12 @@ Screenshot (tested my phone):
 
 Screenshot:
 
-![termuxuvg266inandroid](https://user-images.githubusercontent.com/88035011/190282518-13c6dfd1-41a4-4a9b-aefe-de9e43c26759.jpg)
+![termuxuvg266inandroid](../assets/Screenshots/termuxuvg266inandroid.jpg)
 
 Before you download, there were two separated programs:
 
-AndroidUVG266.7z - 10-bit input/encoder only.
-
-AndroidUVG266-8bit.7z - 8-bit input/encoder only.
+- AndroidUVG266.7z - 10-bit input/encoder only.
+- AndroidUVG266-8bit.7z - 8-bit input/encoder only.
 
 If you want pipe from FFmpeg to uvg266, you can do command:
 

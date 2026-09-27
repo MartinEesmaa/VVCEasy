@@ -28,7 +28,7 @@ Top left and right is o266player by Tencent Cloud.
 
 Bottom left and right is VLC VTM plugins by Inter Digital Inc.
 
-![windows8testbetweno266playerandvtmplugins](https://user-images.githubusercontent.com/88035011/160266040-863aa216-4694-4b2f-9957-4aa5b5a07ec3.png)
+![windows8testbetweno266playerandvtmplugins](../assets/Screenshots/vlc/windows8testbetweno266playerandvtmplugins.png)
 
 ***UPDATE of 18.04.2022 14:20 UTC:***
 
@@ -94,11 +94,11 @@ You need the CMAKE GUI, Visual Studio 2017 or newer, [VLC SDK Win64 3.0.9.2](htt
 
 vlc_threads.h can be found in VLC folder/sdk/include/vlc/plugins. Search `val = poll(fds, nfds, timeout);` and comment the only one file, that's it.
 
-![vscodethelinecommentvlcthreads](https://user-images.githubusercontent.com/88035011/175109219-6ea70dc4-b696-4045-a071-ef1306bc9634.png)
+![vscodethelinecommentvlcthreads](../assets/Screenshots/vlc/vscodethelinecommentvlcthreads.png)
 
 Build Decoder Plugin, see screenshot of CMAKE GUI:
 
-![decoderplugin](https://user-images.githubusercontent.com/88035011/175105846-646ab744-ef1f-45b3-a084-a2f7ad3464a2.png)
+![decoderplugin](../assets/Screenshots/vlc/decoderplugin.png)
 
 Before building TS demuxer plugin, please download source code of VLC 3.0.9.2 or latest version following .tar.xz file container and decompress to vlc-3.0.9.2/src or latest version like example vlc-3.0.2.0/src:
 
@@ -110,7 +110,7 @@ For latest version, you need to find latest version by looking ascending:
 
 Build TS Demuxer Plugin, see screenshot of CMAKE GUI:
 
-![tsdemuxplugin](https://user-images.githubusercontent.com/88035011/175105943-1f9e41ad-2f20-451c-9123-f163252c7106.png)
+![tsdemuxplugin](../assets/Screenshots/vlc/tsdemuxplugin.png)
 
 ## Linux
 
@@ -120,7 +120,7 @@ Please double-click downloaded compressed file and decompress VLC Windows SDK bu
 
 File of vlc_threads.h can be found in VLC folder/sdk/include/vlc/plugins. Search `val = poll(fds, nfds, timeout);` and comment the only one file, that's it.
 
-![vscodethelinecommentvlcthreads](https://user-images.githubusercontent.com/88035011/175109219-6ea70dc4-b696-4045-a071-ef1306bc9634.png)
+![vscodethelinecommentvlcthreads](../assets/Screenshots/vlc/vscodethelinecommentvlcthreads.png)
 
 libvtmdec build:
 Compiled file could be found in lib folder in libvtmdec.
@@ -178,11 +178,11 @@ sudo make install
 
 Build Decoder Plugin, see screenshot of CMAKE GUI:
 
-![decoderpluginlinux](https://user-images.githubusercontent.com/88035011/175110060-ee1cf4e3-de96-478b-9bb6-6e7d0e11a2bd.png)
+![decoderpluginlinux](../assets/Screenshots/vlc/decoderpluginlinux.png)
 
 Build TS Demuxer Plugin, see screenshot of CMAKE GUI:
 
-![tsdemuxpluginlinux](https://user-images.githubusercontent.com/88035011/175110701-d9a87f9f-ab25-40b9-b070-9e53a712b372.png)
+![tsdemuxpluginlinux](../assets/Screenshots/vlc/tsdemuxpluginlinux.png)
 
 Original documentation must be in the original repository: <https://github.com/InterDigitalInc/VTMDecoder_VLCPlugin>
 
