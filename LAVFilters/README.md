@@ -11,6 +11,7 @@ Original source code: <https://github.com/Nevcairiel/LAVFilters>
 Changelog:
 
 ```text
+02/10/2026: Updated LAVFilters for up to version 0.83 nightly with new commits, FFmpeg, vvdec, dav1d and others.
 21/05/2026: Updated LAVFilters for up to version 0.81 nightly with new commits, FFmpeg, vvdec, dav1d and others. Sorry took long wait hiatus.
 02/12/2025: Updated LAVFilters nightly with new commits, FFmpeg, vvdec and others.
 22/06/2025: Updated LAVFilters for up to version 0.80 with new commits, FFmpeg, vvdec and others. Sorry for long time hiatus.
@@ -28,9 +29,9 @@ Changelog:
 
 ## MPC-HC (VVC version)
 
-MPC-HC 2.7.1.21 comes with LAVFilters VVC installed and it is portable.
+MPC-HC 2.8.2.41 comes with LAVFilters VVC installed and it is portable.
 
-You can download via cloud link: <https://mega.nz/file/nl8FgTgC#FZIyjiGzYmbSmb0UwZ_BSZ1GQK6nuYDjQqltoIDFbc8>
+You can download via cloud link: <https://mega.nz/file/jxtgXLbA#CUpeD2W_bjy26MBn68KIOGQyPV5cx6QmDTfkuxfi_-I>
 
 After downloading, extract compressed file via [7-Zip](https://7-zip.org) and run `mpc-hc64.exe`. This program doesn't require administrator privileges.
 
@@ -39,6 +40,7 @@ Original forked source code: <https://github.com/clsid2/mpc-hc>
 Changelog:
 
 ```text
+02/10/2026: Updated MPC-HC for up to 2.8.2.41, LAVFilters for up to 0.83 nightly new commits, FFmpeg, MediaInfo, vvdec, dav1d, yt-dlp and others.
 21/05/2026: Updated MPC-HC for up to 2.7.1.21, LAVFilters for up to 0.81 nightly new commits, FFmpeg, MediaInfo, vvdec, dav1d, yt-dlp and others.
 04/12/2025: Updated MPC-HC for up to 2.5.5.30, LAVFilters nightly new commits, FFmpeg, vvdec, yt-dlp and others.
 22/06/2025: Updated MPC-HC for up to 2.4.3.6, LAVFilters for up to 0.80 with new commits, FFmpeg, vvdec, yt-dlp and others. Also sorry for DLL files increased and also hiatus for 8 months.
