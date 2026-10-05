@@ -121,7 +121,7 @@ For Linux and Mac OS users: Type `MP4Box` correctly to execute binary, but no sm
 ## FFmpeg Downloads (xHE-AAC & VVC en/decoder plugin compiled by Martin Eesmaa)
 
 - [Windows (x64/x86/winarm64) & Linux (x64/arm64)](https://github.com/MartinEesmaa/FFmpeg-Builds/releases/tag/latest) - Automated builds every day at 12:00 (12 PM) UTC of FFmpeg VVCEasy custom builds.
-- [macOS universal (x64/arm64)](https://mega.nz/file/ixNVyATY#lWbCYh9XbdWzSib23vXxthZB-_3lRPTZbNxJq9FFaYA)
+- [macOS universal (x64/arm64)](https://mega.nz/file/itc11DbI#uawPzchM5WPXWFLjPr_WjGJPj_MwxBg504ZEBImga6k)
 
 ### Note about downloads
 
@@ -143,6 +143,7 @@ Before automated builds started of Windows & Linux, here are the last links of m
 Note: This was only for legacy Windows & Linux FFmpeg builds, but macOS builds may be continue for the changelogs...
 
 ```text
+05/10/2026: Updated macOS FFmpeg latest with vvdec, vvenc and others.
 29/09/2026: Updated macOS FFmpeg latest with vvdec, vvenc and others.
 09/06/2026: Updated macOS FFmpeg latest with vvdec, vvenc and others.
 07/12/2025: Merged macOS universal architectures of FFmpeg VVCEasy from x86_64 and arm64 builds, updated FFmpeg latest, vvenc, vvdec and others. Very sorry again for almost six months hiatus.
