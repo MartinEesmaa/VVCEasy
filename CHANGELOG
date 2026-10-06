@@ -4,6 +4,17 @@ To view or download releases with changelogs, please go to https://github.com/Ma
 
 This is local changelog file.
 
+v4.0.0 Release (October 6, 2026):
+
+- New uvg266 10-bit builds
+- Updated FFmpeg and MPV VVCEasy builds
+- Updated VVC, uvg266, LAVFilters, MPC-HC Windows VVC version and 7-Zip binaries
+- Updated documentations of Markdown files with some grammar fixes and improvements
+- Converted & redirected from online screenshots to local screenshots files
+- Some additional tests of VVC checked
+- Improvements with reduced code lines of bash script files
+- Status: Over 1000 commits total in this release
+
 v3.5.0 Release (June 9, 2026):
 
 - Updated FFmpeg and MPV VVCEasy builds
